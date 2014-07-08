@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="TestNG Test">
+    <parameter name="BaseURL" value="http://www.centralhk.com:9090"/>
+
+    <parameter name="Browser" value="chrome"/>
+
+    <!-- <test name="ExistingUserOrderOnline">
+        <classes>
+            <class name="ExistingOnlineOrder"/>
+        </classes>
+    </test> -->
+    <test name="SignupOrderOnline">
+        <classes>
+            <class name="ExistingCodPlacement"/>
+        </classes>
+    </test>
+    <!--    <test name="ExistingUserOrderCOD">
+            <classes>
+                <class name="orderPlacement.ExistingUserOrderCOD"/>
+            </classes>
+        </test>
+        <test name="SignUpAndOrderCard">
+            <classes>
+                <class name="orderPlacement.SignUpAndOrderCard"/>
+            </classes>
+        </test>
+        <test name="SignUpAndOrderCOD">
+            <classes>
+                <class name="orderPlacement.SignUpAndOrderCOD"/>
+            </classes>
+        </test>-->
+</suite>
