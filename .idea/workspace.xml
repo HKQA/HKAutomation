@@ -21,21 +21,23 @@
     <file path="$PROJECT_DIR$/test-output/Command line suite/Command line test.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404458101969" ignored="false" />
     <file path="$PROJECT_DIR$/test-output/junitreports/TEST-ExistingCodPlacement.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404742943831" ignored="false" />
     <file path="$PROJECT_DIR$/test-output/Command line suite/testng-failed.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404458101969" ignored="false" />
-    <file path="/ExistingCodPlacement.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404822737555" ignored="false" />
+    <file path="/ExistingCodPlacement.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404829322349" ignored="false" />
     <file path="/Testing_v4.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404460412517" ignored="false" />
-    <file path="$PROJECT_DIR$/test-output/TestNG Test/testng-failed.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404822644054" ignored="false" />
-    <file path="$PROJECT_DIR$/test-output/TestNG Test/ASQA Sample Test.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404822644054" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/TestNG Test/testng-failed.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404829541891" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/TestNG Test/ASQA Sample Test.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404829541891" ignored="false" />
     <file path="/build.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404473966852" ignored="false" />
     <file path="/SignupPage.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404484143932" ignored="false" />
-    <file path="/SignupOrderOnline.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404823946181" ignored="false" />
+    <file path="/SignupOrderOnline.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404829216918" ignored="false" />
     <file path="/AddressPage.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404726624131" ignored="false" />
-    <file path="/SignupCODorder.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404823966685" ignored="false" />
+    <file path="/SignupCODorder.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404829202504" ignored="false" />
     <file path="F:/Work/test3/Automation_testing_v4/src/ExistingOnlineplacement.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404741520227" ignored="false" />
-    <file path="$PROJECT_DIR$/test-output/testng-results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404822644054" ignored="false" />
-    <file path="$PROJECT_DIR$/test-output/testng-failed.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404822644054" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/testng-results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404829541891" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/testng-failed.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404829541891" ignored="false" />
     <file path="/SharedProperties.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404743106909" ignored="false" />
-    <file path="/MainPropertyFile.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404822274047" ignored="false" />
+    <file path="/MainPropertyFile.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404828937550" ignored="false" />
     <file path="/url.properties" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404822002289" ignored="false" />
+    <file path="/ExistingOnlineOrder.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404829339677" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/jquery-1.7.1.min.js" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404829544525" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +102,7 @@
       <file leaf-file-name="ExistingCodPlacement.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ExistingCodPlacement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="43" selection-start="4320" selection-end="4320" vertical-scroll-proportion="0.0">
+            <state line="75" column="63" selection-start="2507" selection-end="2507" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -118,7 +120,27 @@
       <file leaf-file-name="url.properties" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/url.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="44" selection-start="324" selection-end="324" vertical-scroll-proportion="0.111964874">
+            <state line="6" column="96" selection-start="356" selection-end="356" vertical-scroll-proportion="0.18959108">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainPropertyFile.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MainPropertyFile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="35" selection-start="650" selection-end="650" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Properties.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.7.0_45/src.zip!/java/util/Properties.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="949" column="18" selection-start="38410" selection-end="38410" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -127,7 +149,7 @@
       <file leaf-file-name="SignupOrderOnline.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SignupOrderOnline.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="145" column="46" selection-start="5423" selection-end="5423" vertical-scroll-proportion="0.0">
+            <state line="54" column="116" selection-start="1880" selection-end="1923" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -135,10 +157,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="BootStrap.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/BootStrap.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="70" column="50" selection-start="2170" selection-end="2184" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ExistingOnlineOrder.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ExistingOnlineOrder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="81" column="105" selection-start="2692" selection-end="2692" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -147,7 +178,7 @@
       <file leaf-file-name="ExcelServiceImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ExcelServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="64" selection-start="2709" selection-end="2709" vertical-scroll-proportion="0.0">
+            <state line="82" column="49" selection-start="2866" selection-end="2866" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -158,7 +189,7 @@
       <file leaf-file-name="SignupCODorder.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SignupCODorder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="143" column="71" selection-start="5581" selection-end="5581" vertical-scroll-proportion="0.0">
+            <state line="91" column="48" selection-start="3391" selection-end="3391" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -181,23 +212,23 @@
         <option value="$PROJECT_DIR$/testng.xml" />
         <option value="$PROJECT_DIR$/src/OrderPlacement/SignupOrderOnline.java" />
         <option value="$PROJECT_DIR$/src/BootStrap.java" />
-        <option value="$PROJECT_DIR$/src/MainPropertyFile.java" />
-        <option value="$PROJECT_DIR$/url.properties" />
         <option value="$PROJECT_DIR$/src/SharedProperties.java" />
-        <option value="$PROJECT_DIR$/src/ExistingCodPlacement.java" />
-        <option value="$PROJECT_DIR$/src/ExistingOnlineOrder.java" />
         <option value="$PROJECT_DIR$/src/ReadExcel.java" />
         <option value="$PROJECT_DIR$/src/ExcelServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/SignupOrderOnline.java" />
+        <option value="$PROJECT_DIR$/src/MainPropertyFile.java" />
         <option value="$PROJECT_DIR$/src/SignupCODorder.java" />
+        <option value="$PROJECT_DIR$/src/SignupOrderOnline.java" />
+        <option value="$PROJECT_DIR$/src/ExistingCodPlacement.java" />
+        <option value="$PROJECT_DIR$/src/ExistingOnlineOrder.java" />
+        <option value="$PROJECT_DIR$/url.properties" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1358" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1096" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -512,7 +543,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -526,7 +557,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329806" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32820514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -534,8 +565,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12379936" sideWeight="0.6926361" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30736393" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17575757" sideWeight="0.6940171" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30598292" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -612,22 +643,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PaymentPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="124" selection-start="219" selection-end="306" vertical-scroll-proportion="0.0">
@@ -661,25 +676,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainPropertyFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="29" selection-start="2851" selection-end="2851" vertical-scroll-proportion="0.9626784">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CartPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="61" selection-start="178" selection-end="178" vertical-scroll-proportion="0.13062568">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BootStrap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="0" selection-start="3063" selection-end="3063" vertical-scroll-proportion="0.98902303">
           <folding />
         </state>
       </provider>
@@ -691,39 +690,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExistingCodPlacement.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_45/src.zip!/java/util/Properties.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="43" selection-start="4320" selection-end="4320" vertical-scroll-proportion="0.0">
+        <state line="949" column="18" selection-start="38410" selection-end="38410" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SignupCODorder.java">
+    <entry file="file://$PROJECT_DIR$/src/MainPropertyFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="71" selection-start="5581" selection-end="5581" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExcelServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="64" selection-start="2709" selection-end="2709" vertical-scroll-proportion="0.0">
+        <state line="24" column="35" selection-start="650" selection-end="650" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExistingOnlineOrder.java">
+    <entry file="file://$PROJECT_DIR$/src/SignupOrderOnline.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="54" column="116" selection-start="1880" selection-end="1923" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExistingCodPlacement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="63" selection-start="2507" selection-end="2507" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SignupOrderOnline.java">
+    <entry file="file://$PROJECT_DIR$/src/ExistingOnlineOrder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="46" selection-start="5423" selection-end="5423" vertical-scroll-proportion="0.0">
+        <state line="81" column="105" selection-start="2692" selection-end="2692" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BootStrap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="50" selection-start="2170" selection-end="2184" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SignupCODorder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="48" selection-start="3391" selection-end="3391" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExcelServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="49" selection-start="2866" selection-end="2866" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -732,7 +754,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/url.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="44" selection-start="324" selection-end="324" vertical-scroll-proportion="0.111964874">
+        <state line="6" column="96" selection-start="356" selection-end="356" vertical-scroll-proportion="0.18959108">
           <folding />
         </state>
       </provider>

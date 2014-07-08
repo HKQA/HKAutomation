@@ -50,8 +50,8 @@ public class SignupCODorder extends SharedProperties{
         try{
 
 
-            finalObjectString.addAll(readexcel.mainReadFromExcelIterator(mainproperty.readPropertySignUpExcelPath()));
-            finalObjectString.addAll(readexcel.mainReadFromExcelIterator(mainproperty.readPropertyProductIdExcelPath()));
+            finalObjectString.addAll(readexcel.mainReadFromExcelIterator(mainproperty.readProperty("SignUpExcel")));
+            finalObjectString.addAll(readexcel.mainReadFromExcelIterator(mainproperty.readProperty("productIdExcel")));
             result.add(new Object[]{finalObjectString});
 
             System.out.println("List iterator : "+result.iterator());
@@ -88,7 +88,7 @@ public class SignupCODorder extends SharedProperties{
 */
 
         for(int i=4;i<dataArray.size();i++){
-            driver.navigate().to(mainproperty.readProperty()+dataArray.get(i));
+            driver.navigate().to(mainproperty.readProperty("url")+dataArray.get(i));
             WebElement buyNow = driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
             buyNow.click();
 
@@ -117,7 +117,7 @@ public class SignupCODorder extends SharedProperties{
         sendKeys(signupage.password(),  dataArray.get(2), driver);
         sendKeys(signupage.confirmpassword(),  dataArray.get(3), driver);
         Click(signupage.createaccount(),  driver);
-        ExcelServiceImpl.updateCellContent(mainproperty.readPropertySignUpExcelPath(),"1",0,1);
+        ExcelServiceImpl.updateCellContent(mainproperty.readProperty("SignUpExcel"),"1",0,1);
 
         Thread.sleep(2000);
         Click(cartpage.proceedToCheckout(),  driver);

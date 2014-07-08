@@ -48,8 +48,8 @@ public class ExistingCodPlacement extends SharedProperties {
         try{
 
 
-            finalObjectString.addAll(readexcel.mainReadFromExcelIterator(mainproperty.readPropertyLoginExcelPath()));
-            finalObjectString.addAll(readexcel.mainReadFromExcelIterator(mainproperty.readPropertyProductIdExcelPath()));
+            finalObjectString.addAll(readexcel.mainReadFromExcelIterator(mainproperty.readProperty("LoginExcel")));
+            finalObjectString.addAll(readexcel.mainReadFromExcelIterator(mainproperty.readProperty("productIdExcel")));
             result.add(new Object[]{finalObjectString});
 
             System.out.println("List iterator : "+result.iterator());
@@ -73,7 +73,7 @@ public class ExistingCodPlacement extends SharedProperties {
 
         for(int i=4;i<dataArray.size();i++){
 
-            driver.navigate().to(mainproperty.readProperty()+dataArray.get(i));
+            driver.navigate().to(mainproperty.readProperty("url")+dataArray.get(i));
             WebElement buyNow = driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
             buyNow.click();
 

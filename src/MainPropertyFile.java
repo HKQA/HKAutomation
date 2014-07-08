@@ -14,7 +14,7 @@ import java.util.Properties;
  */
 public class MainPropertyFile {
 
-    public String readProperty(){
+    public String readProperty(String key){
     Properties prop = new Properties();
     InputStream input = null;
     try {
@@ -22,7 +22,7 @@ public class MainPropertyFile {
         input = new FileInputStream("E:\\Healthkart\\MainAutoQa\\Automation_testing_v4\\url.properties");
         prop.load(input);
 
-        return prop.getProperty("url");
+        return prop.getProperty(key);
 
     } catch (IOException ex) {
         ex.printStackTrace();
@@ -37,79 +37,5 @@ public class MainPropertyFile {
     }
     return null;
 }
-    public String readPropertyLoginExcelPath(){
-        Properties prop = new Properties();
-        InputStream input = null;
-        try {
-
-            input = new FileInputStream("E:\\Healthkart\\MainAutoQa\\Automation_testing_v4\\url.properties");
-            prop.load(input);
-
-            return prop.getProperty("LoginExcel");
-
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        } finally {
-            if (input != null) {
-                try {
-                    input.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        return null;
-    }
-
-    public String readPropertySignUpExcelPath(){
-        Properties prop = new Properties();
-        InputStream input = null;
-        try {
-
-            input = new FileInputStream("E:\\Healthkart\\MainAutoQa\\Automation_testing_v4\\url.properties");
-            prop.load(input);
-
-            return prop.getProperty("SignUpExcel");
-
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        } finally {
-            if (input != null) {
-                try {
-                    input.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        return null;
-    }
-
-    public String readPropertyProductIdExcelPath(){
-        Properties prop = new Properties();
-        InputStream input = null;
-        try {
-
-            input = new FileInputStream("E:\\Healthkart\\MainAutoQa\\Automation_testing_v4\\url.properties");
-            prop.load(input);
-
-            return prop.getProperty("productIdExcel");
-
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        } finally {
-            if (input != null) {
-                try {
-                    input.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        return null;
-    }
-
-
-
 
 }
