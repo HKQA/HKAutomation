@@ -12,32 +12,30 @@ import java.sql.*;
  */
 public class JdbcConnectionFile {// JDBC driver name and database URL
 
-    public static String readJdbcprop(){
+    public static <T> T readJdbcprop(String inputSql, ResultSetExtractor<T> extract) {
 
-        String orderId= null;
         Connection conn = null;
         Statement stmt = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
             System.out.println("Connecting to database...");
-            conn = DriverManager.getConnection(PropertyHelper.readProperty("DB_URL"),PropertyHelper.readProperty("USER"),PropertyHelper.readProperty("PASS"));
+            conn = DriverManager.getConnection(PropertyHelper.readProperty("DB_URL"), PropertyHelper.readProperty("USER"), PropertyHelper.readProperty("PASS"));
 
             System.out.println("Creating statement...");
             stmt = conn.createStatement();
-            String sql;
 
-            sql = "SELECT * FROM hk_cat where orderid = "+orderId+ " by create_dt desc limit 0,3";
-            ResultSet rs = stmt.executeQuery(sql);
+            ResultSet rs = stmt.executeQuery(inputSql);
+            return extract.extract(rs);
 
 
-            rs.close();
-            stmt.close();
-            conn.close();
+
+
         } catch (SQLException se) {
             se.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
+
             try {
                 if (stmt != null)
                     stmt.close();

@@ -2,10 +2,11 @@ package com.hk.orderPlacement;
 
 
 import com.google.common.collect.Lists;
-
 import com.hk.commonProperties.SharedProperties;
 import com.hk.elementLocators.*;
 import com.hk.excelService.ExcelServiceImpl;
+import com.hk.jdbc.JdbcConnectionFile;
+import com.hk.jdbc.ResultSetExtractor;
 import com.hk.property.PropertyHelper;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -16,7 +17,10 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import java.io.*;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -31,8 +35,8 @@ import java.util.concurrent.TimeUnit;
  */
 public class ExistingCodPlacement extends SharedProperties {
 
+    public String browser;
     String baseUrl;
-    public  String browser;
     LoginPage loginPage = new LoginPage();
     ProductPage productpage = new ProductPage();
     CartPage cartpage = new CartPage();
@@ -52,7 +56,7 @@ public class ExistingCodPlacement extends SharedProperties {
         List<Object[]> result = Lists.newArrayList();
         List<String> finalObjectString = new ArrayList<String>();
 
-        try{
+        try {
 
 
             finalObjectString.addAll(readexcel.mainReadFromExcelIterator(PropertyHelper.readProperty("LoginExcel")));
@@ -60,30 +64,39 @@ public class ExistingCodPlacement extends SharedProperties {
             finalObjectString.addAll(readexcel.mainReadFromExcelIterator(PropertyHelper.readProperty("orderDetails")));
             result.add(new Object[]{finalObjectString});
 
-        }
-        catch(FileNotFoundException fex){
+        } catch (FileNotFoundException fex) {
             System.out.println(fex.getMessage());
-        }
-        catch(IOException ex){
+        } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
         return result.iterator();
     }
 
-
-
     @Parameters("BaseURL")
     @Test(dataProvider = "CombinedData", enabled = true)
-    public void login(List<String> dataArray)  throws InterruptedException, IOException {
+    public void login(List<String> dataArray) throws InterruptedException, IOException {
         SharedProperties.openBrowser(baseUrl, browser);
         Thread.sleep(3000);
 
 
+        String email = (String) JdbcConnectionFile.readJdbcprop("select p.contact_name,p.email,p.base_order_id from payment p where'" + dataArray.get(5) + "'",(String)JdbcConnectionFile.readJdbcprop(""), new ResultSetExtractor<Object>() {
+            String email = null;
 
+            @Override
+            public Object extract(ResultSet rs) throws SQLException {
+                while (rs.next()) {
+                    email = rs.getString("email");
+                }
 
-        for(int i=4;i<dataArray.size();i++){
+                return email;
+            }
+        });
 
-            SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url")+dataArray.get(i));
+        System.out.print("email: " + email);
+
+        for (int i = 4; i < dataArray.size(); i++) {
+
+            SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + dataArray.get(i));
             WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
             buyNow.click();
 
@@ -92,10 +105,10 @@ public class ExistingCodPlacement extends SharedProperties {
         //WebElement exp = driver.findElement(By.cssSelector("a[href*='Cart.action']"));
         SharedProperties.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         Wait<WebDriver> wait = new FluentWait<WebDriver>(SharedProperties.driver)
-                .withTimeout( 30, TimeUnit.SECONDS )
-                .pollingEvery( 5, TimeUnit.SECONDS )
-                .ignoring( NoSuchElementException.class, StaleElementReferenceException.class );
-        WebElement cartLink = wait.until( ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a[href*='Cart.action']")));
+                .withTimeout(30, TimeUnit.SECONDS)
+                .pollingEvery(5, TimeUnit.SECONDS)
+                .ignoring(NoSuchElementException.class, StaleElementReferenceException.class);
+        WebElement cartLink = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a[href*='Cart.action']")));
         cartLink.click();
 
         SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
@@ -126,7 +139,6 @@ public class ExistingCodPlacement extends SharedProperties {
         SharedProperties.Click(paymentpage.payOnDelivery(), SharedProperties.driver);
 
 
-        System.out.print("OrderId: " + dataArray.get(5));
     }
 
 
