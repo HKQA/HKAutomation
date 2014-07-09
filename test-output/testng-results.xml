@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="TestNG Test" duration-ms="40498" started-at="2014-07-09T07:45:25Z" finished-at="2014-07-09T07:46:05Z">
+  <suite name="TestNG Test" duration-ms="49919" started-at="2014-07-09T10:48:30Z" finished-at="2014-07-09T10:49:20Z">
     <groups>
     </groups>
-    <test name="ASQA Sample Test" duration-ms="40498" started-at="2014-07-09T07:45:25Z" finished-at="2014-07-09T07:46:05Z">
+    <test name="ASQA Sample Test" duration-ms="49919" started-at="2014-07-09T10:48:30Z" finished-at="2014-07-09T10:49:20Z">
       <class name="com.hk.orderPlacement.SignupCODorder">
-        <test-method status="PASS" signature="g(java.lang.String, java.lang.String)[pri:0, instance:com.hk.orderPlacement.SignupCODorder@67871079]" name="g" is-config="true" duration-ms="22" started-at="2014-07-09T13:15:25Z" finished-at="2014-07-09T13:15:25Z">
+        <test-method status="PASS" signature="g(java.lang.String, java.lang.String)[pri:0, instance:com.hk.orderPlacement.SignupCODorder@ff70225]" name="g" is-config="true" duration-ms="24" started-at="2014-07-09T16:18:30Z" finished-at="2014-07-09T16:18:30Z">
           <params>
             <param index="0">
               <value>
@@ -23,18 +23,48 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- g -->
-        <test-method status="FAIL" signature="login(java.util.List)[pri:0, instance:com.hk.orderPlacement.SignupCODorder@67871079]" name="login" duration-ms="40100" started-at="2014-07-09T13:15:25Z" data-provider="CombinedData" finished-at="2014-07-09T13:16:05Z">
+        <test-method status="FAIL" signature="login(java.util.List)[pri:0, instance:com.hk.orderPlacement.SignupCODorder@ff70225]" name="login" duration-ms="49465" started-at="2014-07-09T16:18:31Z" data-provider="CombinedData" finished-at="2014-07-09T16:19:20Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Nitin Kukna, 1nitin.kukna+18@healthkart.com, 123456, 123456, 42890]]]>
+                <![CDATA[[Nitin Kukna, 11nitin.kukna+18@healthkart.com, 123456, 123456, 42890]]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace><![CDATA[
-              <![CDATA[java.lang.NullPointerException
-	at com.hk.commonProperties.SharedProperties.Click(Unknown Source)
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[chrome not reachable
+  (Session info: chrome=35.0.1916.153)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 2.01 seconds
+Build info: version: '2.42.2', revision: '6a6995d', time: '2014-06-03 17:42:30'
+System info: host: 'BLC-TECH-L198', ip: '192.168.80.138', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_45'
+Session ID: 146651bb951252fdaa7da6718ff8b8b6
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\Saurabh\AppData\Local\Temp\scoped_dir692_6692}, rotatable=false, locationContextEnabled=true, version=35.0.1916.153, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=35.0.1916.153)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 2.01 seconds
+Build info: version: '2.42.2', revision: '6a6995d', time: '2014-06-03 17:42:30'
+System info: host: 'BLC-TECH-L198', ip: '192.168.80.138', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_45'
+Session ID: 146651bb951252fdaa7da6718ff8b8b6
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\Saurabh\AppData\Local\Temp\scoped_dir692_6692}, rotatable=false, locationContextEnabled=true, version=35.0.1916.153, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at com.hk.commonProperties.SharedProperties.sendKeys(Unknown Source)
 	at com.hk.orderPlacement.SignupCODorder.login(Unknown Source)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
@@ -60,8 +90,8 @@
 	at BootStrap.runTestNGTest(Unknown Source)
 	at BootStrap.main(Unknown Source)
 ]]>
-            ]]></full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
