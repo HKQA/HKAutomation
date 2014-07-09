@@ -7,27 +7,27 @@
 
     <!-- <test name="ExistingUserOrderOnline">
         <classes>
-            <class name="ExistingOnlineOrder"/>
+            <class name="com.hk.orderPlacement.ExistingOnlineOrder"/>
         </classes>
     </test> -->
-    <test name="SignupOrderOnline">
+    <test name="com.hk.orderPlacement.SignupOrderOnline">
         <classes>
-            <class name="ExistingCodPlacement"/>
+            <class name="com.hk.orderPlacement.ExistingCodPlacement"/>
         </classes>
     </test>
     <!--    <test name="ExistingUserOrderCOD">
             <classes>
-                <class name="orderPlacement.ExistingUserOrderCOD"/>
+                <class name="com.hk.orderPlacement.ExistingUserOrderCOD"/>
             </classes>
         </test>
         <test name="SignUpAndOrderCard">
             <classes>
-                <class name="orderPlacement.SignUpAndOrderCard"/>
+                <class name="com.hk.orderPlacement.SignUpAndOrderCard"/>
             </classes>
         </test>
         <test name="SignUpAndOrderCOD">
             <classes>
-                <class name="orderPlacement.SignUpAndOrderCOD"/>
+                <class name="com.hk.orderPlacement.SignUpAndOrderCOD"/>
             </classes>
         </test>-->
 </suite>

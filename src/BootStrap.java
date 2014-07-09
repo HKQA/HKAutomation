@@ -15,36 +15,6 @@ import java.util.*;
  */
 public class BootStrap {
 
-        /*TestNG testng = new TestNG();
-
-        XmlSuite xmlSuite = new XmlSuite();
-        xmlSuite.setName("TestNG Test");
-        xmlSuite.setVerbose(1);
-
-        Map<String,String> suiteParam = new HashMap<String,String>();
-        suiteParam.put("BaseURL","http://www.centralhk.com/beta/auth/Login.action");
-        suiteParam.put("Browser","chrome");
-
-        xmlSuite.setParameters(suiteParam);
-
-        XmlTest test = new XmlTest();
-        test.setName("ExistingUserOrderCOD");
-
-        XmlClass className = new XmlClass();
-        //className.setName("ExistingCodPlacement");
-        className.setClass(ExistingCodPlacement.class);
-        test.setXmlClasses(Arrays.asList(className));
-
-
-        xmlSuite.setTests(Arrays.asList(test));
-
-        //testng.setXmlSuites(Arrays.asList(xmlSuite));
-        //testng.setCommandLineSuite(xmlSuite);
-
-        testng.run();*/
-
-
-
     public void runTestNGTest(Map<String, String > testngParams) {
 
 //Create an instance on TestNG
@@ -68,7 +38,7 @@ public class BootStrap {
 
 //Create a list which can contain the classes that you want to run.
         List<XmlClass> myClasses = new ArrayList<XmlClass> ();
-        myClasses.add(new XmlClass("SignupCODorder"));
+        myClasses.add(new XmlClass("com.hk.orderPlacement.SignupCODorder"));
 
 //Assign that to the XmlTest Object created earlier.
         myTest.setXmlClasses(myClasses);
