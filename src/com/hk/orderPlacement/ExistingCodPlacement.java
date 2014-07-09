@@ -57,6 +57,7 @@ public class ExistingCodPlacement extends SharedProperties {
 
             finalObjectString.addAll(readexcel.mainReadFromExcelIterator(PropertyHelper.readProperty("LoginExcel")));
             finalObjectString.addAll(readexcel.mainReadFromExcelIterator(PropertyHelper.readProperty("productIdExcel")));
+            finalObjectString.addAll(readexcel.mainReadFromExcelIterator(PropertyHelper.readProperty("orderDetails")));
             result.add(new Object[]{finalObjectString});
 
         }
@@ -76,6 +77,9 @@ public class ExistingCodPlacement extends SharedProperties {
     public void login(List<String> dataArray)  throws InterruptedException, IOException {
         SharedProperties.openBrowser(baseUrl, browser);
         Thread.sleep(3000);
+
+
+
 
         for(int i=4;i<dataArray.size();i++){
 
@@ -122,8 +126,7 @@ public class ExistingCodPlacement extends SharedProperties {
         SharedProperties.Click(paymentpage.payOnDelivery(), SharedProperties.driver);
 
 
-
-
+        System.out.print("OrderId: " + dataArray.get(5));
     }
 
 

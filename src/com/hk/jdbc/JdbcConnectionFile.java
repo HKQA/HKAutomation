@@ -12,32 +12,24 @@ import java.sql.*;
  */
 public class JdbcConnectionFile {// JDBC driver name and database URL
 
-    public static void main(String[] args) {
+    public static String readJdbcprop(){
+
+        String orderId= null;
         Connection conn = null;
         Statement stmt = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
             System.out.println("Connecting to database...");
-            conn = DriverManager.getConnection(
-                    PropertyHelper.readProperty("DB_URL"),
-                    PropertyHelper.readProperty("USER"),
-                    PropertyHelper.readProperty("PASS"));
+            conn = DriverManager.getConnection(PropertyHelper.readProperty("DB_URL"),PropertyHelper.readProperty("USER"),PropertyHelper.readProperty("PASS"));
 
             System.out.println("Creating statement...");
             stmt = conn.createStatement();
             String sql;
-            sql = "SELECT id, email, gateway_order_id FROM payment order by create_dt desc limit 0,3";
+
+            sql = "SELECT * FROM hk_cat where orderid = "+orderId+ " by create_dt desc limit 0,3";
             ResultSet rs = stmt.executeQuery(sql);
 
-            while (rs.next()) {
-                int id = rs.getInt("id");
-                String email = rs.getString("email");
-                String first = rs.getString("gateway_order_id");
 
-                System.out.println("ID: " + id);
-                System.out.println(", email: " + email);
-                System.out.println(", gateway_order_id: " + first);
-            }
             rs.close();
             stmt.close();
             conn.close();
@@ -58,5 +50,6 @@ public class JdbcConnectionFile {// JDBC driver name and database URL
                 se.printStackTrace();
             }
         }
+        return null;
     }
 }

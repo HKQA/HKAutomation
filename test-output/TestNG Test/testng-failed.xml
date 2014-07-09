@@ -5,12 +5,12 @@
   <parameter name="BaseURL" value="http://www.centarlhk.com:9090"/>
   <test name="ASQA Sample Test(failed)">
     <classes>
-      <class name="com.hk.orderPlacement.SignupCODorder">
+      <class name="com.hk.orderPlacement.ExistingCodPlacement">
         <methods>
-          <include name="login" invocation-numbers="0"/>
           <include name="g"/>
+          <include name="login" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.hk.orderPlacement.SignupCODorder -->
+      </class> <!-- com.hk.orderPlacement.ExistingCodPlacement -->
     </classes>
   </test> <!-- ASQA Sample Test(failed) -->
 </suite> <!-- Failed suite [TestNG Test] -->
