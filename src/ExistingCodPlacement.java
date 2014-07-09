@@ -19,7 +19,7 @@ import java.util.concurrent.TimeUnit;
  * Created with IntelliJ IDEA.
  * User: Saurabh
  * Date: 7/3/14
- * Time: 6:14 PM
+ * Time: 6:14 PM         -
  * To change this template use File | Settings | File Templates.
  */
 public class ExistingCodPlacement extends SharedProperties {
@@ -32,7 +32,7 @@ public class ExistingCodPlacement extends SharedProperties {
     AddressPage addresspage = new AddressPage();
     PaymentPage paymentpage = new PaymentPage();
     ExcelServiceImpl readexcel = new ExcelServiceImpl();
-    MainPropertyFile mainproperty = new MainPropertyFile();
+
     @Parameters({"BaseURL", "Browser"})
     @BeforeClass
     public void g(String baseUrl, String browser) {
@@ -48,8 +48,8 @@ public class ExistingCodPlacement extends SharedProperties {
         try{
 
 
-            finalObjectString.addAll(readexcel.mainReadFromExcelIterator(mainproperty.readProperty("LoginExcel")));
-            finalObjectString.addAll(readexcel.mainReadFromExcelIterator(mainproperty.readProperty("productIdExcel")));
+            finalObjectString.addAll(readexcel.mainReadFromExcelIterator(MainPropertyFile.readProperty("LoginExcel")));
+            finalObjectString.addAll(readexcel.mainReadFromExcelIterator(MainPropertyFile.readProperty("productIdExcel")));
             result.add(new Object[]{finalObjectString});
 
             System.out.println("List iterator : "+result.iterator());
@@ -73,7 +73,7 @@ public class ExistingCodPlacement extends SharedProperties {
 
         for(int i=4;i<dataArray.size();i++){
 
-            driver.navigate().to(mainproperty.readProperty("url")+dataArray.get(i));
+            driver.navigate().to(MainPropertyFile.readProperty("url")+dataArray.get(i));
             WebElement buyNow = driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
             buyNow.click();
 

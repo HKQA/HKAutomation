@@ -31,7 +31,6 @@ public class ExistingOnlineOrder extends SharedProperties {
     AddressPage addresspage = new AddressPage();
     PaymentPage paymentpage = new PaymentPage();
     ExcelServiceImpl readexcel =new ExcelServiceImpl();
-    MainPropertyFile mainproperty = new MainPropertyFile();
 
 
     @Parameters({"BaseURL", "Browser"})
@@ -49,8 +48,8 @@ public class ExistingOnlineOrder extends SharedProperties {
         try{
 
 
-            finalObjectString.addAll(readexcel.mainReadFromExcelIterator(mainproperty.readProperty("LoginExcel")));
-            finalObjectString.addAll(readexcel.mainReadFromExcelIterator(mainproperty.readProperty("productIdExcel")));
+            finalObjectString.addAll(readexcel.mainReadFromExcelIterator(MainPropertyFile.readProperty("LoginExcel")));
+            finalObjectString.addAll(readexcel.mainReadFromExcelIterator(MainPropertyFile.readProperty("productIdExcel")));
             result.add(new Object[]{finalObjectString});
 
             System.out.println("List iterator : "+result.iterator());
@@ -72,20 +71,10 @@ public class ExistingOnlineOrder extends SharedProperties {
     @Test(dataProvider = "CombinedData", enabled = true)
     public void login(List<String> dataArray)  throws InterruptedException, IOException {
         openBrowser(baseUrl, browser);
-        System.out.println("username: "  +dataArray.get(0));
-        System.out.println("Password: "  +dataArray.get(1));
-
-
-        System.out.println("Email Xpath: "  +loginPage.getEmailIdTextBox());
-        System.out.println("Password Xpath: "  +loginPage.getPasswordTextBox());
-        System.out.println("SignIn Xpath: "  +loginPage.getSignInBtn());
 
         Thread.sleep(7000);
-
-
-
-        for(int i=4;i<dataArray.size();i++){
-            driver.navigate().to(mainproperty.readProperty("url")+dataArray.get(i));
+for(int i=4;i<dataArray.size();i++){
+            driver.navigate().to(MainPropertyFile.readProperty("url")+dataArray.get(i));
             WebElement buyNow = driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
             buyNow.click();
 

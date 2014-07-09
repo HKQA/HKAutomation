@@ -32,7 +32,7 @@ public class SignupCODorder extends SharedProperties{
     AddressPage addresspage = new AddressPage();
     PaymentPage paymentpage = new PaymentPage();
     ExcelServiceImpl readexcel =new ExcelServiceImpl();
-    MainPropertyFile mainproperty = new MainPropertyFile();
+    //MainPropertyFile mainproperty = new MainPropertyFile();
 
 
     @Parameters({"BaseURL", "Browser"})
@@ -50,8 +50,8 @@ public class SignupCODorder extends SharedProperties{
         try{
 
 
-            finalObjectString.addAll(readexcel.mainReadFromExcelIterator(mainproperty.readProperty("SignUpExcel")));
-            finalObjectString.addAll(readexcel.mainReadFromExcelIterator(mainproperty.readProperty("productIdExcel")));
+            finalObjectString.addAll(readexcel.mainReadFromExcelIterator(MainPropertyFile.readProperty("SignUpExcel")));
+            finalObjectString.addAll(readexcel.mainReadFromExcelIterator(MainPropertyFile.readProperty("productIdExcel")));
             result.add(new Object[]{finalObjectString});
 
             System.out.println("List iterator : "+result.iterator());
@@ -88,7 +88,7 @@ public class SignupCODorder extends SharedProperties{
 */
 
         for(int i=4;i<dataArray.size();i++){
-            driver.navigate().to(mainproperty.readProperty("url")+dataArray.get(i));
+            driver.navigate().to(MainPropertyFile.readProperty("url")+dataArray.get(i));
             WebElement buyNow = driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
             buyNow.click();
 
@@ -117,7 +117,7 @@ public class SignupCODorder extends SharedProperties{
         sendKeys(signupage.password(),  dataArray.get(2), driver);
         sendKeys(signupage.confirmpassword(),  dataArray.get(3), driver);
         Click(signupage.createaccount(),  driver);
-        ExcelServiceImpl.updateCellContent(mainproperty.readProperty("SignUpExcel"),"1",0,1);
+        ExcelServiceImpl.updateCellContent( MainPropertyFile.readProperty("SignUpExcel"),"1",0,1);
 
         Thread.sleep(2000);
         Click(cartpage.proceedToCheckout(),  driver);
@@ -130,15 +130,6 @@ public class SignupCODorder extends SharedProperties{
         Click(addresspage.delivertoaddress(),  driver);
         Thread.sleep(5000);
 
-
-       /* private boolean isElementPresent(By by) {
-            try {
-                WebElement wb = driver.findElement(by);
-                return wb == null? false:true;
-            } catch (NoSuchElementException e) {
-                return false;
-            }
-        }*/
 
         Click(paymentpage.cashOnDelivery(),  driver);
         Thread.sleep(5000);

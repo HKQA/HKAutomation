@@ -14,7 +14,7 @@ import java.util.Properties;
  */
 public class MainPropertyFile {
 
-    public String readProperty(String key){
+    public static String readProperty(String key){
     Properties prop = new Properties();
     InputStream input = null;
     try {
