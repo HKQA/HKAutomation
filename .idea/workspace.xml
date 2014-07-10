@@ -174,13 +174,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderDetailsReturn.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="OrderDetailsReturn.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsReturn.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="13" selection-start="347" selection-end="347" vertical-scroll-proportion="0.35619047">
+            <state line="16" column="13" selection-start="347" selection-end="347" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#791#799#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="2" selection-start="48" selection-end="48" vertical-scroll-proportion="0.2527881">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -212,15 +221,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PaymentPage.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/elementLocators/PaymentPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="82" selection-start="808" selection-end="808" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -240,13 +240,13 @@
         <option value="$PROJECT_DIR$/src/com/hk/jdbc/JdbcConnectionFile.java" />
         <option value="$PROJECT_DIR$/src/com/hk/jdbc/ResultSetExtractor.java" />
         <option value="$PROJECT_DIR$/src/com/hk/jdbc/orderDetailsRead.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/SignupCodOrder.java" />
         <option value="$PROJECT_DIR$/src/com/hk/elementLocators/PaymentPage.java" />
         <option value="$PROJECT_DIR$/url.properties" />
         <option value="$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsReturn.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingCodPlacement.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -794,13 +794,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="6" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SignupCodOrder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -894,10 +887,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsReturn.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="13" selection-start="347" selection-end="347" vertical-scroll-proportion="0.35619047">
+        <state line="16" column="13" selection-start="347" selection-end="347" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#791#799#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="2" selection-start="48" selection-end="48" vertical-scroll-proportion="0.2527881">
+          <folding />
         </state>
       </provider>
     </entry>
