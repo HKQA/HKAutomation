@@ -79,21 +79,26 @@ public class ExistingCodPlacement extends SharedProperties {
         Thread.sleep(3000);
 
 
-        String email = (String) JdbcConnectionFile.readJdbcprop("select p.contact_name,p.email,p.base_order_id from payment p where'" + dataArray.get(5) + "'",(String)JdbcConnectionFile.readJdbcprop(""), new ResultSetExtractor<Object>() {
+        List<String> resultQuery = (List<String>) JdbcConnectionFile.readJdbcprop("select b.gateway_order_id,c.store_variant_name from base_order b join cart_line_item c on b.id=c.base_order_id where gateway_order_id='" + dataArray.get(5) + "'", new ResultSetExtractor<Object>() {
             String email = null;
+            String email2 = null;
+            List<String> resultquery= new ArrayList<String>();
+
 
             @Override
             public Object extract(ResultSet rs) throws SQLException {
                 while (rs.next()) {
-                    email = rs.getString("email");
+                    email = rs.getString("gateway_order_id");
+                    email2 = rs.getString("store_variant_name");
                 }
-
-                return email;
+                resultquery.add(email);
+                resultquery.add(email2);
+                return resultquery;
             }
         });
-
-        System.out.print("email: " + email);
-
+        for(String string:resultQuery){
+         System.out.println(string);
+        }
         for (int i = 4; i < dataArray.size(); i++) {
 
             SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + dataArray.get(i));
