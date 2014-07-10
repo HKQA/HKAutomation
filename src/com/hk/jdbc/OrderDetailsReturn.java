@@ -1,5 +1,7 @@
 package com.hk.jdbc;
 
+import com.hk.orderPlacement.OrderDetailsUtil;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -13,11 +15,11 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class OrderDetailsReturn {
-    public void  orderDetials(){
-        List<String> resultQuery = (List<String>) JdbcConnectionFile.readJdbcprop("select b.gateway_order_id,c.store_variant_name from base_order b join cart_line_item c on b.id=c.base_order_id where gateway_order_id='" + dataArray.get(5) + "'", new ResultSetExtractor<Object>() {
+    public static List<String>  orderDetail(String gatewayOrderId) {
+        JdbcConnectionFile.readJdbcprop("select b.gateway_order_id,c.store_variant_name from base_order b join cart_line_item c on b.id=c.base_order_id where gateway_order_id='"+ gatewayOrderId+"'" , new ResultSetExtractor<Object>() {
             String email = null;
             String email2 = null;
-            List<String> resultquery= new ArrayList<String>();
+            List<String> resultquery = new ArrayList<String>();
 
 
             @Override
@@ -31,9 +33,16 @@ public class OrderDetailsReturn {
                 return resultquery;
             }
         });
-        for(String string:resultQuery){
+    /*for(String string:resultQuery){
+        System.out.println(string);
+    }*/
+        return null;
+
+    }
+
+    public static void printList(List<String> stringList) {
+        for (String string : stringList) {
             System.out.println(string);
         }
-
     }
 }

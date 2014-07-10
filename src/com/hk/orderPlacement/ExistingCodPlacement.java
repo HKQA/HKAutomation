@@ -5,8 +5,7 @@ import com.google.common.collect.Lists;
 import com.hk.commonProperties.SharedProperties;
 import com.hk.elementLocators.*;
 import com.hk.excelService.ExcelServiceImpl;
-import com.hk.jdbc.JdbcConnectionFile;
-import com.hk.jdbc.ResultSetExtractor;
+import com.hk.jdbc.OrderDetailsReturn;
 import com.hk.property.PropertyHelper;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -19,8 +18,6 @@ import org.testng.annotations.Test;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -77,6 +74,8 @@ public class ExistingCodPlacement extends SharedProperties {
     public void login(List<String> dataArray) throws InterruptedException, IOException {
         SharedProperties.openBrowser(baseUrl, browser);
         Thread.sleep(3000);
+
+
 //        for(int i=4;i<dataArray.size();i++){
 
         for (int i = 4; i < dataArray.size(); i++) {
@@ -123,10 +122,10 @@ public class ExistingCodPlacement extends SharedProperties {
         Thread.sleep(5000);
         SharedProperties.Click(paymentpage.payOnDelivery(), SharedProperties.driver);
 
-        OrderDetailsUtil.gatewayOrderId();
-
+        /*OrderDetailsUtil.gatewayOrderId();
+        System.out.print("order details: ");*/
+        System.out.print(OrderDetailsUtil.gatewayOrderId());
+        OrderDetailsReturn.orderDetail(OrderDetailsUtil.gatewayOrderId());
 
     }
-
-
 }
