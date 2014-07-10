@@ -23,8 +23,8 @@
     <file path="$PROJECT_DIR$/test-output/Command line suite/testng-failed.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404901038471" ignored="false" />
     <file path="/ExistingCodPlacement.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404985307842" ignored="false" />
     <file path="/Testing_v4.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404460412517" ignored="false" />
-    <file path="$PROJECT_DIR$/test-output/TestNG Test/testng-failed.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404903676491" ignored="false" />
-    <file path="$PROJECT_DIR$/test-output/TestNG Test/ASQA Sample Test.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404903676491" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/TestNG Test/testng-failed.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404991034399" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/TestNG Test/ASQA Sample Test.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404991034400" ignored="false" />
     <file path="/build.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404473966852" ignored="false" />
     <file path="/SignupPage.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404484143932" ignored="false" />
     <file path="/SignupOrderOnline.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404891599161" ignored="false" />
@@ -43,17 +43,17 @@
     <file path="C:/hkr/HKRejuvenate/HKCore/src/com/hk/pricing/PricingEngine.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404889250055" ignored="false" />
     <file path="/JdbcConnectionFile.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404900528962" ignored="false" />
     <file path="/a.dummy" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404891542309" ignored="false" />
-    <file path="$PROJECT_DIR$/test-output/old/TestNG Test/testng.xml.html" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404903676491" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/old/TestNG Test/testng.xml.html" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404991034399" ignored="false" />
     <file path="$PROJECT_DIR$/test-output/old/TestNG Test/methods.html" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404901135182" ignored="false" />
-    <file path="$PROJECT_DIR$/test-output/old/TestNG Test/methods-alphabetical.html" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404901135182" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/old/TestNG Test/methods-alphabetical.html" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404991034400" ignored="false" />
     <file path="$PROJECT_DIR$/test-output/Command line suite/Command line test.html" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404901038471" ignored="false" />
-    <file path="$PROJECT_DIR$/test-output/TestNG Test/ASQA Sample Test.html" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404903676491" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/TestNG Test/ASQA Sample Test.html" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404991034399" ignored="false" />
     <file path="$PROJECT_DIR$/test-output/old/Command line suite/testng.xml.html" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404901038471" ignored="false" />
     <file path="$PROJECT_DIR$/test-output/old/Command line suite/classes.html" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404900979872" ignored="false" />
     <file path="$PROJECT_DIR$/test-output/old/Command line suite/methods.html" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404901135182" ignored="false" />
     <file path="$PROJECT_DIR$/test-output/old/Command line suite/methods-alphabetical.html" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404901135182" ignored="false" />
     <file path="$PROJECT_DIR$/test-output/junitreports/TEST-SignupCODorder.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404903676491" ignored="false" />
-    <file path="$PROJECT_DIR$/test-output/old/TestNG Test/classes.html" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404900979872" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/old/TestNG Test/classes.html" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404991034399" ignored="false" />
     <file path="C:/catalog_admin/WSAdmin/codebase/HealthKart/build.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404902861638" ignored="false" />
     <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404903391269" ignored="false" />
     <file path="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.orderPlacement.SignupCODorder.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404903676491" ignored="false" />
@@ -61,6 +61,11 @@
     <file path="/CartPage.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404975428386" ignored="false" />
     <file path="/PaymentPage.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404984976145" ignored="false" />
     <file path="/OrderDetailsUtil.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404985079097" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/testng-results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404991034399" ignored="false" />
+    <file path="$PROJECT_DIR$/src/com/hk/jdbc/JdbcConnectionFile.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404991034399" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/testng-failed.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404991034400" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/index.html" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404991034400" ignored="false" />
+    <file path="/.gitignore" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404991116255" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,8 +135,10 @@
       <file leaf-file-name="ExistingCodPlacement.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingCodPlacement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="125" column="39" selection-start="4973" selection-end="4987" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="142" column="100" selection-start="6111" selection-end="6111" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#3232#3240#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -145,10 +152,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderDetailsUtil.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="OrderDetailsUtil.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/OrderDetailsUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="25" selection-start="408" selection-end="408" vertical-scroll-proportion="0.44237918">
+            <state line="21" column="51" selection-start="529" selection-end="529" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="12" selection-start="59" selection-end="59" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -163,10 +179,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WebElement.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/libs/selenium-java-2.42.2-srcs.jar!/org/openqa/selenium/WebElement.java">
+      <file leaf-file-name="BootStrap.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/BootStrap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="130" column="9" selection-start="5694" selection-end="5694" vertical-scroll-proportion="0.0">
+            <state line="41" column="10" selection-start="1337" selection-end="1337" vertical-scroll-proportion="0.36431226">
               <folding />
             </state>
           </provider>
@@ -208,15 +224,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SharedProperties.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/commonProperties/SharedProperties.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="23" selection-start="683" selection-end="683" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -227,9 +234,7 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/hk/property/MainPropertyFile.java" />
         <option value="$PROJECT_DIR$/src/com/hk/jdbc/JdbcConnectionFile.java" />
-        <option value="$PROJECT_DIR$/src/BootStrap.java" />
         <option value="$PROJECT_DIR$/src/com/hk/excelService/ExcelServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/SignupOrderOnline.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/SignupCODorder.java" />
@@ -242,7 +247,9 @@
         <option value="$PROJECT_DIR$/testng.xml" />
         <option value="$PROJECT_DIR$/src/com/hk/elementLocators/PaymentPage.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/OrderDetailsUtil.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingCodPlacement.java" />
+        <option value="$PROJECT_DIR$/src/BootStrap.java" />
       </list>
     </option>
   </component>
@@ -797,20 +804,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingOnlineOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="61" selection-start="895" selection-end="5347" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/url.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="43" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/property/PropertyHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="13" selection-start="298" selection-end="298" vertical-scroll-proportion="0.0">
@@ -895,16 +888,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingCodPlacement.java">
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/OrderDetailsUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="39" selection-start="4973" selection-end="4987" vertical-scroll-proportion="0.0">
+        <state line="21" column="51" selection-start="529" selection-end="529" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/OrderDetailsUtil.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="25" selection-start="408" selection-end="408" vertical-scroll-proportion="0.44237918">
+        <state line="8" column="12" selection-start="59" selection-end="59" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingCodPlacement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="142" column="100" selection-start="6111" selection-end="6111" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#3232#3240#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BootStrap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="10" selection-start="1337" selection-end="1337" vertical-scroll-proportion="0.36431226">
           <folding />
         </state>
       </provider>
