@@ -1,1 +1,8 @@
 .idea/*
+out/
+.swp
+*.ipr
+*.iws
+*.iml
+*.eml
+*.bak
