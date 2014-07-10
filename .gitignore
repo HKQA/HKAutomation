@@ -5,5 +5,5 @@ out/
 *.iml
 *.eml
 *.bak
-.idea/
+.idea/*.*
 test-output/
