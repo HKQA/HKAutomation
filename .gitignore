@@ -6,4 +6,5 @@ out/
 *.eml
 *.bak
 .idea/*.*
+.idea/workspace.xml
 test-output/
