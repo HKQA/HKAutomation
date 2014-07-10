@@ -20,7 +20,7 @@ public class PropertyHelper {
     InputStream input = null;
     try {
 
-        input = new FileInputStream("E:\\Healthkart\\MainAutoQa\\Automation_testing_v4\\url.properties");
+        input = new FileInputStream("C:\\selenium\\Automation_testing_v4\\url.properties");
         prop.load(input);
 
         return prop.getProperty(key);
