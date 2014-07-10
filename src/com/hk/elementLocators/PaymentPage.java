@@ -5,7 +5,6 @@ package com.hk.elementLocators;
  * User: Saurabh
  * Date: 7/2/14
  * Time: 4:48 PM
- * To change this template use File | Settings | File Templates.
  */
 public class PaymentPage {
 

@@ -38,7 +38,7 @@ public class SharedProperties {
             driver.manage().window().maximize();
             driver.get(AppURL);
         } else if (BrowserName.equals("chrome")) {
-            System.setProperty("webdriver.chrome.driver", "E:\\Healthkart\\MainAutoQa\\Automation_testing_v4\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "C:\\selenium\\Automation_testing_v4\\chromedriver.exe");
             driver = new ChromeDriver();
             driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
             driver.manage().window().maximize();

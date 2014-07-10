@@ -28,7 +28,7 @@ import java.util.concurrent.TimeUnit;
  * Time: 6:43 PM
  * To change this template use File | Settings | File Templates.
  */
-public class SignupCODorder extends SharedProperties {
+public class SignupCodOrder extends SharedProperties {
     String baseUrl;
     public  String browser;
     /*com.hk.elementLocators.LoginPage loginPage = new com.hk.elementLocators.LoginPage();*/
