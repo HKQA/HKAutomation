@@ -190,10 +190,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExistingOnlineOrder.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ExistingOnlineOrder.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingOnlineOrder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="136" column="9" selection-start="6073" selection-end="6073" vertical-scroll-proportion="0.0">
+            <state line="136" column="9" selection-start="6073" selection-end="6073" vertical-scroll-proportion="4.4038095">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1835#1843#0" expanded="true" />
@@ -223,10 +223,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CartPage.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CartPage.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/elementLocators/CartPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="81" selection-start="669" selection-end="669" vertical-scroll-proportion="0.47397768">
+            <state line="15" column="81" selection-start="669" selection-end="669" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -813,7 +813,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20833333" sideWeight="0.582906" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2" sideWeight="0.582906" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41709402" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -980,16 +980,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingOnlineOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="9" selection-start="6073" selection-end="6073" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1835#1843#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SignupCodOrder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="143" column="51" selection-start="6533" selection-end="6533" vertical-scroll-proportion="0.0">
@@ -1012,8 +1002,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/elementLocators/CartPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="81" selection-start="669" selection-end="669" vertical-scroll-proportion="0.47397768">
+        <state line="15" column="81" selection-start="669" selection-end="669" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingOnlineOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="136" column="9" selection-start="6073" selection-end="6073" vertical-scroll-proportion="4.4038095">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1835#1843#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
