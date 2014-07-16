@@ -10,9 +10,9 @@
             <class name="com.hk.orderPlacement.ExistingOnlineOrder"/>
         </classes>
     </test> -->
-    <test name="com.hk.orderPlacement.ExistingCodPlacement">
+    <test name="com.hk.orderPlacement.SignupCodOrder">
         <classes>
-            <class name="com.hk.orderPlacement.ExistingCodPlacement"/>
+            <class name="com.hk.orderPlacement.SignupCodOrder"/>
         </classes>
     </test>
     <!--    <test name="ExistingUserOrderCOD">

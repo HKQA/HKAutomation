@@ -2,23 +2,15 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [TestNG Test]">
   <parameter name="Browser" value="chrome"/>
-  <parameter name="BaseURL" value="http://www.centarlhk.com:9090"/>
+  <parameter name="BaseURL" value="http://www.centralhk.com:9090"/>
   <test name="ASQA Sample Test(failed)">
     <classes>
-<<<<<<< HEAD
       <class name="com.hk.orderPlacement.SignupCodOrder">
-=======
-      <class name="com.hk.orderPlacement.ExistingCodPlacement">
->>>>>>> 1345f39ca3df0df7a19fbe3db9763987a0fc2859
         <methods>
           <include name="g"/>
           <include name="login" invocation-numbers="0"/>
         </methods>
-<<<<<<< HEAD
       </class> <!-- com.hk.orderPlacement.SignupCodOrder -->
-=======
-      </class> <!-- com.hk.orderPlacement.ExistingCodPlacement -->
->>>>>>> 1345f39ca3df0df7a19fbe3db9763987a0fc2859
     </classes>
   </test> <!-- ASQA Sample Test(failed) -->
 </suite> <!-- Failed suite [TestNG Test] -->

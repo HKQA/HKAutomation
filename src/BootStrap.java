@@ -1,4 +1,5 @@
 import com.beust.jcommander.JCommander;
+import com.hk.property.PropertyHelper;
 import org.testng.TestNG;
 import org.testng.xml.XmlClass;
 import org.testng.xml.XmlSuite;
@@ -31,14 +32,14 @@ public class BootStrap {
 //Add any parameters that you want to set to the Test.
         myTest.setParameters(testngParams);
         Map<String,String> suiteParam = new HashMap<String,String>();
-        suiteParam.put("BaseURL","http://www.centarlhk.com:9090");
+        suiteParam.put("BaseURL", PropertyHelper.readProperty("baseUrl"));
         suiteParam.put("Browser","chrome");
         mySuite.setParameters(suiteParam);
 
 
 //Create a list which can contain the classes that you want to run.
         List<XmlClass> myClasses = new ArrayList<XmlClass> ();
-        myClasses.add(new XmlClass("com.hk.orderPlacement.ExistingCodPlacement"));
+        myClasses.add(new XmlClass("com.hk.orderPlacement.SignupCodOrder"));
 
 //Assign that to the XmlTest Object created earlier.
         myTest.setXmlClasses(myClasses);

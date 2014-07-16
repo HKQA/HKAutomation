@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
+import com.hk.property.PropertyHelper;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -30,7 +31,7 @@ public class SharedProperties {
             driver.get(AppURL);
 
         } else if (BrowserName.equalsIgnoreCase("IE")) {
-            System.setProperty("webdriver.ie.driver", "D:\\SeleniumUse\\IEDriverServer.exe");
+            System.setProperty("webdriver.ie.driver", PropertyHelper.readProperty("ieDriver"));
             DesiredCapabilities cap = DesiredCapabilities.internetExplorer();
             cap.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
             driver = new InternetExplorerDriver(cap);
@@ -38,7 +39,7 @@ public class SharedProperties {
             driver.manage().window().maximize();
             driver.get(AppURL);
         } else if (BrowserName.equals("chrome")) {
-            System.setProperty("webdriver.chrome.driver", "C:\\selenium\\Automation_testing_v4\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", PropertyHelper.readProperty("chromeDriver"));
             driver = new ChromeDriver();
             driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
             driver.manage().window().maximize();
