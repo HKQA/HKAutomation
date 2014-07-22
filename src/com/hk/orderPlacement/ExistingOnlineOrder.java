@@ -7,9 +7,11 @@ package com.hk.orderPlacement; /**
  */
 
 import com.google.common.collect.Lists;
+import com.hk.commonProperties.SendMail;
 import com.hk.commonProperties.SharedProperties;
 import com.hk.elementLocators.*;
 import com.hk.excelService.ExcelServiceImpl;
+import com.hk.jdbc.OrderDetailsReturn;
 import com.hk.property.PropertyHelper;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
@@ -127,13 +129,15 @@ public class ExistingOnlineOrder extends SharedProperties {
             SharedProperties.Click(paymentpage.paymentY(), SharedProperties.driver);
             Thread.sleep(2000);
             SharedProperties.Click(paymentpage.proceedPayment(), SharedProperties.driver);
+            OrderDetailsReturn.orderDetail(OrderDetailsUtil.gatewayOrderId());
+            SendMail.sendmail(true, PropertyHelper.readProperty("screenshotFolder"));
 
 
         } catch (Exception e) {
             //Takes the screenshot  when test fails
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + new Date().getTime() + "\\CouponOnlineOrder.jpg"));
-
+            SendMail.sendmail(true, PropertyHelper.readProperty("screenshotFolder"));
         }
     }
 

@@ -60,7 +60,6 @@ public class BootStrap {
 
 //invoke run() - this will run your class.
         myTestNG.run();
-
     }
 
     public static void main(String args[]) {

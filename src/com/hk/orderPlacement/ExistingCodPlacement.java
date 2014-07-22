@@ -2,6 +2,7 @@ package com.hk.orderPlacement;
 
 
 import com.google.common.collect.Lists;
+import com.hk.commonProperties.SendMail;
 import com.hk.commonProperties.SharedProperties;
 import com.hk.elementLocators.*;
 import com.hk.excelService.ExcelServiceImpl;
@@ -130,12 +131,13 @@ public class ExistingCodPlacement extends SharedProperties {
         System.out.print("order details: ");*/
             System.out.print(OrderDetailsUtil.gatewayOrderId());
             OrderDetailsReturn.orderDetail(OrderDetailsUtil.gatewayOrderId());
+            SendMail.sendmail(true, PropertyHelper.readProperty("screenshotFolder"));
 
         } catch (Exception e) {
             //Takes the screenshot  when test fails
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + new Date().getTime() + "\\ExistingCODOrderFailure.jpg"));
-
+            SendMail.sendmail(false, PropertyHelper.readProperty("screenshotFolder"));
         }
     }
 }

@@ -10,11 +10,14 @@
             <class name="com.hk.orderPlacement.ExistingOnlineOrder"/>
         </classes>
     </test> -->
-    <test name="com.hk.orderPlacement.SignupCodOrder">
+
+
+    <test name="com.hk.orderPlacement.CouponOnlineOrder">
         <classes>
-            <class name="com.hk.orderPlacement.SignupCodOrder"/>
+            <class name="com.hk.orderPlacement.CouponOnlineOrder"/>
         </classes>
     </test>
+
     <!--    <test name="ExistingUserOrderCOD">
             <classes>
                 <class name="com.hk.orderPlacement.ExistingUserOrderCOD"/>

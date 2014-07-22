@@ -15,6 +15,8 @@ import java.util.Properties;
  */
 public class PropertyHelper {
 
+    public static String readProperty;
+
     public static String readProperty(String key){
     Properties prop = new Properties();
     InputStream input = null;
