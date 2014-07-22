@@ -53,7 +53,7 @@ public class SendMail {
 
             if (testSuccessful == true) {
                 // Fill the message
-                messageBodyPart.setText("All test cases run successfully");
+                messageBodyPart.setText("Test cases run successfully");
 
                 // Create a multipart message
                 Multipart multipart = new MimeMultipart();
@@ -64,7 +64,7 @@ public class SendMail {
                 message.setContent(multipart);
             } else {
                 // Fill the message
-                messageBodyPart.setText("Please find the attached screen shot for failed cases");
+                messageBodyPart.setText("Please find the attached screen shot for fail case");
 
                 // Create a multipart message
                 Multipart multipart = new MimeMultipart();

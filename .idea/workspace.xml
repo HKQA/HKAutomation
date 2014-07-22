@@ -220,7 +220,7 @@
       <file leaf-file-name="SendMail.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/hk/commonProperties/SendMail.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="0" selection-start="3351" selection-end="3351" vertical-scroll-proportion="2.1691449">
+            <state line="66" column="91" selection-start="2320" selection-end="2320" vertical-scroll-proportion="0.65241635">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -250,7 +250,6 @@
         <option value="$PROJECT_DIR$/src/BootStrap.java" />
         <option value="$PROJECT_DIR$/url.properties" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/com/hk/commonProperties/SendMail.java" />
         <option value="$PROJECT_DIR$/src/com/hk/property/PropertyHelper.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/OrderPlacementTestSuiteRunner.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/OrderPlacementTestSuite.java" />
@@ -263,6 +262,7 @@
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingOnlineOrder.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/SignupCodOrder.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/SignupOrderOnline.java" />
+        <option value="$PROJECT_DIR$/src/com/hk/commonProperties/SendMail.java" />
       </list>
     </option>
   </component>
@@ -985,7 +985,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/commonProperties/SendMail.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="0" selection-start="3351" selection-end="3351" vertical-scroll-proportion="2.1691449">
+        <state line="66" column="91" selection-start="2320" selection-end="2320" vertical-scroll-proportion="0.65241635">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
