@@ -129,8 +129,8 @@ public class ExistingCodPlacement extends SharedProperties {
 
         /*OrderDetailsUtil.gatewayOrderId();
         System.out.print("order details: ");*/
-            System.out.print(OrderDetailsUtil.gatewayOrderId());
-            OrderDetailsReturn.orderDetail(OrderDetailsUtil.gatewayOrderId());
+            System.out.print(OrderDetailsUtil.GatewayOrderId());
+            OrderDetailsReturn.orderDetail(OrderDetailsUtil.GatewayOrderId());
             SendMail.sendmail(true, PropertyHelper.readProperty("screenshotFolder"));
 
         } catch (Exception e) {

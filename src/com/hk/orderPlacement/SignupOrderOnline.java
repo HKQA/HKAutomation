@@ -140,7 +140,7 @@ public class SignupOrderOnline extends SharedProperties {
             SharedProperties.Click(paymentpage.paymentY(), SharedProperties.driver);
             Thread.sleep(2000);
             SharedProperties.Click(paymentpage.proceedPayment(), SharedProperties.driver);
-            OrderDetailsReturn.orderDetail(OrderDetailsUtil.gatewayOrderId());
+            OrderDetailsReturn.orderDetail(OrderDetailsUtil.GatewayOrderId());
             SendMail.sendmail(true, PropertyHelper.readProperty("screenshotFolder"));
 
 
