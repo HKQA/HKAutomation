@@ -11,10 +11,13 @@
         </classes>
     </test> -->
 
-
-    <test name="com.hk.orderPlacement.CouponOnlineOrder">
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+    <test name="com.hk.orderPlacement.SignupCodOrder">
         <classes>
-            <class name="com.hk.orderPlacement.CouponOnlineOrder"/>
+            <class name="com.hk.orderPlacement.SignupCodOrder"/>
         </classes>
     </test>
 

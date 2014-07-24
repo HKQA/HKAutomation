@@ -91,6 +91,8 @@ public class SendMail {
             }
             // Send message
 
+           /* Transport.send(message);*/
+            Transport transport = session.getTransport("smtps");
             Transport.send(message);
             System.out.println("Sent message successfully...." + message);
         } catch (MessagingException mex) {

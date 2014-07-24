@@ -141,7 +141,7 @@ public class CouponOnlineOrder extends SharedProperties{
         } catch (Exception e) {
             //Takes the screenshot  when test fails
             File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + new Date().getTime() + "\\CouponOnlineOrderFailure.jpg"));
+            FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\CouponOnlineOrderFailure.jpg"));
             SendMail.sendmail(false,PropertyHelper.readProperty("screenshotFolder"));
         }
     }

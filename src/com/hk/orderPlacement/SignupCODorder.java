@@ -141,7 +141,7 @@ public class SignupCodOrder extends SharedProperties {
             SharedProperties.Click(paymentpage.cashOnDelivery(), SharedProperties.driver);
             Thread.sleep(5000);
             SharedProperties.Click(paymentpage.payOnDelivery(), SharedProperties.driver);
-            OrderDetailsReturn.orderDetail(OrderDetailsUtil.GatewayOrderId());
+           /* OrderDetailsReturn.orderDetail(OrderDetailsUtil.GatewayOrderId());*/
             SendMail.sendmail(true, PropertyHelper.readProperty("screenshotFolder"));
         } catch (Exception e) {
             //Takes the screenshot  when test fails
