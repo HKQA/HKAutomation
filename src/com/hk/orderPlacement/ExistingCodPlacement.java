@@ -75,7 +75,7 @@ public class ExistingCodPlacement extends SharedProperties {
 
     @Parameters("BaseURL")
     @Test(dataProvider = "CombinedData", enabled = true)
-    public void login(List<String> dataArray) throws InterruptedException, IOException {
+    public void login(List<String> dataArray) throws InterruptedException, IOException, Exception {
         try {
             SharedProperties.openBrowser(baseUrl, browser);
             Thread.sleep(3000);
@@ -131,13 +131,14 @@ public class ExistingCodPlacement extends SharedProperties {
         System.out.print("order details: ");*/
             System.out.print(OrderDetailsUtil.GatewayOrderId());
             OrderDetailsReturn.orderDetail(OrderDetailsUtil.GatewayOrderId());
-            SendMail.sendmail(true, PropertyHelper.readProperty("screenshotFolder"));
+            /*SendMail.sendmail(true, PropertyHelper.readProperty("screenshotFolder"));*/
 
         } catch (Exception e) {
             //Takes the screenshot  when test fails
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\ExistingCODOrderFailure.jpg"));
-            SendMail.sendmail(false, PropertyHelper.readProperty("screenshotFolder"));
+            /*SendMail.sendmail(false, PropertyHelper.readProperty("screenshotFolder"));*/
+            throw new Exception() ;
         }
     }
 }

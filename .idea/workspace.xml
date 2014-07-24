@@ -5,9 +5,9 @@
     <ignored path="Automation_testing_v4.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/testing_v4.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404300939970" ignored="false" />
-    <file path="/testng.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406187715068" ignored="false" />
-    <file path="/fragment.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1405590490956" ignored="false" />
-    <file path="/Dummy.txt" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404889081743" ignored="false" />
+    <file path="/testng.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406200656741" ignored="false" />
+    <file path="/fragment.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406212454425" ignored="false" />
+    <file path="/Dummy.txt" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406212454425" ignored="false" />
     <file path="C:/NewHkAutomationSuite/NewHkAutomationSuite/src/orderPlacement/ExistingUserOrderCOD.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404146620816" ignored="false" />
     <file path="C:/NewHkAutomationSuite/NewHkAutomationSuite/src/framework/SharedLibHtml.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404193228174" ignored="false" />
     <file path="C:/exp2/testing_again/src/signUp.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404193631461" ignored="false" />
@@ -17,25 +17,25 @@
     <file path="/addressPage.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404296144558" ignored="false" />
     <file path="/paymentPage.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404455799959" ignored="false" />
     <file path="/existingCodPlacement.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404457635708" ignored="false" />
-    <file path="/BootStrap.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1405520225667" ignored="false" />
+    <file path="/BootStrap.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406212059595" ignored="false" />
     <file path="$PROJECT_DIR$/test-output/Command line suite/Command line test.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404901038471" ignored="false" />
     <file path="$PROJECT_DIR$/test-output/junitreports/TEST-ExistingCodPlacement.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404901038471" ignored="false" />
     <file path="$PROJECT_DIR$/test-output/Command line suite/testng-failed.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404901038471" ignored="false" />
-    <file path="/ExistingCodPlacement.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406025470435" ignored="false" />
+    <file path="/ExistingCodPlacement.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406213314159" ignored="false" />
     <file path="/Testing_v4.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404460412517" ignored="false" />
     <file path="$PROJECT_DIR$/test-output/TestNG Test/testng-failed.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404976775148" ignored="false" />
     <file path="$PROJECT_DIR$/test-output/TestNG Test/ASQA Sample Test.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406124832238" ignored="false" />
     <file path="/build.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404473966852" ignored="false" />
     <file path="/SignupPage.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404484143932" ignored="false" />
-    <file path="/SignupOrderOnline.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406025488234" ignored="false" />
+    <file path="/SignupOrderOnline.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406213344182" ignored="false" />
     <file path="/AddressPage.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404726624131" ignored="false" />
     <file path="/SignupCODorder.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404891846892" ignored="false" />
     <file path="F:/Work/test3/Automation_testing_v4/src/ExistingOnlineplacement.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404741520227" ignored="false" />
     <file path="$PROJECT_DIR$/test-output/testng-failed.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404976775148" ignored="false" />
     <file path="/SharedProperties.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1405495603483" ignored="false" />
     <file path="/MainPropertyFile.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404900123011" ignored="false" />
-    <file path="/url.properties" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1405520575051" ignored="false" />
-    <file path="/ExistingOnlineOrder.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406025476313" ignored="false" />
+    <file path="/url.properties" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406205357594" ignored="false" />
+    <file path="/ExistingOnlineOrder.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406213333783" ignored="false" />
     <file path="C:/hkr/HKRejuvenate/HKWeb/resources/prod/WEB-INF/environment.properties" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404889250055" ignored="false" />
     <file path="C:/hkr/HKRejuvenate/HKWeb/resources/aph_prod/WEB-INF/environment.properties" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404889250055" ignored="false" />
     <file path="C:/hkr/HKRejuvenate/HKCore/src/com/hk/impl/service/user/UserDetailServiceImpl.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404889250055" ignored="false" />
@@ -63,9 +63,9 @@
     <file path="/.gitignore" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404993809338" ignored="false" />
     <file path="/OrderDetailsReturn.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404998241590" ignored="false" />
     <file path="/PropertyHelper.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1405495539666" ignored="false" />
-    <file path="/SignupCodOrder.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406025481485" ignored="false" />
-    <file path="/CouponOnlineOrder.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406025459489" ignored="false" />
-    <file path="/SendMail.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406196743142" ignored="false" />
+    <file path="/SignupCodOrder.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406213042273" ignored="false" />
+    <file path="/CouponOnlineOrder.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406213280047" ignored="false" />
+    <file path="/SendMail.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406213523910" ignored="false" />
     <file path="/OrderPlacementTestSuite.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1405604479400" ignored="false" />
     <file path="/OrderPlacementTestSuiteRunner.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1405607023749" ignored="false" />
     <file path="/OrderPlacementSuite.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1405604801259" ignored="false" />
@@ -73,6 +73,8 @@
     <file path="/test.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1405689417986" ignored="false" />
     <file path="/OrderDetailsUtil.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406023184581" ignored="false" />
     <file path="$PROJECT_DIR$/test-output/xml/com.hk.orderPlacement.SignupCodOrder_results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406197111756" ignored="false" />
+    <file path="/SuiteListener.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406209945921" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/xml/com.hk.orderPlacement.SuiteListener_results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406205271412" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +149,7 @@
       <file leaf-file-name="ExistingCodPlacement.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingCodPlacement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="138" column="99" selection-start="6073" selection-end="6073" vertical-scroll-proportion="0.0">
+            <state line="77" column="97" selection-start="2738" selection-end="2738" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -156,7 +158,7 @@
       <file leaf-file-name="ExistingOnlineOrder.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingOnlineOrder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="138" column="100" selection-start="6254" selection-end="6254" vertical-scroll-proportion="0.0">
+            <state line="77" column="97" selection-start="2655" selection-end="2655" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -165,26 +167,21 @@
       <file leaf-file-name="SignupOrderOnline.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SignupOrderOnline.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="143" column="81" selection-start="6841" selection-end="6841" vertical-scroll-proportion="0.0">
+            <state line="43" column="48" selection-start="1543" selection-end="1543" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BootStrap.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="BootStrap.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BootStrap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="50" selection-start="2634" selection-end="2634" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="url.properties" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/url.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="51" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="46" column="69" selection-start="1772" selection-end="1772" vertical-scroll-proportion="0.5408922">
+              <folding>
+                <element signature="e#1994#2003#0" expanded="true" />
+                <element signature="e#2198#2208#0" expanded="true" />
+                <element signature="e#2630#2645#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -192,16 +189,38 @@
       <file leaf-file-name="SignupCodOrder.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SignupCodOrder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="140" column="54" selection-start="6319" selection-end="6319" vertical-scroll-proportion="0.0">
+            <state line="150" column="12" selection-start="7062" selection-end="7085" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SharedProperties.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hk/commonProperties/SharedProperties.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="4" selection-start="703" selection-end="734" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.xml">
+      <file leaf-file-name="SuiteReport.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SuiteReport.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="26" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0">
+            <state line="20" column="74" selection-start="538" selection-end="538" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="url.properties" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/url.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="16" selection-start="546" selection-end="562" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -210,25 +229,16 @@
       <file leaf-file-name="SendMail.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/commonProperties/SendMail.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="12" selection-start="3499" selection-end="3499" vertical-scroll-proportion="0.0">
+            <state line="65" column="53" selection-start="2177" selection-end="2177" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testng.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testng.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="68" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CouponOnlineOrder.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CouponOnlineOrder.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/CouponOnlineOrder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="143" column="100" selection-start="6472" selection-end="6472" vertical-scroll-proportion="0.7409524">
+            <state line="78" column="97" selection-start="2670" selection-end="2670" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -244,22 +254,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/OrderPlacementTestSuiteRunner.java" />
-        <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/OrderPlacementTestSuite.java" />
-        <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/OrderPlacementSuite.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/OrderPlacementSuiteRunner.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/test.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/OrderDetailsUtil.java" />
-        <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/SignupOrderOnline.java" />
-        <option value="$PROJECT_DIR$/url.properties" />
         <option value="$PROJECT_DIR$/build.xml" />
+        <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/SuiteListener.java" />
+        <option value="$PROJECT_DIR$/url.properties" />
         <option value="$PROJECT_DIR$/testng.xml" />
-        <option value="$PROJECT_DIR$/src/com/hk/commonProperties/SendMail.java" />
+        <option value="$PROJECT_DIR$/src/com/hk/commonProperties/SharedProperties.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/SignupCodOrder.java" />
-        <option value="$PROJECT_DIR$/src/BootStrap.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/CouponOnlineOrder.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingCodPlacement.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingOnlineOrder.java" />
+        <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/SignupOrderOnline.java" />
+        <option value="$PROJECT_DIR$/src/com/hk/commonProperties/SendMail.java" />
+        <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/SuiteReport.java" />
+        <option value="$PROJECT_DIR$/src/BootStrap.java" />
       </list>
     </option>
   </component>
@@ -678,10 +688,10 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="TestNG.C:/selenium/Automation_testing_v4/testng.xml" />
-        <item index="1" class="java.lang.String" itemvalue="Application.OrderPlacementSuiteRunner" />
-        <item index="2" class="java.lang.String" itemvalue="Application.SendMail" />
-        <item index="3" class="java.lang.String" itemvalue="Application.SignupCodOrder" />
-        <item index="4" class="java.lang.String" itemvalue="Application.BootStrap" />
+        <item index="1" class="java.lang.String" itemvalue="Application.BootStrap" />
+        <item index="2" class="java.lang.String" itemvalue="Application.OrderPlacementSuiteRunner" />
+        <item index="3" class="java.lang.String" itemvalue="Application.SendMail" />
+        <item index="4" class="java.lang.String" itemvalue="Application.SignupCodOrder" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -722,7 +732,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21931697" sideWeight="0.6947705" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2189394" sideWeight="0.6947705" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4034188" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -816,16 +826,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/hk/elementLocators/LoginPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="201" selection-end="201" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/commonProperties/SharedProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="23" selection-start="2223" selection-end="2223" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/property/PropertyHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="0" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0">
@@ -847,16 +847,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/url.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="51" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="26" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0">
+        <state line="2" column="25" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -868,59 +861,88 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/commonProperties/SendMail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="12" selection-start="3499" selection-end="3499" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testng.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="68" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0">
+        <state line="2" column="26" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BootStrap.java">
+    <entry file="file://$PROJECT_DIR$/src/com/hk/commonProperties/SharedProperties.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="50" selection-start="2634" selection-end="2634" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingCodPlacement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="99" selection-start="6073" selection-end="6073" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingOnlineOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="100" selection-start="6254" selection-end="6254" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SignupCodOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="140" column="54" selection-start="6319" selection-end="6319" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SignupOrderOnline.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="81" selection-start="6841" selection-end="6841" vertical-scroll-proportion="0.0">
+        <state line="23" column="4" selection-start="703" selection-end="734" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/CouponOnlineOrder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="100" selection-start="6472" selection-end="6472" vertical-scroll-proportion="0.7409524">
+        <state line="78" column="97" selection-start="2670" selection-end="2670" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingCodPlacement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="97" selection-start="2738" selection-end="2738" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingOnlineOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="97" selection-start="2655" selection-end="2655" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SignupCodOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="150" column="12" selection-start="7062" selection-end="7085" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SignupOrderOnline.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="48" selection-start="1543" selection-end="1543" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/url.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="16" selection-start="546" selection-end="562" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SuiteReport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="74" selection-start="538" selection-end="538" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/commonProperties/SendMail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="53" selection-start="2177" selection-end="2177" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BootStrap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="69" selection-start="1772" selection-end="1772" vertical-scroll-proportion="0.5408922">
+          <folding>
+            <element signature="e#1994#2003#0" expanded="true" />
+            <element signature="e#2198#2208#0" expanded="true" />
+            <element signature="e#2630#2645#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

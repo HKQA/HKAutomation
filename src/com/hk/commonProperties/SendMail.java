@@ -22,7 +22,7 @@ public class SendMail {
     private static String fromaddress = "automation@healthkart.com";
     private static String hostname = "localhost";
 
-    public static void sendmail(boolean testSuccessful, String attachmentDirectory) {
+    public static void sendmail(String reportDirectory, String attachmentDirectory) {
         // Get system properties
         Properties properties = System.getProperties();
 
@@ -51,44 +51,33 @@ public class SendMail {
             // Create the message part
             MimeBodyPart messageBodyPart = new MimeBodyPart();
 
-            if (testSuccessful == true) {
-                // Fill the message
-                messageBodyPart.setText("Test cases run successfully");
 
-                // Create a multipart message
-                Multipart multipart = new MimeMultipart();
+            // Fill the message
+            messageBodyPart.setText("Please find the attached screen shot for the report");
 
-                // Set text message part
-                multipart.addBodyPart(messageBodyPart);
-                // Send the single message parts
-                message.setContent(multipart);
-            } else {
-                // Fill the message
-                messageBodyPart.setText("Please find the attached screen shot for fail case");
+            // Create a multipart message
+            Multipart multipart = new MimeMultipart();
 
-                // Create a multipart message
-                Multipart multipart = new MimeMultipart();
+            // Set text message part
+            multipart.addBodyPart(messageBodyPart);
 
-                // Set text message part
-                multipart.addBodyPart(messageBodyPart);
-
-                // Part two is attachment
-                messageBodyPart = new MimeBodyPart();
-                File dir = new File(attachmentDirectory);
-                File[] files = dir.listFiles();
-                if (files != null) {
-                    for (File file : files) {
-                        String filename = file.getAbsolutePath();
-                        DataSource source = new FileDataSource(filename);
-                        messageBodyPart.setDataHandler(new DataHandler(source));
-                        messageBodyPart.setFileName(filename);
-                        multipart.addBodyPart(messageBodyPart);
-                    }
+            // Part two is attachment
+            messageBodyPart = new MimeBodyPart();
+            File dir = new File(attachmentDirectory);
+            File[] files = dir.listFiles();
+            if (files != null) {
+                for (File file : files) {
+                    String filename = file.getAbsolutePath();
+                    DataSource source = new FileDataSource(filename);
+                    messageBodyPart.setDataHandler(new DataHandler(source));
+                    messageBodyPart.setFileName(filename);
+                    multipart.addBodyPart(messageBodyPart);
                 }
-
-                // Send the complete message parts
-                message.setContent(multipart);
             }
+
+            // Send the complete message parts
+            message.setContent(multipart);
+
             // Send message
 
            /* Transport.send(message);*/
