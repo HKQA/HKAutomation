@@ -13,6 +13,7 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 import java.io.File;
+import java.net.PasswordAuthentication;
 import java.util.Properties;
 
 public class SendMail {
@@ -20,7 +21,7 @@ public class SendMail {
 
     private static String toaddress = "nitin.kukna@healthkart.com";
     private static String fromaddress = "automation@healthkart.com";
-    private static String hostname = "localhost";
+    private static String hostname = "smtp.gmail.com";
 
     public static void sendmail(String reportDirectory, String attachmentDirectory) {
         // Get system properties
@@ -28,9 +29,15 @@ public class SendMail {
 
         // Setup mail server
         properties.setProperty("mail.smtp.host", hostname);
+        properties.put("mail.smtp.port", "587");
+        properties.put("mail.smtp.starttls.enable", "true");
 
+        properties.put("mail.smtp.auth", "true");
         // Get the default Session object.
         Session session = Session.getDefaultInstance(properties);
+  /*      @Override
+        protected PasswordAuthentication getPasswordAuthentication() {
+            return new PasswordAuthentication(fromaddress, "password");*/
 
         try {
             // Create a default MimeMessage object.

@@ -1,28 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<suite name="TestNG Test" >
+<suite name="TestNG Test">
     <parameter name="BaseURL" value="http://www.centralhk.com:9090"/>
-
     <parameter name="Browser" value="chrome"/>
-
-    <!-- <test name="ExistingUserOrderOnline">
-        <classes>
-            <class name="com.hk.orderPlacement.ExistingOnlineOrder"/>
-        </classes>
-    </test> -->
     <parameter name="useDefaultListeners" value="false"/>
     <listeners>
         <listener class-name="org.uncommons.reportng.HTMLReporter"/>
         <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
     </listeners>
+    <!-- <test name="ExistingUserOrderOnline">
+       <classes>
+           <class name="com.hk.orderPlacement.ExistingOnlineOrder"/>
+       </classes>
+   </test> -->
     <test name="com.hk.orderPlacement.SignupCodOrder">
         <classes>
             <class name="com.hk.orderPlacement.SignupCodOrder"/>
         </classes>
     </test>
-
-
-    <!--    <test name="ExistingUserOrderCOD">
+    <!--<test name="ExistingUserOrderCOD">
             <classes>
                 <class name="com.hk.orderPlacement.ExistingUserOrderCOD"/>
             </classes>
@@ -43,4 +39,3 @@
         </classes>
     </test>
 </suite>
-

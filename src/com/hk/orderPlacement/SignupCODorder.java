@@ -147,7 +147,7 @@ public class SignupCodOrder extends SharedProperties {
             //Takes the screenshot  when test fails
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\signupCODFailure.jpg"));
-            SendMail.sendmail(false, PropertyHelper.readProperty("screenshotFolder"));
+            /*SendMail.sendmail(false, PropertyHelper.readProperty("screenshotFolder"));*/
             throw new Exception() ;
         }
     }
