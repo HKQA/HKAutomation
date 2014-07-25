@@ -30,7 +30,7 @@ public class SuiteReport {
         System.out.println("---Creating zip file");
         writeZipFile(directoryToZip, fileList);
         System.out.println("---Done");
-        SendMail.sendmail(PropertyHelper.readProperty("screenshotFolder") + "report.zip", PropertyHelper.readProperty("reportFolder"));
+        SendMail.sendmail(PropertyHelper.readProperty("screenshotFolder") ,PropertyHelper.readProperty("reportFolder") + "report.zip");
         System.out.println("Finishing");
     }
 
@@ -43,7 +43,7 @@ public class SuiteReport {
                     System.out.println("directory:" + file.getCanonicalPath());
                     getAllFiles(file, fileList);
                 } else {
-                    System.out.println("     file:" + file.getCanonicalPath());
+                    System.out.println("file:" + file.getCanonicalPath());
                 }
             }
         } catch (IOException e) {
