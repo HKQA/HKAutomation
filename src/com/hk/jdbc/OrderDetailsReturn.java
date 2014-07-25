@@ -15,21 +15,37 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class OrderDetailsReturn {
-    public static List<String>  orderDetail(String gatewayOrderId) {
-        JdbcConnectionFile.readJdbcprop("select b.gateway_order_id,c.store_variant_name from base_order b join cart_line_item c on b.id=c.base_order_id where gateway_order_id='"+ gatewayOrderId+"'" , new ResultSetExtractor<Object>() {
+    public static List<String>  orderDetail() {
+        JdbcConnectionFile.readJdbcprop("select u.email,u.name,b.amount,b.gateway_order_id,c.store_variant_name \n" +
+                "from base_order b\n" +
+                "inner join cart_line_item c  on b.id=c.base_order_id \n" +
+                "join user u on b.user_id=u.id\n" +
+                "where gateway_order_id='"+ OrderDetailsUtil.GatewayOrderId()+"'" , new ResultSetExtractor<Object>() {
             String email = null;
-            String email2 = null;
+            String name = null;
+            String amount = null;
+            String gatewayOrderId = null;
+            String productName = null;
+
+
+
             List<String> resultquery = new ArrayList<String>();
-
-
             @Override
             public Object extract(ResultSet rs) throws SQLException {
                 while (rs.next()) {
-                    email = rs.getString("gateway_order_id");
-                    email2 = rs.getString("store_variant_name");
+                    email = rs.getString("email");
+                    name = rs.getString("name");
+                    amount = rs.getString("amount");
+                    gatewayOrderId  = rs.getString("gateway_order_id");
+                    productName  = rs.getString("store_variant_name");
+
                 }
                 resultquery.add(email);
-                resultquery.add(email2);
+                resultquery.add(name);
+                resultquery.add(amount);
+                resultquery.add(gatewayOrderId);
+                resultquery.add(productName);
+
                 return resultquery;
             }
         });
