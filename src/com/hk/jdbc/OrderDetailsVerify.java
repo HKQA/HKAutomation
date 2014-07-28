@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class OrderDetailsVerify {
 
-    public Map<String,Boolean> orderDetails(){
+    public static boolean orderDetails(){
 
         Map<String,Boolean> totalresult = new HashMap<String,Boolean>();
         String testcase = "all";
@@ -24,7 +24,7 @@ public class OrderDetailsVerify {
             testcase = "order amount";
             testresult = false;
             totalresult.put(testcase, testresult );
-            return totalresult;
+            return testresult;
         }
         if(OrderDetailsReturn.orderDetail().contains(OrderDetailsUtil.UserName())){
 
@@ -36,7 +36,7 @@ public class OrderDetailsVerify {
             testcase = "username";
             testresult = false;
             totalresult.put(testcase,testresult);
-            return totalresult;
+            return testresult;
         }
         if(OrderDetailsReturn.orderDetail().contains(OrderDetailsUtil.Item())){
 
@@ -48,9 +48,9 @@ public class OrderDetailsVerify {
             testcase = "items";
             testresult = false;
             totalresult.put(testcase, testresult );
-            return totalresult;
+            return testresult;
         }
         totalresult.put(testcase,testresult);
-        return totalresult;
+        return testresult;
     }
 }

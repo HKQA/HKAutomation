@@ -6,6 +6,7 @@ import com.hk.commonProperties.SharedProperties;
 import com.hk.elementLocators.*;
 import com.hk.excelService.ExcelServiceImpl;
 import com.hk.jdbc.OrderDetailsReturn;
+import com.hk.jdbc.OrderDetailsVerify;
 import com.hk.property.PropertyHelper;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
@@ -141,7 +142,12 @@ public class SignupCodOrder extends SharedProperties {
             SharedProperties.Click(paymentpage.cashOnDelivery(), SharedProperties.driver);
             Thread.sleep(5000);
             SharedProperties.Click(paymentpage.payOnDelivery(), SharedProperties.driver);
-            OrderDetailsReturn.orderDetail();
+            if (OrderDetailsVerify.orderDetails() == true) {
+                System.out.print("DB verification Successful");
+            } else {
+                SendMail.staticmail("Signup COD order");
+                throw new Exception();
+            }
             /*SendMail.sendmail(true, PropertyHelper.readProperty("screenshotFolder"));*/
         } catch (Exception e) {
             //Takes the screenshot  when test fails

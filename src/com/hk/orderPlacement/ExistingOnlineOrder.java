@@ -12,6 +12,7 @@ import com.hk.commonProperties.SharedProperties;
 import com.hk.elementLocators.*;
 import com.hk.excelService.ExcelServiceImpl;
 import com.hk.jdbc.OrderDetailsReturn;
+import com.hk.jdbc.OrderDetailsVerify;
 import com.hk.property.PropertyHelper;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
@@ -129,7 +130,12 @@ public class ExistingOnlineOrder extends SharedProperties {
             SharedProperties.Click(paymentpage.paymentY(), SharedProperties.driver);
             Thread.sleep(2000);
             SharedProperties.Click(paymentpage.proceedPayment(), SharedProperties.driver);
-            OrderDetailsReturn.orderDetail();
+            if (OrderDetailsVerify.orderDetails() == true) {
+                System.out.print("DB verification Successful");
+            } else {
+                SendMail.staticmail("Online order");
+                throw new Exception();
+            }
             /*SendMail.sendmail(true, PropertyHelper.readProperty("screenshotFolder"));*/
 
 

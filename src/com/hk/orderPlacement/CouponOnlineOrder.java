@@ -5,7 +5,7 @@ import com.hk.commonProperties.SendMail;
 import com.hk.commonProperties.SharedProperties;
 import com.hk.elementLocators.*;
 import com.hk.excelService.ExcelServiceImpl;
-import com.hk.jdbc.OrderDetailsReturn;
+import com.hk.jdbc.OrderDetailsVerify;
 import com.hk.property.PropertyHelper;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
@@ -22,7 +22,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -34,7 +33,7 @@ import java.util.concurrent.TimeUnit;
  * Time: 4:30 PM
  * To change this template use File | Settings | File Templates.
  */
-public class CouponOnlineOrder extends SharedProperties{
+public class CouponOnlineOrder extends SharedProperties {
     String baseUrl;
     public String browser;
     LoginPage loginPage = new LoginPage();
@@ -134,16 +133,21 @@ public class CouponOnlineOrder extends SharedProperties{
             SharedProperties.Click(paymentpage.paymentY(), SharedProperties.driver);
             Thread.sleep(2000);
             SharedProperties.Click(paymentpage.proceedPayment(), SharedProperties.driver);
-            OrderDetailsReturn.orderDetail();
-            /*SendMail.sendmail(true, PropertyHelper.readProperty("screenshotFolder"));*/
+            if (OrderDetailsVerify.orderDetails() == true) {
+                System.out.print("DB verification Successful");
+            } else {
+                SendMail.staticmail("Coupon online order");
+                throw new Exception();
+            }
 
+            /*SendMail.sendmail(true, PropertyHelper.readProperty("screenshotFolder"));*/
 
         } catch (Exception e) {
             //Takes the screenshot  when test fails
-            File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+            File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\CouponOnlineOrderFailure.jpg"));
             /*SendMail.sendmail(false,PropertyHelper.readProperty("screenshotFolder"));*/
-            throw new Exception() ;
+            throw new Exception();
         }
     }
 }
