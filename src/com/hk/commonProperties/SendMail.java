@@ -98,9 +98,22 @@ public class SendMail {
             Transport transport = session.getTransport("smtps");
             Transport.send(message);
             System.out.println("Sent message successfully...." + message);
+            if (zipFile != null) ;
+            {
+                zipFile.delete();
+            }
+            if (files != null) {
+                for (File file : files) {
+                    String filename = file.getAbsolutePath();
+                    file.delete();
+                }
+            }
+
         } catch (MessagingException mex) {
             mex.printStackTrace();
         }
     }
+
+
 }
 

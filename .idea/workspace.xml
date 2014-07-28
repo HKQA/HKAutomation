@@ -65,7 +65,7 @@
     <file path="/PropertyHelper.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1405495539666" ignored="false" />
     <file path="/SignupCodOrder.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406213042273" ignored="false" />
     <file path="/CouponOnlineOrder.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406213280047" ignored="false" />
-    <file path="/SendMail.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406297897502" ignored="false" />
+    <file path="/SendMail.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406539306409" ignored="false" />
     <file path="/OrderPlacementTestSuite.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1405604479400" ignored="false" />
     <file path="/OrderPlacementTestSuiteRunner.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1405607023749" ignored="false" />
     <file path="/OrderPlacementSuite.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1405604801259" ignored="false" />
@@ -77,6 +77,8 @@
     <file path="$PROJECT_DIR$/test-output/xml/com.hk.orderPlacement.SuiteListener_results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406205271412" ignored="false" />
     <file path="/SuiteReport.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406297929265" ignored="false" />
     <file path="/ReadInboxMail.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406287745259" ignored="false" />
+    <file path="/logintest.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406535230822" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/xml/com.hk.orderPlacement.logintest_results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406534296512" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +94,9 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Automation_testing_v4$SendMail.coverage" NAME="SendMail Coverage Results" MODIFIED="1406282746113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.hk.commonProperties.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Automation_testing_v4$logintest.coverage" NAME="logintest Coverage Results" MODIFIED="1406534870956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.hk.orderPlacement.*</FILTER>
     </SUITE>
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -165,7 +170,7 @@
       <file leaf-file-name="testng.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testng.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="72" selection-start="399" selection-end="399" vertical-scroll-proportion="0.0">
+            <state line="14" column="112" selection-start="582" selection-end="582" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -175,17 +180,15 @@
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SignupCodOrder.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="143" column="0" selection-start="6489" selection-end="6489" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SuiteReport.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SuiteReport.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SuiteReport.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="5" selection-start="3375" selection-end="3375" vertical-scroll-proportion="2.4219332">
+            <state line="95" column="20" selection-start="3369" selection-end="3369" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#622#628#0" expanded="true" />
@@ -198,11 +201,7 @@
         <entry file="file://$PROJECT_DIR$/src/BootStrap.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="46" column="69" selection-start="1772" selection-end="1772" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#1994#2003#0" expanded="true" />
-                <element signature="e#2198#2208#0" expanded="true" />
-                <element signature="e#2630#2645#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -216,13 +215,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SendMail.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="SendMail.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/hk/commonProperties/SendMail.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="49" selection-start="3054" selection-end="3054" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="116" column="4" selection-start="4093" selection-end="4093" vertical-scroll-proportion="0.71561337">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginPage.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hk/elementLocators/LoginPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="81" selection-start="422" selection-end="473" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -246,7 +252,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/OrderDetailsUtil.java" />
         <option value="$PROJECT_DIR$/build.xml" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/SuiteListener.java" />
         <option value="$PROJECT_DIR$/src/com/hk/commonProperties/SharedProperties.java" />
@@ -255,13 +260,14 @@
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingOnlineOrder.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/SignupOrderOnline.java" />
         <option value="$PROJECT_DIR$/src/BootStrap.java" />
-        <option value="$PROJECT_DIR$/testng.xml" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/SignupCodOrder.java" />
         <option value="$PROJECT_DIR$/url.properties" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/Reloadclass.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/ReadInboxMail.java" />
-        <option value="$PROJECT_DIR$/src/com/hk/commonProperties/SendMail.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/SuiteReport.java" />
+        <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/logintest.java" />
+        <option value="$PROJECT_DIR$/testng.xml" />
+        <option value="$PROJECT_DIR$/src/com/hk/commonProperties/SendMail.java" />
       </list>
     </option>
   </component>
@@ -299,8 +305,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -391,12 +395,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="elementLocators" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Automation_testing_v4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Automation_testing_v4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="commonProperties" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -412,12 +440,12 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -431,7 +459,7 @@
       <recent name="com.hk.orderPlacement" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SuiteReport">
+  <component name="RunManager" selected="Application.SendMail">
     <configuration default="false" name="$PROJECT_DIR$/testng.xml" type="TestNG" factoryName="TestNG" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Automation_testing_v4" />
@@ -460,29 +488,6 @@
       <listeners />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="60811" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="BootStrap" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="BootStrap" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Automation_testing_v4" />
-      <envs />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="true" />
       </RunnerSettings>
@@ -549,26 +554,80 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="ReadInboxMail" type="Application" factoryName="Application" temporary="true">
+    <configuration default="false" name="logintest.SigninTest" type="TestNG" factoryName="TestNG" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.hk.orderPlacement.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="com.hk.orderPlacement.ReadInboxMail" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <module name="Automation_testing_v4" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="com.hk.orderPlacement" />
+      <option name="MAIN_CLASS_NAME" value="com.hk.orderPlacement.logintest" />
+      <option name="METHOD_NAME" value="SigninTest" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Automation_testing_v4" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
       <envs />
+      <properties />
+      <listeners />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="51918" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="logintest" type="TestNG" factoryName="TestNG" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.hk.orderPlacement.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Automation_testing_v4" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="com.hk.orderPlacement" />
+      <option name="MAIN_CLASS_NAME" value="com.hk.orderPlacement.logintest" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <RunnerSettings RunnerId="Cover" />
+      <ConfigurationWrapper RunnerId="Cover" />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -583,6 +642,19 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -611,19 +683,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -670,18 +729,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="TestNG.C:/selenium/Automation_testing_v4/testng.xml" />
-      <item index="1" class="java.lang.String" itemvalue="Application.BootStrap" />
-      <item index="2" class="java.lang.String" itemvalue="Application.SendMail" />
-      <item index="3" class="java.lang.String" itemvalue="Application.SuiteReport" />
-      <item index="4" class="java.lang.String" itemvalue="Application.ReadInboxMail" />
+      <item index="1" class="java.lang.String" itemvalue="Application.SendMail" />
+      <item index="2" class="java.lang.String" itemvalue="Application.SuiteReport" />
+      <item index="3" class="java.lang.String" itemvalue="TestNG.logintest.SigninTest" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.logintest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.SuiteReport" />
-        <item index="1" class="java.lang.String" itemvalue="Application.SendMail" />
-        <item index="2" class="java.lang.String" itemvalue="Application.ReadInboxMail" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.C:/selenium/Automation_testing_v4/testng.xml" />
-        <item index="4" class="java.lang.String" itemvalue="Application.BootStrap" />
+        <item index="0" class="java.lang.String" itemvalue="Application.SendMail" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.C:/selenium/Automation_testing_v4/testng.xml" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.logintest.SigninTest" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.logintest" />
+        <item index="4" class="java.lang.String" itemvalue="Application.SuiteReport" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -732,7 +791,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32649574" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.7692308" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.63247865" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -740,8 +799,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21060605" sideWeight="0.63247865" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.7692308" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36752138" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.7692308" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32649574" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -817,46 +876,19 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingOnlineOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="97" selection-start="2655" selection-end="2655" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SignupOrderOnline.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="48" selection-start="1543" selection-end="1543" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/libs/mail.jar!/javax/mail/Transport.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="23" selection-start="376" selection-end="376" vertical-scroll-proportion="-3.72">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingCodPlacement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="97" selection-start="2738" selection-end="2738" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="11" column="23" selection-start="376" selection-end="376" vertical-scroll-proportion="-3.72" />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/libs/mail.jar!/javax/mail/Session.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="115" selection-start="872" selection-end="885" vertical-scroll-proportion="-5.2">
-          <folding />
-        </state>
+        <state line="20" column="115" selection-start="872" selection-end="885" vertical-scroll-proportion="-5.2" />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/libs/mail.jar!/com/sun/mail/smtp/SMTPTransport.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="0" selection-start="6377" selection-end="6377" vertical-scroll-proportion="-8.32">
-          <folding />
-        </state>
+        <state line="135" column="0" selection-start="6377" selection-end="6377" vertical-scroll-proportion="-8.32" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ReadInboxMail.java">
@@ -868,21 +900,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testng.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="72" selection-start="399" selection-end="399" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/BootStrap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="46" column="69" selection-start="1772" selection-end="1772" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1994#2003#0" expanded="true" />
-            <element signature="e#2198#2208#0" expanded="true" />
-            <element signature="e#2630#2645#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -893,11 +914,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SignupCodOrder.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_21/jre/lib/rt.jar!/javax/activation/FileDataSource.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="0" selection-start="6489" selection-end="6489" vertical-scroll-proportion="0.0">
+        <state line="20" column="28" selection-start="742" selection-end="742" vertical-scroll-proportion="0.6003717" />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/mail.jar!/javax/mail/internet/MimeBodyPart.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="16" selection-start="3766" selection-end="3766" vertical-scroll-proportion="-1.76" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/elementLocators/LoginPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="81" selection-start="422" selection-end="473" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testng.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="112" selection-start="582" selection-end="582" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SuiteReport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="20" selection-start="3369" selection-end="3369" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#622#628#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -909,36 +955,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_21/jre/lib/rt.jar!/javax/activation/FileDataSource.class">
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingCodPlacement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="28" selection-start="742" selection-end="742" vertical-scroll-proportion="0.6003717">
+        <state line="77" column="97" selection-start="2738" selection-end="2738" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/mail.jar!/javax/mail/internet/MimeBodyPart.class">
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SignupCodOrder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="16" selection-start="3766" selection-end="3766" vertical-scroll-proportion="-1.76">
+        <state line="143" column="0" selection-start="6489" selection-end="6489" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/commonProperties/SendMail.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="49" selection-start="3054" selection-end="3054" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SuiteReport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="5" selection-start="3375" selection-end="3375" vertical-scroll-proportion="2.4219332">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#622#628#0" expanded="true" />
-          </folding>
+        <state line="116" column="4" selection-start="4093" selection-end="4093" vertical-scroll-proportion="0.71561337">
+          <folding />
         </state>
       </provider>
     </entry>
