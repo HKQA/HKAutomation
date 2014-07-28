@@ -98,7 +98,7 @@ public class SendMail {
             Transport transport = session.getTransport("smtps");
             Transport.send(message);
             System.out.println("Sent message successfully...." + message);
-            if (zipFile != null) ;
+            if (zipFile != null);
             {
                 zipFile.delete();
             }

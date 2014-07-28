@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class OrderDetailsUtil {
 
-    private static String xpathGatewayOrderId = "/html/body/div[1]/div[2]/div/div[4]/div[1]/p[2]";
+    private static String xpathGatewayOrderId = "/html/body/div[1]/div[2]/div/div[4]/div[1]/p[2]/span";
     private static String orderAmount = "/html/body/div[1]/div[2]/div/div[4]/div[1]/p[3]";
     private static String totalItem = "/html/body/div[1]/div[2]/div/div[4]/div[1]/p[4]";
     private static String userName = "/html/body/div[1]/div[2]/div/div[4]/div[3]/p[1]";
