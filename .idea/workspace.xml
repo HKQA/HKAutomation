@@ -111,6 +111,8 @@
     <sortChildren value="false" />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -147,8 +149,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -194,10 +194,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderDetailsUtil.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="OrderDetailsUtil.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/OrderDetailsUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="101" selection-start="447" selection-end="447" vertical-scroll-proportion="0.2843866">
+            <state line="26" column="47" selection-start="950" selection-end="950" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -212,22 +212,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SuiteReport.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SuiteReport.java">
+      <file leaf-file-name="other.properties" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/other.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="20" selection-start="3369" selection-end="3369" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#622#628#0" expanded="true" />
-              </folding>
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="url.properties" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="SuiteReport.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SuiteReport.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="95" column="20" selection-start="3369" selection-end="3369" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="url.properties" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/url.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="52" selection-start="684" selection-end="684" vertical-scroll-proportion="0.0">
+            <state line="16" column="22" selection-start="568" selection-end="568" vertical-scroll-proportion="0.5055762">
               <folding />
             </state>
           </provider>
@@ -236,16 +242,7 @@
       <file leaf-file-name="SendMail.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/commonProperties/SendMail.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="34" selection-start="3553" selection-end="3553" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CouponOnlineOrder.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/CouponOnlineOrder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="136" column="43" selection-start="6085" selection-end="6085" vertical-scroll-proportion="0.0">
+            <state line="109" column="34" selection-start="3995" selection-end="3995" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -257,6 +254,14 @@
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
@@ -286,7 +291,7 @@
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -314,6 +319,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -454,8 +461,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -466,7 +471,7 @@
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/mysql connector/mysql-connector-java-5.0.8/mysql-connector-java-5.0.8-bin.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -766,12 +771,11 @@
       <item index="4" class="java.lang.String" itemvalue="TestNG.logintest" />
     </list>
     <recent_temporary>
-      <list size="5">
+      <list size="4">
         <item index="0" class="java.lang.String" itemvalue="Application.SendMail" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.C:/selenium/Automation_testing_v4/testng.xml" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.logintest.SigninTest" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.logintest" />
-        <item index="4" class="java.lang.String" itemvalue="Application.SuiteReport" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.logintest.SigninTest" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.logintest" />
+        <item index="3" class="java.lang.String" itemvalue="Application.SuiteReport" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -806,7 +810,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -820,9 +824,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32649574" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.63247865" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -831,10 +833,12 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21060605" sideWeight="0.63247865" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36752138" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.63247865" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.7692308" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32649574" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32649574" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -907,11 +911,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_21/jre/lib/rt.jar!/javax/activation/FileDataSource.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="28" selection-start="742" selection-end="742" vertical-scroll-proportion="0.6003717" />
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/libs/mail.jar!/javax/mail/internet/MimeBodyPart.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="72" column="16" selection-start="3766" selection-end="3766" vertical-scroll-proportion="-1.76" />
@@ -934,25 +933,13 @@
     <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SuiteReport.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="95" column="20" selection-start="3369" selection-end="3369" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#622#628#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/url.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="52" selection-start="684" selection-end="684" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ReadInboxMail.java">
@@ -966,7 +953,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/commonProperties/SendMail.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="34" selection-start="3553" selection-end="3553" vertical-scroll-proportion="0.0">
+        <state line="109" column="34" selection-start="3995" selection-end="3995" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1006,6 +993,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/OrderDetailsUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="47" selection-start="950" selection-end="950" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsReturn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="43" selection-start="1002" selection-end="1002" vertical-scroll-proportion="0.0">
@@ -1013,9 +1007,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/OrderDetailsUtil.java">
+    <entry file="file://$PROJECT_DIR$/other.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="101" selection-start="447" selection-end="447" vertical-scroll-proportion="0.2843866">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/url.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="22" selection-start="568" selection-end="568" vertical-scroll-proportion="0.5055762">
           <folding />
         </state>
       </provider>
