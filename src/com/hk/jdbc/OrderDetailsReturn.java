@@ -18,8 +18,7 @@ public class OrderDetailsReturn {
     public static List<String>  orderDetail() {
         String query="select u.email,u.name,b.amount,b.gateway_order_id,c.store_variant_name from base_order b inner join cart_line_item c  on b.id=c.base_order_id join user u on b.user_id=u.id where gateway_order_id='"+ OrderDetailsUtil.GatewayOrderId()+"'" ;
         List<String> results =
-        JdbcConnectionFile.
-                readJdbcprop(query, new ResultSetExtractor<List<String>>() {
+        JdbcConnectionFile.readJdbcprop(query, new ResultSetExtractor<List<String>>() {
             String email = null;
             String name = null;
             String amount = null;

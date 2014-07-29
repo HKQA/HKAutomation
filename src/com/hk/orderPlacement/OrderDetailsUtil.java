@@ -2,9 +2,12 @@ package com.hk.orderPlacement;
 
 import com.hk.commonProperties.SharedProperties;
 import com.hk.elementLocators.PaymentPage;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.List;
 
 /**
@@ -35,8 +38,8 @@ public class OrderDetailsUtil {
     public static String TotalItem() {
         return SharedProperties.driver.findElement(By.xpath(totalItem)).getText();
     }
-    public static List<WebElement> Item(){
-        return SharedProperties.driver.findElements(By.className("col-sm-5 col-xs-10 item-name"));
+    public static String Item(){
+        return SharedProperties.driver.findElements(By.className("col-sm-5 col-xs-10 item-name")).toString();
     }
     public static String UserName(){
         return SharedProperties.driver.findElement(By.xpath(userName)).getText();

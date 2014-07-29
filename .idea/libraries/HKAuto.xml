@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="HKAuto">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/build/jar/HKAuto.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

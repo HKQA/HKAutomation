@@ -15,7 +15,7 @@ public class OrderDetailsVerify {
         String testcase = "all";
 
         Boolean testresult = false;
-        if(OrderDetailsReturn.orderDetail().contains(OrderDetailsUtil.OrderAmount())){
+        /*if(OrderDetailsReturn.orderDetail().contains(OrderDetailsUtil.OrderAmount())){
             testresult = true;
         }
 
@@ -25,7 +25,7 @@ public class OrderDetailsVerify {
             testresult = false;
             totalresult.put(testcase, testresult );
             return testresult;
-        }
+        }*/
         if(OrderDetailsReturn.orderDetail().contains(OrderDetailsUtil.UserName())){
 
             testresult = true;
@@ -38,7 +38,7 @@ public class OrderDetailsVerify {
             totalresult.put(testcase,testresult);
             return testresult;
         }
-        if(OrderDetailsReturn.orderDetail().contains(OrderDetailsUtil.Item())){
+        /*if(OrderDetailsReturn.orderDetail().contains(OrderDetailsUtil.Item())){
 
             testresult = true;
 
@@ -49,7 +49,7 @@ public class OrderDetailsVerify {
             testresult = false;
             totalresult.put(testcase, testresult );
             return testresult;
-        }
+        }*/
         totalresult.put(testcase,testresult);
         return testresult;
     }

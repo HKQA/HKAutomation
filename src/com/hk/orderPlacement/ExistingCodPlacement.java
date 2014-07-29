@@ -63,7 +63,6 @@ public class ExistingCodPlacement extends SharedProperties {
 
             finalObjectString.addAll(readexcel.mainReadFromExcelIterator(PropertyHelper.readProperty("LoginExcel")));
             finalObjectString.addAll(readexcel.mainReadFromExcelIterator(PropertyHelper.readProperty("productIdExcel")));
-            finalObjectString.addAll(readexcel.mainReadFromExcelIterator(PropertyHelper.readProperty("orderDetails")));
             result.add(new Object[]{finalObjectString});
 
         } catch (FileNotFoundException fex) {
