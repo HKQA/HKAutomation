@@ -7,6 +7,7 @@ import com.hk.commonProperties.SharedProperties;
 import com.hk.elementLocators.*;
 import com.hk.excelService.ExcelServiceImpl;
 import com.hk.jdbc.OrderDetailsReturn;
+import com.hk.jdbc.OrderDetailsVerify;
 import com.hk.property.PropertyHelper;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
@@ -127,10 +128,12 @@ public class ExistingCodPlacement extends SharedProperties {
             Thread.sleep(5000);
             SharedProperties.Click(paymentpage.payOnDelivery(), SharedProperties.driver);
 
-        /*OrderDetailsUtil.gatewayOrderId();
-        System.out.print("order details: ");*/
-            System.out.print(OrderDetailsUtil.GatewayOrderId());
-            OrderDetailsReturn.orderDetail();
+            if (OrderDetailsVerify.orderDetails() == true) {
+                System.out.print("DB verification Successful");
+            } else {
+                SendMail.staticmail("Existing Cod order");
+                throw new Exception();
+            }
             /*SendMail.sendmail(true, PropertyHelper.readProperty("screenshotFolder"));*/
 
         } catch (Exception e) {
