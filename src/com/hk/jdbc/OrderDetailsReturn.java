@@ -16,11 +16,7 @@ import java.util.List;
  */
 public class OrderDetailsReturn {
     public static List<String>  orderDetail() {
-        JdbcConnectionFile.readJdbcprop("select u.email,u.name,b.amount,b.gateway_order_id,c.store_variant_name \n" +
-                "from base_order b\n" +
-                "inner join cart_line_item c  on b.id=c.base_order_id \n" +
-                "join user u on b.user_id=u.id\n" +
-                "where gateway_order_id='"+ OrderDetailsUtil.GatewayOrderId()+"'" , new ResultSetExtractor<Object>() {
+        JdbcConnectionFile.readJdbcprop("select u.email,u.name,b.amount,b.gateway_order_id,c.store_variant_name from base_order b inner join cart_line_item c  on b.id=c.base_order_id join user u on b.user_id=u.id where gateway_order_id='"+ OrderDetailsUtil.GatewayOrderId()+"'" , new ResultSetExtractor<Object>() {
             String email = null;
             String name = null;
             String amount = null;
