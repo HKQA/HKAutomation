@@ -13,7 +13,7 @@
            <class name="com.hk.orderPlacement.ExistingOnlineOrder"/>
        </classes>
    </test> -->
-    <test name="com.hk.orderPlacement.SignupCodOrder">
+    <test name="com.hk.orderPlacement.ExistingCodPlacement">
         <classes>
             <class name="com.hk.orderPlacement.ExistingCodPlacement"/>
         </classes>

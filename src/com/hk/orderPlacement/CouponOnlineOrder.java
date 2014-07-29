@@ -116,8 +116,7 @@ public class CouponOnlineOrder extends SharedProperties {
             //Code to add more quantity
             //code to redeem reward points
             //code to add coupons
-            if (SharedProperties.driver.findElement(By.xpath(cartpage.IsCouponApplied())).getText() != null)
-            {
+            if (SharedProperties.driver.findElement(By.xpath(cartpage.IsCouponApplied())).getText() != null) {
                 SharedProperties.Click(cartpage.RemoveCouponCode(), SharedProperties.driver);
             }
             SharedProperties.sendKeys(cartpage.addCouponTextBox(), "HKROCKS", SharedProperties.driver);

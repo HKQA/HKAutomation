@@ -1,13 +1,9 @@
 package com.hk.orderPlacement;
 
 import com.hk.commonProperties.SharedProperties;
-import com.hk.elementLocators.PaymentPage;
-import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -16,7 +12,7 @@ import java.util.List;
  * Date: 7/10/14
  * Time: 2:53 PM
  */
-public class OrderDetailsUtil {
+public class OrderDetailsUtil extends SharedProperties {
 
     private static String xpathGatewayOrderId = "/html/body/div[1]/div[2]/div/div[4]/div[1]/p[2]";
     private static String orderAmount = "/html/body/div[1]/div[2]/div/div[4]/div[1]/p[3]";
@@ -26,22 +22,40 @@ public class OrderDetailsUtil {
     public static String GatewayOrderId() {
         String fullOrderId = SharedProperties.driver.findElement(By.xpath(xpathGatewayOrderId)).getText();
         int index = fullOrderId.indexOf(":");
-        String orderId= fullOrderId.substring(index+2,fullOrderId.length());
+        String orderId = fullOrderId.substring(index + 2, fullOrderId.length());
         return orderId;
     }
+
     public static String OrderAmount() {
         String fullOrderAmount = SharedProperties.driver.findElement(By.xpath(orderAmount)).getText();
         int index = fullOrderAmount.indexOf(".");
-        String orderAmount= fullOrderAmount.substring(index+2,fullOrderAmount.length());
+        String orderAmount = fullOrderAmount.substring(index + 2, fullOrderAmount.length());
         return orderAmount;
     }
-    public static String TotalItem() {
-        return SharedProperties.driver.findElement(By.xpath(totalItem)).getText();
+
+    public static int TotalItem() {
+        String stringTotalItems = SharedProperties.driver.findElement(By.xpath(totalItem)).getText();
+        int index = stringTotalItems.indexOf(":");
+        String newStringTotalItems = stringTotalItems.substring(index + 2, stringTotalItems.length());
+        int totalItems = Integer.parseInt(newStringTotalItems);
+        System.out.print(totalItems);
+        return totalItems;
     }
-    public static String Item(){
-        return SharedProperties.driver.findElements(By.className("col-sm-5 col-xs-10 item-name")).toString();
+
+    public static List<String> Item() {
+        int orderSuccessItems = 3 ;
+        List<String> Items = new ArrayList<String>();
+        for (int i = 1; i <= TotalItem(); i++) {
+            Items.add(SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div[1]/div[" + orderSuccessItems + "]/div[2]/div/div[1]/a")).getText());
+            orderSuccessItems++;
+            System.out.print(Items);
+        }
+        return Items;
     }
-    public static String UserName(){
+
+    public static String UserName() {
         return SharedProperties.driver.findElement(By.xpath(userName)).getText();
     }
+
 }
+

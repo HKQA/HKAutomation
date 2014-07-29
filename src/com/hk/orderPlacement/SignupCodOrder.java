@@ -112,7 +112,6 @@ public class SignupCodOrder extends SharedProperties {
             WebElement cartLink = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a[href*='Cart.action']")));
             cartLink.click();
 
-
             //Code to add more quantity
             //code to redeem reward points
             //code to add coupons
@@ -148,12 +147,10 @@ public class SignupCodOrder extends SharedProperties {
                 SendMail.staticmail("Signup COD order");
                 throw new Exception();
             }
-            /*SendMail.sendmail(true, PropertyHelper.readProperty("screenshotFolder"));*/
         } catch (Exception e) {
             //Takes the screenshot  when test fails
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\signupCODFailure.jpg"));
-            /*SendMail.sendmail(false, PropertyHelper.readProperty("screenshotFolder"));*/
             throw new Exception() ;
         }
     }
