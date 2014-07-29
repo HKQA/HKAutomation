@@ -16,7 +16,10 @@ import java.util.List;
  */
 public class OrderDetailsReturn {
     public static List<String>  orderDetail() {
-        JdbcConnectionFile.readJdbcprop("select u.email,u.name,b.amount,b.gateway_order_id,c.store_variant_name from base_order b inner join cart_line_item c  on b.id=c.base_order_id join user u on b.user_id=u.id where gateway_order_id='"+ OrderDetailsUtil.GatewayOrderId()+"'" , new ResultSetExtractor<Object>() {
+        String query="select u.email,u.name,b.amount,b.gateway_order_id,c.store_variant_name from base_order b inner join cart_line_item c  on b.id=c.base_order_id join user u on b.user_id=u.id where gateway_order_id='"+ OrderDetailsUtil.GatewayOrderId()+"'" ;
+        List<String> results =
+        JdbcConnectionFile.
+                readJdbcprop(query, new ResultSetExtractor<List<String>>() {
             String email = null;
             String name = null;
             String amount = null;
@@ -27,7 +30,7 @@ public class OrderDetailsReturn {
 
             List<String> resultquery = new ArrayList<String>();
             @Override
-            public Object extract(ResultSet rs) throws SQLException {
+            public List<String> extract(ResultSet rs) throws SQLException {
                 while (rs.next()) {
                     email = rs.getString("email");
                     name = rs.getString("name");
@@ -45,10 +48,8 @@ public class OrderDetailsReturn {
                 return resultquery;
             }
         });
-    /*for(String string:resultQuery){
-        System.out.println(string);
-    }*/
-        return null;
+
+        return results;
 
     }
 

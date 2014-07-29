@@ -29,8 +29,8 @@ public class OrderDetailsUtil {
     public static String OrderAmount() {
         String fullOrderAmount = SharedProperties.driver.findElement(By.xpath(orderAmount)).getText();
         int index = fullOrderAmount.indexOf(".");
-        String orderId= fullOrderAmount.substring(index+2,fullOrderAmount.length());
-        return orderId;
+        String orderAmount= fullOrderAmount.substring(index+2,fullOrderAmount.length());
+        return orderAmount;
     }
     public static String TotalItem() {
         return SharedProperties.driver.findElement(By.xpath(totalItem)).getText();
