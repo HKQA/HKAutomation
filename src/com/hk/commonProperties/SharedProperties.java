@@ -69,5 +69,4 @@ public class SharedProperties {
         driver.findElement(By.cssSelector(CSSSelector)).click();
 
     }
-
 }

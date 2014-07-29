@@ -21,9 +21,10 @@ public class OrderDetailsUtil {
     private static String userName = "/html/body/div[1]/div[2]/div/div[4]/div[3]/p[1]";
 
     public static String GatewayOrderId() {
-        String orderId = SharedProperties.driver.findElement(By.xpath(xpathGatewayOrderId)).getText();
-        int index = orderId.indexOf(":");
-        return orderId.substring(index+1,orderId.length());
+        String fullOrderId = SharedProperties.driver.findElement(By.xpath(xpathGatewayOrderId)).getText();
+        int index = fullOrderId.indexOf(":");
+        String orderId= fullOrderId.substring(index+2,fullOrderId.length());
+        return orderId;
     }
     public static String OrderAmount() {
         return SharedProperties.driver.findElement(By.xpath(orderAmount)).getText();
