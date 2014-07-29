@@ -79,7 +79,7 @@
     <file path="/ReadInboxMail.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406287745259" ignored="false" />
     <file path="/logintest.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406535230822" ignored="false" />
     <file path="$PROJECT_DIR$/test-output/xml/com.hk.orderPlacement.logintest_results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406534296512" ignored="false" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406556443835" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406568728047" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,10 +204,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="22" selection-start="82" selection-end="82" vertical-scroll-proportion="0.2527881">
+            <state line="8" column="22" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -240,10 +240,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CouponOnlineOrder.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="CouponOnlineOrder.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/CouponOnlineOrder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="136" column="45" selection-start="6087" selection-end="6087" vertical-scroll-proportion="0.0">
+            <state line="136" column="45" selection-start="6087" selection-end="6087" vertical-scroll-proportion="0.5790476">
               <folding />
             </state>
           </provider>
@@ -1003,16 +1003,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/CouponOnlineOrder.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="45" selection-start="6087" selection-end="6087" vertical-scroll-proportion="0.0">
+        <state line="8" column="22" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/CouponOnlineOrder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="22" selection-start="82" selection-end="82" vertical-scroll-proportion="0.2527881">
+        <state line="136" column="45" selection-start="6087" selection-end="6087" vertical-scroll-proportion="0.5790476">
           <folding />
         </state>
       </provider>
