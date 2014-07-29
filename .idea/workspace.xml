@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c26b27e7-3829-4ab4-9fbd-06b12c07466d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/elementLocators/CartPage.java" afterPath="$PROJECT_DIR$/src/com/hk/elementLocators/CartPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderPlacement/CouponOnlineOrder.java" afterPath="$PROJECT_DIR$/src/com/hk/orderPlacement/CouponOnlineOrder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderPlacement/OrderDetailsUtil.java" afterPath="$PROJECT_DIR$/src/com/hk/orderPlacement/OrderDetailsUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/commonProperties/SharedProperties.java" afterPath="$PROJECT_DIR$/src/com/hk/commonProperties/SharedProperties.java" />
     </list>
     <ignored path="Automation_testing_v4.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,7 +73,7 @@
     <file path="/OrderPlacementSuite.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1405604801259" ignored="false" />
     <file path="/OrderPlacementSuiteRunner.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1405606422745" ignored="false" />
     <file path="/test.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1405689417986" ignored="false" />
-    <file path="/OrderDetailsUtil.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406620362774" ignored="false" />
+    <file path="/OrderDetailsUtil.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406625851062" ignored="false" />
     <file path="$PROJECT_DIR$/test-output/xml/com.hk.orderPlacement.SignupCodOrder_results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406197111756" ignored="false" />
     <file path="/SuiteListener.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406209945921" ignored="false" />
     <file path="$PROJECT_DIR$/test-output/xml/com.hk.orderPlacement.SuiteListener_results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406205271412" ignored="false" />
@@ -84,7 +81,7 @@
     <file path="/ReadInboxMail.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406287745259" ignored="false" />
     <file path="/logintest.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406535230822" ignored="false" />
     <file path="$PROJECT_DIR$/test-output/xml/com.hk.orderPlacement.logintest_results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406534296512" ignored="false" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406622058126" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406625317254" ignored="false" />
     <file path="/CartPage.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406621685473" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -275,36 +272,6 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/hk/orderPlacement/OrderDetailsUtil.java" line="24" class="com.hk.orderPlacement.OrderDetailsUtil" package="com.hk.orderPlacement">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/hk/orderPlacement/OrderDetailsUtil.java" line="25" class="com.hk.orderPlacement.OrderDetailsUtil" package="com.hk.orderPlacement">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
     </line_breakpoints>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
@@ -327,10 +294,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderDetailsUtil.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="OrderDetailsUtil.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/OrderDetailsUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="105" selection-start="787" selection-end="863" vertical-scroll-proportion="0.0">
+            <state line="32" column="23" selection-start="1320" selection-end="1320" vertical-scroll-proportion="0.5260223">
               <folding />
             </state>
           </provider>
@@ -356,10 +323,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CouponOnlineOrder.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CouponOnlineOrder.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/CouponOnlineOrder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="36" selection-start="5019" selection-end="5019" vertical-scroll-proportion="0.30285713">
+            <state line="120" column="36" selection-start="5019" selection-end="5019" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -413,10 +380,10 @@
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/SignupCodOrder.java" />
         <option value="$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsReturn.java" />
-        <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/OrderDetailsUtil.java" />
         <option value="$PROJECT_DIR$/src/com/hk/elementLocators/CartPage.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/CouponOnlineOrder.java" />
         <option value="$PROJECT_DIR$/src/com/hk/commonProperties/SharedProperties.java" />
+        <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/OrderDetailsUtil.java" />
       </list>
     </option>
   </component>
@@ -1149,16 +1116,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/OrderDetailsUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/CouponOnlineOrder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="105" selection-start="787" selection-end="863" vertical-scroll-proportion="0.0">
+        <state line="120" column="36" selection-start="5019" selection-end="5019" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/CouponOnlineOrder.java">
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/OrderDetailsUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="36" selection-start="5019" selection-end="5019" vertical-scroll-proportion="0.30285713">
+        <state line="32" column="23" selection-start="1320" selection-end="1320" vertical-scroll-proportion="0.5260223">
           <folding />
         </state>
       </provider>
