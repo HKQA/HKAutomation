@@ -11,7 +11,6 @@ import com.hk.commonProperties.SendMail;
 import com.hk.commonProperties.SharedProperties;
 import com.hk.elementLocators.*;
 import com.hk.excelService.ExcelServiceImpl;
-import com.hk.jdbc.OrderDetailsReturn;
 import com.hk.jdbc.OrderDetailsVerify;
 import com.hk.property.PropertyHelper;
 import org.apache.commons.io.FileUtils;
@@ -20,16 +19,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.ITestResult;
+import org.testng.annotations.*;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -51,6 +47,14 @@ public class ExistingOnlineOrder extends SharedProperties {
     public void g(String baseUrl, String browser) {
         this.baseUrl = baseUrl;
         this.browser = browser;
+    }
+
+    @AfterMethod
+    public void doAfter(ITestResult result) throws IOException {
+        if (result.getStatus() == ITestResult.FAILURE) {
+            File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+            FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\signupCODFailure.jpg"));
+        }
     }
 
     @DataProvider(name = "CombinedData")
@@ -77,75 +81,67 @@ public class ExistingOnlineOrder extends SharedProperties {
     @Parameters("BaseURL")
     @Test(dataProvider = "CombinedData", enabled = true)
     public void login(List<String> dataArray) throws InterruptedException, IOException, Exception {
-        try {
-            SharedProperties.openBrowser(baseUrl, browser);
+        SharedProperties.openBrowser(baseUrl, browser);
 
-            Thread.sleep(7000);
-            for (int i = 4; i < dataArray.size(); i++) {
-                SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + dataArray.get(i));
-                WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
-                buyNow.click();
+        Thread.sleep(7000);
+        for (int i = 4; i < dataArray.size(); i++) {
+            SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + dataArray.get(i));
+            WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
+            buyNow.click();
 
-            }
-
-            //WebElement exp = driver.findElement(By.cssSelector("a[href*='Cart.action']"));
-            SharedProperties.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-            Wait<WebDriver> wait = new FluentWait<WebDriver>(SharedProperties.driver)
-                    .withTimeout(30, TimeUnit.SECONDS)
-                    .pollingEvery(5, TimeUnit.SECONDS)
-                    .ignoring(NoSuchElementException.class, StaleElementReferenceException.class);
-            WebElement cartLink = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a[href*='Cart.action']")));
-            cartLink.click();
-
-            SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
-            SharedProperties.Click(loginPage.getSignInBtn(), SharedProperties.driver);
-            Thread.sleep(3000);
-
-            SharedProperties.sendKeys(loginPage.getEmailIdTextBox(), dataArray.get(0), SharedProperties.driver);
-            SharedProperties.sendKeys(loginPage.getPasswordTextBox(), dataArray.get(1), SharedProperties.driver);
-            SharedProperties.Click(loginPage.getSignInBtn(), SharedProperties.driver);
-            Thread.sleep(5000);
-            SharedProperties.clear(loginPage.getEmailIdTextBox(), SharedProperties.driver);
-
-            SharedProperties.sendKeys(loginPage.getEmailIdTextBox(), dataArray.get(2), SharedProperties.driver);
-            SharedProperties.sendKeys(loginPage.getPasswordTextBox(), dataArray.get(3), SharedProperties.driver);
-            SharedProperties.Click(loginPage.getSignInBtn(), SharedProperties.driver);
-            Thread.sleep(5000);
-
-            //Code to add more quantity
-            //code to redeem reward points
-            //code to add coupons
-
-            SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
-            Thread.sleep(2000);
-            SharedProperties.Click(addresspage.addressPage(), SharedProperties.driver);
-            Thread.sleep(5000);
-            SharedProperties.Click(paymentpage.paymentPageDummy(), SharedProperties.driver);
-            Thread.sleep(2000);
-
-            new Select(SharedProperties.driver.findElement(By.xpath("html/body/div[1]/div[2]/div[1]/div[5]/div[2]/div/div[2]/form[1]/div[1]/div/div[5]/select"))).selectByVisibleText("Dummy");
-            Thread.sleep(2000);
-            SharedProperties.Click(paymentpage.proceedToPayment(), SharedProperties.driver);
-            Thread.sleep(2000);
-            SharedProperties.Click(paymentpage.paymentY(), SharedProperties.driver);
-            Thread.sleep(2000);
-            SharedProperties.Click(paymentpage.proceedPayment(), SharedProperties.driver);
-            if (OrderDetailsVerify.orderDetails() == true) {
-                System.out.print("DB verification Successful");
-            } else {
-                SendMail.staticmail("Online order");
-                throw new Exception();
-            }
-            /*SendMail.sendmail(true, PropertyHelper.readProperty("screenshotFolder"));*/
-
-
-        } catch (Exception e) {
-            //Takes the screenshot  when test fails
-            File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder")  + "\\CouponOnlineOrder.jpg"));
-            /*SendMail.sendmail(true, PropertyHelper.readProperty("screenshotFolder"));*/
-            throw new Exception() ;
         }
+
+        //WebElement exp = driver.findElement(By.cssSelector("a[href*='Cart.action']"));
+        SharedProperties.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        Wait<WebDriver> wait = new FluentWait<WebDriver>(SharedProperties.driver)
+                .withTimeout(30, TimeUnit.SECONDS)
+                .pollingEvery(5, TimeUnit.SECONDS)
+                .ignoring(NoSuchElementException.class, StaleElementReferenceException.class);
+        WebElement cartLink = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a[href*='Cart.action']")));
+        cartLink.click();
+
+        SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
+        SharedProperties.Click(loginPage.getSignInBtn(), SharedProperties.driver);
+        Thread.sleep(3000);
+
+        SharedProperties.sendKeys(loginPage.getEmailIdTextBox(), dataArray.get(0), SharedProperties.driver);
+        SharedProperties.sendKeys(loginPage.getPasswordTextBox(), dataArray.get(1), SharedProperties.driver);
+        SharedProperties.Click(loginPage.getSignInBtn(), SharedProperties.driver);
+        Thread.sleep(5000);
+        SharedProperties.clear(loginPage.getEmailIdTextBox(), SharedProperties.driver);
+
+        SharedProperties.sendKeys(loginPage.getEmailIdTextBox(), dataArray.get(2), SharedProperties.driver);
+        SharedProperties.sendKeys(loginPage.getPasswordTextBox(), dataArray.get(3), SharedProperties.driver);
+        SharedProperties.Click(loginPage.getSignInBtn(), SharedProperties.driver);
+        Thread.sleep(5000);
+
+        //Code to add more quantity
+        //code to redeem reward points
+        //code to add coupons
+
+        SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
+        Thread.sleep(2000);
+        SharedProperties.Click(addresspage.addressPage(), SharedProperties.driver);
+        Thread.sleep(5000);
+        SharedProperties.Click(paymentpage.paymentPageDummy(), SharedProperties.driver);
+        Thread.sleep(2000);
+
+        new Select(SharedProperties.driver.findElement(By.xpath("html/body/div[1]/div[2]/div[1]/div[5]/div[2]/div/div[2]/form[1]/div[1]/div/div[5]/select"))).selectByVisibleText("Dummy");
+        Thread.sleep(2000);
+        SharedProperties.Click(paymentpage.proceedToPayment(), SharedProperties.driver);
+        Thread.sleep(2000);
+        SharedProperties.Click(paymentpage.paymentY(), SharedProperties.driver);
+        Thread.sleep(2000);
+        SharedProperties.Click(paymentpage.proceedPayment(), SharedProperties.driver);
+        if (OrderDetailsVerify.orderDetails() == true) {
+            System.out.print("DB verification Successful");
+        } else {
+            SendMail.staticmail("Online order");
+            throw new Exception();
+        }
+            /*SendMail.sendmail(true, PropertyHelper.readProperty("screenshotFolder"));*/
+
+
     }
 
 }

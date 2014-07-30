@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c26b27e7-3829-4ab4-9fbd-06b12c07466d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsDTO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderPlacement/CouponOnlineOrder.java" afterPath="$PROJECT_DIR$/src/com/hk/orderPlacement/CouponOnlineOrder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsReturn.java" afterPath="$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsReturn.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderPlacement/OrderDetailsUtil.java" afterPath="$PROJECT_DIR$/src/com/hk/orderPlacement/OrderDetailsUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsVerify.java" afterPath="$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsVerify.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingCodPlacement.java" afterPath="$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingCodPlacement.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingOnlineOrder.java" afterPath="$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingOnlineOrder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderPlacement/SignupCodOrder.java" afterPath="$PROJECT_DIR$/src/com/hk/orderPlacement/SignupCodOrder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderPlacement/SignupOrderOnline.java" afterPath="$PROJECT_DIR$/src/com/hk/orderPlacement/SignupOrderOnline.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Automation_testing_v4.iws" />
@@ -64,7 +63,7 @@
     <file path="/.gitignore" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1404993809338" ignored="false" />
     <file path="/OrderDetailsReturn.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406729568026" ignored="false" />
     <file path="/PropertyHelper.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1405495539666" ignored="false" />
-    <file path="/SignupCodOrder.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406701881767" ignored="false" />
+    <file path="/SignupCodOrder.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406730745202" ignored="false" />
     <file path="/CouponOnlineOrder.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406622122010" ignored="false" />
     <file path="/SendMail.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1406539306409" ignored="false" />
     <file path="/OrderPlacementTestSuite.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1405604479400" ignored="false" />
@@ -182,11 +181,26 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ExistingOnlineOrder.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingOnlineOrder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="144" column="5" selection-start="6215" selection-end="6215" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2168#2176#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="SignupOrderOnline.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SignupOrderOnline.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="143" column="58" selection-start="6789" selection-end="6789" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="155" column="5" selection-start="7081" selection-end="7081" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2354#2362#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -200,40 +214,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderDetailsDTO.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsDTO.java">
+      <file leaf-file-name="ExistingCodPlacement.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingCodPlacement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="42" selection-start="1047" selection-end="1047" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#369#377#0" expanded="true" />
-              </folding>
+            <state line="140" column="5" selection-start="5788" selection-end="5788" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SignupCodOrder.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SignupCodOrder.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SignupCodOrder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="154" column="31" selection-start="7131" selection-end="7131" vertical-scroll-proportion="0.9352381">
+            <state line="52" column="3" selection-start="1726" selection-end="2098" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.xml">
+      <file leaf-file-name="CartPage.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/hk/elementLocators/CartPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="7" selection-start="2638" selection-end="2638" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SuiteReport.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SuiteReport.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="13" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0">
+            <state line="14" column="95" selection-start="583" selection-end="583" vertical-scroll-proportion="0.44237918">
               <folding />
             </state>
           </provider>
@@ -251,8 +253,11 @@
       <file leaf-file-name="CouponOnlineOrder.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/CouponOnlineOrder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="138" column="30" selection-start="6269" selection-end="6269" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="51" column="3" selection-start="1590" selection-end="1962" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2168#2176#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -275,15 +280,10 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingOnlineOrder.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/SignupOrderOnline.java" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/src/com/hk/elementLocators/CartPage.java" />
         <option value="$PROJECT_DIR$/src/com/hk/commonProperties/SharedProperties.java" />
         <option value="$PROJECT_DIR$/url.properties" />
-        <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingCodPlacement.java" />
-        <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/CouponOnlineOrder.java" />
         <option value="$PROJECT_DIR$/testng.xml" />
         <option value="$PROJECT_DIR$/build.xml" />
         <option value="$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsDTO.java" />
@@ -291,6 +291,11 @@
         <option value="$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsVerify.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/OrderDetailsUtil.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/SignupCodOrder.java" />
+        <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/CouponOnlineOrder.java" />
+        <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingCodPlacement.java" />
+        <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingOnlineOrder.java" />
+        <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/SignupOrderOnline.java" />
+        <option value="$PROJECT_DIR$/src/com/hk/elementLocators/CartPage.java" />
       </list>
     </option>
   </component>
@@ -834,6 +839,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21060605" sideWeight="0.2854701" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32649574" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -848,7 +854,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32649574" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32649574" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -921,23 +926,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/libs/selenium-java-2.42.2-srcs.jar!/org/openqa/selenium/WebElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="175" column="50" selection-start="7681" selection-end="7681" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/guava-15.0.jar!/com/google/common/collect/ImmutableMap.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="70" selection-start="1023" selection-end="1023" vertical-scroll-proportion="-3.16" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingOnlineOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="12" selection-start="5317" selection-end="5317" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/libs/selenium-java-2.42.2-srcs.jar!/org/openqa/selenium/By.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="356" column="0" selection-start="10644" selection-end="10644" vertical-scroll-proportion="0.0">
@@ -966,13 +954,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testng.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="638" selection-end="638" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="70" column="7" selection-start="2638" selection-end="2638" vertical-scroll-proportion="0.0">
@@ -990,13 +971,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SignupOrderOnline.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="58" selection-start="6789" selection-end="6789" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsReturn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="34" selection-start="239" selection-end="239" vertical-scroll-proportion="0.0">
@@ -1011,13 +985,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/CouponOnlineOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="30" selection-start="6269" selection-end="6269" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsVerify.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="26" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0">
@@ -1025,9 +992,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/testng.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="638" selection-end="638" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/CouponOnlineOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="3" selection-start="1590" selection-end="1962" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2168#2176#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingCodPlacement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="140" column="5" selection-start="5788" selection-end="5788" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingOnlineOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="144" column="5" selection-start="6215" selection-end="6215" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2168#2176#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SignupCodOrder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="154" column="31" selection-start="7131" selection-end="7131" vertical-scroll-proportion="0.9352381">
+        <state line="52" column="3" selection-start="1726" selection-end="2098" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SignupOrderOnline.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="155" column="5" selection-start="7081" selection-end="7081" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2354#2362#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/elementLocators/CartPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="95" selection-start="583" selection-end="583" vertical-scroll-proportion="0.44237918">
           <folding />
         </state>
       </provider>
