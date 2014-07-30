@@ -143,8 +143,6 @@ public class CouponOnlineOrder extends SharedProperties {
                 throw new Exception();
             }
 
-            /*SendMail.sendmail(true, PropertyHelper.readProperty("screenshotFolder"));*/
-
         } catch (Exception e) {
             //Takes the screenshot  when test fails
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);

@@ -5,38 +5,18 @@ import com.hk.orderPlacement.OrderDetailsUtil;
 public class OrderDetailsVerify {
 
     public static boolean orderDetails() {
-
-//        Map<String,Boolean> totalresult = new HashMap<String,Boolean>();
-        String testcase = "all";
-
-        Boolean testresult = false;
-        /*if(OrderDetailsReturn.orderDetail().contains(OrderDetailsUtil.OrderAmount())){
-            testresult = true;
-        }
-
-        else {
-
-            testcase = "order amount";
-            testresult = false;
-            totalresult.put(testcase, testresult );
-            return testresult;
-        }*/
-        if (!OrderDetailsReturn.orderDetail().contains(OrderDetailsUtil.getUserName())) {
-//            testcase = "username";
-//            testresult = false;
-//            totalresult.put(testcase,testresult);
+        OrderDetailsDTO orderDetailsDTO = OrderDetailsReturn.orderDetail();
+        if (!orderDetailsDTO.getAmount().equals(OrderDetailsUtil.getOrderAmount())) {
             return false;
         }
 
-
-        if (!OrderDetailsReturn.orderDetail().containsAll(OrderDetailsUtil.getItems())) {
-
-            /*testcase = "items";
-            testresult = false;
-            totalresult.put(testcase, testresult );*/
+        if (!orderDetailsDTO.getUserName().equals(OrderDetailsUtil.getUserName())) {
             return false;
         }
-//        totalresult.put(testcase,testresult);
+
+        if (!orderDetailsDTO.getProductList().containsAll(OrderDetailsUtil.getItems())) {
+            return false;
+        }
         return true;
     }
 }

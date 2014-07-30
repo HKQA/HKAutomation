@@ -141,7 +141,7 @@ public class SignupCodOrder extends SharedProperties {
             SharedProperties.Click(paymentpage.cashOnDelivery(), SharedProperties.driver);
             Thread.sleep(5000);
             SharedProperties.Click(paymentpage.payOnDelivery(), SharedProperties.driver);
-            if (OrderDetailsVerify.orderDetails() == true) {
+            if (OrderDetailsVerify.orderDetails()) {
                 System.out.print("DB verification Successful");
             } else {
                 SendMail.staticmail("Signup COD order");
