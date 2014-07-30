@@ -2,6 +2,7 @@ package com.hk.orderPlacement;
 
 import com.hk.commonProperties.SharedProperties;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,11 +44,25 @@ public class OrderDetailsUtil extends SharedProperties {
     }
 
     public static List<String> Item() {
-        int orderSuccessItems = 3 ;
+        int orderedItems = 3;
+        int exists = SharedProperties.driver.findElements(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).size();
         List<String> Items = new ArrayList<String>();
         for (int i = 1; i <= TotalItem(); i++) {
-            Items.add(SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div[1]/div[" + orderSuccessItems + "]/div[2]/div/div[1]/a")).getText());
-            orderSuccessItems++;
+            /*try
+            {
+                Items.add(SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).getText());
+            } catch (Exception e){
+                Items.add(SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[7]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).getText());
+            }*/
+            if (exists > 1)
+
+            {
+                Items.add(SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).getText());
+            }
+            else {
+                Items.add(SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[7]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).getText());
+            }
+            orderedItems++;
             System.out.print(Items);
         }
         return Items;
