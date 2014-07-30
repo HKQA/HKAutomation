@@ -1,17 +1,12 @@
 package com.hk.jdbc;
+
 import com.hk.orderPlacement.OrderDetailsUtil;
-
-import java.util.ArrayList;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 public class OrderDetailsVerify {
 
-    public static boolean orderDetails(){
+    public static boolean orderDetails() {
 
-        Map<String,Boolean> totalresult = new HashMap<String,Boolean>();
+//        Map<String,Boolean> totalresult = new HashMap<String,Boolean>();
         String testcase = "all";
 
         Boolean testresult = false;
@@ -26,31 +21,22 @@ public class OrderDetailsVerify {
             totalresult.put(testcase, testresult );
             return testresult;
         }*/
-        if(OrderDetailsReturn.orderDetail().contains(OrderDetailsUtil.UserName())){
-
-            testresult = true;
-
+        if (!OrderDetailsReturn.orderDetail().contains(OrderDetailsUtil.getUserName())) {
+//            testcase = "username";
+//            testresult = false;
+//            totalresult.put(testcase,testresult);
+            return false;
         }
 
-        else {
-            testcase = "username";
+
+        if (!OrderDetailsReturn.orderDetail().containsAll(OrderDetailsUtil.getItems())) {
+
+            /*testcase = "items";
             testresult = false;
-            totalresult.put(testcase,testresult);
-            return testresult;
+            totalresult.put(testcase, testresult );*/
+            return false;
         }
-        if(OrderDetailsReturn.orderDetail().contains(OrderDetailsUtil.Item())){
-
-            testresult = true;
-
-        }
-
-        else {
-            testcase = "items";
-            testresult = false;
-            totalresult.put(testcase, testresult );
-            return testresult;
-        }
-        totalresult.put(testcase,testresult);
-        return testresult;
+//        totalresult.put(testcase,testresult);
+        return true;
     }
 }

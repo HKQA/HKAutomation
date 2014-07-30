@@ -43,7 +43,7 @@ public class OrderDetailsUtil extends SharedProperties {
         return totalItems;
     }
 
-    public static List<String> Item() {
+    public static List<String> getItems() {
         int orderedItems = 3;
         int exists = SharedProperties.driver.findElements(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).size();
         List<String> Items = new ArrayList<String>();
@@ -68,7 +68,7 @@ public class OrderDetailsUtil extends SharedProperties {
         return Items;
     }
 
-    public static String UserName() {
+    public static String getUserName() {
         return SharedProperties.driver.findElement(By.xpath(userName)).getText();
     }
 

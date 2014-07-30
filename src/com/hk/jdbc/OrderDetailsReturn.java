@@ -37,12 +37,15 @@ public class OrderDetailsReturn {
                     gatewayOrderId  = rs.getString("gateway_order_id");
                     productName  = rs.getString("store_variant_name");
 
+                    resultquery.add(email);
+                    resultquery.add(name);
+                    resultquery.add(amount);
+                    resultquery.add(gatewayOrderId);
+                    resultquery.add(productName);
+
+
                 }
-                resultquery.add(email);
-                resultquery.add(name);
-                resultquery.add(amount);
-                resultquery.add(gatewayOrderId);
-                resultquery.add(productName);
+
 
                 return resultquery;
             }
