@@ -1,37 +1,81 @@
-<project name="HKAutoTest" default="main">
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Automation_testing_v4" default="Run" basedir=".">
+    <property name="src.dir" value="${basedir}/src"/>
+    <property name="build.dir" value="${basedir}/build"/>
+    <property name="testng_output.dir" value="${basedir}/testng_output"/>
 
+    <!-- get class path, used for build -->
+    <property name="libs.dir" value="${basedir}/libs"/>
     <path id="classpath">
-        <fileset dir="libs" includes="*.jar"/>
+        <fileset dir="${libs.dir}" includes="*.jar"/>
+        <pathelement location="build"/>
     </path>
 
-    <target name="clean">
-        <delete dir="build"/>
+    <!-- create build folder, testng_output folder and remove old log file -->
+    <target name="init">
+        <delete dir="${build.dir}"/>
+        <delete dir="${testng_output.dir}"/>
+        <!--<delete dir="${basedir}/testng-xslt"/>-->
+        <mkdir dir="${build.dir}"/>
+        <!--<mkdir dir="${basedir}/testng-xslt"/>-->
+        <mkdir dir="${testng_output.dir}"/>
+
     </target>
 
-    <target name="compile" depends="clean">
-        <mkdir dir="build/classes"/>
-        <javac srcdir="src" destdir="build/classes" classpathref="classpath"/>
+    <!-- build all java file to class binary -->
+    <target name="compile" depends="init">
+        <javac srcdir="${basedir}/src" destdir="${basedir}/build" classpathref="classpath" includeantruntime="false">
+            <!--
+                        <compilerarg value="-Xlint:unchecked"/>
+            -->
+        </javac>
     </target>
 
-    <target name="jar" depends="compile">
-        <mkdir dir="build/jar"/>
-        <jar destfile="build/jar/HKAuto.jar" basedir="build/classes">
-            <manifest>
-                <attribute name="Main-Class" value="BootStrap"/>
-            </manifest>
-        </jar>
+    <!-- Config for testng -->
+    <taskdef name="testng" classname="org.testng.TestNGAntTask">
+        <classpath>
+            <pathelement location="libs/testng-6.8.5.jar"/>
+        </classpath>
+    </taskdef>
+
+
+    <!-- execute testng after compile, then generate report -->
+    <target name ="Run" depends="compile">
+
+        <testng classpathref="test-path"
+                outputdir="${testng_output.dir}"
+                haltonfailure="true"
+                useDefaultListeners="false"
+                listeners="org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter">
+            <xmlfileset dir="." includes="testng.xml"/>
+            <sysproperty key="org.uncommons.reportng.title" value="My Test Report"/>
+        </testng>
     </target>
 
-    <target name="run">
-        <java fork="true" classname="BootStrap">
-            <classpath>
-                <path refid="classpath"/>
-                <path location="build/jar/HKAuto.jar"/>
+    <!--<target name="xslt" depends="Run">
+
+        <xslt in="${basedir}/testng_output/testng-results.xml" style="${basedir}/testng-results.xsl" out="${basedir}/testng-xslt/index.html" processor="SaxonLiaison">
+
+            <param expression="${basedir}/testng-xslt/" name="testNgXslt.outputDir" />
+
+            <param expression="true" name="testNgXslt.sortTestCaseLinks" />
+
+            <param expression="FAIL,SKIP,PASS,CONF,BY_CLASS" name="testNgXslt.testDetailsFilter" />
+
+            <param expression="true" name="testNgXslt.showRuntimeTotals" />
+
+            <classpath refid="master-classpath">
             </classpath>
-        </java>
-    </target>
+        </xslt>
+    </target>-->
 
-
-    <target name="main" depends="clean,run"/>
+    <!--<property name="libs" value="${basedir}/libs" />
+    <property name="BIN" value="${basedir}/bin" />
+    <path id="master-classpath">
+        <pathelement location="${BIN}" />
+        <fileset dir="${libs}">
+            <include name="**/*.jar" />
+        </fileset>
+    </path>-->
 
 </project>
