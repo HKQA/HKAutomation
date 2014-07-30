@@ -1,107 +1,80 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE project [
-        ]>
+<project name="Automation_testing_v4" basedir=".">
 
-<project name="TestNG" default="usage" basedir=".">
+<property name="home.dir" value="${basedir}"/>
+<property name="build.dir" value="${home.dir}/build"/>
+<property name="src.dir" value="${home.dir}/src"/>
+<property name="ng.result" value="test-output"/>
+<property name="lib.dir" value="./libs"/>
+<!--
+<property name="browser" value="C:\Program Files \Mozilla Firefox\firefox"/>
+<property name="index.dir" value = "${basedir}/testng_output/index.html"/>
+-->
 
-    <!-- ========== Initialize Properties =================================== -->
-    <property environment="env"/>
-    <property name="ws.home" value="${basedir}"/>
-    <property name="ws.jars" value="C:\selenium\Automation_testing_v4\libs"/>
-    <property name="test.dest" value="${ws.home}/build"/>
-    <property name="test.src" value="${ws.home}/src"/>
-    <property name="ng.result" value="test-output"/>
+        <!-- setClassPath -->
+<target name="setClassPath">
+<path id="classpath_jars">
+    <pathelement path="${basedir}/" />
+    <fileset dir="${lib.dir}" includes="*.jar" />
+</path>
+<pathconvert pathsep=":" property="test.classpath" refid="classpath_jars" />
+</target>
 
-    <!--target name="start-selenium-server">
-        <java jar="${ws.home}/lib/selenium-server.jar"/>
-    </target-->
+        <!-- loadTestNG -->
+<target name="loadTestNG" depends="setClassPath">
+<taskdef resource="testngtasks" classpath="${test.classpath}"/>
+</target>
 
-    <target name="setClassPath" unless="test.classpath">
-        <path id="classpath_jars">
-            <fileset dir="${ws.jars}" includes="*.jar"/>
-        </path>
-        <pathconvert pathsep=":"
-                     property="test.classpath"
-                     refid="classpath_jars"/>
-    </target>
+        <!-- build -->
+<target name="build">
+<mkdir dir="${build.dir}"/>
+<tstamp>
+    <format property="timestamp" pattern="dd-MM-yyyy_(HH-mm-ss)"/>
+</tstamp>
+<property name="build.log.dir" location="${basedir}/buildlogs"/>
+<mkdir dir="${build.log.dir}"/>
+<property name="build.log.filename" value="build_${timestamp}.log"/>
+<record name="${build.log.dir}/${build.log.filename}" loglevel="verbose" append="false"/>
+<echo message="build logged to ${build.log.filename}"/>
+</target>
 
-    <target name="init" depends="setClassPath">
-        <tstamp>
-            <format property="start.time" pattern="MM/dd/yyyy hh:mm aa" />
-        </tstamp>
-        <condition property="ANT"
-                   value="${env.ANT_HOME}/bin/ant.bat"
-                   else="${env.ANT_HOME}/bin/ant">
-            <os family="windows" />
-        </condition>
-        <taskdef name="testng" classpath="${test.classpath}"
-                 classname="org.testng.TestNGAntTask" />
+        <!-- Clean -->
+<target name="clean">
+<echo message="deleting existing build directory"/>
+<delete dir="${build.dir}"/>
+</target>
 
-    </target>
+        <!-- Compile -->
+<target name="compile" depends="clean,build,setClassPath,loadTestNG">
+<echo message="classpath:${test.classpath}"/>
+<echo message="compiling.........."/>
+<javac destdir="${build.dir}" srcdir="${src.dir}" classpath="${test.classpath}"/>
+</target>
 
-    <!-- all -->
-    <target name="all">
-    </target>
+        <!-- executeApp -->
+<target name="executeApp" depends="compile">
+<testng classpath="${test.classpath}:${build.dir}">
+    <xmlfileset dir="${basedir}" includes="testng.xml"/>
+</testng>
+</target>
 
-    <!-- clean -->
-    <target name="clean">
-        <delete dir="${test.dest}"/>
-    </target>
+        <!-- Report -->
+<target name="report" depends="executeApp">
+<delete dir="${basedir}/testng-xslt"/>
+<mkdir dir="${basedir}/testng-xslt"/>
+<xslt in="${basedir}/test-output/testng-results.xml"
+      style="${basedir}/src/xslt/testng-results.xsl" out="${basedir}/testng-xslt/index.html" processor="SaxonLiaison">
+    <param expression="${basedir}/testng-xslt/" name="testNgXslt.outputDir"/>
+    <param expression="true" name="testNGXslt.sortTestCaseLinks"/>
+    <param expression="FAIL,SKIP,PASS,BY_CLASS" name="testNgXslt.testDetailsFilter"/>
+    <param expression="true" name="testNgXslt.showRuntimeTotals"/>
+    <classpath refid="classpath_jars"/>
+</xslt>
+</target>
 
-    <!-- compile -->
-    <target name="compile" depends="init, clean" >
-        <delete includeemptydirs="true" quiet="true">
-            <fileset dir="${test.dest}" includes="**/*"/>
-        </delete>
-        <echo message="making directory..."/>
-        <mkdir dir="${test.dest}"/>
-        <echo message="classpath------: ${test.classpath}"/>
-        <echo message="compiling..."/>
-        <javac
-                debug="true"
-                destdir="${test.dest}"
-                srcdir="${test.src}"
-                target="1.5"
-                classpath="${test.classpath}"
-                >
-        </javac>
-    </target>
-
-    <!-- build -->
-    <target name="build" depends="init">
-    </target>
-
-    <!-- run -->
-    <target name="run" depends="compile">
-        <testng classpath="${test.classpath}:${test.dest}" suitename="com.hk.orderPlacement.SuiteReport">
-            <xmlfileset dir="${ws.home}" includes="testng.xml"/>
-        </testng>
-        <!--
-        <testng classpath="${test.classpath}:${test.dest}" groups="fast">
-            <classfileset dir="${test.dest}" includes="example1/*.class"/>
-        </testng>
-        -->
-    </target>
-
-    <target name="usage">
-        <echo>
-            ant run will execute the test
-        </echo>
-    </target>
-
-    <path id="test.c">
-        <fileset dir="${ws.jars}" includes="*.jar"/>
-    </path>
-
-    <target name="makexsltreports">
-        <mkdir dir="${ws.home}/XSLT_Reports/output"/>
-
-        <xslt in="${ng.result}/testng-results.xml" style="src/xslt/testng-results.xsl"
-              out="${ws.home}/XSLT_Reports/output/index.html"                classpathref="test.c" processor="SaxonLiaison">
-            <param name="testNgXslt.outputDir" expression="${ws.home}/XSLT_Reports/output/"/>
-            <param name="testNgXslt.showRuntimeTotals" expression="true"/>
-        </xslt>
-    </target>
-
-    <!-- ****************** targets not used ****************** -->
-</project>
+        <!-- makexsltreports-->
+<target name="makexsltreports" depends="report">
+<exec executable="${browser}" spawn="yes">
+    <arg line="${index.dir}" />
+</exec>
+</target>
+        </project>
