@@ -22,9 +22,7 @@
       <change type="DELETED" beforePath="C:\selenium\Automation_testing_v4\screenshot\orderplacement\CouponOnlineOrderFailure.jpg" afterPath="" />
       <change type="DELETED" beforePath="C:\selenium\Automation_testing_v4\screenshot\orderplacement\ExistingCODOrderFailure.jpg" afterPath="" />
       <change type="DELETED" beforePath="C:\selenium\Automation_testing_v4\screenshot\orderplacement\signupCODFailure.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/signup.xls" afterPath="$PROJECT_DIR$/signup.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderPlacement/OrderDetailsUtil.java" afterPath="$PROJECT_DIR$/src/com/hk/orderPlacement/OrderDetailsUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testng.xml" afterPath="$PROJECT_DIR$/testng.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderPlacement/SignupCodOrder.java" afterPath="$PROJECT_DIR$/src/com/hk/orderPlacement/SignupCodOrder.java" />
     </list>
     <ignored path="Automation_testing_v4.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -183,6 +181,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="OrderDetailsVerify.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsVerify.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="13" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ExistingOnlineOrder.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingOnlineOrder.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -195,7 +202,7 @@
       <file leaf-file-name="SignupOrderOnline.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SignupOrderOnline.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="128" column="12" selection-start="5634" selection-end="5634" vertical-scroll-proportion="0.0">
+            <state line="143" column="58" selection-start="6789" selection-end="6789" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -222,7 +229,7 @@
       <file leaf-file-name="SignupCodOrder.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SignupCodOrder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="142" column="89" selection-start="6526" selection-end="6526" vertical-scroll-proportion="0.35238096">
+            <state line="131" column="70" selection-start="5840" selection-end="5840" vertical-scroll-proportion="0.28761905">
               <folding />
             </state>
           </provider>
@@ -251,7 +258,7 @@
       <file leaf-file-name="CouponOnlineOrder.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/CouponOnlineOrder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="118" column="16" selection-start="4876" selection-end="4876" vertical-scroll-proportion="0.0">
+            <state line="138" column="30" selection-start="6269" selection-end="6269" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -928,13 +935,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsVerify.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="35" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testng.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="61" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0">
@@ -1009,14 +1009,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/CouponOnlineOrder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="16" selection-start="4876" selection-end="4876" vertical-scroll-proportion="0.0">
+        <state line="138" column="30" selection-start="6269" selection-end="6269" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SignupOrderOnline.java">
+    <entry file="file://$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsVerify.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="12" selection-start="5634" selection-end="5634" vertical-scroll-proportion="0.0">
+        <state line="9" column="13" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1030,9 +1030,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SignupOrderOnline.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="143" column="58" selection-start="6789" selection-end="6789" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SignupCodOrder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="142" column="89" selection-start="6526" selection-end="6526" vertical-scroll-proportion="0.35238096">
+        <state line="131" column="70" selection-start="5840" selection-end="5840" vertical-scroll-proportion="0.28761905">
           <folding />
         </state>
       </provider>

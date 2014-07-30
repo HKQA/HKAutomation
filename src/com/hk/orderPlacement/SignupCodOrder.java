@@ -129,7 +129,7 @@ public class SignupCodOrder extends SharedProperties {
             Thread.sleep(2000);
             SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
             Thread.sleep(2000);
-            SharedProperties.sendKeys(addresspage.name(), "Nitin", SharedProperties.driver);
+            SharedProperties.sendKeys(addresspage.name(), "Nitin Kukna", SharedProperties.driver);
             SharedProperties.sendKeys(addresspage.mobile(), "9999999999", SharedProperties.driver);
             SharedProperties.sendKeys(addresspage.address(), "Test", SharedProperties.driver);
             SharedProperties.sendKeys(addresspage.pincode(), "122001", SharedProperties.driver);
