@@ -149,9 +149,8 @@ public class SignupOrderOnline extends SharedProperties {
             System.out.print("DB verification Successful");
         } else {
             SendMail.sendmail("DB verification failed for Signup online order");
-            throw new Exception();
+            ITestResult result = null;
+            result.setStatus(ITestResult.FAILURE);
         }
-            /*SendMail.sendmail(true, PropertyHelper.readProperty("screenshotFolder"));*/
-
     }
 }

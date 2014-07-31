@@ -148,7 +148,8 @@ public class SignupCodOrder extends SharedProperties {
         }
         else {
             SendMail.sendmail("DB verification failed for Signup COD order");
-            throw new Exception();
+            ITestResult result = null;
+            result.setStatus(ITestResult.FAILURE);
         }
     }
 

@@ -7,6 +7,7 @@ import com.hk.elementLocators.*;
 import com.hk.excelService.ExcelServiceImpl;
 import com.hk.jdbc.OrderDetailsVerify;
 import com.hk.property.PropertyHelper;
+import junit.framework.Assert;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -144,7 +145,8 @@ public class CouponOnlineOrder extends SharedProperties {
             System.out.print("DB verification Successful");
         } else {
             SendMail.sendmail("DB Verification failed for Coupon online order");
-            throw new Exception();
+            ITestResult result = null;
+            result.setStatus(ITestResult.FAILURE);
         }
     }
 }
