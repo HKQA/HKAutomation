@@ -12,7 +12,7 @@ import java.util.List;
  * Date: 7/10/14
  * Time: 2:53 PM
  */
-public class OrderDetailsUtil extends SharedProperties {
+public class OrderDetailsUtil {
 
     private static final String xpathGatewayOrderId = "/html/body/div[1]/div[2]/div/div[4]/div[1]/p[2]";
     private static final String orderAmount = "/html/body/div[1]/div[2]/div/div[4]/div[1]/p[3]";
@@ -22,8 +22,7 @@ public class OrderDetailsUtil extends SharedProperties {
     public static String GatewayOrderId() {
         String fullOrderId = SharedProperties.driver.findElement(By.xpath(xpathGatewayOrderId)).getText();
         int index = fullOrderId.indexOf(":");
-        String orderId = fullOrderId.substring(index + 2, fullOrderId.length());
-        return orderId;
+        return fullOrderId.substring(index + 2, fullOrderId.length());
     }
 
     public static Double getOrderAmount() {
@@ -36,15 +35,13 @@ public class OrderDetailsUtil extends SharedProperties {
         String stringTotalItems = SharedProperties.driver.findElement(By.xpath(totalItem)).getText();
         int index = stringTotalItems.indexOf(":");
         String newStringTotalItems = stringTotalItems.substring(index + 2, stringTotalItems.length());
-        int totalItems = Integer.parseInt(newStringTotalItems);
-        System.out.print(totalItems);
-        return totalItems;
+        return Integer.parseInt(newStringTotalItems);
     }
 
-    public static List<String> getItems() {
+    public static List<Long> getItems() {
         int orderedItems = 3;
         int exists = SharedProperties.driver.findElements(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).size();
-        List<String> Items = new ArrayList<String>();
+        List<Long> Items = new ArrayList<Long>();
         for (int i = 1; i <= TotalItem(); i++) {
             /*try
             {
@@ -52,15 +49,18 @@ public class OrderDetailsUtil extends SharedProperties {
             } catch (Exception e){
                 Items.add(SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[7]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).getText());
             }*/
-            if (exists > 1)
-
-            {
-                Items.add(SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).getText());
+            String itemHref;
+            if (exists > 1) {
+                itemHref = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).getAttribute("href");
             } else {
-                Items.add(SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[7]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).getText());
+                itemHref = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[7]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).getAttribute("href");
             }
+
+            int index = itemHref.indexOf("VRNT-");
+            Long variantId = Long.valueOf(itemHref.substring(index + 5, itemHref.length()));
+            System.out.print(variantId);
+            Items.add(variantId);
             orderedItems++;
-            System.out.print(Items);
         }
         return Items;
     }
@@ -70,4 +70,3 @@ public class OrderDetailsUtil extends SharedProperties {
     }
 
 }
-

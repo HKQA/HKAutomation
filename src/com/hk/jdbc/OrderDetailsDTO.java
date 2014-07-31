@@ -15,7 +15,7 @@ public class OrderDetailsDTO {
     private String userName;
     private Double amount;
     private String gatewayOrderId;
-    private List<String> productList = new ArrayList<String>();
+    private List<Long> productList = new ArrayList<Long>();
 
 
     public String getEmail() {
@@ -50,11 +50,11 @@ public class OrderDetailsDTO {
         this.gatewayOrderId = gatewayOrderId;
     }
 
-    public List<String> getProductList() {
+    public List<Long> getProductList() {
         return productList;
     }
 
-    public void setProductList(List<String> productList) {
+    public void setProductList(List<Long> productList) {
         this.productList = productList;
     }
 }

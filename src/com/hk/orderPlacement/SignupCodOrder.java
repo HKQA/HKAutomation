@@ -140,17 +140,16 @@ public class SignupCodOrder extends SharedProperties {
         SharedProperties.Click(addresspage.delivertoaddress(), SharedProperties.driver);
         Thread.sleep(5000);
 
-
         SharedProperties.Click(paymentpage.cashOnDelivery(), SharedProperties.driver);
         Thread.sleep(5000);
         SharedProperties.Click(paymentpage.payOnDelivery(), SharedProperties.driver);
         if (OrderDetailsVerify.orderDetails()) {
             System.out.print("DB verification Successful");
-        } else {
-            SendMail.staticmail("Signup COD order");
+        }
+        else {
+            SendMail.sendmail("DB verification failed for Signup COD order");
             throw new Exception();
         }
-
     }
 
 }

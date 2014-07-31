@@ -136,7 +136,7 @@ public class ExistingOnlineOrder extends SharedProperties {
         if (OrderDetailsVerify.orderDetails() == true) {
             System.out.print("DB verification Successful");
         } else {
-            SendMail.staticmail("Online order");
+            SendMail.sendmail("DB Verification failed for Online Order");
             throw new Exception();
         }
             /*SendMail.sendmail(true, PropertyHelper.readProperty("screenshotFolder"));*/

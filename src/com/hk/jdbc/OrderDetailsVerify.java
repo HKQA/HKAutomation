@@ -4,18 +4,21 @@ import com.hk.orderPlacement.OrderDetailsUtil;
 
 public class OrderDetailsVerify {
 
-    public static boolean orderDetails() {
+    public static boolean orderDetails() throws Exception {
         OrderDetailsDTO orderDetailsDTO = OrderDetailsReturn.orderDetail();
         if (!orderDetailsDTO.getAmount().equals(OrderDetailsUtil.getOrderAmount())) {
-            return false;
+            throw new Exception("Amount mismatch");
+//            return false;
         }
 
         if (!orderDetailsDTO.getUserName().equals(OrderDetailsUtil.getUserName())) {
-            return false;
+            throw new Exception("User name mismatch");
+//            return false;
         }
 
         if (!orderDetailsDTO.getProductList().containsAll(OrderDetailsUtil.getItems())) {
-            return false;
+            throw new Exception("Variant List mismatch");
+//            return false;
         }
         return true;
     }

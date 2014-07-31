@@ -133,10 +133,8 @@ public class ExistingCodPlacement extends SharedProperties {
         if (OrderDetailsVerify.orderDetails() == true) {
             System.out.print("DB verification Successful");
         } else {
-            SendMail.staticmail("Existing Cod order");
+            SendMail.sendmail("DB Verification failed for Existing Cod order");
             throw new Exception();
         }
-            /*SendMail.sendmail(true, PropertyHelper.readProperty("screenshotFolder"));*/
-
     }
 }

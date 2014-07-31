@@ -143,7 +143,7 @@ public class CouponOnlineOrder extends SharedProperties {
         if (OrderDetailsVerify.orderDetails() == true) {
             System.out.print("DB verification Successful");
         } else {
-            SendMail.staticmail("Coupon online order");
+            SendMail.sendmail("DB Verification failed for Coupon online order");
             throw new Exception();
         }
     }
