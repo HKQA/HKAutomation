@@ -30,7 +30,7 @@ public class SuiteReport {
         System.out.println("---Creating zip file");
         writeZipFile(directoryToZip, fileList);
         System.out.println("---Done");
-        SendMail.sendmail(PropertyHelper.readProperty("screenshotFolder") ,PropertyHelper.readProperty("reportFolder") + "report.zip");
+        SendMail.sendmail("Please find the attached report of test cases",PropertyHelper.readProperty("screenshotFolder") ,PropertyHelper.readProperty("reportFolder") + "report.zip");
         System.out.println("Finishing");
     }
 
