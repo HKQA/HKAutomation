@@ -1,15 +1,13 @@
 package com.hk.orderCheckout;
 
-import com.hk.excel.ExcelServiceImplOld;
-import com.hk.orderPlacement.ExistingOnlineOrder;
-import com.hk.property.PropertyHelper;
-import org.testng.annotations.DataProvider;
+import com.hk.aquaElementLocators.aquaElementLocators.AdminHome;
+import com.hk.aquaElementLocators.aquaElementLocators.SearchBo;
+import com.hk.commonProperties.SharedProperties;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -18,11 +16,21 @@ import java.util.List;
  * Time: 6:08 PM
  * To change this template use File | Settings | File Templates.
  */
-public class variantCheckout extends ExistingOnlineOrder{
-    String baseUrl;
+public class variantCheckout /*extends ExistingOnlineOrder*/{
+    String AdminBaseURL;
     String browser;
-    ExistingOnlineOrder EOO = new ExistingOnlineOrder();
-    /*ExcelServiceImplOld readexcel = new ExcelServiceImplOld();*/
+    AdminHome adminhome = new AdminHome();
+    SearchBo searchbo = new SearchBo();
+
+    @Parameters({"AdminBaseURL", "Browser"})
+    @BeforeClass
+    public void g(String AdminBaseURL, String Browser) {
+        this.AdminBaseURL = AdminBaseURL;
+        this.browser = Browser;
+    }
+
+    /*ExistingOnlineOrder EOO = new ExistingOnlineOrder();
+    *//*ExcelServiceImplOld readexcel = new ExcelServiceImplOld();*/
 
 
 
@@ -44,6 +52,17 @@ public class variantCheckout extends ExistingOnlineOrder{
     /*@Test(dataProvider = "VariantCheckoutData", enabled = true)*/
     @Test(enabled = true)
     public void variantCheckout() throws InterruptedException, IOException, Exception {
-    EOO.login(1L);
+    /*EOO.login(1L);
+*/
+        SharedProperties.openBrowser(AdminBaseURL,browser);
+/*
+        System.out.print("GateWayOrderId :-  " + OrderDetailsUtil.GatewayOrderId());
+*/
+        SharedProperties.clickWithCss(adminhome.baseOrderSearch(), SharedProperties.driver);
+        SharedProperties.sendKeys(searchbo.boGatewayId(), "HK13801-570655", SharedProperties.driver);
+
+
+
+
     }
 }

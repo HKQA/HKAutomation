@@ -60,13 +60,14 @@ public class SharedProperties {
 
     }
 
+    public static void clickWithCss(String elementCss, WebDriver driver)  {
+        driver.findElement(By.cssSelector(elementCss)).click();
+
+    }
     public static void clear(String elementXpath,  WebDriver driver)  {
         driver.findElement(By.xpath(elementXpath)).clear();
 
     }
 
-    public static void Click2(String CSSSelector, WebDriver driver)  {
-        driver.findElement(By.cssSelector(CSSSelector)).click();
 
-    }
 }

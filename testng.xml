@@ -2,6 +2,8 @@
 
 <suite name="TestNG Test">
     <parameter name="BaseURL" value="http://www.centralhk.com:9090"/>
+    <parameter name="AdminBaseURL" value="www.admincentralhk.com:8080"/>
+
     <parameter name="Browser" value="chrome"/>
     <parameter name="useDefaultListeners" value="false"/>
     <listeners>
@@ -15,7 +17,7 @@
    </test> -->
     <test name="com.hk.orderPlacement.ExistingOnlineOrder">
         <classes>
-            <class name="com.hk.orderPlacement.CouponOnlineOrder"/>
+            <class name="com.hk.orderCheckout.variantCheckout"/>
         </classes>
     </test>
     <!--<test name="ExistingUserOrderCOD">
@@ -33,9 +35,9 @@
                 <class name="com.hk.orderPlacement.SignUpAndOrderCOD"/>
             </classes>
         </test>-->
-    <test name="com.hk.orderPlacement.SuiteReport">
+   <!-- <test name="com.hk.orderPlacement.SuiteReport">
         <classes>
             <class name="com.hk.orderPlacement.SuiteReport"/>
         </classes>
-    </test>
+    </test>-->
 </suite>

@@ -51,6 +51,7 @@ public class ExistingOnlineOrder extends SharedProperties {
         this.browser = browser;
     }
 
+/*
     @AfterMethod
     public void doAfter(ITestResult result) throws IOException {
         if (result.getStatus() == ITestResult.FAILURE) {
@@ -58,6 +59,7 @@ public class ExistingOnlineOrder extends SharedProperties {
             FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\signupCODFailure.jpg"));
         }
     }
+*/
 
  /*   @DataProvider(name = "CombinedData")
     public Iterator<Object[]> dataProviderCombined() {
