@@ -22,11 +22,11 @@ public class variantCheckout extends ExistingOnlineOrder{
     String baseUrl;
     String browser;
     ExistingOnlineOrder EOO = new ExistingOnlineOrder();
-    ExcelServiceImplOld readexcel = new ExcelServiceImplOld();
+    /*ExcelServiceImplOld readexcel = new ExcelServiceImplOld();*/
 
 
 
-    @DataProvider(name = "VariantCheckoutData")
+/*    @DataProvider(name = "VariantCheckoutData")
     public List<String> variantCheckoutDataProviderCombined() {
 
         List<String> finalObjectString = new ArrayList<String>();
@@ -40,9 +40,10 @@ public class variantCheckout extends ExistingOnlineOrder{
             System.out.println(ex.getMessage());
         }
         return finalObjectString;
-    }
-    @Test(dataProvider = "VariantCheckoutData", enabled = true)
+    }*/
+    /*@Test(dataProvider = "VariantCheckoutData", enabled = true)*/
+    @Test(enabled = true)
     public void variantCheckout() throws InterruptedException, IOException, Exception {
-        EOO.login(variantCheckoutDataProviderCombined());
+    EOO.login(1L);
     }
 }
