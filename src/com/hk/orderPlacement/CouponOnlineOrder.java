@@ -106,7 +106,7 @@ public class CouponOnlineOrder extends SharedProperties {
         System.out.print(couponApplied);
         if (couponApplied > 0) {
             /*SharedProperties.Click(cartpage.RemoveCouponCode(), SharedProperties.driver);*/
-            SharedProperties.driver.findElement(By.xpath(cartpage.RemoveCouponCode())).click();
+            SharedProperties.driver.findElement(By.cssSelector("a[href*='removeOffer']")).click();
 
         }
         SharedProperties.sendKeys(cartpage.addCouponTextBox(), "HKROCKS", SharedProperties.driver);

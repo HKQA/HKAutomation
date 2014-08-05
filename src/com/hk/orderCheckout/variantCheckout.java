@@ -43,6 +43,6 @@ public class variantCheckout extends ExistingOnlineOrder{
     }
     @Test(dataProvider = "VariantCheckoutData", enabled = true)
     public void variantCheckout() throws InterruptedException, IOException, Exception {
-        EOO.login(variantCheckoutDataProviderCombined());
+       // EOO.login(variantCheckoutDataProviderCombined());
     }
 }
