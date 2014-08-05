@@ -4,7 +4,9 @@ import com.google.common.collect.Lists;
 import com.hk.commonProperties.SendMail;
 import com.hk.commonProperties.SharedProperties;
 import com.hk.elementLocators.*;
-import com.hk.excelService.ExcelServiceImpl;
+import com.hk.excel.ExcelServiceImplOld;
+import com.hk.excel.TestDetailsExcelService;
+import com.hk.excel.dto.TestDetailsDTO;
 import com.hk.jdbc.OrderDetailsVerify;
 import com.hk.property.PropertyHelper;
 import org.apache.commons.io.FileUtils;
@@ -39,8 +41,6 @@ public class SignupCodOrder extends SharedProperties {
     CartPage cartpage = new CartPage();
     AddressPage addresspage = new AddressPage();
     PaymentPage paymentpage = new PaymentPage();
-    ExcelServiceImpl readexcel = new ExcelServiceImpl();
-    //com.hk.property.PropertyHelper mainproperty = new com.hk.property.PropertyHelper();
 
 
     @Parameters({"BaseURL", "Browser"})
@@ -58,55 +58,35 @@ public class SignupCodOrder extends SharedProperties {
         }
     }
 
-    @DataProvider(name = "CombinedData")
-    public Iterator<Object[]> dataProviderCombined() {
-        List<Object[]> result = Lists.newArrayList();
-        List<String> finalObjectString = new ArrayList<String>();
 
-        try {
-
-
-            finalObjectString.addAll(readexcel.mainReadFromExcelIterator(PropertyHelper.readProperty("SignUpExcel")));
-            finalObjectString.addAll(readexcel.mainReadFromExcelIterator(PropertyHelper.readProperty("productIdExcel")));
-            result.add(new Object[]{finalObjectString});
-
-        } catch (FileNotFoundException fex) {
-            System.out.println(fex.getMessage());
-        } catch (IOException ex) {
-            System.out.println(ex.getMessage());
-        }
-        return result.iterator();
-    }
-
-
-    @Parameters("BaseURL")
+    @Parameters("specificVariantIndex")
     @Test(dataProvider = "CombinedData", enabled = true)
-    public void login(List<String> dataArray) throws InterruptedException, IOException, Exception {
+    public void login(@Optional Long specificVariantIndex) throws InterruptedException, IOException, Exception {
 
 
         SharedProperties.openBrowser(baseUrl, browser);
-
         Thread.sleep(7000);
 
-        /*Click(loginPage.getSignInBtn(), "Create an account button", "Sign in page", driver);
-        Thread.sleep(3000);
-
-        sendKeys(loginPage.getEmailIdTextBox(), "Login page", "Enter username", dataArray.get(3), driver);
-        sendKeys(loginPage.getPasswordTextBox(), "Login page", "Enter password", dataArray.get(2), driver);
-        Click(loginPage.getSignInBtn(), "Login page", "Sign in Button", driver);
-        sendKeys(loginPage.getEmailIdTextBox(), "Login page", "Enter username", dataArray.get(1), driver);
-        sendKeys(loginPage.getPasswordTextBox(), "Login page", "Enter password", dataArray.get(1), driver);
-        Click(loginPage.getSignInBtn(), "Login page", "Sign in page", driver);
-*/
-
-        for (int i = 4; i < dataArray.size(); i++) {
-            SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + dataArray.get(i));
-            WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
-            buyNow.click();
-
+        TestDetailsDTO testDetailsDTO = null;
+        try {
+            testDetailsDTO = TestDetailsExcelService.getTestDetails();
+        } catch (RuntimeException re) {
+            System.out.println(re.getMessage());
         }
 
-        //WebElement exp = driver.findElement(By.cssSelector("a[href*='Cart.action']"));
+        if (specificVariantIndex == null) {
+            for (Long variantId : testDetailsDTO.getVariantIdList()) {
+                SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + variantId);
+                WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
+                buyNow.click();
+            }
+        }else {
+            SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + testDetailsDTO.getVariantIdList().get(specificVariantIndex.intValue()));
+            WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
+            buyNow.click();
+        }
+
+
         SharedProperties.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         Wait<WebDriver> wait = new FluentWait<WebDriver>(SharedProperties.driver)
                 .withTimeout(30, TimeUnit.SECONDS)
@@ -122,12 +102,12 @@ public class SignupCodOrder extends SharedProperties {
         SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
         Thread.sleep(2000);
         SharedProperties.Click(signupage.signupPage(), SharedProperties.driver);
-        SharedProperties.sendKeys(signupage.name(), dataArray.get(0), SharedProperties.driver);
-        SharedProperties.sendKeys(signupage.emailid(), dataArray.get(1), SharedProperties.driver);
-        SharedProperties.sendKeys(signupage.password(), dataArray.get(2), SharedProperties.driver);
-        SharedProperties.sendKeys(signupage.confirmpassword(), dataArray.get(3), SharedProperties.driver);
+        SharedProperties.sendKeys(signupage.name(), "Test", SharedProperties.driver);
+        SharedProperties.sendKeys(signupage.emailid(), testDetailsDTO.getSignUpList(), SharedProperties.driver);
+        SharedProperties.sendKeys(signupage.password(), "123456", SharedProperties.driver);
+        SharedProperties.sendKeys(signupage.confirmpassword(), "123456", SharedProperties.driver);
         SharedProperties.Click(signupage.createaccount(), SharedProperties.driver);
-        ExcelServiceImpl.updateCellContent(PropertyHelper.readProperty("SignUpExcel"), "1", 0, 1);
+        ExcelServiceImplOld.updateCellContent(PropertyHelper.readProperty("productIdExcel"), "1", 1, 4);
 
         Thread.sleep(2000);
         SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
@@ -151,6 +131,7 @@ public class SignupCodOrder extends SharedProperties {
             ITestResult result = null;
             result.setStatus(ITestResult.FAILURE);
         }
+        Thread.sleep(5000);
     }
 
 }

@@ -13,9 +13,9 @@
            <class name="com.hk.orderPlacement.ExistingOnlineOrder"/>
        </classes>
    </test> -->
-    <test name="com.hk.orderPlacement.ExistingOnlineOrder">
+    <test name="com.hk.orderCheckout.variantCheckout">
         <classes>
-            <class name="com.hk.orderPlacement.CouponOnlineOrder"/>
+            <class name="com.hk.orderCheckout.variantCheckout"/>
         </classes>
     </test>
     <!--<test name="ExistingUserOrderCOD">
@@ -33,7 +33,7 @@
                 <class name="com.hk.orderPlacement.SignUpAndOrderCOD"/>
             </classes>
         </test>-->
-<!--    <test name="com.hk.orderPlacement.SuiteReport">
+    <!--<test name="com.hk.orderPlacement.SuiteReport">
         <classes>
             <class name="com.hk.orderPlacement.SuiteReport"/>
         </classes>

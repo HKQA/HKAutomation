@@ -5,7 +5,9 @@ import com.google.common.collect.Lists;
 import com.hk.commonProperties.SendMail;
 import com.hk.commonProperties.SharedProperties;
 import com.hk.elementLocators.*;
-import com.hk.excelService.ExcelServiceImpl;
+import com.hk.excel.ExcelServiceImplOld;
+import com.hk.excel.TestDetailsExcelService;
+import com.hk.excel.dto.TestDetailsDTO;
 import com.hk.jdbc.OrderDetailsVerify;
 import com.hk.property.PropertyHelper;
 import org.apache.commons.io.FileUtils;
@@ -40,7 +42,6 @@ public class ExistingCodPlacement extends SharedProperties {
     CartPage cartpage = new CartPage();
     AddressPage addresspage = new AddressPage();
     PaymentPage paymentpage = new PaymentPage();
-    ExcelServiceImpl readexcel = new ExcelServiceImpl();
 
     @Parameters({"BaseURL", "Browser"})
     @BeforeClass
@@ -57,44 +58,32 @@ public class ExistingCodPlacement extends SharedProperties {
         }
     }
 
-    @DataProvider(name = "CombinedData")
-    public Iterator<Object[]> dataProviderCombined() {
-        List<Object[]> result = Lists.newArrayList();
-        List<String> finalObjectString = new ArrayList<String>();
 
-        try {
-
-
-            finalObjectString.addAll(readexcel.mainReadFromExcelIterator(PropertyHelper.readProperty("LoginExcel")));
-            finalObjectString.addAll(readexcel.mainReadFromExcelIterator(PropertyHelper.readProperty("productIdExcel")));
-            result.add(new Object[]{finalObjectString});
-
-        } catch (FileNotFoundException fex) {
-            System.out.println(fex.getMessage());
-        } catch (IOException ex) {
-            System.out.println(ex.getMessage());
-        }
-        return result.iterator();
-    }
-
-    @Parameters("BaseURL")
-    @Test(dataProvider = "CombinedData", enabled = true)
-    public void login(List<String> dataArray) throws InterruptedException, IOException, Exception {
+    @Parameters("specificVariantIndex")
+    @Test(enabled = true)
+    public void login(@Optional Long specificVariantIndex) throws InterruptedException, IOException, Exception {
         SharedProperties.openBrowser(baseUrl, browser);
         Thread.sleep(3000);
+        TestDetailsDTO testDetailsDTO = null;
 
-
-//        for(int i=4;i<dataArray.size();i++){
-
-        for (int i = 4; i < dataArray.size(); i++) {
-
-            SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + dataArray.get(i));
-            WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
-            buyNow.click();
-
+        try {
+            testDetailsDTO = TestDetailsExcelService.getTestDetails();
+        } catch (RuntimeException re) {
+            System.out.println(re.getMessage());
         }
 
-        //WebElement exp = driver.findElement(By.cssSelector("a[href*='Cart.action']"));
+        if (specificVariantIndex == null) {
+            for (Long variantId : testDetailsDTO.getVariantIdList()) {
+                SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + variantId);
+                WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
+                buyNow.click();
+            }
+        }else {
+            SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + testDetailsDTO.getVariantIdList().get(specificVariantIndex.intValue()));
+            WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
+            buyNow.click();
+        }
+
         SharedProperties.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         Wait<WebDriver> wait = new FluentWait<WebDriver>(SharedProperties.driver)
                 .withTimeout(30, TimeUnit.SECONDS)
@@ -107,14 +96,14 @@ public class ExistingCodPlacement extends SharedProperties {
         SharedProperties.Click(loginPage.getSignInBtn(), SharedProperties.driver);
         Thread.sleep(3000);
 
-        SharedProperties.sendKeys(loginPage.getEmailIdTextBox(), dataArray.get(0), SharedProperties.driver);
-        SharedProperties.sendKeys(loginPage.getPasswordTextBox(), dataArray.get(1), SharedProperties.driver);
+        SharedProperties.sendKeys(loginPage.getEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
+        SharedProperties.sendKeys(loginPage.getPasswordTextBox(), "2303", SharedProperties.driver);
         SharedProperties.Click(loginPage.getSignInBtn(), SharedProperties.driver);
         Thread.sleep(5000);
         SharedProperties.clear(loginPage.getEmailIdTextBox(), SharedProperties.driver);
 
-        SharedProperties.sendKeys(loginPage.getEmailIdTextBox(), dataArray.get(2), SharedProperties.driver);
-        SharedProperties.sendKeys(loginPage.getPasswordTextBox(), dataArray.get(3), SharedProperties.driver);
+        SharedProperties.sendKeys(loginPage.getEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
+        SharedProperties.sendKeys(loginPage.getPasswordTextBox(), testDetailsDTO.getPasswordList(), SharedProperties.driver);
         SharedProperties.Click(loginPage.getSignInBtn(), SharedProperties.driver);
         Thread.sleep(5000);
 
@@ -137,5 +126,6 @@ public class ExistingCodPlacement extends SharedProperties {
             ITestResult result = null;
             result.setStatus(ITestResult.FAILURE);
         }
+        Thread.sleep(5000);
     }
 }

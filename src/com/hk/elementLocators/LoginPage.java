@@ -8,9 +8,9 @@ package com.hk.elementLocators;
  * To change this template use File | Settings | File Templates.
  */
 public class LoginPage {
-    private String emailIdTextBox="html/body/div[2]/div[2]/div[1]/div[2]/form/input[3]";
-    private String passwordTextBox="html/body/div[2]/div[2]/div[1]/div[2]/form/input[4]";
-    private String signInBtn="html/body/div[2]/div[2]/div[1]/div[2]/form/input[5]";
+    private String emailIdTextBox="//*[@id=\"signInForm\"]/input[3]";
+    private String passwordTextBox="//*[@id=\"password\"]";
+    private String signInBtn="//*[@id=\"signInForm\"]/input[5]";
 
 
     public String getEmailIdTextBox() {

@@ -68,9 +68,6 @@
         <testng classpath="${test.classpath}:${build.dir}">
             <xmlfileset dir="${basedir}" includes="testng.xml"/>
         </testng>
-
-
-
     </target>
 
 </project>

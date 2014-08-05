@@ -15,7 +15,7 @@ public class CartPage {
     private String proceedToCheckout="html/body/div/div/div/div/div[2]/div/div[2]/div[1]/div[4]/a";
     private String CouponProceedToCheckout="/html/body/div[1]/div[2]/div/div[3]/div[2]/div/div[2]/div[1]/div[4]/a";
     private String clickCouponTextBox="/html/body/div[1]/div[2]/div/div[3]/div[1]/div[4]/div[4]/div[2]/a";
-    private String isCouponApplied = "/html/body/div[1]/div[2]/div/div[3]/div[1]/div[4]/div[5]/span/span";
+    private String isCouponApplied = "/html/body/div[1]/div[2]/div/div[3]/div[1]/div[4]/div[5]/span";
     private String removeCouponCode="/html/body/div[1]/div[2]/div/div[3]/div[1]/div[4]/div[5]/a";
 
     public String addToCartBtn() {

@@ -1,4 +1,4 @@
-package com.hk.excelService;
+package com.hk.excel;
 
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
@@ -19,7 +19,7 @@ import java.util.List;
  * Time: 1:19 PM
  * To change this template use File | Settings | File Templates.
  */
-public class ExcelServiceImpl {
+public class ExcelServiceImplOld {
     public List<String> mainReadFromExcelIterator(String fileName) throws FileNotFoundException, IOException {
 
         int sheetNo = 0;
