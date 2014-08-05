@@ -33,9 +33,9 @@
                 <class name="com.hk.orderPlacement.SignUpAndOrderCOD"/>
             </classes>
         </test>-->
-<!--    <test name="com.hk.orderPlacement.SuiteReport">
+    <test name="com.hk.orderPlacement.SuiteReport">
         <classes>
             <class name="com.hk.orderPlacement.SuiteReport"/>
         </classes>
-    </test>-->
+    </test>
 </suite>

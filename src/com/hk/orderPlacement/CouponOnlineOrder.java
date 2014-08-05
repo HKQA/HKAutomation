@@ -103,9 +103,7 @@ public class CouponOnlineOrder extends SharedProperties {
         //code to redeem reward points
         //code to add coupons
         int couponApplied = SharedProperties.driver.findElements(By.xpath(cartpage.IsCouponApplied())).size();
-        System.out.print(couponApplied);
-        if (couponApplied > 0) {
-            /*SharedProperties.Click(cartpage.RemoveCouponCode(), SharedProperties.driver);*/
+        if (couponApplied > 1) {
             SharedProperties.driver.findElement(By.cssSelector("a[href*='removeOffer']")).click();
 
         }
