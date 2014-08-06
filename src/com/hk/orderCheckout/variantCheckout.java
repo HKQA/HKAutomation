@@ -1,7 +1,8 @@
 package com.hk.orderCheckout;
 
-import com.hk.aquaElementLocators.aquaElementLocators.AdminHome;
-import com.hk.aquaElementLocators.aquaElementLocators.SearchBo;
+
+import com.hk.aquaElementLocators.LoginPageAdmin;
+import com.hk.aquaElementLocators.PrintPrickOrders;
 import com.hk.commonProperties.SharedProperties;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -19,8 +20,8 @@ import java.io.IOException;
 public class variantCheckout /*extends ExistingOnlineOrder*/{
     String AdminBaseURL;
     String browser;
-    AdminHome adminhome = new AdminHome();
-    SearchBo searchbo = new SearchBo();
+    LoginPageAdmin loginpage=new LoginPageAdmin();
+    PrintPrickOrders printprick = new PrintPrickOrders();
 
     @Parameters({"AdminBaseURL", "Browser"})
     @BeforeClass
@@ -52,14 +53,30 @@ public class variantCheckout /*extends ExistingOnlineOrder*/{
     /*@Test(dataProvider = "VariantCheckoutData", enabled = true)*/
     @Test(enabled = true)
     public void variantCheckout() throws InterruptedException, IOException, Exception {
-    /*EOO.login(1L);
-*/
+//    EOO.login(1L);
+
         SharedProperties.openBrowser(AdminBaseURL,browser);
-/*
-        System.out.print("GateWayOrderId :-  " + OrderDetailsUtil.GatewayOrderId());
-*/
-        SharedProperties.clickWithCss(adminhome.baseOrderSearch(), SharedProperties.driver);
-        SharedProperties.sendKeys(searchbo.boGatewayId(), "HK13801-570655", SharedProperties.driver);
+        SharedProperties.sendKeys(loginpage.getUserName(),"saurabh.nagpal@healthkart.com" , SharedProperties.driver);
+        SharedProperties.sendKeys(loginpage.getPassword(),"abcde12" , SharedProperties.driver);
+        SharedProperties.Click(loginpage.getLoginbtn(), SharedProperties.driver);
+
+        //Select WareHouse according to your order from database or with text
+
+        SharedProperties.clickWithCss(printprick.getPrintPrickLink(), SharedProperties.driver);
+        SharedProperties.Click(printprick.getOrderFilters(), SharedProperties.driver);
+        Thread.sleep(2000);
+        SharedProperties.sendKeys(printprick.getBoGatewayOrderIdTxt(), "HK13801-570655", SharedProperties.driver);
+        SharedProperties.Click(printprick.getBoGatewaySearchBtn(), SharedProperties.driver);
+        Thread.sleep(3000);
+        SharedProperties.Click(printprick.getCheckboxBo(), SharedProperties.driver);
+        SharedProperties.Click(printprick.getBatchPrintBtn(), SharedProperties.driver);
+        Thread.sleep(5000);
+        SharedProperties.Click(printprick.getCancelBtn(), SharedProperties.driver);
+        Thread.sleep(2000);
+        SharedProperties.Click(printprick.getCancelBtn(), SharedProperties.driver);
+        Thread.sleep(2000);
+        SharedProperties.Click(printprick.getCancelBtn(), SharedProperties.driver);
+
 
 
 

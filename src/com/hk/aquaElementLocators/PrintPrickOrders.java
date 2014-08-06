@@ -8,34 +8,45 @@ package com.hk.aquaElementLocators;
  * To change this template use File | Settings | File Templates.
  */
 public class PrintPrickOrders {
-    private String searchSo="a[href*='ChooseOrdersForPrintPick.action']";
+
+    private String printPrickLink="a[href*='ChooseOrdersForPrintPick.action']";
     private String orderFilters="/html/body/div/div[2]/form[1]/div[2]/span[2]";
-    private String BoGatewayOrderId="//*[@id=\"orderFilters\"]/div[2]/input[2]";
-    private String BoGatewaySearchbtn="//*[@id=\"orderFilters\"]/div[2]/input[3]";
-    private String checkboxBo="//*[@id=\"shippingOrder-2296888\"]/td[5]/input";
-    private String batchPrintbtn="//*[@id=\"orderForm\"]/div[2]/input[2]";
+    private String BoGatewayOrderIdTxt="//*[@id=\"orderFilters\"]/div[2]/input[2]";
+    private String BoGatewaySearchBtn="//*[@id=\"orderFilters\"]/div[2]/input[3]";
+    private String checkboxBo="//*[@id=\"shippingOrder-2295091\"]/td[5]/input";
+    private String batchPrintBtn="//*[@id=\"orderForm\"]/div[2]/input[2]";
+    private String cancelBtn="//*[text()='Cancel']";
+    private String jobDoneClearQueBtn ="//*[@id=\"orderForm\"]/div[2]/input[2]";
+
+    public String getJobDoneClearQueBtn() {
+        return jobDoneClearQueBtn;
+    }
+
+    public String getPrintPrickLink() {
+        return printPrickLink;
+    }
 
     public String getOrderFilters() {
         return orderFilters;
     }
 
-    public String getBoGatewayOrderId() {
-        return BoGatewayOrderId;
+    public String getBoGatewayOrderIdTxt() {
+        return BoGatewayOrderIdTxt;
     }
 
-    public String getBoGatewaySearchbtn() {
-        return BoGatewaySearchbtn;
+    public String getBoGatewaySearchBtn() {
+        return BoGatewaySearchBtn;
     }
 
     public String getCheckboxBo() {
         return checkboxBo;
     }
 
-    public String getBatchPrintbtn() {
-        return batchPrintbtn;
+    public String getBatchPrintBtn() {
+        return batchPrintBtn;
     }
 
-    public String getSearchSo() {
-        return searchSo;
+    public String getCancelBtn() {
+        return cancelBtn;
     }
 }
