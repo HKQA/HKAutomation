@@ -112,28 +112,39 @@ public class ExistingOnlineOrder extends SharedProperties {
                 .ignoring(NoSuchElementException.class, StaleElementReferenceException.class);
         WebElement cartLink = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a[href*='Cart.action']")));
         cartLink.click();
-
+        Thread.sleep(3000);
         SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
+        Thread.sleep(3000);
+        SharedProperties.Click(loginPage.getSignInCheckbox(), SharedProperties.driver);
         SharedProperties.Click(loginPage.getSignInBtn(), SharedProperties.driver);
         Thread.sleep(3000);
-
         SharedProperties.sendKeys(loginPage.getEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
         SharedProperties.sendKeys(loginPage.getPasswordTextBox(), "lklsdk", SharedProperties.driver);
         SharedProperties.Click(loginPage.getSignInBtn(), SharedProperties.driver);
         Thread.sleep(5000);
-        SharedProperties.clear(loginPage.getEmailIdTextBox(), SharedProperties.driver);
 
-        SharedProperties.sendKeys(loginPage.getEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
-        SharedProperties.sendKeys(loginPage.getPasswordTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
-        SharedProperties.Click(loginPage.getSignInBtn(), SharedProperties.driver);
-        Thread.sleep(5000);
+        if (SharedProperties.driver.findElements(By.xpath("//*[@id=\"signInForm\"]/input[3]")).size() > 0 ) {
+            SharedProperties.clear(loginPage.getOldEmailIdTextBox(), SharedProperties.driver);
+            SharedProperties.sendKeys(loginPage.getOldEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
+            SharedProperties.sendKeys(loginPage.getPasswordTextBox(), testDetailsDTO.getPasswordList(), SharedProperties.driver);
+            SharedProperties.Click(loginPage.getOldSignInBtn(), SharedProperties.driver);
+            Thread.sleep(5000);
+        }
+        else
+        {
+            SharedProperties.clear(loginPage.getEmailIdTextBox(), SharedProperties.driver);
+            SharedProperties.sendKeys(loginPage.getEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
+            SharedProperties.sendKeys(loginPage.getPasswordTextBox(), testDetailsDTO.getPasswordList(), SharedProperties.driver);
+            SharedProperties.Click(loginPage.getSignInBtn(), SharedProperties.driver);
+            Thread.sleep(5000);
+        }
 
         //Code to add more quantity
         //code to redeem reward points
         //code to add coupons
 
-        SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
-        Thread.sleep(2000);
+        /*SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
+        Thread.sleep(5000);*/
         SharedProperties.Click(addresspage.addressPage(), SharedProperties.driver);
         Thread.sleep(5000);
         SharedProperties.Click(paymentpage.paymentPageDummy(), SharedProperties.driver);

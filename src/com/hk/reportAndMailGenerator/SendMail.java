@@ -94,19 +94,20 @@ public class SendMail {
                     }
                 }
             }
-            try {
-                Thread.sleep(2000);
-                ZipDirectory.zipDirectory();
-            } catch (FileNotFoundException fex) {
-                System.out.println(fex.getMessage());
-            } catch (IOException ex) {
-                System.out.println(ex.getMessage());
-            } catch (InterruptedException ie) {
-                System.out.println(ie.getMessage());
-            }
+
 
             File zipFile = null;
             if (StringUtils.isNotBlank(reportDirectory)) {
+                try {
+                    Thread.sleep(2000);
+                    ZipDirectory.zipDirectory();
+                } catch (FileNotFoundException fex) {
+                    System.out.println(fex.getMessage());
+                } catch (IOException ex) {
+                    System.out.println(ex.getMessage());
+                } catch (InterruptedException ie) {
+                    System.out.println(ie.getMessage());
+                }
                 messageBodyPart = new MimeBodyPart();
                 zipFile = new File(reportDirectory);
                 FileDataSource rarFile = new FileDataSource(zipFile);

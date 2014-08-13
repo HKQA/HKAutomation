@@ -8,6 +8,7 @@ import com.hk.excel.dto.TestDetailsDTO;
 import com.hk.jdbc.OrderDetailsVerify;
 import com.hk.property.PropertyHelper;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -48,7 +49,7 @@ public class CouponOnlineOrder extends SharedProperties {
     public void doAfter(ITestResult result) throws IOException {
         if (result.getStatus() == ITestResult.FAILURE) {
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\signupCODFailure.jpg"));
+            FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\CouponOnlineOrder.jpg"));
         }
     }
 
@@ -86,29 +87,31 @@ public class CouponOnlineOrder extends SharedProperties {
                 .ignoring(NoSuchElementException.class, StaleElementReferenceException.class);
         WebElement cartLink = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a[href*='Cart.action']")));
         cartLink.click();
-
-        SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
         Thread.sleep(3000);
 
-        SharedProperties.sendKeys(loginPage.getEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
-        SharedProperties.sendKeys(loginPage.getPasswordTextBox(), testDetailsDTO.getPasswordList(), SharedProperties.driver);
-        SharedProperties.Click(loginPage.getSignInBtn(), SharedProperties.driver);
-        Thread.sleep(5000);
-
-
-        //Code to add more quantity
-        //code to redeem reward points
-        //code to add coupons
-        int couponApplied = SharedProperties.driver.findElements(By.xpath(cartpage.IsCouponApplied())).size();
-        if (couponApplied > 0) {
+        if (StringUtils.contains(SharedProperties.driver.findElement(By.xpath(cartpage.IsCouponApplied())).getText(), "Coupon Applied" )) {
             SharedProperties.driver.findElement(By.cssSelector("a[href*='removeOffer']")).click();
-
         }
         SharedProperties.sendKeys(cartpage.addCouponTextBox(), "HKROCKS", SharedProperties.driver);
         SharedProperties.Click(cartpage.ClickCouponTextBox(), SharedProperties.driver);
         Thread.sleep(2000);
         SharedProperties.Click(cartpage.CouponProceedToCheckout(), SharedProperties.driver);
-        Thread.sleep(2000);
+        Thread.sleep(3000);
+        if (SharedProperties.driver.findElements(By.xpath("//*[@id=\"signInForm\"]/input[3]")).size() > 0 ) {
+            SharedProperties.clear(loginPage.getOldEmailIdTextBox(), SharedProperties.driver);
+            SharedProperties.sendKeys(loginPage.getOldEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
+            SharedProperties.sendKeys(loginPage.getPasswordTextBox(), testDetailsDTO.getPasswordList(), SharedProperties.driver);
+            SharedProperties.Click(loginPage.getOldSignInBtn(), SharedProperties.driver);
+            Thread.sleep(5000);
+        }
+        else
+        {
+            SharedProperties.clear(loginPage.getEmailIdTextBox(), SharedProperties.driver);
+            SharedProperties.sendKeys(loginPage.getEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
+            SharedProperties.sendKeys(loginPage.getPasswordTextBox(), testDetailsDTO.getPasswordList(), SharedProperties.driver);
+            SharedProperties.Click(loginPage.getSignInBtn(), SharedProperties.driver);
+            Thread.sleep(5000);
+        }
         SharedProperties.Click(addresspage.addressPage(), SharedProperties.driver);
         Thread.sleep(5000);
         SharedProperties.Click(paymentpage.paymentPageDummy(), SharedProperties.driver);

@@ -1,14 +1,15 @@
 package com.hk.orderPlacement;
 
 
-import com.hk.reportAndMailGenerator.SendMail;
 import com.hk.commonProperties.SharedProperties;
 import com.hk.elementLocators.*;
 import com.hk.excel.TestDetailsExcelService;
 import com.hk.excel.dto.TestDetailsDTO;
 import com.hk.jdbc.OrderDetailsVerify;
 import com.hk.property.PropertyHelper;
+import com.hk.reportAndMailGenerator.SendMail;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -27,7 +28,7 @@ import java.util.concurrent.TimeUnit;
  * Time: 6:14 PM         -
  * To change this template use File | Settings | File Templates.
  */
-public class ExistingCodPlacement extends SharedProperties {
+public class GuestCheckoutCod extends SharedProperties {
 
     public String browser;
     String baseUrl;
@@ -48,7 +49,7 @@ public class ExistingCodPlacement extends SharedProperties {
     public void doAfter(ITestResult result) throws IOException {
         if (result.getStatus() == ITestResult.FAILURE) {
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\ExistingCodPlacement.jpg"));
+            FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\GuestCheckoutCod.jpg"));
         }
     }
 
@@ -72,7 +73,7 @@ public class ExistingCodPlacement extends SharedProperties {
                 WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
                 buyNow.click();
             }
-        }else {
+        } else {
             SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + testDetailsDTO.getVariantIdList().get(specificVariantIndex.intValue()));
             WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
             buyNow.click();
@@ -88,46 +89,26 @@ public class ExistingCodPlacement extends SharedProperties {
         Thread.sleep(3000);
         SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
         Thread.sleep(3000);
-        SharedProperties.Click(loginPage.getSignInCheckbox(), SharedProperties.driver);
-        SharedProperties.Click(loginPage.getSignInBtn(), SharedProperties.driver);
-        Thread.sleep(3000);
-        SharedProperties.sendKeys(loginPage.getEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
-        SharedProperties.sendKeys(loginPage.getPasswordTextBox(), "lklsdk", SharedProperties.driver);
-        SharedProperties.Click(loginPage.getSignInBtn(), SharedProperties.driver);
+        SharedProperties.sendKeys(loginPage.getGuestEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
+        SharedProperties.Click(loginPage.getGuestSigninBtn(), SharedProperties.driver);
         Thread.sleep(5000);
-        if (SharedProperties.driver.findElements(By.xpath("//*[@id=\"signInForm\"]/input[3]")).size() > 0) {
-            SharedProperties.clear(loginPage.getOldEmailIdTextBox(), SharedProperties.driver);
-            SharedProperties.sendKeys(loginPage.getOldEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
-            SharedProperties.sendKeys(loginPage.getPasswordTextBox(), testDetailsDTO.getPasswordList(), SharedProperties.driver);
-            SharedProperties.Click(loginPage.getOldSignInBtn(), SharedProperties.driver);
-            Thread.sleep(5000);
-        }
-        else
-        {
-            SharedProperties.clear(loginPage.getEmailIdTextBox(), SharedProperties.driver);
-            SharedProperties.sendKeys(loginPage.getEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
-            SharedProperties.sendKeys(loginPage.getPasswordTextBox(), testDetailsDTO.getPasswordList(), SharedProperties.driver);
-            SharedProperties.Click(loginPage.getSignInBtn(), SharedProperties.driver);
-            Thread.sleep(5000);
-        }
 
         //Code to add more quantity
         //code to redeem reward points
         //code to add coupons
 
-        /*SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
-        Thread.sleep(5000);*/
-        SharedProperties.Click(addresspage.addressPage(), SharedProperties.driver);
+        SharedProperties.sendKeys(addresspage.name(), "Test", SharedProperties.driver);
+        SharedProperties.sendKeys(addresspage.mobile(), "9999999999", SharedProperties.driver);
+        SharedProperties.sendKeys(addresspage.address(), "Test", SharedProperties.driver);
+        SharedProperties.sendKeys(addresspage.pincode(), "122001", SharedProperties.driver);
+        Thread.sleep(2000);
+        SharedProperties.Click(addresspage.delivertoaddress(), SharedProperties.driver);
         Thread.sleep(5000);
-        if (SharedProperties.driver.findElement(By.xpath("//*[@id=\"nav\"]/li[5]")).getText() == "CASH ON DELIVERY")
-        {
-           SharedProperties.Click(paymentpage.cashOnDelivery(), SharedProperties.driver);
-        }
-        else if (SharedProperties.driver.findElement(By.xpath("//*[@id=\"nav\"]/li[6]")).getText() == "CASH ON DELIVERY")
-        {
+        if (StringUtils.equals(SharedProperties.driver.findElement(By.xpath("//*[@id=\"nav\"]/li[5]")).getText(), "CASH ON DELIVERY")) {
+            SharedProperties.Click(paymentpage.cashOnDelivery(), SharedProperties.driver);
+        } else if (StringUtils.equals(SharedProperties.driver.findElement(By.xpath("//*[@id=\"nav\"]/li[6]")).getText(), "CASH ON DELIVERY")) {
             SharedProperties.Click(paymentpage.getCod1stDiv(), SharedProperties.driver);
-        }
-        else {
+        } else {
             SharedProperties.Click(paymentpage.getCod2ndDiv(), SharedProperties.driver);
         }
         /*SharedProperties.Click(paymentpage.cashOnDelivery(), SharedProperties.driver);*/

@@ -49,7 +49,7 @@ public class SignupOrderOnline extends SharedProperties {
     public void doAfter(ITestResult result) throws IOException {
         if (result.getStatus() == ITestResult.FAILURE) {
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\signupCODFailure.jpg"));
+            FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\SignupOrderOnline.jpg"));
         }
     }
 
@@ -92,7 +92,7 @@ public class SignupOrderOnline extends SharedProperties {
         //code to redeem reward points
         //code to add coupons
 
-        SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
+        SharedProperties.Click(cartpage.getSigninLink(), SharedProperties.driver);
         Thread.sleep(2000);
         SharedProperties.Click(signupage.signupPage(), SharedProperties.driver);
         SharedProperties.sendKeys(signupage.name(), "Test", SharedProperties.driver);
@@ -100,9 +100,7 @@ public class SignupOrderOnline extends SharedProperties {
         SharedProperties.sendKeys(signupage.password(), "123456", SharedProperties.driver);
         SharedProperties.sendKeys(signupage.confirmpassword(), "123456", SharedProperties.driver);
         SharedProperties.Click(signupage.createaccount(), SharedProperties.driver);
-        ExcelServiceImplOld.updateCellContent(PropertyHelper.readProperty("SignUpExcel"), "1", 0, 1);
-
-        Thread.sleep(2000);
+        ExcelServiceImplOld.updateCellContent(PropertyHelper.readProperty("productIdExcel"), "1", 1, 3);
         SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
         Thread.sleep(2000);
         SharedProperties.sendKeys(addresspage.name(), "Nitin", SharedProperties.driver);

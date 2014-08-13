@@ -37,6 +37,7 @@ public class SignupCodOrder extends SharedProperties {
     CartPage cartpage = new CartPage();
     AddressPage addresspage = new AddressPage();
     PaymentPage paymentpage = new PaymentPage();
+    ITestResult result = Reporter.getCurrentTestResult();
 
 
     @Parameters({"BaseURL", "Browser"})
@@ -50,7 +51,7 @@ public class SignupCodOrder extends SharedProperties {
     public void doAfter(ITestResult result) throws IOException {
         if (result.getStatus() == ITestResult.FAILURE) {
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\signupCODFailure.jpg"));
+            FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\SignupCODFailure.jpg"));
         }
     }
 
@@ -100,16 +101,17 @@ public class SignupCodOrder extends SharedProperties {
         //code to redeem reward points
         //code to add coupons
 
-        SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
+        SharedProperties.Click(cartpage.getSigninLink(), SharedProperties.driver);
         Thread.sleep(2000);
         SharedProperties.Click(signupage.signupPage(), SharedProperties.driver);
+        Thread.sleep(2000);
         SharedProperties.sendKeys(signupage.name(), "Test", SharedProperties.driver);
         SharedProperties.sendKeys(signupage.emailid(), testDetailsDTO.getSignUpList(), SharedProperties.driver);
         SharedProperties.sendKeys(signupage.password(), "123456", SharedProperties.driver);
         SharedProperties.sendKeys(signupage.confirmpassword(), "123456", SharedProperties.driver);
         SharedProperties.Click(signupage.createaccount(), SharedProperties.driver);
-        ExcelServiceImplOld.updateCellContent(PropertyHelper.readProperty("productIdExcel"), "1", 1, 4);
 
+        ExcelServiceImplOld.updateCellContent(PropertyHelper.readProperty("productIdExcel"), "1", 1, 3);
         Thread.sleep(2000);
         SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
         Thread.sleep(2000);
@@ -128,7 +130,6 @@ public class SignupCodOrder extends SharedProperties {
             System.out.print("DB verification Successful");
         } else {
             SendMail.sendmail("DB verification failed for Signup COD order");
-            ITestResult result = Reporter.getCurrentTestResult();
             result.setStatus(ITestResult.FAILURE);
             Reporter.setCurrentTestResult(result);
             System.out.print(result);
@@ -137,7 +138,6 @@ public class SignupCodOrder extends SharedProperties {
                 result.setStatus(ITestResult.FAILURE); // make all FAILED tests a SUCCESS
                 Reporter.setCurrentTestResult(result);
             }*/
-
             Thread.sleep(5000);
         }
 
