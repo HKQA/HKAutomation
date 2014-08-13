@@ -6,11 +6,9 @@ package com.hk.orderPlacement; /**
  * To change this template use File | Settings | File Templates.
  */
 
-import com.google.common.collect.Lists;
-import com.hk.commonProperties.SendMail;
+import com.hk.reportAndMailGenerator.SendMail;
 import com.hk.commonProperties.SharedProperties;
 import com.hk.elementLocators.*;
-import com.hk.excel.ExcelServiceImplOld;
 import com.hk.excel.TestDetailsExcelService;
 import com.hk.excel.dto.TestDetailsDTO;
 import com.hk.jdbc.OrderDetailsVerify;
@@ -25,11 +23,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.*;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 
@@ -55,7 +49,7 @@ public class ExistingOnlineOrder extends SharedProperties {
     public void doAfter(ITestResult result) throws IOException {
         if (result.getStatus() == ITestResult.FAILURE) {
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\signupCODFailure.jpg"));
+            FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\ExistingOnlineOrder.jpg"));
         }
     }
 

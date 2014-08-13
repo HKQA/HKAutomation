@@ -1,10 +1,9 @@
 package com.hk.orderPlacement;
 
-import com.google.common.collect.Lists;
-import com.hk.commonProperties.SendMail;
+import com.hk.excel.ExcelServiceImplOld;
+import com.hk.reportAndMailGenerator.SendMail;
 import com.hk.commonProperties.SharedProperties;
 import com.hk.elementLocators.*;
-import com.hk.excel.ExcelServiceImplOld;
 import com.hk.excel.TestDetailsExcelService;
 import com.hk.excel.dto.TestDetailsDTO;
 import com.hk.jdbc.OrderDetailsVerify;
@@ -15,14 +14,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 import org.testng.annotations.*;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -58,9 +54,14 @@ public class SignupCodOrder extends SharedProperties {
         }
     }
 
+    /*@AfterSuite
+    public static void SuiteReport() throws IOException {
+        SendMail.sendmail("Please find the attached report of test cases", PropertyHelper.readProperty("screenshotFolder"), PropertyHelper.readProperty("reportFolder") + "report.zip");
+
+    }*/
 
     @Parameters("specificVariantIndex")
-    @Test(dataProvider = "CombinedData", enabled = true)
+    @Test(enabled = true)
     public void login(@Optional Long specificVariantIndex) throws InterruptedException, IOException, Exception {
 
 
@@ -80,7 +81,7 @@ public class SignupCodOrder extends SharedProperties {
                 WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
                 buyNow.click();
             }
-        }else {
+        } else {
             SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + testDetailsDTO.getVariantIdList().get(specificVariantIndex.intValue()));
             WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
             buyNow.click();
@@ -112,7 +113,7 @@ public class SignupCodOrder extends SharedProperties {
         Thread.sleep(2000);
         SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
         Thread.sleep(2000);
-        SharedProperties.sendKeys(addresspage.name(), "Nitin Kukna", SharedProperties.driver);
+        SharedProperties.sendKeys(addresspage.name(), "Test", SharedProperties.driver);
         SharedProperties.sendKeys(addresspage.mobile(), "9999999999", SharedProperties.driver);
         SharedProperties.sendKeys(addresspage.address(), "Test", SharedProperties.driver);
         SharedProperties.sendKeys(addresspage.pincode(), "122001", SharedProperties.driver);
@@ -125,13 +126,20 @@ public class SignupCodOrder extends SharedProperties {
         SharedProperties.Click(paymentpage.payOnDelivery(), SharedProperties.driver);
         if (OrderDetailsVerify.orderDetails()) {
             System.out.print("DB verification Successful");
-        }
-        else {
+        } else {
             SendMail.sendmail("DB verification failed for Signup COD order");
-            ITestResult result = null;
+            ITestResult result = Reporter.getCurrentTestResult();
             result.setStatus(ITestResult.FAILURE);
-        }
-        Thread.sleep(5000);
-    }
+            Reporter.setCurrentTestResult(result);
+            System.out.print(result);
+           /* @Override
+            public void onDbFailure(ITestResult result) {
+                result.setStatus(ITestResult.FAILURE); // make all FAILED tests a SUCCESS
+                Reporter.setCurrentTestResult(result);
+            }*/
 
+            Thread.sleep(5000);
+        }
+
+    }
 }

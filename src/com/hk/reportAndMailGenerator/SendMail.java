@@ -1,4 +1,4 @@
-package com.hk.commonProperties;// File Name SendFileEmail.java
+package com.hk.reportAndMailGenerator;// File Name SendFileEmail.java
 
 
 import org.apache.commons.lang3.StringUtils;
@@ -12,6 +12,8 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Properties;
 
 public class SendMail {
@@ -21,6 +23,7 @@ public class SendMail {
     private static String fromaddress = "nitin.kukna@gmail.com";
     private static String hostname = "smtp.gmail.com";
     private static String password = "Nk$232017";
+
 
     public static void sendmail(String mailText) {
         sendmail(mailText, null, null);
@@ -91,6 +94,16 @@ public class SendMail {
                     }
                 }
             }
+            try {
+                Thread.sleep(2000);
+                ZipDirectory.zipDirectory();
+            } catch (FileNotFoundException fex) {
+                System.out.println(fex.getMessage());
+            } catch (IOException ex) {
+                System.out.println(ex.getMessage());
+            } catch (InterruptedException ie) {
+                System.out.println(ie.getMessage());
+            }
 
             File zipFile = null;
             if (StringUtils.isNotBlank(reportDirectory)) {
@@ -122,7 +135,9 @@ public class SendMail {
             }
 
         } catch (MessagingException mex) {
-            mex.printStackTrace();
+            System.out.println(mex);
+        } catch (Throwable t) {
+            System.out.println(t);
         }
     }
 }

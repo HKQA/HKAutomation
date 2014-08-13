@@ -1,15 +1,13 @@
 package com.hk.orderPlacement;
 
-import com.hk.commonProperties.SendMail;
+import com.hk.reportAndMailGenerator.SendMail;
 import com.hk.commonProperties.SharedProperties;
 import com.hk.elementLocators.*;
 import com.hk.excel.TestDetailsExcelService;
 import com.hk.excel.dto.TestDetailsDTO;
 import com.hk.jdbc.OrderDetailsVerify;
 import com.hk.property.PropertyHelper;
-import org.apache.commons.cli.Option;
 import org.apache.commons.io.FileUtils;
-import org.junit.Ignore;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -20,7 +18,6 @@ import org.testng.annotations.*;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -103,7 +100,7 @@ public class CouponOnlineOrder extends SharedProperties {
         //code to redeem reward points
         //code to add coupons
         int couponApplied = SharedProperties.driver.findElements(By.xpath(cartpage.IsCouponApplied())).size();
-        if (couponApplied > 1) {
+        if (couponApplied > 0) {
             SharedProperties.driver.findElement(By.cssSelector("a[href*='removeOffer']")).click();
 
         }
@@ -124,6 +121,7 @@ public class CouponOnlineOrder extends SharedProperties {
         SharedProperties.Click(paymentpage.paymentY(), SharedProperties.driver);
         Thread.sleep(2000);
         SharedProperties.Click(paymentpage.proceedPayment(), SharedProperties.driver);
+        Thread.sleep(5000);
         if (OrderDetailsVerify.orderDetails() == true) {
             System.out.print("DB verification Successful");
         } else {

@@ -7,23 +7,24 @@
     <listeners>
         <listener class-name="org.uncommons.reportng.HTMLReporter"/>
         <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+        <listener class-name="com.hk.reportAndMailGenerator.ReportListener"/>
     </listeners>
     <!-- <test name="ExistingUserOrderOnline">
        <classes>
            <class name="com.hk.orderPlacement.ExistingOnlineOrder"/>
        </classes>
    </test> -->
-    <test name="com.hk.orderPlacement.ExistingOnlineOrder">
+    <test name="com.hk.orderPlacement.SignupCodOrder">
         <classes>
-            <class name="com.hk.orderPlacement.CouponOnlineOrder"/>
+            <class name="com.hk.orderPlacement.SignupCodOrder"/>
         </classes>
     </test>
-    <!--<test name="ExistingUserOrderCOD">
+   <!-- <test name="ExistingOnlineOrder">
             <classes>
-                <class name="com.hk.orderPlacement.ExistingUserOrderCOD"/>
+                <class name="com.hk.orderPlacement.ExistingOnlineOrder"/>
             </classes>
-        </test>
-        <test name="SignUpAndOrderCard">
+        </test>-->
+        <!--<test name="SignUpAndOrderCard">
             <classes>
                 <class name="com.hk.orderPlacement.SignUpAndOrderCard"/>
             </classes>
@@ -33,9 +34,4 @@
                 <class name="com.hk.orderPlacement.SignUpAndOrderCOD"/>
             </classes>
         </test>-->
-    <test name="com.hk.orderPlacement.SuiteReport">
-        <classes>
-            <class name="com.hk.orderPlacement.SuiteReport"/>
-        </classes>
-    </test>
 </suite>
