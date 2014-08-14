@@ -113,7 +113,6 @@ public class GuestCheckoutCod extends SharedProperties {
         } else {
             SharedProperties.Click(paymentpage.getCod2ndDiv(), SharedProperties.driver);
         }
-        /*SharedProperties.Click(paymentpage.cashOnDelivery(), SharedProperties.driver);*/
         Thread.sleep(5000);
         SharedProperties.Click(paymentpage.payOnDelivery(), SharedProperties.driver);
 
@@ -121,9 +120,8 @@ public class GuestCheckoutCod extends SharedProperties {
             System.out.print("DB verification Successful");
         } else {
             SendMail.sendmail("DB Verification failed for Existing Cod order");
-            ITestResult result = null;
             result.setStatus(ITestResult.FAILURE);
+            Thread.sleep(5000);
         }
-        Thread.sleep(5000);
     }
 }

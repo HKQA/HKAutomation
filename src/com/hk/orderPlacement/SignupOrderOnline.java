@@ -104,14 +104,13 @@ public class SignupOrderOnline extends SharedProperties {
         ExcelServiceImplOld.updateCellContent(PropertyHelper.readProperty("productIdExcel"), "1", 1, 3);
         SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
         Thread.sleep(2000);
-        SharedProperties.sendKeys(addresspage.name(), "Nitin", SharedProperties.driver);
+        SharedProperties.sendKeys(addresspage.name(), "Test", SharedProperties.driver);
         SharedProperties.sendKeys(addresspage.mobile(), "9999999999", SharedProperties.driver);
         SharedProperties.sendKeys(addresspage.address(), "Test", SharedProperties.driver);
         SharedProperties.sendKeys(addresspage.pincode(), "122001", SharedProperties.driver);
         Thread.sleep(2000);
         SharedProperties.Click(addresspage.delivertoaddress(), SharedProperties.driver);
         Thread.sleep(5000);
-
 
         WebElement dummypayment = SharedProperties.driver.findElement(By.xpath("html/body/div[1]/div[2]/div[1]/div[5]/div[2]/div/div[2]/form[1]/div[1]/div/div[4]/input"));
         if (dummypayment == null) {
@@ -121,7 +120,6 @@ public class SignupOrderOnline extends SharedProperties {
         } else {
             SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[1]/div[5]/div[2]/div/div[2]/form[1]/div[1]/div/div[2]/input")).click();
         }
-
         Thread.sleep(2000);
         SharedProperties.Click(paymentpage.proceedToPayment(), SharedProperties.driver);
         Thread.sleep(2000);
@@ -132,9 +130,8 @@ public class SignupOrderOnline extends SharedProperties {
             System.out.print("DB verification Successful");
         } else {
             SendMail.sendmail("DB verification failed for Signup online order");
-            ITestResult result = null;
             result.setStatus(ITestResult.FAILURE);
+            Thread.sleep(5000);
         }
-        Thread.sleep(5000);
     }
 }

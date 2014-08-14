@@ -128,10 +128,9 @@ public class GuestCheckoutOnline extends SharedProperties {
             System.out.print("DB verification Successful");
         } else {
             SendMail.sendmail("DB Verification failed for Online Order");
-            ITestResult result = null;
             result.setStatus(ITestResult.FAILURE);
+            Thread.sleep(5000);
         }
-        Thread.sleep(5000);
     }
 
 }

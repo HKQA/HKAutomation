@@ -26,7 +26,7 @@ public class ReportListener implements IReporter {
                 if (file.exists()) {
                     // Include your code here
                     SendMail.sendmail("Please find the attached report of test cases", PropertyHelper.readProperty("screenshotFolder"), PropertyHelper.readProperty("reportFolder") + "report.zip");
-                            /*System.out.println("Found the file @ " + file.getAbsolutePath());*/
+                    /*System.out.println("Found the file @ " + file.getAbsolutePath());*/
                     flag = true;
 
                 }

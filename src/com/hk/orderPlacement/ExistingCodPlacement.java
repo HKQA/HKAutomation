@@ -140,9 +140,8 @@ public class ExistingCodPlacement extends SharedProperties {
             System.out.print("DB verification Successful");
         } else {
             SendMail.sendmail("DB Verification failed for Existing Cod order");
-            ITestResult result = null;
             result.setStatus(ITestResult.FAILURE);
+            Thread.sleep(5000);
         }
-        Thread.sleep(5000);
     }
 }
