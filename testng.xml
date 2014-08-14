@@ -4,17 +4,17 @@
     <parameter name="BaseURL" value="http://www.centralhk.com:9090"/>
     <parameter name="AdminBaseURL" value="www.admincentralhk.com:8080"/>
 
-    <parameter name="Browser" value="chrome"/>
+    <parameter name="Browser" value="firefox"/>
     <parameter name="useDefaultListeners" value="false"/>
     <listeners>
         <listener class-name="org.uncommons.reportng.HTMLReporter"/>
         <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
     </listeners>
-    <!-- <test name="ExistingUserOrderOnline">
+  <!--   <test name="ExistingUserOrderOnline">
        <classes>
            <class name="com.hk.orderPlacement.ExistingOnlineOrder"/>
        </classes>
-   </test> -->
+   </test>-->
     <test name="com.hk.orderPlacement.ExistingOnlineOrder">
         <classes>
             <class name="com.hk.orderCheckout.variantCheckout"/>

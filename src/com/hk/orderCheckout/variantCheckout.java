@@ -4,6 +4,7 @@ package com.hk.orderCheckout;
 import com.hk.aquaElementLocators.LoginPageAdmin;
 import com.hk.aquaElementLocators.PrintPrickOrders;
 import com.hk.commonProperties.SharedProperties;
+
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -20,6 +21,7 @@ import java.io.IOException;
 public class variantCheckout /*extends ExistingOnlineOrder*/{
     String AdminBaseURL;
     String browser;
+
     LoginPageAdmin loginpage=new LoginPageAdmin();
     PrintPrickOrders printprick = new PrintPrickOrders();
 
@@ -56,8 +58,8 @@ public class variantCheckout /*extends ExistingOnlineOrder*/{
 //    EOO.login(1L);
 
         SharedProperties.openBrowser(AdminBaseURL,browser);
-        SharedProperties.sendKeys(loginpage.getUserName(),"saurabh.nagpal@healthkart.com" , SharedProperties.driver);
-        SharedProperties.sendKeys(loginpage.getPassword(),"abcde12" , SharedProperties.driver);
+        SharedProperties.sendKeys(loginpage.getUserName(), "saurabh.nagpal@healthkart.com", SharedProperties.driver);
+        SharedProperties.sendKeys(loginpage.getPassword(), "abcde12", SharedProperties.driver);
         SharedProperties.Click(loginpage.getLoginbtn(), SharedProperties.driver);
 
         //Select WareHouse according to your order from database or with text
@@ -65,17 +67,15 @@ public class variantCheckout /*extends ExistingOnlineOrder*/{
         SharedProperties.clickWithCss(printprick.getPrintPrickLink(), SharedProperties.driver);
         SharedProperties.Click(printprick.getOrderFilters(), SharedProperties.driver);
         Thread.sleep(2000);
-        SharedProperties.sendKeys(printprick.getBoGatewayOrderIdTxt(), "HK13801-570655", SharedProperties.driver);
+        SharedProperties.sendKeys(printprick.getBoGatewayOrderIdTxt(), "HK77397-620667", SharedProperties.driver);
         SharedProperties.Click(printprick.getBoGatewaySearchBtn(), SharedProperties.driver);
         Thread.sleep(3000);
-        SharedProperties.Click(printprick.getCheckboxBo(), SharedProperties.driver);
+        SharedProperties.Class(printprick.getCheckboxBo(), SharedProperties.driver);
         SharedProperties.Click(printprick.getBatchPrintBtn(), SharedProperties.driver);
         Thread.sleep(5000);
-        SharedProperties.Click(printprick.getCancelBtn(), SharedProperties.driver);
-        Thread.sleep(2000);
-        SharedProperties.Click(printprick.getCancelBtn(), SharedProperties.driver);
-        Thread.sleep(2000);
-        SharedProperties.Click(printprick.getCancelBtn(), SharedProperties.driver);
+
+
+
 
 
 

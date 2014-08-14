@@ -6,16 +6,13 @@ package com.hk.orderPlacement; /**
  * To change this template use File | Settings | File Templates.
  */
 
-import com.google.common.collect.Lists;
 import com.hk.commonProperties.SendMail;
 import com.hk.commonProperties.SharedProperties;
 import com.hk.elementLocators.*;
-import com.hk.excel.ExcelServiceImplOld;
 import com.hk.excel.TestDetailsExcelService;
 import com.hk.excel.dto.TestDetailsDTO;
 import com.hk.jdbc.OrderDetailsVerify;
 import com.hk.property.PropertyHelper;
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -24,12 +21,7 @@ import org.openqa.selenium.support.ui.Wait;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 
@@ -132,7 +124,7 @@ public class ExistingOnlineOrder extends SharedProperties {
         SharedProperties.clear(loginPage.getEmailIdTextBox(), SharedProperties.driver);
 
         SharedProperties.sendKeys(loginPage.getEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
-        SharedProperties.sendKeys(loginPage.getPasswordTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
+        SharedProperties.sendKeys(loginPage.getPasswordTextBox(), testDetailsDTO.getPasswordList(), SharedProperties.driver);
         SharedProperties.Click(loginPage.getSignInBtn(), SharedProperties.driver);
         Thread.sleep(5000);
 

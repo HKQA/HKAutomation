@@ -5,9 +5,7 @@ package com.hk.commonProperties; /**
  * Time: 7:23 PM
  * To change this template use File | Settings | File Templates.
  */
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -15,9 +13,15 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Iterator;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.Keys;
+
 import com.hk.property.PropertyHelper;
 
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class SharedProperties {
@@ -51,7 +55,7 @@ public class SharedProperties {
             driver.get(AppURL);
         }
     }
-    public static void sendKeys(String elementXpath,  String value, WebDriver driver) {
+    public static void sendKeys(String elementXpath, String value, WebDriver driver) {
         driver.findElement(By.xpath(elementXpath)).sendKeys(value);
 
     }
@@ -69,5 +73,22 @@ public class SharedProperties {
 
     }
 
+    public static void Class(String className,  WebDriver driver)  {
+        driver.findElement(By.className(className)).click();
 
+    }
+
+    public static void pressEnterSafe()
+    {
+        /*WebElement element=driver.findElement(By.xpath("/*//*[@id=\"print-header\"]/div/button[1]"));
+        element.sendKeys(Keys.TAB);
+        element.sendKeys(Keys.ENTER);
+*/
+        Actions builder = new Actions(driver);
+        builder.sendKeys(Keys.chord(Keys.TAB, Keys.ENTER));
+        builder.build().perform();
+
+
+
+}
 }
