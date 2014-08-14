@@ -20,6 +20,7 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 import org.testng.annotations.*;
 
 import java.io.File;
@@ -35,7 +36,7 @@ public class GuestCheckoutOnline extends SharedProperties {
     CartPage cartpage = new CartPage();
     AddressPage addresspage = new AddressPage();
     PaymentPage paymentpage = new PaymentPage();
-    /*ExcelServiceImplOld readexcel = new ExcelServiceImplOld();*/
+    ITestResult result = Reporter.getCurrentTestResult();
 
 
     @Parameters({"BaseURL", "Browser"})

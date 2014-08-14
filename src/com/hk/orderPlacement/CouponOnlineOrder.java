@@ -15,6 +15,7 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 import org.testng.annotations.*;
 
 import java.io.File;
@@ -36,7 +37,7 @@ public class CouponOnlineOrder extends SharedProperties {
     CartPage cartpage = new CartPage();
     AddressPage addresspage = new AddressPage();
     PaymentPage paymentpage = new PaymentPage();
-
+    ITestResult result = Reporter.getCurrentTestResult();
 
     @Parameters({"BaseURL", "Browser"})
     @BeforeClass
@@ -89,7 +90,7 @@ public class CouponOnlineOrder extends SharedProperties {
         cartLink.click();
         Thread.sleep(3000);
 
-        if (StringUtils.contains(SharedProperties.driver.findElement(By.xpath(cartpage.IsCouponApplied())).getText(), "Coupon Applied" )) {
+        if (StringUtils.contains(SharedProperties.driver.findElement(By.xpath(cartpage.IsCouponApplied())).getText(), "Coupon Applied")) {
             SharedProperties.driver.findElement(By.cssSelector("a[href*='removeOffer']")).click();
         }
         SharedProperties.sendKeys(cartpage.addCouponTextBox(), "HKROCKS", SharedProperties.driver);

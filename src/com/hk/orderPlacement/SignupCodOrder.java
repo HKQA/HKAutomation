@@ -55,12 +55,6 @@ public class SignupCodOrder extends SharedProperties {
         }
     }
 
-    /*@AfterSuite
-    public static void SuiteReport() throws IOException {
-        SendMail.sendmail("Please find the attached report of test cases", PropertyHelper.readProperty("screenshotFolder"), PropertyHelper.readProperty("reportFolder") + "report.zip");
-
-    }*/
-
     @Parameters("specificVariantIndex")
     @Test(enabled = true)
     public void login(@Optional Long specificVariantIndex) throws InterruptedException, IOException, Exception {
@@ -131,13 +125,6 @@ public class SignupCodOrder extends SharedProperties {
         } else {
             SendMail.sendmail("DB verification failed for Signup COD order");
             result.setStatus(ITestResult.FAILURE);
-            Reporter.setCurrentTestResult(result);
-            System.out.print(result);
-           /* @Override
-            public void onDbFailure(ITestResult result) {
-                result.setStatus(ITestResult.FAILURE); // make all FAILED tests a SUCCESS
-                Reporter.setCurrentTestResult(result);
-            }*/
             Thread.sleep(5000);
         }
 

@@ -6,13 +6,13 @@ package com.hk.orderPlacement; /**
  * To change this template use File | Settings | File Templates.
  */
 
-import com.hk.reportAndMailGenerator.SendMail;
 import com.hk.commonProperties.SharedProperties;
 import com.hk.elementLocators.*;
 import com.hk.excel.TestDetailsExcelService;
 import com.hk.excel.dto.TestDetailsDTO;
 import com.hk.jdbc.OrderDetailsVerify;
 import com.hk.property.PropertyHelper;
+import com.hk.reportAndMailGenerator.SendMail;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -20,6 +20,7 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 import org.testng.annotations.*;
 
 import java.io.File;
@@ -35,8 +36,8 @@ public class ExistingOnlineOrder extends SharedProperties {
     CartPage cartpage = new CartPage();
     AddressPage addresspage = new AddressPage();
     PaymentPage paymentpage = new PaymentPage();
+    ITestResult result = Reporter.getCurrentTestResult();
     /*ExcelServiceImplOld readexcel = new ExcelServiceImplOld();*/
-
 
     @Parameters({"BaseURL", "Browser"})
     @BeforeClass
@@ -70,6 +71,11 @@ public class ExistingOnlineOrder extends SharedProperties {
             System.out.println(ex.getMessage());
         }
         return result.iterator();
+    }
+      @AfterSuite
+    public static void SuiteReport() throws IOException {
+        SendMail.sendmail("Please find the attached report of test cases", PropertyHelper.readProperty("screenshotFolder"), PropertyHelper.readProperty("reportFolder") + "report.zip");
+
     }*/
 
 
@@ -92,7 +98,7 @@ public class ExistingOnlineOrder extends SharedProperties {
                 WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
                 buyNow.click();
             }
-        }else {
+        } else {
             SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + testDetailsDTO.getVariantIdList().get(specificVariantIndex.intValue()));
             WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
             buyNow.click();
@@ -123,15 +129,13 @@ public class ExistingOnlineOrder extends SharedProperties {
         SharedProperties.Click(loginPage.getSignInBtn(), SharedProperties.driver);
         Thread.sleep(5000);
 
-        if (SharedProperties.driver.findElements(By.xpath("//*[@id=\"signInForm\"]/input[3]")).size() > 0 ) {
+        if (SharedProperties.driver.findElements(By.xpath("//*[@id=\"signInForm\"]/input[3]")).size() > 0) {
             SharedProperties.clear(loginPage.getOldEmailIdTextBox(), SharedProperties.driver);
             SharedProperties.sendKeys(loginPage.getOldEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
             SharedProperties.sendKeys(loginPage.getPasswordTextBox(), testDetailsDTO.getPasswordList(), SharedProperties.driver);
             SharedProperties.Click(loginPage.getOldSignInBtn(), SharedProperties.driver);
             Thread.sleep(5000);
-        }
-        else
-        {
+        } else {
             SharedProperties.clear(loginPage.getEmailIdTextBox(), SharedProperties.driver);
             SharedProperties.sendKeys(loginPage.getEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
             SharedProperties.sendKeys(loginPage.getPasswordTextBox(), testDetailsDTO.getPasswordList(), SharedProperties.driver);
