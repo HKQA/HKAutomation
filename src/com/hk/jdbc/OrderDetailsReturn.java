@@ -11,10 +11,10 @@ import java.sql.SQLException;
  * Date: 7/10/14
  * Time: 3:40 PM
  */
-public class OrderDetailsReturn {
+public class    OrderDetailsReturn {
 
     public static OrderDetailsDTO orderDetail() {
-        String query = "select u.email,u.name,b.amount,b.gateway_order_id,c.store_variant_id from base_order b inner join cart_line_item c  on b.id=c.base_order_id join user u on b.user_id=u.id where gateway_order_id='" + OrderDetailsUtil.GatewayOrderId() + "'";
+        String query = "select u.email,u.name,b.amount,b.gateway_order_id,c.store_variant_id,c.id as cart_line_item from base_order b inner join cart_line_item c  on b.id=c.base_order_id join user u on b.user_id=u.id where gateway_order_id='" + OrderDetailsUtil.GatewayOrderId() + "'";
         return
                 JdbcConnectionFile.readJdbcprop(query, new ResultSetExtractor<OrderDetailsDTO>() {
                     OrderDetailsDTO orderDetailsDTO = new OrderDetailsDTO();
@@ -26,6 +26,7 @@ public class OrderDetailsReturn {
                             orderDetailsDTO.setAmount(rs.getDouble("amount"));
                             orderDetailsDTO.setGatewayOrderId(rs.getString("gateway_order_id"));
                             orderDetailsDTO.getProductList().add(rs.getLong("store_variant_id"));
+                            orderDetailsDTO.getCartLineItemIdList().add(rs.getLong("id"));
                         }
 
                         return orderDetailsDTO;

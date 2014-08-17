@@ -5,6 +5,7 @@ import com.hk.aquaElementLocators.LoginPageAdmin;
 import com.hk.aquaElementLocators.PrintPrickOrders;
 import com.hk.commonProperties.SharedProperties;
 
+import com.hk.property.PropertyHelper;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
@@ -32,6 +33,7 @@ public class variantCheckout /*extends ExistingOnlineOrder*/{
 
     LoginPageAdmin loginpage=new LoginPageAdmin();
     PrintPrickOrders printprick = new PrintPrickOrders();
+    SharedProperties sharedproperties = new SharedProperties();
 
     @Parameters({"AdminBaseURL", "Browser"})
     @BeforeClass
@@ -82,50 +84,26 @@ public class variantCheckout /*extends ExistingOnlineOrder*/{
         SharedProperties.Click(printprick.getBatchPrintBtn(), SharedProperties.driver);
         Thread.sleep(5000);
 
-        /*Set<String> windowId = SharedProperties.driver.getWindowHandles();    // get  window id of current window
-        Iterator<String> itererator = windowId.iterator();
+        sharedproperties.pressEnterSafe();
 
-        String mainWinID = itererator.next();
-        String  newAdwinID = itererator.next();
+        SharedProperties.Class(printprick.getCheckboxBo(), SharedProperties.driver);
+        SharedProperties.Click(printprick.getJobDoneClearQueBtn(),SharedProperties.driver);
 
-        SharedProperties.driver.switchTo().window(newAdwinID);
-        System.out.println(SharedProperties.driver.findElement(By.xpath("*//*//**//*[@id=\"print-header\"]/div/button[2]")));
-        Thread.sleep(3000);
-        SharedProperties.driver.close();
 
-        SharedProperties.driver.switchTo().window(mainWinID);
-        System.out.println(SharedProperties.driver.getTitle());
-        Thread.sleep(2000);*/
-        /*Alert alert = SharedProperties.driver.switchTo().alert();
-        //alert is present
-        System.out.println(SharedProperties.driver.findElement(By.xpath("*//*//**//*[@id=\"print-header\"]/div/button[2]")));
-        alert.accept();*/
+        SharedProperties.driver.navigate().to(PropertyHelper.readProperty("brightUrl"));
 
-       /* windowids = driver.getWindowHandles();
-        iter= windowids.iterator();
-        String mainWindowId=iter.next();
-        String popupWindowId=iter.next();
-        driver.switchTo().window(popupwindowid);*/
+        //find Foreign Booking status BO with queries
 
-        Robot robot = new Robot() ;
 
-        robot.delay(delay) ;
+        //find SO of that BO
+        //get to checkout order
+        //Enter SO of Bright
 
-        robot.keyPress(KeyEvent.VK_ENTER) ;
-        robot.keyRelease(KeyEvent.VK_ENTER) ;
-        Thread.sleep(2000);
-        robot.delay(delay) ;
 
-        robot.keyPress(KeyEvent.VK_ENTER) ;
-        robot.keyRelease(KeyEvent.VK_ENTER) ;
-        Thread.sleep(2000);
-        robot.delay(delay) ;
-        Thread.sleep(2000);
 
-        robot.keyPress(KeyEvent.VK_ENTER) ;
-        robot.keyRelease(KeyEvent.VK_ENTER) ;
 
-        System.out.print("test");
+
+
 
     }
 
