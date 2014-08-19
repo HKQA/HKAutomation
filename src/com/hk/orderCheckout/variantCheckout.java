@@ -77,7 +77,7 @@ public class variantCheckout /*extends ExistingOnlineOrder*/{
         SharedProperties.clickWithCss(printprick.getPrintPrickLink(), SharedProperties.driver);
         SharedProperties.Click(printprick.getOrderFilters(), SharedProperties.driver);
         Thread.sleep(2000);
-        SharedProperties.sendKeys(printprick.getBoGatewayOrderIdTxt(), "HK54942-392044", SharedProperties.driver);
+        SharedProperties.sendKeys(printprick.getBoGatewayOrderIdTxt(), "HK73335-647923", SharedProperties.driver);
         SharedProperties.Click(printprick.getBoGatewaySearchBtn(), SharedProperties.driver);
         Thread.sleep(3000);
         SharedProperties.Class(printprick.getCheckboxBo(), SharedProperties.driver);
@@ -85,11 +85,12 @@ public class variantCheckout /*extends ExistingOnlineOrder*/{
         Thread.sleep(5000);
 
         sharedproperties.pressEnterSafe();
+        Thread.sleep(3000);
 
         SharedProperties.Class(printprick.getCheckboxBo(), SharedProperties.driver);
+        Thread.sleep(2000);
         SharedProperties.Click(printprick.getJobDoneClearQueBtn(),SharedProperties.driver);
-
-
+        Thread.sleep(4000);
         SharedProperties.driver.navigate().to(PropertyHelper.readProperty("brightUrl"));
 
         //find Foreign Booking status BO with queries
