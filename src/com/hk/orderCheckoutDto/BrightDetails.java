@@ -1,9 +1,7 @@
-package com.hk.com.hk.dto;
+package com.hk.orderCheckoutDto;
 
 import com.hk.constants.EnumDB;
 import com.hk.jdbc.JdbcConnectionFile;
-import com.hk.jdbc.OrderDetailsDTO;
-import com.hk.jdbc.OrderDetailsReturn;
 import com.hk.jdbc.ResultSetExtractor;
 import com.hk.orderPlacement.OrderDetailsUtil;
 

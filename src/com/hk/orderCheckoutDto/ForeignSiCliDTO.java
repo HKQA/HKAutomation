@@ -1,4 +1,4 @@
-package com.hk.com.hk.dto;
+package com.hk.orderCheckoutDto;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +22,7 @@ public class ForeignSiCliDTO {
     }
 
     public void setForeignBoIdList(List<String> foreignBoIdList) {
-        this.foreignBoIdList = foreignBoIdList;
+            this.foreignBoIdList = foreignBoIdList;
     }
 
     public List<String> getForeignSoIdList() {

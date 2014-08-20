@@ -4,25 +4,15 @@ package com.hk.orderCheckout;
 import com.hk.aquaElementLocators.LoginPageAdmin;
 import com.hk.aquaElementLocators.PrintPrickOrders;
 import com.hk.brightElementLocators.CheckoutOrders;
-import com.hk.com.hk.dto.BrightDetails;
-import com.hk.com.hk.dto.ForeignSiCliDTO;
+import com.hk.orderCheckoutDto.ForeignSiCliDTO;
 import com.hk.commonProperties.SharedProperties;
 
-import com.hk.jdbc.OrderDetailsDTO;
-import com.hk.jdbc.OrderDetailsReturn;
 import com.hk.property.PropertyHelper;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoAlertPresentException;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import java.awt.*;
-import java.awt.event.KeyEvent;
 import java.io.IOException;
-import java.util.Iterator;
-import java.util.Set;
 
 /**
  * Created with IntelliJ IDEA.
