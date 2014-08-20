@@ -7,6 +7,7 @@ import com.hk.brightElementLocators.CheckoutOrders;
 import com.hk.orderCheckoutDto.ForeignSiCliDTO;
 import com.hk.commonProperties.SharedProperties;
 
+import com.hk.orderCheckoutDto.SoDetailsDTO;
 import com.hk.property.PropertyHelper;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -30,8 +31,8 @@ public class variantCheckout /*extends ExistingOnlineOrder*/{
     PrintPrickOrders printprick = new PrintPrickOrders();
     CheckoutOrders checkoutorders = new CheckoutOrders();
     ForeignSiCliDTO foreignSiCliDTO = new ForeignSiCliDTO();
-
-    SharedProperties sharedproperties = new SharedProperties();
+    SoDetailsDTO soDetailsdto = new SoDetailsDTO();
+SharedProperties sharedproperties = new SharedProperties();
 
     @Parameters({"AdminBaseURL", "Browser"})
     @BeforeClass
@@ -71,11 +72,12 @@ public class variantCheckout /*extends ExistingOnlineOrder*/{
         SharedProperties.Click(loginpage.getLoginbtn(), SharedProperties.driver);
 
         //Select WareHouse according to your order from database or with text
+        for(Long shippingOrderId: soDetailsdto.getShippingOrderIdList()){
 
         SharedProperties.clickWithCss(printprick.getPrintPrickLink(), SharedProperties.driver);
         SharedProperties.Click(printprick.getOrderFilters(), SharedProperties.driver);
         Thread.sleep(2000);
-        SharedProperties.sendKeys(printprick.getBoGatewayOrderIdTxt(), "HK73335-647923", SharedProperties.driver);
+        SharedProperties.sendKeys(printprick.getSoGatewayOrderIdTxt(),shippingOrderId.toString(), SharedProperties.driver);
         SharedProperties.Click(printprick.getBoGatewaySearchBtn(), SharedProperties.driver);
         Thread.sleep(3000);
         SharedProperties.Class(printprick.getCheckboxBo(), SharedProperties.driver);
@@ -94,7 +96,7 @@ public class variantCheckout /*extends ExistingOnlineOrder*/{
         //check for warehouse first
         SharedProperties.Click(checkoutorders.getCheckoutOrder(),SharedProperties.driver);
 
-        SharedProperties.sendKeys(checkoutorders.getCheckoutOrderTxt(),foreignSiCliDTO.setForeignSoGatewayIdList(),SharedProperties.driver);
+
 
 
         //find Foreign Booking status BO with queries
@@ -107,7 +109,7 @@ public class variantCheckout /*extends ExistingOnlineOrder*/{
 
 
 
-
+        }
     }
 
     }

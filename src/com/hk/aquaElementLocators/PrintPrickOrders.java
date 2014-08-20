@@ -12,6 +12,7 @@ public class PrintPrickOrders {
     private String printPrickLink="a[href*='ChooseOrdersForPrintPick.action']";
     private String orderFilters="/html/body/div/div[2]/form[1]/div[2]/span[2]";
     private String BoGatewayOrderIdTxt="//*[@id=\"orderFilters\"]/div[2]/input[2]";
+    private String SoGatewayOrderIdTxt="//*[@id=\"orderFilters\"]/div[2]/input[1]";
     private String BoGatewaySearchBtn="//*[@id=\"orderFilters\"]/div[2]/input[3]";
     private String checkboxBo="shippingOrderDetailCheckbox";
     private String batchPrintBtn="//*[@id=\"orderForm\"]/div[2]/input[2]";
@@ -48,5 +49,9 @@ public class PrintPrickOrders {
 
     public String getCancelBtn() {
         return cancelBtn;
+    }
+
+    public String getSoGatewayOrderIdTxt(){
+        return SoGatewayOrderIdTxt;
     }
 }

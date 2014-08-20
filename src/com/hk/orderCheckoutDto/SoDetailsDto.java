@@ -1,5 +1,8 @@
 package com.hk.orderCheckoutDto;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Saurabh
@@ -8,13 +11,13 @@ package com.hk.orderCheckoutDto;
  * To change this template use File | Settings | File Templates.
  */
 public class SoDetailsDTO {
-    public String getShippingOrderId() {
-        return shippingOrderId;
+    private List<Long> shippingOrderIdList = new ArrayList<Long>();
+
+    public List<Long> getShippingOrderIdList() {
+        return shippingOrderIdList;
     }
 
-    public void setShippingOrderId(String shippingOrderId) {
-        this.shippingOrderId = shippingOrderId;
+    public void setShippingOrderIdList(List<Long> shippingOrderIdList) {
+        this.shippingOrderIdList = shippingOrderIdList;
     }
-
-    private String shippingOrderId;
 }
