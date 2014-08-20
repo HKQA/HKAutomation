@@ -2,19 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c26b27e7-3829-4ab4-9fbd-06b12c07466d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/hk/util/AutoStringUtils.java" />
-      <change type="MOVED" beforePath="C:\selenium\Automation_testing_v4\src\com\hk\orderCheckoutDto\SoDetailsDto.java" afterPath="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetailsDTO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java" afterPath="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/aquaElementLocators/PrintPrickOrders.java" afterPath="$PROJECT_DIR$/src/com/hk/aquaElementLocators/PrintPrickOrders.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java" afterPath="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java" afterPath="$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Automation_testing_v4.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408515446301" ignored="false" />
     <file path="/SharedProperties.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408215120916" ignored="false" />
-    <file path="/variantCheckout.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408531741200" ignored="false" />
+    <file path="/variantCheckout.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408546120539" ignored="false" />
     <file path="/url.properties" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408446595413" ignored="false" />
     <file path="/OrderDetailsDTO.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408295574457" ignored="false" />
     <file path="/OrderDetailsReturn.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408443099311" ignored="false" />
@@ -104,19 +99,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="variantCheckout.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="variantCheckout.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="96" selection-start="3170" selection-end="3170" vertical-scroll-proportion="0.0">
+            <state line="92" column="4" selection-start="3588" selection-end="3588" vertical-scroll-proportion="0.9337232">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExistingCodPlacement.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingCodPlacement.java">
+      <file leaf-file-name="SoDetailsDTO.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetailsDTO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="150" selection-start="2835" selection-end="2835" vertical-scroll-proportion="0.0">
+            <state line="12" column="13" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#327#333#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SharedProperties.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hk/commonProperties/SharedProperties.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="61" column="23" selection-start="2400" selection-end="2400" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -125,7 +132,7 @@
       <file leaf-file-name="OrderDetailsVerify.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsVerify.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="40" selection-start="237" selection-end="264" vertical-scroll-proportion="0.0">
+            <state line="16" column="36" selection-start="505" selection-end="505" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -134,7 +141,7 @@
       <file leaf-file-name="OrderDetailsDTO.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsDTO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="64" selection-start="492" selection-end="492" vertical-scroll-proportion="0.0">
+            <state line="60" column="22" selection-start="1311" selection-end="1311" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#367#373#0" expanded="true" />
                 <element signature="e#434#440#0" expanded="true" />
@@ -146,16 +153,7 @@
       <file leaf-file-name="ForeignSiCliDTO.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/ForeignSiCliDTO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="24" selection-start="642" selection-end="642" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PrintPrickOrders.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/aquaElementLocators/PrintPrickOrders.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="12" column="13" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -164,7 +162,7 @@
       <file leaf-file-name="SoDetails.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="31" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0">
+            <state line="28" column="51" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -175,7 +173,7 @@
       <file leaf-file-name="OrderDetailsReturn.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsReturn.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="76" selection-start="1353" selection-end="1353" vertical-scroll-proportion="0.0">
+            <state line="35" column="20" selection-start="1466" selection-end="1466" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -184,16 +182,16 @@
       <file leaf-file-name="BrightDetails.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="64" selection-start="958" selection-end="958" vertical-scroll-proportion="0.0">
+            <state line="18" column="34" selection-start="440" selection-end="440" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AutoStringUtils.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AutoStringUtils.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/util/AutoStringUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="38" selection-start="356" selection-end="356" vertical-scroll-proportion="0.43122676">
+            <state line="13" column="90" selection-start="244" selection-end="244" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -232,9 +230,9 @@
         <option value="$PROJECT_DIR$/src/com/hk/aquaElementLocators/PrintPrickOrders.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetailsDTO.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java" />
-        <option value="$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java" />
         <option value="$PROJECT_DIR$/src/com/hk/util/AutoStringUtils.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java" />
+        <option value="$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java" />
       </list>
     </option>
   </component>
@@ -381,6 +379,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="orderCheckoutDto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Automation_testing_v4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Automation_testing_v4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jdbc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -882,11 +902,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/url.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="53" selection-start="660" selection-end="660" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/constants/EnumDB.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="8" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0">
@@ -915,23 +930,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingCodPlacement.java">
+    <entry file="file://$PROJECT_DIR$/src/com/hk/aquaElementLocators/PrintPrickOrders.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="150" selection-start="2835" selection-end="2835" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsVerify.java">
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingCodPlacement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="40" selection-start="237" selection-end="264" vertical-scroll-proportion="0.0">
+        <state line="75" column="150" selection-start="2835" selection-end="2835" vertical-scroll-proportion="0.60190475">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/ForeignSiCliDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="13" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/util/AutoStringUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="90" selection-start="244" selection-end="244" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="64" selection-start="492" selection-end="492" vertical-scroll-proportion="0.0">
+        <state line="60" column="22" selection-start="1311" selection-end="1311" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#367#373#0" expanded="true" />
             <element signature="e#434#440#0" expanded="true" />
@@ -941,28 +972,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsReturn.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="76" selection-start="1353" selection-end="1353" vertical-scroll-proportion="0.0">
+        <state line="35" column="20" selection-start="1466" selection-end="1466" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java">
+    <entry file="file://$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsVerify.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="96" selection-start="3170" selection-end="3170" vertical-scroll-proportion="0.0">
+        <state line="16" column="36" selection-start="505" selection-end="505" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/ForeignSiCliDTO.java">
+    <entry file="file://$PROJECT_DIR$/src/com/hk/commonProperties/SharedProperties.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="24" selection-start="642" selection-end="642" vertical-scroll-proportion="0.0">
+        <state line="61" column="23" selection-start="2400" selection-end="2400" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetailsDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="254" selection-end="254" vertical-scroll-proportion="0.37777779">
+        <state line="12" column="13" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#327#333#0" expanded="true" />
@@ -970,16 +1001,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/aquaElementLocators/PrintPrickOrders.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="31" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0">
+        <state line="28" column="51" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -988,17 +1012,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="64" selection-start="958" selection-end="958" vertical-scroll-proportion="0.0">
+        <state line="18" column="34" selection-start="440" selection-end="440" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/util/AutoStringUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="38" selection-start="356" selection-end="356" vertical-scroll-proportion="0.43122676">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="92" column="4" selection-start="3588" selection-end="3588" vertical-scroll-proportion="0.9337232">
+          <folding />
         </state>
       </provider>
     </entry>

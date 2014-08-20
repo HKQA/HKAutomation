@@ -16,7 +16,7 @@ import java.sql.SQLException;
  * Time: 11:54 PM
  */
 public class BrightDetails {
-    public static ForeignSiCliDTO ForeignSiCli(String shippingOrderId) {
+    public static ForeignSiCliDTO ForeignSiCli() {
         SoDetailsDTO soDetailsdto = SoDetails.Sodetails();
 
         String query = "select s.base_order_id,c.id as cart_line_item_id,f.foreign_barcode,f.foreign_base_order_id,f.foreign_shipping_order_id,f.foreign_shipping_order_gateway_id \n" +

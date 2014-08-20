@@ -4,9 +4,11 @@ package com.hk.orderCheckout;
 import com.hk.aquaElementLocators.LoginPageAdmin;
 import com.hk.aquaElementLocators.PrintPrickOrders;
 import com.hk.brightElementLocators.CheckoutOrders;
+import com.hk.orderCheckoutDto.BrightDetails;
 import com.hk.orderCheckoutDto.ForeignSiCliDTO;
 import com.hk.commonProperties.SharedProperties;
 
+import com.hk.orderCheckoutDto.SoDetails;
 import com.hk.orderCheckoutDto.SoDetailsDTO;
 import com.hk.property.PropertyHelper;
 import org.testng.annotations.BeforeClass;
@@ -30,9 +32,9 @@ public class variantCheckout /*extends ExistingOnlineOrder*/{
     LoginPageAdmin loginpage=new LoginPageAdmin();
     PrintPrickOrders printprick = new PrintPrickOrders();
     CheckoutOrders checkoutorders = new CheckoutOrders();
-    ForeignSiCliDTO foreignSiCliDTO = new ForeignSiCliDTO();
-    SoDetailsDTO soDetailsdto = new SoDetailsDTO();
-SharedProperties sharedproperties = new SharedProperties();
+    SharedProperties sharedproperties = new SharedProperties();
+
+
 
     @Parameters({"AdminBaseURL", "Browser"})
     @BeforeClass
@@ -72,12 +74,13 @@ SharedProperties sharedproperties = new SharedProperties();
         SharedProperties.Click(loginpage.getLoginbtn(), SharedProperties.driver);
 
         //Select WareHouse according to your order from database or with text
-        for(Long shippingOrderId: soDetailsdto.getShippingOrderIdList()){
+        for(Long shippingOrderId: SoDetails.Sodetails().getShippingOrderIdList()){
 
         SharedProperties.clickWithCss(printprick.getPrintPrickLink(), SharedProperties.driver);
         SharedProperties.Click(printprick.getOrderFilters(), SharedProperties.driver);
         Thread.sleep(2000);
         SharedProperties.sendKeys(printprick.getSoGatewayOrderIdTxt(),shippingOrderId.toString(), SharedProperties.driver);
+
         SharedProperties.Click(printprick.getBoGatewaySearchBtn(), SharedProperties.driver);
         Thread.sleep(3000);
         SharedProperties.Class(printprick.getCheckboxBo(), SharedProperties.driver);
@@ -94,9 +97,11 @@ SharedProperties sharedproperties = new SharedProperties();
         SharedProperties.driver.navigate().to(PropertyHelper.readProperty("brightUrl"));
 
         //check for warehouse first
+            for(String foreignSiCli:BrightDetails.ForeignSiCli().getForeignSoGatewayIdList())  {
         SharedProperties.Click(checkoutorders.getCheckoutOrder(),SharedProperties.driver);
+        SharedProperties.sendKeys(checkoutorders.getCheckoutOrderTxt(),foreignSiCli,SharedProperties.driver);
 
-
+            }
 
 
         //find Foreign Booking status BO with queries
