@@ -3,8 +3,13 @@ package com.hk.orderCheckout;
 
 import com.hk.aquaElementLocators.LoginPageAdmin;
 import com.hk.aquaElementLocators.PrintPrickOrders;
+import com.hk.brightElementLocators.CheckoutOrders;
+import com.hk.com.hk.dto.BrightDetails;
+import com.hk.com.hk.dto.ForeignSiCliDTO;
 import com.hk.commonProperties.SharedProperties;
 
+import com.hk.jdbc.OrderDetailsDTO;
+import com.hk.jdbc.OrderDetailsReturn;
 import com.hk.property.PropertyHelper;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -33,6 +38,9 @@ public class variantCheckout /*extends ExistingOnlineOrder*/{
 
     LoginPageAdmin loginpage=new LoginPageAdmin();
     PrintPrickOrders printprick = new PrintPrickOrders();
+    CheckoutOrders checkoutorders = new CheckoutOrders();
+    ForeignSiCliDTO foreignSiCliDTO = new ForeignSiCliDTO();
+
     SharedProperties sharedproperties = new SharedProperties();
 
     @Parameters({"AdminBaseURL", "Browser"})
@@ -93,9 +101,13 @@ public class variantCheckout /*extends ExistingOnlineOrder*/{
         Thread.sleep(4000);
         SharedProperties.driver.navigate().to(PropertyHelper.readProperty("brightUrl"));
 
+        //check for warehouse first
+        SharedProperties.Click(checkoutorders.getCheckoutOrder(),SharedProperties.driver);
+
+        SharedProperties.sendKeys(checkoutorders.getCheckoutOrderTxt(),foreignSiCliDTO.setForeignSoGatewayIdList(),SharedProperties.driver);
+
+
         //find Foreign Booking status BO with queries
-
-
         //find SO of that BO
         //get to checkout order
         //Enter SO of Bright
