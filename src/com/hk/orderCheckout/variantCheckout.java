@@ -3,6 +3,7 @@ package com.hk.orderCheckout;
 
 import com.hk.aquaElementLocators.LoginPageAdmin;
 import com.hk.aquaElementLocators.PrintPrickOrders;
+import com.hk.brightElementLocators.BrightHome;
 import com.hk.brightElementLocators.CheckoutOrders;
 import com.hk.orderCheckoutDto.BrightDetails;
 import com.hk.orderCheckoutDto.ForeignSiCliDTO;
@@ -33,6 +34,7 @@ public class variantCheckout /*extends ExistingOnlineOrder*/{
     PrintPrickOrders printprick = new PrintPrickOrders();
     CheckoutOrders checkoutorders = new CheckoutOrders();
     SharedProperties sharedproperties = new SharedProperties();
+    BrightHome brighthome = new BrightHome();
 
 
 
@@ -79,7 +81,7 @@ public class variantCheckout /*extends ExistingOnlineOrder*/{
         SharedProperties.clickWithCss(printprick.getPrintPrickLink(), SharedProperties.driver);
         SharedProperties.Click(printprick.getOrderFilters(), SharedProperties.driver);
         Thread.sleep(2000);
-        SharedProperties.sendKeys(printprick.getSoGatewayOrderIdTxt(),shippingOrderId.toString(), SharedProperties.driver);
+        SharedProperties.sendKeys(printprick.getSoGatewayOrderIdTxt(),"2326372-S47809", SharedProperties.driver);
 
         SharedProperties.Click(printprick.getBoGatewaySearchBtn(), SharedProperties.driver);
         Thread.sleep(3000);
@@ -95,7 +97,9 @@ public class variantCheckout /*extends ExistingOnlineOrder*/{
         SharedProperties.Click(printprick.getJobDoneClearQueBtn(),SharedProperties.driver);
         Thread.sleep(4000);
         SharedProperties.driver.navigate().to(PropertyHelper.readProperty("brightUrl"));
-
+        SharedProperties.sendKeys(loginpage.getUserName(), "saurabh.nagpal@healthkart.com", SharedProperties.driver);
+        SharedProperties.sendKeys(brighthome.getPassWd(), "abcde12", SharedProperties.driver);
+        SharedProperties.Click(brighthome.getLoginBtn(),SharedProperties.driver);
         //check for warehouse first
             for(String foreignSiCli:BrightDetails.ForeignSiCli().getForeignSoGatewayIdList())  {
         SharedProperties.Click(checkoutorders.getCheckoutOrder(),SharedProperties.driver);
