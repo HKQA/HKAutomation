@@ -76,18 +76,20 @@ public class variantCheckout /*extends ExistingOnlineOrder*/{
         SharedProperties.Click(loginpage.getLoginbtn(), SharedProperties.driver);
 
         //Select WareHouse according to your order from database or with text
-        for(Long shippingOrderId: SoDetails.Sodetails().getShippingOrderIdList()){
+        for(String shippingOrderId: SoDetails.Sodetails().getShippingOrderIdList()){
 
         SharedProperties.clickWithCss(printprick.getPrintPrickLink(), SharedProperties.driver);
         SharedProperties.Click(printprick.getOrderFilters(), SharedProperties.driver);
         Thread.sleep(2000);
-        SharedProperties.sendKeys(printprick.getSoGatewayOrderIdTxt(),"2326372-S47809", SharedProperties.driver);
+        SharedProperties.sendKeys(printprick.getSoGatewayOrderIdTxt(),shippingOrderId, SharedProperties.driver);
 
         SharedProperties.Click(printprick.getBoGatewaySearchBtn(), SharedProperties.driver);
         Thread.sleep(3000);
         SharedProperties.Class(printprick.getCheckboxBo(), SharedProperties.driver);
         SharedProperties.Click(printprick.getBatchPrintBtn(), SharedProperties.driver);
         Thread.sleep(5000);
+
+
 
         sharedproperties.pressEnterSafe();
         Thread.sleep(3000);
@@ -96,19 +98,27 @@ public class variantCheckout /*extends ExistingOnlineOrder*/{
         Thread.sleep(2000);
         SharedProperties.Click(printprick.getJobDoneClearQueBtn(),SharedProperties.driver);
         Thread.sleep(4000);
-        SharedProperties.driver.navigate().to(PropertyHelper.readProperty("brightUrl"));
-        SharedProperties.sendKeys(loginpage.getUserName(), "saurabh.nagpal@healthkart.com", SharedProperties.driver);
-        SharedProperties.sendKeys(brighthome.getPassWd(), "abcde12", SharedProperties.driver);
-        SharedProperties.Click(brighthome.getLoginBtn(),SharedProperties.driver);
+
         //check for warehouse first
             for(String foreignSiCli:BrightDetails.ForeignSiCli().getForeignSoGatewayIdList())  {
+                SharedProperties.driver.navigate().to(PropertyHelper.readProperty("brightUrl"));
+                SharedProperties.sendKeys(loginpage.getUserName(), "saurabh.nagpal@healthkart.com", SharedProperties.driver);
+                SharedProperties.sendKeys(brighthome.getPassWd(), "abcde12", SharedProperties.driver);
+                SharedProperties.Click(brighthome.getLoginBtn(),SharedProperties.driver);
         SharedProperties.Click(checkoutorders.getCheckoutOrder(),SharedProperties.driver);
         SharedProperties.sendKeys(checkoutorders.getCheckoutOrderTxt(),foreignSiCli,SharedProperties.driver);
 
+                for(String barcode:BrightDetails.ForeignSiCli().getForeignBarcodeList()){
+        SharedProperties.sendKeys(checkoutorders.getCheckoutOrderBar(),barcode,SharedProperties.driver);
+        //Press Enter
+                }
             }
 
+            SharedProperties.driver.navigate().to(PropertyHelper.readProperty("adminUrl"));
 
-        //find Foreign Booking status BO with queries
+
+            //find Foreign Booking status BO with qu
+        // eries
         //find SO of that BO
         //get to checkout order
         //Enter SO of Bright

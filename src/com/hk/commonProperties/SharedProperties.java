@@ -83,30 +83,6 @@ public class SharedProperties {
     }
 
     public  void pressEnterSafe() throws InterruptedException, IOException, Exception{
-        /*Set<String> windowId = SharedProperties.driver.getWindowHandles();    // get  window id of current window
-        Iterator<String> itererator = windowId.iterator();
-
-        String mainWinID = itererator.next();
-        String  newAdwinID = itererator.next();
-
-        SharedProperties.driver.switchTo().window(newAdwinID);
-        System.out.println(SharedProperties.driver.findElement(By.xpath("*//*//**//*[@id=\"print-header\"]/div/button[2]")));
-        Thread.sleep(3000);
-        SharedProperties.driver.close();
-
-        SharedProperties.driver.switchTo().window(mainWinID);
-        System.out.println(SharedProperties.driver.getTitle());
-        Thread.sleep(2000);*/
-        /*Alert alert = SharedProperties.driver.switchTo().alert();
-        //alert is present
-        System.out.println(SharedProperties.driver.findElement(By.xpath("*//*//**//*[@id=\"print-header\"]/div/button[2]")));
-        alert.accept();*/
-
-       /* windowids = driver.getWindowHandles();
-        iter= windowids.iterator();
-        String mainWindowId=iter.next();
-        String popupWindowId=iter.next();
-        driver.switchTo().window(popupwindowid);*/
 
         Robot robot = new Robot() ;
 

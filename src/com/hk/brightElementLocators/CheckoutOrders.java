@@ -14,6 +14,7 @@ public class CheckoutOrders {
     private String checkoutOrderBtn= "//*[@id=\"invBarcodeCheckinForm\"]/input[2]";
     private String checkoutOrderBar="//*[@id=\"upc\"]";
 
+
     public String getCheckoutOrderBar() {
         return checkoutOrderBar;
     }

@@ -11,13 +11,13 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class SoDetailsDTO {
-    private List<Long> shippingOrderIdList = new ArrayList<Long>();
+    private List<String> shippingOrderIdList = new ArrayList<String>();
 
-    public List<Long> getShippingOrderIdList() {
+    public List<String> getShippingOrderIdList() {
         return shippingOrderIdList;
     }
 
-    public void setShippingOrderIdList(List<Long> shippingOrderIdList) {
+    public void setShippingOrderIdList(List<String> shippingOrderIdList) {
         this.shippingOrderIdList = shippingOrderIdList;
     }
 }
