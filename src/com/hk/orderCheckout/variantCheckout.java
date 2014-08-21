@@ -1,17 +1,16 @@
 package com.hk.orderCheckout;
 
 
-import com.hk.aquaElementLocators.LoginPageAdmin;
-import com.hk.aquaElementLocators.PrintPrickOrders;
+import com.hk.aquaElementLocators.*;
 import com.hk.brightElementLocators.BrightHome;
 import com.hk.brightElementLocators.CheckoutOrders;
 import com.hk.orderCheckoutDto.BrightDetails;
-import com.hk.orderCheckoutDto.ForeignSiCliDTO;
 import com.hk.commonProperties.SharedProperties;
 
 import com.hk.orderCheckoutDto.SoDetails;
-import com.hk.orderCheckoutDto.SoDetailsDTO;
 import com.hk.property.PropertyHelper;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -35,7 +34,9 @@ public class variantCheckout /*extends ExistingOnlineOrder*/{
     CheckoutOrders checkoutorders = new CheckoutOrders();
     SharedProperties sharedproperties = new SharedProperties();
     BrightHome brighthome = new BrightHome();
-
+    CreateUpdateShipment createupdateshipment = new CreateUpdateShipment();
+    ShipmentAwaitingQueue shipmentawaitingueue = new ShipmentAwaitingQueue();
+    DeliveryAwaitingQueue deliveryawaitingqueue = new DeliveryAwaitingQueue();
 
 
     @Parameters({"AdminBaseURL", "Browser"})
@@ -115,13 +116,28 @@ public class variantCheckout /*extends ExistingOnlineOrder*/{
             }
 
             SharedProperties.driver.navigate().to(PropertyHelper.readProperty("adminUrl"));
+            SharedProperties.Click(createupdateshipment.getCreateUpdateShipmentLink(), SharedProperties.driver);
+            SharedProperties.sendKeys(createupdateshipment.getSoGatewayIdTxt(),shippingOrderId,SharedProperties.driver);
+            SharedProperties.Click(createupdateshipment.getSearchBtn(),SharedProperties.driver);
+            new Select(SharedProperties.driver.findElement(By.xpath(""))).selectByVisibleText("Dummy");
+            new Select(SharedProperties.driver.findElement(By.xpath(""))).selectByVisibleText("Dummy");
+            new Select(SharedProperties.driver.findElement(By.xpath(""))).selectByVisibleText("Dummy");
 
 
-            //find Foreign Booking status BO with qu
-        // eries
-        //find SO of that BO
-        //get to checkout order
-        //Enter SO of Bright
+            SharedProperties.Click(shipmentawaitingueue.getShipmentAwaitingQueueLink(),SharedProperties.driver);
+            SharedProperties.sendKeys(shipmentawaitingueue.getGatewayId(),shippingOrderId,SharedProperties.driver);
+            SharedProperties.Click(shipmentawaitingueue.getSearchBtn(),SharedProperties.driver);
+            SharedProperties.Class(shipmentawaitingueue.getCheckBox(), SharedProperties.driver);
+            SharedProperties.Click(shipmentawaitingueue.getMarkedOrdersAsShipped(),SharedProperties.driver);
+
+            SharedProperties.Click(deliveryawaitingqueue.getDeliveryAwaitingQueueLink(),SharedProperties.driver);
+            SharedProperties.sendKeys(deliveryawaitingqueue.getGatewayOrderIdTxt(),shippingOrderId,SharedProperties.driver);
+            SharedProperties.Click(deliveryawaitingqueue.getSearchBtn(),SharedProperties.driver);
+            SharedProperties.Class(deliveryawaitingqueue.getCheckBox(),SharedProperties.driver);
+            SharedProperties.Click(deliveryawaitingqueue.getMarkOrdersAsDelivered(),SharedProperties.driver);
+
+
+
 
 
 

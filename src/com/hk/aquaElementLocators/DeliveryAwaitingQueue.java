@@ -12,6 +12,11 @@ public class DeliveryAwaitingQueue {
     private String searchBtn="/html/body/div/div[2]/fieldset/form/ul/div/li[9]/div/input";
     private String checkBox="shippingOrderDetailCheckbox";
     private String markOrdersAsDelivered="//*[@id=\"markShippingOrdersAsDelivered\"]";
+    private String deliveryAwaitingQueueLink="/html/body/div/div[2]/div[2]/h3[6]/a";
+
+    public String getDeliveryAwaitingQueueLink() {
+        return deliveryAwaitingQueueLink;
+    }
 
     public String getGatewayOrderIdTxt() {
         return gatewayOrderIdTxt;

@@ -7,9 +7,10 @@ package com.hk.aquaElementLocators;
  * Time: 6:43 PM
  * To change this template use File | Settings | File Templates.
  */
-public class CreateUpdateShipmentLink {
+public class CreateUpdateShipment {
 
     private String createUpdateShipmentLink="/html/body/div/div[2]/div[2]/h3[4]/a";
+    private String searchBtn="//*[@id=\"search\"]";
     private String soGatewayIdTxt="//*[@id=\"gatewayOrderId\"]";
     private String boxSizeDropDown="//*[@id=\"boxSize\"]";
     private String packerNameDropDown="//*[@id=\"packer\"]";
@@ -38,5 +39,8 @@ public class CreateUpdateShipmentLink {
 
     public String getSaveCreateUpdateShipmentBtn() {
         return saveCreateUpdateShipmentBtn;
+    }
+    public String getSearchBtn() {
+        return searchBtn;
     }
 }
