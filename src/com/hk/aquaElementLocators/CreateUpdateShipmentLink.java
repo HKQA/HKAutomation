@@ -9,7 +9,7 @@ package com.hk.aquaElementLocators;
  */
 public class CreateUpdateShipmentLink {
 
-    private String createUpdateShipmentLink="";
+    private String createUpdateShipmentLink="/html/body/div/div[2]/div[2]/h3[4]/a";
     private String soGatewayIdTxt="//*[@id=\"gatewayOrderId\"]";
     private String boxSizeDropDown="//*[@id=\"boxSize\"]";
     private String packerNameDropDown="//*[@id=\"packer\"]";
