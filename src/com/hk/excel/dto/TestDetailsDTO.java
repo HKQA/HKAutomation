@@ -12,7 +12,7 @@ import java.util.List;
 public class TestDetailsDTO {
 
     private List<Long> variantIdList = new ArrayList<Long>(100);
-    private String loginList;
+    private static String loginList;
     private String signUpList;
     private String PasswordList;
 
@@ -24,7 +24,7 @@ public class TestDetailsDTO {
         this.variantIdList = variantIdList;
     }
 
-    public String getLoginList() {
+    public static String getLoginList() {
         return loginList;
     }
 

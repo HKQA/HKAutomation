@@ -1,6 +1,8 @@
 package com.hk.reportAndMailGenerator;// File Name SendFileEmail.java
 
 
+import com.hk.excel.TestDetailsExcelService;
+import com.hk.excel.dto.TestDetailsDTO;
 import org.apache.commons.lang3.StringUtils;
 
 import javax.activation.DataHandler;
@@ -18,8 +20,7 @@ import java.util.Properties;
 
 public class SendMail {
 
-
-    private static String toaddress = "nitin.kukna@healthkart.com";
+    private static String toaddress = TestDetailsDTO.getLoginList();
     private static String fromaddress = "nitin.kukna@gmail.com";
     private static String hostname = "smtp.gmail.com";
     private static String password = "Nk$232017";
