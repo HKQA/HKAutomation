@@ -87,9 +87,9 @@ public class variantCheckout /*extends ExistingOnlineOrder*/ {
             SharedProperties.sendKeys(printprick.getSoGatewayOrderIdTxt(), shippingOrderId, SharedProperties.driver);
             SharedProperties.Click(printprick.getBoGatewaySearchBtn(), SharedProperties.driver);
             Thread.sleep(3000);
-            String SoId = SharedProperties.driver.findElement(By.xpath("//*[@id=\"shippingOrderDetail-2313803\"]/div[5]/strong")).getText();
+            /*String SoId = SharedProperties.driver.findElement(By.xpath("/*//*[@id=\"shippingOrderDetail-2313803\"]/div[5]/strong")).getText();
             Thread.sleep(3000);
-            SharedProperties.Class(printprick.getCheckboxBo(), SharedProperties.driver);
+            */SharedProperties.Class(printprick.getCheckboxBo(), SharedProperties.driver);
             SharedProperties.Click(printprick.getBatchPrintBtn(), SharedProperties.driver);
             Thread.sleep(5000);
             sharedproperties.pressEnterSafe();
@@ -102,17 +102,17 @@ public class variantCheckout /*extends ExistingOnlineOrder*/ {
 
             System.out.print("SO again: - " + SoDetails.soDetailsdto.getShippingOrderIdList());
             //check for warehouse first
-            for (String foreignSiCli : BrightDetails.ForeignSiCli(SoId).getForeignSoGatewayIdList()) {
+            for (String foreignSiCli : BrightDetails.ForeignSiCli().getForeignSoGatewayIdList()) {
 
                 SharedProperties.driver.navigate().to(PropertyHelper.readProperty("brightUrl"));
 
                 SharedProperties.sendKeys(loginpage.getUserName(), "nitin.kukna@healthkart.com", SharedProperties.driver);
-                SharedProperties.sendKeys(brighthome.getPassWd(), "23031988", SharedProperties.driver);
+                SharedProperties.sendKeys(loginpage.getPassword(), "23031988", SharedProperties.driver);
                 SharedProperties.Click(brighthome.getLoginBtn(), SharedProperties.driver);
                 SharedProperties.Click(checkoutorders.getCheckoutOrder(), SharedProperties.driver);
                 SharedProperties.sendKeys(checkoutorders.getCheckoutOrderTxt(), foreignSiCli, SharedProperties.driver);
 
-                for (String barcode : BrightDetails.ForeignSiCli(SoId).getForeignBarcodeList()) {
+                for (String barcode : BrightDetails.ForeignSiCli().getForeignBarcodeList()) {
                     System.out.print("Using Barcode : " + barcode);
                     SharedProperties.sendKeys(checkoutorders.getCheckoutOrderBar(), barcode, SharedProperties.driver);
                     //Press Enter

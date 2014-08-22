@@ -26,4 +26,14 @@ public class AutoStringUtils {
 
         return str.substring(0, str.length() - 1);
     }
+
+    public static String getListAsString(List<String> list, char separator, char enclosingChar) {
+        String str = "";
+
+        for (Object o : list) {
+            str += enclosingChar + o.toString() + enclosingChar + separator;
+        }
+
+        return str.substring(0, str.length() - 1);
+    }
 }
