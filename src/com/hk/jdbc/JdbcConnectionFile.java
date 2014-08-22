@@ -19,14 +19,11 @@ public class JdbcConnectionFile {// JDBC driver name and database URL
         Statement stmt = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("Connecting to database...");
-
             String dbUrl = PropertyHelper.readProperty("DB_IP") + enumDB.getDbName();
             conn = DriverManager.getConnection(dbUrl, PropertyHelper.readProperty("USER"), PropertyHelper.readProperty("PASS"));
 //            conn = DriverManager.getConnection(PropertyHelper.readProperty("DB_URL"), PropertyHelper.readProperty("USER"), PropertyHelper.readProperty("PASS"));
 
-            System.out.println("Creating statement...");
-            stmt = conn.createStatement();
+           stmt = conn.createStatement();
 
             ResultSet rs = stmt.executeQuery(inputSql);
             return extract.extract(rs);

@@ -79,6 +79,7 @@ public class variantCheckout /*extends ExistingOnlineOrder*/{
         //Select WareHouse according to your order from database or with text
         for(String shippingOrderId: SoDetails.Sodetails().getShippingOrderIdList()){
 
+        System.out.print("using : " +shippingOrderId);
         SharedProperties.clickWithCss(printprick.getPrintPrickLink(), SharedProperties.driver);
         SharedProperties.Click(printprick.getOrderFilters(), SharedProperties.driver);
         Thread.sleep(2000);
@@ -89,9 +90,6 @@ public class variantCheckout /*extends ExistingOnlineOrder*/{
         SharedProperties.Class(printprick.getCheckboxBo(), SharedProperties.driver);
         SharedProperties.Click(printprick.getBatchPrintBtn(), SharedProperties.driver);
         Thread.sleep(5000);
-
-
-
         sharedproperties.pressEnterSafe();
         Thread.sleep(3000);
 
@@ -109,7 +107,9 @@ public class variantCheckout /*extends ExistingOnlineOrder*/{
         SharedProperties.Click(checkoutorders.getCheckoutOrder(),SharedProperties.driver);
         SharedProperties.sendKeys(checkoutorders.getCheckoutOrderTxt(),foreignSiCli,SharedProperties.driver);
 
+                System.out.print("using : " +shippingOrderId);
                 for(String barcode:BrightDetails.ForeignSiCli().getForeignBarcodeList()){
+                    System.out.print("Using Barcode : " +barcode);
         SharedProperties.sendKeys(checkoutorders.getCheckoutOrderBar(),barcode,SharedProperties.driver);
         //Press Enter
                 }
@@ -135,12 +135,6 @@ public class variantCheckout /*extends ExistingOnlineOrder*/{
             SharedProperties.Click(deliveryawaitingqueue.getSearchBtn(),SharedProperties.driver);
             SharedProperties.Class(deliveryawaitingqueue.getCheckBox(),SharedProperties.driver);
             SharedProperties.Click(deliveryawaitingqueue.getMarkOrdersAsDelivered(),SharedProperties.driver);
-
-
-
-
-
-
 
 
 
