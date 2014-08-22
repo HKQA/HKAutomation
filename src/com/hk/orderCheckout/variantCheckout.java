@@ -58,7 +58,8 @@ public class variantCheckout /*extends ExistingOnlineOrder*/{
         List<String> finalObjectString = new ArrayList<String>();
 
         try {
-            finalObjectString.addAll(readexcel.mainReadFromExcelIterator(PropertyHelper.readProperty("LoginExcel")));
+            finalObjectString.addAll(readexcel.mainReadFromExcelIterator(PropertyH
+            elper.readProperty("LoginExcel")));
             finalObjectString.addAll(readexcel.mainReadFromExcelIterator(PropertyHelper.readProperty("productIdExcel")));
         } catch (FileNotFoundException fex) {
             System.out.println(fex.getMessage());
@@ -99,11 +100,14 @@ public class variantCheckout /*extends ExistingOnlineOrder*/{
         Thread.sleep(2000);
         SharedProperties.Click(printprick.getJobDoneClearQueBtn(),SharedProperties.driver);
         Thread.sleep(4000);
-            SoDetails.soDetailsdto.getShippingOrderIdList();
+
+
+            System.out.print("SO again: - " +SoDetails.soDetailsdto.getShippingOrderIdList());
         //check for warehouse first
-            for(String foreignSiCli:BrightDetails.ForeignSiCli().getForeignSoGatewayIdList())  {
+            for(String foreignSiCli:BrightDetails.foreignSiCliDTO.getForeignBarcodeList()) {
 
                 SharedProperties.driver.navigate().to(PropertyHelper.readProperty("brightUrl"));
+
                 SharedProperties.sendKeys(loginpage.getUserName(), "saurabh.nagpal@healthkart.com", SharedProperties.driver);
                 SharedProperties.sendKeys(brighthome.getPassWd(), "abcde12", SharedProperties.driver);
                 SharedProperties.Click(brighthome.getLoginBtn(),SharedProperties.driver);
