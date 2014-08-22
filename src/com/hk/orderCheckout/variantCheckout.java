@@ -8,6 +8,7 @@ import com.hk.orderCheckoutDto.BrightDetails;
 import com.hk.commonProperties.SharedProperties;
 
 import com.hk.orderCheckoutDto.SoDetails;
+import com.hk.orderCheckoutDto.SoDetailsDTO;
 import com.hk.property.PropertyHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
@@ -79,6 +80,7 @@ public class variantCheckout /*extends ExistingOnlineOrder*/{
         //Select WareHouse according to your order from database or with text
         for(String shippingOrderId: SoDetails.Sodetails().getShippingOrderIdList()){
 
+
         System.out.print("using : " +shippingOrderId);
         SharedProperties.clickWithCss(printprick.getPrintPrickLink(), SharedProperties.driver);
         SharedProperties.Click(printprick.getOrderFilters(), SharedProperties.driver);
@@ -97,9 +99,10 @@ public class variantCheckout /*extends ExistingOnlineOrder*/{
         Thread.sleep(2000);
         SharedProperties.Click(printprick.getJobDoneClearQueBtn(),SharedProperties.driver);
         Thread.sleep(4000);
-
+            SoDetails.soDetailsdto.getShippingOrderIdList();
         //check for warehouse first
             for(String foreignSiCli:BrightDetails.ForeignSiCli().getForeignSoGatewayIdList())  {
+
                 SharedProperties.driver.navigate().to(PropertyHelper.readProperty("brightUrl"));
                 SharedProperties.sendKeys(loginpage.getUserName(), "saurabh.nagpal@healthkart.com", SharedProperties.driver);
                 SharedProperties.sendKeys(brighthome.getPassWd(), "abcde12", SharedProperties.driver);

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c26b27e7-3829-4ab4-9fbd-06b12c07466d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java" afterPath="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/jdbc/JdbcConnectionFile.java" afterPath="$PROJECT_DIR$/src/com/hk/jdbc/JdbcConnectionFile.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java" afterPath="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java" afterPath="$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java" />
     </list>
@@ -11,26 +10,27 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408515446301" ignored="false" />
     <file path="/SharedProperties.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408215120916" ignored="false" />
-    <file path="/variantCheckout.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408697454112" ignored="false" />
+    <file path="/variantCheckout.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408704367794" ignored="false" />
     <file path="/url.properties" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408626737538" ignored="false" />
     <file path="/OrderDetailsDTO.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408295574457" ignored="false" />
     <file path="/OrderDetailsReturn.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408443099311" ignored="false" />
     <file path="/ForeignSiCli.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408296641257" ignored="false" />
-    <file path="/BrightDetails.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408697356148" ignored="false" />
+    <file path="/BrightDetails.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408704470456" ignored="false" />
     <file path="/JdbcConnectionFile.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408443061586" ignored="false" />
     <file path="/EnumDB.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408446812119" ignored="false" />
     <file path="/ForeignSiCliDTO.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408453970326" ignored="false" />
-    <file path="/SoDetails.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408625959987" ignored="false" />
+    <file path="/SoDetails.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408704278718" ignored="false" />
     <file path="/PrintPrickOrders.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408528682384" ignored="false" />
     <file path="/AutoStringUtils.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408540183277" ignored="false" />
     <file path="/BrightHome.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408619453168" ignored="false" />
-    <file path="/fragment.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408692316983" ignored="false" />
+    <file path="/fragment.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408698072144" ignored="false" />
     <file path="/SoDetailsDTO.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408625882627" ignored="false" />
     <file path="/CheckoutOrders.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408626470408" ignored="false" />
     <file path="/WareHouseLocators.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408630608238" ignored="false" />
     <file path="/ShipmentAwaitingQueue.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408630999231" ignored="false" />
     <file path="/DeliveryAwaitingQueue.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408631306729" ignored="false" />
     <file path="/CreateUpdateShipment.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408630598804" ignored="false" />
+    <file path="/a.dummy" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408703071053" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,37 +101,7 @@
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java" line="22" class="com.hk.orderCheckoutDto.BrightDetails" package="com.hk.orderCheckoutDto">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java" line="41" class="com.hk.orderCheckoutDto.BrightDetails$1" package="com.hk.orderCheckoutDto">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java" line="20" class="com.hk.orderCheckoutDto.BrightDetails" package="com.hk.orderCheckoutDto">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java" line="101" class="com.hk.orderCheckout.variantCheckout" package="com.hk.orderCheckout">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -159,7 +129,7 @@
       <file leaf-file-name="variantCheckout.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="57" selection-start="5237" selection-end="5237" vertical-scroll-proportion="0.0">
+            <state line="108" column="12" selection-start="4686" selection-end="4686" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -177,9 +147,21 @@
       <file leaf-file-name="SoDetails.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="100" selection-start="702" selection-end="702" vertical-scroll-proportion="0.0">
+            <state line="21" column="31" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SoDetailsDTO.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetailsDTO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="13" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#329#337#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -188,7 +170,7 @@
       <file leaf-file-name="AutoStringUtils.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/util/AutoStringUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0">
+            <state line="11" column="13" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -199,8 +181,11 @@
       <file leaf-file-name="BrightDetails.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="27" selection-start="457" selection-end="457" vertical-scroll-proportion="0.22392975">
-              <folding />
+            <state line="26" column="92" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.47069597">
+              <folding>
+                <element signature="e#1220#1997#0" expanded="true" />
+                <element signature="e#1978#1979#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -235,18 +220,18 @@
         <option value="$PROJECT_DIR$/src/com/hk/aquaElementLocators/ShipmentAwaitingQueue.java" />
         <option value="$PROJECT_DIR$/src/com/hk/aquaElementLocators/DeliveryAwaitingQueue.java" />
         <option value="$PROJECT_DIR$/src/com/hk/commonProperties/SharedProperties.java" />
-        <option value="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java" />
-        <option value="$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java" />
         <option value="$PROJECT_DIR$/src/com/hk/jdbc/JdbcConnectionFile.java" />
+        <option value="$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java" />
+        <option value="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1358" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1096" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -343,6 +328,32 @@
               <option name="myItemId" value="hk" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Automation_testing_v4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Automation_testing_v4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="property" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -429,6 +440,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="jdbc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Automation_testing_v4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Automation_testing_v4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Automation_testing_v4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Automation_testing_v4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="excel" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -861,15 +912,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50427353" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2189394" sideWeight="0.6947705" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3628602" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5538462" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991454" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21060605" sideWeight="0.2854701" order="2" side_tool="true" content_ui="tabs" />
@@ -883,8 +935,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1670224" sideWeight="0.6371398" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.54962647" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23712121" sideWeight="0.4957265" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.548718" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.63247865" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6649573" order="2" side_tool="false" content_ui="combo" />
@@ -892,7 +944,6 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32649574" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -974,55 +1025,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/libs/testng-6.8.5.jar!/org/testng/SuiteRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="17" selection-start="4256" selection-end="4256" vertical-scroll-proportion="-5.84">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/testng-6.8.5.jar!/org/testng/SuiteRunnerWorker.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="16" selection-start="786" selection-end="786" vertical-scroll-proportion="-6.56">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/testng-6.8.5.jar!/org/testng/TestNG.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="242" column="23" selection-start="11328" selection-end="11328" vertical-scroll-proportion="-6.04">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/testng-6.8.5.jar!/org/testng/remote/RemoteTestNG.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="16" selection-start="1250" selection-end="1250" vertical-scroll-proportion="0.35099337">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/testng-6.8.5.jar!/org/testng/internal/Invoker.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="50" selection-start="8298" selection-end="8298" vertical-scroll-proportion="0.09213052">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/aquaElementLocators/CreateUpdateShipment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="58" selection-start="589" selection-end="608" vertical-scroll-proportion="0.298573">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/jdbc/JdbcConnectionFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="0" selection-start="1538" selection-end="1538" vertical-scroll-proportion="0.9404553">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsReturn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="13" selection-start="263" selection-end="263" vertical-scroll-proportion="0.3046595">
@@ -1061,18 +1063,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java">
+    <entry file="jar://$PROJECT_DIR$/libs/testng-6.8.5.jar!/org/testng/internal/Invoker.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="100" selection-start="702" selection-end="702" vertical-scroll-proportion="0.0">
+        <state line="77" column="50" selection-start="8298" selection-end="8298" vertical-scroll-proportion="-3.96">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/jdbc/JdbcConnectionFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="0" selection-start="1373" selection-end="1373" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_45/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="234" column="12" selection-start="9674" selection-end="9674" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/ForeignSiCliDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="24" selection-start="1001" selection-end="1001" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetailsDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="13" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#329#337#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SignupCodOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="24" selection-start="4518" selection-end="4518" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/excel/ExcelServiceImplOld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="80" selection-start="2900" selection-end="2900" vertical-scroll-proportion="0.2732342">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/util/AutoStringUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/util/AutoStringUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0">
+        <state line="21" column="31" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1081,15 +1135,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="57" selection-start="5237" selection-end="5237" vertical-scroll-proportion="0.0">
+        <state line="108" column="12" selection-start="4686" selection-end="4686" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="27" selection-start="457" selection-end="457" vertical-scroll-proportion="0.22392975">
-          <folding />
+        <state line="26" column="92" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.47069597">
+          <folding>
+            <element signature="e#1220#1997#0" expanded="true" />
+            <element signature="e#1978#1979#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
