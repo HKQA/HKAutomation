@@ -25,12 +25,12 @@ import java.io.IOException;
  * Time: 6:08 PM
  * To change this template use File | Settings | File Templates.
  */
-public class variantCheckout /*extends ExistingOnlineOrder*/{
+public class variantCheckout /*extends ExistingOnlineOrder*/ {
     String AdminBaseURL;
     String browser;
-    private int delay ;
+    private int delay;
 
-    LoginPageAdmin loginpage=new LoginPageAdmin();
+    LoginPageAdmin loginpage = new LoginPageAdmin();
     PrintPrickOrders printprick = new PrintPrickOrders();
     CheckoutOrders checkoutorders = new CheckoutOrders();
     SharedProperties sharedproperties = new SharedProperties();
@@ -51,102 +51,98 @@ public class variantCheckout /*extends ExistingOnlineOrder*/{
     *//*ExcelServiceImplOld readexcel = new ExcelServiceImplOld();*/
 
 
+    /*    @DataProvider(name = "VariantCheckoutData")
+        public List<String> variantCheckoutDataProviderCombined() {
 
-/*    @DataProvider(name = "VariantCheckoutData")
-    public List<String> variantCheckoutDataProviderCombined() {
+            List<String> finalObjectString = new ArrayList<String>();
 
-        List<String> finalObjectString = new ArrayList<String>();
-
-        try {
-            finalObjectString.addAll(readexcel.mainReadFromExcelIterator(PropertyH
-            elper.readProperty("LoginExcel")));
-            finalObjectString.addAll(readexcel.mainReadFromExcelIterator(PropertyHelper.readProperty("productIdExcel")));
-        } catch (FileNotFoundException fex) {
-            System.out.println(fex.getMessage());
-        } catch (IOException ex) {
-            System.out.println(ex.getMessage());
-        }
-        return finalObjectString;
-    }*/
+            try {
+                finalObjectString.addAll(readexcel.mainReadFromExcelIterator(PropertyH
+                elper.readProperty("LoginExcel")));
+                finalObjectString.addAll(readexcel.mainReadFromExcelIterator(PropertyHelper.readProperty("productIdExcel")));
+            } catch (FileNotFoundException fex) {
+                System.out.println(fex.getMessage());
+            } catch (IOException ex) {
+                System.out.println(ex.getMessage());
+            }
+            return finalObjectString;
+        }*/
     /*@Test(dataProvider = "VariantCheckoutData", enabled = true)*/
     @Test(enabled = true)
     public void variantCheckout() throws InterruptedException, IOException, Exception {
 //    EOO.login(1L);
 
-        SharedProperties.openBrowser(AdminBaseURL,browser);
+        SharedProperties.openBrowser(AdminBaseURL, browser);
         SharedProperties.sendKeys(loginpage.getUserName(), "saurabh.nagpal@healthkart.com", SharedProperties.driver);
         SharedProperties.sendKeys(loginpage.getPassword(), "abcde12", SharedProperties.driver);
         SharedProperties.Click(loginpage.getLoginbtn(), SharedProperties.driver);
 
         //Select WareHouse according to your order from database or with text
-        for(String shippingOrderId: SoDetails.Sodetails().getShippingOrderIdList()){
+        for (String shippingOrderId : SoDetails.Sodetails().getShippingOrderIdList()) {
 
 
-        System.out.print("using : " +shippingOrderId);
-        SharedProperties.clickWithCss(printprick.getPrintPrickLink(), SharedProperties.driver);
-        SharedProperties.Click(printprick.getOrderFilters(), SharedProperties.driver);
-        Thread.sleep(2000);
-        SharedProperties.sendKeys(printprick.getSoGatewayOrderIdTxt(),shippingOrderId, SharedProperties.driver);
-
-        SharedProperties.Click(printprick.getBoGatewaySearchBtn(), SharedProperties.driver);
-        Thread.sleep(3000);
-        SharedProperties.Class(printprick.getCheckboxBo(), SharedProperties.driver);
-        SharedProperties.Click(printprick.getBatchPrintBtn(), SharedProperties.driver);
-        Thread.sleep(5000);
-        sharedproperties.pressEnterSafe();
-        Thread.sleep(3000);
-
-        SharedProperties.Class(printprick.getCheckboxBo(), SharedProperties.driver);
-        Thread.sleep(2000);
-        SharedProperties.Click(printprick.getJobDoneClearQueBtn(),SharedProperties.driver);
-        Thread.sleep(4000);
+            SharedProperties.clickWithCss(printprick.getPrintPrickLink(), SharedProperties.driver);
+            SharedProperties.Click(printprick.getOrderFilters(), SharedProperties.driver);
+            Thread.sleep(2000);
+            SharedProperties.sendKeys(printprick.getSoGatewayOrderIdTxt(), shippingOrderId, SharedProperties.driver);
+            SharedProperties.Click(printprick.getBoGatewaySearchBtn(), SharedProperties.driver);
+            Thread.sleep(3000);
+            SharedProperties.Class(printprick.getCheckboxBo(), SharedProperties.driver);
+            SharedProperties.Click(printprick.getBatchPrintBtn(), SharedProperties.driver);
+            Thread.sleep(5000);
+            sharedproperties.pressEnterSafe();
+            Thread.sleep(3000);
+            SharedProperties.Class(printprick.getCheckboxBo(), SharedProperties.driver);
+            Thread.sleep(2000);
+            SharedProperties.Click(printprick.getJobDoneClearQueBtn(), SharedProperties.driver);
+            Thread.sleep(4000);
 
 
-            System.out.print("SO again: - " +SoDetails.soDetailsdto.getShippingOrderIdList());
-        //check for warehouse first
-            for(String foreignSiCli:BrightDetails.foreignSiCliDTO.getForeignBarcodeList()) {
+            System.out.print("SO again: - " + SoDetails.soDetailsdto.getShippingOrderIdList());
+            //check for warehouse first
+            for (String foreignSiCli : BrightDetails.ForeignSiCli().getForeignSoGatewayIdList()) {
 
                 SharedProperties.driver.navigate().to(PropertyHelper.readProperty("brightUrl"));
 
                 SharedProperties.sendKeys(loginpage.getUserName(), "saurabh.nagpal@healthkart.com", SharedProperties.driver);
                 SharedProperties.sendKeys(brighthome.getPassWd(), "abcde12", SharedProperties.driver);
-                SharedProperties.Click(brighthome.getLoginBtn(),SharedProperties.driver);
-        SharedProperties.Click(checkoutorders.getCheckoutOrder(),SharedProperties.driver);
-        SharedProperties.sendKeys(checkoutorders.getCheckoutOrderTxt(),foreignSiCli,SharedProperties.driver);
+                SharedProperties.Click(brighthome.getLoginBtn(), SharedProperties.driver);
+                SharedProperties.Click(checkoutorders.getCheckoutOrder(), SharedProperties.driver);
+                SharedProperties.sendKeys(checkoutorders.getCheckoutOrderTxt(), foreignSiCli, SharedProperties.driver);
 
-                System.out.print("using : " +shippingOrderId);
-                for(String barcode:BrightDetails.ForeignSiCli().getForeignBarcodeList()){
-                    System.out.print("Using Barcode : " +barcode);
-        SharedProperties.sendKeys(checkoutorders.getCheckoutOrderBar(),barcode,SharedProperties.driver);
-        //Press Enter
+                for (String barcode : BrightDetails.foreignSiCliDTO.getForeignBarcodeList()) {
+                    System.out.print("Using Barcode : " + barcode);
+                    SharedProperties.sendKeys(checkoutorders.getCheckoutOrderBar(), barcode, SharedProperties.driver);
+                    //Press Enter
                 }
             }
 
             SharedProperties.driver.navigate().to(PropertyHelper.readProperty("adminUrl"));
+            SharedProperties.sendKeys(loginpage.getUserName(), "saurabh.nagpal@healthkart.com", SharedProperties.driver);
+            SharedProperties.sendKeys(brighthome.getPassWd(), "abcde12", SharedProperties.driver);
             SharedProperties.Click(createupdateshipment.getCreateUpdateShipmentLink(), SharedProperties.driver);
-            SharedProperties.sendKeys(createupdateshipment.getSoGatewayIdTxt(),shippingOrderId,SharedProperties.driver);
-            SharedProperties.Click(createupdateshipment.getSearchBtn(),SharedProperties.driver);
+            SharedProperties.sendKeys(createupdateshipment.getSoGatewayIdTxt(), shippingOrderId, SharedProperties.driver);
+            SharedProperties.Click(createupdateshipment.getSearchBtn(), SharedProperties.driver);
             new Select(SharedProperties.driver.findElement(By.xpath("//*[@id=\"boxSize\"]"))).selectByVisibleText("L");
             new Select(SharedProperties.driver.findElement(By.xpath("//*[@id=\"packer\"]"))).selectByVisibleText("L");
             new Select(SharedProperties.driver.findElement(By.xpath("//*[@id=\"picker\"]"))).selectByVisibleText("10");
-            SharedProperties.clickWithCss(createupdateshipment.getSaveCreateUpdateShipmentBtn(),SharedProperties.driver);
+            SharedProperties.clickWithCss(createupdateshipment.getSaveCreateUpdateShipmentBtn(), SharedProperties.driver);
 
-            SharedProperties.Click(shipmentawaitingueue.getShipmentAwaitingQueueLink(),SharedProperties.driver);
-            SharedProperties.sendKeys(shipmentawaitingueue.getGatewayId(),shippingOrderId,SharedProperties.driver);
-            SharedProperties.Click(shipmentawaitingueue.getSearchBtn(),SharedProperties.driver);
+            SharedProperties.Click(shipmentawaitingueue.getShipmentAwaitingQueueLink(), SharedProperties.driver);
+            SharedProperties.sendKeys(shipmentawaitingueue.getGatewayId(), shippingOrderId, SharedProperties.driver);
+            SharedProperties.Click(shipmentawaitingueue.getSearchBtn(), SharedProperties.driver);
             SharedProperties.Class(shipmentawaitingueue.getCheckBox(), SharedProperties.driver);
-            SharedProperties.Click(shipmentawaitingueue.getMarkedOrdersAsShipped(),SharedProperties.driver);
+            SharedProperties.Click(shipmentawaitingueue.getMarkedOrdersAsShipped(), SharedProperties.driver);
 
-            SharedProperties.Click(deliveryawaitingqueue.getDeliveryAwaitingQueueLink(),SharedProperties.driver);
-            SharedProperties.sendKeys(deliveryawaitingqueue.getGatewayOrderIdTxt(),shippingOrderId,SharedProperties.driver);
-            SharedProperties.Click(deliveryawaitingqueue.getSearchBtn(),SharedProperties.driver);
-            SharedProperties.Class(deliveryawaitingqueue.getCheckBox(),SharedProperties.driver);
-            SharedProperties.Click(deliveryawaitingqueue.getMarkOrdersAsDelivered(),SharedProperties.driver);
-
+            SharedProperties.Click(deliveryawaitingqueue.getDeliveryAwaitingQueueLink(), SharedProperties.driver);
+            SharedProperties.sendKeys(deliveryawaitingqueue.getGatewayOrderIdTxt(), shippingOrderId, SharedProperties.driver);
+            SharedProperties.Click(deliveryawaitingqueue.getSearchBtn(), SharedProperties.driver);
+            SharedProperties.Class(deliveryawaitingqueue.getCheckBox(), SharedProperties.driver);
+            SharedProperties.Click(deliveryawaitingqueue.getMarkOrdersAsDelivered(), SharedProperties.driver);
 
 
         }
     }
 
-    }
+}
 
