@@ -95,16 +95,16 @@ public class SharedProperties {
 
         robot.keyPress(KeyEvent.VK_ENTER) ;
         robot.keyRelease(KeyEvent.VK_ENTER) ;
-        Thread.sleep(2000);
-        robot.delay(delay) ;
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
+        robot.delay(delay) ;
+        Thread.sleep(3000);
         robot.keyPress(KeyEvent.VK_ENTER) ;
         robot.keyRelease(KeyEvent.VK_ENTER) ;
-
-        System.out.print("test");
-
+        robot.delay(delay) ;
 
 
-}
+
+
+    }
 }

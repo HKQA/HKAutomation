@@ -119,10 +119,10 @@ public class variantCheckout /*extends ExistingOnlineOrder*/{
             SharedProperties.Click(createupdateshipment.getCreateUpdateShipmentLink(), SharedProperties.driver);
             SharedProperties.sendKeys(createupdateshipment.getSoGatewayIdTxt(),shippingOrderId,SharedProperties.driver);
             SharedProperties.Click(createupdateshipment.getSearchBtn(),SharedProperties.driver);
-            new Select(SharedProperties.driver.findElement(By.xpath(""))).selectByVisibleText("Dummy");
-            new Select(SharedProperties.driver.findElement(By.xpath(""))).selectByVisibleText("Dummy");
-            new Select(SharedProperties.driver.findElement(By.xpath(""))).selectByVisibleText("Dummy");
-
+            new Select(SharedProperties.driver.findElement(By.xpath("//*[@id=\"boxSize\"]"))).selectByVisibleText("L");
+            new Select(SharedProperties.driver.findElement(By.xpath("//*[@id=\"packer\"]"))).selectByVisibleText("L");
+            new Select(SharedProperties.driver.findElement(By.xpath("//*[@id=\"picker\"]"))).selectByVisibleText("10");
+            SharedProperties.clickWithCss(createupdateshipment.getSaveCreateUpdateShipmentBtn(),SharedProperties.driver);
 
             SharedProperties.Click(shipmentawaitingueue.getShipmentAwaitingQueueLink(),SharedProperties.driver);
             SharedProperties.sendKeys(shipmentawaitingueue.getGatewayId(),shippingOrderId,SharedProperties.driver);

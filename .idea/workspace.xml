@@ -2,17 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c26b27e7-3829-4ab4-9fbd-06b12c07466d" name="Default" comment="">
-      <change type="MOVED" beforePath="C:\selenium\Automation_testing_v4\src\com\hk\aquaElementLocators\CreateUpdateShipmentLink.java" afterPath="$PROJECT_DIR$/src/com/hk/aquaElementLocators/CreateUpdateShipment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/aquaElementLocators/DeliveryAwaitingQueue.java" afterPath="$PROJECT_DIR$/src/com/hk/aquaElementLocators/DeliveryAwaitingQueue.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/aquaElementLocators/ShipmentAwaitingQueue.java" afterPath="$PROJECT_DIR$/src/com/hk/aquaElementLocators/ShipmentAwaitingQueue.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java" afterPath="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/commonProperties/SharedProperties.java" afterPath="$PROJECT_DIR$/src/com/hk/commonProperties/SharedProperties.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java" afterPath="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java" afterPath="$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Automation_testing_v4.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408515446301" ignored="false" />
     <file path="/SharedProperties.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408215120916" ignored="false" />
-    <file path="/variantCheckout.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408631555011" ignored="false" />
+    <file path="/variantCheckout.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408643771978" ignored="false" />
     <file path="/url.properties" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408626737538" ignored="false" />
     <file path="/OrderDetailsDTO.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408295574457" ignored="false" />
     <file path="/OrderDetailsReturn.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408443099311" ignored="false" />
@@ -25,7 +24,7 @@
     <file path="/PrintPrickOrders.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408528682384" ignored="false" />
     <file path="/AutoStringUtils.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408540183277" ignored="false" />
     <file path="/BrightHome.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408619453168" ignored="false" />
-    <file path="/fragment.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408626073964" ignored="false" />
+    <file path="/fragment.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408692316983" ignored="false" />
     <file path="/SoDetailsDTO.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408625882627" ignored="false" />
     <file path="/CheckoutOrders.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408626470408" ignored="false" />
     <file path="/WareHouseLocators.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408630608238" ignored="false" />
@@ -102,51 +101,6 @@
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java" line="79" class="com.hk.orderCheckout.variantCheckout" package="com.hk.orderCheckout">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java" line="84" class="com.hk.orderCheckout.variantCheckout" package="com.hk.orderCheckout">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java" line="103" class="com.hk.orderCheckout.variantCheckout" package="com.hk.orderCheckout">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
       <breakpoint url="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java" line="21" class="com.hk.orderCheckoutDto.BrightDetails" package="com.hk.orderCheckoutDto">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
@@ -162,67 +116,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java" line="33" class="com.hk.orderCheckoutDto.BrightDetails$1" package="com.hk.orderCheckoutDto">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java" line="34" class="com.hk.orderCheckoutDto.BrightDetails$1" package="com.hk.orderCheckoutDto">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java" line="35" class="com.hk.orderCheckoutDto.BrightDetails$1" package="com.hk.orderCheckoutDto">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java" line="36" class="com.hk.orderCheckoutDto.BrightDetails$1" package="com.hk.orderCheckoutDto">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java" line="40" class="com.hk.orderCheckoutDto.BrightDetails$1" package="com.hk.orderCheckoutDto">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java" line="41" class="com.hk.orderCheckoutDto.BrightDetails$1" package="com.hk.orderCheckoutDto">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -250,25 +144,7 @@
       <file leaf-file-name="variantCheckout.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="136" column="107" selection-start="6868" selection-end="6868" vertical-scroll-proportion="0.7516854">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SignupOrderOnline.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SignupOrderOnline.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="12" selection-start="5492" selection-end="5684" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdminHome.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/aquaElementLocators/AdminHome.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="566" selection-end="566" vertical-scroll-proportion="0.0">
+            <state line="123" column="88" selection-start="5807" selection-end="5807" vertical-scroll-proportion="0.51811194">
               <folding />
             </state>
           </provider>
@@ -277,43 +153,7 @@
       <file leaf-file-name="CreateUpdateShipment.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/aquaElementLocators/CreateUpdateShipment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="5" selection-start="1281" selection-end="1281" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShipmentAwaitingQueue.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/aquaElementLocators/ShipmentAwaitingQueue.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="18" selection-start="873" selection-end="873" vertical-scroll-proportion="-19.72">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeliveryAwaitingQueue.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/aquaElementLocators/DeliveryAwaitingQueue.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="747" selection-end="747" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="url.properties" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/url.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="10" selection-start="671" selection-end="671" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PrintPrickOrders.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/aquaElementLocators/PrintPrickOrders.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="39" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
+            <state line="16" column="58" selection-start="589" selection-end="608" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -322,8 +162,30 @@
       <file leaf-file-name="SharedProperties.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/commonProperties/SharedProperties.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="10" selection-start="3268" selection-end="3268" vertical-scroll-proportion="0.0">
+            <state line="103" column="0" selection-start="3672" selection-end="3672" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SoDetails.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="50" selection-start="1282" selection-end="1282" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AutoStringUtils.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hk/util/AutoStringUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="0" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -331,7 +193,7 @@
       <file leaf-file-name="BrightDetails.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="59" selection-start="1408" selection-end="1408" vertical-scroll-proportion="0.0">
+            <state line="28" column="43" selection-start="1055" selection-end="1055" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -359,10 +221,7 @@
         <option value="$PROJECT_DIR$/src/com/hk/util/AutoStringUtils.java" />
         <option value="$PROJECT_DIR$/src/com/hk/brightElementLocators/BrightHome.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetailsDTO.java" />
-        <option value="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java" />
-        <option value="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java" />
         <option value="$PROJECT_DIR$/src/com/hk/brightElementLocators/CheckoutOrders.java" />
-        <option value="$PROJECT_DIR$/src/com/hk/commonProperties/SharedProperties.java" />
         <option value="$PROJECT_DIR$/url.properties" />
         <option value="$PROJECT_DIR$/src/com/hk/aquaElementLocators/WareHouseLocators.java" />
         <option value="$PROJECT_DIR$/src/com/hk/aquaElementLocators/AdminHome.java" />
@@ -370,6 +229,9 @@
         <option value="$PROJECT_DIR$/src/com/hk/aquaElementLocators/CreateUpdateShipment.java" />
         <option value="$PROJECT_DIR$/src/com/hk/aquaElementLocators/ShipmentAwaitingQueue.java" />
         <option value="$PROJECT_DIR$/src/com/hk/aquaElementLocators/DeliveryAwaitingQueue.java" />
+        <option value="$PROJECT_DIR$/src/com/hk/commonProperties/SharedProperties.java" />
+        <option value="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java" />
+        <option value="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java" />
       </list>
     </option>
@@ -979,7 +841,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2189394" sideWeight="0.6947705" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8089648" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3628602" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991454" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21060605" sideWeight="0.2854701" order="2" side_tool="true" content_ui="tabs" />
@@ -993,8 +855,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1670224" sideWeight="0.19103523" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.55202824" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1670224" sideWeight="0.6371398" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.54962647" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.63247865" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6649573" order="2" side_tool="false" content_ui="combo" />
@@ -1084,97 +946,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/libs/testng-6.8.5.jar!/org/testng/TestRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="210" column="17" selection-start="12381" selection-end="12381" vertical-scroll-proportion="-4.68">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/util/AutoStringUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="62" selection-start="598" selection-end="598" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="706" selection-end="706" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/jdbc/JdbcConnectionFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="0" selection-start="1605" selection-end="1605" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/brightElementLocators/CheckoutOrders.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/ForeignSiCliDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="1" selection-start="1453" selection-end="1453" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="59" selection-start="1408" selection-end="1408" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/commonProperties/SharedProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="10" selection-start="3268" selection-end="3268" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/url.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="10" selection-start="671" selection-end="671" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/aquaElementLocators/AdminHome.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="566" selection-end="566" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/aquaElementLocators/PrintPrickOrders.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="39" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SignupOrderOnline.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="120" column="12" selection-start="5492" selection-end="5684" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/aquaElementLocators/CreateUpdateShipment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="5" selection-start="1281" selection-end="1281" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1193,9 +967,97 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/testng-6.8.5.jar!/org/testng/internal/TestMethodWorker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="16" selection-start="1379" selection-end="1379" vertical-scroll-proportion="-1.24">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/testng-6.8.5.jar!/org/testng/TestRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="210" column="17" selection-start="12381" selection-end="12381" vertical-scroll-proportion="-1.24">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/testng-6.8.5.jar!/org/testng/SuiteRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="17" selection-start="4256" selection-end="4256" vertical-scroll-proportion="-5.84">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/testng-6.8.5.jar!/org/testng/SuiteRunnerWorker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="16" selection-start="786" selection-end="786" vertical-scroll-proportion="-6.56">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/testng-6.8.5.jar!/org/testng/TestNG.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="242" column="23" selection-start="11328" selection-end="11328" vertical-scroll-proportion="-6.04">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/testng-6.8.5.jar!/org/testng/remote/RemoteTestNG.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="16" selection-start="1250" selection-end="1250" vertical-scroll-proportion="0.35099337">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/testng-6.8.5.jar!/org/testng/internal/Invoker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="50" selection-start="8298" selection-end="8298" vertical-scroll-proportion="0.09213052">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/commonProperties/SharedProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="0" selection-start="3672" selection-end="3672" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/util/AutoStringUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="43" selection-start="1055" selection-end="1055" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="50" selection-start="1282" selection-end="1282" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/aquaElementLocators/CreateUpdateShipment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="58" selection-start="589" selection-end="608" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="107" selection-start="6868" selection-end="6868" vertical-scroll-proportion="0.7516854">
+        <state line="123" column="88" selection-start="5807" selection-end="5807" vertical-scroll-proportion="0.51811194">
           <folding />
         </state>
       </provider>
