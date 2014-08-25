@@ -11,10 +11,13 @@ import com.hk.orderCheckoutDto.SoDetails;
 import com.hk.orderCheckoutDto.SoDetailsDTO;
 import com.hk.property.PropertyHelper;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import org.openqa.selenium.Keys;
+
 
 import java.io.IOException;
 
@@ -73,8 +76,8 @@ public class variantCheckout /*extends ExistingOnlineOrder*/ {
 //    EOO.login(1L);
 
         SharedProperties.openBrowser(AdminBaseURL, browser);
-        SharedProperties.sendKeys(loginpage.getUserName(), "nitin.kukna@healthkart.com", SharedProperties.driver);
-        SharedProperties.sendKeys(loginpage.getPassword(), "23031988", SharedProperties.driver);
+        SharedProperties.sendKeys(loginpage.getUserName(), "saurabh.nagpal@healthkart.com", SharedProperties.driver);
+        SharedProperties.sendKeys(loginpage.getPassword(), "abcde12", SharedProperties.driver);
         SharedProperties.Click(loginpage.getLoginbtn(), SharedProperties.driver);
 
         //Select WareHouse according to your order from database or with text
@@ -106,24 +109,29 @@ public class variantCheckout /*extends ExistingOnlineOrder*/ {
 
                 SharedProperties.driver.navigate().to(PropertyHelper.readProperty("brightUrl"));
 
-                SharedProperties.sendKeys(loginpage.getUserName(), "nitin.kukna@healthkart.com", SharedProperties.driver);
-                SharedProperties.sendKeys(loginpage.getPassword(), "23031988", SharedProperties.driver);
-                SharedProperties.Click(brighthome.getLoginBtn(), SharedProperties.driver);
-                SharedProperties.Click(checkoutorders.getCheckoutOrder(), SharedProperties.driver);
+                SharedProperties.sendKeys(loginpage.getUserName(),"saurabh.nagpal@healthkart.com", SharedProperties.driver);
+                SharedProperties.sendKeys(brighthome.getPassWd(),"abcde12", SharedProperties.driver);
+                SharedProperties.Click(brighthome.getLoginBtn(),SharedProperties.driver);
+                SharedProperties.clickWithCss(checkoutorders.getCheckoutOrder(), SharedProperties.driver);
                 SharedProperties.sendKeys(checkoutorders.getCheckoutOrderTxt(), foreignSiCli, SharedProperties.driver);
+                SharedProperties.Click(checkoutorders.getCheckoutOrderBtn(),SharedProperties.driver);
+
+
 
                 for (String barcode : BrightDetails.ForeignSiCli().getForeignBarcodeList()) {
                     System.out.print("Using Barcode : " + barcode);
                     SharedProperties.sendKeys(checkoutorders.getCheckoutOrderBar(), barcode, SharedProperties.driver);
-                    //Press Enter
+
                 }
             }
 
             SharedProperties.driver.navigate().to(PropertyHelper.readProperty("adminUrl"));
             SharedProperties.sendKeys(loginpage.getUserName(), "saurabh.nagpal@healthkart.com", SharedProperties.driver);
-            SharedProperties.sendKeys(brighthome.getPassWd(), "abcde12", SharedProperties.driver);
+            SharedProperties.sendKeys(loginpage.getPassword(), "abcde12", SharedProperties.driver);
+            Thread.sleep(3000);
             SharedProperties.Click(createupdateshipment.getCreateUpdateShipmentLink(), SharedProperties.driver);
             SharedProperties.sendKeys(createupdateshipment.getSoGatewayIdTxt(), shippingOrderId, SharedProperties.driver);
+            Thread.sleep(3000);
             SharedProperties.Click(createupdateshipment.getSearchBtn(), SharedProperties.driver);
             new Select(SharedProperties.driver.findElement(By.xpath("//*[@id=\"boxSize\"]"))).selectByVisibleText("L");
             new Select(SharedProperties.driver.findElement(By.xpath("//*[@id=\"packer\"]"))).selectByVisibleText("L");

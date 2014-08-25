@@ -63,6 +63,10 @@ public class SharedProperties {
         driver.findElement(By.xpath(elementXpath)).sendKeys(value);
 
     }
+    public static void sendKeysWithName(String name, String value, WebDriver driver) {
+        driver.findElement(By.name(name)).sendKeys(value);
+
+    }
     public static void Click(String elementXpath, WebDriver driver)  {
         driver.findElement(By.xpath(elementXpath)).click();
 
@@ -79,6 +83,11 @@ public class SharedProperties {
 
     public static void Class(String className,  WebDriver driver)  {
         driver.findElement(By.className(className)).click();
+
+    }
+
+    public static void ClickWithName(String name,  WebDriver driver)  {
+        driver.findElement(By.name(name)).click();
 
     }
 
