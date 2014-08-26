@@ -10,6 +10,7 @@ import com.hk.commonProperties.SharedProperties;
 import com.hk.orderCheckoutDto.SoDetails;
 import com.hk.orderCheckoutDto.SoDetailsDTO;
 import com.hk.property.PropertyHelper;
+import com.hk.util.AutoStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -81,6 +82,7 @@ public class variantCheckout /*extends ExistingOnlineOrder*/ {
         SharedProperties.Click(loginpage.getLoginbtn(), SharedProperties.driver);
 
         //Select WareHouse according to your order from database or with text
+
         for (String shippingOrderId : SoDetails.Sodetails().getShippingOrderIdList()) {
 
 
@@ -103,12 +105,17 @@ public class variantCheckout /*extends ExistingOnlineOrder*/ {
             Thread.sleep(4000);
 
 
-            System.out.print("SO again: - " + SoDetails.soDetailsdto.getShippingOrderIdList());
+            System.out.print("\n Before1 using SO: " + SoDetails.soDetailsdto.getShippingOrderIdList());
+            System.out.print("\n Before2 using SO: " + SoDetails.Sodetails().getShippingOrderIdList());
+
             //check for warehouse first
-            for (String foreignSiCli : BrightDetails.ForeignSiCli().getForeignSoGatewayIdList()) {
+            for (String foreignSiCli : BrightDetails.foreignSiCliDTO.getForeignBarcodeList()) {
+
+                System.out.print("\n After1 Foreign SO: " +BrightDetails.ForeignSiCli().getForeignSoGatewayIdList());
+                System.out.print("\n After2 Foreign SO: " +BrightDetails.foreignSiCliDTO.getForeignBarcodeList());
+
 
                 SharedProperties.driver.navigate().to(PropertyHelper.readProperty("brightUrl"));
-
                 SharedProperties.sendKeys(loginpage.getUserName(),"saurabh.nagpal@healthkart.com", SharedProperties.driver);
                 SharedProperties.sendKeys(brighthome.getPassWd(),"abcde12", SharedProperties.driver);
                 SharedProperties.Click(brighthome.getLoginBtn(),SharedProperties.driver);
@@ -118,10 +125,11 @@ public class variantCheckout /*extends ExistingOnlineOrder*/ {
 
 
 
-                for (String barcode : BrightDetails.ForeignSiCli().getForeignBarcodeList()) {
-                    System.out.print("Using Barcode : " + barcode);
+                for (String barcode : BrightDetails.foreignSiCliDTO.getForeignBarcodeList()) {
+                    System.out.println("Using Barcode : " + BrightDetails.foreignSiCliDTO.getForeignBarcodeList());
                     SharedProperties.sendKeys(checkoutorders.getCheckoutOrderBar(), barcode, SharedProperties.driver);
-
+                    Thread.sleep(2000);
+                    SharedProperties.driver.findElement(By.xpath("//*[@id=\"upc\"]")).sendKeys(Keys.ENTER);
                 }
             }
 
@@ -133,6 +141,9 @@ public class variantCheckout /*extends ExistingOnlineOrder*/ {
             SharedProperties.sendKeys(createupdateshipment.getSoGatewayIdTxt(), shippingOrderId, SharedProperties.driver);
             Thread.sleep(3000);
             SharedProperties.Click(createupdateshipment.getSearchBtn(), SharedProperties.driver);
+
+
+
             new Select(SharedProperties.driver.findElement(By.xpath("//*[@id=\"boxSize\"]"))).selectByVisibleText("L");
             new Select(SharedProperties.driver.findElement(By.xpath("//*[@id=\"packer\"]"))).selectByVisibleText("L");
             new Select(SharedProperties.driver.findElement(By.xpath("//*[@id=\"picker\"]"))).selectByVisibleText("10");

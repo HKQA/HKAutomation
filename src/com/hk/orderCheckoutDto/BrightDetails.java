@@ -19,9 +19,6 @@ public class BrightDetails {
     public static ForeignSiCliDTO foreignSiCliDTO = new ForeignSiCliDTO();
 
     public static ForeignSiCliDTO ForeignSiCli() {
-        System.out.print("using SO: " + AutoStringUtils.getListAsString(SoDetails.soDetailsdto.getShippingOrderIdList()));
-        /*System.out.print(SoId);*/
-
         String query = "select s.base_order_id,c.id as cart_line_item_id,f.foreign_barcode,f.foreign_base_order_id,f.foreign_shipping_order_id,f.foreign_shipping_order_gateway_id \n" +
                 "from shipping_order s join cart_line_item c on s.base_order_id=c.order_id \n" +
                 "join foreign_si_cli f on c.id=f.cart_line_item_id \n" +
