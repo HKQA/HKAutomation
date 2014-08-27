@@ -42,7 +42,7 @@ public class variantCheckout /*extends ExistingOnlineOrder*/ {
     CreateUpdateShipment createupdateshipment = new CreateUpdateShipment();
     ShipmentAwaitingQueue shipmentawaitingueue = new ShipmentAwaitingQueue();
     DeliveryAwaitingQueue deliveryawaitingqueue = new DeliveryAwaitingQueue();
-
+    AdminHome adminhome = new AdminHome();
 
     @Parameters({"AdminBaseURL", "Browser"})
     @BeforeClass
@@ -109,7 +109,7 @@ public class variantCheckout /*extends ExistingOnlineOrder*/ {
             System.out.print("\n Before2 using SO: " + SoDetails.Sodetails().getShippingOrderIdList());
 
             //check for warehouse first
-            for (String foreignSiCli : BrightDetails.foreignSiCliDTO.getForeignBarcodeList()) {
+            for (String foreignSiCli : BrightDetails.foreignSiCliDTO.getForeignSoGatewayIdList()) {
 
                 System.out.print("\n After1 Foreign SO: " +BrightDetails.ForeignSiCli().getForeignSoGatewayIdList());
                 System.out.print("\n After2 Foreign SO: " +BrightDetails.foreignSiCliDTO.getForeignBarcodeList());
@@ -137,6 +137,9 @@ public class variantCheckout /*extends ExistingOnlineOrder*/ {
             SharedProperties.sendKeys(loginpage.getUserName(), "saurabh.nagpal@healthkart.com", SharedProperties.driver);
             SharedProperties.sendKeys(loginpage.getPassword(), "abcde12", SharedProperties.driver);
             Thread.sleep(3000);
+            SharedProperties.Click(loginpage.getLoginbtn(), SharedProperties.driver);
+            SharedProperties.Click(adminhome.getWareHouseLink(),SharedProperties.driver);
+            Thread.sleep(2000);
             SharedProperties.Click(createupdateshipment.getCreateUpdateShipmentLink(), SharedProperties.driver);
             SharedProperties.sendKeys(createupdateshipment.getSoGatewayIdTxt(), shippingOrderId, SharedProperties.driver);
             Thread.sleep(3000);

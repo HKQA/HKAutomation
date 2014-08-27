@@ -14,6 +14,7 @@ public class AdminHome {
     private String selectWh ="//*[@id=\"selectWHForm\"]/select";
     private String wareHouseLink="/html/body/div/div[1]/div[1]/ul/li[10]/a";
 
+
     public String getWareHouseLink() {
         return wareHouseLink;
     }
