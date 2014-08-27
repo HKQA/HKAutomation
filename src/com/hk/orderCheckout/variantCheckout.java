@@ -105,14 +105,17 @@ public class variantCheckout /*extends ExistingOnlineOrder*/ {
             Thread.sleep(4000);
 
 
-            System.out.print("\n Before1 using SO: " + SoDetails.soDetailsdto.getShippingOrderIdList());
-            System.out.print("\n Before2 using SO: " + SoDetails.Sodetails().getShippingOrderIdList());
+            System.out.print("\n Aqua using SO1: " + SoDetails.soDetailsdto.getShippingOrderIdList());
+            System.out.print("\n Aqua using SO2: " + SoDetails.Sodetails().getShippingOrderIdList());
 
             //check for warehouse first
-            for (String foreignSiCli : BrightDetails.foreignSiCliDTO.getForeignSoGatewayIdList()) {
+            for (String foreignSiCli : BrightDetails.ForeignSiCli().getForeignSoGatewayIdList()) {
 
-                System.out.print("\n After1 Foreign SO: " +BrightDetails.ForeignSiCli().getForeignSoGatewayIdList());
-                System.out.print("\n After2 Foreign SO: " +BrightDetails.foreignSiCliDTO.getForeignBarcodeList());
+                System.out.print("\n Bright Foreign SO1: " +BrightDetails.ForeignSiCli().getForeignSoGatewayIdList());
+                System.out.print("\n Bright Foreign SO2: " +BrightDetails.foreignSiCliDTO.getForeignSoGatewayIdList());
+
+                System.out.print("\n using barcode1: " +BrightDetails.ForeignSiCli().getForeignBarcodeList());
+                System.out.print("\n using barcode2: " +BrightDetails.foreignSiCliDTO.getForeignBarcodeList());
 
 
                 SharedProperties.driver.navigate().to(PropertyHelper.readProperty("brightUrl"));
@@ -127,6 +130,8 @@ public class variantCheckout /*extends ExistingOnlineOrder*/ {
 
                 for (String barcode : BrightDetails.foreignSiCliDTO.getForeignBarcodeList()) {
                     System.out.println("Using Barcode : " + BrightDetails.foreignSiCliDTO.getForeignBarcodeList());
+
+
                     SharedProperties.sendKeys(checkoutorders.getCheckoutOrderBar(), barcode, SharedProperties.driver);
                     Thread.sleep(2000);
                     SharedProperties.driver.findElement(By.xpath("//*[@id=\"upc\"]")).sendKeys(Keys.ENTER);

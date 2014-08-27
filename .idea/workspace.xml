@@ -2,20 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c26b27e7-3829-4ab4-9fbd-06b12c07466d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/aquaElementLocators/AdminHome.java" afterPath="$PROJECT_DIR$/src/com/hk/aquaElementLocators/AdminHome.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/ForeignSiCliDTO.java" afterPath="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/ForeignSiCliDTO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java" afterPath="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java" afterPath="$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Automation_testing_v4.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1409120316344" ignored="false" />
     <file path="/fragment.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408715008315" ignored="false" />
     <file path="/AutoStringUtils.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408715328919" ignored="false" />
-    <file path="/variantCheckout.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1409126319748" ignored="false" />
+    <file path="/variantCheckout.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1409130693083" ignored="false" />
     <file path="/SharedProperties.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408717012992" ignored="false" />
     <file path="/BrightDetails.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1408973775662" ignored="false" />
     <file path="/AdminHome.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1409126176554" ignored="false" />
+    <file path="/ForeignSiCliDTO.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1409127287044" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,10 +95,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="variantCheckout.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="variantCheckout.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="96" selection-start="5768" selection-end="5768" vertical-scroll-proportion="0.4495238">
+            <state line="119" column="30" selection-start="5375" selection-end="5375" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -124,10 +124,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BrightDetails.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="BrightDetails.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="47" selection-start="985" selection-end="985" vertical-scroll-proportion="0.0">
+            <state line="35" column="60" selection-start="1511" selection-end="1511" vertical-scroll-proportion="0.6438095">
               <folding />
             </state>
           </provider>
@@ -136,8 +136,10 @@
       <file leaf-file-name="ForeignSiCliDTO.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/ForeignSiCliDTO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="13" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="43" column="46" selection-start="1264" selection-end="1264" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#518#526#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -172,7 +174,7 @@
       <file leaf-file-name="SoDetails.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="92" selection-start="776" selection-end="776" vertical-scroll-proportion="0.0">
+            <state line="25" column="39" selection-start="794" selection-end="794" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -205,7 +207,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/hk/aquaElementLocators/WareHouseLocators.java" />
         <option value="$PROJECT_DIR$/src/com/hk/aquaElementLocators/CreateUpdateShipmentLink.java" />
         <option value="$PROJECT_DIR$/src/com/hk/aquaElementLocators/CreateUpdateShipment.java" />
         <option value="$PROJECT_DIR$/src/com/hk/aquaElementLocators/ShipmentAwaitingQueue.java" />
@@ -218,9 +219,10 @@
         <option value="$PROJECT_DIR$/src/com/hk/brightElementLocators/BrightHome.java" />
         <option value="$PROJECT_DIR$/src/com/hk/brightElementLocators/CheckoutOrders.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java" />
-        <option value="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java" />
         <option value="$PROJECT_DIR$/src/com/hk/aquaElementLocators/AdminHome.java" />
+        <option value="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java" />
+        <option value="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/ForeignSiCliDTO.java" />
       </list>
     </option>
   </component>
@@ -863,11 +865,11 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22121212" sideWeight="0.46153846" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.53846157" sideWeight="0.67045456" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22121212" sideWeight="0.548718" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6649573" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45128205" sideWeight="0.67045456" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.63247865" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6649573" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1017,30 +1019,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/ForeignSiCliDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsReturn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="13" selection-start="1466" selection-end="1466" vertical-scroll-proportion="0.9352381">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="92" selection-start="776" selection-end="776" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="47" selection-start="985" selection-end="985" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1059,12 +1040,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="39" selection-start="794" selection-end="794" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="96" selection-start="5768" selection-end="5768" vertical-scroll-proportion="0.4495238">
+        <state line="119" column="30" selection-start="5375" selection-end="5375" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/ForeignSiCliDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="46" selection-start="1264" selection-end="1264" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#518#526#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="60" selection-start="1511" selection-end="1511" vertical-scroll-proportion="0.6438095">
+          <folding />
         </state>
       </provider>
     </entry>

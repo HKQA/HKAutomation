@@ -1,7 +1,9 @@
 package com.hk.orderCheckoutDto;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created with IntelliJ IDEA.
@@ -14,7 +16,7 @@ public class ForeignSiCliDTO {
 
     private List<String> foreignBoIdList = new ArrayList<String>();
     private List<String> foreignSoIdList = new ArrayList<String>();
-    private List<String> foreignSoGatewayIdList = new ArrayList<String>();
+    private Set<String> foreignSoGatewayIdList = new HashSet<String>();
     private List<String> foreignBarcodeList = new ArrayList<String>();
 
     public List<String> getForeignBoIdList() {
@@ -22,7 +24,7 @@ public class ForeignSiCliDTO {
     }
 
     public void setForeignBoIdList(List<String> foreignBoIdList) {
-            this.foreignBoIdList = foreignBoIdList;
+        this.foreignBoIdList = foreignBoIdList;
     }
 
     public List<String> getForeignSoIdList() {
@@ -33,11 +35,11 @@ public class ForeignSiCliDTO {
         this.foreignSoIdList = foreignSoIdList;
     }
 
-    public List<String> getForeignSoGatewayIdList() {
+    public Set<String> getForeignSoGatewayIdList() {
         return foreignSoGatewayIdList;
     }
 
-    public void setForeignSoGatewayIdList(List<String> foreignSoGatewayIdList) {
+    public void setForeignSoGatewayIdList(Set<String> foreignSoGatewayIdList) {
         this.foreignSoGatewayIdList = foreignSoGatewayIdList;
     }
 
