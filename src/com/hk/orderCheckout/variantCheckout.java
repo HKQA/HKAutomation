@@ -83,10 +83,16 @@ public class variantCheckout /*extends ExistingOnlineOrder*/ {
         SharedProperties.sendKeys(loginpage.getPassword(), "abcde12", SharedProperties.driver);
         SharedProperties.Click(loginpage.getLoginbtn(), SharedProperties.driver);
 
-        //Select WareHouse according to your order from database or with text
-
         for (String shippingOrderId : SoDetails.Sodetails().getShippingOrderIdList()) {
+            if (SoDetails.soDetailsdto.getWarehouseId().contains(10)) {
+                new Select(SharedProperties.driver.findElement(By.xpath("//*[@id=\"selectWHForm\"]/select"))).selectByVisibleText("GGN Aqua Warehouse");
+                SharedProperties.Click(adminhome.getSaveBtn(), SharedProperties.driver);
 
+            } else {
+                new Select(SharedProperties.driver.findElement(By.xpath("//*[@id=\"selectWHForm\"]/select"))).selectByVisibleText("Mum Aqua Warehouse");
+                SharedProperties.Click(adminhome.getSaveBtn(), SharedProperties.driver);
+
+            }
 
 
             SharedProperties.clickWithCss(printprick.getPrintPrickLink(), SharedProperties.driver);
@@ -115,8 +121,8 @@ public class variantCheckout /*extends ExistingOnlineOrder*/ {
             for (String foreignSiCli : BrightDetails.ForeignSiCli().getForeignSoGatewayIdList()) {
 
                 System.out.print("\n Bright Foreign SO2: " + BrightDetails.foreignSiCliDTO.getForeignSoGatewayIdList());
-
                 System.out.print("\n using barcode2: " + BrightDetails.foreignSiCliDTO.getForeignBarcodeList());
+
 
 
                 SharedProperties.driver.navigate().to(PropertyHelper.readProperty("brightUrl"));
@@ -169,7 +175,6 @@ public class variantCheckout /*extends ExistingOnlineOrder*/ {
             SharedProperties.Class(shipmentawaitingueue.getCheckBox(), SharedProperties.driver);
             Thread.sleep(3000);
             SharedProperties.Click(shipmentawaitingueue.getMarkedOrdersAsShipped(), SharedProperties.driver);
-
 
 
             SharedProperties.Click(adminhome.getWareHouseLink(), SharedProperties.driver);

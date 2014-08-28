@@ -1,7 +1,9 @@
 package com.hk.orderCheckoutDto;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,6 +14,15 @@ import java.util.List;
  */
 public class SoDetailsDTO {
     private List<String> shippingOrderIdList = new ArrayList<String>();
+    private Set<Integer> warehouseId = new HashSet<Integer>();
+
+    public Set<Integer> getWarehouseId() {
+        return warehouseId;
+    }
+
+    public void setWarehouseId(Set<Integer> warehouseId) {
+        this.warehouseId = warehouseId;
+    }
 
     public List<String> getShippingOrderIdList() {
         return shippingOrderIdList;
