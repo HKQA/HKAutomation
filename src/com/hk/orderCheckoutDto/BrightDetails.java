@@ -25,6 +25,7 @@ public class BrightDetails {
                 "where s.gateway_order_id in (" +
                 AutoStringUtils.getListAsString(SoDetails.soDetailsdto.getShippingOrderIdList(), ',', '"')
                 + ")";
+        System.out.print("Util print:- " +AutoStringUtils.getListAsString(SoDetails.soDetailsdto.getShippingOrderIdList(), ',', '"'));
 
         return
                 JdbcConnectionFile.readJdbcprop(query, new ResultSetExtractor<ForeignSiCliDTO>() {

@@ -15,9 +15,9 @@ import java.util.Set;
 public class ForeignSiCliDTO {
 
     private List<String> foreignBoIdList = new ArrayList<String>();
-    private List<String> foreignSoIdList = new ArrayList<String>();
+    private Set<String> foreignSoIdList = new HashSet<String>();
     private Set<String> foreignSoGatewayIdList = new HashSet<String>();
-    private List<String> foreignBarcodeList = new ArrayList<String>();
+    private Set<String> foreignBarcodeList = new HashSet<String>();
 
     public List<String> getForeignBoIdList() {
         return foreignBoIdList;
@@ -27,11 +27,11 @@ public class ForeignSiCliDTO {
         this.foreignBoIdList = foreignBoIdList;
     }
 
-    public List<String> getForeignSoIdList() {
+    public Set<String> getForeignSoIdList() {
         return foreignSoIdList;
     }
 
-    public void setForeignSoIdList(List<String> foreignSoIdList) {
+    public void setForeignSoIdList(Set<String> foreignSoIdList) {
         this.foreignSoIdList = foreignSoIdList;
     }
 
@@ -43,11 +43,11 @@ public class ForeignSiCliDTO {
         this.foreignSoGatewayIdList = foreignSoGatewayIdList;
     }
 
-    public List<String> getForeignBarcodeList() {
+    public Set<String> getForeignBarcodeList() {
         return foreignBarcodeList;
     }
 
-    public void setForeignBarcodeList(List<String> foreignBarcodeList) {
+    public void setForeignBarcodeList(Set<String> foreignBarcodeList) {
         this.foreignBarcodeList = foreignBarcodeList;
     }
 }
