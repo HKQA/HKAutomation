@@ -11,16 +11,18 @@ import com.hk.orderCheckoutDto.SoDetails;
 import com.hk.orderCheckoutDto.SoDetailsDTO;
 import com.hk.property.PropertyHelper;
 import com.hk.util.AutoStringUtils;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.Wait;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import org.openqa.selenium.Keys;
 
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created with IntelliJ IDEA.
@@ -117,7 +119,6 @@ public class variantCheckout /*extends ExistingOnlineOrder*/ {
                 System.out.print("\n using barcode2: " + BrightDetails.foreignSiCliDTO.getForeignBarcodeList());
 
 
-
                 SharedProperties.driver.navigate().to(PropertyHelper.readProperty("brightUrl"));
                 SharedProperties.sendKeys(loginpage.getUserName(), "saurabh.nagpal@healthkart.com", SharedProperties.driver);
                 SharedProperties.sendKeys(brighthome.getPassWd(), "abcde12", SharedProperties.driver);
@@ -150,22 +151,36 @@ public class variantCheckout /*extends ExistingOnlineOrder*/ {
             new Select(SharedProperties.driver.findElement(By.xpath("//*[@id=\"boxSize\"]"))).selectByVisibleText("L");
             new Select(SharedProperties.driver.findElement(By.xpath("//*[@id=\"packer\"]"))).selectByVisibleText("L");
             new Select(SharedProperties.driver.findElement(By.xpath("//*[@id=\"picker\"]"))).selectByVisibleText("10");
-            SharedProperties.clickWithCss(createupdateshipment.getSaveCreateUpdateShipmentBtn(), SharedProperties.driver);
+            Thread.sleep(2000);
+            SharedProperties.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+            Wait<WebDriver> wait = new FluentWait<WebDriver>(SharedProperties.driver)
+                    .withTimeout(30, TimeUnit.SECONDS)
+                    .pollingEvery(5, TimeUnit.SECONDS)
+                    .ignoring(NoSuchElementException.class, StaleElementReferenceException.class);
+            WebElement saveLink = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"validate\"]")));
+            saveLink.click();
+
+            //SharedProperties.clickWithCss(createupdateshipment.getSaveCreateUpdateShipmentBtn(), SharedProperties.driver);
 
             SharedProperties.Click(adminhome.getWareHouseLink(), SharedProperties.driver);
             SharedProperties.Click(shipmentawaitingueue.getShipmentAwaitingQueueLink(), SharedProperties.driver);
             SharedProperties.sendKeys(shipmentawaitingueue.getGatewayId(), shippingOrderId, SharedProperties.driver);
             SharedProperties.Click(shipmentawaitingueue.getSearchBtn(), SharedProperties.driver);
             SharedProperties.Class(shipmentawaitingueue.getCheckBox(), SharedProperties.driver);
+            Thread.sleep(3000);
             SharedProperties.Click(shipmentawaitingueue.getMarkedOrdersAsShipped(), SharedProperties.driver);
+
+
 
             SharedProperties.Click(adminhome.getWareHouseLink(), SharedProperties.driver);
             SharedProperties.Click(deliveryawaitingqueue.getDeliveryAwaitingQueueLink(), SharedProperties.driver);
             SharedProperties.sendKeys(deliveryawaitingqueue.getGatewayOrderIdTxt(), shippingOrderId, SharedProperties.driver);
             SharedProperties.Click(deliveryawaitingqueue.getSearchBtn(), SharedProperties.driver);
             SharedProperties.Class(deliveryawaitingqueue.getCheckBox(), SharedProperties.driver);
+            Thread.sleep(3000);
             SharedProperties.Click(deliveryawaitingqueue.getMarkOrdersAsDelivered(), SharedProperties.driver);
 
+            System.out.print("\n ************* SO Delivered *************");
 
         }
     }
