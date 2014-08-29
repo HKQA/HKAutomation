@@ -79,20 +79,24 @@ public class variantCheckout /*extends ExistingOnlineOrder*/ {
 //    EOO.login(1L);
 
         SharedProperties.openBrowser(AdminBaseURL, browser);
-        SharedProperties.sendKeys(loginpage.getUserName(), "saurabh.nagpal@healthkart.com", SharedProperties.driver);
-        SharedProperties.sendKeys(loginpage.getPassword(), "abcde12", SharedProperties.driver);
+        SharedProperties.sendKeys(loginpage.getUserName(), PropertyHelper.readProperty("email_id"), SharedProperties.driver);
+        SharedProperties.sendKeys(loginpage.getPassword(), PropertyHelper.readProperty("password"), SharedProperties.driver);
         SharedProperties.Click(loginpage.getLoginbtn(), SharedProperties.driver);
 
         for (String shippingOrderId : SoDetails.Sodetails().getShippingOrderIdList()) {
-            if (SoDetails.soDetailsdto.getWarehouseId().contains(10)) {
-                new Select(SharedProperties.driver.findElement(By.xpath("//*[@id=\"selectWHForm\"]/select"))).selectByVisibleText("GGN Aqua Warehouse");
+            System.out.print("\n Warehouse Id: - " +SoDetails.soDetailsdto.getWarehouseId());
+
+            /*if (SoDetails.soDetailsdto.getWarehouseId().contains("10")) {
+               System.out.print("\n Warehouse Id: - " +SoDetails.soDetailsdto.getWarehouseId());
+
+                new Select(SharedProperties.driver.findElement(By.xpath("/*//*[@id=\"selectWHForm\"]/select"))).selectByVisibleText("GGN Aqua Warehouse");
                 SharedProperties.Click(adminhome.getSaveBtn(), SharedProperties.driver);
 
             } else {
-                new Select(SharedProperties.driver.findElement(By.xpath("//*[@id=\"selectWHForm\"]/select"))).selectByVisibleText("Mum Aqua Warehouse");
+                new Select(SharedProperties.driver.findElement(By.xpath("/[@id=\"selectWHForm\"]/select"))).selectByVisibleText("Mum Aqua Warehouse");
                 SharedProperties.Click(adminhome.getSaveBtn(), SharedProperties.driver);
 
-            }
+            }*/
 
 
             SharedProperties.clickWithCss(printprick.getPrintPrickLink(), SharedProperties.driver);
@@ -126,8 +130,8 @@ public class variantCheckout /*extends ExistingOnlineOrder*/ {
 
 
                 SharedProperties.driver.navigate().to(PropertyHelper.readProperty("brightUrl"));
-                SharedProperties.sendKeys(loginpage.getUserName(), "saurabh.nagpal@healthkart.com", SharedProperties.driver);
-                SharedProperties.sendKeys(brighthome.getPassWd(), "abcde12", SharedProperties.driver);
+                SharedProperties.sendKeys(loginpage.getUserName(),PropertyHelper.readProperty("email_id"),SharedProperties.driver);
+                SharedProperties.sendKeys(brighthome.getPassWd(), PropertyHelper.readProperty("password"), SharedProperties.driver);
                 SharedProperties.Click(brighthome.getLoginBtn(), SharedProperties.driver);
                 SharedProperties.clickWithCss(checkoutorders.getCheckoutOrder(), SharedProperties.driver);
                 SharedProperties.sendKeys(checkoutorders.getCheckoutOrderTxt(), foreignSiCli, SharedProperties.driver);
@@ -135,6 +139,18 @@ public class variantCheckout /*extends ExistingOnlineOrder*/ {
 
 
                 for (String barcode : BrightDetails.foreignSiCliDTO.getForeignBarcodeList()) {
+
+                    /*if (SoDetails.soDetailsdto.getWarehouseId().contains("10")) {
+               System.out.print("\n Warehouse Id: - " +SoDetails.soDetailsdto.getWarehouseId());
+
+                new Select(SharedProperties.driver.findElement(By.xpath("/*//*[@id=\"selectWHForm\"]/select"))).selectByVisibleText("GGN Aqua Warehouse");
+                SharedProperties.Click(adminhome.getSaveBtn(), SharedProperties.driver);
+
+            } else {
+                new Select(SharedProperties.driver.findElement(By.xpath("/[@id=\"selectWHForm\"]/select"))).selectByVisibleText("Mum Aqua Warehouse");
+                SharedProperties.Click(adminhome.getSaveBtn(), SharedProperties.driver);
+
+                }*/
 
 
                     SharedProperties.sendKeys(checkoutorders.getCheckoutOrderBar(), barcode, SharedProperties.driver);
@@ -144,8 +160,8 @@ public class variantCheckout /*extends ExistingOnlineOrder*/ {
             }
 
             SharedProperties.driver.navigate().to(PropertyHelper.readProperty("adminUrl"));
-            SharedProperties.sendKeys(loginpage.getUserName(), "saurabh.nagpal@healthkart.com", SharedProperties.driver);
-            SharedProperties.sendKeys(loginpage.getPassword(), "abcde12", SharedProperties.driver);
+            SharedProperties.sendKeys(loginpage.getUserName(), PropertyHelper.readProperty("email_id"), SharedProperties.driver);
+            SharedProperties.sendKeys(loginpage.getPassword(), PropertyHelper.readProperty("password"), SharedProperties.driver);
             Thread.sleep(3000);
             SharedProperties.Click(loginpage.getLoginbtn(), SharedProperties.driver);
             SharedProperties.Click(adminhome.getWareHouseLink(), SharedProperties.driver);
