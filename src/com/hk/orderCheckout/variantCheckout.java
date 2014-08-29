@@ -84,7 +84,7 @@ public class variantCheckout /*extends ExistingOnlineOrder*/ {
         SharedProperties.Click(loginpage.getLoginbtn(), SharedProperties.driver);
 
         for (String shippingOrderId : SoDetails.Sodetails().getShippingOrderIdList()) {
-            System.out.print("\n Warehouse Id: - " +SoDetails.soDetailsdto.getWarehouseId());
+            System.out.print("\n Warehouse Id: - " + SoDetails.soDetailsdto.getWarehouseId());
 
             /*if (SoDetails.soDetailsdto.getWarehouseId().contains("10")) {
                System.out.print("\n Warehouse Id: - " +SoDetails.soDetailsdto.getWarehouseId());
@@ -123,24 +123,7 @@ public class variantCheckout /*extends ExistingOnlineOrder*/ {
 
             //check for warehouse first
             for (String foreignSiCli : BrightDetails.ForeignSiCli().getForeignSoGatewayIdList()) {
-
-                System.out.print("\n Bright Foreign SO2: " + BrightDetails.foreignSiCliDTO.getForeignSoGatewayIdList());
-                System.out.print("\n using barcode2: " + BrightDetails.foreignSiCliDTO.getForeignBarcodeList());
-
-
-
-                SharedProperties.driver.navigate().to(PropertyHelper.readProperty("brightUrl"));
-                SharedProperties.sendKeys(loginpage.getUserName(),PropertyHelper.readProperty("email_id"),SharedProperties.driver);
-                SharedProperties.sendKeys(brighthome.getPassWd(), PropertyHelper.readProperty("password"), SharedProperties.driver);
-                SharedProperties.Click(brighthome.getLoginBtn(), SharedProperties.driver);
-                SharedProperties.clickWithCss(checkoutorders.getCheckoutOrder(), SharedProperties.driver);
-                SharedProperties.sendKeys(checkoutorders.getCheckoutOrderTxt(), foreignSiCli, SharedProperties.driver);
-                SharedProperties.Click(checkoutorders.getCheckoutOrderBtn(), SharedProperties.driver);
-
-
-                for (String barcode : BrightDetails.foreignSiCliDTO.getForeignBarcodeList()) {
-
-                    /*if (SoDetails.soDetailsdto.getWarehouseId().contains("10")) {
+               /*if (SoDetails.soDetailsdto.getWarehouseId().contains("10")) {
                System.out.print("\n Warehouse Id: - " +SoDetails.soDetailsdto.getWarehouseId());
 
                 new Select(SharedProperties.driver.findElement(By.xpath("/*//*[@id=\"selectWHForm\"]/select"))).selectByVisibleText("GGN Aqua Warehouse");
@@ -152,6 +135,21 @@ public class variantCheckout /*extends ExistingOnlineOrder*/ {
 
                 }*/
 
+
+                System.out.print("\n Bright Foreign SO2: " + BrightDetails.foreignSiCliDTO.getForeignSoGatewayIdList());
+                System.out.print("\n using barcode2: " + BrightDetails.foreignSiCliDTO.getForeignBarcodeList());
+
+
+                SharedProperties.driver.navigate().to(PropertyHelper.readProperty("brightUrl"));
+                SharedProperties.sendKeys(loginpage.getUserName(), PropertyHelper.readProperty("email_id"), SharedProperties.driver);
+                SharedProperties.sendKeys(brighthome.getPassWd(), PropertyHelper.readProperty("password"), SharedProperties.driver);
+                SharedProperties.Click(brighthome.getLoginBtn(), SharedProperties.driver);
+                SharedProperties.clickWithCss(checkoutorders.getCheckoutOrder(), SharedProperties.driver);
+                SharedProperties.sendKeys(checkoutorders.getCheckoutOrderTxt(), foreignSiCli, SharedProperties.driver);
+                SharedProperties.Click(checkoutorders.getCheckoutOrderBtn(), SharedProperties.driver);
+
+
+                for (String barcode : BrightDetails.foreignSiCliDTO.getForeignBarcodeList()) {
 
                     SharedProperties.sendKeys(checkoutorders.getCheckoutOrderBar(), barcode, SharedProperties.driver);
                     Thread.sleep(2000);

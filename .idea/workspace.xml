@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c26b27e7-3829-4ab4-9fbd-06b12c07466d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java" afterPath="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/url.properties" afterPath="$PROJECT_DIR$/url.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java" afterPath="$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Automation_testing_v4.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -178,7 +175,7 @@
       <file leaf-file-name="variantCheckout.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="4" selection-start="2214" selection-end="2214" vertical-scroll-proportion="0.2552381">
+            <state line="99" column="15" selection-start="4239" selection-end="4239" vertical-scroll-proportion="0.9352381">
               <folding />
             </state>
           </provider>
@@ -1113,7 +1110,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="4" selection-start="2214" selection-end="2214" vertical-scroll-proportion="0.2552381">
+        <state line="99" column="15" selection-start="4239" selection-end="4239" vertical-scroll-proportion="0.9352381">
           <folding />
         </state>
       </provider>
