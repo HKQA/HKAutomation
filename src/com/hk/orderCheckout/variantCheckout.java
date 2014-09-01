@@ -4,11 +4,13 @@ package com.hk.orderCheckout;
 import com.hk.aquaElementLocators.*;
 import com.hk.brightElementLocators.BrightHome;
 import com.hk.brightElementLocators.CheckoutOrders;
+import com.hk.excel.ExcelServiceImplOld;
 import com.hk.orderCheckoutDto.BrightDetails;
 import com.hk.commonProperties.SharedProperties;
 
 import com.hk.orderCheckoutDto.SoDetails;
 import com.hk.orderCheckoutDto.SoDetailsDTO;
+import com.hk.orderPlacement.ExistingOnlineOrder;
 import com.hk.property.PropertyHelper;
 import com.hk.util.AutoStringUtils;
 import org.openqa.selenium.*;
@@ -17,11 +19,15 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -31,7 +37,7 @@ import java.util.concurrent.TimeUnit;
  * Time: 6:08 PM
  * To change this template use File | Settings | File Templates.
  */
-public class variantCheckout /*extends ExistingOnlineOrder*/ {
+public class variantCheckout extends ExistingOnlineOrder {
     String AdminBaseURL;
     String browser;
     private int delay;
@@ -45,6 +51,9 @@ public class variantCheckout /*extends ExistingOnlineOrder*/ {
     ShipmentAwaitingQueue shipmentawaitingueue = new ShipmentAwaitingQueue();
     DeliveryAwaitingQueue deliveryawaitingqueue = new DeliveryAwaitingQueue();
     AdminHome adminhome = new AdminHome();
+    ExistingOnlineOrder EOO = new ExistingOnlineOrder();
+    ExcelServiceImplOld readexcel = new ExcelServiceImplOld();
+
 
     @Parameters({"AdminBaseURL", "Browser"})
     @BeforeClass
@@ -53,30 +62,26 @@ public class variantCheckout /*extends ExistingOnlineOrder*/ {
         this.browser = Browser;
     }
 
-    /*ExistingOnlineOrder EOO = new ExistingOnlineOrder();
-    *//*ExcelServiceImplOld readexcel = new ExcelServiceImplOld();*/
 
+    @DataProvider(name = "VariantCheckoutData")
+    public List<String> variantCheckoutDataProviderCombined() {
 
-    /*    @DataProvider(name = "VariantCheckoutData")
-        public List<String> variantCheckoutDataProviderCombined() {
+        List<String> finalObjectString = new ArrayList<String>();
 
-            List<String> finalObjectString = new ArrayList<String>();
+        try {
+            finalObjectString.addAll(readexcel.mainReadFromExcelIterator(PropertyHelper.readProperty("LoginExcel")));
+            finalObjectString.addAll(readexcel.mainReadFromExcelIterator(PropertyHelper.readProperty("productIdExcel")));
+        } catch (FileNotFoundException fex) {
+            System.out.println(fex.getMessage());
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return finalObjectString;
+    }
 
-            try {
-                finalObjectString.addAll(readexcel.mainReadFromExcelIterator(PropertyH
-                elper.readProperty("LoginExcel")));
-                finalObjectString.addAll(readexcel.mainReadFromExcelIterator(PropertyHelper.readProperty("productIdExcel")));
-            } catch (FileNotFoundException fex) {
-                System.out.println(fex.getMessage());
-            } catch (IOException ex) {
-                System.out.println(ex.getMessage());
-            }
-            return finalObjectString;
-        }*/
-    /*@Test(dataProvider = "VariantCheckoutData", enabled = true)*/
-    @Test(enabled = true)
+    @Test(dataProvider = "VariantCheckoutData", enabled = true)
     public void variantCheckout() throws InterruptedException, IOException, Exception {
-//    EOO.login(1L);
+        EOO.login(1L);
 
         SharedProperties.openBrowser(AdminBaseURL, browser);
         SharedProperties.sendKeys(loginpage.getUserName(), PropertyHelper.readProperty("email_id"), SharedProperties.driver);
@@ -213,6 +218,7 @@ public class variantCheckout /*extends ExistingOnlineOrder*/ {
 
         }
     }
+
 
 }
 
