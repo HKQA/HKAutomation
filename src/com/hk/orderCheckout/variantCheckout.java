@@ -57,7 +57,7 @@ public class variantCheckout extends ExistingOnlineOrder {
 
     @Parameters({"AdminBaseURL", "Browser"})
     @BeforeClass
-    public void g(String AdminBaseURL, String Browser) {
+    public void AdminUrlService(String AdminBaseURL, String Browser) {
         this.AdminBaseURL = AdminBaseURL;
         this.browser = Browser;
     }
