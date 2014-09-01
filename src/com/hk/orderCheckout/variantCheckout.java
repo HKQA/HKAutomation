@@ -84,19 +84,22 @@ public class variantCheckout /*extends ExistingOnlineOrder*/ {
         SharedProperties.Click(loginpage.getLoginbtn(), SharedProperties.driver);
 
         for (String shippingOrderId : SoDetails.Sodetails().getShippingOrderIdList()) {
-            System.out.print("\n Warehouse Id: - " + SoDetails.soDetailsdto.getWarehouseId());
 
-            /*if (SoDetails.soDetailsdto.getWarehouseId().contains("10")) {
-               System.out.print("\n Warehouse Id: - " +SoDetails.soDetailsdto.getWarehouseId());
+            if (SoDetails.soDetailsdto.getWarehouseId().contains("10")) {
+                System.out.print("\n Selected GGN Aqua Warehouse");
 
-                new Select(SharedProperties.driver.findElement(By.xpath("/*//*[@id=\"selectWHForm\"]/select"))).selectByVisibleText("GGN Aqua Warehouse");
+                ((JavascriptExecutor) SharedProperties.driver).executeScript("$('select[id=\"selectWHForm\"]').click();");
+                new Select(SharedProperties.driver.findElement(By.id("//*[@id=\"selectWHForm\"]/select"))).selectByVisibleText("GGN Aqua Warehouse");
                 SharedProperties.Click(adminhome.getSaveBtn(), SharedProperties.driver);
 
             } else {
-                new Select(SharedProperties.driver.findElement(By.xpath("/[@id=\"selectWHForm\"]/select"))).selectByVisibleText("Mum Aqua Warehouse");
+                System.out.print("\n MUM Aqua Warehouse");
+
+                ((JavascriptExecutor) SharedProperties.driver).executeScript("$('select[id=\"selectWHForm\"]').click();");
+                new Select(SharedProperties.driver.findElement(By.xpath("//*[@id=\"selectWHForm\"]/select"))).selectByVisibleText("MUM Aqua Warehouse");
                 SharedProperties.Click(adminhome.getSaveBtn(), SharedProperties.driver);
 
-            }*/
+            }
 
 
             SharedProperties.clickWithCss(printprick.getPrintPrickLink(), SharedProperties.driver);
@@ -107,6 +110,7 @@ public class variantCheckout /*extends ExistingOnlineOrder*/ {
             Thread.sleep(3000);
             /*String SoId = SharedProperties.driver.findElement(By.xpath("/*//*[@id=\"shippingOrderDetail-2313803\"]/div[5]/strong")).getText();
             Thread.sleep(3000);
+
             */
             SharedProperties.Class(printprick.getCheckboxBo(), SharedProperties.driver);
             SharedProperties.Click(printprick.getBatchPrintBtn(), SharedProperties.driver);
@@ -123,27 +127,29 @@ public class variantCheckout /*extends ExistingOnlineOrder*/ {
 
             //check for warehouse first
             for (String foreignSiCli : BrightDetails.ForeignSiCli().getForeignSoGatewayIdList()) {
-               /*if (SoDetails.soDetailsdto.getWarehouseId().contains("10")) {
-               System.out.print("\n Warehouse Id: - " +SoDetails.soDetailsdto.getWarehouseId());
-
-                new Select(SharedProperties.driver.findElement(By.xpath("/*//*[@id=\"selectWHForm\"]/select"))).selectByVisibleText("GGN Aqua Warehouse");
-                SharedProperties.Click(adminhome.getSaveBtn(), SharedProperties.driver);
-
-            } else {
-                new Select(SharedProperties.driver.findElement(By.xpath("/[@id=\"selectWHForm\"]/select"))).selectByVisibleText("Mum Aqua Warehouse");
-                SharedProperties.Click(adminhome.getSaveBtn(), SharedProperties.driver);
-
-                }*/
-
 
                 System.out.print("\n Bright Foreign SO2: " + BrightDetails.foreignSiCliDTO.getForeignSoGatewayIdList());
                 System.out.print("\n using barcode2: " + BrightDetails.foreignSiCliDTO.getForeignBarcodeList());
-
-
                 SharedProperties.driver.navigate().to(PropertyHelper.readProperty("brightUrl"));
+
                 SharedProperties.sendKeys(loginpage.getUserName(), PropertyHelper.readProperty("email_id"), SharedProperties.driver);
                 SharedProperties.sendKeys(brighthome.getPassWd(), PropertyHelper.readProperty("password"), SharedProperties.driver);
                 SharedProperties.Click(brighthome.getLoginBtn(), SharedProperties.driver);
+                if (SoDetails.soDetailsdto.getWarehouseId().contains("10")) {
+                    System.out.print("\n GGN Bright Warehouse");
+
+                    ((JavascriptExecutor) SharedProperties.driver).executeScript("$('select[id=\"selectWHForm\"]').click();");
+                    new Select(SharedProperties.driver.findElement(By.id("//*[@id=\"selectWHForm\"]/select"))).selectByVisibleText("GGN Bright Warehouse");
+                    SharedProperties.Click(adminhome.getSaveBtn(), SharedProperties.driver);
+
+                } else {
+                    System.out.print("\n MUM Bright Warehouse");
+
+                    ((JavascriptExecutor) SharedProperties.driver).executeScript("$('select[id=\"selectWHForm\"]').click();");
+                    new Select(SharedProperties.driver.findElement(By.xpath("//*[@id=\"selectWHForm\"]/select"))).selectByVisibleText("MUM Bright Warehouse");
+                    SharedProperties.Click(adminhome.getSaveBtn(), SharedProperties.driver);
+
+                }
                 SharedProperties.clickWithCss(checkoutorders.getCheckoutOrder(), SharedProperties.driver);
                 SharedProperties.sendKeys(checkoutorders.getCheckoutOrderTxt(), foreignSiCli, SharedProperties.driver);
                 SharedProperties.Click(checkoutorders.getCheckoutOrderBtn(), SharedProperties.driver);
@@ -180,6 +186,8 @@ public class variantCheckout /*extends ExistingOnlineOrder*/ {
             WebElement saveLink = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"validate\"]")));
             saveLink.click();
 
+            System.out.print("\n ************* SO Packed *************");
+
             //SharedProperties.clickWithCss(createupdateshipment.getSaveCreateUpdateShipmentBtn(), SharedProperties.driver);
 
             SharedProperties.Click(adminhome.getWareHouseLink(), SharedProperties.driver);
@@ -189,6 +197,8 @@ public class variantCheckout /*extends ExistingOnlineOrder*/ {
             SharedProperties.Class(shipmentawaitingueue.getCheckBox(), SharedProperties.driver);
             Thread.sleep(3000);
             SharedProperties.Click(shipmentawaitingueue.getMarkedOrdersAsShipped(), SharedProperties.driver);
+
+            System.out.print("\n ************* SO Shipped *************");
 
 
             SharedProperties.Click(adminhome.getWareHouseLink(), SharedProperties.driver);
