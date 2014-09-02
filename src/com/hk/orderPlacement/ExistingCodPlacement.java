@@ -1,7 +1,7 @@
 package com.hk.orderPlacement;
 
 
-import com.hk.commonProperties.SendMail;
+import com.hk.reportAndMailGenerator.SendMail;
 import com.hk.commonProperties.SharedProperties;
 import com.hk.elementLocators.*;
 import com.hk.excel.TestDetailsExcelService;
@@ -14,6 +14,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 import org.testng.annotations.*;
 
 import java.io.File;
@@ -36,6 +37,7 @@ public class ExistingCodPlacement extends SharedProperties {
     CartPage cartpage = new CartPage();
     AddressPage addresspage = new AddressPage();
     PaymentPage paymentpage = new PaymentPage();
+    ITestResult result = Reporter.getCurrentTestResult();
 
     @Parameters({"BaseURL", "Browser"})
     @BeforeClass
@@ -48,7 +50,7 @@ public class ExistingCodPlacement extends SharedProperties {
     public void doAfter(ITestResult result) throws IOException {
         if (result.getStatus() == ITestResult.FAILURE) {
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\signupCODFailure.jpg"));
+            FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\ExistingCodPlacement.jpg"));
         }
     }
 
@@ -85,31 +87,52 @@ public class ExistingCodPlacement extends SharedProperties {
                 .ignoring(NoSuchElementException.class, StaleElementReferenceException.class);
         WebElement cartLink = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a[href*='Cart.action']")));
         cartLink.click();
-
+        Thread.sleep(3000);
         SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
+        Thread.sleep(3000);
+        SharedProperties.Click(loginPage.getSignInCheckbox(), SharedProperties.driver);
         SharedProperties.Click(loginPage.getSignInBtn(), SharedProperties.driver);
         Thread.sleep(3000);
-
         SharedProperties.sendKeys(loginPage.getEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
-        SharedProperties.sendKeys(loginPage.getPasswordTextBox(), "2303", SharedProperties.driver);
+        SharedProperties.sendKeys(loginPage.getPasswordTextBox(), "lklsdk", SharedProperties.driver);
         SharedProperties.Click(loginPage.getSignInBtn(), SharedProperties.driver);
         Thread.sleep(5000);
-        SharedProperties.clear(loginPage.getEmailIdTextBox(), SharedProperties.driver);
-
-        SharedProperties.sendKeys(loginPage.getEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
-        SharedProperties.sendKeys(loginPage.getPasswordTextBox(), testDetailsDTO.getPasswordList(), SharedProperties.driver);
-        SharedProperties.Click(loginPage.getSignInBtn(), SharedProperties.driver);
-        Thread.sleep(5000);
+        if (SharedProperties.driver.findElements(By.xpath("//*[@id=\"signInForm\"]/input[3]")).size() > 0) {
+            SharedProperties.clear(loginPage.getOldEmailIdTextBox(), SharedProperties.driver);
+            SharedProperties.sendKeys(loginPage.getOldEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
+            SharedProperties.sendKeys(loginPage.getPasswordTextBox(), testDetailsDTO.getPasswordList(), SharedProperties.driver);
+            SharedProperties.Click(loginPage.getOldSignInBtn(), SharedProperties.driver);
+            Thread.sleep(5000);
+        }
+        else
+        {
+            SharedProperties.clear(loginPage.getEmailIdTextBox(), SharedProperties.driver);
+            SharedProperties.sendKeys(loginPage.getEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
+            SharedProperties.sendKeys(loginPage.getPasswordTextBox(), testDetailsDTO.getPasswordList(), SharedProperties.driver);
+            SharedProperties.Click(loginPage.getSignInBtn(), SharedProperties.driver);
+            Thread.sleep(5000);
+        }
 
         //Code to add more quantity
         //code to redeem reward points
         //code to add coupons
 
-        SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
-        Thread.sleep(2000);
+        /*SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
+        Thread.sleep(5000);*/
         SharedProperties.Click(addresspage.addressPage(), SharedProperties.driver);
         Thread.sleep(5000);
-        SharedProperties.Click(paymentpage.cashOnDelivery(), SharedProperties.driver);
+        if (SharedProperties.driver.findElement(By.xpath("//*[@id=\"nav\"]/li[5]")).getText() == "CASH ON DELIVERY")
+        {
+           SharedProperties.Click(paymentpage.cashOnDelivery(), SharedProperties.driver);
+        }
+        else if (SharedProperties.driver.findElement(By.xpath("//*[@id=\"nav\"]/li[6]")).getText() == "CASH ON DELIVERY")
+        {
+            SharedProperties.Click(paymentpage.getCod1stDiv(), SharedProperties.driver);
+        }
+        else {
+            SharedProperties.Click(paymentpage.getCod2ndDiv(), SharedProperties.driver);
+        }
+        /*SharedProperties.Click(paymentpage.cashOnDelivery(), SharedProperties.driver);*/
         Thread.sleep(5000);
         SharedProperties.Click(paymentpage.payOnDelivery(), SharedProperties.driver);
 
@@ -117,9 +140,8 @@ public class ExistingCodPlacement extends SharedProperties {
             System.out.print("DB verification Successful");
         } else {
             SendMail.sendmail("DB Verification failed for Existing Cod order");
-            ITestResult result = null;
             result.setStatus(ITestResult.FAILURE);
+            Thread.sleep(5000);
         }
-        Thread.sleep(5000);
     }
 }

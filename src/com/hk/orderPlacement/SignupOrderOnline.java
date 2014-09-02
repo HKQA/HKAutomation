@@ -1,6 +1,6 @@
 package com.hk.orderPlacement;
 
-import com.hk.commonProperties.SendMail;
+import com.hk.reportAndMailGenerator.SendMail;
 import com.hk.commonProperties.SharedProperties;
 import com.hk.elementLocators.*;
 import com.hk.excel.ExcelServiceImplOld;
@@ -15,6 +15,7 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 import org.testng.annotations.*;
 
 import java.io.File;
@@ -36,7 +37,7 @@ public class SignupOrderOnline extends SharedProperties {
     CartPage cartpage = new CartPage();
     AddressPage addresspage = new AddressPage();
     PaymentPage paymentpage = new PaymentPage();
-
+    ITestResult result = Reporter.getCurrentTestResult();
 
     @Parameters({"BaseURL", "Browser"})
     @BeforeClass
@@ -49,7 +50,7 @@ public class SignupOrderOnline extends SharedProperties {
     public void doAfter(ITestResult result) throws IOException {
         if (result.getStatus() == ITestResult.FAILURE) {
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\signupCODFailure.jpg"));
+            FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\SignupOrderOnline.jpg"));
         }
     }
 
@@ -92,7 +93,7 @@ public class SignupOrderOnline extends SharedProperties {
         //code to redeem reward points
         //code to add coupons
 
-        SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
+        SharedProperties.Click(cartpage.getSigninLink(), SharedProperties.driver);
         Thread.sleep(2000);
         SharedProperties.Click(signupage.signupPage(), SharedProperties.driver);
         SharedProperties.sendKeys(signupage.name(), "Test", SharedProperties.driver);
@@ -100,19 +101,16 @@ public class SignupOrderOnline extends SharedProperties {
         SharedProperties.sendKeys(signupage.password(), "123456", SharedProperties.driver);
         SharedProperties.sendKeys(signupage.confirmpassword(), "123456", SharedProperties.driver);
         SharedProperties.Click(signupage.createaccount(), SharedProperties.driver);
-        ExcelServiceImplOld.updateCellContent(PropertyHelper.readProperty("SignUpExcel"), "1", 0, 1);
-
-        Thread.sleep(2000);
+        ExcelServiceImplOld.updateCellContent(PropertyHelper.readProperty("productIdExcel"), "1", 1, 3);
         SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
         Thread.sleep(2000);
-        SharedProperties.sendKeys(addresspage.name(), "Nitin", SharedProperties.driver);
+        SharedProperties.sendKeys(addresspage.name(), "Test", SharedProperties.driver);
         SharedProperties.sendKeys(addresspage.mobile(), "9999999999", SharedProperties.driver);
         SharedProperties.sendKeys(addresspage.address(), "Test", SharedProperties.driver);
         SharedProperties.sendKeys(addresspage.pincode(), "122001", SharedProperties.driver);
         Thread.sleep(2000);
         SharedProperties.Click(addresspage.delivertoaddress(), SharedProperties.driver);
         Thread.sleep(5000);
-
 
         WebElement dummypayment = SharedProperties.driver.findElement(By.xpath("html/body/div[1]/div[2]/div[1]/div[5]/div[2]/div/div[2]/form[1]/div[1]/div/div[4]/input"));
         if (dummypayment == null) {
@@ -122,7 +120,6 @@ public class SignupOrderOnline extends SharedProperties {
         } else {
             SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[1]/div[5]/div[2]/div/div[2]/form[1]/div[1]/div/div[2]/input")).click();
         }
-
         Thread.sleep(2000);
         SharedProperties.Click(paymentpage.proceedToPayment(), SharedProperties.driver);
         Thread.sleep(2000);
@@ -133,9 +130,8 @@ public class SignupOrderOnline extends SharedProperties {
             System.out.print("DB verification Successful");
         } else {
             SendMail.sendmail("DB verification failed for Signup online order");
-            ITestResult result = null;
             result.setStatus(ITestResult.FAILURE);
+            Thread.sleep(5000);
         }
-        Thread.sleep(5000);
     }
 }

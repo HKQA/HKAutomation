@@ -1,8 +1,6 @@
-package com.hk.orderPlacement;
+package com.hk.reportAndMailGenerator;
 
-import com.hk.commonProperties.SendMail;
 import com.hk.property.PropertyHelper;
-import org.testng.annotations.AfterSuite;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -11,26 +9,23 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 /**
- * Created with IntelliJ IDEA.
- * User: Nitin Kukna
- * Date: 7/24/14
- * Time: 4:21 PM
+ * Created by Nitin Kukna on 8/7/2014.
  */
-
-public class SuiteReport {
-
-
-    @AfterSuite
-    public static void ZipDirectory() throws IOException {
+public class ZipDirectory {
+    public static void zipDirectory() throws IOException {
         File directoryToZip = new File(PropertyHelper.readProperty("reportFolder"));
 
         List<File> fileList = new ArrayList<File>();
         System.out.println("---Getting references to all files in: " + directoryToZip.getCanonicalPath());
         getAllFiles(directoryToZip, fileList);
         System.out.println("---Creating zip file");
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException ie) {
+            System.out.println(ie.getMessage());
+        }
         writeZipFile(directoryToZip, fileList);
         System.out.println("---Done");
-        SendMail.sendmail("Please find the attached report of test cases",PropertyHelper.readProperty("screenshotFolder") ,PropertyHelper.readProperty("reportFolder") + "report.zip");
         System.out.println("Finishing");
     }
 
@@ -96,4 +91,3 @@ public class SuiteReport {
         fis.close();
     }
 }
-

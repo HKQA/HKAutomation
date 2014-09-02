@@ -2,31 +2,29 @@
 
 <suite name="TestNG Test">
     <parameter name="BaseURL" value="http://www.centralhk.com:9090"/>
-    <parameter name="AdminBaseURL" value="www.admincentralhk.com:8080"/>
-
-
-    <parameter name="Browser" value="firefox"/>
+    <parameter name="Browser" value="chrome"/>
     <parameter name="useDefaultListeners" value="false"/>
     <listeners>
         <listener class-name="org.uncommons.reportng.HTMLReporter"/>
         <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+        <!--<listener class-name="com.hk.reportAndMailGenerator.ReportListener"/>-->
     </listeners>
-  <!--   <test name="ExistingUserOrderOnline">
+    <!-- <test name="ExistingUserOrderOnline">
        <classes>
            <class name="com.hk.orderPlacement.ExistingOnlineOrder"/>
        </classes>
-   </test>-->
-    <test name="com.hk.orderPlacement.ExistingOnlineOrder">
+   </test> -->
+    <test name="com.hk.orderPlacement.SignupCodOrder">
         <classes>
-            <class name="com.hk.orderCheckout.variantCheckout"/>
+            <class name="com.hk.orderPlacement.SignupCodOrder"/>
         </classes>
     </test>
-    <!--<test name="ExistingUserOrderCOD">
+   <!-- <test name="ExistingOnlineOrder">
             <classes>
-                <class name="com.hk.orderPlacement.ExistingUserOrderCOD"/>
+                <class name="com.hk.orderPlacement.ExistingOnlineOrder"/>
             </classes>
-        </test>
-        <test name="SignUpAndOrderCard">
+        </test>-->
+        <!--<test name="SignUpAndOrderCard">
             <classes>
                 <class name="com.hk.orderPlacement.SignUpAndOrderCard"/>
             </classes>
@@ -36,9 +34,4 @@
                 <class name="com.hk.orderPlacement.SignUpAndOrderCOD"/>
             </classes>
         </test>-->
-   <!-- <test name="com.hk.orderPlacement.SuiteReport">
-        <classes>
-            <class name="com.hk.orderPlacement.SuiteReport"/>
-        </classes>
-    </test>-->
 </suite>

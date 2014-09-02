@@ -8,9 +8,15 @@ package com.hk.elementLocators;
  * To change this template use File | Settings | File Templates.
  */
 public class LoginPage {
-    private String emailIdTextBox="//*[@id=\"signInForm\"]/input[3]";
-    private String passwordTextBox="//*[@id=\"password\"]";
-    private String signInBtn="//*[@id=\"signInForm\"]/input[5]";
+    private String guestEmailIdTextBox = "//*[@id=\"guestSignInForm\"]/input[3]";
+    private String emailIdTextBox = "//*[@id=\"loginForm\"]/input[3]";
+    private String oldEmailIdTextBox = "//*[@id=\"signInForm\"]/input[3]";
+    /*private String passwordTextBox="/*//*[@id=\"loginForm\"]/input[5]";*/
+    private String passwordTextBox = "//*[@id=\"password\"]";
+    private String guestSigninBtn = "//*[@id=\"guestSignInForm\"]/input[4]";
+    private String signInBtn = "//*[@id=\"loginForm\"]/input[5]";
+    private String oldSignInBtn = "//*[@id=\"signInForm\"]/input[5]";
+    private String signInCheckbox = "//*[@id=\"guestSignInForm\"]/label[2]/input";
 
 
     public String getEmailIdTextBox() {
@@ -21,8 +27,27 @@ public class LoginPage {
         return passwordTextBox;
     }
 
+    public String getGuestEmailIdTextBox() {
+        return guestEmailIdTextBox;
+    }
+
     public String getSignInBtn() {
         return signInBtn;
+    }
+
+    public String getSignInCheckbox() {
+        return signInCheckbox;
+    }
+
+    public String getOldEmailIdTextBox() {
+        return oldEmailIdTextBox;
+    }
+
+    public String getOldSignInBtn() {
+        return oldSignInBtn;
+    }
+    public String getGuestSigninBtn() {
+        return guestSigninBtn;
     }
 }
 
