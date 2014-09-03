@@ -84,8 +84,8 @@ public class variantCheckout /*extends ExistingOnlineOrder */{
         /*EOO.login(1L);*/
 
         SharedProperties.openBrowser(AdminBaseURL, browser);
-        SharedProperties.sendKeys(loginpage.getUserName(), PropertyHelper.readProperty("email_id"), SharedProperties.driver);
-        SharedProperties.sendKeys(loginpage.getPassword(), PropertyHelper.readProperty("password"), SharedProperties.driver);
+        SharedProperties.sendKeys(loginpage.getUserName(), "nitin.kukna@healthkart.com", SharedProperties.driver);
+        SharedProperties.sendKeys(loginpage.getPassword(), "23031988", SharedProperties.driver);
         SharedProperties.Click(loginpage.getLoginbtn(), SharedProperties.driver);
 
         for (String shippingOrderId : SoDetails.Sodetails().getShippingOrderIdList()) {
@@ -95,19 +95,22 @@ public class variantCheckout /*extends ExistingOnlineOrder */{
             if (SoDetails.soDetailsdto.getWarehouseId().contains(10)) {
                 System.out.print("\n Selected GGN Aqua Warehouse");
 
-                ((JavascriptExecutor)SharedProperties.driver).executeScript("$('select[id=\"selectWHForm\"]').click();");
-                new Select(SharedProperties.driver.findElement(By.id("//*[@id=\"selectWHForm\"]/select"))).selectByVisibleText("GGN Aqua Warehouse");
-                Thread.sleep(2000);
+                /*((JavascriptExecutor)SharedProperties.driver).executeScript("$('select[id=\"selectWHForm\"]').click();");
+                new Select(SharedProperties.driver.findElement(By.id("/*//*[@id=\"selectWHForm\"]/select"))).selectByVisibleText("GGN Aqua Warehouse");*/
+                WebElement WarehouseDropDownList = SharedProperties.driver.findElement(By.xpath("//*[@id=\"selectWHForm\"]/select"));
+                Select clickWarehouse = new Select(WarehouseDropDownList);
+                clickWarehouse.selectByVisibleText("GGN Aqua Warehouse");
                 SharedProperties.Click(adminhome.getSaveBtn(), SharedProperties.driver);
+                Thread.sleep(2000);
 
             } else {
                 System.out.print("\n MUM Aqua Warehouse");
 
-                ((JavascriptExecutor) SharedProperties.driver).executeScript("$('select[id=\"selectWHForm\"]').click();");
-                Thread.sleep(2000);
-                new Select(SharedProperties.driver.findElement(By.xpath("//*[@id=\"selectWHForm\"]/select"))).selectByVisibleText("MUM Aqua Warehouse");
-                Thread.sleep(2000);
+                WebElement WarehouseDropDownList = SharedProperties.driver.findElement(By.xpath("//*[@id=\"selectWHForm\"]/select"));
+                Select clickWarehouse = new Select(WarehouseDropDownList);
+                clickWarehouse.selectByVisibleText("MUM Aqua Warehouse");
                 SharedProperties.Click(adminhome.getSaveBtn(), SharedProperties.driver);
+                Thread.sleep(2000);
 
             }
 
@@ -148,21 +151,20 @@ public class variantCheckout /*extends ExistingOnlineOrder */{
                 if (SoDetails.soDetailsdto.getWarehouseId().contains(10)) {
                     System.out.print("\n GGN Bright Warehouse");
 
-                    ((JavascriptExecutor) SharedProperties.driver).executeScript("$('select[id=\"selectWHForm\"]').click();");
-                    Thread.sleep(2000);
-                    new Select(SharedProperties.driver.findElement(By.id("//*[@id=\"selectWHForm\"]/select"))).selectByVisibleText("GGN Bright Warehouse");
-                    Thread.sleep(2000);
+                    WebElement WarehouseDropDownList = SharedProperties.driver.findElement(By.xpath("//*[@id=\"selectWHForm\"]/select"));
+                    Select clickWarehouse = new Select(WarehouseDropDownList);
+                    clickWarehouse.selectByVisibleText("GGN Bright Warehouse");
                     SharedProperties.Click(adminhome.getSaveBtn(), SharedProperties.driver);
+                    Thread.sleep(2000);
 
                 } else {
                     System.out.print("\n MUM Bright Warehouse");
 
-                    ((JavascriptExecutor) SharedProperties.driver).executeScript("$('select[id=\"selectWHForm\"]').click();");
-                    Thread.sleep(2000);
-                    new Select(SharedProperties.driver.findElement(By.xpath("//*[@id=\"selectWHForm\"]/select"))).selectByVisibleText("MUM Bright Warehouse");
-                    Thread.sleep(2000);
+                    WebElement WarehouseDropDownList = SharedProperties.driver.findElement(By.xpath("//*[@id=\"selectWHForm\"]/select"));
+                    Select clickWarehouse = new Select(WarehouseDropDownList);
+                    clickWarehouse.selectByVisibleText("MUM Bright Warehouse");
                     SharedProperties.Click(adminhome.getSaveBtn(), SharedProperties.driver);
-
+                    Thread.sleep(2000);
                 }
                 SharedProperties.clickWithCss(checkoutorders.getCheckoutOrder(), SharedProperties.driver);
                 SharedProperties.sendKeys(checkoutorders.getCheckoutOrderTxt(), foreignSiCli, SharedProperties.driver);
