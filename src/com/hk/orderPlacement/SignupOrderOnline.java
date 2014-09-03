@@ -8,6 +8,7 @@ import com.hk.excel.TestDetailsExcelService;
 import com.hk.excel.dto.TestDetailsDTO;
 import com.hk.jdbc.OrderDetailsVerify;
 import com.hk.property.PropertyHelper;
+import com.hk.util.TestUtil;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -16,6 +17,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.testng.ITestResult;
 import org.testng.Reporter;
+import org.testng.SkipException;
 import org.testng.annotations.*;
 
 import java.io.File;
@@ -44,6 +46,20 @@ public class SignupOrderOnline extends SharedProperties {
     public void g(String baseUrl, String browser) {
         this.baseUrl = baseUrl;
         this.browser = browser;
+    }
+
+    @BeforeMethod
+    public void isSkip()
+    {
+
+        if(!TestUtil.isExecutable("SignupOrderOnline"))
+        {
+
+            System.out.println("SignupOrderOnline would be skipped");
+            throw new SkipException("Skipping the test case as RunMode is No");
+
+        }
+
     }
 
     @AfterMethod

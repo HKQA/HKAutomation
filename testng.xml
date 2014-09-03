@@ -15,10 +15,15 @@
        </classes>
    </test> -->
     <test name="com.hk.orderPlacement.SignupCodOrder">
+        <packages>
+            <package name="com.hk.orderPlacement"/>
+        </packages>
+    </test>
+    <!--<test name="com.hk.orderPlacement.SignupCodOrder">
         <classes>
             <class name="com.hk.orderPlacement.SignupCodOrder"/>
         </classes>
-    </test>
+    </test>-->
    <!-- <test name="ExistingOnlineOrder">
             <classes>
                 <class name="com.hk.orderPlacement.ExistingOnlineOrder"/>
