@@ -22,7 +22,7 @@ public class SoDetails {
     public static SoDetailsDTO Sodetails() {
 
         String query = "select s.warehouse_id,s.gateway_order_id from base_order b join shipping_order s on b.id=s.base_order_id " +
-                "where s.shipping_order_status_id=120 and b.gateway_order_id='HK66472-564682'";
+                "where s.shipping_order_status_id=120 and b.gateway_order_id='HK35766-689444'";
         return
                 JdbcConnectionFile.readJdbcprop(query, new ResultSetExtractor<SoDetailsDTO>() {
 

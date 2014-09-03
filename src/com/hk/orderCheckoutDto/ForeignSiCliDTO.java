@@ -14,33 +14,33 @@ import java.util.Set;
  */
 public class ForeignSiCliDTO {
 
-    private List<String> foreignBoIdList = new ArrayList<String>();
-    private Set<String> foreignSoIdList = new HashSet<String>();
-    private Set<String> foreignSoGatewayIdList = new HashSet<String>();
+    private String foreignBoId ;
+    private String foreignSoId;
+    private String foreignSoGatewayId;
     private Set<String> foreignBarcodeList = new HashSet<String>();
 
-    public List<String> getForeignBoIdList() {
-        return foreignBoIdList;
+    public String getForeignBoId() {
+        return foreignBoId;
     }
 
-    public void setForeignBoIdList(List<String> foreignBoIdList) {
-        this.foreignBoIdList = foreignBoIdList;
+    public void setForeignBoId(String foreignBoId) {
+        this.foreignBoId = foreignBoId;
     }
 
-    public Set<String> getForeignSoIdList() {
-        return foreignSoIdList;
+    public String getForeignSoId() {
+        return foreignSoId;
     }
 
-    public void setForeignSoIdList(Set<String> foreignSoIdList) {
-        this.foreignSoIdList = foreignSoIdList;
+    public void setForeignSoId(String foreignSoId) {
+        this.foreignSoId = foreignSoId;
     }
 
-    public Set<String> getForeignSoGatewayIdList() {
-        return foreignSoGatewayIdList;
+    public String getForeignSoGatewayId() {
+        return foreignSoGatewayId;
     }
 
-    public void setForeignSoGatewayIdList(Set<String> foreignSoGatewayIdList) {
-        this.foreignSoGatewayIdList = foreignSoGatewayIdList;
+    public void setForeignSoGatewayId(String foreignSoGatewayId) {
+        this.foreignSoGatewayId = foreignSoGatewayId;
     }
 
     public Set<String> getForeignBarcodeList() {

@@ -139,14 +139,13 @@ public class variantCheckout /*extends ExistingOnlineOrder */{
             System.out.print("\n Aqua using SO2: " + SoDetails.Sodetails().getShippingOrderIdList());
 
             //check for warehouse first
-            for (String foreignSiCli : BrightDetails.ForeignSiCli().getForeignSoGatewayIdList()) {
-
-                System.out.print("\n Bright Foreign SO2: " + BrightDetails.foreignSiCliDTO.getForeignSoGatewayIdList());
+                BrightDetails.ForeignSiCli(shippingOrderId);
+                System.out.print("\n Bright Foreign SO2: " + BrightDetails.foreignSiCliDTO.getForeignSoGatewayId());
                 System.out.print("\n using barcode2: " + BrightDetails.foreignSiCliDTO.getForeignBarcodeList());
                 SharedProperties.driver.navigate().to(PropertyHelper.readProperty("brightUrl"));
 
-                SharedProperties.sendKeys(loginpage.getUserName(), PropertyHelper.readProperty("email_id"), SharedProperties.driver);
-                SharedProperties.sendKeys(brighthome.getPassWd(), PropertyHelper.readProperty("password"), SharedProperties.driver);
+                SharedProperties.sendKeys(loginpage.getUserName(), "nitin.kukna@healthkart.com", SharedProperties.driver);
+                SharedProperties.sendKeys(brighthome.getPassWd(), "23031988", SharedProperties.driver);
                 SharedProperties.Click(brighthome.getLoginBtn(), SharedProperties.driver);
                 if (SoDetails.soDetailsdto.getWarehouseId().contains(10)) {
                     System.out.print("\n GGN Bright Warehouse");
@@ -167,7 +166,7 @@ public class variantCheckout /*extends ExistingOnlineOrder */{
                     Thread.sleep(2000);
                 }
                 SharedProperties.clickWithCss(checkoutorders.getCheckoutOrder(), SharedProperties.driver);
-                SharedProperties.sendKeys(checkoutorders.getCheckoutOrderTxt(), foreignSiCli, SharedProperties.driver);
+                SharedProperties.sendKeys(checkoutorders.getCheckoutOrderTxt(), BrightDetails.foreignSiCliDTO.getForeignSoGatewayId(), SharedProperties.driver);
                 SharedProperties.Click(checkoutorders.getCheckoutOrderBtn(), SharedProperties.driver);
 
 
@@ -177,11 +176,11 @@ public class variantCheckout /*extends ExistingOnlineOrder */{
                     Thread.sleep(2000);
                     SharedProperties.driver.findElement(By.xpath("//*[@id=\"upc\"]")).sendKeys(Keys.ENTER);
                 }
-            }
+
 
             SharedProperties.driver.navigate().to(PropertyHelper.readProperty("adminUrl"));
-            SharedProperties.sendKeys(loginpage.getUserName(), PropertyHelper.readProperty("email_id"), SharedProperties.driver);
-            SharedProperties.sendKeys(loginpage.getPassword(), PropertyHelper.readProperty("password"), SharedProperties.driver);
+            SharedProperties.sendKeys(loginpage.getUserName(), "nitin.kukna@healthkart.com", SharedProperties.driver);
+            SharedProperties.sendKeys(loginpage.getPassword(), "23031988", SharedProperties.driver);
             Thread.sleep(3000);
             SharedProperties.Click(loginpage.getLoginbtn(), SharedProperties.driver);
             SharedProperties.Click(adminhome.getWareHouseLink(), SharedProperties.driver);
@@ -226,7 +225,6 @@ public class variantCheckout /*extends ExistingOnlineOrder */{
             SharedProperties.Click(deliveryawaitingqueue.getMarkOrdersAsDelivered(), SharedProperties.driver);
 
             System.out.print("\n ************* SO Delivered *************");
-
         }
     }
 
