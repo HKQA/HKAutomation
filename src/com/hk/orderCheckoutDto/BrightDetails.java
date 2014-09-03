@@ -23,7 +23,6 @@ public class BrightDetails {
                 "from shipping_order s join cart_line_item c on s.base_order_id=c.order_id \n" +
                 "join foreign_si_cli f on c.id=f.cart_line_item_id \n" +
                 "where s.gateway_order_id ='"+soGatewayId+"'";
-        System.out.print("\n Util print:- " +AutoStringUtils.getListAsString(SoDetails.soDetailsdto.getShippingOrderIdList(), ',', '"'));
 
         return
                 JdbcConnectionFile.readJdbcprop(query, new ResultSetExtractor<ForeignSiCliDTO>() {

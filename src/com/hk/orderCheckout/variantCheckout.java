@@ -4,30 +4,23 @@ package com.hk.orderCheckout;
 import com.hk.aquaElementLocators.*;
 import com.hk.brightElementLocators.BrightHome;
 import com.hk.brightElementLocators.CheckoutOrders;
+import com.hk.commonProperties.SharedProperties;
 import com.hk.excel.ExcelServiceImplOld;
 import com.hk.orderCheckoutDto.BrightDetails;
-import com.hk.commonProperties.SharedProperties;
-
 import com.hk.orderCheckoutDto.SoDetails;
 import com.hk.orderCheckoutDto.SoDetailsDTO;
 import com.hk.orderPlacement.ExistingOnlineOrder;
 import com.hk.property.PropertyHelper;
-import com.hk.util.AutoStringUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -37,7 +30,7 @@ import java.util.concurrent.TimeUnit;
  * Time: 6:08 PM
  * To change this template use File | Settings | File Templates.
  */
-public class variantCheckout /*extends ExistingOnlineOrder */{
+public class variantCheckout /*extends ExistingOnlineOrder */ {
     String AdminBaseURL;
     String browser;
     private int delay;
@@ -88,11 +81,14 @@ public class variantCheckout /*extends ExistingOnlineOrder */{
         SharedProperties.sendKeys(loginpage.getPassword(), "23031988", SharedProperties.driver);
         SharedProperties.Click(loginpage.getLoginbtn(), SharedProperties.driver);
 
-        for (String shippingOrderId : SoDetails.Sodetails().getShippingOrderIdList()) {
-            System.out.print("\n Warehouse id:- " +SoDetails.soDetailsdto.getWarehouseId());
+        for (SoDetailsDTO soDetailsDTO : SoDetails.Sodetails()) {
+//        for (String shippingOrderId : SoDetails.Sodetails().getShippingOrderIdList()) {
+            String shippingOrderId = soDetailsDTO.getSoGatewayOrderId();
+            Integer warehouseId = soDetailsDTO.getWarehouseId();
+            System.out.print("\n Warehouse id:- " + warehouseId);
 
 
-            if (SoDetails.soDetailsdto.getWarehouseId().contains(10)) {
+            if (warehouseId.equals(10)) {
                 System.out.print("\n Selected GGN Aqua Warehouse");
 
                 /*((JavascriptExecutor)SharedProperties.driver).executeScript("$('select[id=\"selectWHForm\"]').click();");
@@ -135,47 +131,46 @@ public class variantCheckout /*extends ExistingOnlineOrder */{
             SharedProperties.Click(printprick.getJobDoneClearQueBtn(), SharedProperties.driver);
             Thread.sleep(4000);
 
-            System.out.print("\n Aqua using SO1: " + SoDetails.soDetailsdto.getShippingOrderIdList());
-            System.out.print("\n Aqua using SO2: " + SoDetails.Sodetails().getShippingOrderIdList());
+            System.out.print("\n Aqua using SO1: " + shippingOrderId);
 
             //check for warehouse first
-                BrightDetails.ForeignSiCli(shippingOrderId);
-                System.out.print("\n Bright Foreign SO2: " + BrightDetails.foreignSiCliDTO.getForeignSoGatewayId());
-                System.out.print("\n using barcode2: " + BrightDetails.foreignSiCliDTO.getForeignBarcodeList());
-                SharedProperties.driver.navigate().to(PropertyHelper.readProperty("brightUrl"));
+            BrightDetails.ForeignSiCli(shippingOrderId);
+            System.out.print("\n Bright Foreign SO2: " + BrightDetails.foreignSiCliDTO.getForeignSoGatewayId());
+            System.out.print("\n using barcode2: " + BrightDetails.foreignSiCliDTO.getForeignBarcodeList());
+            SharedProperties.driver.navigate().to(PropertyHelper.readProperty("brightUrl"));
 
-                SharedProperties.sendKeys(loginpage.getUserName(), "nitin.kukna@healthkart.com", SharedProperties.driver);
-                SharedProperties.sendKeys(brighthome.getPassWd(), "23031988", SharedProperties.driver);
-                SharedProperties.Click(brighthome.getLoginBtn(), SharedProperties.driver);
-                if (SoDetails.soDetailsdto.getWarehouseId().contains(10)) {
-                    System.out.print("\n GGN Bright Warehouse");
+            SharedProperties.sendKeys(loginpage.getUserName(), "nitin.kukna@healthkart.com", SharedProperties.driver);
+            SharedProperties.sendKeys(brighthome.getPassWd(), "23031988", SharedProperties.driver);
+            SharedProperties.Click(brighthome.getLoginBtn(), SharedProperties.driver);
+            if (warehouseId.equals(10)) {
+                System.out.print("\n GGN Bright Warehouse");
 
-                    WebElement WarehouseDropDownList = SharedProperties.driver.findElement(By.xpath("//*[@id=\"selectWHForm\"]/select"));
-                    Select clickWarehouse = new Select(WarehouseDropDownList);
-                    clickWarehouse.selectByVisibleText("GGN Bright Warehouse");
-                    SharedProperties.Click(adminhome.getSaveBtn(), SharedProperties.driver);
-                    Thread.sleep(2000);
+                WebElement WarehouseDropDownList = SharedProperties.driver.findElement(By.xpath("//*[@id=\"selectWHForm\"]/select"));
+                Select clickWarehouse = new Select(WarehouseDropDownList);
+                clickWarehouse.selectByVisibleText("GGN Bright Warehouse");
+                SharedProperties.Click(adminhome.getSaveBtn(), SharedProperties.driver);
+                Thread.sleep(2000);
 
-                } else {
-                    System.out.print("\n MUM Bright Warehouse");
+            } else {
+                System.out.print("\n MUM Bright Warehouse");
 
-                    WebElement WarehouseDropDownList = SharedProperties.driver.findElement(By.xpath("//*[@id=\"selectWHForm\"]/select"));
-                    Select clickWarehouse = new Select(WarehouseDropDownList);
-                    clickWarehouse.selectByVisibleText("MUM Bright Warehouse");
-                    SharedProperties.Click(adminhome.getSaveBtn(), SharedProperties.driver);
-                    Thread.sleep(2000);
-                }
-                SharedProperties.clickWithCss(checkoutorders.getCheckoutOrder(), SharedProperties.driver);
-                SharedProperties.sendKeys(checkoutorders.getCheckoutOrderTxt(), BrightDetails.foreignSiCliDTO.getForeignSoGatewayId(), SharedProperties.driver);
-                SharedProperties.Click(checkoutorders.getCheckoutOrderBtn(), SharedProperties.driver);
+                WebElement WarehouseDropDownList = SharedProperties.driver.findElement(By.xpath("//*[@id=\"selectWHForm\"]/select"));
+                Select clickWarehouse = new Select(WarehouseDropDownList);
+                clickWarehouse.selectByVisibleText("MUM Bright Warehouse");
+                SharedProperties.Click(adminhome.getSaveBtn(), SharedProperties.driver);
+                Thread.sleep(2000);
+            }
+            SharedProperties.clickWithCss(checkoutorders.getCheckoutOrder(), SharedProperties.driver);
+            SharedProperties.sendKeys(checkoutorders.getCheckoutOrderTxt(), BrightDetails.foreignSiCliDTO.getForeignSoGatewayId(), SharedProperties.driver);
+            SharedProperties.Click(checkoutorders.getCheckoutOrderBtn(), SharedProperties.driver);
 
 
-                for (String barcode : BrightDetails.foreignSiCliDTO.getForeignBarcodeList()) {
+            for (String barcode : BrightDetails.foreignSiCliDTO.getForeignBarcodeList()) {
 
-                    SharedProperties.sendKeys(checkoutorders.getCheckoutOrderBar(), barcode, SharedProperties.driver);
-                    Thread.sleep(2000);
-                    SharedProperties.driver.findElement(By.xpath("//*[@id=\"upc\"]")).sendKeys(Keys.ENTER);
-                }
+                SharedProperties.sendKeys(checkoutorders.getCheckoutOrderBar(), barcode, SharedProperties.driver);
+                Thread.sleep(2000);
+                SharedProperties.driver.findElement(By.xpath("//*[@id=\"upc\"]")).sendKeys(Keys.ENTER);
+            }
 
 
             SharedProperties.driver.navigate().to(PropertyHelper.readProperty("adminUrl"));
