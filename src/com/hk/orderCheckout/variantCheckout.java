@@ -101,6 +101,7 @@ public class variantCheckout /*extends ExistingOnlineOrder */ {
 
             } else {
                 System.out.print("\n MUM Aqua Warehouse");
+                SharedProperties.clickWithCss(adminhome.getAdminHomeLink(), SharedProperties.driver);
 
                 WebElement WarehouseDropDownList = SharedProperties.driver.findElement(By.xpath("//*[@id=\"selectWHForm\"]/select"));
                 Select clickWarehouse = new Select(WarehouseDropDownList);
@@ -118,9 +119,8 @@ public class variantCheckout /*extends ExistingOnlineOrder */ {
             SharedProperties.Click(printprick.getBoGatewaySearchBtn(), SharedProperties.driver);
             Thread.sleep(3000);
             /*String SoId = SharedProperties.driver.findElement(By.xpath("/*//*[@id=\"shippingOrderDetail-2313803\"]/div[5]/strong")).getText();
-            Thread.sleep(3000);
+            Thread.sleep(3000);*/
 
-            */
             SharedProperties.Class(printprick.getCheckboxBo(), SharedProperties.driver);
             SharedProperties.Click(printprick.getBatchPrintBtn(), SharedProperties.driver);
             Thread.sleep(5000);
@@ -141,9 +141,8 @@ public class variantCheckout /*extends ExistingOnlineOrder */ {
             SharedProperties.Click("/html/body/div/div[1]/div/ul/li[8]/a",SharedProperties.driver);
             SharedProperties.sendKeys("/html/body/div[2]/div[2]/form/fieldset/ul/div/li[1]/input", BrightDetails.foreignSiCliDTO.getForeignSoGatewayId(),SharedProperties.driver);
             SharedProperties.Click("/html/body/div[2]/div[2]/form/fieldset/div/input", SharedProperties.driver);
-            String ForeignWarehouseId = SharedProperties.driver.findElement(By.xpath("//*[@id=\"shippingOrderDetail-2363935\"]/div[1]/strong[2]")).getText();
+            String ForeignWarehouseId = SharedProperties.driver.findElement(By.xpath("//*[@id=\"shippingOrderDetail-"+BrightDetails.foreignSiCliDTO.getForeignSoId()+"\"]/div[1]/strong[2]")).getText();
             SharedProperties.Click("/html/body/div[2]/div[1]/div/ul/li[1]/a",SharedProperties.driver);
-
 
 
             /*SharedProperties.sendKeys(loginpage.getUserName(), "saurabh.nagpal@healthkart.com", SharedProperties.driver);
@@ -182,10 +181,10 @@ public class variantCheckout /*extends ExistingOnlineOrder */ {
 
 
             SharedProperties.driver.navigate().to(PropertyHelper.readProperty("adminUrl"));
-            SharedProperties.sendKeys(loginpage.getUserName(), "saurabh.nagpal@healthkart.com", SharedProperties.driver);
+            /*SharedProperties.sendKeys(loginpage.getUserName(), "saurabh.nagpal@healthkart.com", SharedProperties.driver);
             SharedProperties.sendKeys(loginpage.getPassword(), "abcde12", SharedProperties.driver);
             Thread.sleep(3000);
-            SharedProperties.Click(loginpage.getLoginbtn(), SharedProperties.driver);
+            SharedProperties.Click(loginpage.getLoginbtn(), SharedProperties.driver);*/
             SharedProperties.Click(adminhome.getWareHouseLink(), SharedProperties.driver);
             Thread.sleep(2000);
             SharedProperties.Click(createupdateshipment.getCreateUpdateShipmentLink(), SharedProperties.driver);

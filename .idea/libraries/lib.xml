@@ -1,16 +1,10 @@
 <component name="libraryTable">
   <library name="lib">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/mysql connector/mysql-connector-java-5.0.8/src/lib/aspectjrt.jar!/" />
-      <root url="jar://$PROJECT_DIR$/mysql connector/mysql-connector-java-5.0.8/src/lib/junit.jar!/" />
-      <root url="jar://$PROJECT_DIR$/mysql connector/mysql-connector-java-5.0.8/src/lib/jboss-common-jdbc-wrapper.jar!/" />
-      <root url="jar://$PROJECT_DIR$/mysql connector/mysql-connector-java-5.0.8/src/lib/jta-spec1_0_1.jar!/" />
-      <root url="jar://$PROJECT_DIR$/mysql connector/mysql-connector-java-5.0.8/src/lib/c3p0-0.9.1-pre6.jar!/" />
-      <root url="jar://$PROJECT_DIR$/mysql connector/mysql-connector-java-5.0.8/src/lib/log4j-1.2.9.jar!/" />
-      <root url="jar://$PROJECT_DIR$/mysql connector/mysql-connector-java-5.0.8/src/lib/aspectjtools.jar!/" />
-      <root url="jar://$PROJECT_DIR$/mysql connector/mysql-connector-java-5.0.8/src/lib/ant-contrib.jar!/" />
-      <root url="jar://$PROJECT_DIR$/mysql connector/mysql-connector-java-5.0.8/src/lib/commons-logging.jar!/" />
-      <root url="jar://$PROJECT_DIR$/mysql connector/mysql-connector-java-5.0.8/src/lib/jdbc2_0-stdext.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/poi-3.10.1/lib/commons-logging-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/poi-3.10.1/lib/log4j-1.2.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/poi-3.10.1/lib/commons-codec-1.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/poi-3.10.1/lib/junit-4.11.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -14,6 +14,11 @@ public class AdminHome {
     private String selectWh ="//*[@id=\"selectWHForm\"]/select";
     private String wareHouseLink="/html/body/div/div[1]/div[1]/ul/li[10]/a";
     private String saveBtn = "//*[@id=\"selectWHForm\"]/input";
+    private String adminHomeLink ="a[href*='SearchOrder.action']";
+
+    public String getAdminHomeLink() {
+        return adminHomeLink;
+    }
 
     public String getSaveBtn() {
         return saveBtn;
