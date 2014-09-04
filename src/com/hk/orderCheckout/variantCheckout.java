@@ -77,8 +77,8 @@ public class variantCheckout /*extends ExistingOnlineOrder */ {
         /*EOO.login(1L);*/
 
         SharedProperties.openBrowser(AdminBaseURL, browser);
-        SharedProperties.sendKeys(loginpage.getUserName(), "nitin.kukna@healthkart.com", SharedProperties.driver);
-        SharedProperties.sendKeys(loginpage.getPassword(), "23031988", SharedProperties.driver);
+        SharedProperties.sendKeys(loginpage.getUserName(), "saurabh.nagpal@healthkart.com", SharedProperties.driver);
+        SharedProperties.sendKeys(loginpage.getPassword(), "abcde12", SharedProperties.driver);
         SharedProperties.Click(loginpage.getLoginbtn(), SharedProperties.driver);
 
         for (SoDetailsDTO soDetailsDTO : SoDetails.Sodetails()) {
@@ -138,11 +138,19 @@ public class variantCheckout /*extends ExistingOnlineOrder */ {
             System.out.print("\n Bright Foreign SO2: " + BrightDetails.foreignSiCliDTO.getForeignSoGatewayId());
             System.out.print("\n using barcode2: " + BrightDetails.foreignSiCliDTO.getForeignBarcodeList());
             SharedProperties.driver.navigate().to(PropertyHelper.readProperty("brightUrl"));
+            SharedProperties.Click("/html/body/div/div[1]/div/ul/li[8]/a",SharedProperties.driver);
+            SharedProperties.sendKeys("/html/body/div[2]/div[2]/form/fieldset/ul/div/li[1]/input", BrightDetails.foreignSiCliDTO.getForeignSoGatewayId(),SharedProperties.driver);
+            SharedProperties.Click("/html/body/div[2]/div[2]/form/fieldset/div/input", SharedProperties.driver);
+            String ForeignWarehouseId = SharedProperties.driver.findElement(By.xpath("//*[@id=\"shippingOrderDetail-2363935\"]/div[1]/strong[2]")).getText();
+            SharedProperties.Click("/html/body/div[2]/div[1]/div/ul/li[1]/a",SharedProperties.driver);
 
-            SharedProperties.sendKeys(loginpage.getUserName(), "nitin.kukna@healthkart.com", SharedProperties.driver);
-            SharedProperties.sendKeys(brighthome.getPassWd(), "23031988", SharedProperties.driver);
-            SharedProperties.Click(brighthome.getLoginBtn(), SharedProperties.driver);
-            if (warehouseId.equals(10)) {
+
+
+            /*SharedProperties.sendKeys(loginpage.getUserName(), "saurabh.nagpal@healthkart.com", SharedProperties.driver);
+            SharedProperties.sendKeys(brighthome.getPassWd(), "abcde12", SharedProperties.driver);
+            SharedProperties.Click(brighthome.getLoginBtn(), SharedProperties.driver);*/
+            /*if (warehouseId.equals(10))*/
+            if (ForeignWarehouseId.equals("GGN Bright Warehouse")){
                 System.out.print("\n GGN Bright Warehouse");
 
                 WebElement WarehouseDropDownList = SharedProperties.driver.findElement(By.xpath("//*[@id=\"selectWHForm\"]/select"));
@@ -174,8 +182,8 @@ public class variantCheckout /*extends ExistingOnlineOrder */ {
 
 
             SharedProperties.driver.navigate().to(PropertyHelper.readProperty("adminUrl"));
-            SharedProperties.sendKeys(loginpage.getUserName(), "nitin.kukna@healthkart.com", SharedProperties.driver);
-            SharedProperties.sendKeys(loginpage.getPassword(), "23031988", SharedProperties.driver);
+            SharedProperties.sendKeys(loginpage.getUserName(), "saurabh.nagpal@healthkart.com", SharedProperties.driver);
+            SharedProperties.sendKeys(loginpage.getPassword(), "abcde12", SharedProperties.driver);
             Thread.sleep(3000);
             SharedProperties.Click(loginpage.getLoginbtn(), SharedProperties.driver);
             SharedProperties.Click(adminhome.getWareHouseLink(), SharedProperties.driver);

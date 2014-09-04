@@ -17,6 +17,16 @@ public class ForeignSiCliDTO {
     private String foreignBoId ;
     private String foreignSoId;
     private String foreignSoGatewayId;
+    private String foreignWareHouseId;
+
+    public String getForeignWareHouseId() {
+        return foreignWareHouseId;
+    }
+
+    public void setForeignWareHouseId(String foreignWareHouseId) {
+        this.foreignWareHouseId = foreignWareHouseId;
+    }
+
     private Set<String> foreignBarcodeList = new HashSet<String>();
 
     public String getForeignBoId() {

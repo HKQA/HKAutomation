@@ -9,7 +9,8 @@ package com.hk.constants;
 public enum EnumDB {
 
     CATALOG("hk_cat"),
-    AQUA("hk_qa");
+    AQUA("hk_qa"),
+    BRIGHT("bright_prod");
 
     private String dbName;
 
