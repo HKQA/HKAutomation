@@ -134,7 +134,6 @@ public class variantCheckout /*extends ExistingOnlineOrder */ {
             System.out.print("\n Aqua using SO1: " + shippingOrderId);
 
             //check for warehouse first
-            System.out.print("\n Something ...... " +BrightDetails.ForeignSiCli(shippingOrderId));
 
             System.out.print("\n Bright Foreign SO2: " + BrightDetails.foreignSiCliDTO.getForeignSoGatewayId());
             System.out.print("\n using barcode2: " + BrightDetails.foreignSiCliDTO.getForeignBarcodeList());
