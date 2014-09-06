@@ -13,6 +13,11 @@ public class CheckoutOrders {
     private String checkoutOrderTxt= "//*[@id=\"orderGatewayId\"]";
     private String checkoutOrderBtn= "//*[@id=\"invBarcodeCheckinForm\"]/input[2]";
     private String checkoutOrderBar="//*[@id=\"upc\"]";
+    private  String freeBeeRadioutButton="//*[@id=\"freeCartLineItemTable\"]/tbody/tr/td[5]/form/input[5]";
+
+    public String getFreeBeeRadioutButton() {
+        return freeBeeRadioutButton;
+    }
 
     public String getCheckoutOrderBar() {
         return checkoutOrderBar;

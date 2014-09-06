@@ -172,12 +172,24 @@ public class variantCheckout /*extends ExistingOnlineOrder */ {
             SharedProperties.sendKeys(checkoutorders.getCheckoutOrderTxt(), BrightDetails.foreignSiCliDTO.getForeignSoGatewayId(), SharedProperties.driver);
             SharedProperties.Click(checkoutorders.getCheckoutOrderBtn(), SharedProperties.driver);
 
-
+            WebElement freebeeButton = SharedProperties.driver.findElement(By.xpath("//*[@id=\"freeCartLineItemTable\"]/tbody/tr/td[5]/form/input[5]"));
+            if(freebeeButton==null){
             for (String barcode : BrightDetails.foreignSiCliDTO.getForeignBarcodeList()) {
 
                 SharedProperties.sendKeys(checkoutorders.getCheckoutOrderBar(), barcode, SharedProperties.driver);
                 Thread.sleep(2000);
                 SharedProperties.driver.findElement(By.xpath("//*[@id=\"upc\"]")).sendKeys(Keys.ENTER);
+            }
+            }else{
+                freebeeButton.click();
+                for (String barcode : BrightDetails.foreignSiCliDTO.getForeignBarcodeList()) {
+
+                    SharedProperties.sendKeys(checkoutorders.getCheckoutOrderBar(), barcode, SharedProperties.driver);
+                    Thread.sleep(2000);
+                    SharedProperties.driver.findElement(By.xpath("//*[@id=\"upc\"]")).sendKeys(Keys.ENTER);
+                }
+
+
             }
 
 
