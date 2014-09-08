@@ -23,7 +23,7 @@ public class BrightDetails {
         String fullSoGatewayId = soGatewayId;
         int index = fullSoGatewayId.indexOf("-");
         String finalSoId =  fullSoGatewayId.substring(index + 1, fullSoGatewayId.length());
-        System.out.print("\n SO ID:- " +finalSoId);
+        System.out.print("\n SO ID Final:- " +finalSoId);
 
         String query = " select sku.barcode,si.shipping_order_id,si.base_order_id,s.gateway_order_id \n" +
                 "from si_foreign_cli si \n" +
