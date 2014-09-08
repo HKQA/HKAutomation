@@ -56,7 +56,7 @@ public class CouponOnlineOrder extends SharedProperties {
         {
 
             System.out.println("CouponOnlineOrder would be skipped");
-            throw new SkipException("Skipping the test case as RunMode is No");
+            throw new SkipException("Skipping the CouponOnlineOrder test case as RunMode is No");
 
         }
 

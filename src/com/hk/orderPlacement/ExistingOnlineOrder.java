@@ -55,7 +55,7 @@ public class ExistingOnlineOrder extends SharedProperties {
         {
 
             System.out.println("ExistingOnlineOrder would be skipped");
-            throw new SkipException("Skipping the test case as RunMode is No");
+            throw new SkipException("Skipping the ExistingOnlineOrder test case as RunMode is No");
 
         }
 

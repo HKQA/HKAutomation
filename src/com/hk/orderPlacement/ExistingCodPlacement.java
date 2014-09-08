@@ -55,7 +55,7 @@ public class ExistingCodPlacement extends SharedProperties {
         {
 
             System.out.println("ExistingCodPlacement would be skipped");
-            throw new SkipException("Skipping the test case as RunMode is No");
+            throw new SkipException("Skipping the ExistingCodPlacement test case as RunMode is No");
 
         }
 

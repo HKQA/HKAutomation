@@ -56,7 +56,7 @@ public class GuestCheckoutOnline extends SharedProperties {
         {
 
             System.out.println("GuestCheckoutOnline would be skipped");
-            throw new SkipException("Skipping the test case as RunMode is No");
+            throw new SkipException("Skipping the GuestCheckoutOnline test case as RunMode is No");
 
         }
 

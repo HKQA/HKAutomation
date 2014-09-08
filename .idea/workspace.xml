@@ -2,36 +2,59 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c26b27e7-3829-4ab4-9fbd-06b12c07466d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testData.xls" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/rough/TestRunMode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/hk/util/TestUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/hk/util/Xls_Reader.java" />
-      <change type="DELETED" beforePath="C:\Workspace\Automation_testing_v4_Vipul\.idea\libraries\lib.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Workspace\Automation_testing_v4_Vipul\.idea\libraries\libs2.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Workspace\Automation_testing_v4_Vipul\.idea\libraries\mysql_connector_java_5_0_8_bin2.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Workspace\Automation_testing_v4_Vipul\libs\poi-3.5-FINAL.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Workspace\Automation_testing_v4_Vipul\libs\poi-ooxml-3.5-beta5.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Workspace\Automation_testing_v4_Vipul\libs\poi-ooxml-3.7-20101029.jar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Automation_testing_v4.iml" afterPath="$PROJECT_DIR$/Automation_testing_v4.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/commons-codec-1.5.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/commons-logging-1.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/dom4j-1.6.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/junit-4.11.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/log4j-1.2.13.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/poi-3.10.1-20140818.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/poi-examples-3.10.1-20140818.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/poi-excelant-3.10.1-20140818.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/poi-ooxml-3.10.1-20140818.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/poi-ooxml-schemas-3.10.1-20140818.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/poi-scratchpad-3.10.1-20140818.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/stax-api-1.0.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/xmlbeans-2.6.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.project" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_02-09-2014_(14-33-26).log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_02-09-2014_(14-33-32).log" />
+      <change type="MOVED" beforePath="C:\Workspace\Automation_testing_v4_Vipul\test-output\junitreports\TEST-com.hk.orderPlacement.SignupCODorder.xml" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.orderPlacement.SignupCodOrder.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testData.xls" afterPath="$PROJECT_DIR$/testData.xls" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderPlacement/CouponOnlineOrder.java" afterPath="$PROJECT_DIR$/src/com/hk/orderPlacement/CouponOnlineOrder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingCodPlacement.java" afterPath="$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingCodPlacement.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingOnlineOrder.java" afterPath="$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingOnlineOrder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderPlacement/GuestCheckoutCod.java" afterPath="$PROJECT_DIR$/src/com/hk/orderPlacement/GuestCheckoutCod.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderPlacement/GuestCheckoutOnline.java" afterPath="$PROJECT_DIR$/src/com/hk/orderPlacement/GuestCheckoutOnline.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/io/HKXlsParser.java" afterPath="$PROJECT_DIR$/src/com/hk/io/HKXlsParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderPlacement/SignupCodOrder.java" afterPath="$PROJECT_DIR$/src/com/hk/orderPlacement/SignupCodOrder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderPlacement/SignupOrderOnline.java" afterPath="$PROJECT_DIR$/src/com/hk/orderPlacement/SignupOrderOnline.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testng.xml" afterPath="$PROJECT_DIR$/testng.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/url.properties" afterPath="$PROJECT_DIR$/url.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.orderPlacement.ExistingCodPlacement.xml" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.orderPlacement.ExistingCodPlacement.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rough/TestRunMode.java" afterPath="$PROJECT_DIR$/src/rough/TestRunMode.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/TestNG Test/classes.html" afterPath="$PROJECT_DIR$/test-output/old/TestNG Test/classes.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/emailable-report.html" afterPath="$PROJECT_DIR$/test-output/emailable-report.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/index.html" afterPath="$PROJECT_DIR$/test-output/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/index.html" afterPath="$PROJECT_DIR$/test-output/old/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/TestNG Test/methods-alphabetical.html" afterPath="$PROJECT_DIR$/test-output/old/TestNG Test/methods-alphabetical.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/TestNG Test/methods.html" afterPath="$PROJECT_DIR$/test-output/old/TestNG Test/methods.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/testng-failed.xml" afterPath="$PROJECT_DIR$/test-output/testng-failed.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/TestNG Test/testng-failed.xml" afterPath="$PROJECT_DIR$/test-output/TestNG Test/testng-failed.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/testng-results.xml" afterPath="$PROJECT_DIR$/test-output/testng-results.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/TestNG Test/testng.xml.html" afterPath="$PROJECT_DIR$/test-output/old/TestNG Test/testng.xml.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/TestNG Test/toc.html" afterPath="$PROJECT_DIR$/test-output/old/TestNG Test/toc.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Automation_testing_v4.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1409727696854" ignored="false" />
+    <file path="/Dummy.txt" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1410151779989" ignored="false" />
     <file path="/TestRunMode.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1409646700180" ignored="false" />
-    <file path="/SignupCodOrder.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1409646959037" ignored="false" />
+    <file path="/SignupCodOrder.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1410154734243" ignored="false" />
     <file path="/testng.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1409648709905" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.orderPlacement.ExistingOnlineOrder.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1410157593288" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/TestNG Test/com.hk.orderPlacement.SignupCodOrder.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1410157593288" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.orderPlacement.CouponOnlineOrder.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1410157593289" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.orderPlacement.GuestCheckoutCod.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1410157593289" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.orderPlacement.GuestCheckoutOnline.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1410157593290" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.orderPlacement.SignupOrderOnline.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1410157593290" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +87,6 @@
     <sortChildren value="false" />
   </component>
   <component name="DebuggerManager">
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -101,6 +123,23 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/hk/orderPlacement/GuestCheckoutCod.java" line="66" class="com.hk.orderPlacement.GuestCheckoutCod" package="com.hk.orderPlacement">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
@@ -111,37 +150,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="testng.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="testng.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testng.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="86" selection-start="741" selection-end="741" vertical-scroll-proportion="0.067307696">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderDetailsUtil.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/OrderDetailsUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="13" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GuestCheckoutOnline.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/GuestCheckoutOnline.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="51" selection-start="1738" selection-end="1738" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestUtil.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/util/TestUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="64" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0">
+            <state line="3" column="52" selection-start="67" selection-end="137" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -150,34 +162,34 @@
       <file leaf-file-name="GuestCheckoutCod.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/GuestCheckoutCod.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="48" selection-start="1737" selection-end="1737" vertical-scroll-proportion="0.0">
+            <state line="59" column="66" selection-start="1824" selection-end="1824" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExistingOnlineOrder.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingOnlineOrder.java">
+      <file leaf-file-name="Xls_Reader.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hk/util/Xls_Reader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="51" selection-start="1803" selection-end="1803" vertical-scroll-proportion="0.0">
+            <state line="24" column="16" selection-start="815" selection-end="815" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExistingCodPlacement.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingCodPlacement.java">
+      <file leaf-file-name="TestUtil.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hk/util/TestUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="52" selection-start="1703" selection-end="1703" vertical-scroll-proportion="0.0">
+            <state line="36" column="26" selection-start="846" selection-end="846" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CouponOnlineOrder.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/CouponOnlineOrder.java">
+      <file leaf-file-name="OrderDetailsUtil.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/OrderDetailsUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="49" selection-start="1778" selection-end="1778" vertical-scroll-proportion="0.0">
+            <state line="38" column="27" selection-start="1609" selection-end="1609" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -186,7 +198,7 @@
       <file leaf-file-name="TestRunMode.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/rough/TestRunMode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="64" selection-start="351" selection-end="351" vertical-scroll-proportion="0.0">
+            <state line="14" column="61" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -195,7 +207,34 @@
       <file leaf-file-name="SignupCodOrder.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SignupCodOrder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="47" selection-start="1769" selection-end="1769" vertical-scroll-proportion="0.0">
+            <state line="100" column="10" selection-start="3263" selection-end="3263" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="url.properties" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/url.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="17" selection-start="175" selection-end="177" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SharedProperties.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hk/commonProperties/SharedProperties.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="13" selection-start="1133" selection-end="1133" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CouponOnlineOrder.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/CouponOnlineOrder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="58" column="67" selection-start="1866" selection-end="1866" vertical-scroll-proportion="0.62327415">
               <folding />
             </state>
           </provider>
@@ -226,15 +265,15 @@
         <option value="$PROJECT_DIR$/src/com/hk/io/HKXlsParser.java" />
         <option value="$PROJECT_DIR$/src/com/hk/util/Xls_Reader.java" />
         <option value="$PROJECT_DIR$/src/com/hk/util/TestUtil.java" />
-        <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/SignupCodOrder.java" />
         <option value="$PROJECT_DIR$/src/rough/TestRunMode.java" />
-        <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/SignupOrderOnline.java" />
+        <option value="$PROJECT_DIR$/testng.xml" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/GuestCheckoutOnline.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/GuestCheckoutCod.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingOnlineOrder.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingCodPlacement.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/CouponOnlineOrder.java" />
-        <option value="$PROJECT_DIR$/testng.xml" />
+        <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/SignupOrderOnline.java" />
+        <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/SignupCodOrder.java" />
       </list>
     </option>
   </component>
@@ -272,7 +311,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -293,6 +331,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Automation_testing_v4_Vipul" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Automation_testing_v4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Automation_testing_v4_Vipul" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test-output" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -392,6 +444,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -435,7 +488,7 @@
       <recent name="com.hk.orderPlacement" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.C:/Workspace/Automation_testing_v4_Vipul/testng.xml">
+  <component name="RunManager" selected="Application.TestRunMode">
     <configuration default="false" name="SendMail" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -790,7 +843,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="1" width="1364" height="726" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -803,6 +856,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21060605" sideWeight="0.2854701" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32451499" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -810,8 +864,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18740399" sideWeight="0.63492066" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36507937" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18740399" sideWeight="0.28395063" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7160494" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.63247865" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6649573" order="2" side_tool="false" content_ui="combo" />
@@ -820,7 +874,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32649574" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32451499" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -902,19 +955,86 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/hk/io/FileParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="17" selection-start="66" selection-end="66" vertical-scroll-proportion="0.25449103" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/property/PropertyHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="52" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0508982" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/reportAndMailGenerator/ReportListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="59" selection-start="1310" selection-end="1310" vertical-scroll-proportion="0.682243" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="39" selection-start="2632" selection-end="2632" vertical-scroll-proportion="0.8038462">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/GuestCheckoutOnline.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="69" selection-start="1828" selection-end="1828" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingCodPlacement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="70" selection-start="1794" selection-end="1794" vertical-scroll-proportion="0.11333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingOnlineOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="53" selection-start="1935" selection-end="1935" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SignupOrderOnline.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="67" selection-start="1864" selection-end="1864" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/OrderDetailsUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="27" selection-start="1609" selection-end="1609" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testng.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="52" selection-start="67" selection-end="137" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/commonProperties/SharedProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="13" selection-start="1133" selection-end="1133" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rough/TestRunMode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="61" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/url.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="17" selection-start="175" selection-end="177" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/GuestCheckoutCod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="66" selection-start="1824" selection-end="1824" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/util/Xls_Reader.java">
@@ -924,84 +1044,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/rough/TestRunMode.java">
+    <entry file="file://$PROJECT_DIR$/src/com/hk/util/TestUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="64" selection-start="351" selection-end="351" vertical-scroll-proportion="0.0">
+        <state line="36" column="26" selection-start="846" selection-end="846" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SignupCodOrder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="47" selection-start="1769" selection-end="1769" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/util/TestUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="64" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SignupOrderOnline.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="49" selection-start="1776" selection-end="1776" vertical-scroll-proportion="0.5451713">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/GuestCheckoutOnline.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="51" selection-start="1738" selection-end="1738" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/OrderDetailsUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/GuestCheckoutCod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="48" selection-start="1737" selection-end="1737" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingOnlineOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="51" selection-start="1803" selection-end="1803" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/url.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="30" selection-start="485" selection-end="485" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingCodPlacement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="52" selection-start="1703" selection-end="1703" vertical-scroll-proportion="0.0">
+        <state line="100" column="10" selection-start="3263" selection-end="3263" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/CouponOnlineOrder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="49" selection-start="1778" selection-end="1778" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testng.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="86" selection-start="741" selection-end="741" vertical-scroll-proportion="0.067307696">
+        <state line="58" column="67" selection-start="1866" selection-end="1866" vertical-scroll-proportion="0.62327415">
           <folding />
         </state>
       </provider>
