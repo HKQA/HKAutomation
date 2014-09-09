@@ -2,15 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c26b27e7-3829-4ab4-9fbd-06b12c07466d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/libs1.xml" />
+      <change type="DELETED" beforePath="C:\selenium\Automation_testing_v4\.idea\libraries\HKAuto.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\selenium\Automation_testing_v4\.idea\libraries\gradle_wrapper.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\selenium\Automation_testing_v4\.idea\libraries\gradle_wrapper1.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\selenium\Automation_testing_v4\.idea\libraries\lib.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\selenium\Automation_testing_v4\.idea\libraries\lib2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\selenium\Automation_testing_v4\.idea\libraries\lib32.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\selenium\Automation_testing_v4\.idea\libraries\libs2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\selenium\Automation_testing_v4\.idea\libraries\libs3.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\selenium\Automation_testing_v4\.idea\libraries\mysql_connector_java_5_0_8_bin2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\selenium\Automation_testing_v4\.idea\libraries\mysql_connector_java_5_0_8_bin3.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\selenium\Automation_testing_v4\.idea\libraries\mysql_connector_java_5_0_8_bin_g2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\selenium\Automation_testing_v4\.idea\libraries\mysql_connector_java_5_0_8_bin_g3.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\selenium\Automation_testing_v4\.idea\libraries\ooxml_lib2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\selenium\Automation_testing_v4\.idea\libraries\report.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\selenium\Automation_testing_v4\.idea\libraries\report2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\selenium\Automation_testing_v4\.idea\libraries\repositories_xml2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\selenium\Automation_testing_v4\.idea\libraries\src.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java" afterPath="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/ForeignSiCliDTO.java" afterPath="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/ForeignSiCliDTO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java" afterPath="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testng1.xml" afterPath="$PROJECT_DIR$/testng1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java" afterPath="$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Automation_testing_v4.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1409901294084" ignored="false" />
-    <file path="/variantCheckout.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1410009735516" ignored="false" />
+    <file path="/Dummy.txt" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1410259096049" ignored="false" />
+    <file path="/variantCheckout.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1410262861118" ignored="false" />
     <file path="/AdminHome.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1409825867619" ignored="false" />
-    <file path="/BrightDetails.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1410011011114" ignored="false" />
+    <file path="/BrightDetails.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1410262650875" ignored="false" />
     <file path="/CheckoutOrders.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1410008836963" ignored="false" />
+    <file path="/testng1.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1410257714004" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,11 +49,11 @@
     <splitter proportion="0.5" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Automation_testing_v4$logintest.coverage" NAME="logintest Coverage Results" MODIFIED="1406534870956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.hk.orderPlacement.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/Automation_testing_v4$SendMail.coverage" NAME="SendMail Coverage Results" MODIFIED="1406282746113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.hk.commonProperties.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Automation_testing_v4$logintest.coverage" NAME="logintest Coverage Results" MODIFIED="1406534870956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.hk.orderPlacement.*</FILTER>
     </SUITE>
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -80,7 +105,53 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java" line="46" class="com.hk.orderCheckoutDto.BrightDetails$1" package="com.hk.orderCheckoutDto">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java" line="53" class="com.hk.orderCheckoutDto.BrightDetails$1" package="com.hk.orderCheckoutDto">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java" line="142" class="com.hk.orderCheckout.variantCheckout" package="com.hk.orderCheckout">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -90,64 +161,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="variantCheckout.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="variantCheckout.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="207" column="115" selection-start="11438" selection-end="11438" vertical-scroll-proportion="0.9354839">
+            <state line="183" column="87" selection-start="9708" selection-end="9708" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SignupOrderOnline.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SignupOrderOnline.java">
+      <file leaf-file-name="ForeignSiCliDTO.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/ForeignSiCliDTO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="12" selection-start="5793" selection-end="5793" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="18" column="19" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#520#528#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BrightDetails.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="BrightDetails.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="40" selection-start="780" selection-end="780" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="18" column="14" selection-start="397" selection-end="397" vertical-scroll-proportion="0.39534885">
+              <folding>
+                <element signature="e#1472#2243#0" expanded="true" />
+                <element signature="e#2224#2225#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderDetailsDTO.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsDTO.java">
+      <file leaf-file-name="SharedProperties.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hk/commonProperties/SharedProperties.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="13" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SoDetailsDTO.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetailsDTO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="19" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderDetailsReturn.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsReturn.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="13" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderDetailsUtil.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/OrderDetailsUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="13" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.0">
+            <state line="62" column="0" selection-start="2464" selection-end="2464" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -156,12 +205,8 @@
       <file leaf-file-name="SoDetails.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="72" selection-start="1284" selection-end="1284" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#503#517#0" expanded="true" />
-                <element signature="e#873#1599#0" expanded="true" />
-                <element signature="e#1580#1581#0" expanded="true" />
-              </folding>
+            <state line="21" column="37" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -192,14 +237,14 @@
         <option value="$PROJECT_DIR$/src/com/hk/aquaElementLocators/CreateUpdateShipment.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetailsDTO.java" />
         <option value="$PROJECT_DIR$/url.properties" />
-        <option value="$PROJECT_DIR$/testng1.xml" />
         <option value="$PROJECT_DIR$/src/com/hk/constants/EnumDB.java" />
         <option value="$PROJECT_DIR$/src/com/hk/aquaElementLocators/AdminHome.java" />
-        <option value="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/ForeignSiCliDTO.java" />
-        <option value="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java" />
         <option value="$PROJECT_DIR$/src/com/hk/brightElementLocators/CheckoutOrders.java" />
-        <option value="$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java" />
+        <option value="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java" />
+        <option value="$PROJECT_DIR$/testng1.xml" />
+        <option value="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/ForeignSiCliDTO.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java" />
+        <option value="$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java" />
       </list>
     </option>
   </component>
@@ -253,7 +298,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -303,72 +347,6 @@
               <option name="myItemId" value="hk" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Automation_testing_v4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Automation_testing_v4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Automation_testing_v4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Automation_testing_v4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="orderPlacement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Automation_testing_v4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Automation_testing_v4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="orderCheckoutDto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -392,77 +370,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Automation_testing_v4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Automation_testing_v4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="brightElementLocators" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Automation_testing_v4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Automation_testing_v4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aquaElementLocators" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
-    <property name="recentsLimit" value="5" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/mysql connector/mysql-connector-java-5.0.8/mysql-connector-java-5.0.8-bin.jar!/" />
-    <property name="LayoutCode.rearrangeEntriesJava" value="false" />
-    <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="restartRequiresConfirmation" value="true" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -663,20 +591,17 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="XSLT" factoryName="XSLT">
-      <option name="myOutputFile" />
-      <option name="myOpenOutputFile" value="false" />
-      <option name="myOpenInBrowser" value="false" />
-      <option name="mySmartErrorHandling" value="true" />
-      <option name="myRunnerPort" value="34873" />
-      <option name="myVmArguments" />
-      <option name="myWorkingDirectory" />
-      <option name="myModule" />
-      <option name="myJdk" />
-      <parameters />
-      <OutputType value="CONSOLE" save-to-file="false" />
-      <FileType name="XML" />
-      <JdkChoice value="FROM_MODULE" />
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -707,17 +632,20 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+    <configuration default="true" type="XSLT" factoryName="XSLT">
+      <option name="myOutputFile" />
+      <option name="myOpenOutputFile" value="false" />
+      <option name="myOpenInBrowser" value="false" />
+      <option name="mySmartErrorHandling" value="true" />
+      <option name="myRunnerPort" value="34873" />
+      <option name="myVmArguments" />
+      <option name="myWorkingDirectory" />
+      <option name="myModule" />
+      <option name="myJdk" />
+      <parameters />
+      <OutputType value="CONSOLE" save-to-file="false" />
+      <FileType name="XML" />
+      <JdkChoice value="FROM_MODULE" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -817,12 +745,11 @@
       <item index="5" class="java.lang.String" itemvalue="Application.AutoStringUtils" />
     </list>
     <recent_temporary>
-      <list size="5">
+      <list size="4">
         <item index="0" class="java.lang.String" itemvalue="Application.AutoStringUtils" />
         <item index="1" class="java.lang.String" itemvalue="Application.HKXlsParser" />
         <item index="2" class="java.lang.String" itemvalue="TestNG.variantCheckout.variantCheckout" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.C:/selenium/Automation_testing_v4/testng1.xml" />
-        <item index="4" class="java.lang.String" itemvalue="Application.OrderDetailsUtil" />
+        <item index="3" class="java.lang.String" itemvalue="Application.OrderDetailsUtil" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -843,20 +770,22 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50427353" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2189394" sideWeight="0.6947705" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6495727" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8064" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5623932" sideWeight="0.32954547" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21060605" sideWeight="0.2854701" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32197616" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20997766" sideWeight="0.43931624" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -864,8 +793,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18787879" sideWeight="0.35042736" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4991453" sideWeight="0.67045456" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18484849" sideWeight="0.4957265" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31163287" sideWeight="0.67045456" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.63247865" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6649573" order="2" side_tool="false" content_ui="combo" />
@@ -873,8 +802,6 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50427353" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32197616" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -958,117 +885,132 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/hk/constants/EnumDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="10" selection-start="185" selection-end="191" vertical-scroll-proportion="0.0">
+        <state line="22" column="4" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/url.properties">
+    <entry file="jar://$PROJECT_DIR$/libs/selenium-java-2.42.2-srcs.jar!/org/openqa/selenium/remote/RemoteWebDriver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="35" selection-start="606" selection-end="606" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckout/variantWithFreebieCheckout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="25" selection-start="629" selection-end="629" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingOnlineOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="160" column="69" selection-start="7759" selection-end="7759" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/SignupOrderOnline.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="12" selection-start="5793" selection-end="5793" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/util/AutoStringUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="25" selection-start="245" selection-end="245" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/jdbc/ResultSetExtractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="17" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsVerify.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="71" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/brightElementLocators/CheckoutOrders.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="105" selection-start="553" selection-end="616" vertical-scroll-proportion="0.44074073">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsReturn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/OrderDetailsUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="13" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="537" column="0" selection-start="17858" selection-end="17858" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#30086#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#5739#5747#0" expanded="false" />
+            <element signature="e#8097#8129#0" expanded="false" />
+            <element signature="e#8332#8354#0" expanded="false" />
+            <element signature="e#12889#12919#0" expanded="false" />
+            <element signature="e#15721#15753#0" expanded="false" />
+            <element signature="e#20440#20456#0" expanded="false" />
+            <element signature="e#22355#22387#0" expanded="false" />
+            <element signature="e#22651#22659#0" expanded="false" />
+            <element signature="e#24017#24047#0" expanded="false" />
+            <element signature="e#26174#26206#0" expanded="false" />
+            <element signature="e#26639#26671#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetailsDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="19" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0">
+        <state line="12" column="13" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/selenium-java-2.42.2-srcs.jar!/org/openqa/selenium/By.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="114" column="0" selection-start="3722" selection-end="3722" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/commonProperties/SharedProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="0" selection-start="2464" selection-end="2464" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/testng-6.8.5.jar!/org/testng/internal/Invoker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="50" selection-start="8298" selection-end="8298" vertical-scroll-proportion="-4.92">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/testng-6.8.5.jar!/org/testng/internal/TestMethodWorker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="16" selection-start="1379" selection-end="1379" vertical-scroll-proportion="-4.92">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/testng-6.8.5.jar!/org/testng/TestRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="210" column="17" selection-start="12381" selection-end="12381" vertical-scroll-proportion="-4.92">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/testng-6.8.5.jar!/org/testng/SuiteRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="17" selection-start="4256" selection-end="4256" vertical-scroll-proportion="-4.92">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/testng-6.8.5.jar!/org/testng/SuiteRunnerWorker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="16" selection-start="786" selection-end="786" vertical-scroll-proportion="-5.08">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/testng-6.8.5.jar!/org/testng/TestNG.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="242" column="23" selection-start="11328" selection-end="11328" vertical-scroll-proportion="-5.08">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/testng-6.8.5.jar!/org/testng/remote/RemoteTestNG.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="16" selection-start="1250" selection-end="1250" vertical-scroll-proportion="-5.4">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/ForeignSiCliDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="19" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#520#528#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="72" selection-start="1284" selection-end="1284" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#503#517#0" expanded="true" />
-            <element signature="e#873#1599#0" expanded="true" />
-            <element signature="e#1580#1581#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="40" selection-start="780" selection-end="780" vertical-scroll-proportion="0.0">
+        <state line="21" column="37" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="207" column="115" selection-start="11438" selection-end="11438" vertical-scroll-proportion="0.9354839">
+        <state line="183" column="87" selection-start="9708" selection-end="9708" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/BrightDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="14" selection-start="397" selection-end="397" vertical-scroll-proportion="0.39534885">
+          <folding>
+            <element signature="e#1472#2243#0" expanded="true" />
+            <element signature="e#2224#2225#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1103,7 +1045,6 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>selenium-java-2.38.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1132,6 +1073,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

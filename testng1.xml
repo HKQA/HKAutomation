@@ -2,7 +2,7 @@
 
 <suite name="TestNG Test">
     <parameter name="BaseURL" value="http://www.centralhk.com:9090"/>
-    <parameter name="AdminBaseURL" value="http://192.168.70.26:8080/admin"/>
+    <parameter name="AdminBaseURL" value="http://www.centralhkadmin.com:8080"/>
     <parameter name="Browser" value="chrome"/>
     <parameter name="useDefaultListeners" value="false"/>
     <listeners>

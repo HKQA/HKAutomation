@@ -14,10 +14,11 @@ import java.util.Set;
  */
 public class ForeignSiCliDTO {
 
-    private String foreignBoId ;
+    private String foreignBoId;
     private String foreignSoId;
     private String foreignSoGatewayId;
     private String foreignWareHouseId;
+    private Set<String> foreignBarcodeList = new HashSet<String>();
 
     public String getForeignWareHouseId() {
         return foreignWareHouseId;
@@ -27,7 +28,6 @@ public class ForeignSiCliDTO {
         this.foreignWareHouseId = foreignWareHouseId;
     }
 
-    private Set<String> foreignBarcodeList = new HashSet<String>();
 
     public String getForeignBoId() {
         return foreignBoId;
