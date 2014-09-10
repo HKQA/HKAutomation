@@ -17,14 +17,10 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -34,9 +30,10 @@ import java.util.concurrent.TimeUnit;
  * Time: 6:08 PM
  * To change this template use File | Settings | File Templates.
  */
-public class variantCheckout extends ExistingOnlineOrder  {
+public class variantCheckout /*extends ExistingOnlineOrder */ {
     String AdminBaseURL;
     String browser;
+    private int delay;
 
     LoginPageAdmin loginpage = new LoginPageAdmin();
     PrintPrickOrders printprick = new PrintPrickOrders();
@@ -59,7 +56,7 @@ public class variantCheckout extends ExistingOnlineOrder  {
     }
 
 
-    @DataProvider(name = "VariantCheckoutData")
+    /*@DataProvider(name = "VariantCheckoutData")
     public List<String> variantCheckoutDataProviderCombined() {
 
         List<String> finalObjectString = new ArrayList<String>();
@@ -73,18 +70,19 @@ public class variantCheckout extends ExistingOnlineOrder  {
             System.out.println(ex.getMessage());
         }
         return finalObjectString;
-    }
+    }*/
 
-    @Test(dataProvider = "VariantCheckoutData", enabled = true)
+    @Test(/*dataProvider = "VariantCheckoutData", */enabled = true)
     public void variantCheckout() throws InterruptedException, IOException, Exception {
-        EOO.login(1L);
+        /*EOO.login(1L);*/
 
-        SharedProperties.openBrowser(AdminBaseURL, browser);
-        SharedProperties.sendKeys(loginpage.getUserName(), "saurabh.nagpal@healthkart.com", SharedProperties.driver);
-        SharedProperties.sendKeys(loginpage.getPassword(), "abcde12", SharedProperties.driver);
-        SharedProperties.Click(loginpage.getLoginbtn(), SharedProperties.driver);
 
         for (SoDetailsDTO soDetailsDTO : SoDetails.Sodetails()) {
+            SharedProperties.openBrowser(AdminBaseURL, browser);
+            SharedProperties.sendKeys(loginpage.getUserName(), "saurabh.nagpal@healthkart.com", SharedProperties.driver);
+            SharedProperties.sendKeys(loginpage.getPassword(), "abcde12", SharedProperties.driver);
+            SharedProperties.Click(loginpage.getLoginbtn(), SharedProperties.driver);
+
             String shippingOrderId = soDetailsDTO.getSoGatewayOrderId();
             Integer warehouseId = soDetailsDTO.getWarehouseId();
             System.out.print("\n Warehouse id:- " + warehouseId);
@@ -101,7 +99,8 @@ public class variantCheckout extends ExistingOnlineOrder  {
 
             } else {
                 System.out.print("\n MUM Aqua Warehouse");
-                SharedProperties.clickWithCss(adminhome.getAdminHomeLink(), SharedProperties.driver);
+               // SharedProperties.clickWithCss(adminhome.getAdminHomeLink(), SharedProperties.driver);
+                Thread.sleep(2000);
 
                 WebElement WarehouseDropDownList = SharedProperties.driver.findElement(By.xpath("//*[@id=\"selectWHForm\"]/select"));
                 Select clickWarehouse = new Select(WarehouseDropDownList);
@@ -170,6 +169,8 @@ public class variantCheckout extends ExistingOnlineOrder  {
             //WebElement freebeeButton = SharedProperties.driver.findElement(By.xpath("//*[@id=\"freeCartLineItemTable\"]/tbody/tr/td[5]/form/input[5]"));
             if (SharedProperties.driver.findElements(By.xpath("//*[@id=\"freeCartLineItemTable\"]/tbody/tr/td[5]/form/input[5]")).size() == 0) {
                 for (String barcode : BrightDetails.getForeignSiCliDTO(shippingOrderId).getForeignBarcodeList()) {
+                    System.out.print("\n Foreign SO selected:- " +BrightDetails.getForeignSiCliDTO(shippingOrderId).getForeignSoId());
+                    System.out.print("\n ForeignGatewayID selected:- " + BrightDetails.getForeignSiCliDTO(shippingOrderId).getForeignSoGatewayId());
                     System.out.print("\n Barcode selected:- " + barcode);
 
                     SharedProperties.sendKeys(checkoutorders.getCheckoutOrderBar(), barcode, SharedProperties.driver);

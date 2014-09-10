@@ -143,12 +143,7 @@ public class ExistingOnlineOrder extends SharedProperties {
             Thread.sleep(5000);
         }
 
-        //Code to add more quantity
-        //code to redeem reward points
-        //code to add coupons
 
-        /*SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
-        Thread.sleep(5000);*/
         SharedProperties.Click(addresspage.addressPage(), SharedProperties.driver);
         Thread.sleep(5000);
         SharedProperties.Click(paymentpage.paymentPageDummy(), SharedProperties.driver);
