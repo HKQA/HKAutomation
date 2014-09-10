@@ -171,8 +171,9 @@ public class variantCheckout /*extends ExistingOnlineOrder */ {
             SharedProperties.Click(checkoutorders.getCheckoutOrderBtn(), SharedProperties.driver);
 
             //WebElement freebeeButton = SharedProperties.driver.findElement(By.xpath("//*[@id=\"freeCartLineItemTable\"]/tbody/tr/td[5]/form/input[5]"));
-            if(SharedProperties.driver.findElement(By.xpath("//*[@id=\"freeCartLineItemTable\"]/tbody/tr/td[5]/form/input[5]"))== null){
+            if(SharedProperties.driver.findElements(By.xpath("//*[@id=\"freeCartLineItemTable\"]/tbody/tr/td[5]/form/input[5]")).size() == 0){
             for (String barcode : BrightDetails.getForeignSiCliDTO(shippingOrderId).getForeignBarcodeList()) {
+                System.out.print("\n Barcode selected:- " + barcode);
 
                 SharedProperties.sendKeys(checkoutorders.getCheckoutOrderBar(), barcode, SharedProperties.driver);
                 Thread.sleep(2000);
@@ -190,7 +191,6 @@ public class variantCheckout /*extends ExistingOnlineOrder */ {
 
 
             }
-
 
             SharedProperties.driver.navigate().to(PropertyHelper.readProperty("adminUrl"));
             /*SharedProperties.sendKeys(loginpage.getUserName(), "saurabh.nagpal@healthkart.com", SharedProperties.driver);
