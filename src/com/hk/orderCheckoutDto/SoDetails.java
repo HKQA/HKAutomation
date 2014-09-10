@@ -32,8 +32,7 @@ public class SoDetails {
                             SoDetailsDTO soDetailsDTO = new SoDetailsDTO(rs.getString("gateway_order_id"), rs.getInt("warehouse_id"));
                             soDetailsdtoList.add(soDetailsDTO);
 
-                            /*soDetailsdto.getShippingOrderIdList().add(rs.getString("gateway_order_id"));
-                            soDetailsdto.getWarehouseId().add(rs.getInt("warehouse_id"));*/
+
                         }
 
                         return soDetailsdtoList;
