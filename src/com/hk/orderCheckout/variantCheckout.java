@@ -17,10 +17,14 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -30,10 +34,9 @@ import java.util.concurrent.TimeUnit;
  * Time: 6:08 PM
  * To change this template use File | Settings | File Templates.
  */
-public class variantCheckout /*extends ExistingOnlineOrder */ {
+public class variantCheckout extends ExistingOnlineOrder  {
     String AdminBaseURL;
     String browser;
-    private int delay;
 
     LoginPageAdmin loginpage = new LoginPageAdmin();
     PrintPrickOrders printprick = new PrintPrickOrders();
@@ -56,7 +59,7 @@ public class variantCheckout /*extends ExistingOnlineOrder */ {
     }
 
 
-    /*@DataProvider(name = "VariantCheckoutData")
+    @DataProvider(name = "VariantCheckoutData")
     public List<String> variantCheckoutDataProviderCombined() {
 
         List<String> finalObjectString = new ArrayList<String>();
@@ -70,11 +73,11 @@ public class variantCheckout /*extends ExistingOnlineOrder */ {
             System.out.println(ex.getMessage());
         }
         return finalObjectString;
-    }*/
+    }
 
-    @Test(/*dataProvider = "VariantCheckoutData", */enabled = true)
+    @Test(dataProvider = "VariantCheckoutData", enabled = true)
     public void variantCheckout() throws InterruptedException, IOException, Exception {
-        /*EOO.login(1L);*/
+        EOO.login(1L);
 
 
         for (SoDetailsDTO soDetailsDTO : SoDetails.Sodetails()) {

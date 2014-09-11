@@ -3,6 +3,7 @@ package com.hk.orderCheckoutDto;
 import com.hk.constants.EnumDB;
 import com.hk.jdbc.JdbcConnectionFile;
 import com.hk.jdbc.ResultSetExtractor;
+import com.hk.orderPlacement.OrderDetailsUtil;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -22,7 +23,7 @@ public class SoDetails {
     public static List<SoDetailsDTO> Sodetails() {
 
         String query = "select s.warehouse_id,s.gateway_order_id from base_order b join shipping_order s on b.id=s.base_order_id " +
-                "where s.shipping_order_status_id=120 and b.gateway_order_id='HK91116-771444'";
+                "where s.shipping_order_status_id=120 and b.gateway_order_id='"+OrderDetailsUtil.GatewayOrderId()+"'";
         return
                 JdbcConnectionFile.readJdbcprop(query, new ResultSetExtractor<List<SoDetailsDTO>>() {
 
