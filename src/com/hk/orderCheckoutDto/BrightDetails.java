@@ -17,7 +17,7 @@ public class BrightDetails {
     private static ForeignSiCliDTO foreignSiCliDTO = null;
 
     public static ForeignSiCliDTO getForeignSiCliDTO(String soGatewayId) {
-        if (null == foreignSiCliDTO) {
+        if (null == foreignSiCliDTO || !foreignSiCliDTO.getForeignSoGatewayId().equals(soGatewayId)) {
             foreignSiCliDTO = getForeignSiCliFromDb(soGatewayId);
         }
         return foreignSiCliDTO;

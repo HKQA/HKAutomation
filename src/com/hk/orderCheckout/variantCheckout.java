@@ -156,7 +156,7 @@ public class variantCheckout /*extends ExistingOnlineOrder */ {
             } else {
                 System.out.print("\n MUM Bright Warehouse");
 
-                WebElement WarehouseDropDownList = SharedProperties.driver.findElement(By.xpath("/*/[@id=\"selectWHForm\"]/select"));
+                WebElement WarehouseDropDownList = SharedProperties.driver.findElement(By.xpath("/*//*[@id=\"selectWHForm\"]/select"));
                 Select clickWarehouse = new Select(WarehouseDropDownList);
                 clickWarehouse.selectByVisibleText("MUM Bright Warehouse");
                 SharedProperties.Click(adminhome.getSaveBtn(), SharedProperties.driver);
