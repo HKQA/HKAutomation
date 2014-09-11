@@ -34,7 +34,7 @@ import java.util.concurrent.TimeUnit;
  * Time: 6:08 PM
  * To change this template use File | Settings | File Templates.
  */
-public class variantCheckout extends ExistingOnlineOrder  {
+public class variantCheckout extends ExistingOnlineOrder {
     String AdminBaseURL;
     String browser;
 
@@ -102,7 +102,7 @@ public class variantCheckout extends ExistingOnlineOrder  {
 
             } else {
                 System.out.print("\n MUM Aqua Warehouse");
-               // SharedProperties.clickWithCss(adminhome.getAdminHomeLink(), SharedProperties.driver);
+                // SharedProperties.clickWithCss(adminhome.getAdminHomeLink(), SharedProperties.driver);
                 Thread.sleep(2000);
 
                 WebElement WarehouseDropDownList = SharedProperties.driver.findElement(By.xpath("//*[@id=\"selectWHForm\"]/select"));
@@ -172,7 +172,7 @@ public class variantCheckout extends ExistingOnlineOrder  {
             //WebElement freebeeButton = SharedProperties.driver.findElement(By.xpath("//*[@id=\"freeCartLineItemTable\"]/tbody/tr/td[5]/form/input[5]"));
             if (SharedProperties.driver.findElements(By.xpath("//*[@id=\"freeCartLineItemTable\"]/tbody/tr/td[5]/form/input[5]")).size() == 0) {
                 for (String barcode : BrightDetails.getForeignSiCliDTO(shippingOrderId).getForeignBarcodeList()) {
-                    System.out.print("\n Foreign SO selected:- " +BrightDetails.getForeignSiCliDTO(shippingOrderId).getForeignSoId());
+                    System.out.print("\n Foreign SO selected:- " + BrightDetails.getForeignSiCliDTO(shippingOrderId).getForeignSoId());
                     System.out.print("\n ForeignGatewayID selected:- " + BrightDetails.getForeignSiCliDTO(shippingOrderId).getForeignSoGatewayId());
                     System.out.print("\n Barcode selected:- " + barcode);
 
