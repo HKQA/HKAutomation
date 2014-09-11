@@ -18,6 +18,7 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 import com.hk.property.PropertyHelper;
 
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class SharedProperties {
@@ -67,6 +68,19 @@ public class SharedProperties {
 
     public static void Click2(String CSSSelector, WebDriver driver)  {
         driver.findElement(By.cssSelector(CSSSelector)).click();
+
+    }
+
+    public static void MouseHoverandClick(String mouseHoverElementXpath, String targetElementXpath, WebDriver driver)
+    {
+
+        Actions action = new Actions(driver);
+
+        WebElement signupHover = driver.findElement(By.xpath(mouseHoverElementXpath));
+
+        action.moveToElement(signupHover).moveToElement(driver.findElement(By.xpath(targetElementXpath))).click().perform();
+
+
 
     }
 }

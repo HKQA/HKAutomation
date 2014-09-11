@@ -12,12 +12,14 @@ public class CartPage {
     private String addCouponTextBox="/html/body/div[1]/div[2]/div/div[3]/div[1]/div[4]/div[4]/div[1]/input";
     private String addQuantityPlus=".//*[@id='plus']";
     private String addQuantityMinus=".//*[@id='minus']";
-    private String proceedToCheckout="html/body/div/div/div/div/div[2]/div/div[2]/div[1]/div[4]/a";
+    private String proceedToCheckout="//*[@id=\"signUpForm\"]/input[7]";
     private String CouponProceedToCheckout="/html/body/div[1]/div[2]/div/div[3]/div[2]/div/div[2]/div[1]/div[4]/a";
     private String clickCouponTextBox="/html/body/div[1]/div[2]/div/div[3]/div[1]/div[4]/div[4]/div[2]/a";
     private String isCouponApplied = "/html/body/div[1]/div[2]/div/div[3]/div[1]/div[4]/div[5]/span";
     private String removeCouponCode="/html/body/div[1]/div[2]/div/div[3]/div[1]/div[4]/div[5]/a";
-    private String signinLink="//*[@id=\"header\"]/div/div[2]/div[3]/div/div/a";
+    //private String signinLink="//*[@id=\"header\"]/div/div[2]/div[3]/div/div/a";
+    private String signupHover = "//*[@id='header']/div/div[2]/div[3]/div/div"  ;
+    private String signinLink = "//*[@id='header']/div/div[2]/div[3]/div/ul/li[1]/a";
 
     public String addToCartBtn() {
         return addToCartBtn;
@@ -48,6 +50,20 @@ public class CartPage {
     public String IsCouponApplied() {
         return isCouponApplied;
     }
-    public String getSigninLink() {   return signinLink; }
+    public String getSigninLink()
+    {
+
+
+        return signinLink;
+
+
+    }
+
+    public String getSignupHover()
+    {
+
+        return  signupHover;
+
+    }
 
 }

@@ -59,4 +59,26 @@ public static Xls_Reader excel = new Xls_Reader(System.getProperty("user.dir")+ 
 		return false;
 	}
 
+    public static String getBrowser()
+    {
+
+        String browser = excel.getCellData("Config", 1, 1 )    ;
+
+        return  browser;
+
+
+
+    }
+
+    public static String getURL()
+    {
+
+        String URL = excel.getCellData("Config", 1, 2);
+
+        return URL;
+
+
+
+    }
+
 }

@@ -45,11 +45,22 @@ public class SignupCodOrder extends SharedProperties {
     ITestResult result = Reporter.getCurrentTestResult();
 
 
-    @Parameters({"BaseURL", "Browser"})
-    @BeforeClass
+    //@Parameters({"BaseURL", "Browser"})
+    /*@BeforeClass
     public void g(String baseUrl, String browser) {
         this.baseUrl = baseUrl;
         this.browser = browser;
+
+
+    }*/
+
+    @BeforeClass
+    public void config()
+    {
+        this.baseUrl = TestUtil.getURL();
+
+        this.browser = TestUtil.getBrowser();
+
     }
 
     @BeforeMethod
@@ -119,8 +130,9 @@ public class SignupCodOrder extends SharedProperties {
         //code to redeem reward points
         //code to add coupons
 
-        SharedProperties.Click(cartpage.getSigninLink(), SharedProperties.driver);
-        Thread.sleep(2000);
+        //SharedProperties.Click(cartpage.getSigninLink(), SharedProperties.driver);
+        SharedProperties.MouseHoverandClick(cartpage.getSignupHover(), cartpage.getSigninLink(), SharedProperties.driver);
+        Thread.sleep(4000);
         SharedProperties.Click(signupage.signupPage(), SharedProperties.driver);
         Thread.sleep(2000);
         SharedProperties.sendKeys(signupage.name(), "Test", SharedProperties.driver);

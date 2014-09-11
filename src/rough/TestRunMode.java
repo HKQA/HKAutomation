@@ -16,7 +16,19 @@ public class TestRunMode extends TestUtil {
 
          System.out.println(excel.isSheetExist("test_suite"));
 
-        System.out.println(TestUtil.isExecutable("SignupCodeOrder"));
+        System.out.println(TestUtil.isExecutable("SignupCodOrder"));
+
+        System.out.println(excel.isSheetExist("Config"));
+
+        System.out.println(excel.getCellData("Config", 1, 1).equalsIgnoreCase("firefox")) ;
+
+        System.out.println(TestUtil.getBrowser());
+
+        System.out.println(TestUtil.getURL());
+
+
+
+
         
         
         
