@@ -108,7 +108,7 @@ public class SignupCodOrder extends SharedProperties {
         if (specificVariantIndex == null) {
             for (Long variantId : testDetailsDTO.getVariantIdList()) {
                 SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + variantId);
-                WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
+                WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-red btn2 mrgn-b-5 disp-inln']"));
                 buyNow.click();
             }
         } else {
@@ -131,12 +131,13 @@ public class SignupCodOrder extends SharedProperties {
         //code to add coupons
 
         //SharedProperties.Click(cartpage.getSigninLink(), SharedProperties.driver);
-        SharedProperties.MouseHoverandClick(cartpage.getSignupHover(), cartpage.getSigninLink(), SharedProperties.driver);
+        SharedProperties.mouseHoverAndClick(cartpage.getSignupHover(), cartpage.getSigninLink(), SharedProperties.driver);
         Thread.sleep(4000);
         SharedProperties.Click(signupage.signupPage(), SharedProperties.driver);
         Thread.sleep(2000);
         SharedProperties.sendKeys(signupage.name(), "Test", SharedProperties.driver);
-        SharedProperties.sendKeys(signupage.emailid(), testDetailsDTO.getSignUpList(), SharedProperties.driver);
+        //SharedProperties.sendKeys(signupage.emailid(), testDetailsDTO.getSignUpList(), SharedProperties.driver);
+        SharedProperties.sendKeys(signupage.emailid(), "nitin.kukna+905@healthkart.com", SharedProperties.driver);
         SharedProperties.sendKeys(signupage.password(), "123456", SharedProperties.driver);
         SharedProperties.sendKeys(signupage.confirmpassword(), "123456", SharedProperties.driver);
         SharedProperties.Click(signupage.createaccount(), SharedProperties.driver);

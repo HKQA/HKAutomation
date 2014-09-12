@@ -41,11 +41,20 @@ public class SignupOrderOnline extends SharedProperties {
     PaymentPage paymentpage = new PaymentPage();
     ITestResult result = Reporter.getCurrentTestResult();
 
-    @Parameters({"BaseURL", "Browser"})
-    @BeforeClass
+    //@Parameters({"BaseURL", "Browser"})
+    /*@BeforeClass
     public void g(String baseUrl, String browser) {
         this.baseUrl = baseUrl;
         this.browser = browser;
+    }*/
+
+    @BeforeClass
+    public void config()
+    {
+        this.baseUrl = TestUtil.getURL();
+
+        this.browser = TestUtil.getBrowser();
+
     }
 
     @BeforeMethod
@@ -68,6 +77,8 @@ public class SignupOrderOnline extends SharedProperties {
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\SignupOrderOnline.jpg"));
         }
+
+        driver.quit();
     }
 
 
@@ -109,11 +120,13 @@ public class SignupOrderOnline extends SharedProperties {
         //code to redeem reward points
         //code to add coupons
 
-        SharedProperties.Click(cartpage.getSigninLink(), SharedProperties.driver);
+        //SharedProperties.Click(cartpage.getSigninLink(), SharedProperties.driver);
+        SharedProperties.mouseHoverAndClick(cartpage.getSignupHover(), cartpage.getSigninLink(), SharedProperties.driver);
         Thread.sleep(2000);
         SharedProperties.Click(signupage.signupPage(), SharedProperties.driver);
         SharedProperties.sendKeys(signupage.name(), "Test", SharedProperties.driver);
-        SharedProperties.sendKeys(signupage.emailid(), testDetailsDTO.getSignUpList(), SharedProperties.driver);
+        //SharedProperties.sendKeys(signupage.emailid(), testDetailsDTO.getSignUpList(), SharedProperties.driver);
+        SharedProperties.sendKeys(signupage.emailid(), "nitin.kukna+904@healthkart.com", SharedProperties.driver);
         SharedProperties.sendKeys(signupage.password(), "123456", SharedProperties.driver);
         SharedProperties.sendKeys(signupage.confirmpassword(), "123456", SharedProperties.driver);
         SharedProperties.Click(signupage.createaccount(), SharedProperties.driver);
@@ -128,7 +141,7 @@ public class SignupOrderOnline extends SharedProperties {
         SharedProperties.Click(addresspage.delivertoaddress(), SharedProperties.driver);
         Thread.sleep(5000);
 
-        WebElement dummypayment = SharedProperties.driver.findElement(By.xpath("html/body/div[1]/div[2]/div[1]/div[5]/div[2]/div/div[2]/form[1]/div[1]/div/div[4]/input"));
+        /*WebElement dummypayment = SharedProperties.driver.findElement(By.xpath("html/body/div[1]/div[2]/div[1]/div[5]/div[2]/div/div[2]/form[1]/div[1]/div/div[4]/input"));
         if (dummypayment == null) {
             SharedProperties.Click(paymentpage.paymentPageDummy(), SharedProperties.driver);
             new Select(SharedProperties.driver.findElement(By.xpath("html/body/div[1]/div[2]/div[1]/div[5]/div[2]/div/div[2]/form[1]/div[1]/div/div[5]/select"))).selectByVisibleText("Dummy");
@@ -148,6 +161,6 @@ public class SignupOrderOnline extends SharedProperties {
             SendMail.sendmail("DB verification failed for Signup online order");
             result.setStatus(ITestResult.FAILURE);
             Thread.sleep(5000);
-        }
+        }*/
     }
 }

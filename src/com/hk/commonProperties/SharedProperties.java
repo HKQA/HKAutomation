@@ -40,7 +40,8 @@ public class SharedProperties {
             driver.manage().window().maximize();
             driver.get(AppURL);
         } else if (BrowserName.equals("chrome")) {
-            System.setProperty("webdriver.chrome.driver", PropertyHelper.readProperty("chromeDriver"));
+            //System.setProperty("webdriver.chrome.driver", PropertyHelper.readProperty("chromeDriver"));
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + PropertyHelper.readProperty("chromeDriver"));
             driver = new ChromeDriver();
             driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
             driver.manage().window().maximize();
@@ -71,7 +72,7 @@ public class SharedProperties {
 
     }
 
-    public static void MouseHoverandClick(String mouseHoverElementXpath, String targetElementXpath, WebDriver driver)
+    public static void mouseHoverAndClick(String mouseHoverElementXpath, String targetElementXpath, WebDriver driver)
     {
 
         Actions action = new Actions(driver);

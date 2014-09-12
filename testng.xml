@@ -24,6 +24,11 @@
             <class name="com.hk.orderPlacement.SignupCodOrder"/>
         </classes>
     </test>
+    <test name="com.hk.orderPlacement.SignupOrderOnline">
+        <classes>
+            <class name="com.hk.orderPlacement.SignupOrderOnline"/>
+        </classes>
+    </test>
    <!-- <test name="ExistingOnlineOrder">
             <classes>
                 <class name="com.hk.orderPlacement.ExistingOnlineOrder"/>

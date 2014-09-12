@@ -22,7 +22,8 @@ public class PropertyHelper {
     InputStream input = null;
     try {
 
-        input = new FileInputStream("C:\\selenium\\Automation_testing_v4\\url.properties");
+        //input = new FileInputStream("C:\\selenium\\Automation_testing_v4\\url.properties");
+        input = new FileInputStream(System.getProperty("user.dir")+ "\\url.properties")     ;
         prop.load(input);
 
         return prop.getProperty(key);
