@@ -34,7 +34,7 @@ import java.util.concurrent.TimeUnit;
  * Time: 6:08 PM
  * To change this template use File | Settings | File Templates.
  */
-public class variantCheckout extends ExistingOnlineOrder {
+public class variantCheckout /*extends ExistingOnlineOrder */{
     String AdminBaseURL;
     String browser;
 
@@ -59,7 +59,7 @@ public class variantCheckout extends ExistingOnlineOrder {
     }
 
 
-    @DataProvider(name = "VariantCheckoutData")
+    /*@DataProvider(name = "VariantCheckoutData")
     public List<String> variantCheckoutDataProviderCombined() {
 
         List<String> finalObjectString = new ArrayList<String>();
@@ -73,11 +73,11 @@ public class variantCheckout extends ExistingOnlineOrder {
             System.out.println(ex.getMessage());
         }
         return finalObjectString;
-    }
+    }*/
 
-    @Test(dataProvider = "VariantCheckoutData", enabled = true)
+    @Test(/*dataProvider = "VariantCheckoutData", */enabled = true)
     public void variantCheckout() throws InterruptedException, IOException, Exception {
-        EOO.login(1L);
+        /*EOO.login(1L);*/
 
 
         for (SoDetailsDTO soDetailsDTO : SoDetails.Sodetails()) {
