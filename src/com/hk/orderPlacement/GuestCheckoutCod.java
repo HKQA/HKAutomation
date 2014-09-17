@@ -42,11 +42,21 @@ public class GuestCheckoutCod extends SharedProperties {
     PaymentPage paymentpage = new PaymentPage();
     ITestResult result = Reporter.getCurrentTestResult();
 
-    @Parameters({"BaseURL", "Browser"})
-    @BeforeClass
+    //@Parameters({"BaseURL", "Browser"})
+    /*@BeforeClass
     public void g(String baseUrl, String browser) {
         this.baseUrl = baseUrl;
         this.browser = browser;
+    }*/
+
+    @BeforeClass
+    public void config()
+    {
+        this.baseUrl = TestUtil.getURL();
+
+        this.browser = TestUtil.getBrowser();
+
+
     }
 
     @BeforeMethod
@@ -107,7 +117,8 @@ public class GuestCheckoutCod extends SharedProperties {
         Thread.sleep(3000);
         SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
         Thread.sleep(3000);
-        SharedProperties.sendKeys(loginPage.getGuestEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
+        //SharedProperties.sendKeys(loginPage.getGuestEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
+        SharedProperties.sendKeys(loginPage.getGuestEmailIdTextBox(), TestUtil.getGuestEmail("GuestCheckoutCod"), SharedProperties.driver);
         SharedProperties.Click(loginPage.getGuestSigninBtn(), SharedProperties.driver);
         Thread.sleep(5000);
 
@@ -115,10 +126,14 @@ public class GuestCheckoutCod extends SharedProperties {
         //code to redeem reward points
         //code to add coupons
 
-        SharedProperties.sendKeys(addresspage.name(), "Test", SharedProperties.driver);
-        SharedProperties.sendKeys(addresspage.mobile(), "9999999999", SharedProperties.driver);
-        SharedProperties.sendKeys(addresspage.address(), "Test", SharedProperties.driver);
-        SharedProperties.sendKeys(addresspage.pincode(), "122001", SharedProperties.driver);
+        //SharedProperties.sendKeys(addresspage.name(), "Test", SharedProperties.driver);
+        SharedProperties.sendKeys(addresspage.name(), TestUtil.getAddressName("GuestCheckoutCod"), SharedProperties.driver);
+        //SharedProperties.sendKeys(addresspage.mobile(), "9999999999", SharedProperties.driver);
+        SharedProperties.sendKeys(addresspage.mobile(), TestUtil.getMobile_Number("GuestCheckoutCod"), SharedProperties.driver);
+        //SharedProperties.sendKeys(addresspage.address(), "Test", SharedProperties.driver);
+        SharedProperties.sendKeys(addresspage.address(), TestUtil.getAddress("GuestCheckoutCod"), SharedProperties.driver);
+        //SharedProperties.sendKeys(addresspage.pincode(), "122001", SharedProperties.driver);
+        SharedProperties.sendKeys(addresspage.pincode(), TestUtil.getPincode("GuestCheckoutCod"), SharedProperties.driver);
         Thread.sleep(2000);
         SharedProperties.Click(addresspage.delivertoaddress(), SharedProperties.driver);
         Thread.sleep(5000);

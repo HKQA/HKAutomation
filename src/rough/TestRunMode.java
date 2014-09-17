@@ -1,4 +1,5 @@
 package rough;
+import com.hk.orderPlacement.GuestCheckoutOnline;
 import com.hk.util.*;
 /**
  * Created with IntelliJ IDEA.
@@ -24,7 +25,17 @@ public class TestRunMode extends TestUtil {
 
         System.out.println(TestUtil.getBrowser());
 
-        System.out.println(TestUtil.getURL());
+        System.out.println(excel.isSheetExist("SignupOrderOnline"));
+
+        System.out.println(TestUtil.getAddressName("SignupOrder")) ;
+
+        System.out.println("GuestCheckoutCod sheet exists "+excel.isSheetExist("GuestCheckoutCod"));
+
+        System.out.println("GuestCheckoutOnline sheet exists "+ excel.isSheetExist("GuestCheckoutOnline"));
+
+        System.out.println("ExistingOnlineOrder sheet exists " + excel.isSheetExist("ExistingOnlineOrderSheet7"));
+
+
 
 
 

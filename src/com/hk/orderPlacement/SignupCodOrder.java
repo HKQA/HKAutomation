@@ -108,7 +108,7 @@ public class SignupCodOrder extends SharedProperties {
         if (specificVariantIndex == null) {
             for (Long variantId : testDetailsDTO.getVariantIdList()) {
                 SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + variantId);
-                WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-red btn2 mrgn-b-5 disp-inln']"));
+                WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
                 buyNow.click();
             }
         } else {
@@ -135,21 +135,29 @@ public class SignupCodOrder extends SharedProperties {
         Thread.sleep(4000);
         SharedProperties.Click(signupage.signupPage(), SharedProperties.driver);
         Thread.sleep(2000);
-        SharedProperties.sendKeys(signupage.name(), "Test", SharedProperties.driver);
+        //SharedProperties.sendKeys(signupage.name(), "Test", SharedProperties.driver);
+        SharedProperties.sendKeys(signupage.name(), TestUtil.getUserName("SignupCodOrder"), SharedProperties.driver);
         //SharedProperties.sendKeys(signupage.emailid(), testDetailsDTO.getSignUpList(), SharedProperties.driver);
-        SharedProperties.sendKeys(signupage.emailid(), "nitin.kukna+905@healthkart.com", SharedProperties.driver);
-        SharedProperties.sendKeys(signupage.password(), "123456", SharedProperties.driver);
-        SharedProperties.sendKeys(signupage.confirmpassword(), "123456", SharedProperties.driver);
+        //SharedProperties.sendKeys(signupage.emailid(), "nitin.kukna+905@healthkart.com", SharedProperties.driver);
+        SharedProperties.sendKeys(signupage.emailid(), TestUtil.getEmailId("SignupCodOrder"), SharedProperties.driver);
+        //SharedProperties.sendKeys(signupage.password(), "123456", SharedProperties.driver);
+        SharedProperties.sendKeys(signupage.password(), TestUtil.getPassword("SignupCodOrder"), SharedProperties.driver);
+        //SharedProperties.sendKeys(signupage.confirmpassword(), "123456", SharedProperties.driver);
+        SharedProperties.sendKeys(signupage.confirmpassword(), TestUtil.getConfirmPassword("SignupCodOrder"), SharedProperties.driver );
         SharedProperties.Click(signupage.createaccount(), SharedProperties.driver);
 
         ExcelServiceImplOld.updateCellContent(PropertyHelper.readProperty("productIdExcel"), "1", 1, 3);
         Thread.sleep(2000);
         SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
         Thread.sleep(2000);
-        SharedProperties.sendKeys(addresspage.name(), "Test", SharedProperties.driver);
-        SharedProperties.sendKeys(addresspage.mobile(), "9999999999", SharedProperties.driver);
-        SharedProperties.sendKeys(addresspage.address(), "Test", SharedProperties.driver);
-        SharedProperties.sendKeys(addresspage.pincode(), "122001", SharedProperties.driver);
+        //SharedProperties.sendKeys(addresspage.name(), "Test", SharedProperties.driver);
+        SharedProperties.sendKeys(addresspage.name(), TestUtil.getAddressName("SignupCodOrder"), SharedProperties.driver);
+        //SharedProperties.sendKeys(addresspage.mobile(), "9999999999", SharedProperties.driver);
+        SharedProperties.sendKeys(addresspage.mobile(), TestUtil.getMobile_Number("SignupCodOrder"), SharedProperties.driver);
+        //SharedProperties.sendKeys(addresspage.address(), "Test", SharedProperties.driver);
+        SharedProperties.sendKeys(addresspage.address(), TestUtil.getAddress("SignupCodOrder"), SharedProperties.driver);
+        //SharedProperties.sendKeys(addresspage.pincode(), "122001", SharedProperties.driver);
+        SharedProperties.sendKeys(addresspage.pincode(), TestUtil.getPincode("SignupCodOrder"), SharedProperties.driver);
         Thread.sleep(2000);
         SharedProperties.Click(addresspage.delivertoaddress(), SharedProperties.driver);
         Thread.sleep(5000);
@@ -159,13 +167,13 @@ public class SignupCodOrder extends SharedProperties {
         SharedProperties.Click(paymentpage.payOnDelivery(), SharedProperties.driver);
 
         Assert.assertTrue(true, "SignupCodOrder is passed");
-        /*if (OrderDetailsVerify.orderDetails()) {
+        if (OrderDetailsVerify.orderDetails()) {
             System.out.print("DB verification Successful");
         } else {
             SendMail.sendmail("DB verification failed for Signup COD order");
             result.setStatus(ITestResult.FAILURE);
             Thread.sleep(5000);
-        }*/
+        }
 
     }
 }

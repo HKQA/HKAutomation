@@ -41,12 +41,23 @@ public class ExistingCodPlacement extends SharedProperties {
     PaymentPage paymentpage = new PaymentPage();
     ITestResult result = Reporter.getCurrentTestResult();
 
-    @Parameters({"BaseURL", "Browser"})
-    @BeforeClass
+    //@Parameters({"BaseURL", "Browser"})
+    /*@BeforeClass
     public void g(String baseUrl, String browser) {
         this.baseUrl = baseUrl;
         this.browser = browser;
+    }*/
+
+    @BeforeClass
+    public void Config()
+    {
+
+        this.baseUrl = TestUtil.getURL();
+
+        this.browser = TestUtil.getBrowser();
+
     }
+
     @BeforeMethod
     public void isSkip()
     {

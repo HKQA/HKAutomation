@@ -41,12 +41,23 @@ public class GuestCheckoutOnline extends SharedProperties {
     ITestResult result = Reporter.getCurrentTestResult();
 
 
-    @Parameters({"BaseURL", "Browser"})
-    @BeforeClass
+    //@Parameters({"BaseURL", "Browser"})
+    /*@BeforeClass
     public void g(String baseUrl, String browser) {
         this.baseUrl = baseUrl;
         this.browser = browser;
+    }*/
+
+    @BeforeClass
+    public void Config()
+    {
+        this.baseUrl = TestUtil.getURL();
+
+        this.browser = TestUtil.getBrowser();
+
+
     }
+
 
     @BeforeMethod
     public void isSkip()
@@ -68,6 +79,9 @@ public class GuestCheckoutOnline extends SharedProperties {
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\GuestCheckoutOnline.jpg"));
         }
+
+        driver.quit();
+
     }
 
     @Parameters("specificVariantIndex")
@@ -113,7 +127,8 @@ public class GuestCheckoutOnline extends SharedProperties {
         Thread.sleep(3000);
         SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
         Thread.sleep(3000);
-        SharedProperties.sendKeys(loginPage.getGuestEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
+        //SharedProperties.sendKeys(loginPage.getGuestEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
+        SharedProperties.sendKeys(loginPage.getGuestEmailIdTextBox(), TestUtil.getGuestEmail("GuestCheckoutOnline"), SharedProperties.driver);
         SharedProperties.Click(loginPage.getGuestSigninBtn(), SharedProperties.driver);
         Thread.sleep(5000);
 
@@ -123,14 +138,18 @@ public class GuestCheckoutOnline extends SharedProperties {
 
         /*SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
         Thread.sleep(5000);*/
-        SharedProperties.sendKeys(addresspage.name(), "Test", SharedProperties.driver);
-        SharedProperties.sendKeys(addresspage.mobile(), "9999999999", SharedProperties.driver);
-        SharedProperties.sendKeys(addresspage.address(), "Test", SharedProperties.driver);
-        SharedProperties.sendKeys(addresspage.pincode(), "122001", SharedProperties.driver);
+        //SharedProperties.sendKeys(addresspage.name(), "Test", SharedProperties.driver);
+        SharedProperties.sendKeys(addresspage.name(), TestUtil.getAddressName("GuestCheckoutOnline"), SharedProperties.driver);
+        //SharedProperties.sendKeys(addresspage.mobile(), "9999999999", SharedProperties.driver);
+        SharedProperties.sendKeys(addresspage.mobile(), TestUtil.getMobile_Number("GuestCheckoutOnline"), SharedProperties.driver);
+        //SharedProperties.sendKeys(addresspage.address(), "Test", SharedProperties.driver);
+        SharedProperties.sendKeys(addresspage.address(), TestUtil.getAddress("GuestCheckoutOnline"), SharedProperties.driver);
+        //SharedProperties.sendKeys(addresspage.pincode(), "122001", SharedProperties.driver);
+        SharedProperties.sendKeys(addresspage.pincode(), TestUtil.getPincode("GuestCheckoutCod"), SharedProperties.driver);
         Thread.sleep(2000);
         SharedProperties.Click(addresspage.delivertoaddress(), SharedProperties.driver);
         Thread.sleep(5000);
-        SharedProperties.Click(paymentpage.paymentPageDummy(), SharedProperties.driver);
+        /*SharedProperties.Click(paymentpage.paymentPageDummy(), SharedProperties.driver);
         Thread.sleep(2000);
 
         new Select(SharedProperties.driver.findElement(By.xpath("html/body/div[1]/div[2]/div[1]/div[5]/div[2]/div/div[2]/form[1]/div[1]/div/div[5]/select"))).selectByVisibleText("Dummy");
@@ -146,7 +165,7 @@ public class GuestCheckoutOnline extends SharedProperties {
             SendMail.sendmail("DB Verification failed for Online Order");
             result.setStatus(ITestResult.FAILURE);
             Thread.sleep(5000);
-        }
+        }*/
     }
 
 }

@@ -41,12 +41,24 @@ public class ExistingOnlineOrder extends SharedProperties {
     ITestResult result = Reporter.getCurrentTestResult();
     /*ExcelServiceImplOld readexcel = new ExcelServiceImplOld();*/
 
-    @Parameters({"BaseURL", "Browser"})
-    @BeforeClass
+    //@Parameters({"BaseURL", "Browser"})
+    /*@BeforeClass
     public void g(String baseUrl, String browser) {
         this.baseUrl = baseUrl;
         this.browser = browser;
+    }*/
+
+    @BeforeClass
+    public void Config()
+    {
+        this.baseUrl = TestUtil.getURL();
+
+        this.browser = TestUtil.getBrowser();
+
+
     }
+
+
     @BeforeMethod
     public void isSkip()
     {

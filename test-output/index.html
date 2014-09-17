@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-TestNG_Test">
-              <span class="suite-name border-passed">TestNG Test</span>
+              <span class="suite-name border-failed">TestNG Test</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -53,7 +53,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-TestNG_Test">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,26 +90,60 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">7 methods, 1 failed,  6 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-TestNG_Test" class="hide-methods passed suite-TestNG_Test"> (hide)</a> <!-- hide-methods passed suite-TestNG_Test -->
-                      <a href="#" panel-name="suite-TestNG_Test" class="show-methods passed suite-TestNG_Test"> (show)</a> <!-- show-methods passed suite-TestNG_Test -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-TestNG_Test" class="hide-methods failed suite-TestNG_Test"> (hide)</a> <!-- hide-methods failed suite-TestNG_Test -->
+                      <a href="#" panel-name="suite-TestNG_Test" class="show-methods failed suite-TestNG_Test"> (show)</a> <!-- show-methods failed suite-TestNG_Test -->
                     </span>
-                    <div class="method-list-content passed suite-TestNG_Test">
+                    <div class="method-list-content failed suite-TestNG_Test">
                       <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-TestNG_Test" title="com.hk.orderPlacement.GuestCheckoutCod" hash-for-method="login(null)">login(null)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-TestNG_Test -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-TestNG_Test" class="hide-methods skipped suite-TestNG_Test"> (hide)</a> <!-- hide-methods skipped suite-TestNG_Test -->
+                      <a href="#" panel-name="suite-TestNG_Test" class="show-methods skipped suite-TestNG_Test"> (show)</a> <!-- show-methods skipped suite-TestNG_Test -->
+                    </span>
+                    <div class="method-list-content skipped suite-TestNG_Test">
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-TestNG_Test" title="com.hk.orderPlacement.ExistingCodPlacement" hash-for-method="login(null)">login(null)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-TestNG_Test" title="com.hk.orderPlacement.GuestCheckoutOnline" hash-for-method="login(null)">login(null)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-TestNG_Test" title="com.hk.orderPlacement.SignupCodOrder" hash-for-method="login(null)">login(null)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-TestNG_Test" title="com.hk.orderPlacement.CouponOnlineOrder" hash-for-method="login(null)">login(null)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-TestNG_Test" title="com.hk.orderPlacement.SignupOrderOnline" hash-for-method="login(null)">login(null)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-TestNG_Test -->
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-TestNG_Test" title="com.hk.orderPlacement.ExistingOnlineOrder" hash-for-method="login(null)">login(null)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-TestNG_Test -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -121,9 +155,30 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-TestNG_Test" class="panel TestNG_Test">
-          <div class="suite-TestNG_Test-class-passed">
+          <div class="suite-TestNG_Test-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
+              <span class="class-name">com.hk.orderPlacement.GuestCheckoutCod</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="login(null)">
+                  </a> <!-- login(null) -->
+                  <span class="method-name">login</span>
+                  <span class="parameters">(null)</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.hk.jdbc.OrderDetailsVerify.orderDetails(Unknown Source)
+	at com.hk.orderPlacement.GuestCheckoutCod.login(Unknown Source)
+... Removed 23 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestNG_Test-class-failed -->
+          <div class="suite-TestNG_Test-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
               <span class="class-name">com.hk.orderPlacement.SignupCodOrder</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -136,10 +191,74 @@
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-TestNG_Test-class-passed -->
-          <div class="suite-TestNG_Test-class-passed">
+          </div> <!-- suite-TestNG_Test-class-skipped -->
+          <div class="suite-TestNG_Test-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="skipped.png"/>
+              <span class="class-name">com.hk.orderPlacement.ExistingOnlineOrder</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="login(null)">
+                  </a> <!-- login(null) -->
+                  <span class="method-name">login</span>
+                  <span class="parameters">(null)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestNG_Test-class-skipped -->
+          <div class="suite-TestNG_Test-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.hk.orderPlacement.CouponOnlineOrder</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="login(null)">
+                  </a> <!-- login(null) -->
+                  <span class="method-name">login</span>
+                  <span class="parameters">(null)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestNG_Test-class-skipped -->
+          <div class="suite-TestNG_Test-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.hk.orderPlacement.GuestCheckoutOnline</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="login(null)">
+                  </a> <!-- login(null) -->
+                  <span class="method-name">login</span>
+                  <span class="parameters">(null)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestNG_Test-class-skipped -->
+          <div class="suite-TestNG_Test-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.hk.orderPlacement.ExistingCodPlacement</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="login(null)">
+                  </a> <!-- login(null) -->
+                  <span class="method-name">login</span>
+                  <span class="parameters">(null)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestNG_Test-class-skipped -->
+          <div class="suite-TestNG_Test-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
               <span class="class-name">com.hk.orderPlacement.SignupOrderOnline</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -152,7 +271,7 @@
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-TestNG_Test-class-passed -->
+          </div> <!-- suite-TestNG_Test-class-skipped -->
         </div> <!-- panel TestNG_Test -->
         <div panel-name="test-xml-TestNG_Test" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -170,16 +289,21 @@
     &lt;listener class-name=&quot;org.uncommons.reportng.HTMLReporter&quot;/&gt;
     &lt;listener class-name=&quot;org.uncommons.reportng.JUnitXMLReporter&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test name=&quot;com.hk.orderPlacement.SignupCodOrder&quot;&gt;
+  &lt;test name=&quot;com.hk.orderPlacement&quot;&gt;
+    &lt;packages&gt;
+      &lt;package name=&quot;com.hk.orderPlacement&quot;/&gt;
+    &lt;/packages&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;com.hk.orderPlacement.CouponOnlineOrder&quot;/&gt;
+      &lt;class name=&quot;com.hk.orderPlacement.ExistingCodPlacement&quot;/&gt;
+      &lt;class name=&quot;com.hk.orderPlacement.ExistingOnlineOrder&quot;/&gt;
+      &lt;class name=&quot;com.hk.orderPlacement.GuestCheckoutCod&quot;/&gt;
+      &lt;class name=&quot;com.hk.orderPlacement.GuestCheckoutOnline&quot;/&gt;
+      &lt;class name=&quot;com.hk.orderPlacement.OrderDetailsUtil&quot;/&gt;
       &lt;class name=&quot;com.hk.orderPlacement.SignupCodOrder&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- com.hk.orderPlacement.SignupCodOrder --&gt;
-  &lt;test name=&quot;com.hk.orderPlacement.SignupOrderOnline&quot;&gt;
-    &lt;classes&gt;
       &lt;class name=&quot;com.hk.orderPlacement.SignupOrderOnline&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- com.hk.orderPlacement.SignupOrderOnline --&gt;
+  &lt;/test&gt; &lt;!-- com.hk.orderPlacement --&gt;
 &lt;/suite&gt; &lt;!-- TestNG Test --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -191,10 +315,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">com.hk.orderPlacement.SignupCodOrder (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">com.hk.orderPlacement.SignupOrderOnline (1 class)</span>
+                <span class="test-name">com.hk.orderPlacement (8 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -220,20 +341,40 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(7);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'login')
-data.setCell(0, 2, 'com.hk.orderPlacement.SignupCodOrder')
-data.setCell(0, 3, 85681);
+data.setCell(0, 2, 'com.hk.orderPlacement.GuestCheckoutCod')
+data.setCell(0, 3, 82288);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'login')
-data.setCell(1, 2, 'com.hk.orderPlacement.SignupOrderOnline')
-data.setCell(1, 3, 37445);
+data.setCell(1, 2, 'com.hk.orderPlacement.ExistingCodPlacement')
+data.setCell(1, 3, 0);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'login')
+data.setCell(2, 2, 'com.hk.orderPlacement.GuestCheckoutOnline')
+data.setCell(2, 3, 0);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'login')
+data.setCell(3, 2, 'com.hk.orderPlacement.SignupCodOrder')
+data.setCell(3, 3, 0);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'login')
+data.setCell(4, 2, 'com.hk.orderPlacement.CouponOnlineOrder')
+data.setCell(4, 3, 0);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'login')
+data.setCell(5, 2, 'com.hk.orderPlacement.SignupOrderOnline')
+data.setCell(5, 3, 0);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'login')
+data.setCell(6, 2, 'com.hk.orderPlacement.ExistingOnlineOrder')
+data.setCell(6, 3, 0);
 window.suiteTableData['TestNG_Test']= { tableData: data, tableDiv: 'times-div-TestNG_Test'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-TestNG_Test">
               </div> <!-- times-div-TestNG_Test -->
             </div> <!-- times-div -->
@@ -259,42 +400,115 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.hk.orderPlacement.SignupCodOrder</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.hk.orderPlacement.CouponOnlineOrder</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">config</span>
+                <span class="method-name">g(http://www.centralhk.com:9090, chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">isSkip</span>
-                <span class="method-start">220 ms</span>
+                <span class="method-start">13 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">login(null)</span>
-                <span class="method-start">220 ms</span>
+                <span class="method-start">228 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">doAfter([TestResult name=login status=SUCCESS method=SignupCodOrder.login(java.lang.Long)[pri:0, instance:co...)</span>
-                <span class="method-start">85901 ms</span>
-              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.hk.orderPlacement.SignupCodOrder</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">config</span>
+                <span class="method-start">229 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">isSkip</span>
+                <span class="method-start">230 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">login(null)</span>
+                <span class="method-start">230 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.hk.orderPlacement.ExistingCodPlacement</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">g(http://www.centralhk.com:9090, chrome)</span>
+                <span class="method-start">231 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">isSkip</span>
+                <span class="method-start">232 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">login(null)</span>
+                <span class="method-start">233 ms</span>
+              </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.hk.orderPlacement.SignupOrderOnline</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">config</span>
-                <span class="method-start">86273 ms</span>
+                <span class="method-start">233 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">isSkip</span>
-                <span class="method-start">86275 ms</span>
+                <span class="method-start">234 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">login(null)</span>
-                <span class="method-start">86276 ms</span>
+                <span class="method-start">234 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.hk.orderPlacement.ExistingOnlineOrder</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">g(http://www.centralhk.com:9090, chrome)</span>
+                <span class="method-start">235 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">isSkip</span>
+                <span class="method-start">236 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">login(null)</span>
+                <span class="method-start">236 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.hk.orderPlacement.GuestCheckoutCod</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">config</span>
+                <span class="method-start">236 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">isSkip</span>
+                <span class="method-start">237 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">login(null)</span>
+                <span class="method-start">237 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">doAfter([TestResult name=login status=SUCCESS method=SignupOrderOnline.login(java.lang.Long)[pri:0, instance...)</span>
-                <span class="method-start">123721 ms</span>
+                <span class="method-name">doAfter([TestResult name=login status=FAILURE method=GuestCheckoutCod.login(java.lang.Long)[pri:0, instance:...)</span>
+                <span class="method-start">82525 ms</span>
               </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.hk.orderPlacement.GuestCheckoutOnline</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">g(http://www.centralhk.com:9090, chrome)</span>
+                <span class="method-start">82706 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">isSkip</span>
+                <span class="method-start">82706 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">login(null)</span>
+                <span class="method-start">82707 ms</span>
+              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

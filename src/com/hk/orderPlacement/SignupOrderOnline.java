@@ -15,6 +15,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
+import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.SkipException;
@@ -124,22 +125,34 @@ public class SignupOrderOnline extends SharedProperties {
         SharedProperties.mouseHoverAndClick(cartpage.getSignupHover(), cartpage.getSigninLink(), SharedProperties.driver);
         Thread.sleep(2000);
         SharedProperties.Click(signupage.signupPage(), SharedProperties.driver);
-        SharedProperties.sendKeys(signupage.name(), "Test", SharedProperties.driver);
+        //SharedProperties.sendKeys(signupage.name(), "Test", SharedProperties.driver);
         //SharedProperties.sendKeys(signupage.emailid(), testDetailsDTO.getSignUpList(), SharedProperties.driver);
-        SharedProperties.sendKeys(signupage.emailid(), "nitin.kukna+904@healthkart.com", SharedProperties.driver);
-        SharedProperties.sendKeys(signupage.password(), "123456", SharedProperties.driver);
-        SharedProperties.sendKeys(signupage.confirmpassword(), "123456", SharedProperties.driver);
+        SharedProperties.sendKeys(signupage.name(), TestUtil.getUserName("SignupOrderOnline"), SharedProperties.driver);
+        //SharedProperties.sendKeys(signupage.emailid(), "nitin.kukna+904@healthkart.com", SharedProperties.driver);
+        SharedProperties.sendKeys(signupage.emailid(), TestUtil.getEmailId("SignupOrderOnline"), SharedProperties.driver);
+
+        //SharedProperties.sendKeys(signupage.password(), "123456", SharedProperties.driver);
+        SharedProperties.sendKeys(signupage.password(), TestUtil.getPassword("SignupOrderOnline"), SharedProperties.driver);
+        //SharedProperties.sendKeys(signupage.confirmpassword(), "123456", SharedProperties.driver);
+        SharedProperties.sendKeys(signupage.confirmpassword(), TestUtil.getConfirmPassword("SignupOrderOnline"), SharedProperties.driver);
         SharedProperties.Click(signupage.createaccount(), SharedProperties.driver);
         ExcelServiceImplOld.updateCellContent(PropertyHelper.readProperty("productIdExcel"), "1", 1, 3);
         SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
         Thread.sleep(2000);
-        SharedProperties.sendKeys(addresspage.name(), "Test", SharedProperties.driver);
-        SharedProperties.sendKeys(addresspage.mobile(), "9999999999", SharedProperties.driver);
-        SharedProperties.sendKeys(addresspage.address(), "Test", SharedProperties.driver);
-        SharedProperties.sendKeys(addresspage.pincode(), "122001", SharedProperties.driver);
+        //SharedProperties.sendKeys(addresspage.name(), "Test", SharedProperties.driver);
+        SharedProperties.sendKeys(addresspage.name(), TestUtil.getAddressName("SignupOrderOnline"), SharedProperties.driver);
+        //SharedProperties.sendKeys(addresspage.mobile(), "9999999999", SharedProperties.driver);
+        SharedProperties.sendKeys(addresspage.mobile(), TestUtil.getMobile_Number("SignupOrderOnline"), SharedProperties.driver);
+        //SharedProperties.sendKeys(addresspage.address(), "Test", SharedProperties.driver);
+        SharedProperties.sendKeys(addresspage.address(), TestUtil.getAddress("SignupOrderOnline"), SharedProperties.driver);
+        //SharedProperties.sendKeys(addresspage.pincode(), "122001", SharedProperties.driver);
+        SharedProperties.sendKeys(addresspage.pincode(), TestUtil.getPincode("SignupOrderOnline"), SharedProperties.driver);
         Thread.sleep(2000);
         SharedProperties.Click(addresspage.delivertoaddress(), SharedProperties.driver);
         Thread.sleep(5000);
+
+        Assert.assertTrue(true, "SignupOrderOnline test case is passed");
+
 
         /*WebElement dummypayment = SharedProperties.driver.findElement(By.xpath("html/body/div[1]/div[2]/div[1]/div[5]/div[2]/div/div[2]/form[1]/div[1]/div/div[4]/input"));
         if (dummypayment == null) {
