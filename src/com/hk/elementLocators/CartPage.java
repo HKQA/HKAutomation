@@ -18,6 +18,7 @@ public class CartPage {
     private String isCouponApplied = "/html/body/div[1]/div[2]/div/div[3]/div[1]/div[4]/div[5]/span";
     private String removeCouponCode="/html/body/div[1]/div[2]/div/div[3]/div[1]/div[4]/div[5]/a";
     private String signinLink="//*[@id=\"header\"]/div/div[2]/div[3]/div/div/a";
+    private String cartaddToCompareButton="//*[@id=\"variantResultView\"]/div[1]/div[5]/a";
 
     public String addToCartBtn() {
         return addToCartBtn;
@@ -49,5 +50,9 @@ public class CartPage {
         return isCouponApplied;
     }
     public String getSigninLink() {   return signinLink; }
+
+    public String getCartaddToCompareButton(){
+        return cartaddToCompareButton;
+    }
 
 }

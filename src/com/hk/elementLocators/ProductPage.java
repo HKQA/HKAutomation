@@ -9,8 +9,13 @@ package com.hk.elementLocators;
  */
 public class ProductPage {
     private String buyNowbtn="html/body/div[1]/div[2]/div[2]/div[4]/div[2]/div[1]/div[2]/input";
+    private String addToCompareButton="//*[@id=\"variant-page\"]/div[2]/div[3]/div[2]/ul/li[2]/span[2]/a";
 
     public String pressBuyNow() {
         return buyNowbtn;
+    }
+
+    public String getAddToCompareButton(){
+        return addToCompareButton;
     }
 }
