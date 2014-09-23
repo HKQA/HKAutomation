@@ -1,6 +1,10 @@
 package rough;
 import com.hk.orderPlacement.GuestCheckoutOnline;
 import com.hk.util.*;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
 /**
  * Created with IntelliJ IDEA.
  * User: vipul.jain1
@@ -10,10 +14,14 @@ import com.hk.util.*;
  */
 public class TestRunMode extends TestUtil {
 
+   //static WebDriver driver = new ChromeDriver();
+
     public static void main(String[] args)
     {
+          //driver.get("http://google.com");
 
-         System.out.println(System.getProperty("user.dir"));
+
+         /*System.out.println(System.getProperty("user.dir"));
 
          System.out.println(excel.isSheetExist("test_suite"));
 
@@ -31,9 +39,13 @@ public class TestRunMode extends TestUtil {
 
         System.out.println("GuestCheckoutCod sheet exists "+excel.isSheetExist("GuestCheckoutCod"));
 
-        System.out.println("GuestCheckoutOnline sheet exists "+ excel.isSheetExist("GuestCheckoutOnline"));
+        System.out.println("GuestCheckoutOnline sheet exists "+ excel.isSheetExist("GuestCheckoutOnline")); */
 
-        System.out.println("ExistingOnlineOrder sheet exists " + excel.isSheetExist("ExistingOnlineOrderSheet7"));
+        System.out.println("CouponOnlineOrder sheet exists " + excel.isSheetExist("CouponOnlineOrder"));
+
+
+
+
 
 
 

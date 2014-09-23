@@ -121,7 +121,9 @@ public class ExistingOnlineOrder extends SharedProperties {
 
         if (specificVariantIndex == null) {
             for (Long variantId : testDetailsDTO.getVariantIdList()) {
-                SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + variantId);
+                //SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + variantId);
+                SharedProperties.driver.navigate().to(TestUtil.getURL()+ PropertyHelper.readProperty("url") + TestUtil.getVariantId());
+                Thread.sleep(3000);
                 WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
                 buyNow.click();
             }
@@ -188,9 +190,25 @@ public class ExistingOnlineOrder extends SharedProperties {
         SharedProperties.Click(paymentpage.paymentY(), SharedProperties.driver);
         Thread.sleep(2000);
         SharedProperties.Click(paymentpage.proceedPayment(), SharedProperties.driver);
+
+        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[4]/div[1]/p[2]")).getText();
+
+        System.out.println(orderId);
+
+        TestUtil.excel.setCellData("test_suite","OrderId_Generated",7, orderId );
+
+        OrderDetailsUtil.flag = true;
+
+
+
         if (OrderDetailsVerify.orderDetails() == true) {
             System.out.print("DB verification Successful");
+
+            OrderDetailsUtil.flag = false;
+
+
         } else {
+            System.out.println("DB verification failed but Order ID is generated. So please refer DB");
             SendMail.sendmail("DB Verification failed for Online Order");
             result.setStatus(ITestResult.FAILURE);
             Thread.sleep(5000);

@@ -70,7 +70,7 @@ public class SignupCodOrder extends SharedProperties {
         if(!TestUtil.isExecutable("SignupCodOrder"))
         {
 
-            //System.out.println("SignupCodOrder would be skipped");
+            System.out.println("SignupCodOrder would be skipped");
             throw new SkipException("Skipping the SignUpCodOrder test case as RunMode is No");
 
         }
@@ -107,7 +107,9 @@ public class SignupCodOrder extends SharedProperties {
 
         if (specificVariantIndex == null) {
             for (Long variantId : testDetailsDTO.getVariantIdList()) {
-                SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + variantId);
+                //SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + variantId );
+                SharedProperties.driver.navigate().to(TestUtil.getURL()+ PropertyHelper.readProperty("url") + TestUtil.getVariantId());
+                Thread.sleep(5000);
                 WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
                 buyNow.click();
             }
@@ -162,14 +164,28 @@ public class SignupCodOrder extends SharedProperties {
         SharedProperties.Click(addresspage.delivertoaddress(), SharedProperties.driver);
         Thread.sleep(5000);
 
+
+
         SharedProperties.Click(paymentpage.cashOnDelivery(), SharedProperties.driver);
         Thread.sleep(5000);
         SharedProperties.Click(paymentpage.payOnDelivery(), SharedProperties.driver);
 
+        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[4]/div[1]/p[2]")).getText();
+
+        System.out.println(orderId);
+
+        TestUtil.excel.setCellData("test_suite","OrderId_Generated",2, orderId )       ;
+
+
+        OrderDetailsUtil.flag_signup = true;
+
+
         Assert.assertTrue(true, "SignupCodOrder is passed");
         if (OrderDetailsVerify.orderDetails()) {
             System.out.print("DB verification Successful");
+            OrderDetailsUtil.flag_signup = false;
         } else {
+            System.out.println("DB verification failed but Order ID is generated. So please refer DB");
             SendMail.sendmail("DB verification failed for Signup COD order");
             result.setStatus(ITestResult.FAILURE);
             Thread.sleep(5000);

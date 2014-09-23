@@ -79,6 +79,8 @@ public class GuestCheckoutCod extends SharedProperties {
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\GuestCheckoutCod.jpg"));
         }
+
+        driver.quit();
     }
 
 
@@ -95,9 +97,13 @@ public class GuestCheckoutCod extends SharedProperties {
             System.out.println(re.getMessage());
         }
 
+        //SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + );
+
         if (specificVariantIndex == null) {
             for (Long variantId : testDetailsDTO.getVariantIdList()) {
-                SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + variantId);
+                //SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + variantId);
+                SharedProperties.driver.navigate().to(TestUtil.getURL()+ PropertyHelper.readProperty("url") + TestUtil.getVariantId());
+                Thread.sleep(5000);
                 WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
                 buyNow.click();
             }
@@ -147,8 +153,20 @@ public class GuestCheckoutCod extends SharedProperties {
         Thread.sleep(5000);
         SharedProperties.Click(paymentpage.payOnDelivery(), SharedProperties.driver);
 
+        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[4]/div[1]/p[2]")).getText();
+
+        System.out.println(orderId);
+
+        TestUtil.excel.setCellData("test_suite","OrderId_Generated",6, orderId );
+
+        OrderDetailsUtil.flag = true;
+
+
+
+
         if (OrderDetailsVerify.orderDetails() == true) {
             System.out.print("DB verification Successful");
+            OrderDetailsUtil.flag = false;
         } else {
             SendMail.sendmail("DB Verification failed for Existing Cod order");
             result.setStatus(ITestResult.FAILURE);

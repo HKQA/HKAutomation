@@ -21,9 +21,9 @@ import java.util.Properties;
 public class SendMail {
 
     private static String toaddress = TestDetailsDTO.getLoginList();
-    private static String fromaddress = "nitin.kukna@gmail.com";
+    private static String fromaddress = "vipul.j@healthkart.com";
     private static String hostname = "smtp.gmail.com";
-    private static String password = "Nk$232017";
+    private static String password = "Maverick@33";
 
 
     public static void sendmail(String mailText) {

@@ -99,7 +99,9 @@ public class SignupOrderOnline extends SharedProperties {
 
         if (specificVariantIndex == null) {
             for (Long variantId : testDetailsDTO.getVariantIdList()) {
-                SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + variantId);
+                //SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + variantId);
+                SharedProperties.driver.navigate().to(TestUtil.getURL()+ PropertyHelper.readProperty("url") + TestUtil.getVariantId());
+                Thread.sleep(5000);
                 WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
                 buyNow.click();
             }
@@ -150,6 +152,11 @@ public class SignupOrderOnline extends SharedProperties {
         Thread.sleep(2000);
         SharedProperties.Click(addresspage.delivertoaddress(), SharedProperties.driver);
         Thread.sleep(5000);
+        SharedProperties.Click(paymentpage.paymentPageDummy(), SharedProperties.driver);
+        Thread.sleep(3000);
+        new Select(SharedProperties.driver.findElement(By.xpath("html/body/div[1]/div[2]/div[1]/div[5]/div[2]/div/div[2]/form[1]/div[1]/div/div[5]/select"))).selectByVisibleText("Dummy");
+
+
 
         Assert.assertTrue(true, "SignupOrderOnline test case is passed");
 
@@ -161,19 +168,34 @@ public class SignupOrderOnline extends SharedProperties {
             Thread.sleep(2000);
         } else {
             SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[1]/div[5]/div[2]/div/div[2]/form[1]/div[1]/div/div[2]/input")).click();
-        }
+        }*/
         Thread.sleep(2000);
         SharedProperties.Click(paymentpage.proceedToPayment(), SharedProperties.driver);
         Thread.sleep(2000);
         SharedProperties.Click(paymentpage.paymentY(), SharedProperties.driver);
         Thread.sleep(2000);
+
+
+
         SharedProperties.Click(paymentpage.proceedPayment(), SharedProperties.driver);
+
+        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[4]/div[1]/p[2]")).getText();
+
+        System.out.println(orderId);
+
+        TestUtil.excel.setCellData("test_suite","OrderId_Generated",3, orderId );
+
+        OrderDetailsUtil.flag_signup = true;
+
+
         if (OrderDetailsVerify.orderDetails() == true) {
             System.out.print("DB verification Successful");
+            OrderDetailsUtil.flag_signup = false;
         } else {
+            System.out.println("DB verification failed but Order ID is generated. So please refer DB");
             SendMail.sendmail("DB verification failed for Signup online order");
             result.setStatus(ITestResult.FAILURE);
             Thread.sleep(5000);
-        }*/
+        }
     }
 }

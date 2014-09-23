@@ -7,9 +7,31 @@
   <listeners>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="com.hk.reportAndMailGenerator.ReportListener"/>
   </listeners>
   <test name="com.hk.orderPlacement(failed)">
     <classes>
+      <class name="com.hk.orderPlacement.SignupOrderOnline">
+        <methods>
+          <include name="isSkip"/>
+          <include name="login"/>
+          <include name="config"/>
+        </methods>
+      </class> <!-- com.hk.orderPlacement.SignupOrderOnline -->
+      <class name="com.hk.orderPlacement.ExistingOnlineOrder">
+        <methods>
+          <include name="isSkip"/>
+          <include name="Config"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- com.hk.orderPlacement.ExistingOnlineOrder -->
+      <class name="com.hk.orderPlacement.GuestCheckoutOnline">
+        <methods>
+          <include name="doAfter"/>
+          <include name="Config"/>
+          <include name="isSkip"/>
+        </methods>
+      </class> <!-- com.hk.orderPlacement.GuestCheckoutOnline -->
       <class name="com.hk.orderPlacement.SignupCodOrder">
         <methods>
           <include name="isSkip"/>
@@ -19,47 +41,25 @@
       </class> <!-- com.hk.orderPlacement.SignupCodOrder -->
       <class name="com.hk.orderPlacement.GuestCheckoutCod">
         <methods>
-          <include name="doAfter"/>
           <include name="config"/>
-          <include name="login" invocation-numbers="0"/>
+          <include name="login"/>
           <include name="isSkip"/>
         </methods>
       </class> <!-- com.hk.orderPlacement.GuestCheckoutCod -->
-      <class name="com.hk.orderPlacement.ExistingOnlineOrder">
-        <methods>
-          <include name="isSkip"/>
-          <include name="g"/>
-          <include name="login"/>
-        </methods>
-      </class> <!-- com.hk.orderPlacement.ExistingOnlineOrder -->
-      <class name="com.hk.orderPlacement.CouponOnlineOrder">
-        <methods>
-          <include name="isSkip"/>
-          <include name="g"/>
-          <include name="login"/>
-        </methods>
-      </class> <!-- com.hk.orderPlacement.CouponOnlineOrder -->
-      <class name="com.hk.orderPlacement.GuestCheckoutOnline">
-        <methods>
-          <include name="login"/>
-          <include name="isSkip"/>
-          <include name="g"/>
-        </methods>
-      </class> <!-- com.hk.orderPlacement.GuestCheckoutOnline -->
       <class name="com.hk.orderPlacement.ExistingCodPlacement">
         <methods>
-          <include name="g"/>
           <include name="isSkip"/>
+          <include name="Config"/>
           <include name="login"/>
         </methods>
       </class> <!-- com.hk.orderPlacement.ExistingCodPlacement -->
-      <class name="com.hk.orderPlacement.SignupOrderOnline">
+      <class name="com.hk.orderPlacement.CouponOnlineOrder">
         <methods>
           <include name="isSkip"/>
+          <include name="Config"/>
           <include name="login"/>
-          <include name="config"/>
         </methods>
-      </class> <!-- com.hk.orderPlacement.SignupOrderOnline -->
+      </class> <!-- com.hk.orderPlacement.CouponOnlineOrder -->
     </classes>
   </test> <!-- com.hk.orderPlacement(failed) -->
 </suite> <!-- Failed suite [TestNG Test] -->

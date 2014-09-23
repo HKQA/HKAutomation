@@ -56,10 +56,12 @@ public class ExistingCodPlacement extends SharedProperties {
 
         this.browser = TestUtil.getBrowser();
 
+
+
     }
 
     @BeforeMethod
-    public void isSkip()
+    public void isSkip() throws InterruptedException
     {
 
         if(!TestUtil.isExecutable("ExistingCodPlacement"))
@@ -69,6 +71,8 @@ public class ExistingCodPlacement extends SharedProperties {
             throw new SkipException("Skipping the ExistingCodPlacement test case as RunMode is No");
 
         }
+
+
 
     }
 
@@ -96,7 +100,9 @@ public class ExistingCodPlacement extends SharedProperties {
 
         if (specificVariantIndex == null) {
             for (Long variantId : testDetailsDTO.getVariantIdList()) {
-                SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + variantId);
+                //SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + variantId);
+                SharedProperties.driver.navigate().to(TestUtil.getURL()+ PropertyHelper.readProperty("url") + TestUtil.getVariantId());
+                Thread.sleep(3000);
                 WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
                 buyNow.click();
             }
@@ -147,24 +153,42 @@ public class ExistingCodPlacement extends SharedProperties {
         Thread.sleep(5000);*/
         SharedProperties.Click(addresspage.addressPage(), SharedProperties.driver);
         Thread.sleep(5000);
-        if (SharedProperties.driver.findElement(By.xpath("//*[@id=\"nav\"]/li[5]")).getText() == "CASH ON DELIVERY")
+        /*if (SharedProperties.driver.findElement(By.xpath("/*//*[@id=\"nav\"]/li[5]")).getText() == "CASH ON DELIVERY")
         {
            SharedProperties.Click(paymentpage.cashOnDelivery(), SharedProperties.driver);
         }
-        else if (SharedProperties.driver.findElement(By.xpath("//*[@id=\"nav\"]/li[6]")).getText() == "CASH ON DELIVERY")
+        else if (SharedProperties.driver.findElement(By.xpath("*//*//**//*[@id=\"nav\"]/li[5]")).getText() == "CASH ON DELIVERY")
         {
             SharedProperties.Click(paymentpage.getCod1stDiv(), SharedProperties.driver);
         }
         else {
             SharedProperties.Click(paymentpage.getCod2ndDiv(), SharedProperties.driver);
-        }
-        /*SharedProperties.Click(paymentpage.cashOnDelivery(), SharedProperties.driver);*/
+        }*/
+
+
+        SharedProperties.Click(paymentpage.cashOnDelivery(), SharedProperties.driver);
         Thread.sleep(5000);
         SharedProperties.Click(paymentpage.payOnDelivery(), SharedProperties.driver);
 
+
+        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[4]/div[1]/p[2]")).getText();
+
+        System.out.println(orderId);
+
+        TestUtil.excel.setCellData("test_suite","OrderId_Generated",8, orderId );
+
+        OrderDetailsUtil.flag = true;
+
+
+
         if (OrderDetailsVerify.orderDetails() == true) {
             System.out.print("DB verification Successful");
+
+            OrderDetailsUtil.flag = false;
+
+
         } else {
+            System.out.println("DB verification failed but Order ID is generated. So please refer DB");
             SendMail.sendmail("DB Verification failed for Existing Cod order");
             result.setStatus(ITestResult.FAILURE);
             Thread.sleep(5000);

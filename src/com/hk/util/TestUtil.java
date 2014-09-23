@@ -188,4 +188,63 @@ public static Xls_Reader excel = new Xls_Reader(System.getProperty("user.dir")+ 
 
     }
 
+    public void setOrderId_Generated(String UseCase, String data)
+    {
+
+
+        excel.setCellData(UseCase, "OrderId_Generated", 3, data );
+
+
+
+
+
+    }
+
+    public static String getVariantId()
+    {
+
+        String variantId = excel.getCellData("Config", 1, 6)  ;
+
+        return variantId;
+
+    }
+
+    public static String getCoupon(String UseCase)
+    {
+
+
+        String coupon = excel.getCellData(UseCase, "Coupon", 2);
+
+        return coupon;
+
+    }
+
+    public static String getDBURL()
+    {
+
+        String db_URL = excel.getCellData("Config", 1, 3)  ;
+
+        return db_URL;
+
+
+    }
+
+    public static String getDBPassword()
+    {
+
+        String db_Password = excel.getCellData("Config", 1, 5);
+
+        return db_Password;
+
+    }
+
+    public static String getDBUser()
+    {
+
+        String db_User = excel.getCellData("Config", 1, 4);
+
+        return db_User;
+
+    }
+
 }

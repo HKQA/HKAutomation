@@ -41,11 +41,23 @@ public class CouponOnlineOrder extends SharedProperties {
     PaymentPage paymentpage = new PaymentPage();
     ITestResult result = Reporter.getCurrentTestResult();
 
-    @Parameters({"BaseURL", "Browser"})
-    @BeforeClass
+    //@Parameters({"BaseURL", "Browser"})
+    /*@BeforeClass
     public void g(String baseUrl, String browser) {
         this.baseUrl = baseUrl;
+
         this.browser = browser;
+    }*/
+
+    @BeforeClass
+    public void Config()
+    {
+
+        this.baseUrl = TestUtil.getURL();
+
+        this.browser = TestUtil.getBrowser();
+
+
     }
 
     @BeforeMethod
@@ -86,7 +98,9 @@ public class CouponOnlineOrder extends SharedProperties {
 
         if (specificVariantIndex == null) {
             for (Long variantId : testDetailsDTO.getVariantIdList()) {
-                SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + variantId);
+                //SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + variantId);
+                SharedProperties.driver.navigate().to(TestUtil.getURL()+ PropertyHelper.readProperty("url") + TestUtil.getVariantId());
+                Thread.sleep(3000);
                 WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
                 buyNow.click();
             }
@@ -109,11 +123,13 @@ public class CouponOnlineOrder extends SharedProperties {
         if (StringUtils.contains(SharedProperties.driver.findElement(By.xpath(cartpage.IsCouponApplied())).getText(), "Coupon Applied")) {
             SharedProperties.driver.findElement(By.cssSelector("a[href*='removeOffer']")).click();
         }
-        SharedProperties.sendKeys(cartpage.addCouponTextBox(), "HKROCKS", SharedProperties.driver);
+        //SharedProperties.sendKeys(cartpage.addCouponTextBox(), "HKROCKS", SharedProperties.driver);
+        SharedProperties.sendKeys(cartpage.addCouponTextBox(), TestUtil.getCoupon("CouponOnlineOrder"), SharedProperties.driver);
         SharedProperties.Click(cartpage.ClickCouponTextBox(), SharedProperties.driver);
         Thread.sleep(2000);
         SharedProperties.Click(cartpage.CouponProceedToCheckout(), SharedProperties.driver);
         Thread.sleep(3000);
+        SharedProperties.Click(loginPage.getSignInCheckbox(), SharedProperties.driver);
         if (SharedProperties.driver.findElements(By.xpath("//*[@id=\"signInForm\"]/input[3]")).size() > 0 ) {
             SharedProperties.clear(loginPage.getOldEmailIdTextBox(), SharedProperties.driver);
             SharedProperties.sendKeys(loginPage.getOldEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
@@ -142,8 +158,19 @@ public class CouponOnlineOrder extends SharedProperties {
         Thread.sleep(2000);
         SharedProperties.Click(paymentpage.proceedPayment(), SharedProperties.driver);
         Thread.sleep(5000);
+
+        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[4]/div[1]/p[2]")).getText();
+
+        System.out.println(orderId);
+
+        TestUtil.excel.setCellData("test_suite","OrderId_Generated",9, orderId );
+
+        OrderDetailsUtil.flag = true;
+
+
         if (OrderDetailsVerify.orderDetails() == true) {
             System.out.print("DB verification Successful");
+            OrderDetailsUtil.flag = false;
         } else {
             SendMail.sendmail("DB Verification failed for Coupon online order");
             result.setStatus(ITestResult.FAILURE);

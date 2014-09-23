@@ -1,6 +1,7 @@
 package com.hk.jdbc;
 
 import com.hk.property.PropertyHelper;
+import com.hk.util.TestUtil;
 
 import java.sql.*;
 
@@ -12,19 +13,24 @@ import java.sql.*;
  */
 public class JdbcConnectionFile {// JDBC driver name and database URL
 
-    public static <T> T readJdbcprop(String inputSql, ResultSetExtractor<T> extract) {
+    public  static <T> T readJdbcprop(String inputSql, ResultSetExtractor<T> extract) {
 
         Connection conn = null;
         Statement stmt = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
+
             System.out.println("Connecting to database...");
-            conn = DriverManager.getConnection(PropertyHelper.readProperty("DB_URL"), PropertyHelper.readProperty("USER"), PropertyHelper.readProperty("PASS"));
+            //conn = DriverManager.getConnection(PropertyHelper.readProperty("DB_URL"), PropertyHelper.readProperty("USER"), PropertyHelper.readProperty("PASS"));
+
+            conn = DriverManager.getConnection(TestUtil.getDBURL(), TestUtil.getDBUser(), TestUtil.getDBPassword());
+
 
             System.out.println("Creating statement...");
             stmt = conn.createStatement();
 
             ResultSet rs = stmt.executeQuery(inputSql);
+            System.out.println("Executing query...");
             return extract.extract(rs);
 
 
@@ -43,7 +49,9 @@ public class JdbcConnectionFile {// JDBC driver name and database URL
             }
             try {
                 if (conn != null)
+                    System.out.println("DB connection is about to get closed");
                     conn.close();
+
             } catch (SQLException se) {
                 se.printStackTrace();
             }
