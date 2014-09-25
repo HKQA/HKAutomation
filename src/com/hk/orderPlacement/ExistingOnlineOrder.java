@@ -11,6 +11,7 @@ import com.hk.elementLocators.*;
 import com.hk.excel.TestDetailsExcelService;
 import com.hk.excel.dto.TestDetailsDTO;
 import com.hk.jdbc.OrderDetailsVerify;
+import com.hk.orderCheckout.variantCheckout;
 import com.hk.property.PropertyHelper;
 import com.hk.reportAndMailGenerator.SendMail;
 import com.hk.util.TestUtil;
@@ -39,6 +40,10 @@ public class ExistingOnlineOrder extends SharedProperties {
     AddressPage addresspage = new AddressPage();
     PaymentPage paymentpage = new PaymentPage();
     ITestResult result = Reporter.getCurrentTestResult();
+    variantCheckout varCheckout = new variantCheckout();
+
+
+
     /*ExcelServiceImplOld readexcel = new ExcelServiceImplOld();*/
 
     //@Parameters({"BaseURL", "Browser"})
@@ -106,6 +111,17 @@ public class ExistingOnlineOrder extends SharedProperties {
     }*/
 
 
+    /*@Test(enabled = true,groups = {"init"})
+    public void TestMethod()
+    {
+
+        System.out.println("Inside test method");
+        varCheckout.dummyMethod();
+
+
+    }*/
+
+
     @Parameters("specificVariantIndex")
     @Test(enabled = true)
     public void login(@Optional Long specificVariantIndex) throws InterruptedException, IOException, Exception {
@@ -124,7 +140,7 @@ public class ExistingOnlineOrder extends SharedProperties {
                 //SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + variantId);
                 SharedProperties.driver.navigate().to(TestUtil.getURL()+ PropertyHelper.readProperty("url") + TestUtil.getVariantId());
                 Thread.sleep(3000);
-                WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
+                WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-red btn2 mrgn-b-5 disp-inln']"));
                 buyNow.click();
             }
         } else {
@@ -172,12 +188,7 @@ public class ExistingOnlineOrder extends SharedProperties {
             Thread.sleep(5000);
         }
 
-        //Code to add more quantity
-        //code to redeem reward points
-        //code to add coupons
 
-        /*SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
-        Thread.sleep(5000);*/
         SharedProperties.Click(addresspage.addressPage(), SharedProperties.driver);
         Thread.sleep(5000);
         SharedProperties.Click(paymentpage.paymentPageDummy(), SharedProperties.driver);
@@ -191,7 +202,7 @@ public class ExistingOnlineOrder extends SharedProperties {
         Thread.sleep(2000);
         SharedProperties.Click(paymentpage.proceedPayment(), SharedProperties.driver);
 
-        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[4]/div[1]/p[2]")).getText();
+        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[5]/div[1]/p[2]")).getText();
 
         System.out.println(orderId);
 
@@ -199,9 +210,11 @@ public class ExistingOnlineOrder extends SharedProperties {
 
         OrderDetailsUtil.flag = true;
 
+        varCheckout.variantCheckout();
 
 
-        if (OrderDetailsVerify.orderDetails() == true) {
+
+        /*if (OrderDetailsVerify.orderDetails() == true) {
             System.out.print("DB verification Successful");
 
             OrderDetailsUtil.flag = false;
@@ -212,7 +225,7 @@ public class ExistingOnlineOrder extends SharedProperties {
             SendMail.sendmail("DB Verification failed for Online Order");
             result.setStatus(ITestResult.FAILURE);
             Thread.sleep(5000);
-        }
+        }*/
     }
 
 }

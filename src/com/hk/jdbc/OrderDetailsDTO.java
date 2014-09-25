@@ -16,7 +16,15 @@ public class OrderDetailsDTO {
     private Double amount;
     private String gatewayOrderId;
     private List<Long> productList = new ArrayList<Long>();
+    private List<Long> cartLineItemIdList = new ArrayList<Long>();
 
+    public List<Long> getCartLineItemIdList() {
+        return cartLineItemIdList;
+    }
+
+    public void setCartLineItemIdList(List<Long> cartLineItemIdList) {
+        this.cartLineItemIdList = cartLineItemIdList;
+    }
 
     public String getEmail() {
         return email;
@@ -57,4 +65,5 @@ public class OrderDetailsDTO {
     public void setProductList(List<Long> productList) {
         this.productList = productList;
     }
-}
+
+    }

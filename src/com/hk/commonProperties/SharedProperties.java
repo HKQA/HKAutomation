@@ -5,24 +5,35 @@ package com.hk.commonProperties; /**
  * Time: 7:23 PM
  * To change this template use File | Settings | File Templates.
  */
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Iterator;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.Keys;
+
 import com.hk.property.PropertyHelper;
+
+
+
+
 
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-public class SharedProperties {
+public class SharedProperties
+{
     public static WebDriver driver;
+    public int delay ;
+
 
     public static void openBrowser(String AppURL, String BrowserName) {
         if (BrowserName.equalsIgnoreCase("firefox")) {
@@ -53,8 +64,12 @@ public class SharedProperties {
             driver.get(AppURL);
         }
     }
-    public static void sendKeys(String elementXpath,  String value, WebDriver driver) {
+    public static void sendKeys(String elementXpath, String value, WebDriver driver) {
         driver.findElement(By.xpath(elementXpath)).sendKeys(value);
+
+    }
+    public static void sendKeysWithName(String name, String value, WebDriver driver) {
+        driver.findElement(By.name(name)).sendKeys(value);
 
     }
     public static void Click(String elementXpath, WebDriver driver)  {
@@ -62,15 +77,51 @@ public class SharedProperties {
 
     }
 
+    public static void clickWithCss(String elementCss, WebDriver driver)  {
+        driver.findElement(By.cssSelector(elementCss)).click();
+
+    }
     public static void clear(String elementXpath,  WebDriver driver)  {
         driver.findElement(By.xpath(elementXpath)).clear();
 
     }
 
-    public static void Click2(String CSSSelector, WebDriver driver)  {
-        driver.findElement(By.cssSelector(CSSSelector)).click();
+    public static void Class(String className,  WebDriver driver)  {
+        driver.findElement(By.className(className)).click();
 
     }
+
+    public static void ClickWithName(String name,  WebDriver driver)  {
+        driver.findElement(By.name(name)).click();
+
+    }
+
+    public  void pressEnterSafe() throws InterruptedException, IOException, Exception{
+
+        Robot robot = new Robot() ;
+
+        robot.delay(delay) ;
+
+        robot.keyPress(KeyEvent.VK_ENTER) ;
+        robot.keyRelease(KeyEvent.VK_ENTER) ;
+        Thread.sleep(2000);
+        robot.delay(delay) ;
+
+        robot.keyPress(KeyEvent.VK_ENTER) ;
+        robot.keyRelease(KeyEvent.VK_ENTER) ;
+        Thread.sleep(3000);
+
+        robot.delay(delay) ;
+        Thread.sleep(3000);
+        robot.keyPress(KeyEvent.VK_ENTER) ;
+        robot.keyRelease(KeyEvent.VK_ENTER) ;
+        robot.delay(delay) ;
+
+
+
+
+    }
+
 
     public static void mouseHoverAndClick(String mouseHoverElementXpath, String targetElementXpath, WebDriver driver)
     {
@@ -85,3 +136,6 @@ public class SharedProperties {
 
     }
 }
+
+
+

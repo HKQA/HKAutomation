@@ -11,34 +11,6 @@
   </listeners>
   <test name="com.hk.orderPlacement(failed)">
     <classes>
-      <class name="com.hk.orderPlacement.SignupOrderOnline">
-        <methods>
-          <include name="isSkip"/>
-          <include name="login"/>
-          <include name="config"/>
-        </methods>
-      </class> <!-- com.hk.orderPlacement.SignupOrderOnline -->
-      <class name="com.hk.orderPlacement.ExistingOnlineOrder">
-        <methods>
-          <include name="isSkip"/>
-          <include name="Config"/>
-          <include name="login"/>
-        </methods>
-      </class> <!-- com.hk.orderPlacement.ExistingOnlineOrder -->
-      <class name="com.hk.orderPlacement.GuestCheckoutOnline">
-        <methods>
-          <include name="doAfter"/>
-          <include name="Config"/>
-          <include name="isSkip"/>
-        </methods>
-      </class> <!-- com.hk.orderPlacement.GuestCheckoutOnline -->
-      <class name="com.hk.orderPlacement.SignupCodOrder">
-        <methods>
-          <include name="isSkip"/>
-          <include name="config"/>
-          <include name="login"/>
-        </methods>
-      </class> <!-- com.hk.orderPlacement.SignupCodOrder -->
       <class name="com.hk.orderPlacement.GuestCheckoutCod">
         <methods>
           <include name="config"/>
@@ -46,6 +18,20 @@
           <include name="isSkip"/>
         </methods>
       </class> <!-- com.hk.orderPlacement.GuestCheckoutCod -->
+      <class name="com.hk.orderPlacement.SignupOrderOnline">
+        <methods>
+          <include name="isSkip"/>
+          <include name="login"/>
+          <include name="config"/>
+        </methods>
+      </class> <!-- com.hk.orderPlacement.SignupOrderOnline -->
+      <class name="com.hk.orderPlacement.SignupCodOrder">
+        <methods>
+          <include name="isSkip"/>
+          <include name="config"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- com.hk.orderPlacement.SignupCodOrder -->
       <class name="com.hk.orderPlacement.ExistingCodPlacement">
         <methods>
           <include name="isSkip"/>
@@ -53,6 +39,21 @@
           <include name="login"/>
         </methods>
       </class> <!-- com.hk.orderPlacement.ExistingCodPlacement -->
+      <class name="com.hk.orderPlacement.GuestCheckoutOnline">
+        <methods>
+          <include name="Config"/>
+          <include name="login"/>
+          <include name="isSkip"/>
+        </methods>
+      </class> <!-- com.hk.orderPlacement.GuestCheckoutOnline -->
+      <class name="com.hk.orderPlacement.ExistingOnlineOrder">
+        <methods>
+          <include name="isSkip"/>
+          <include name="doAfter"/>
+          <include name="Config"/>
+          <include name="login" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.hk.orderPlacement.ExistingOnlineOrder -->
       <class name="com.hk.orderPlacement.CouponOnlineOrder">
         <methods>
           <include name="isSkip"/>
