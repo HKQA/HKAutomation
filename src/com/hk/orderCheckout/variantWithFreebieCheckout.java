@@ -12,12 +12,12 @@ import java.io.IOException;
  * Time: 3:10 PM
  * To change this template use File | Settings | File Templates.
  */
-public class variantWithFreebieCheckout extends ExistingOnlineOrder {
+public class variantWithFreebieCheckout {
     String baseUrl;
     String browser;
     ExistingOnlineOrder EOO = new ExistingOnlineOrder();
 
-    @Test(enabled = true)
+    //@Test(enabled = true)
     public void variantWithFreebieCheckout() throws InterruptedException, IOException, Exception {
         EOO.login(2L);
     }

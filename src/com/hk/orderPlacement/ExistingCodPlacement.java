@@ -1,6 +1,7 @@
 package com.hk.orderPlacement;
 
 
+import com.hk.orderCheckout.variantCheckout;
 import com.hk.reportAndMailGenerator.SendMail;
 import com.hk.commonProperties.SharedProperties;
 import com.hk.elementLocators.*;
@@ -40,6 +41,7 @@ public class ExistingCodPlacement extends SharedProperties {
     AddressPage addresspage = new AddressPage();
     PaymentPage paymentpage = new PaymentPage();
     ITestResult result = Reporter.getCurrentTestResult();
+    variantCheckout varCheckout = new variantCheckout();
 
     //@Parameters({"BaseURL", "Browser"})
     /*@BeforeClass
@@ -55,9 +57,6 @@ public class ExistingCodPlacement extends SharedProperties {
         this.baseUrl = TestUtil.getURL();
 
         this.browser = TestUtil.getBrowser();
-
-
-
     }
 
     @BeforeMethod
@@ -82,6 +81,8 @@ public class ExistingCodPlacement extends SharedProperties {
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\ExistingCodPlacement.jpg"));
         }
+
+        driver.quit();
     }
 
 
@@ -103,7 +104,7 @@ public class ExistingCodPlacement extends SharedProperties {
                 //SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + variantId);
                 SharedProperties.driver.navigate().to(TestUtil.getURL()+ PropertyHelper.readProperty("url") + TestUtil.getVariantId());
                 Thread.sleep(3000);
-                WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
+                WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-red btn2 mrgn-b-5 disp-inln']"));
                 buyNow.click();
             }
         }else {
@@ -171,7 +172,7 @@ public class ExistingCodPlacement extends SharedProperties {
         SharedProperties.Click(paymentpage.payOnDelivery(), SharedProperties.driver);
 
 
-        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[4]/div[1]/p[2]")).getText();
+        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[5]/div[1]/p[2]")).getText();
 
         System.out.println(orderId);
 
@@ -179,19 +180,22 @@ public class ExistingCodPlacement extends SharedProperties {
 
         OrderDetailsUtil.flag = true;
 
+        Thread.sleep(5000);
+
+        //varCheckout.variantCheckout();
 
 
-        if (OrderDetailsVerify.orderDetails() == true) {
+
+        /*if (OrderDetailsVerify.orderDetails() == true)
+        {
             System.out.print("DB verification Successful");
 
             OrderDetailsUtil.flag = false;
-
-
         } else {
             System.out.println("DB verification failed but Order ID is generated. So please refer DB");
             SendMail.sendmail("DB Verification failed for Existing Cod order");
             result.setStatus(ITestResult.FAILURE);
             Thread.sleep(5000);
-        }
+        }*/
     }
 }

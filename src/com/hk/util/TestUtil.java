@@ -247,4 +247,61 @@ public static Xls_Reader excel = new Xls_Reader(System.getProperty("user.dir")+ 
 
     }
 
+    public static String getAdminURL()
+    {
+
+        String adminURL =  excel.getCellData("Config", 1, 7);
+
+        return adminURL;
+
+    }
+
+    public static String getAdmin_User()
+    {
+
+        String adminUser = excel.getCellData("Config", 1, 8);
+
+        return adminUser;
+
+
+    }
+
+    public static String getAdmin_Password()
+    {
+
+        String adminPassword = excel.getCellData("Config", 1, 9);
+
+        return adminPassword;
+
+    }
+
+    public  static String getBright_URL()
+    {
+
+        String brightURL = excel.getCellData("Config", 1, 10)   ;
+
+        return brightURL;
+
+    }
+
+    public static String getBright_User()
+    {
+
+        String brightUser = excel.getCellData("Config", 1, 11);
+
+        return brightUser;
+
+
+    }
+
+
+    public static String getBright_Password()
+    {
+
+        String brightPassword = excel.getCellData("Config", 1, 12);
+
+        return brightPassword;
+
+    }
+
 }

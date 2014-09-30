@@ -2,7 +2,10 @@ package com.hk.orderPlacement;
 
 
 
+import com.hk.codConfirmation.CodConfirmNavigation;
 import com.hk.excel.ExcelServiceImplOld;
+import com.hk.orderCheckout.variantCheckout;
+import com.hk.orderCheckoutDto.SoDetails;
 import com.hk.reportAndMailGenerator.SendMail;
 import com.hk.commonProperties.SharedProperties;
 import com.hk.elementLocators.*;
@@ -43,6 +46,9 @@ public class SignupCodOrder extends SharedProperties {
     AddressPage addresspage = new AddressPage();
     PaymentPage paymentpage = new PaymentPage();
     ITestResult result = Reporter.getCurrentTestResult();
+    SoDetails soDetails = new SoDetails();
+    variantCheckout varCheckout = new variantCheckout();
+    CodConfirmNavigation codNavigation = new CodConfirmNavigation();
 
 
     //@Parameters({"BaseURL", "Browser"})
@@ -110,7 +116,7 @@ public class SignupCodOrder extends SharedProperties {
                 //SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + variantId );
                 SharedProperties.driver.navigate().to(TestUtil.getURL()+ PropertyHelper.readProperty("url") + TestUtil.getVariantId());
                 Thread.sleep(5000);
-                WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
+                WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-red btn2 mrgn-b-5 disp-inln']"));
                 buyNow.click();
             }
         } else {
@@ -170,18 +176,28 @@ public class SignupCodOrder extends SharedProperties {
         Thread.sleep(5000);
         SharedProperties.Click(paymentpage.payOnDelivery(), SharedProperties.driver);
 
-        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[4]/div[1]/p[2]")).getText();
+        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[5]/div[1]/p[2]")).getText();
 
         System.out.println(orderId);
+
+        String finalOrderId = orderId.substring(10);
+
+        soDetails.orderIdSoDetails = finalOrderId;
 
         TestUtil.excel.setCellData("test_suite","OrderId_Generated",2, orderId )       ;
 
 
         OrderDetailsUtil.flag_signup = true;
 
+        codNavigation.codConfirmNavigation(finalOrderId);
+
+
+
+        varCheckout.variantCheckout();
+
 
         Assert.assertTrue(true, "SignupCodOrder is passed");
-        if (OrderDetailsVerify.orderDetails()) {
+        /*if (OrderDetailsVerify.orderDetails()) {
             System.out.print("DB verification Successful");
             OrderDetailsUtil.flag_signup = false;
         } else {
@@ -189,7 +205,7 @@ public class SignupCodOrder extends SharedProperties {
             SendMail.sendmail("DB verification failed for Signup COD order");
             result.setStatus(ITestResult.FAILURE);
             Thread.sleep(5000);
-        }
+        }*/
 
     }
 }

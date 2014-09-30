@@ -1,11 +1,15 @@
 package com.hk.orderPlacement;
 
 
+import com.hk.aquaElementLocators.CodConfirmation;
+import com.hk.codConfirmation.CodConfirmNavigation;
 import com.hk.commonProperties.SharedProperties;
 import com.hk.elementLocators.*;
 import com.hk.excel.TestDetailsExcelService;
 import com.hk.excel.dto.TestDetailsDTO;
 import com.hk.jdbc.OrderDetailsVerify;
+import com.hk.orderCheckout.variantCheckout;
+import com.hk.orderCheckoutDto.SoDetails;
 import com.hk.property.PropertyHelper;
 import com.hk.reportAndMailGenerator.SendMail;
 import com.hk.util.TestUtil;
@@ -41,6 +45,9 @@ public class GuestCheckoutCod extends SharedProperties {
     AddressPage addresspage = new AddressPage();
     PaymentPage paymentpage = new PaymentPage();
     ITestResult result = Reporter.getCurrentTestResult();
+    CodConfirmNavigation codNavigation = new CodConfirmNavigation();
+    variantCheckout varCheckout = new variantCheckout();
+    SoDetails soDetails = new SoDetails();
 
     //@Parameters({"BaseURL", "Browser"})
     /*@BeforeClass
@@ -104,7 +111,7 @@ public class GuestCheckoutCod extends SharedProperties {
                 //SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + variantId);
                 SharedProperties.driver.navigate().to(TestUtil.getURL()+ PropertyHelper.readProperty("url") + TestUtil.getVariantId());
                 Thread.sleep(5000);
-                WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
+                WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-red btn2 mrgn-b-5 disp-inln']"));
                 buyNow.click();
             }
         } else {
@@ -153,24 +160,54 @@ public class GuestCheckoutCod extends SharedProperties {
         Thread.sleep(5000);
         SharedProperties.Click(paymentpage.payOnDelivery(), SharedProperties.driver);
 
-        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[4]/div[1]/p[2]")).getText();
+
+
+
+
+        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[5]/div[1]/p[2]")).getText();
 
         System.out.println(orderId);
 
-        TestUtil.excel.setCellData("test_suite","OrderId_Generated",6, orderId );
+        String finalOrderId = orderId.substring(10);
+
+        soDetails.orderIdSoDetails = finalOrderId;
+
+
+
+
+
+        TestUtil.excel.setCellData("test_suite", "OrderId_Generated", 6, orderId);
 
         OrderDetailsUtil.flag = true;
 
 
 
+        codNavigation.codConfirmNavigation(finalOrderId);
 
-        if (OrderDetailsVerify.orderDetails() == true) {
+
+
+        varCheckout.variantCheckout();
+
+
+
+
+
+        /*if (OrderDetailsVerify.orderDetails() == true) {
             System.out.print("DB verification Successful");
+
+            //codNavigation.codConfirmNavigation(finalOrderId);
+
+
             OrderDetailsUtil.flag = false;
         } else {
-            SendMail.sendmail("DB Verification failed for Existing Cod order");
-            result.setStatus(ITestResult.FAILURE);
+            codNavigation.codConfirmNavigation(finalOrderId);
+            Thread.sleep(3000);
+
             Thread.sleep(5000);
-        }
+        }*/
+
+
+
+
     }
 }

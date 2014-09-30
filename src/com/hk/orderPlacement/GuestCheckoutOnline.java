@@ -6,6 +6,7 @@ package com.hk.orderPlacement; /**
  * To change this template use File | Settings | File Templates.
  */
 
+import com.hk.orderCheckout.variantCheckout;
 import com.hk.reportAndMailGenerator.SendMail;
 import com.hk.commonProperties.SharedProperties;
 import com.hk.elementLocators.*;
@@ -39,6 +40,7 @@ public class GuestCheckoutOnline extends SharedProperties {
     AddressPage addresspage = new AddressPage();
     PaymentPage paymentpage = new PaymentPage();
     ITestResult result = Reporter.getCurrentTestResult();
+    variantCheckout varCheckout = new variantCheckout();
 
 
     //@Parameters({"BaseURL", "Browser"})
@@ -103,7 +105,7 @@ public class GuestCheckoutOnline extends SharedProperties {
                 //SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + TestUtil.getVariantId());
                 SharedProperties.driver.navigate().to(TestUtil.getURL()+ PropertyHelper.readProperty("url") + TestUtil.getVariantId());
                 Thread.sleep(3000);
-                WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
+                WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-red btn2 mrgn-b-5 disp-inln']"));
                 buyNow.click();
             }
         }else {
@@ -165,7 +167,7 @@ public class GuestCheckoutOnline extends SharedProperties {
 
 
 
-        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[4]/div[1]/p[2]")).getText();
+        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[5]/div[1]/p[2]")).getText();
 
         System.out.println(orderId);
 
@@ -173,9 +175,13 @@ public class GuestCheckoutOnline extends SharedProperties {
 
         OrderDetailsUtil.flag = true;
 
+        Thread.sleep(5000);
+
+        varCheckout.variantCheckout();
 
 
-        if (OrderDetailsVerify.orderDetails() == true) {
+
+        /*if (OrderDetailsVerify.orderDetails() == true) {
             System.out.print("DB verification Successful");
             OrderDetailsUtil.flag = false;
 
@@ -183,7 +189,7 @@ public class GuestCheckoutOnline extends SharedProperties {
             SendMail.sendmail("DB Verification failed for Online Order");
             result.setStatus(ITestResult.FAILURE);
             Thread.sleep(5000);
-        }
+        }*/
     }
 
 }

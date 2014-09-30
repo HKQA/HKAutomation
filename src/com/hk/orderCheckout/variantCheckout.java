@@ -12,6 +12,7 @@ import com.hk.orderCheckoutDto.SoDetailsDTO;
 import com.hk.orderPlacement.ExistingOnlineOrder;
 import com.hk.orderPlacement.OrderDetailsUtil;
 import com.hk.property.PropertyHelper;
+import com.hk.util.TestUtil;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -77,32 +78,35 @@ public class variantCheckout    {
     }
 
 
-    /*@Test(enabled = true)
-    public void dummyMethod()
-    {
 
-        System.out.println("Inside dummy method");
-
-
-
-    }*/
-
-    @Test(enabled = true)
+    //@Test(enabled = true)
     public void variantCheckout() throws InterruptedException, IOException, Exception {
 
         System.out.println("Inside variantcheckout");
 
-        this.AdminBaseURL = "http://192.168.70.26:8080/";
-        this.browser = "chrome"   ;
+        //this.AdminBaseURL = "http://192.168.70.27:8080/admin";
+        //this.browser = "chrome"   ;
+
+
+        Thread.sleep(15000);
 
        // EOO.login(1L);
-       System.out.print("\n HK OrderID:- " + OrderDetailsUtil.GatewayOrderId());
+        //System.out.print("\n HK OrderID:- " + OrderDetailsUtil.GatewayOrderId());
+        System.out.println("HK orderID:- " + SoDetails.orderIdSoDetails);
+
+        Thread.sleep(3000);
 
         for (SoDetailsDTO soDetailsDTO : SoDetails.Sodetails()) {
             //SharedProperties.openBrowser(AdminBaseURL, browser);
-            SharedProperties.openBrowser("http://192.168.70.26:8080/", "chrome");
-            SharedProperties.sendKeys(loginpage.getUserName(), "saurabh.nagpal@healthkart.com", SharedProperties.driver);
-            SharedProperties.sendKeys(loginpage.getPassword(), "abcde12", SharedProperties.driver);
+            Thread.sleep(3000);
+
+            SharedProperties.openBrowser(TestUtil.getAdminURL(), TestUtil.getBrowser());
+            //SharedProperties.openBrowser("http://192.168.70.27:8080/admin", "chrome");
+            Thread.sleep(3000);
+            //SharedProperties.sendKeys(loginpage.getUserName(), "gagan.jain@healthkart.com", SharedProperties.driver);
+            SharedProperties.sendKeys(loginpage.getUserName(), TestUtil.getAdmin_User(), SharedProperties.driver);
+            //SharedProperties.sendKeys(loginpage.getPassword(), "gagan.jain", SharedProperties.driver);
+            SharedProperties.sendKeys(loginpage.getPassword(), TestUtil.getAdmin_Password(), SharedProperties.driver);
             SharedProperties.Click(loginpage.getLoginbtn(), SharedProperties.driver);
 
             String shippingOrderId = soDetailsDTO.getSoGatewayOrderId();
@@ -154,10 +158,15 @@ public class variantCheckout    {
             System.out.print("\n Aqua using SO1: " + shippingOrderId);
 
             //check for warehouse first
-            SharedProperties.driver.navigate().to(PropertyHelper.readProperty("brightUrl"));
-            SharedProperties.sendKeys(loginpage.getUserName(), "saurabh.nagpal@healthkart.com", SharedProperties.driver);
-            SharedProperties.sendKeys(brighthome.getPassWd(), "abcde12", SharedProperties.driver);
+            //SharedProperties.driver.navigate().to(PropertyHelper.readProperty("brightUrl"));
+            SharedProperties.driver.navigate().to(TestUtil.getBright_URL());
+            //SharedProperties.sendKeys(loginpage.getUserName(), "gagan.jain@healthkart.com", SharedProperties.driver);
+            SharedProperties.sendKeys(loginpage.getUserName(), TestUtil.getBright_User(), SharedProperties.driver);
+            //SharedProperties.sendKeys(brighthome.getPassWd(), "gagan.jain", SharedProperties.driver);
+            SharedProperties.sendKeys(brighthome.getPassWd(), TestUtil.getBright_Password(), SharedProperties.driver);
+
             SharedProperties.Click(brighthome.getLoginBtn(), SharedProperties.driver);
+            Thread.sleep(2000);
             SharedProperties.Click("/html/body/div/div[1]/div/ul/li[8]/a", SharedProperties.driver);
 
             SharedProperties.sendKeys("/html/body/div[2]/div[2]/form/fieldset/ul/div/li[1]/input", BrightDetails.getForeignSiCliDTO(shippingOrderId).getForeignSoGatewayId(), SharedProperties.driver);

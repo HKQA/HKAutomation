@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <suite name="TestNG Test">
-    <parameter name="BaseURL" value="http://www.centralhk.com:9090"/>
-    <parameter name="Browser" value="chrome"/>
+    <!--<parameter name="BaseURL" value="http://www.centralhk.com:9090"/>
+    <parameter name="Browser" value="chrome"/>-->
     <parameter name="useDefaultListeners" value="false"/>
     <listeners>
         <listener class-name="org.uncommons.reportng.HTMLReporter"/>
@@ -17,6 +17,7 @@
     <test name="com.hk.orderPlacement">
         <packages>
             <package name="com.hk.orderPlacement"/>
+            <package name="com.hk.orderCheckout"/>
         </packages>
     </test>
     <!--<test name="com.hk.orderPlacement.SignupCodOrder">

@@ -32,10 +32,10 @@ public class JdbcConnectionFile {// JDBC driver name and database URL
 
 
 
-            String dbUrl = PropertyHelper.readProperty("DB_IP") + enumDB.getDbName();
+            //String dbUrl = PropertyHelper.readProperty("DB_IP") + enumDB.getDbName();
             //conn = DriverManager.getConnection(dbUrl, PropertyHelper.readProperty("USER"), PropertyHelper.readProperty("PASS"));
 //            conn = DriverManager.getConnection(PropertyHelper.readProperty("DB_URL"), PropertyHelper.readProperty("USER"), PropertyHelper.readProperty("PASS"));
-            conn = DriverManager.getConnection(TestUtil.getDBURL(), TestUtil.getDBUser(), TestUtil.getDBPassword());
+            conn = DriverManager.getConnection(TestUtil.getDBURL() + enumDB.getDbName(), TestUtil.getDBUser(), TestUtil.getDBPassword());
 
            stmt = conn.createStatement();
 

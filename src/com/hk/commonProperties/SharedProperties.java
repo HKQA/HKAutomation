@@ -32,7 +32,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 public class SharedProperties
 {
     public static WebDriver driver;
-    public int delay ;
+    public int delay = 5000 ;
 
 
     public static void openBrowser(String AppURL, String BrowserName) {
@@ -101,20 +101,21 @@ public class SharedProperties
         Robot robot = new Robot() ;
 
         robot.delay(delay) ;
-
-        robot.keyPress(KeyEvent.VK_ENTER) ;
-        robot.keyRelease(KeyEvent.VK_ENTER) ;
+        robot.keyPress(KeyEvent.VK_ESCAPE) ;
+        robot.keyRelease(KeyEvent.VK_ESCAPE) ;
         Thread.sleep(2000);
         robot.delay(delay) ;
 
-        robot.keyPress(KeyEvent.VK_ENTER) ;
-        robot.keyRelease(KeyEvent.VK_ENTER) ;
+
+        robot.keyPress(KeyEvent.VK_ESCAPE) ;
+        robot.keyRelease(KeyEvent.VK_ESCAPE) ;
         Thread.sleep(3000);
+
 
         robot.delay(delay) ;
         Thread.sleep(3000);
-        robot.keyPress(KeyEvent.VK_ENTER) ;
-        robot.keyRelease(KeyEvent.VK_ENTER) ;
+        robot.keyPress(KeyEvent.VK_ESCAPE) ;
+        robot.keyRelease(KeyEvent.VK_ESCAPE) ;
         robot.delay(delay) ;
 
 
@@ -129,6 +130,12 @@ public class SharedProperties
         Actions action = new Actions(driver);
 
         WebElement signupHover = driver.findElement(By.xpath(mouseHoverElementXpath));
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
 
         action.moveToElement(signupHover).moveToElement(driver.findElement(By.xpath(targetElementXpath))).click().perform();
 

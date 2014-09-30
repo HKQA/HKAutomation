@@ -101,7 +101,7 @@
                     <div class="method-list-content failed suite-TestNG_Test">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-TestNG_Test" title="com.hk.orderPlacement.ExistingOnlineOrder" hash-for-method="login(null)">login(null)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-TestNG_Test" title="com.hk.orderPlacement.SignupCodOrder" hash-for-method="login(null)">login(null)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-TestNG_Test -->
@@ -120,12 +120,12 @@
                       <br/>
                       <span>
                         <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-TestNG_Test" title="com.hk.orderPlacement.SignupCodOrder" hash-for-method="login(null)">login(null)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-TestNG_Test" title="com.hk.orderPlacement.ExistingCodPlacement" hash-for-method="login(null)">login(null)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-TestNG_Test" title="com.hk.orderPlacement.SignupOrderOnline" hash-for-method="login(null)">login(null)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-TestNG_Test" title="com.hk.orderPlacement.ExistingOnlineOrder" hash-for-method="login(null)">login(null)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -135,12 +135,12 @@
                       <br/>
                       <span>
                         <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-TestNG_Test" title="com.hk.orderPlacement.ExistingCodPlacement" hash-for-method="login(null)">login(null)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-TestNG_Test" title="com.hk.orderPlacement.GuestCheckoutCod" hash-for-method="login(null)">login(null)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-TestNG_Test" title="com.hk.orderPlacement.GuestCheckoutCod" hash-for-method="login(null)">login(null)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-TestNG_Test" title="com.hk.orderPlacement.SignupOrderOnline" hash-for-method="login(null)">login(null)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content skipped suite-TestNG_Test -->
@@ -158,7 +158,7 @@
           <div class="suite-TestNG_Test-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.hk.orderPlacement.ExistingOnlineOrder</span>
+              <span class="class-name">com.hk.orderPlacement.SignupCodOrder</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -167,10 +167,26 @@
                   </a> <!-- login(null) -->
                   <span class="method-name">login</span>
                   <span class="parameters">(null)</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at com.hk.orderCheckout.variantCheckout.variantCheckout(Unknown Source)
-	at com.hk.orderPlacement.ExistingOnlineOrder.login(Unknown Source)
-... Removed 23 stack frames
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=37.0.2062.124)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.42.2&apos;, revision: &apos;6a6995d&apos;, time: &apos;2014-06-03 17:42:30&apos;
+System info: host: &apos;Tech-VipulJain&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_45&apos;
+Session ID: 78d0ba871ffb57202cdb969fccb36c68
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\VIPUL~1.JAI\AppData\Local\Temp\scoped_dir6208_27137}, rotatable=false, locationContextEnabled=true, version=37.0.2062.124, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at com.hk.commonProperties.SharedProperties.Click(Unknown Source)
+	at com.hk.orderPlacement.SignupCodOrder.login(Unknown Source)
+... Removed 27 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -195,7 +211,7 @@
           <div class="suite-TestNG_Test-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
-              <span class="class-name">com.hk.orderPlacement.SignupOrderOnline</span>
+              <span class="class-name">com.hk.orderPlacement.CouponOnlineOrder</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -227,22 +243,6 @@
           <div class="suite-TestNG_Test-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
-              <span class="class-name">com.hk.orderPlacement.SignupCodOrder</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="login(null)">
-                  </a> <!-- login(null) -->
-                  <span class="method-name">login</span>
-                  <span class="parameters">(null)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-TestNG_Test-class-skipped -->
-          <div class="suite-TestNG_Test-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
               <span class="class-name">com.hk.orderPlacement.GuestCheckoutOnline</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -259,7 +259,23 @@
           <div class="suite-TestNG_Test-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
-              <span class="class-name">com.hk.orderPlacement.CouponOnlineOrder</span>
+              <span class="class-name">com.hk.orderPlacement.SignupOrderOnline</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="login(null)">
+                  </a> <!-- login(null) -->
+                  <span class="method-name">login</span>
+                  <span class="parameters">(null)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestNG_Test-class-skipped -->
+          <div class="suite-TestNG_Test-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.hk.orderPlacement.ExistingOnlineOrder</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -282,8 +298,6 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;TestNG Test&quot;&gt;
-  &lt;parameter name=&quot;Browser&quot; value=&quot;chrome&quot;/&gt;
-  &lt;parameter name=&quot;BaseURL&quot; value=&quot;http://www.centralhk.com:9090&quot;/&gt;
   &lt;parameter name=&quot;useDefaultListeners&quot; value=&quot;false&quot;/&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;org.uncommons.reportng.HTMLReporter&quot;/&gt;
@@ -293,6 +307,7 @@
   &lt;test name=&quot;com.hk.orderPlacement&quot;&gt;
     &lt;packages&gt;
       &lt;package name=&quot;com.hk.orderPlacement&quot;/&gt;
+      &lt;package name=&quot;com.hk.orderCheckout&quot;/&gt;
     &lt;/packages&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.hk.orderPlacement.CouponOnlineOrder&quot;/&gt;
@@ -303,6 +318,8 @@
       &lt;class name=&quot;com.hk.orderPlacement.OrderDetailsUtil&quot;/&gt;
       &lt;class name=&quot;com.hk.orderPlacement.SignupCodOrder&quot;/&gt;
       &lt;class name=&quot;com.hk.orderPlacement.SignupOrderOnline&quot;/&gt;
+      &lt;class name=&quot;com.hk.orderCheckout.variantCheckout&quot;/&gt;
+      &lt;class name=&quot;com.hk.orderCheckout.variantWithFreebieCheckout&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- com.hk.orderPlacement --&gt;
 &lt;/suite&gt; &lt;!-- TestNG Test --&gt;
@@ -316,7 +333,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">com.hk.orderPlacement (8 classes)</span>
+                <span class="test-name">com.hk.orderPlacement (10 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -345,37 +362,37 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(7);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'login')
-data.setCell(0, 2, 'com.hk.orderPlacement.ExistingOnlineOrder')
-data.setCell(0, 3, 66742);
+data.setCell(0, 2, 'com.hk.orderPlacement.SignupCodOrder')
+data.setCell(0, 3, 43977);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'login')
 data.setCell(1, 2, 'com.hk.orderPlacement.GuestCheckoutOnline')
-data.setCell(1, 3, 1);
+data.setCell(1, 3, 0);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'login')
-data.setCell(2, 2, 'com.hk.orderPlacement.SignupCodOrder')
-data.setCell(2, 3, 1);
+data.setCell(2, 2, 'com.hk.orderPlacement.ExistingCodPlacement')
+data.setCell(2, 3, 0);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'login')
-data.setCell(3, 2, 'com.hk.orderPlacement.CouponOnlineOrder')
-data.setCell(3, 3, 1);
+data.setCell(3, 2, 'com.hk.orderPlacement.ExistingOnlineOrder')
+data.setCell(3, 3, 0);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'login')
-data.setCell(4, 2, 'com.hk.orderPlacement.SignupOrderOnline')
+data.setCell(4, 2, 'com.hk.orderPlacement.CouponOnlineOrder')
 data.setCell(4, 3, 0);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'login')
-data.setCell(5, 2, 'com.hk.orderPlacement.ExistingCodPlacement')
+data.setCell(5, 2, 'com.hk.orderPlacement.GuestCheckoutCod')
 data.setCell(5, 3, 0);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'login')
-data.setCell(6, 2, 'com.hk.orderPlacement.GuestCheckoutCod')
+data.setCell(6, 2, 'com.hk.orderPlacement.SignupOrderOnline')
 data.setCell(6, 3, 0);
 window.suiteTableData['TestNG_Test']= { tableData: data, tableDiv: 'times-div-TestNG_Test'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 43 seconds</span>
               <div id="times-div-TestNG_Test">
               </div> <!-- times-div-TestNG_Test -->
             </div> <!-- times-div -->
@@ -408,113 +425,122 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">isSkip</span>
-                <span class="method-start">593 ms</span>
+                <span class="method-start">212 ms</span>
               </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">login(null)</span>
-                <span class="method-start">594 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.hk.orderPlacement.SignupCodOrder</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">config</span>
-                <span class="method-start">596 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="configuration-method before">
-                <span class="method-name">isSkip</span>
-                <span class="method-start">598 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">login(null)</span>
-                <span class="method-start">598 ms</span>
-              </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.hk.orderPlacement.ExistingCodPlacement</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">Config</span>
-                <span class="method-start">603 ms</span>
+                <span class="method-start">213 ms</span>
               </div> <!-- configuration-class before -->
-              <div class="configuration-method before">
-                <span class="method-name">isSkip</span>
-                <span class="method-start">606 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">login(null)</span>
-                <span class="method-start">607 ms</span>
-              </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">com.hk.orderPlacement.SignupOrderOnline</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">config</span>
-                <span class="method-start">608 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="configuration-method before">
-                <span class="method-name">isSkip</span>
-                <span class="method-start">611 ms</span>
-              </div> <!-- configuration-method before -->
+              <div class="chronological-class-name">com.hk.orderPlacement.CouponOnlineOrder</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">login(null)</span>
-                <span class="method-start">613 ms</span>
+                <span class="method-start">213 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.hk.orderPlacement.ExistingOnlineOrder</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">Config</span>
-                <span class="method-start">614 ms</span>
+                <span class="method-start">214 ms</span>
               </div> <!-- configuration-class before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.hk.orderPlacement.ExistingCodPlacement</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">isSkip</span>
-                <span class="method-start">618 ms</span>
+                <span class="method-start">214 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">login(null)</span>
+                <span class="method-start">214 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.hk.orderPlacement.ExistingOnlineOrder</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">isSkip</span>
+                <span class="method-start">215 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.hk.orderPlacement.SignupCodOrder</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">config</span>
+                <span class="method-start">216 ms</span>
+              </div> <!-- configuration-class before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.hk.orderPlacement.ExistingOnlineOrder</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">login(null)</span>
+                <span class="method-start">216 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.hk.orderPlacement.SignupCodOrder</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">isSkip</span>
+                <span class="method-start">217 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">login(null)</span>
-                <span class="method-start">619 ms</span>
+                <span class="method-start">217 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">doAfter([TestResult name=login status=FAILURE method=ExistingOnlineOrder.login(java.lang.Long)[pri:0, instan...)</span>
-                <span class="method-start">67361 ms</span>
+                <span class="method-name">doAfter([TestResult name=login status=FAILURE method=SignupCodOrder.login(java.lang.Long)[pri:0, instance:co...)</span>
+                <span class="method-start">44194 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.hk.orderPlacement.GuestCheckoutCod</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">config</span>
-                <span class="method-start">67576 ms</span>
+                <span class="method-start">45588 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">isSkip</span>
-                <span class="method-start">67577 ms</span>
+                <span class="method-start">45589 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">login(null)</span>
+                <span class="method-start">45590 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.hk.orderPlacement.SignupOrderOnline</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">config</span>
+                <span class="method-start">45591 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">isSkip</span>
+                <span class="method-start">45592 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">login(null)</span>
+                <span class="method-start">45593 ms</span>
+              </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.hk.orderPlacement.GuestCheckoutOnline</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">Config</span>
-                <span class="method-start">67578 ms</span>
+                <span class="method-start">45594 ms</span>
               </div> <!-- configuration-class before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.hk.orderPlacement.GuestCheckoutCod</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">login(null)</span>
-                <span class="method-start">67578 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.hk.orderPlacement.GuestCheckoutOnline</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">isSkip</span>
-                <span class="method-start">67579 ms</span>
+                <span class="method-start">45595 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">login(null)</span>
-                <span class="method-start">67579 ms</span>
+                <span class="method-start">45596 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

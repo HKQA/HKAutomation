@@ -80,10 +80,15 @@ public class ExistingOnlineOrder extends SharedProperties {
 
     @AfterMethod
     public void doAfter(ITestResult result) throws IOException {
+
+        System.out.println("Inside doAfter method having AfterMethod annotation");
+
         if (result.getStatus() == ITestResult.FAILURE) {
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\ExistingOnlineOrder.jpg"));
         }
+
+        driver.quit();
     }
 
  /*   @DataProvider(name = "CombinedData")
@@ -109,18 +114,6 @@ public class ExistingOnlineOrder extends SharedProperties {
         SendMail.sendmail("Please find the attached report of test cases", PropertyHelper.readProperty("screenshotFolder"), PropertyHelper.readProperty("reportFolder") + "report.zip");
 
     }*/
-
-
-    /*@Test(enabled = true,groups = {"init"})
-    public void TestMethod()
-    {
-
-        System.out.println("Inside test method");
-        varCheckout.dummyMethod();
-
-
-    }*/
-
 
     @Parameters("specificVariantIndex")
     @Test(enabled = true)
@@ -210,11 +203,18 @@ public class ExistingOnlineOrder extends SharedProperties {
 
         OrderDetailsUtil.flag = true;
 
-        varCheckout.variantCheckout();
+        Thread.sleep(5000);
 
 
 
-        /*if (OrderDetailsVerify.orderDetails() == true) {
+
+        //varCheckout.variantCheckout();
+
+        Thread.sleep(10000);
+
+
+
+        if (OrderDetailsVerify.orderDetails() == true) {
             System.out.print("DB verification Successful");
 
             OrderDetailsUtil.flag = false;
@@ -225,7 +225,7 @@ public class ExistingOnlineOrder extends SharedProperties {
             SendMail.sendmail("DB Verification failed for Online Order");
             result.setStatus(ITestResult.FAILURE);
             Thread.sleep(5000);
-        }*/
+        }
     }
 
 }

@@ -25,7 +25,7 @@ public class OrderDetailsVerify {
         if (OrderDetailsUtil.flag)
         {
 
-        if (!orderDetailsDTO.getProductList().containsAll(OrderDetailsUtil.getItems_rest()))
+        if (!orderDetailsDTO.getProductList().containsAll(OrderDetailsUtil.getItems_existing()))
             {
 
             return false;
