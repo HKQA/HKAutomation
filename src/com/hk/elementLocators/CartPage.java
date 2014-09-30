@@ -18,8 +18,8 @@ public class CartPage {
     private String isCouponApplied = "/html/body/div[1]/div[2]/div/div[3]/div[1]/div[4]/div[5]/span";
     private String removeCouponCode="/html/body/div[1]/div[2]/div/div[3]/div[1]/div[4]/div[5]/a";
     //private String signinLink="//*[@id=\"header\"]/div/div[2]/div[3]/div/div/a";
-    private String signupHover = "//*[@id='header']/div/div[2]/div[3]/div/div"  ;
-    private String signinLink = "//*[@id='header']/div/div[2]/div[3]/div/ul/li[1]/a";
+    private String signupHover = "//*[@id='header']/div/div[2]/div[3]/div/div/span[1]"  ;
+    private String signinLink = "//*[@id='header']/div/div[2]/div[3]/div/ul/li[1]/span/a";
 
     public String addToCartBtn() {
         return addToCartBtn;

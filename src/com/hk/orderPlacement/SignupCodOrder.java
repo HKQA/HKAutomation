@@ -133,6 +133,7 @@ public class SignupCodOrder extends SharedProperties {
                 .ignoring(NoSuchElementException.class, StaleElementReferenceException.class);
         WebElement cartLink = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a[href*='Cart.action']")));
         cartLink.click();
+        Thread.sleep(3000);
 
         //Code to add more quantity
         //code to redeem reward points
@@ -189,23 +190,29 @@ public class SignupCodOrder extends SharedProperties {
 
         OrderDetailsUtil.flag_signup = true;
 
-        codNavigation.codConfirmNavigation(finalOrderId);
+        //codNavigation.codConfirmNavigation(finalOrderId);
 
 
 
-        varCheckout.variantCheckout();
+        //varCheckout.variantCheckout();
 
 
         Assert.assertTrue(true, "SignupCodOrder is passed");
-        /*if (OrderDetailsVerify.orderDetails()) {
+        if (OrderDetailsVerify.orderDetails()) {
             System.out.print("DB verification Successful");
+            codNavigation.codConfirmNavigation(finalOrderId);
+            Thread.sleep(3000);
+            varCheckout.variantCheckout();
             OrderDetailsUtil.flag_signup = false;
         } else {
+            codNavigation.codConfirmNavigation(finalOrderId);
+            Thread.sleep(3000);
+            varCheckout.variantCheckout();
             System.out.println("DB verification failed but Order ID is generated. So please refer DB");
             SendMail.sendmail("DB verification failed for Signup COD order");
             result.setStatus(ITestResult.FAILURE);
             Thread.sleep(5000);
-        }*/
+        }
 
     }
 }

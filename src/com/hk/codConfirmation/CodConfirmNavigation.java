@@ -16,7 +16,9 @@ public class CodConfirmNavigation extends SharedProperties {
 
     public void codConfirmNavigation(String finalOrderId) throws InterruptedException {
 
-        SharedProperties.openBrowser("http://192.168.70.27:6060/", "chrome");
+        //SharedProperties.openBrowser("http://192.168.70.27:6060/", "chrome");
+
+        SharedProperties.openBrowser("http://192.168.70.27:6060/admin/search/payment/CodPaymentSearch.action", "chrome");
 
         SharedProperties.sendKeys(codconfirmation.getEmail(), "nitin.kukna@healthkart.com", SharedProperties.driver);
 
@@ -24,9 +26,9 @@ public class CodConfirmNavigation extends SharedProperties {
 
         SharedProperties.Click(codconfirmation.getLogin(), SharedProperties.driver);
 
-        Thread.sleep(5000);
+        //Thread.sleep(5000);
 
-        SharedProperties.mouseHoverAndClick(codconfirmation.getPaymentHover(), codconfirmation.getCodPayment(), SharedProperties.driver);
+        //SharedProperties.mouseHoverAndClick(codconfirmation.getPaymentHover(), codconfirmation.getCodPayment(), SharedProperties.driver);
 
         Thread.sleep(3000);
 

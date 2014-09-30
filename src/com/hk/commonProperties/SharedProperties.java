@@ -5,6 +5,7 @@ package com.hk.commonProperties; /**
  * Time: 7:23 PM
  * To change this template use File | Settings | File Templates.
  */
+import org.apache.xmlbeans.impl.jam.visitor.TraversingJVisitor;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -131,13 +132,21 @@ public class SharedProperties
 
         WebElement signupHover = driver.findElement(By.xpath(mouseHoverElementXpath));
 
+        action.moveToElement(signupHover).moveToElement(driver.findElement(By.xpath(targetElementXpath))).click().perform();
+
+        /*action.moveToElement(signupHover).perform();
+
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
 
-        action.moveToElement(signupHover).moveToElement(driver.findElement(By.xpath(targetElementXpath))).click().perform();
+        WebElement target = driver.findElement(By.xpath(targetElementXpath));
+
+        action.moveToElement(target).click().perform();
+*/
+
 
 
 

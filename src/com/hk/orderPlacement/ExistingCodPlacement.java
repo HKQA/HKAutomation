@@ -1,7 +1,9 @@
 package com.hk.orderPlacement;
 
 
+import com.hk.codConfirmation.CodConfirmNavigation;
 import com.hk.orderCheckout.variantCheckout;
+import com.hk.orderCheckoutDto.SoDetails;
 import com.hk.reportAndMailGenerator.SendMail;
 import com.hk.commonProperties.SharedProperties;
 import com.hk.elementLocators.*;
@@ -42,6 +44,8 @@ public class ExistingCodPlacement extends SharedProperties {
     PaymentPage paymentpage = new PaymentPage();
     ITestResult result = Reporter.getCurrentTestResult();
     variantCheckout varCheckout = new variantCheckout();
+    SoDetails soDetails = new SoDetails();
+    CodConfirmNavigation codNavigation = new CodConfirmNavigation();
 
     //@Parameters({"BaseURL", "Browser"})
     /*@BeforeClass
@@ -176,13 +180,17 @@ public class ExistingCodPlacement extends SharedProperties {
 
         System.out.println(orderId);
 
+        String finalOrderId = orderId.substring(10);
+
+        soDetails.orderIdSoDetails = finalOrderId;
+
         TestUtil.excel.setCellData("test_suite","OrderId_Generated",8, orderId );
 
         OrderDetailsUtil.flag = true;
 
-        Thread.sleep(5000);
+        Thread.sleep(3000);
 
-        //varCheckout.variantCheckout();
+        varCheckout.variantCheckout();
 
 
 

@@ -12,6 +12,7 @@ import com.hk.excel.TestDetailsExcelService;
 import com.hk.excel.dto.TestDetailsDTO;
 import com.hk.jdbc.OrderDetailsVerify;
 import com.hk.orderCheckout.variantCheckout;
+import com.hk.orderCheckoutDto.SoDetails;
 import com.hk.property.PropertyHelper;
 import com.hk.reportAndMailGenerator.SendMail;
 import com.hk.util.TestUtil;
@@ -41,6 +42,7 @@ public class ExistingOnlineOrder extends SharedProperties {
     PaymentPage paymentpage = new PaymentPage();
     ITestResult result = Reporter.getCurrentTestResult();
     variantCheckout varCheckout = new variantCheckout();
+    SoDetails soDetails = new SoDetails();
 
 
 
@@ -88,7 +90,7 @@ public class ExistingOnlineOrder extends SharedProperties {
             FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\ExistingOnlineOrder.jpg"));
         }
 
-        driver.quit();
+        //driver.quit();
     }
 
  /*   @DataProvider(name = "CombinedData")
@@ -199,6 +201,10 @@ public class ExistingOnlineOrder extends SharedProperties {
 
         System.out.println(orderId);
 
+        String finalOrderId = orderId.substring(10);
+
+        soDetails.orderIdSoDetails = finalOrderId;
+
         TestUtil.excel.setCellData("test_suite","OrderId_Generated",7, orderId );
 
         OrderDetailsUtil.flag = true;
@@ -208,13 +214,13 @@ public class ExistingOnlineOrder extends SharedProperties {
 
 
 
-        //varCheckout.variantCheckout();
+        varCheckout.variantCheckout();
 
         Thread.sleep(10000);
 
 
 
-        if (OrderDetailsVerify.orderDetails() == true) {
+        /*if (OrderDetailsVerify.orderDetails() == true) {
             System.out.print("DB verification Successful");
 
             OrderDetailsUtil.flag = false;
@@ -225,7 +231,7 @@ public class ExistingOnlineOrder extends SharedProperties {
             SendMail.sendmail("DB Verification failed for Online Order");
             result.setStatus(ITestResult.FAILURE);
             Thread.sleep(5000);
-        }
+        }*/
     }
 
 }

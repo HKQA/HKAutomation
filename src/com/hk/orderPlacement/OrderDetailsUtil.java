@@ -47,7 +47,7 @@ public class OrderDetailsUtil {
         int orderedItems = 3;
 
         //int exists = SharedProperties.driver.findElements(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).size();
-        int exists = SharedProperties.driver.findElements(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).size();
+        int exists = SharedProperties.driver.findElements(By.xpath("/html/body/div[1]/div[2]/div/div[7]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).size();
 
 
 
@@ -64,9 +64,9 @@ public class OrderDetailsUtil {
             }*/
             String itemHref;
             if (exists > 1) {
-                itemHref = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).getAttribute("href");
+                itemHref = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[7]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).getAttribute("href");
             } else {
-                itemHref = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).getAttribute("href");
+                itemHref = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[7]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).getAttribute("href");
             }
 
             int index = itemHref.indexOf("VRNT-");
