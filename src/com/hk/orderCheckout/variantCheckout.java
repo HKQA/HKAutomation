@@ -94,7 +94,7 @@ public class variantCheckout    {
         //System.out.print("\n HK OrderID:- " + OrderDetailsUtil.GatewayOrderId());
         System.out.println("HK orderID:- " + SoDetails.orderIdSoDetails);
 
-        Thread.sleep(3000);
+        Thread.sleep(7000);
 
         for (SoDetailsDTO soDetailsDTO : SoDetails.Sodetails()) {
             //SharedProperties.openBrowser(AdminBaseURL, browser);
@@ -161,11 +161,11 @@ public class variantCheckout    {
             //SharedProperties.driver.navigate().to(PropertyHelper.readProperty("brightUrl"));
             SharedProperties.driver.navigate().to(TestUtil.getBright_URL());
             //SharedProperties.sendKeys(loginpage.getUserName(), "gagan.jain@healthkart.com", SharedProperties.driver);
-            SharedProperties.sendKeys(loginpage.getUserName(), TestUtil.getBright_User(), SharedProperties.driver);
+            //SharedProperties.sendKeys(loginpage.getUserName(), TestUtil.getBright_User(), SharedProperties.driver);
             //SharedProperties.sendKeys(brighthome.getPassWd(), "gagan.jain", SharedProperties.driver);
-            SharedProperties.sendKeys(brighthome.getPassWd(), TestUtil.getBright_Password(), SharedProperties.driver);
+            //SharedProperties.sendKeys(brighthome.getPassWd(), TestUtil.getBright_Password(), SharedProperties.driver);
 
-            SharedProperties.Click(brighthome.getLoginBtn(), SharedProperties.driver);
+            //SharedProperties.Click(brighthome.getLoginBtn(), SharedProperties.driver);
             Thread.sleep(2000);
             SharedProperties.Click("/html/body/div/div[1]/div/ul/li[8]/a", SharedProperties.driver);
 
@@ -221,7 +221,11 @@ public class variantCheckout    {
 
             }
 
-            SharedProperties.driver.navigate().to(PropertyHelper.readProperty("adminUrl"));
+            //SharedProperties.driver.navigate().to(PropertyHelper.readProperty("adminUrl"));
+            SharedProperties.driver.navigate().to(TestUtil.getAdminURL());
+            //SharedProperties.sendKeys(loginpage.getUserName(), TestUtil.getAdmin_User(), SharedProperties.driver);
+            //SharedProperties.sendKeys(loginpage.getPassword(), TestUtil.getAdmin_Password(), SharedProperties.driver);
+            //SharedProperties.Click(loginpage.getLoginbtn(), SharedProperties.driver);
             SharedProperties.Click(adminhome.getWareHouseLink(), SharedProperties.driver);
             Thread.sleep(2000);
             SharedProperties.Click(createupdateshipment.getCreateUpdateShipmentLink(), SharedProperties.driver);

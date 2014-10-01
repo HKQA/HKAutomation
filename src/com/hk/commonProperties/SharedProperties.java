@@ -124,6 +124,24 @@ public class SharedProperties
 
     }
 
+    public static boolean isElementPresent(String xpath)
+    {
+
+        try {
+
+            driver.findElement(By.xpath(xpath));
+            return true;
+
+        } catch (Exception e) {
+
+            return false;
+
+        }
+
+
+
+    }
+
 
     public static void mouseHoverAndClick(String mouseHoverElementXpath, String targetElementXpath, WebDriver driver)
     {
@@ -133,22 +151,6 @@ public class SharedProperties
         WebElement signupHover = driver.findElement(By.xpath(mouseHoverElementXpath));
 
         action.moveToElement(signupHover).moveToElement(driver.findElement(By.xpath(targetElementXpath))).click().perform();
-
-        /*action.moveToElement(signupHover).perform();
-
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
-
-        WebElement target = driver.findElement(By.xpath(targetElementXpath));
-
-        action.moveToElement(target).click().perform();
-*/
-
-
-
 
     }
 }

@@ -186,24 +186,40 @@ public class ExistingCodPlacement extends SharedProperties {
 
         TestUtil.excel.setCellData("test_suite","OrderId_Generated",8, orderId );
 
-        OrderDetailsUtil.flag = true;
+        if(SharedProperties.isElementPresent("/html/body/div[1]/div[2]/div/div[6]"))
+        {
+            OrderDetailsUtil.flagLoyalty = true  ;
+
+        }
+        else
+        {
+
+            OrderDetailsUtil.flagNoLoyalty = true;
+
+
+        }
+
+
 
         Thread.sleep(3000);
 
-        varCheckout.variantCheckout();
+        //varCheckout.variantCheckout();
 
 
 
-        /*if (OrderDetailsVerify.orderDetails() == true)
+        if (OrderDetailsVerify.orderDetails() == true)
         {
             System.out.print("DB verification Successful");
 
-            OrderDetailsUtil.flag = false;
+            OrderDetailsUtil.flagLoyalty = false;
+            OrderDetailsUtil.flagNoLoyalty = false;
+
+
         } else {
             System.out.println("DB verification failed but Order ID is generated. So please refer DB");
             SendMail.sendmail("DB Verification failed for Existing Cod order");
             result.setStatus(ITestResult.FAILURE);
             Thread.sleep(5000);
-        }*/
+        }
     }
 }

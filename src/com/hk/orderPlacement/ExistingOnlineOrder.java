@@ -194,8 +194,10 @@ public class ExistingOnlineOrder extends SharedProperties {
         SharedProperties.Click(paymentpage.proceedToPayment(), SharedProperties.driver);
         Thread.sleep(2000);
         SharedProperties.Click(paymentpage.paymentY(), SharedProperties.driver);
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         SharedProperties.Click(paymentpage.proceedPayment(), SharedProperties.driver);
+
+        Thread.sleep(5000);
 
         String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[5]/div[1]/p[2]")).getText();
 
@@ -207,23 +209,44 @@ public class ExistingOnlineOrder extends SharedProperties {
 
         TestUtil.excel.setCellData("test_suite","OrderId_Generated",7, orderId );
 
-        OrderDetailsUtil.flag = true;
+        String getText = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]")).getText();
+
+        if(SharedProperties.isElementPresent("/html/body/div[1]/div[2]/div/div[6]") && (getText.contains("your")))
+        {
+              OrderDetailsUtil.flagLoyalty = true  ;
+
+        }
+        else
+        {
+
+            OrderDetailsUtil.flagNoLoyalty = true;
+
+
+        }
+
+        //OrderDetailsUtil.flag = true;
 
         Thread.sleep(5000);
 
 
 
 
-        varCheckout.variantCheckout();
+        //varCheckout.variantCheckout();
 
-        Thread.sleep(10000);
+        //Thread.sleep(10000);
 
 
 
-        /*if (OrderDetailsVerify.orderDetails() == true) {
+        if (OrderDetailsVerify.orderDetails() == true) {
             System.out.print("DB verification Successful");
 
-            OrderDetailsUtil.flag = false;
+            OrderDetailsUtil.flagLoyalty = false;
+
+            OrderDetailsUtil.flagNoLoyalty = false;
+
+
+
+            //OrderDetailsUtil.flag = false;
 
 
         } else {
@@ -231,7 +254,7 @@ public class ExistingOnlineOrder extends SharedProperties {
             SendMail.sendmail("DB Verification failed for Online Order");
             result.setStatus(ITestResult.FAILURE);
             Thread.sleep(5000);
-        }*/
+        }
     }
 
 }

@@ -121,6 +121,7 @@ public class SignupOrderOnline extends SharedProperties {
                 .ignoring(NoSuchElementException.class, StaleElementReferenceException.class);
         WebElement cartLink = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a[href*='Cart.action']")));
         cartLink.click();
+        Thread.sleep(3000);
 
 
         //Code to add more quantity
@@ -129,8 +130,8 @@ public class SignupOrderOnline extends SharedProperties {
 
         //SharedProperties.Click(cartpage.getSigninLink(), SharedProperties.driver);
         SharedProperties.mouseHoverAndClick(cartpage.getSignupHover(), cartpage.getSigninLink(), SharedProperties.driver);
-        Thread.sleep(2000);
-        SharedProperties.Click(signupage.signupPage(), SharedProperties.driver);
+        Thread.sleep(3000);
+        //SharedProperties.Click(signupage.signupPage(), SharedProperties.driver);
         //SharedProperties.sendKeys(signupage.name(), "Test", SharedProperties.driver);
         //SharedProperties.sendKeys(signupage.emailid(), testDetailsDTO.getSignUpList(), SharedProperties.driver);
         SharedProperties.sendKeys(signupage.name(), TestUtil.getUserName("SignupOrderOnline"), SharedProperties.driver);
@@ -193,22 +194,41 @@ public class SignupOrderOnline extends SharedProperties {
 
         TestUtil.excel.setCellData("test_suite","OrderId_Generated",3, orderId );
 
-        OrderDetailsUtil.flag_signup = true;
+        String getText = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]")).getText();
+
+        if(SharedProperties.isElementPresent("/html/body/div[1]/div[2]/div/div[6]") && (getText.contains("your")))
+        {
+            OrderDetailsUtil.flagLoyalty = true  ;
+
+        }
+        else
+        {
+
+            OrderDetailsUtil.flagNoLoyalty = true;
+
+
+        }
+
+        //OrderDetailsUtil.flag_signup = true;
 
 
         Thread.sleep(5000);
 
-        varCheckout.variantCheckout();
+        //varCheckout.variantCheckout();
 
 
-        /*if (OrderDetailsVerify.orderDetails() == true) {
+        if (OrderDetailsVerify.orderDetails() == true) {
             System.out.print("DB verification Successful");
-            OrderDetailsUtil.flag_signup = false;
+            OrderDetailsUtil.flagLoyalty = false;
+
+            OrderDetailsUtil.flagNoLoyalty = false;
+
+            //OrderDetailsUtil.flag_signup = false;
         } else {
             System.out.println("DB verification failed but Order ID is generated. So please refer DB");
             SendMail.sendmail("DB verification failed for Signup online order");
             result.setStatus(ITestResult.FAILURE);
             Thread.sleep(5000);
-        }*/
+        }
     }
 }

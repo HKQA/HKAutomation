@@ -173,23 +173,40 @@ public class GuestCheckoutOnline extends SharedProperties {
 
         TestUtil.excel.setCellData("test_suite","OrderId_Generated",5, orderId );
 
-        OrderDetailsUtil.flag = true;
+        String getText = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]")).getText();
+
+        if(SharedProperties.isElementPresent("/html/body/div[1]/div[2]/div/div[6]") && (getText.contains("your")) )
+        {
+            OrderDetailsUtil.flagLoyalty = true  ;
+
+        }
+        else
+        {
+
+            OrderDetailsUtil.flagNoLoyalty = true;
+
+
+        }
+
+
 
         Thread.sleep(5000);
 
-        varCheckout.variantCheckout();
+        //varCheckout.variantCheckout();
 
 
 
-        /*if (OrderDetailsVerify.orderDetails() == true) {
+        if (OrderDetailsVerify.orderDetails() == true) {
             System.out.print("DB verification Successful");
-            OrderDetailsUtil.flag = false;
+
+            OrderDetailsUtil.flagLoyalty = false;
+            OrderDetailsUtil.flagLoyalty = false;
 
         } else {
             SendMail.sendmail("DB Verification failed for Online Order");
             result.setStatus(ITestResult.FAILURE);
             Thread.sleep(5000);
-        }*/
+        }
     }
 
 }
