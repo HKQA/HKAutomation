@@ -7,6 +7,7 @@ package com.hk.orderPlacement; /**
  */
 
 import com.hk.orderCheckout.variantCheckout;
+import com.hk.orderCheckoutDto.SoDetails;
 import com.hk.reportAndMailGenerator.SendMail;
 import com.hk.commonProperties.SharedProperties;
 import com.hk.elementLocators.*;
@@ -41,6 +42,7 @@ public class GuestCheckoutOnline extends SharedProperties {
     PaymentPage paymentpage = new PaymentPage();
     ITestResult result = Reporter.getCurrentTestResult();
     variantCheckout varCheckout = new variantCheckout();
+    SoDetails soDetails = new SoDetails();
 
 
     //@Parameters({"BaseURL", "Browser"})
@@ -79,7 +81,7 @@ public class GuestCheckoutOnline extends SharedProperties {
     public void doAfter(ITestResult result) throws IOException {
         if (result.getStatus() == ITestResult.FAILURE) {
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\GuestCheckoutOnline.jpg"));
+            FileUtils.copyFile(screenshot, new File( System.getProperty("user.dir") + PropertyHelper.readProperty("screenshotFolder") + "\\GuestCheckoutOnline.jpg"));
         }
 
         driver.quit();
@@ -171,6 +173,10 @@ public class GuestCheckoutOnline extends SharedProperties {
 
         System.out.println(orderId);
 
+        String finalOrderId = orderId.substring(10);
+
+        soDetails.orderIdSoDetails = finalOrderId;
+
         TestUtil.excel.setCellData("test_suite","OrderId_Generated",5, orderId );
 
         String getText = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]")).getText();
@@ -198,11 +204,17 @@ public class GuestCheckoutOnline extends SharedProperties {
 
         if (OrderDetailsVerify.orderDetails() == true) {
             System.out.print("DB verification Successful");
+            Thread.sleep(5000);
+            varCheckout.variantCheckout();
 
             OrderDetailsUtil.flagLoyalty = false;
-            OrderDetailsUtil.flagLoyalty = false;
+            OrderDetailsUtil.flagNoLoyalty = false;
 
         } else {
+            Thread.sleep(3000);
+            varCheckout.variantCheckout();
+            OrderDetailsUtil.flagLoyalty = false;
+            OrderDetailsUtil.flagNoLoyalty = false;
             SendMail.sendmail("DB Verification failed for Online Order");
             result.setStatus(ITestResult.FAILURE);
             Thread.sleep(5000);

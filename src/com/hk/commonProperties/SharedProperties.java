@@ -44,7 +44,7 @@ public class SharedProperties
             driver.get(AppURL);
 
         } else if (BrowserName.equalsIgnoreCase("IE")) {
-            System.setProperty("webdriver.ie.driver", PropertyHelper.readProperty("ieDriver"));
+            System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+ PropertyHelper.readProperty("ieDriver"));
             DesiredCapabilities cap = DesiredCapabilities.internetExplorer();
             cap.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
             driver = new InternetExplorerDriver(cap);

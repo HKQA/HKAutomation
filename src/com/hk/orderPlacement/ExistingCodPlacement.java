@@ -83,7 +83,7 @@ public class ExistingCodPlacement extends SharedProperties {
     public void doAfter(ITestResult result) throws IOException {
         if (result.getStatus() == ITestResult.FAILURE) {
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\ExistingCodPlacement.jpg"));
+            FileUtils.copyFile(screenshot, new File(System.getProperty("user.dir") + PropertyHelper.readProperty("screenshotFolder") + "\\ExistingCodPlacement.jpg"));
         }
 
         driver.quit();
@@ -170,9 +170,9 @@ public class ExistingCodPlacement extends SharedProperties {
             SharedProperties.Click(paymentpage.getCod2ndDiv(), SharedProperties.driver);
         }*/
 
-
-        SharedProperties.Click(paymentpage.cashOnDelivery(), SharedProperties.driver);
-        Thread.sleep(5000);
+          SharedProperties.driver.findElement(By.xpath("//*[@class='last']")).click();
+        //SharedProperties.Click(paymentpage.cashOnDelivery(), SharedProperties.driver);
+        //Thread.sleep(5000);
         SharedProperties.Click(paymentpage.payOnDelivery(), SharedProperties.driver);
 
 
@@ -199,6 +199,8 @@ public class ExistingCodPlacement extends SharedProperties {
 
         }
 
+        String codStatus = SharedProperties.driver.findElement(By.xpath("html/body/div[1]/div[2]/div/div[5]/div[1]/p[1]/span[2]")).getText();
+
 
 
         Thread.sleep(3000);
@@ -210,12 +212,31 @@ public class ExistingCodPlacement extends SharedProperties {
         if (OrderDetailsVerify.orderDetails() == true)
         {
             System.out.print("DB verification Successful");
+            Thread.sleep(3000);
+            if(codStatus.equalsIgnoreCase("Authorization Pending"))
+            {
+                codNavigation.codConfirmNavigation(finalOrderId);
+
+            }
+            Thread.sleep(5000);
+            varCheckout.variantCheckout();
+            Thread.sleep(3000);
 
             OrderDetailsUtil.flagLoyalty = false;
             OrderDetailsUtil.flagNoLoyalty = false;
 
 
         } else {
+            if(codStatus.equalsIgnoreCase("Authorization Pending"))
+            {
+                codNavigation.codConfirmNavigation(finalOrderId);
+
+            }
+            Thread.sleep(5000);
+            varCheckout.variantCheckout();
+            Thread.sleep(3000);
+            OrderDetailsUtil.flagLoyalty = false;
+            OrderDetailsUtil.flagNoLoyalty = false;
             System.out.println("DB verification failed but Order ID is generated. So please refer DB");
             SendMail.sendmail("DB Verification failed for Existing Cod order");
             result.setStatus(ITestResult.FAILURE);

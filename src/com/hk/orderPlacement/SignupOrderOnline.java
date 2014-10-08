@@ -80,7 +80,7 @@ public class SignupOrderOnline extends SharedProperties {
     public void doAfter(ITestResult result) throws IOException {
         if (result.getStatus() == ITestResult.FAILURE) {
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\SignupOrderOnline.jpg"));
+            FileUtils.copyFile(screenshot, new File(System.getProperty("user.dir")+ PropertyHelper.readProperty("screenshotFolder") + "\\SignupOrderOnline.jpg"));
         }
 
         driver.quit();
@@ -219,12 +219,18 @@ public class SignupOrderOnline extends SharedProperties {
 
         if (OrderDetailsVerify.orderDetails() == true) {
             System.out.print("DB verification Successful");
+            Thread.sleep(5000);
+
+            varCheckout.variantCheckout();
+
             OrderDetailsUtil.flagLoyalty = false;
 
             OrderDetailsUtil.flagNoLoyalty = false;
 
             //OrderDetailsUtil.flag_signup = false;
         } else {
+            Thread.sleep(3000);
+            varCheckout.variantCheckout();
             System.out.println("DB verification failed but Order ID is generated. So please refer DB");
             SendMail.sendmail("DB verification failed for Signup online order");
             result.setStatus(ITestResult.FAILURE);

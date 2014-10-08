@@ -16,7 +16,7 @@ public class PaymentPage {
     private String cashOnDelivery= "//*[@id=\"nav\"]/li[5]";
     private String cod1stDiv= "//*[@id=\"nav\"]/li[6]";
     private String cod2ndDiv= "//*[@id=\"nav\"]/li[7]";
-    private String payOnDelivery="//*[@id=\"tab6\"]/div/div[2]/div[3]/div/input[2]";
+    private String payOnDelivery="//*[@value='Place order and pay on delivery']";
 
 
     public String paymentPageDummy() {

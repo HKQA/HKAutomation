@@ -23,7 +23,7 @@ public class TestDetailsExcelService {
 
     public static TestDetailsDTO getTestDetails() {
         TestDetailsDTO testDetailsDTO = new TestDetailsDTO();
-        HKXlsParser excel = new HKXlsParser(PropertyHelper.readProperty("productIdExcel"), "Sheet1", true);
+        HKXlsParser excel = new HKXlsParser(System.getProperty("user.dir") + PropertyHelper.readProperty("productIdExcel"), "Sheet1", true);
         Iterator<HKRow> iter = excel.parse();
 
         while (iter.hasNext()) {

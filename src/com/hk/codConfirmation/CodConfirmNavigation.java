@@ -2,6 +2,7 @@ package com.hk.codConfirmation;
 
 import com.hk.aquaElementLocators.CodConfirmation;
 import com.hk.commonProperties.SharedProperties;
+import com.hk.util.TestUtil;
 
 /**
  * Created with IntelliJ IDEA.
@@ -18,11 +19,17 @@ public class CodConfirmNavigation extends SharedProperties {
 
         //SharedProperties.openBrowser("http://192.168.70.27:6060/", "chrome");
 
-        SharedProperties.openBrowser("http://192.168.70.27:6060/admin/search/payment/CodPaymentSearch.action", "chrome");
+        //SharedProperties.openBrowser("http://192.168.70.27:6060/admin/search/payment/CodPaymentSearch.action", "chrome");
 
-        SharedProperties.sendKeys(codconfirmation.getEmail(), "nitin.kukna@healthkart.com", SharedProperties.driver);
+        SharedProperties.openBrowser(TestUtil.getCOD_Confirm_URL(), TestUtil.getBrowser());
 
-        SharedProperties.sendKeys(codconfirmation.getPassword(), "23031988", SharedProperties.driver);
+        //SharedProperties.sendKeys(codconfirmation.getEmail(), "nitin.kukna@healthkart.com", SharedProperties.driver);
+
+        SharedProperties.sendKeys(codconfirmation.getEmail(), TestUtil.getCOD_Confirm_User(), SharedProperties.driver);
+
+        //SharedProperties.sendKeys(codconfirmation.getPassword(), "23031988", SharedProperties.driver);
+
+        SharedProperties.sendKeys(codconfirmation.getPassword(), TestUtil.getCOD_Confirm_Password(), SharedProperties.driver);
 
         SharedProperties.Click(codconfirmation.getLogin(), SharedProperties.driver);
 

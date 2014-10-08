@@ -87,10 +87,10 @@ public class ExistingOnlineOrder extends SharedProperties {
 
         if (result.getStatus() == ITestResult.FAILURE) {
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\ExistingOnlineOrder.jpg"));
+            FileUtils.copyFile(screenshot, new File(System.getProperty("user.dir") + PropertyHelper.readProperty("screenshotFolder") + "\\ExistingOnlineOrder.jpg"));
         }
 
-        //driver.quit();
+        driver.quit();
     }
 
  /*   @DataProvider(name = "CombinedData")
@@ -239,6 +239,8 @@ public class ExistingOnlineOrder extends SharedProperties {
 
         if (OrderDetailsVerify.orderDetails() == true) {
             System.out.print("DB verification Successful");
+            Thread.sleep(5000);
+            varCheckout.variantCheckout();
 
             OrderDetailsUtil.flagLoyalty = false;
 
@@ -250,6 +252,8 @@ public class ExistingOnlineOrder extends SharedProperties {
 
 
         } else {
+            Thread.sleep(5000);
+            varCheckout.variantCheckout();
             System.out.println("DB verification failed but Order ID is generated. So please refer DB");
             SendMail.sendmail("DB Verification failed for Online Order");
             result.setStatus(ITestResult.FAILURE);

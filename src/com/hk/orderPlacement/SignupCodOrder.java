@@ -90,7 +90,7 @@ public class SignupCodOrder extends SharedProperties {
 
         if (result.getStatus() == ITestResult.FAILURE) {
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\SignupCODFailure.jpg"));
+            FileUtils.copyFile(screenshot, new File(System.getProperty("user.dir") + PropertyHelper.readProperty("screenshotFolder") + "\\SignupCODFailure.jpg"));
         }
 
         driver.quit();
@@ -142,8 +142,8 @@ public class SignupCodOrder extends SharedProperties {
         //SharedProperties.Click(cartpage.getSigninLink(), SharedProperties.driver);
         SharedProperties.mouseHoverAndClick(cartpage.getSignupHover(), cartpage.getSigninLink(), SharedProperties.driver);
         Thread.sleep(4000);
-        SharedProperties.Click(signupage.signupPage(), SharedProperties.driver);
-        Thread.sleep(2000);
+        //SharedProperties.Click(signupage.signupPage(), SharedProperties.driver);
+        //Thread.sleep(2000);
         //SharedProperties.sendKeys(signupage.name(), "Test", SharedProperties.driver);
         SharedProperties.sendKeys(signupage.name(), TestUtil.getUserName("SignupCodOrder"), SharedProperties.driver);
         //SharedProperties.sendKeys(signupage.emailid(), testDetailsDTO.getSignUpList(), SharedProperties.driver);
@@ -171,9 +171,10 @@ public class SignupCodOrder extends SharedProperties {
         SharedProperties.Click(addresspage.delivertoaddress(), SharedProperties.driver);
         Thread.sleep(5000);
 
+        SharedProperties.driver.findElement(By.xpath("//*[@class='last']")).click();
 
 
-        SharedProperties.Click(paymentpage.cashOnDelivery(), SharedProperties.driver);
+        //SharedProperties.Click(paymentpage.cashOnDelivery(), SharedProperties.driver);
         Thread.sleep(5000);
         SharedProperties.Click(paymentpage.payOnDelivery(), SharedProperties.driver);
 
@@ -187,8 +188,25 @@ public class SignupCodOrder extends SharedProperties {
 
         TestUtil.excel.setCellData("test_suite","OrderId_Generated",2, orderId )       ;
 
+        String getText = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]")).getText();
 
-        OrderDetailsUtil.flag_signup = true;
+        if(SharedProperties.isElementPresent("/html/body/div[1]/div[2]/div/div[6]") && (getText.contains("your")))
+        {
+            OrderDetailsUtil.flagLoyalty = true  ;
+
+        }
+        else
+        {
+
+            OrderDetailsUtil.flagNoLoyalty = true;
+
+
+        }
+
+        String codStatus = SharedProperties.driver.findElement(By.xpath("html/body/div[1]/div[2]/div/div[5]/div[1]/p[1]/span[2]")).getText();
+
+
+
 
         //codNavigation.codConfirmNavigation(finalOrderId);
 
@@ -200,14 +218,26 @@ public class SignupCodOrder extends SharedProperties {
         Assert.assertTrue(true, "SignupCodOrder is passed");
         if (OrderDetailsVerify.orderDetails()) {
             System.out.print("DB verification Successful");
+            if(codStatus.equalsIgnoreCase("Authorization Pending"))
+            {
             codNavigation.codConfirmNavigation(finalOrderId);
+            }
             Thread.sleep(3000);
             varCheckout.variantCheckout();
-            OrderDetailsUtil.flag_signup = false;
+            OrderDetailsUtil.flagLoyalty = false  ;
+            OrderDetailsUtil.flagNoLoyalty = false;
+
+
         } else {
+            if(codStatus.equalsIgnoreCase("Authorization Pending"))
+            {
             codNavigation.codConfirmNavigation(finalOrderId);
+            }
             Thread.sleep(3000);
             varCheckout.variantCheckout();
+            Thread.sleep(3000);
+            OrderDetailsUtil.flagLoyalty = false;
+            OrderDetailsUtil.flagNoLoyalty = false;
             System.out.println("DB verification failed but Order ID is generated. So please refer DB");
             SendMail.sendmail("DB verification failed for Signup COD order");
             result.setStatus(ITestResult.FAILURE);

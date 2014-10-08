@@ -84,7 +84,7 @@ public class GuestCheckoutCod extends SharedProperties {
     public void doAfter(ITestResult result) throws IOException {
         if (result.getStatus() == ITestResult.FAILURE) {
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\GuestCheckoutCod.jpg"));
+            FileUtils.copyFile(screenshot, new File(System.getProperty("user.dir") + PropertyHelper.readProperty("screenshotFolder") + "\\GuestCheckoutCod.jpg"));
         }
 
         driver.quit();
@@ -150,14 +150,18 @@ public class GuestCheckoutCod extends SharedProperties {
         Thread.sleep(2000);
         SharedProperties.Click(addresspage.delivertoaddress(), SharedProperties.driver);
         Thread.sleep(5000);
-        if (StringUtils.equals(SharedProperties.driver.findElement(By.xpath("//*[@id=\"nav\"]/li[5]")).getText(), "CASH ON DELIVERY")) {
+        /*if (StringUtils.equals(SharedProperties.driver.findElement(By.xpath("/*//*[@id=\"nav\"]/li[5]")).getText(), "CASH ON DELIVERY")) {
             SharedProperties.Click(paymentpage.cashOnDelivery(), SharedProperties.driver);
-        } else if (StringUtils.equals(SharedProperties.driver.findElement(By.xpath("//*[@id=\"nav\"]/li[6]")).getText(), "CASH ON DELIVERY")) {
+        } else if (StringUtils.equals(SharedProperties.driver.findElement(By.xpath("/*//*[@id=\"nav\"]/li[6]")).getText(), "CASH ON DELIVERY")) {
             SharedProperties.Click(paymentpage.getCod1stDiv(), SharedProperties.driver);
         } else {
             SharedProperties.Click(paymentpage.getCod2ndDiv(), SharedProperties.driver);
-        }
-        Thread.sleep(5000);
+        }*/
+
+        SharedProperties.driver.findElement(By.xpath("//*[@class='last']")).click();
+
+        Thread.sleep(3000);
+
         SharedProperties.Click(paymentpage.payOnDelivery(), SharedProperties.driver);
 
 
@@ -173,38 +177,78 @@ public class GuestCheckoutCod extends SharedProperties {
         soDetails.orderIdSoDetails = finalOrderId;
 
 
-
-
-
         TestUtil.excel.setCellData("test_suite", "OrderId_Generated", 6, orderId);
 
-        OrderDetailsUtil.flag = true;
+        String getText = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]")).getText();
+
+        if(SharedProperties.isElementPresent("/html/body/div[1]/div[2]/div/div[6]") && (getText.contains("your")) )
+        {
+            OrderDetailsUtil.flagLoyalty = true  ;
+
+        }
+        else
+        {
+
+            OrderDetailsUtil.flagNoLoyalty = true;
+
+
+        }
+
+        String codStatus = SharedProperties.driver.findElement(By.xpath("html/body/div[1]/div[2]/div/div[5]/div[1]/p[1]/span[2]")).getText();
 
 
 
-        codNavigation.codConfirmNavigation(finalOrderId);
+
+
+        //codNavigation.codConfirmNavigation(finalOrderId);
 
 
 
-        varCheckout.variantCheckout();
+        //varCheckout.variantCheckout();
 
 
 
 
 
-        /*if (OrderDetailsVerify.orderDetails() == true) {
+        if (OrderDetailsVerify.orderDetails() == true) {
             System.out.print("DB verification Successful");
+            Thread.sleep(5000);
 
-            //codNavigation.codConfirmNavigation(finalOrderId);
+            if(codStatus.equalsIgnoreCase("Authorization Pending"))
+            {
 
-
-            OrderDetailsUtil.flag = false;
-        } else {
             codNavigation.codConfirmNavigation(finalOrderId);
-            Thread.sleep(3000);
+
+            }
+
+
+
 
             Thread.sleep(5000);
-        }*/
+
+            varCheckout.variantCheckout();
+
+            OrderDetailsUtil.flagLoyalty = false;
+            OrderDetailsUtil.flagNoLoyalty = false;
+            //codNavigation.codConfirmNavigation(finalOrderId);
+
+        } else {
+
+            if(codStatus.equalsIgnoreCase("Authorization Pending"))
+            {
+            codNavigation.codConfirmNavigation(finalOrderId);
+            }
+            Thread.sleep(5000);
+            varCheckout.variantCheckout();
+            Thread.sleep(5000);
+            OrderDetailsUtil.flagLoyalty = false;
+            OrderDetailsUtil.flagNoLoyalty = false;
+            System.out.print("DB verification Failed but OrderId is generated");
+            SendMail.sendmail("DB verification failed for GuestCheckout COD order");
+            result.setStatus(ITestResult.FAILURE);
+
+            Thread.sleep(5000);
+        }
 
 
 

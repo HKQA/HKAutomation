@@ -17,7 +17,7 @@ public class ReportListener implements IReporter {
     @Override
     public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, final String outputDirectory) {
         Runtime.getRuntime().addShutdownHook(new Thread() {
-            private File file = new File(PropertyHelper.readProperty("reportFolder") + "index.html");
+            private File file = new File(System.getProperty("user.dir") + PropertyHelper.readProperty("reportFolder") + "index.html");
 
             @Override
             public synchronized void start() {

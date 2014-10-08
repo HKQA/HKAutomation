@@ -304,4 +304,31 @@ public static Xls_Reader excel = new Xls_Reader(System.getProperty("user.dir")+ 
 
     }
 
+    public static String getCOD_Confirm_URL()
+    {
+
+        String codConfirmURL = excel.getCellData("Config", 1, 13);
+
+        return codConfirmURL;
+
+    }
+
+    public static String getCOD_Confirm_User()
+    {
+
+        String codConfirmUser = excel.getCellData("Config", 1, 14);
+
+        return codConfirmUser;
+
+    }
+
+    public static String getCOD_Confirm_Password()
+    {
+
+        String codConfirmPassword = excel.getCellData("Config", 1, 15);
+
+        return codConfirmPassword;
+
+    }
+
 }

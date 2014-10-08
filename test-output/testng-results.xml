@@ -2,16 +2,16 @@
 <testng-results skipped="6" failed="0" total="7" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="TestNG Test" duration-ms="241037" started-at="2014-10-01T08:38:53Z" finished-at="2014-10-01T08:42:54Z">
+  <suite name="TestNG Test" duration-ms="198835" started-at="2014-10-08T05:09:37Z" finished-at="2014-10-08T05:12:56Z">
     <groups>
     </groups>
-    <test name="com.hk.orderPlacement" duration-ms="241037" started-at="2014-10-01T08:38:53Z" finished-at="2014-10-01T08:42:54Z">
+    <test name="com.hk.orderPlacement" duration-ms="198835" started-at="2014-10-08T05:09:37Z" finished-at="2014-10-08T05:12:56Z">
       <class name="com.hk.orderPlacement.SignupCodOrder">
-        <test-method status="PASS" signature="config()[pri:0, instance:com.hk.orderPlacement.SignupCodOrder@98d1693]" name="config" is-config="true" duration-ms="0" started-at="2014-10-01T14:12:54Z" finished-at="2014-10-01T14:12:54Z">
+        <test-method status="PASS" signature="config()[pri:0, instance:com.hk.orderPlacement.SignupCodOrder@2659da0f]" name="config" is-config="true" duration-ms="1" started-at="2014-10-08T10:39:37Z" finished-at="2014-10-08T10:39:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- config -->
-        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.orderPlacement.SignupCodOrder@98d1693]" name="isSkip" is-config="true" duration-ms="0" started-at="2014-10-01T14:12:54Z" finished-at="2014-10-01T14:12:54Z">
+        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.orderPlacement.SignupCodOrder@2659da0f]" name="isSkip" is-config="true" duration-ms="0" started-at="2014-10-08T10:39:37Z" finished-at="2014-10-08T10:39:37Z">
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[Skipping the SignUpCodOrder test case as RunMode is No]]>
@@ -50,7 +50,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isSkip -->
-        <test-method status="SKIP" signature="login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.SignupCodOrder@98d1693]" name="login" duration-ms="0" started-at="2014-10-01T14:12:54Z" finished-at="2014-10-01T14:12:54Z">
+        <test-method status="SKIP" signature="login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.SignupCodOrder@2659da0f]" name="login" duration-ms="0" started-at="2014-10-08T10:39:37Z" finished-at="2014-10-08T10:39:37Z">
           <params>
             <param index="0">
               <value is-null="true"/>
@@ -59,60 +59,71 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.orderPlacement.SignupCodOrder@98d1693]" name="doAfter" is-config="true" duration-ms="0" started-at="2014-10-01T14:12:54Z" finished-at="2014-10-01T14:12:54Z">
+        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.orderPlacement.SignupCodOrder@2659da0f]" name="doAfter" is-config="true" duration-ms="0" started-at="2014-10-08T10:39:37Z" finished-at="2014-10-08T10:39:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doAfter -->
       </class> <!-- com.hk.orderPlacement.SignupCodOrder -->
       <class name="com.hk.orderPlacement.ExistingOnlineOrder">
-        <test-method status="PASS" signature="Config()[pri:0, instance:com.hk.orderPlacement.ExistingOnlineOrder@11a39121]" name="Config" is-config="true" duration-ms="1" started-at="2014-10-01T14:08:54Z" finished-at="2014-10-01T14:08:54Z">
+        <test-method status="PASS" signature="Config()[pri:0, instance:com.hk.orderPlacement.ExistingOnlineOrder@3e1576fa]" name="Config" is-config="true" duration-ms="0" started-at="2014-10-08T10:39:37Z" finished-at="2014-10-08T10:39:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Config -->
-        <test-method status="PASS" signature="isSkip()[pri:0, instance:com.hk.orderPlacement.ExistingOnlineOrder@11a39121]" name="isSkip" is-config="true" duration-ms="1" started-at="2014-10-01T14:08:54Z" finished-at="2014-10-01T14:08:54Z">
+        <test-method status="SKIP" signature="login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.ExistingOnlineOrder@3e1576fa]" name="login" duration-ms="0" started-at="2014-10-08T10:39:37Z" finished-at="2014-10-08T10:39:37Z">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.orderPlacement.ExistingOnlineOrder@3e1576fa]" name="doAfter" is-config="true" duration-ms="0" started-at="2014-10-08T10:39:37Z" finished-at="2014-10-08T10:39:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doAfter -->
+        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.orderPlacement.ExistingOnlineOrder@3e1576fa]" name="isSkip" is-config="true" duration-ms="0" started-at="2014-10-08T10:39:37Z" finished-at="2014-10-08T10:39:37Z">
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping the ExistingOnlineOrder test case as RunMode is No]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping the ExistingOnlineOrder test case as RunMode is No
+	at com.hk.orderPlacement.ExistingOnlineOrder.isSkip(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.TestNG.privateMain(TestNG.java:1364)
+	at org.testng.TestNG.main(TestNG.java:1333)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isSkip -->
-        <test-method status="PASS" signature="login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.ExistingOnlineOrder@11a39121]" name="login" duration-ms="240350" started-at="2014-10-01T14:08:54Z" finished-at="2014-10-01T14:12:54Z">
-          <params>
-            <param index="0">
-              <value is-null="true"/>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.orderPlacement.ExistingOnlineOrder@11a39121]" name="doAfter" is-config="true" duration-ms="1" started-at="2014-10-01T14:12:54Z" finished-at="2014-10-01T14:12:54Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=login status=SUCCESS method=ExistingOnlineOrder.login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.ExistingOnlineOrder@11a39121] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- doAfter -->
       </class> <!-- com.hk.orderPlacement.ExistingOnlineOrder -->
       <class name="com.hk.orderPlacement.GuestCheckoutOnline">
-        <test-method status="PASS" signature="Config()[pri:0, instance:com.hk.orderPlacement.GuestCheckoutOnline@5132d7d]" name="Config" is-config="true" duration-ms="0" started-at="2014-10-01T14:12:54Z" finished-at="2014-10-01T14:12:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Config -->
-        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.orderPlacement.GuestCheckoutOnline@5132d7d]" name="doAfter" is-config="true" duration-ms="0" started-at="2014-10-01T14:12:54Z" finished-at="2014-10-01T14:12:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- doAfter -->
-        <test-method status="SKIP" signature="login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.GuestCheckoutOnline@5132d7d]" name="login" duration-ms="0" started-at="2014-10-01T14:12:54Z" finished-at="2014-10-01T14:12:54Z">
-          <params>
-            <param index="0">
-              <value is-null="true"/>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.orderPlacement.GuestCheckoutOnline@5132d7d]" name="isSkip" is-config="true" duration-ms="0" started-at="2014-10-01T14:12:54Z" finished-at="2014-10-01T14:12:54Z">
+        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.orderPlacement.GuestCheckoutOnline@733636ed]" name="isSkip" is-config="true" duration-ms="0" started-at="2014-10-08T10:42:56Z" finished-at="2014-10-08T10:42:56Z">
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[Skipping the GuestCheckoutOnline test case as RunMode is No]]>
@@ -151,13 +162,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isSkip -->
-      </class> <!-- com.hk.orderPlacement.GuestCheckoutOnline -->
-      <class name="com.hk.orderPlacement.GuestCheckoutCod">
-        <test-method status="PASS" signature="config()[pri:0, instance:com.hk.orderPlacement.GuestCheckoutCod@dc511cb]" name="config" is-config="true" duration-ms="0" started-at="2014-10-01T14:12:54Z" finished-at="2014-10-01T14:12:54Z">
+        <test-method status="PASS" signature="Config()[pri:0, instance:com.hk.orderPlacement.GuestCheckoutOnline@733636ed]" name="Config" is-config="true" duration-ms="0" started-at="2014-10-08T10:42:56Z" finished-at="2014-10-08T10:42:56Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- config -->
-        <test-method status="SKIP" signature="login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.GuestCheckoutCod@dc511cb]" name="login" duration-ms="0" started-at="2014-10-01T14:12:54Z" finished-at="2014-10-01T14:12:54Z">
+        </test-method> <!-- Config -->
+        <test-method status="SKIP" signature="login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.GuestCheckoutOnline@733636ed]" name="login" duration-ms="0" started-at="2014-10-08T10:42:56Z" finished-at="2014-10-08T10:42:56Z">
           <params>
             <param index="0">
               <value is-null="true"/>
@@ -166,56 +175,60 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.orderPlacement.GuestCheckoutCod@dc511cb]" name="isSkip" is-config="true" duration-ms="0" started-at="2014-10-01T14:12:54Z" finished-at="2014-10-01T14:12:54Z">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[Skipping the GuestCheckOutCod test case as RunMode is No]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Skipping the GuestCheckOutCod test case as RunMode is No
-	at com.hk.orderPlacement.GuestCheckoutCod.isSkip(Unknown Source)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.TestNG.privateMain(TestNG.java:1364)
-	at org.testng.TestNG.main(TestNG.java:1333)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
+        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.orderPlacement.GuestCheckoutOnline@733636ed]" name="doAfter" is-config="true" duration-ms="0" started-at="2014-10-08T10:42:56Z" finished-at="2014-10-08T10:42:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doAfter -->
+      </class> <!-- com.hk.orderPlacement.GuestCheckoutOnline -->
+      <class name="com.hk.orderPlacement.GuestCheckoutCod">
+        <test-method status="PASS" signature="config()[pri:0, instance:com.hk.orderPlacement.GuestCheckoutCod@878618f]" name="config" is-config="true" duration-ms="1" started-at="2014-10-08T10:39:37Z" finished-at="2014-10-08T10:39:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- config -->
+        <test-method status="PASS" signature="login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.GuestCheckoutCod@878618f]" name="login" duration-ms="197377" started-at="2014-10-08T10:39:37Z" finished-at="2014-10-08T10:42:55Z">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="isSkip()[pri:0, instance:com.hk.orderPlacement.GuestCheckoutCod@878618f]" name="isSkip" is-config="true" duration-ms="0" started-at="2014-10-08T10:39:37Z" finished-at="2014-10-08T10:39:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isSkip -->
-        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.orderPlacement.GuestCheckoutCod@dc511cb]" name="doAfter" is-config="true" duration-ms="0" started-at="2014-10-01T14:12:54Z" finished-at="2014-10-01T14:12:54Z">
+        <test-method status="PASS" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.orderPlacement.GuestCheckoutCod@878618f]" name="doAfter" is-config="true" duration-ms="1217" started-at="2014-10-08T10:42:55Z" finished-at="2014-10-08T10:42:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=login status=SUCCESS method=GuestCheckoutCod.login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.GuestCheckoutCod@878618f] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doAfter -->
       </class> <!-- com.hk.orderPlacement.GuestCheckoutCod -->
       <class name="com.hk.orderPlacement.SignupOrderOnline">
-        <test-method status="PASS" signature="config()[pri:0, instance:com.hk.orderPlacement.SignupOrderOnline@7ff87852]" name="config" is-config="true" duration-ms="0" started-at="2014-10-01T14:12:54Z" finished-at="2014-10-01T14:12:54Z">
+        <test-method status="PASS" signature="config()[pri:0, instance:com.hk.orderPlacement.SignupOrderOnline@6c503cb2]" name="config" is-config="true" duration-ms="0" started-at="2014-10-08T10:42:56Z" finished-at="2014-10-08T10:42:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- config -->
-        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.orderPlacement.SignupOrderOnline@7ff87852]" name="isSkip" is-config="true" duration-ms="0" started-at="2014-10-01T14:12:54Z" finished-at="2014-10-01T14:12:54Z">
+        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.orderPlacement.SignupOrderOnline@6c503cb2]" name="doAfter" is-config="true" duration-ms="0" started-at="2014-10-08T10:42:56Z" finished-at="2014-10-08T10:42:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doAfter -->
+        <test-method status="SKIP" signature="login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.SignupOrderOnline@6c503cb2]" name="login" duration-ms="0" started-at="2014-10-08T10:42:56Z" finished-at="2014-10-08T10:42:56Z">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.orderPlacement.SignupOrderOnline@6c503cb2]" name="isSkip" is-config="true" duration-ms="0" started-at="2014-10-08T10:42:56Z" finished-at="2014-10-08T10:42:56Z">
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[Skipping the SignUpOrderOnline test case as RunMode is No]]>
@@ -254,35 +267,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isSkip -->
-        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.orderPlacement.SignupOrderOnline@7ff87852]" name="doAfter" is-config="true" duration-ms="0" started-at="2014-10-01T14:12:54Z" finished-at="2014-10-01T14:12:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- doAfter -->
-        <test-method status="SKIP" signature="login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.SignupOrderOnline@7ff87852]" name="login" duration-ms="0" started-at="2014-10-01T14:12:54Z" finished-at="2014-10-01T14:12:54Z">
-          <params>
-            <param index="0">
-              <value is-null="true"/>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
       </class> <!-- com.hk.orderPlacement.SignupOrderOnline -->
       <class name="com.hk.orderPlacement.ExistingCodPlacement">
-        <test-method status="PASS" signature="Config()[pri:0, instance:com.hk.orderPlacement.ExistingCodPlacement@2e0f6c25]" name="Config" is-config="true" duration-ms="1" started-at="2014-10-01T14:08:54Z" finished-at="2014-10-01T14:08:54Z">
+        <test-method status="PASS" signature="Config()[pri:0, instance:com.hk.orderPlacement.ExistingCodPlacement@174cf7a1]" name="Config" is-config="true" duration-ms="0" started-at="2014-10-08T10:39:37Z" finished-at="2014-10-08T10:39:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Config -->
-        <test-method status="SKIP" signature="login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.ExistingCodPlacement@2e0f6c25]" name="login" duration-ms="1" started-at="2014-10-01T14:08:54Z" finished-at="2014-10-01T14:08:54Z">
-          <params>
-            <param index="0">
-              <value is-null="true"/>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.orderPlacement.ExistingCodPlacement@2e0f6c25]" name="isSkip" is-config="true" duration-ms="0" started-at="2014-10-01T14:08:54Z" finished-at="2014-10-01T14:08:54Z">
+        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.orderPlacement.ExistingCodPlacement@174cf7a1]" name="isSkip" is-config="true" duration-ms="0" started-at="2014-10-08T10:39:37Z" finished-at="2014-10-08T10:39:37Z">
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[Skipping the ExistingCodPlacement test case as RunMode is No]]>
@@ -321,17 +312,30 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isSkip -->
-        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.orderPlacement.ExistingCodPlacement@2e0f6c25]" name="doAfter" is-config="true" duration-ms="0" started-at="2014-10-01T14:08:54Z" finished-at="2014-10-01T14:08:54Z">
+        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.orderPlacement.ExistingCodPlacement@174cf7a1]" name="doAfter" is-config="true" duration-ms="0" started-at="2014-10-08T10:39:37Z" finished-at="2014-10-08T10:39:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doAfter -->
+        <test-method status="SKIP" signature="login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.ExistingCodPlacement@174cf7a1]" name="login" duration-ms="0" started-at="2014-10-08T10:39:37Z" finished-at="2014-10-08T10:39:37Z">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
       </class> <!-- com.hk.orderPlacement.ExistingCodPlacement -->
       <class name="com.hk.orderPlacement.CouponOnlineOrder">
-        <test-method status="PASS" signature="Config()[pri:0, instance:com.hk.orderPlacement.CouponOnlineOrder@5e0cbb9]" name="Config" is-config="true" duration-ms="631" started-at="2014-10-01T14:08:53Z" finished-at="2014-10-01T14:08:54Z">
+        <test-method status="PASS" signature="Config()[pri:0, instance:com.hk.orderPlacement.CouponOnlineOrder@7c101ac]" name="Config" is-config="true" duration-ms="216" started-at="2014-10-08T10:39:37Z" finished-at="2014-10-08T10:39:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Config -->
-        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.orderPlacement.CouponOnlineOrder@5e0cbb9]" name="isSkip" is-config="true" duration-ms="0" started-at="2014-10-01T14:08:54Z" finished-at="2014-10-01T14:08:54Z">
+        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.orderPlacement.CouponOnlineOrder@7c101ac]" name="doAfter" is-config="true" duration-ms="0" started-at="2014-10-08T10:39:37Z" finished-at="2014-10-08T10:39:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doAfter -->
+        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.orderPlacement.CouponOnlineOrder@7c101ac]" name="isSkip" is-config="true" duration-ms="0" started-at="2014-10-08T10:39:37Z" finished-at="2014-10-08T10:39:37Z">
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[Skipping the CouponOnlineOrder test case as RunMode is No]]>
@@ -370,7 +374,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isSkip -->
-        <test-method status="SKIP" signature="login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.CouponOnlineOrder@5e0cbb9]" name="login" duration-ms="0" started-at="2014-10-01T14:08:54Z" finished-at="2014-10-01T14:08:54Z">
+        <test-method status="SKIP" signature="login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.CouponOnlineOrder@7c101ac]" name="login" duration-ms="0" started-at="2014-10-08T10:39:37Z" finished-at="2014-10-08T10:39:37Z">
           <params>
             <param index="0">
               <value is-null="true"/>
@@ -379,10 +383,6 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.orderPlacement.CouponOnlineOrder@5e0cbb9]" name="doAfter" is-config="true" duration-ms="0" started-at="2014-10-01T14:08:54Z" finished-at="2014-10-01T14:08:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- doAfter -->
       </class> <!-- com.hk.orderPlacement.CouponOnlineOrder -->
     </test> <!-- com.hk.orderPlacement -->
   </suite> <!-- TestNG Test -->
