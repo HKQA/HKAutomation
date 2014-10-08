@@ -136,9 +136,10 @@ public class variantCheckout /*extends ExistingOnlineOrder */{
 
             //check for warehouse first
             SharedProperties.driver.navigate().to(PropertyHelper.readProperty("brightUrl"));
-            SharedProperties.sendKeys(loginpage.getUserName(), "saurabh.nagpal@healthkart.com", SharedProperties.driver);
+            /*SharedProperties.sendKeys(loginpage.getUserName(), "saurabh.nagpal@healthkart.com", SharedProperties.driver);
             SharedProperties.sendKeys(brighthome.getPassWd(), "abcde12", SharedProperties.driver);
             SharedProperties.Click(brighthome.getLoginBtn(), SharedProperties.driver);
+            */
             SharedProperties.Click("/html/body/div/div[1]/div/ul/li[8]/a", SharedProperties.driver);
 
             SharedProperties.sendKeys("/html/body/div[2]/div[2]/form/fieldset/ul/div/li[1]/input", BrightDetails.getForeignSiCliDTO(shippingOrderId).getForeignSoGatewayId(), SharedProperties.driver);
