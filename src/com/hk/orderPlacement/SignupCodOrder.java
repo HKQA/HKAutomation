@@ -155,7 +155,7 @@ public class SignupCodOrder extends SharedProperties {
         SharedProperties.sendKeys(signupage.confirmpassword(), TestUtil.getConfirmPassword("SignupCodOrder"), SharedProperties.driver );
         SharedProperties.Click(signupage.createaccount(), SharedProperties.driver);
 
-        ExcelServiceImplOld.updateCellContent(PropertyHelper.readProperty("productIdExcel"), "1", 1, 3);
+        //ExcelServiceImplOld.updateCellContent(System.getProperty("user.dir") + PropertyHelper.readProperty("productIdExcel"), "1", 1, 3);
         Thread.sleep(2000);
         SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
         Thread.sleep(2000);
@@ -222,7 +222,7 @@ public class SignupCodOrder extends SharedProperties {
             {
             codNavigation.codConfirmNavigation(finalOrderId);
             }
-            Thread.sleep(3000);
+            Thread.sleep(7000);
             varCheckout.variantCheckout();
             OrderDetailsUtil.flagLoyalty = false  ;
             OrderDetailsUtil.flagNoLoyalty = false;
@@ -233,7 +233,7 @@ public class SignupCodOrder extends SharedProperties {
             {
             codNavigation.codConfirmNavigation(finalOrderId);
             }
-            Thread.sleep(3000);
+            Thread.sleep(7000);
             varCheckout.variantCheckout();
             Thread.sleep(3000);
             OrderDetailsUtil.flagLoyalty = false;

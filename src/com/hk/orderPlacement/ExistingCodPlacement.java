@@ -172,8 +172,10 @@ public class ExistingCodPlacement extends SharedProperties {
 
           SharedProperties.driver.findElement(By.xpath("//*[@class='last']")).click();
         //SharedProperties.Click(paymentpage.cashOnDelivery(), SharedProperties.driver);
-        //Thread.sleep(5000);
+        Thread.sleep(5000);
         SharedProperties.Click(paymentpage.payOnDelivery(), SharedProperties.driver);
+
+        Thread.sleep(5000);
 
 
         String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[5]/div[1]/p[2]")).getText();

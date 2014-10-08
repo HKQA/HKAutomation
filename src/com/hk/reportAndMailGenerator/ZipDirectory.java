@@ -13,7 +13,7 @@ import java.util.zip.ZipOutputStream;
  */
 public class ZipDirectory {
     public static void zipDirectory() throws IOException {
-        File directoryToZip = new File(PropertyHelper.readProperty("reportFolder"));
+        File directoryToZip = new File(System.getProperty("user.dir") + PropertyHelper.readProperty("reportFolder"));
 
         List<File> fileList = new ArrayList<File>();
         System.out.println("---Getting references to all files in: " + directoryToZip.getCanonicalPath());
@@ -49,7 +49,7 @@ public class ZipDirectory {
     public static void writeZipFile(File directoryToZip, List<File> fileList) {
 
         try {
-            FileOutputStream fos = new FileOutputStream(PropertyHelper.readProperty("reportFolder") + "report.zip");
+            FileOutputStream fos = new FileOutputStream(System.getProperty("user.dir") + PropertyHelper.readProperty("reportFolder") + "report.zip");
 //            FileOutputStream fos = new FileOutputStream(directoryToZip.getName() + ".zip");
             ZipOutputStream zos = new ZipOutputStream(fos);
 

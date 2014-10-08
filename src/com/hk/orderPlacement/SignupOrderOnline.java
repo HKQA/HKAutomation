@@ -231,6 +231,10 @@ public class SignupOrderOnline extends SharedProperties {
         } else {
             Thread.sleep(3000);
             varCheckout.variantCheckout();
+
+            Thread.sleep(3000);
+            OrderDetailsUtil.flagLoyalty = false;
+            OrderDetailsUtil.flagNoLoyalty = false;
             System.out.println("DB verification failed but Order ID is generated. So please refer DB");
             SendMail.sendmail("DB verification failed for Signup online order");
             result.setStatus(ITestResult.FAILURE);

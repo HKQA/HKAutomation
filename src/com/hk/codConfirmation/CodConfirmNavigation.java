@@ -3,6 +3,7 @@ package com.hk.codConfirmation;
 import com.hk.aquaElementLocators.CodConfirmation;
 import com.hk.commonProperties.SharedProperties;
 import com.hk.util.TestUtil;
+import org.openqa.selenium.Alert;
 
 /**
  * Created with IntelliJ IDEA.
@@ -48,6 +49,16 @@ public class CodConfirmNavigation extends SharedProperties {
         Thread.sleep(3000);
 
         SharedProperties.Click(codconfirmation.getConfirmOrder(), SharedProperties.driver);
+
+        Thread.sleep(3000);
+
+        Alert alert =  SharedProperties.driver.switchTo().alert();
+
+        Thread.sleep(3000);
+
+        alert.accept();
+
+
 
 
 
