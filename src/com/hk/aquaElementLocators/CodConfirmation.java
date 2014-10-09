@@ -9,73 +9,45 @@ package com.hk.aquaElementLocators;
  */
 public class CodConfirmation {
 
-    private String email = "/html/body/div[3]/div/div/div[3]/div/form/fieldset/input[1]"      ;
-
-    private String password = "/html/body/div[3]/div/div/div[3]/div/form/fieldset/input[2]" ;
-
-    private String login = "/html/body/div[3]/div/div/div[3]/div/form/fieldset/div/div/input[2]" ;
-
+    private String email = "/html/body/div[3]/div/div/div[3]/div/form/fieldset/input[1]";
+    private String password = "/html/body/div[3]/div/div/div[3]/div/form/fieldset/input[2]";
+    private String login = "/html/body/div[3]/div/div/div[3]/div/form/fieldset/div/div/input[2]";
     private String paymentHover = "//*[@id='cssmenu']/ul/li[5]/a/span";
-
-    private String codPayment = "//*[@id='cssmenu']/ul/li[5]/ul/li[2]/a"     ;
-
+    private String codPayment = "//*[@id='cssmenu']/ul/li[5]/ul/li[2]/a";
     private String inputOrderId = "//*[@id='filter-box']/div/div/fieldset/fieldset[2]/div/form/input[1]";
-
     private String filter = "//*[@id='filter-box']/div/div/fieldset/fieldset[2]/div/form/input[2]";
-
     private String confirmOrder = "html/body/div[5]/div/div/table/tbody/tr[2]/td[5]/a[1]";
 
-    public String getEmail()
-    {
-
+    public String getEmail() {
         return email;
     }
 
-    public String getPassword()
-    {
-
+    public String getPassword() {
         return password;
     }
 
-    public String getLogin()
-    {
-
+    public String getLogin() {
         return login;
     }
 
-    public String getPaymentHover()
-    {
-
+    public String getPaymentHover() {
         return paymentHover;
     }
 
-    public String getCodPayment()
-    {
-
-
+    public String getCodPayment() {
         return codPayment;
     }
 
-    public String getInputOrderId()
-    {
-
+    public String getInputOrderId() {
         return inputOrderId;
-
-
     }
 
-    public String getFilter()
-    {
-
-         return filter;
-
+    public String getFilter() {
+        return filter;
     }
 
-    public String getConfirmOrder()
-    {
-
+    public String getConfirmOrder() {
         return confirmOrder;
-
     }
 }
 

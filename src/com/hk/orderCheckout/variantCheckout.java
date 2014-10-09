@@ -33,7 +33,7 @@ import java.util.concurrent.TimeUnit;
  * Time: 6:08 PM
  * To change this template use File | Settings | File Templates.
  */
-public class variantCheckout    {
+public class variantCheckout {
     String AdminBaseURL;
     String browser;
 
@@ -78,22 +78,12 @@ public class variantCheckout    {
     }
 
 
-
     //@Test(enabled = true)
     public void variantCheckout() throws InterruptedException, IOException, Exception {
 
         System.out.println("Inside variantcheckout");
-
-        //this.AdminBaseURL = "http://192.168.70.27:8080/admin";
-        //this.browser = "chrome"   ;
-
-
         Thread.sleep(15000);
-
-       // EOO.login(1L);
-        //System.out.print("\n HK OrderID:- " + OrderDetailsUtil.GatewayOrderId());
         System.out.println("HK orderID:- " + SoDetails.orderIdSoDetails);
-
         Thread.sleep(7000);
 
         for (SoDetailsDTO soDetailsDTO : SoDetails.Sodetails()) {
@@ -156,9 +146,6 @@ public class variantCheckout    {
             Thread.sleep(4000);
 
             System.out.print("\n Aqua using SO1: " + shippingOrderId);
-
-            //check for warehouse first
-            //SharedProperties.driver.navigate().to(PropertyHelper.readProperty("brightUrl"));
             SharedProperties.driver.navigate().to(TestUtil.getBright_URL());
             //SharedProperties.sendKeys(loginpage.getUserName(), "gagan.jain@healthkart.com", SharedProperties.driver);
             //SharedProperties.sendKeys(loginpage.getUserName(), TestUtil.getBright_User(), SharedProperties.driver);

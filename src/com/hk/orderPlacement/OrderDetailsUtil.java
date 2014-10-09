@@ -13,14 +13,9 @@ import java.util.List;
  * Time: 2:53 PM
  */
 public class OrderDetailsUtil {
-
-
     public static boolean flag_signup = false;
-
     public static boolean flag = false;
-
     public static boolean flagLoyalty = false;
-
     public static boolean flagNoLoyalty = false;
 
     private static final String xpathGatewayOrderId = "/html/body/div[1]/div[2]/div/div[5]/div[1]/p[2]";
@@ -54,9 +49,7 @@ public class OrderDetailsUtil {
         int exists = SharedProperties.driver.findElements(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).size();
 
 
-
         List<Long> Items = new ArrayList<Long>();
-
 
 
         for (int i = 1; i <= TotalItem(); i++) {
@@ -88,7 +81,6 @@ public class OrderDetailsUtil {
 
     public static List<Long> getItems_Loyalty() {
         int orderedItems = 3;
-
 
 
         //int exists = SharedProperties.driver.findElements(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).size();
