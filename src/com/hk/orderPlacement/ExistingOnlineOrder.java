@@ -56,35 +56,25 @@ public class ExistingOnlineOrder extends SharedProperties {
     }*/
 
     @BeforeClass
-    public void Config()
-    {
+    public void Config() {
         this.baseUrl = TestUtil.getURL();
-
         this.browser = TestUtil.getBrowser();
-
-
     }
 
 
     @BeforeMethod
-    public void isSkip()
-    {
+    public void isSkip() {
 
-        if(!TestUtil.isExecutable("ExistingOnlineOrder"))
-        {
-
+        if (!TestUtil.isExecutable("ExistingOnlineOrder")) {
             System.out.println("ExistingOnlineOrder would be skipped");
             throw new SkipException("Skipping the ExistingOnlineOrder test case as RunMode is No");
-
         }
 
     }
 
     @AfterMethod
     public void doAfter(ITestResult result) throws IOException {
-
         System.out.println("Inside doAfter method having AfterMethod annotation");
-
         if (result.getStatus() == ITestResult.FAILURE) {
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(screenshot, new File(System.getProperty("user.dir") + PropertyHelper.readProperty("screenshotFolder") + "\\ExistingOnlineOrder.jpg"));
@@ -133,7 +123,7 @@ public class ExistingOnlineOrder extends SharedProperties {
         if (specificVariantIndex == null) {
             for (Long variantId : testDetailsDTO.getVariantIdList()) {
                 //SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + variantId);
-                SharedProperties.driver.navigate().to(TestUtil.getURL()+ PropertyHelper.readProperty("url") + TestUtil.getVariantId());
+                SharedProperties.driver.navigate().to(TestUtil.getURL() + PropertyHelper.readProperty("url") + TestUtil.getVariantId());
                 Thread.sleep(3000);
                 WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-red btn2 mrgn-b-5 disp-inln']"));
                 buyNow.click();
@@ -198,58 +188,28 @@ public class ExistingOnlineOrder extends SharedProperties {
         SharedProperties.Click(paymentpage.proceedPayment(), SharedProperties.driver);
 
         Thread.sleep(5000);
-
-        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[5]/div[1]/p[2]")).getText();
-
+        String orderId = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[5]/div[1]/p[2]")).getText();
         System.out.println(orderId);
-
         String finalOrderId = orderId.substring(10);
-
         soDetails.orderIdSoDetails = finalOrderId;
-
-        TestUtil.excel.setCellData("test_suite","OrderId_Generated",7, orderId );
-
+        TestUtil.excel.setCellData("test_suite", "OrderId_Generated", 7, orderId);
         String getText = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]")).getText();
 
-        if(SharedProperties.isElementPresent("/html/body/div[1]/div[2]/div/div[6]") && (getText.contains("your")))
-        {
-              OrderDetailsUtil.flagLoyalty = true  ;
+        if (SharedProperties.isElementPresent("/html/body/div[1]/div[2]/div/div[6]") && (getText.contains("your"))) {
+            OrderDetailsUtil.flagLoyalty = true;
 
-        }
-        else
-        {
-
+        } else {
             OrderDetailsUtil.flagNoLoyalty = true;
-
-
         }
-
-        //OrderDetailsUtil.flag = true;
 
         Thread.sleep(5000);
-
-
-
-
-        //varCheckout.variantCheckout();
-
-        //Thread.sleep(10000);
-
-
 
         if (OrderDetailsVerify.orderDetails() == true) {
             System.out.print("DB verification Successful");
             Thread.sleep(5000);
             varCheckout.variantCheckout();
-
             OrderDetailsUtil.flagLoyalty = false;
-
             OrderDetailsUtil.flagNoLoyalty = false;
-
-
-
-            //OrderDetailsUtil.flag = false;
-
 
         } else {
             Thread.sleep(5000);

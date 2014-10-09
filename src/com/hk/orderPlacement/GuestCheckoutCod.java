@@ -57,25 +57,17 @@ public class GuestCheckoutCod extends SharedProperties {
     }*/
 
     @BeforeClass
-    public void config()
-    {
+    public void config() {
         this.baseUrl = TestUtil.getURL();
-
         this.browser = TestUtil.getBrowser();
-
-
     }
 
     @BeforeMethod
-    public void isSkip()
-    {
+    public void isSkip() {
 
-        if(!TestUtil.isExecutable("GuestCheckoutCod"))
-        {
-
+        if (!TestUtil.isExecutable("GuestCheckoutCod")) {
             System.out.println("GuestCheckoutCod would be skipped");
             throw new SkipException("Skipping the GuestCheckOutCod test case as RunMode is No");
-
         }
 
     }
@@ -104,12 +96,10 @@ public class GuestCheckoutCod extends SharedProperties {
             System.out.println(re.getMessage());
         }
 
-        //SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + );
-
         if (specificVariantIndex == null) {
             for (Long variantId : testDetailsDTO.getVariantIdList()) {
                 //SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + variantId);
-                SharedProperties.driver.navigate().to(TestUtil.getURL()+ PropertyHelper.readProperty("url") + TestUtil.getVariantId());
+                SharedProperties.driver.navigate().to(TestUtil.getURL() + PropertyHelper.readProperty("url") + TestUtil.getVariantId());
                 Thread.sleep(5000);
                 WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-red btn2 mrgn-b-5 disp-inln']"));
                 buyNow.click();
@@ -135,11 +125,6 @@ public class GuestCheckoutCod extends SharedProperties {
         SharedProperties.Click(loginPage.getGuestSigninBtn(), SharedProperties.driver);
         Thread.sleep(5000);
 
-        //Code to add more quantity
-        //code to redeem reward points
-        //code to add coupons
-
-        //SharedProperties.sendKeys(addresspage.name(), "Test", SharedProperties.driver);
         SharedProperties.sendKeys(addresspage.name(), TestUtil.getAddressName("GuestCheckoutCod"), SharedProperties.driver);
         //SharedProperties.sendKeys(addresspage.mobile(), "9999999999", SharedProperties.driver);
         SharedProperties.sendKeys(addresspage.mobile(), TestUtil.getMobile_Number("GuestCheckoutCod"), SharedProperties.driver);
@@ -159,84 +144,40 @@ public class GuestCheckoutCod extends SharedProperties {
         }*/
 
         SharedProperties.driver.findElement(By.xpath("//*[@class='last']")).click();
-
         Thread.sleep(3000);
-
         SharedProperties.Click(paymentpage.payOnDelivery(), SharedProperties.driver);
-
-
-
-
-
-        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[5]/div[1]/p[2]")).getText();
-
+        String orderId = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[5]/div[1]/p[2]")).getText();
         System.out.println(orderId);
-
         String finalOrderId = orderId.substring(10);
-
         soDetails.orderIdSoDetails = finalOrderId;
-
-
         TestUtil.excel.setCellData("test_suite", "OrderId_Generated", 6, orderId);
-
         String getText = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]")).getText();
 
-        if(SharedProperties.isElementPresent("/html/body/div[1]/div[2]/div/div[6]") && (getText.contains("your")) )
-        {
-            OrderDetailsUtil.flagLoyalty = true  ;
-
-        }
-        else
-        {
-
+        if (SharedProperties.isElementPresent("/html/body/div[1]/div[2]/div/div[6]") && (getText.contains("your"))) {
+            OrderDetailsUtil.flagLoyalty = true;
+        } else {
             OrderDetailsUtil.flagNoLoyalty = true;
-
-
         }
 
         String codStatus = SharedProperties.driver.findElement(By.xpath("html/body/div[1]/div[2]/div/div[5]/div[1]/p[1]/span[2]")).getText();
-
-
-
-
-
-        //codNavigation.codConfirmNavigation(finalOrderId);
-
-
-
-        //varCheckout.variantCheckout();
-
-
-
-
 
         if (OrderDetailsVerify.orderDetails() == true) {
             System.out.print("DB verification Successful");
             Thread.sleep(5000);
 
-            if(codStatus.equalsIgnoreCase("Authorization Pending"))
-            {
-
-            codNavigation.codConfirmNavigation(finalOrderId);
-
+            if (codStatus.equalsIgnoreCase("Authorization Pending")) {
+                codNavigation.codConfirmNavigation(finalOrderId);
             }
 
-
-
-
             Thread.sleep(5000);
-
             varCheckout.variantCheckout();
-
             OrderDetailsUtil.flagLoyalty = false;
             OrderDetailsUtil.flagNoLoyalty = false;
             //codNavigation.codConfirmNavigation(finalOrderId);
 
         } else {
-
-            if(codStatus.equalsIgnoreCase("Authorization Pending"))
-            {
-            codNavigation.codConfirmNavigation(finalOrderId);
+            if (codStatus.equalsIgnoreCase("Authorization Pending")) {
+                codNavigation.codConfirmNavigation(finalOrderId);
             }
             Thread.sleep(5000);
             varCheckout.variantCheckout();
@@ -249,8 +190,6 @@ public class GuestCheckoutCod extends SharedProperties {
 
             Thread.sleep(5000);
         }
-
-
 
 
     }

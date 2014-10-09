@@ -53,26 +53,18 @@ public class GuestCheckoutOnline extends SharedProperties {
     }*/
 
     @BeforeClass
-    public void Config()
-    {
+    public void Config() {
         this.baseUrl = TestUtil.getURL();
-
         this.browser = TestUtil.getBrowser();
-
-
     }
 
 
     @BeforeMethod
-    public void isSkip()
-    {
+    public void isSkip() {
 
-        if(!TestUtil.isExecutable("GuestCheckoutOnline"))
-        {
-
+        if (!TestUtil.isExecutable("GuestCheckoutOnline")) {
             System.out.println("GuestCheckoutOnline would be skipped");
             throw new SkipException("Skipping the GuestCheckoutOnline test case as RunMode is No");
-
         }
 
     }
@@ -81,11 +73,9 @@ public class GuestCheckoutOnline extends SharedProperties {
     public void doAfter(ITestResult result) throws IOException {
         if (result.getStatus() == ITestResult.FAILURE) {
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(screenshot, new File( System.getProperty("user.dir") + PropertyHelper.readProperty("screenshotFolder") + "\\GuestCheckoutOnline.jpg"));
+            FileUtils.copyFile(screenshot, new File(System.getProperty("user.dir") + PropertyHelper.readProperty("screenshotFolder") + "\\GuestCheckoutOnline.jpg"));
         }
-
         driver.quit();
-
     }
 
     @Parameters("specificVariantIndex")
@@ -105,12 +95,12 @@ public class GuestCheckoutOnline extends SharedProperties {
             for (Long variantId : testDetailsDTO.getVariantIdList()) {
                 //SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + variantId);
                 //SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + TestUtil.getVariantId());
-                SharedProperties.driver.navigate().to(TestUtil.getURL()+ PropertyHelper.readProperty("url") + TestUtil.getVariantId());
+                SharedProperties.driver.navigate().to(TestUtil.getURL() + PropertyHelper.readProperty("url") + TestUtil.getVariantId());
                 Thread.sleep(3000);
                 WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-red btn2 mrgn-b-5 disp-inln']"));
                 buyNow.click();
             }
-        }else {
+        } else {
             SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + testDetailsDTO.getVariantIdList().get(specificVariantIndex.intValue()));
             WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
             buyNow.click();
@@ -168,39 +158,20 @@ public class GuestCheckoutOnline extends SharedProperties {
         SharedProperties.Click(paymentpage.proceedPayment(), SharedProperties.driver);
 
 
-
-        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[5]/div[1]/p[2]")).getText();
-
+        String orderId = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[5]/div[1]/p[2]")).getText();
         System.out.println(orderId);
-
         String finalOrderId = orderId.substring(10);
-
         soDetails.orderIdSoDetails = finalOrderId;
-
-        TestUtil.excel.setCellData("test_suite","OrderId_Generated",5, orderId );
-
+        TestUtil.excel.setCellData("test_suite", "OrderId_Generated", 5, orderId);
         String getText = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]")).getText();
+        if (SharedProperties.isElementPresent("/html/body/div[1]/div[2]/div/div[6]") && (getText.contains("your"))) {
+            OrderDetailsUtil.flagLoyalty = true;
 
-        if(SharedProperties.isElementPresent("/html/body/div[1]/div[2]/div/div[6]") && (getText.contains("your")) )
-        {
-            OrderDetailsUtil.flagLoyalty = true  ;
-
-        }
-        else
-        {
-
+        } else {
             OrderDetailsUtil.flagNoLoyalty = true;
-
-
         }
-
-
 
         Thread.sleep(5000);
-
-        //varCheckout.variantCheckout();
-
-
 
         if (OrderDetailsVerify.orderDetails() == true) {
             System.out.print("DB verification Successful");

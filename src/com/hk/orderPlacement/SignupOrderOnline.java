@@ -54,24 +54,17 @@ public class SignupOrderOnline extends SharedProperties {
     }*/
 
     @BeforeClass
-    public void config()
-    {
+    public void config() {
         this.baseUrl = TestUtil.getURL();
-
         this.browser = TestUtil.getBrowser();
-
     }
 
     @BeforeMethod
-    public void isSkip()
-    {
+    public void isSkip() {
 
-        if(!TestUtil.isExecutable("SignupOrderOnline"))
-        {
-
+        if (!TestUtil.isExecutable("SignupOrderOnline")) {
             System.out.println("SignupOrderOnline would be skipped");
             throw new SkipException("Skipping the SignUpOrderOnline test case as RunMode is No");
-
         }
 
     }
@@ -80,7 +73,7 @@ public class SignupOrderOnline extends SharedProperties {
     public void doAfter(ITestResult result) throws IOException {
         if (result.getStatus() == ITestResult.FAILURE) {
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(screenshot, new File(System.getProperty("user.dir")+ PropertyHelper.readProperty("screenshotFolder") + "\\SignupOrderOnline.jpg"));
+            FileUtils.copyFile(screenshot, new File(System.getProperty("user.dir") + PropertyHelper.readProperty("screenshotFolder") + "\\SignupOrderOnline.jpg"));
         }
 
         driver.quit();
@@ -104,12 +97,12 @@ public class SignupOrderOnline extends SharedProperties {
         if (specificVariantIndex == null) {
             for (Long variantId : testDetailsDTO.getVariantIdList()) {
                 //SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + variantId);
-                SharedProperties.driver.navigate().to(TestUtil.getURL()+ PropertyHelper.readProperty("url") + TestUtil.getVariantId());
+                SharedProperties.driver.navigate().to(TestUtil.getURL() + PropertyHelper.readProperty("url") + TestUtil.getVariantId());
                 Thread.sleep(5000);
                 WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-red btn2 mrgn-b-5 disp-inln']"));
                 buyNow.click();
             }
-        }else {
+        } else {
             SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + testDetailsDTO.getVariantIdList().get(specificVariantIndex.intValue()));
             WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
             buyNow.click();
@@ -123,10 +116,6 @@ public class SignupOrderOnline extends SharedProperties {
         cartLink.click();
         Thread.sleep(3000);
 
-
-        //Code to add more quantity
-        //code to redeem reward points
-        //code to add coupons
 
         //SharedProperties.Click(cartpage.getSigninLink(), SharedProperties.driver);
         SharedProperties.mouseHoverAndClick(cartpage.getSignupHover(), cartpage.getSigninLink(), SharedProperties.driver);
@@ -161,19 +150,7 @@ public class SignupOrderOnline extends SharedProperties {
         Thread.sleep(3000);
         new Select(SharedProperties.driver.findElement(By.xpath("html/body/div[1]/div[2]/div[1]/div[5]/div[2]/div/div[2]/form[1]/div[1]/div/div[5]/select"))).selectByVisibleText("Dummy");
 
-
-
         Assert.assertTrue(true, "SignupOrderOnline test case is passed");
-
-
-        /*WebElement dummypayment = SharedProperties.driver.findElement(By.xpath("html/body/div[1]/div[2]/div[1]/div[5]/div[2]/div/div[2]/form[1]/div[1]/div/div[4]/input"));
-        if (dummypayment == null) {
-            SharedProperties.Click(paymentpage.paymentPageDummy(), SharedProperties.driver);
-            new Select(SharedProperties.driver.findElement(By.xpath("html/body/div[1]/div[2]/div[1]/div[5]/div[2]/div/div[2]/form[1]/div[1]/div/div[5]/select"))).selectByVisibleText("Dummy");
-            Thread.sleep(2000);
-        } else {
-            SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[1]/div[5]/div[2]/div/div[2]/form[1]/div[1]/div/div[2]/input")).click();
-        }*/
         Thread.sleep(2000);
         SharedProperties.Click(paymentpage.proceedToPayment(), SharedProperties.driver);
         Thread.sleep(2000);
@@ -181,53 +158,28 @@ public class SignupOrderOnline extends SharedProperties {
         Thread.sleep(2000);
 
 
-
         SharedProperties.Click(paymentpage.proceedPayment(), SharedProperties.driver);
-
-        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[5]/div[1]/p[2]")).getText();
-
+        String orderId = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[5]/div[1]/p[2]")).getText();
         System.out.println(orderId);
-
         String finalOrderId = orderId.substring(10);
-
         soDetails.orderIdSoDetails = finalOrderId;
-
-        TestUtil.excel.setCellData("test_suite","OrderId_Generated",3, orderId );
-
+        TestUtil.excel.setCellData("test_suite", "OrderId_Generated", 3, orderId);
         String getText = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]")).getText();
 
-        if(SharedProperties.isElementPresent("/html/body/div[1]/div[2]/div/div[6]") && (getText.contains("your")))
-        {
-            OrderDetailsUtil.flagLoyalty = true  ;
-
-        }
-        else
-        {
-
+        if (SharedProperties.isElementPresent("/html/body/div[1]/div[2]/div/div[6]") && (getText.contains("your"))) {
+            OrderDetailsUtil.flagLoyalty = true;
+        } else {
             OrderDetailsUtil.flagNoLoyalty = true;
-
-
         }
-
-        //OrderDetailsUtil.flag_signup = true;
-
 
         Thread.sleep(5000);
-
-        //varCheckout.variantCheckout();
-
 
         if (OrderDetailsVerify.orderDetails() == true) {
             System.out.print("DB verification Successful");
             Thread.sleep(5000);
-
             varCheckout.variantCheckout();
-
             OrderDetailsUtil.flagLoyalty = false;
-
             OrderDetailsUtil.flagNoLoyalty = false;
-
-            //OrderDetailsUtil.flag_signup = false;
         } else {
             Thread.sleep(3000);
             varCheckout.variantCheckout();

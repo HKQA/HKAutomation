@@ -1,7 +1,6 @@
 package com.hk.orderPlacement;
 
 
-
 import com.hk.codConfirmation.CodConfirmNavigation;
 import com.hk.excel.ExcelServiceImplOld;
 import com.hk.orderCheckout.variantCheckout;
@@ -61,32 +60,23 @@ public class SignupCodOrder extends SharedProperties {
     }*/
 
     @BeforeClass
-    public void config()
-    {
+    public void config() {
         this.baseUrl = TestUtil.getURL();
-
         this.browser = TestUtil.getBrowser();
-
     }
 
     @BeforeMethod
-    public void isSkip()
-    {
+    public void isSkip() {
 
-        if(!TestUtil.isExecutable("SignupCodOrder"))
-        {
-
+        if (!TestUtil.isExecutable("SignupCodOrder")) {
             System.out.println("SignupCodOrder would be skipped");
             throw new SkipException("Skipping the SignUpCodOrder test case as RunMode is No");
-
         }
 
     }
 
     @AfterMethod
     public void doAfter(ITestResult result) throws IOException {
-
-
 
         if (result.getStatus() == ITestResult.FAILURE) {
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -114,7 +104,7 @@ public class SignupCodOrder extends SharedProperties {
         if (specificVariantIndex == null) {
             for (Long variantId : testDetailsDTO.getVariantIdList()) {
                 //SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + variantId );
-                SharedProperties.driver.navigate().to(TestUtil.getURL()+ PropertyHelper.readProperty("url") + TestUtil.getVariantId());
+                SharedProperties.driver.navigate().to(TestUtil.getURL() + PropertyHelper.readProperty("url") + TestUtil.getVariantId());
                 Thread.sleep(5000);
                 WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-red btn2 mrgn-b-5 disp-inln']"));
                 buyNow.click();
@@ -152,7 +142,7 @@ public class SignupCodOrder extends SharedProperties {
         //SharedProperties.sendKeys(signupage.password(), "123456", SharedProperties.driver);
         SharedProperties.sendKeys(signupage.password(), TestUtil.getPassword("SignupCodOrder"), SharedProperties.driver);
         //SharedProperties.sendKeys(signupage.confirmpassword(), "123456", SharedProperties.driver);
-        SharedProperties.sendKeys(signupage.confirmpassword(), TestUtil.getConfirmPassword("SignupCodOrder"), SharedProperties.driver );
+        SharedProperties.sendKeys(signupage.confirmpassword(), TestUtil.getConfirmPassword("SignupCodOrder"), SharedProperties.driver);
         SharedProperties.Click(signupage.createaccount(), SharedProperties.driver);
 
         //ExcelServiceImplOld.updateCellContent(System.getProperty("user.dir") + PropertyHelper.readProperty("productIdExcel"), "1", 1, 3);
@@ -172,66 +162,37 @@ public class SignupCodOrder extends SharedProperties {
         Thread.sleep(5000);
 
         SharedProperties.driver.findElement(By.xpath("//*[@class='last']")).click();
-
-
-        //SharedProperties.Click(paymentpage.cashOnDelivery(), SharedProperties.driver);
         Thread.sleep(5000);
         SharedProperties.Click(paymentpage.payOnDelivery(), SharedProperties.driver);
-
-        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[5]/div[1]/p[2]")).getText();
-
+        String orderId = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[5]/div[1]/p[2]")).getText();
         System.out.println(orderId);
-
         String finalOrderId = orderId.substring(10);
-
         soDetails.orderIdSoDetails = finalOrderId;
-
-        TestUtil.excel.setCellData("test_suite","OrderId_Generated",2, orderId )       ;
-
+        TestUtil.excel.setCellData("test_suite", "OrderId_Generated", 2, orderId);
         String getText = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]")).getText();
 
-        if(SharedProperties.isElementPresent("/html/body/div[1]/div[2]/div/div[6]") && (getText.contains("your")))
-        {
-            OrderDetailsUtil.flagLoyalty = true  ;
-
-        }
-        else
-        {
-
+        if (SharedProperties.isElementPresent("/html/body/div[1]/div[2]/div/div[6]") && (getText.contains("your"))) {
+            OrderDetailsUtil.flagLoyalty = true;
+        } else {
             OrderDetailsUtil.flagNoLoyalty = true;
-
-
         }
 
         String codStatus = SharedProperties.driver.findElement(By.xpath("html/body/div[1]/div[2]/div/div[5]/div[1]/p[1]/span[2]")).getText();
-
-
-
-
-        //codNavigation.codConfirmNavigation(finalOrderId);
-
-
-
-        //varCheckout.variantCheckout();
-
-
         Assert.assertTrue(true, "SignupCodOrder is passed");
         if (OrderDetailsVerify.orderDetails()) {
             System.out.print("DB verification Successful");
-            if(codStatus.equalsIgnoreCase("Authorization Pending"))
-            {
-            codNavigation.codConfirmNavigation(finalOrderId);
+            if (codStatus.equalsIgnoreCase("Authorization Pending")) {
+                codNavigation.codConfirmNavigation(finalOrderId);
             }
             Thread.sleep(7000);
             varCheckout.variantCheckout();
-            OrderDetailsUtil.flagLoyalty = false  ;
+            OrderDetailsUtil.flagLoyalty = false;
             OrderDetailsUtil.flagNoLoyalty = false;
 
 
         } else {
-            if(codStatus.equalsIgnoreCase("Authorization Pending"))
-            {
-            codNavigation.codConfirmNavigation(finalOrderId);
+            if (codStatus.equalsIgnoreCase("Authorization Pending")) {
+                codNavigation.codConfirmNavigation(finalOrderId);
             }
             Thread.sleep(7000);
             varCheckout.variantCheckout();

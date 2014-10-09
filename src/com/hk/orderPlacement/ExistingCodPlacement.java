@@ -169,9 +169,7 @@ public class ExistingCodPlacement extends SharedProperties {
 
         if (SharedProperties.isElementPresent("/html/body/div[1]/div[2]/div/div[6]")) {
             OrderDetailsUtil.flagLoyalty = true;
-
         } else {
-
             OrderDetailsUtil.flagNoLoyalty = true;
         }
 
@@ -183,7 +181,6 @@ public class ExistingCodPlacement extends SharedProperties {
             Thread.sleep(3000);
             if (codStatus.equalsIgnoreCase("Authorization Pending")) {
                 codNavigation.codConfirmNavigation(finalOrderId);
-
             }
             Thread.sleep(5000);
             varCheckout.variantCheckout();

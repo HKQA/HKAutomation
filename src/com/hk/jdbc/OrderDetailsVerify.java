@@ -14,21 +14,17 @@ public class OrderDetailsVerify {
             return false;
         }
 
-        if(OrderDetailsUtil.flagLoyalty)
-        {
+        if (OrderDetailsUtil.flagLoyalty) {
 
-        if (!orderDetailsDTO.getProductList().containsAll(OrderDetailsUtil.getItems_Loyalty()))
-            {
-            return false;
+            if (!orderDetailsDTO.getProductList().containsAll(OrderDetailsUtil.getItems_Loyalty())) {
+                return false;
             }
         }
-        if (OrderDetailsUtil.flagNoLoyalty)
-        {
+        if (OrderDetailsUtil.flagNoLoyalty) {
 
-        if (!orderDetailsDTO.getProductList().containsAll(OrderDetailsUtil.getItems_NoLoyalty()))
-            {
+            if (!orderDetailsDTO.getProductList().containsAll(OrderDetailsUtil.getItems_NoLoyalty())) {
 
-            return false;
+                return false;
             }
         }
 

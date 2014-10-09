@@ -50,26 +50,17 @@ public class CouponOnlineOrder extends SharedProperties {
     }*/
 
     @BeforeClass
-    public void Config()
-    {
-
+    public void Config() {
         this.baseUrl = TestUtil.getURL();
-
         this.browser = TestUtil.getBrowser();
-
-
     }
 
     @BeforeMethod
-    public void isSkip()
-    {
+    public void isSkip() {
 
-        if(!TestUtil.isExecutable("CouponOnlineOrder"))
-        {
-
+        if (!TestUtil.isExecutable("CouponOnlineOrder")) {
             System.out.println("CouponOnlineOrder would be skipped");
             throw new SkipException("Skipping the CouponOnlineOrder test case as RunMode is No");
-
         }
 
     }
@@ -81,7 +72,6 @@ public class CouponOnlineOrder extends SharedProperties {
             FileUtils.copyFile(screenshot, new File(PropertyHelper.readProperty("screenshotFolder") + "\\CouponOnlineOrder.jpg"));
         }
     }
-
 
 
     @Parameters("specificVariantIndex")
@@ -99,12 +89,12 @@ public class CouponOnlineOrder extends SharedProperties {
         if (specificVariantIndex == null) {
             for (Long variantId : testDetailsDTO.getVariantIdList()) {
                 //SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + variantId);
-                SharedProperties.driver.navigate().to(TestUtil.getURL()+ PropertyHelper.readProperty("url") + TestUtil.getVariantId());
+                SharedProperties.driver.navigate().to(TestUtil.getURL() + PropertyHelper.readProperty("url") + TestUtil.getVariantId());
                 Thread.sleep(3000);
                 WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
                 buyNow.click();
             }
-        }else {
+        } else {
             SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + testDetailsDTO.getVariantIdList().get(specificVariantIndex.intValue()));
             WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
             buyNow.click();
@@ -130,15 +120,13 @@ public class CouponOnlineOrder extends SharedProperties {
         SharedProperties.Click(cartpage.CouponProceedToCheckout(), SharedProperties.driver);
         Thread.sleep(3000);
         SharedProperties.Click(loginPage.getSignInCheckbox(), SharedProperties.driver);
-        if (SharedProperties.driver.findElements(By.xpath("//*[@id=\"signInForm\"]/input[3]")).size() > 0 ) {
+        if (SharedProperties.driver.findElements(By.xpath("//*[@id=\"signInForm\"]/input[3]")).size() > 0) {
             SharedProperties.clear(loginPage.getOldEmailIdTextBox(), SharedProperties.driver);
             SharedProperties.sendKeys(loginPage.getOldEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
             SharedProperties.sendKeys(loginPage.getPasswordTextBox(), testDetailsDTO.getPasswordList(), SharedProperties.driver);
             SharedProperties.Click(loginPage.getOldSignInBtn(), SharedProperties.driver);
             Thread.sleep(5000);
-        }
-        else
-        {
+        } else {
             SharedProperties.clear(loginPage.getEmailIdTextBox(), SharedProperties.driver);
             SharedProperties.sendKeys(loginPage.getEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
             SharedProperties.sendKeys(loginPage.getPasswordTextBox(), testDetailsDTO.getPasswordList(), SharedProperties.driver);
@@ -159,14 +147,10 @@ public class CouponOnlineOrder extends SharedProperties {
         SharedProperties.Click(paymentpage.proceedPayment(), SharedProperties.driver);
         Thread.sleep(5000);
 
-        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[4]/div[1]/p[2]")).getText();
-
+        String orderId = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[4]/div[1]/p[2]")).getText();
         System.out.println(orderId);
-
-        TestUtil.excel.setCellData("test_suite","OrderId_Generated",9, orderId );
-
+        TestUtil.excel.setCellData("test_suite", "OrderId_Generated", 9, orderId);
         OrderDetailsUtil.flag = true;
-
 
         if (OrderDetailsVerify.orderDetails() == true) {
             System.out.print("DB verification Successful");
