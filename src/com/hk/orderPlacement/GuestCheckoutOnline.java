@@ -55,6 +55,7 @@ public class GuestCheckoutOnline extends SharedProperties {
     @BeforeClass
     public void Config()
     {
+
         this.baseUrl = TestUtil.getURL();
 
         this.browser = TestUtil.getBrowser();
@@ -86,6 +87,8 @@ public class GuestCheckoutOnline extends SharedProperties {
 
         driver.quit();
 
+
+
     }
 
     @Parameters("specificVariantIndex")
@@ -107,12 +110,26 @@ public class GuestCheckoutOnline extends SharedProperties {
                 //SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + TestUtil.getVariantId());
                 SharedProperties.driver.navigate().to(TestUtil.getURL()+ PropertyHelper.readProperty("url") + TestUtil.getVariantId());
                 Thread.sleep(3000);
+                if(SharedProperties.isElementPresent("//*[@id='variant-page']/div/div/div[2]/div[2]/div[2]/a") )
+                {
+                    System.out.println("Add to cart button is present");
+                    Thread.sleep(10000);
+
+
+                    SharedProperties.driver.findElement(By.xpath("//*[@id='variant-page']/div/div/div[2]/div[2]/div[2]/a")).click();
+
+                    Thread.sleep(3000);
+
+                }
+                else
+                {
                 WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-red btn2 mrgn-b-5 disp-inln']"));
                 buyNow.click();
+                }
             }
         }else {
             SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + testDetailsDTO.getVariantIdList().get(specificVariantIndex.intValue()));
-            WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
+            WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-red btn2 mrgn-b-5 disp-inln']"));
             buyNow.click();
         }
 
@@ -205,14 +222,20 @@ public class GuestCheckoutOnline extends SharedProperties {
         if (OrderDetailsVerify.orderDetails() == true) {
             System.out.print("DB verification Successful");
             Thread.sleep(5000);
+            if(TestUtil.getExecuteVariantCheckoutRunMode(5).equalsIgnoreCase("Y"))
+            {
             varCheckout.variantCheckout();
+            }
 
             OrderDetailsUtil.flagLoyalty = false;
             OrderDetailsUtil.flagNoLoyalty = false;
 
         } else {
             Thread.sleep(3000);
+            if(TestUtil.getExecuteVariantCheckoutRunMode(5).equalsIgnoreCase("Y"))
+            {
             varCheckout.variantCheckout();
+            }
             OrderDetailsUtil.flagLoyalty = false;
             OrderDetailsUtil.flagNoLoyalty = false;
             SendMail.sendmail("DB Verification failed for Online Order");

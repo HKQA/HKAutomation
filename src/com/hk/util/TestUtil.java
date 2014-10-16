@@ -331,4 +331,28 @@ public static Xls_Reader excel = new Xls_Reader(System.getProperty("user.dir")+ 
 
     }
 
+    public static String getMobileSiteStatus()
+    {
+
+        String mobileSiteStatus = excel.getCellData("Config", 1, 16);
+
+        return mobileSiteStatus;
+
+    }
+
+    public static String getExecuteVariantCheckoutRunMode(int rowNum)
+    {
+        String varaintCheckoutRunMode =  excel.getCellData("test_suite","Execute Variant Checkout", rowNum  );
+
+
+
+        return varaintCheckoutRunMode;
+
+
+
+
+    }
+
+
+
 }

@@ -48,6 +48,7 @@ public class variantCheckout    {
     AdminHome adminhome = new AdminHome();
     //ExistingOnlineOrder EOO = new ExistingOnlineOrder();
     ExcelServiceImplOld readexcel = new ExcelServiceImplOld();
+    SoDetails sodetails = new SoDetails();
 
 
     /*@Parameters({"AdminBaseURL", "Browser"})
@@ -94,9 +95,9 @@ public class variantCheckout    {
         //System.out.print("\n HK OrderID:- " + OrderDetailsUtil.GatewayOrderId());
         System.out.println("HK orderID:- " + SoDetails.orderIdSoDetails);
 
-        Thread.sleep(7000);
+        Thread.sleep(10000);
 
-        for (SoDetailsDTO soDetailsDTO : SoDetails.Sodetails()) {
+        for (SoDetailsDTO soDetailsDTO : sodetails.Sodetails()) {
             //SharedProperties.openBrowser(AdminBaseURL, browser);
             Thread.sleep(3000);
 
@@ -109,7 +110,10 @@ public class variantCheckout    {
             SharedProperties.sendKeys(loginpage.getPassword(), TestUtil.getAdmin_Password(), SharedProperties.driver);
             SharedProperties.Click(loginpage.getLoginbtn(), SharedProperties.driver);
 
+
+
             String shippingOrderId = soDetailsDTO.getSoGatewayOrderId();
+            System.out.println("Shipping Order Id:- " + shippingOrderId);
             Integer warehouseId = soDetailsDTO.getWarehouseId();
             System.out.print("\n Warehouse id:- " + warehouseId);
 
@@ -161,11 +165,11 @@ public class variantCheckout    {
             //SharedProperties.driver.navigate().to(PropertyHelper.readProperty("brightUrl"));
             SharedProperties.driver.navigate().to(TestUtil.getBright_URL());
             //SharedProperties.sendKeys(loginpage.getUserName(), "gagan.jain@healthkart.com", SharedProperties.driver);
-            //SharedProperties.sendKeys(loginpage.getUserName(), TestUtil.getBright_User(), SharedProperties.driver);
+            SharedProperties.sendKeys(loginpage.getUserName(), TestUtil.getBright_User(), SharedProperties.driver);
             //SharedProperties.sendKeys(brighthome.getPassWd(), "gagan.jain", SharedProperties.driver);
-            //SharedProperties.sendKeys(brighthome.getPassWd(), TestUtil.getBright_Password(), SharedProperties.driver);
+            SharedProperties.sendKeys(brighthome.getPassWd(), TestUtil.getBright_Password(), SharedProperties.driver);
 
-            //SharedProperties.Click(brighthome.getLoginBtn(), SharedProperties.driver);
+            SharedProperties.Click(brighthome.getLoginBtn(), SharedProperties.driver);
             Thread.sleep(2000);
             SharedProperties.Click("/html/body/div/div[1]/div/ul/li[8]/a", SharedProperties.driver);
 
@@ -268,6 +272,8 @@ public class variantCheckout    {
             SharedProperties.Click(deliveryawaitingqueue.getMarkOrdersAsDelivered(), SharedProperties.driver);
 
             System.out.print("\n ************* SO Delivered *************");
+
+
         }
     }
 

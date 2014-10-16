@@ -5,9 +5,11 @@ package com.hk.commonProperties; /**
  * Time: 7:23 PM
  * To change this template use File | Settings | File Templates.
  */
+import com.hk.util.TestUtil;
 import org.apache.xmlbeans.impl.jam.visitor.TraversingJVisitor;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
@@ -54,7 +56,18 @@ public class SharedProperties
         } else if (BrowserName.equals("chrome")) {
             //System.setProperty("webdriver.chrome.driver", PropertyHelper.readProperty("chromeDriver"));
             System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + PropertyHelper.readProperty("chromeDriver"));
+            if(TestUtil.getMobileSiteStatus().equalsIgnoreCase("Yes") )
+            {
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("--user-agent=Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16");
+                options.addArguments("--start-maximized");
+                driver = new ChromeDriver(options);
+
+            }
+            else if(TestUtil.getMobileSiteStatus().equalsIgnoreCase("No"))
+            {
             driver = new ChromeDriver();
+            }
             driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
             driver.manage().window().maximize();
             driver.get(AppURL);
@@ -150,7 +163,21 @@ public class SharedProperties
 
         WebElement signupHover = driver.findElement(By.xpath(mouseHoverElementXpath));
 
-        action.moveToElement(signupHover).moveToElement(driver.findElement(By.xpath(targetElementXpath))).click().perform();
+
+
+        //action.moveToElement(signupHover).moveToElement(driver.findElement(By.xpath(targetElementXpath))).click().perform();
+        action.moveToElement(signupHover).build().perform();
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        WebElement signupClick = driver.findElement(By.xpath(targetElementXpath));
+
+        action.moveToElement(signupClick).click().perform();
+
 
     }
 }

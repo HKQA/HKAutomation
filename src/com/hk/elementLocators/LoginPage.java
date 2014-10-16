@@ -10,12 +10,12 @@ package com.hk.elementLocators;
 public class LoginPage {
     private String guestEmailIdTextBox = "//*[@id=\"guestSignInForm\"]/input[3]";
     private String emailIdTextBox = "//*[@id=\"loginForm\"]/input[3]";
-    private String oldEmailIdTextBox = "//*[@id=\"signInForm\"]/input[3]";
+    private String oldEmailIdTextBox = "//*[@id=\"signInForm\"]/input[4]";
     /*private String passwordTextBox="/*//*[@id=\"loginForm\"]/input[5]";*/
     private String passwordTextBox = "//*[@id=\"password\"]";
     private String guestSigninBtn = "//*[@id=\"guestSignInForm\"]/input[4]";
     private String signInBtn = "//*[@id=\"loginForm\"]/input[5]";
-    private String oldSignInBtn = "//*[@id=\"signInForm\"]/input[5]";
+    private String oldSignInBtn = "//*[@id=\"signInForm\"]/input[6]";
     private String signInCheckbox = "//*[@id=\"guestSignInForm\"]/label[2]/input";
 
 

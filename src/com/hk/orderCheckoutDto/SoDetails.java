@@ -18,11 +18,11 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class SoDetails {
-    public static List<SoDetailsDTO> soDetailsdtoList = new ArrayList<SoDetailsDTO>();
+    public  List<SoDetailsDTO> soDetailsdtoList = new ArrayList<SoDetailsDTO>();
 
     public static String orderIdSoDetails;
 
-    public static List<SoDetailsDTO> Sodetails() {
+    public  List<SoDetailsDTO> Sodetails() {
 
         /*String query = "select s.warehouse_id,s.gateway_order_id from base_order b join shipping_order s on b.id=s.base_order_id " +
                 "where s.shipping_order_status_id=120 and b.gateway_order_id='"+OrderDetailsUtil.GatewayOrderId()+"'";*/
@@ -38,12 +38,14 @@ public class SoDetails {
 
                     @Override
                     public List<SoDetailsDTO> extract(ResultSet rs) throws SQLException {
+
                         while (rs.next()) {
                             SoDetailsDTO soDetailsDTO = new SoDetailsDTO(rs.getString("gateway_order_id"), rs.getInt("warehouse_id"));
                             soDetailsdtoList.add(soDetailsDTO);
 
 
                         }
+
 
                         return soDetailsdtoList;
                     }

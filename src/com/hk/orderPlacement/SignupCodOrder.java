@@ -116,8 +116,24 @@ public class SignupCodOrder extends SharedProperties {
                 //SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + variantId );
                 SharedProperties.driver.navigate().to(TestUtil.getURL()+ PropertyHelper.readProperty("url") + TestUtil.getVariantId());
                 Thread.sleep(5000);
+                if(SharedProperties.isElementPresent("//*[@id='variant-page']/div/div/div[2]/div[2]/div[2]/a"))
+                {
+                    System.out.println("Add to cart button is present");
+                    Thread.sleep(10000);
+
+
+                    SharedProperties.driver.findElement(By.xpath("//*[@id='variant-page']/div/div/div[2]/div[2]/div[2]/a")).click();
+
+                    Thread.sleep(3000);
+
+
+
+                }
+                else
+                {
                 WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-red btn2 mrgn-b-5 disp-inln']"));
                 buyNow.click();
+                }
             }
         } else {
             SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + testDetailsDTO.getVariantIdList().get(specificVariantIndex.intValue()));
@@ -223,7 +239,10 @@ public class SignupCodOrder extends SharedProperties {
             codNavigation.codConfirmNavigation(finalOrderId);
             }
             Thread.sleep(7000);
+            if(TestUtil.getExecuteVariantCheckoutRunMode(2).equalsIgnoreCase("Y"))
+            {
             varCheckout.variantCheckout();
+            }
             OrderDetailsUtil.flagLoyalty = false  ;
             OrderDetailsUtil.flagNoLoyalty = false;
 
@@ -234,7 +253,10 @@ public class SignupCodOrder extends SharedProperties {
             codNavigation.codConfirmNavigation(finalOrderId);
             }
             Thread.sleep(7000);
+            if(TestUtil.getExecuteVariantCheckoutRunMode(2).equalsIgnoreCase("Y"))
+            {
             varCheckout.variantCheckout();
+            }
             Thread.sleep(3000);
             OrderDetailsUtil.flagLoyalty = false;
             OrderDetailsUtil.flagNoLoyalty = false;
