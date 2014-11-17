@@ -165,11 +165,11 @@ public class variantCheckout    {
             //SharedProperties.driver.navigate().to(PropertyHelper.readProperty("brightUrl"));
             SharedProperties.driver.navigate().to(TestUtil.getBright_URL());
             //SharedProperties.sendKeys(loginpage.getUserName(), "gagan.jain@healthkart.com", SharedProperties.driver);
-            SharedProperties.sendKeys(loginpage.getUserName(), TestUtil.getBright_User(), SharedProperties.driver);
+            //SharedProperties.sendKeys(loginpage.getUserName(), TestUtil.getBright_User(), SharedProperties.driver);
             //SharedProperties.sendKeys(brighthome.getPassWd(), "gagan.jain", SharedProperties.driver);
-            SharedProperties.sendKeys(brighthome.getPassWd(), TestUtil.getBright_Password(), SharedProperties.driver);
+            //SharedProperties.sendKeys(brighthome.getPassWd(), TestUtil.getBright_Password(), SharedProperties.driver);
 
-            SharedProperties.Click(brighthome.getLoginBtn(), SharedProperties.driver);
+            //SharedProperties.Click(brighthome.getLoginBtn(), SharedProperties.driver);
             Thread.sleep(2000);
             SharedProperties.Click("/html/body/div/div[1]/div/ul/li[8]/a", SharedProperties.driver);
 

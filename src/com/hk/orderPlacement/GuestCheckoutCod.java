@@ -128,8 +128,18 @@ public class GuestCheckoutCod extends SharedProperties {
                 }
                 else
                 {
-                WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-red btn2 mrgn-b-5 disp-inln']"));
-                buyNow.click();
+                //WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-red btn2 mrgn-b-5 disp-inln']"));
+                WebElement buyNow = SharedProperties.driver.findElement(By.xpath("//*[@value='Buy Now']"));
+                    if (buyNow.isEnabled()== false)
+                    {
+
+                        System.out.println(TestUtil.getVariantId() +" is out of stock and it can not be added to the cart. Therefore your test will get failed");
+                        Reporter.log(TestUtil.getVariantId() +" is out of stock and it can not be added to the cart. Therefore your test will get failed");
+                    }else
+                    {
+
+                        buyNow.click();
+                    }
                 }
             }
         } else {
