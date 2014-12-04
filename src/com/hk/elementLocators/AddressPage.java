@@ -8,7 +8,7 @@ package com.hk.elementLocators;
  * To change this template use File | Settings | File Templates.
  */
 public class AddressPage {
-    private String addressPage="html/body/div/div/div/div[3]/div/div[1]/div/div[3]/a";
+    private String addressPage="html/body/div[1]/div[2]/div/div[4]/div/div[1]/div/div[3]/a";
     private String name="//*[@id=\"user-name\"]";
     private String mobile="//*[@id=\"contactNo\"]";
     private String address="//*[@id=\"line1\"]";

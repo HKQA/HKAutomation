@@ -8,15 +8,15 @@ package com.hk.elementLocators;
  */
 public class PaymentPage {
 
-    private String paymentPageDummy="html/body/div[1]/div[2]/div[1]/div[5]/div[2]/div/div[2]/form[1]/div[1]/div/div[4]/input";
+    private String paymentPageDummy="//*[@id='tab1']/div/div[4]/input";
     private String paymentPageDropdown="html/body/div[1]/div[2]/div[1]/div[5]/div[2]/div/div[2]/form[1]/div[1]/div/div[5]/select";
-    private String proceedToPayment="html/body/div[1]/div[2]/div[1]/div[5]/div[2]/div/div[2]/form[1]/div[1]/div/p/input";
+    private String proceedToPayment="//*[@id='tab1']/div/p/input";
     private String paymentY="html/body/div[1]/form/p[1]/input[1]";
     private String proceedPayment="html/body/div[1]/form/input[5]";
     private String cashOnDelivery= "//*[@id=\"nav\"]/li[5]";
     private String cod1stDiv= "//*[@id=\"nav\"]/li[6]";
     private String cod2ndDiv= "//*[@id=\"nav\"]/li[7]";
-    private String payOnDelivery="//*[@value='Place order and pay on delivery']";
+    private String payOnDelivery="//*[@value='Place order']";
 
 
     public String paymentPageDummy() {

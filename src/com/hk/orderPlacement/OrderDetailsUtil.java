@@ -23,10 +23,10 @@ public class OrderDetailsUtil {
 
     public static boolean flagNoLoyalty = false;
 
-    private static final String xpathGatewayOrderId = "/html/body/div[1]/div[2]/div/div[5]/div[1]/p[2]";
-    private static final String orderAmount = "/html/body/div[1]/div[2]/div/div[5]/div[1]/p[3]";
-    private static final String totalItem = "/html/body/div[1]/div[2]/div/div[5]/div[1]/p[4]";
-    private static final String userName = "/html/body/div[1]/div[2]/div/div[5]/div[3]/p[1]";
+    private static final String xpathGatewayOrderId = "html/body/div[1]/div[2]/div/div[6]/div/div[1]/p[2]";
+    private static final String orderAmount = "html/body/div[1]/div[2]/div/div[6]/div/div[1]/p[3]";
+    private static final String totalItem = "/html/body/div[1]/div[2]/div/div[6]/div/div[1]/p[4]";
+    private static final String userName = "html/body/div[1]/div[2]/div/div[6]/div/div[3]/p[1]";
 
     public static String GatewayOrderId() {
         String fullOrderId = SharedProperties.driver.findElement(By.xpath(xpathGatewayOrderId)).getText();
@@ -51,7 +51,7 @@ public class OrderDetailsUtil {
         int orderedItems = 3;
 
         //int exists = SharedProperties.driver.findElements(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).size();
-        int exists = SharedProperties.driver.findElements(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).size();
+        int exists = SharedProperties.driver.findElements(By.xpath("/html/body/div[1]/div[2]/div/div[7]/div[1]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).size();
 
 
 
@@ -68,9 +68,9 @@ public class OrderDetailsUtil {
             }*/
             String itemHref;
             if (exists > 1) {
-                itemHref = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).getAttribute("href");
+                itemHref = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[7]/div[1]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).getAttribute("href");
             } else {
-                itemHref = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).getAttribute("href");
+                itemHref = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[7]/div[1]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).getAttribute("href");
             }
 
             int index = itemHref.indexOf("VRNT-");
@@ -92,7 +92,7 @@ public class OrderDetailsUtil {
 
 
         //int exists = SharedProperties.driver.findElements(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).size();
-        int exists = SharedProperties.driver.findElements(By.xpath("/html/body/div[1]/div[2]/div/div[7]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).size();
+        int exists = SharedProperties.driver.findElements(By.xpath("/html/body/div[1]/div[2]/div/div[8]/div[1]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).size();
         List<Long> Items = new ArrayList<Long>();
         for (int i = 1; i <= TotalItem(); i++) {
             /*try
@@ -103,9 +103,9 @@ public class OrderDetailsUtil {
             }*/
             String itemHref;
             if (exists > 1) {
-                itemHref = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[7]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).getAttribute("href");
+                itemHref = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[8]/div[1]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).getAttribute("href");
             } else {
-                itemHref = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[7]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).getAttribute("href");
+                itemHref = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[8]/div[1]/div[1]/div[" + orderedItems + "]/div[2]/div/div[1]/a")).getAttribute("href");
             }
 
             int index = itemHref.indexOf("VRNT-");

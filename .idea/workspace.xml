@@ -2,113 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c26b27e7-3829-4ab4-9fbd-06b12c07466d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_03-11-2014_(11-30-05).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_03-11-2014_(11-30-11).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_03-11-2014_(11-52-59).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_03-11-2014_(11-53-14).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_04-11-2014_(13-01-12).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_04-11-2014_(13-01-19).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_04-11-2014_(13-04-52).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_04-11-2014_(13-04-58).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_04-11-2014_(13-08-04).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_04-11-2014_(13-08-08).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_05-11-2014_(12-00-31).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_05-11-2014_(12-03-28).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_05-11-2014_(12-03-33).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_07-11-2014_(10-42-43).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_07-11-2014_(10-42-48).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_07-11-2014_(10-47-06).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_07-11-2014_(10-47-11).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_07-11-2014_(10-48-39).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_07-11-2014_(10-48-44).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_07-11-2014_(11-27-51).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_07-11-2014_(11-27-58).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_07-11-2014_(11-40-21).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_07-11-2014_(11-40-28).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_07-11-2014_(11-54-49).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_07-11-2014_(11-54-53).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_07-11-2014_(13-14-01).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_07-11-2014_(13-14-05).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_07-11-2014_(13-28-34).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_07-11-2014_(13-28-38).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_07-11-2014_(15-06-02).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_07-11-2014_(15-06-07).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_07-11-2014_(15-08-04).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_07-11-2014_(15-08-10).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_07-11-2014_(15-16-53).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_07-11-2014_(15-16-58).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_07-11-2014_(15-21-55).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_07-11-2014_(15-23-21).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_07-11-2014_(15-23-26).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_07-11-2014_(15-28-48).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_07-11-2014_(15-28-52).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_07-11-2014_(15-30-03).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_07-11-2014_(15-31-39).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_07-11-2014_(15-31-45).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_07-11-2014_(23-34-22).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_07-11-2014_(23-35-04).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_10-11-2014_(10-12-24).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_10-11-2014_(10-12-29).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_10-11-2014_(10-15-01).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_10-11-2014_(10-15-05).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_20-10-2014_(11-00-59).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_20-10-2014_(11-02-00).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_20-10-2014_(11-02-06).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_20-10-2014_(15-35-00).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_20-10-2014_(15-35-05).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_20-10-2014_(15-39-14).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_20-10-2014_(15-39-19).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_27-10-2014_(14-48-07).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_27-10-2014_(14-48-13).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_27-10-2014_(15-03-14).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_27-10-2014_(15-03-31).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_27-10-2014_(15-04-55).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_27-10-2014_(15-05-01).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_29-10-2014_(11-12-07).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_29-10-2014_(11-12-29).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_29-10-2014_(15-00-39).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_29-10-2014_(15-00-44).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_29-10-2014_(15-24-13).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_29-10-2014_(15-24-18).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_29-10-2014_(15-28-44).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_29-10-2014_(15-28-49).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_29-10-2014_(15-39-57).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_29-10-2014_(15-40-02).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_29-10-2014_(15-47-00).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_29-10-2014_(15-47-33).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_29-10-2014_(15-48-24).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_29-10-2014_(15-52-13).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_29-10-2014_(15-52-18).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_30-10-2014_(10-39-02).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_30-10-2014_(10-39-18).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_30-10-2014_(10-44-33).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_30-10-2014_(10-44-38).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_30-10-2014_(11-31-41).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_30-10-2014_(11-31-44).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_30-10-2014_(11-33-33).log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buildlogs/build_30-10-2014_(11-33-39).log" />
       <change type="MOVED" beforePath="C:\Workspace\Automation_testing_v4_Vipul\test-output\junitreports\TEST-com.hk.orderPlacement.SignupCODorder.xml" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.orderPlacement.SignupCodOrder.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/productId.xls" afterPath="$PROJECT_DIR$/productId.xls" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testData.xls" afterPath="$PROJECT_DIR$/testData.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderPlacement/GuestCheckoutCod.java" afterPath="$PROJECT_DIR$/src/com/hk/orderPlacement/GuestCheckoutCod.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/io/HKXlsParser.java" afterPath="$PROJECT_DIR$/src/com/hk/io/HKXlsParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/elementLocators/AddressPage.java" afterPath="$PROJECT_DIR$/src/com/hk/elementLocators/AddressPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/elementLocators/CartPage.java" afterPath="$PROJECT_DIR$/src/com/hk/elementLocators/CartPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingCodPlacement.java" afterPath="$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingCodPlacement.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingOnlineOrder.java" afterPath="$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingOnlineOrder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderPlacement/OrderDetailsUtil.java" afterPath="$PROJECT_DIR$/src/com/hk/orderPlacement/OrderDetailsUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/elementLocators/PaymentPage.java" afterPath="$PROJECT_DIR$/src/com/hk/elementLocators/PaymentPage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.orderPlacement.ExistingCodPlacement.xml" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.orderPlacement.ExistingCodPlacement.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/emailable-report.html" afterPath="$PROJECT_DIR$/test-output/emailable-report.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/index.html" afterPath="$PROJECT_DIR$/test-output/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/index.html" afterPath="$PROJECT_DIR$/test-output/old/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/TestNG Test/methods-alphabetical.html" afterPath="$PROJECT_DIR$/test-output/old/TestNG Test/methods-alphabetical.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/TestNG Test/methods.html" afterPath="$PROJECT_DIR$/test-output/old/TestNG Test/methods.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/TestNG Test/reporter-output.html" afterPath="$PROJECT_DIR$/test-output/old/TestNG Test/reporter-output.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/testng-failed.xml" afterPath="$PROJECT_DIR$/test-output/testng-failed.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/TestNG Test/testng-failed.xml" afterPath="$PROJECT_DIR$/test-output/TestNG Test/testng-failed.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/testng-results.xml" afterPath="$PROJECT_DIR$/test-output/testng-results.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/TestNG Test/toc.html" afterPath="$PROJECT_DIR$/test-output/old/TestNG Test/toc.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java" afterPath="$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Automation_testing_v4.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1415336813831" ignored="false" />
+    <file path="/Dummy.txt" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1417504050278" ignored="false" />
     <file path="/variantCheckout.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1413281876791" ignored="false" />
     <file path="/AdminHome.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1409825867619" ignored="false" />
     <file path="/BrightDetails.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1410419556806" ignored="false" />
@@ -758,31 +675,82 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="variantCheckout.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="variantCheckout.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="59" selection-start="3452" selection-end="3473" vertical-scroll-proportion="0.33126935">
+            <state line="212" column="74" selection-start="10855" selection-end="10855" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SoDetails.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java">
+      <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="31" selection-start="638" selection-end="638" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#544#558#0" expanded="false" />
-              </folding>
+            <state line="15" column="52" selection-start="702" selection-end="702" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EnumDB.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/constants/EnumDB.java">
+      <file leaf-file-name="testng1.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testng1.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="4" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testng.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testng.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReportListener.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/hk/reportAndMailGenerator/ReportListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="48" selection-start="683" selection-end="683" vertical-scroll-proportion="0.61340207">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SendMail.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hk/reportAndMailGenerator/SendMail.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="103" column="39" selection-start="3721" selection-end="3721" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZipDirectory.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hk/reportAndMailGenerator/ZipDirectory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="94" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SharedProperties.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hk/commonProperties/SharedProperties.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="137" column="0" selection-start="4844" selection-end="4844" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExistingCodPlacement.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingCodPlacement.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="96" column="0" selection-start="3008" selection-end="3008" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -791,65 +759,7 @@
       <file leaf-file-name="GuestCheckoutCod.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/GuestCheckoutCod.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="259" column="0" selection-start="9884" selection-end="9884" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderDetailsVerify.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsVerify.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="0" selection-start="939" selection-end="939" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestDetailsExcelService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/excel/TestDetailsExcelService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="39" selection-start="900" selection-end="900" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HKXlsParser.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/io/HKXlsParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="5" selection-start="1128" selection-end="1128" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestDetailsDTO.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/excel/dto/TestDetailsDTO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="22" selection-start="392" selection-end="392" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JdbcConnectionFile.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/jdbc/JdbcConnectionFile.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="24" selection-start="420" selection-end="420" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Xls_Reader.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/util/Xls_Reader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="56" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.0">
+            <state line="66" column="0" selection-start="2077" selection-end="2077" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -873,22 +783,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/hk/reportAndMailGenerator/ZipDirectory.java" />
-        <option value="$PROJECT_DIR$/src/com/hk/reportAndMailGenerator/ReportListener.java" />
-        <option value="$PROJECT_DIR$/src/com/hk/codConfirmation/CodConfirmNavigation.java" />
-        <option value="$PROJECT_DIR$/src/com/hk/commonProperties/SharedProperties.java" />
         <option value="$PROJECT_DIR$/src/com/hk/elementLocators/LoginPage.java" />
         <option value="$PROJECT_DIR$/src/com/hk/util/TestUtil.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/SignupCodOrder.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/SignupOrderOnline.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/GuestCheckoutOnline.java" />
-        <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingOnlineOrder.java" />
-        <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingCodPlacement.java" />
         <option value="$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsReturn.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java" />
         <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/GuestCheckoutCod.java" />
         <option value="$PROJECT_DIR$/src/com/hk/io/HKXlsParser.java" />
+        <option value="$PROJECT_DIR$/src/com/hk/elementLocators/CartPage.java" />
+        <option value="$PROJECT_DIR$/src/com/hk/elementLocators/AddressPage.java" />
+        <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingOnlineOrder.java" />
+        <option value="$PROJECT_DIR$/src/com/hk/elementLocators/PaymentPage.java" />
+        <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/OrderDetailsUtil.java" />
+        <option value="$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingCodPlacement.java" />
       </list>
     </option>
   </component>
@@ -1670,15 +1580,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2189394" sideWeight="0.6947705" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34529915" sideWeight="0.60227275" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23418804" sideWeight="0.60227275" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34529915" sideWeight="0.3969697" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19015151" sideWeight="0.30427352" order="1" side_tool="true" content_ui="tabs" />
@@ -1692,7 +1602,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19545455" sideWeight="0.6547009" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19545455" sideWeight="0.765812" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4051282" sideWeight="0.67045456" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.63247865" order="10" side_tool="true" content_ui="tabs" />
@@ -1783,102 +1693,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/GuestCheckoutOnline.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="86" selection-start="3869" selection-end="3869" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/aquaElementLocators/CodConfirmation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="59" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/util/TestUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="37" selection-start="572" selection-end="572" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/commonProperties/SharedProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="168" column="51" selection-start="5526" selection-end="5526" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/util/Xls_Reader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="56" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/testng-6.8.5.jar!/org/testng/internal/Invoker.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="17" selection-start="4427" selection-end="4427" vertical-scroll-proportion="0.3590604">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/testng-6.8.5.jar!/org/testng/internal/MethodInvocationHelper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="38" selection-start="286" selection-end="286" vertical-scroll-proportion="-4.28">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/constants/EnumDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="4" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="31" selection-start="638" selection-end="638" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#544#558#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/jdbc/JdbcConnectionFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="24" selection-start="420" selection-end="420" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/excel/dto/TestDetailsDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="22" selection-start="392" selection-end="392" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/excel/TestDetailsExcelService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="39" selection-start="900" selection-end="900" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/io/HKXlsParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="5" selection-start="1128" selection-end="1128" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/jdbc/OrderDetailsVerify.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="0" selection-start="939" selection-end="939" vertical-scroll-proportion="0.0">
@@ -1886,18 +1700,107 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/GuestCheckoutCod.java">
+    <entry file="file://$PROJECT_DIR$/src/com/hk/util/Xls_Reader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="259" column="0" selection-start="9884" selection-end="9884" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="97" column="0" selection-start="2366" selection-end="2366" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/util/TestUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="348" column="0" selection-start="6095" selection-end="6095" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckoutDto/SoDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="0" selection-start="1149" selection-end="1149" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/commonProperties/SharedProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="137" column="0" selection-start="4844" selection-end="4844" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/testng-6.8.5.jar!/org/testng/internal/Invoker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="35" selection-start="5163" selection-end="5163" vertical-scroll-proportion="0.3590604">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="59" selection-start="3452" selection-end="3473" vertical-scroll-proportion="0.33126935">
+        <state line="212" column="74" selection-start="10855" selection-end="10855" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/GuestCheckoutCod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="0" selection-start="2077" selection-end="2077" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/testng-6.8.5.jar!/org/testng/internal/MethodInvocationHelper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="38" selection-start="286" selection-end="286" vertical-scroll-proportion="0.3590604">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testng1.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testng.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/reportAndMailGenerator/SendMail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="39" selection-start="3721" selection-end="3721" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/reportAndMailGenerator/ZipDirectory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="94" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="52" selection-start="702" selection-end="702" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderPlacement/ExistingCodPlacement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="96" column="0" selection-start="3008" selection-end="3008" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/reportAndMailGenerator/ReportListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="48" selection-start="683" selection-end="683" vertical-scroll-proportion="0.61340207">
           <folding />
         </state>
       </provider>

@@ -204,10 +204,10 @@ public class ExistingOnlineOrder extends SharedProperties {
         SharedProperties.Click(paymentpage.paymentPageDummy(), SharedProperties.driver);
         Thread.sleep(2000);
 
-        new Select(SharedProperties.driver.findElement(By.xpath("html/body/div[1]/div[2]/div[1]/div[5]/div[2]/div/div[2]/form[1]/div[1]/div/div[5]/select"))).selectByVisibleText("Dummy");
+        new Select(SharedProperties.driver.findElement(By.xpath("//*[@id='tab1']/div/div[5]/select"))).selectByVisibleText("Dummy");
         Thread.sleep(2000);
         SharedProperties.Click(paymentpage.proceedToPayment(), SharedProperties.driver);
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         SharedProperties.Click(paymentpage.paymentY(), SharedProperties.driver);
         Thread.sleep(5000);
         SharedProperties.Click(paymentpage.proceedPayment(), SharedProperties.driver);
