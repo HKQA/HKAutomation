@@ -134,6 +134,7 @@ public class ExistingOnlineOrder extends SharedProperties {
             for (Long variantId : testDetailsDTO.getVariantIdList()) {
                 //SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + variantId);
                 SharedProperties.driver.navigate().to(TestUtil.getURL()+ PropertyHelper.readProperty("url") + TestUtil.getVariantId());
+                //SharedProperties.driver.navigate().to(TestUtil.getURL()+ PropertyHelper.readProperty("url") + variantId);
                 Thread.sleep(3000);
                 if(SharedProperties.isElementPresent("//*[@id='variant-page']/div/div/div[2]/div[2]/div[2]/a") )
                 {
@@ -152,18 +153,20 @@ public class ExistingOnlineOrder extends SharedProperties {
                 WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-red btn2 mrgn-b-5 disp-inln']"));
                 buyNow.click();
                 }
-            }
-        } else {
-            SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + testDetailsDTO.getVariantIdList().get(specificVariantIndex.intValue()));
-            WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
-            buyNow.click();
-        }
 
-        /*for (int i = 4; i < dataArray.size(); i++) {
+            }
+
+        }       else {
+                SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + testDetailsDTO.getVariantIdList().get(specificVariantIndex.intValue()));
+                WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
+                buyNow.click();
+                }
+
+            /*for (int i = 4; i < dataArray.size(); i++) {
             SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + dataArray.get(i));
             WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
             buyNow.click();
-        }*/
+            }*/
 
 
         SharedProperties.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -214,7 +217,7 @@ public class ExistingOnlineOrder extends SharedProperties {
 
         Thread.sleep(5000);
 
-        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[5]/div[1]/p[2]")).getText();
+        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div/div[1]/p[2]")).getText();
 
         System.out.println(orderId);
 
@@ -224,7 +227,7 @@ public class ExistingOnlineOrder extends SharedProperties {
 
         TestUtil.excel.setCellData("test_suite","OrderId_Generated",7, orderId );
 
-        String getText = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]")).getText();
+        String getText = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[7]")).getText();
 
         if(SharedProperties.isElementPresent("/html/body/div[1]/div[2]/div/div[6]") && (getText.contains("your")))
         {

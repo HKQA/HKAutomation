@@ -353,6 +353,15 @@ public static Xls_Reader excel = new Xls_Reader(System.getProperty("user.dir")+ 
 
     }
 
+    public static String getExecuteFlip()
+    {
+
+        String executeFlip = excel.getCellData("Config",1, 17 );
+
+        return executeFlip;
+
+    }
+
 
 
 }

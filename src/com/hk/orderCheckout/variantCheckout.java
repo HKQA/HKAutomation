@@ -18,12 +18,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
+import org.testng.Assert;
 import org.testng.annotations.*;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -140,6 +142,113 @@ public class variantCheckout    {
 
             }
 
+            System.out.println("Here flip code will go ");
+
+            if(TestUtil.getExecuteFlip().equalsIgnoreCase("Y"))
+            {
+                String barcodeBeforeFlip = null;
+                String barcodeAfterFlip = null;
+                String boBeforeFlip = null;
+                String boAfterFlip = null;
+                String soBeforeFlip = null;
+                String soAfterFlip = null;
+                SharedProperties.driver.findElement(By.cssSelector("a[href*='SearchShippingOrder.action']")).click();
+                //SharedProperties.driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/ul/li[6]/a")).click();
+                SharedProperties.driver.findElement(By.xpath("html/body/div[2]/div[2]/form/fieldset/ul/div/li[1]/input")).sendKeys(shippingOrderId);
+                SharedProperties.driver.findElement(By.xpath("html/body/div[2]/div[2]/form/fieldset/div/input")).click();
+                Thread.sleep(3000);
+                String warehouseBeforeFlip = SharedProperties.driver.findElement(By.xpath("//*[contains(@id, 'shippingOrderDetail')]/div[8]/strong[2]")).getText();
+                String parentWindow = SharedProperties.driver.getWindowHandle();
+                SharedProperties.driver.findElement(By.linkText("Foreign Booking Status")).click();
+
+                Thread.sleep(3000);
+                //String barcodeBeforeFlip = SharedProperties.driver.findElement(By.xpath("//*[@id='skuItemLineItemTable']/tbody/tr[2]/td[6]")).getText();
+                //SharedProperties.driver.close();
+                Set<String> tabs = SharedProperties.driver.getWindowHandles();
+                System.out.println(tabs.size());
+                for(String windowId : tabs)
+                {
+
+                    if(windowId.equalsIgnoreCase(parentWindow))
+                    {
+                        continue;
+                    }
+                    SharedProperties.driver.switchTo().window(windowId);
+                    //Saving barcode
+                    barcodeBeforeFlip = SharedProperties.driver.findElement(By.xpath("//*[@id='skuItemLineItemTable']/tbody/tr[2]/td[6]")).getText();
+                    boBeforeFlip = SharedProperties.driver.findElement(By.xpath("//*[@id='skuItemLineItemTable']/tbody/tr[2]/td[7]")).getText();
+                    soBeforeFlip = SharedProperties.driver.findElement(By.xpath("//*[@id='skuItemLineItemTable']/tbody/tr[2]/td[8]")).getText();
+                    SharedProperties.driver.close();
+
+
+
+
+                }
+
+
+                SharedProperties.driver.switchTo().window(parentWindow);
+                SharedProperties.driver.findElement(By.linkText("Flip Warehouse")).click();
+                WebElement dropDown = SharedProperties.driver.findElement(By.xpath("html/body/div[1]/div[2]/form/table/tfoot/tr/td[2]/select"));
+                //SharedProperties.driver.findElement(By.xpath("html/body/div/div[2]/form/table/tfoot/tr/td[2]/select/option[2]"));
+                Select clickWarehouse = new Select(dropDown);
+                clickWarehouse.selectByIndex(1);
+                //Thread.sleep(3000);
+                //clickWarehouse.selectByVisibleText("MUM Aqua Warehouse");
+                SharedProperties.driver.findElement(By.xpath("//*[@value = 'Flip Warehouse']")).click();
+                Thread.sleep(3000);
+                SharedProperties.driver.findElement(By.cssSelector("a[href*='SearchShippingOrder.action']")).click();
+                SharedProperties.driver.findElement(By.xpath("html/body/div[2]/div[2]/form/fieldset/ul/div/li[1]/input")).sendKeys(shippingOrderId);
+                SharedProperties.driver.findElement(By.xpath("html/body/div[2]/div[2]/form/fieldset/div/input")).click();
+                Thread.sleep(3000);
+                String warehouseAfterFlip = SharedProperties.driver.findElement(By.xpath("//*[contains(@id, 'shippingOrderDetail')]/div[8]/strong[2]")).getText();
+                Set<String> tabs1 = SharedProperties.driver.getWindowHandles();
+                System.out.println(tabs1.size());
+                for(String windowId : tabs1)
+                {
+
+                    if(windowId.equalsIgnoreCase(parentWindow))
+                    {
+                        continue;
+                    }
+                    SharedProperties.driver.switchTo().window(windowId);
+                    //Saving barcode
+                    barcodeAfterFlip = SharedProperties.driver.findElement(By.xpath("//*[@id='skuItemLineItemTable']/tbody/tr[2]/td[6]")).getText();
+                    boAfterFlip = SharedProperties.driver.findElement(By.xpath("//*[@id='skuItemLineItemTable']/tbody/tr[2]/td[7]")).getText();
+                    soAfterFlip = SharedProperties.driver.findElement(By.xpath("//*[@id='skuItemLineItemTable']/tbody/tr[2]/td[8]")).getText();
+                    SharedProperties.driver.close();
+
+
+
+                }
+                SharedProperties.driver.switchTo().window(parentWindow);
+                if(warehouseBeforeFlip.equalsIgnoreCase(warehouseAfterFlip) )
+                {
+                    System.out.println("Not possible to flip warehouse");
+
+                    try
+                    {
+                    Assert.fail("Not possible to switch warehouse");
+                    }catch (Throwable t)
+                    {
+
+
+                    }
+
+
+
+                }
+                else
+                {
+
+                    System.out.println("Warehouse flipped successfully");
+
+
+                }
+
+
+
+            }
+
 
             SharedProperties.clickWithCss(printprick.getPrintPrickLink(), SharedProperties.driver);
             SharedProperties.Click(printprick.getOrderFilters(), SharedProperties.driver);
@@ -147,6 +256,8 @@ public class variantCheckout    {
             SharedProperties.sendKeys(printprick.getSoGatewayOrderIdTxt(), shippingOrderId, SharedProperties.driver);
             SharedProperties.Click(printprick.getBoGatewaySearchBtn(), SharedProperties.driver);
             Thread.sleep(3000);
+
+
 
 
             SharedProperties.Class(printprick.getCheckboxBo(), SharedProperties.driver);
