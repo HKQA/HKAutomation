@@ -2,10 +2,14 @@
   <library name="libs">
     <CLASSES>
       <root url="file://$PROJECT_DIR$/libs" />
+      <root url="jar://C:/selenium/Recording jars/MonteMediaCC/dist/monte-cc.jar!/" />
+      <root url="jar://C:/selenium/Recording jars/MonteMediaCC/lib/jai_core.jar!/" />
+      <root url="jar://C:/selenium/Recording jars/MonteMediaCC/lib/jmf.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="file://$PROJECT_DIR$/libs" />
+      <root url="file://$PROJECT_DIR$/src" />
     </SOURCES>
     <jarDirectory url="file://$PROJECT_DIR$/libs" recursive="false" />
     <jarDirectory url="file://$PROJECT_DIR$/libs" recursive="false" type="SOURCES" />

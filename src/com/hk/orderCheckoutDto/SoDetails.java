@@ -18,7 +18,7 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class SoDetails {
-    public  List<SoDetailsDTO> soDetailsdtoList = new ArrayList<SoDetailsDTO>();
+    //public  List<SoDetailsDTO> soDetailsdtoList = new ArrayList<SoDetailsDTO>();
 
     public static String orderIdSoDetails;
 
@@ -38,10 +38,15 @@ public class SoDetails {
 
                     @Override
                     public List<SoDetailsDTO> extract(ResultSet rs) throws SQLException {
+                        List<SoDetailsDTO> soDetailsdtoList = new ArrayList<SoDetailsDTO>();
+
 
                         while (rs.next()) {
                             SoDetailsDTO soDetailsDTO = new SoDetailsDTO(rs.getString("gateway_order_id"), rs.getInt("warehouse_id"));
+
+
                             soDetailsdtoList.add(soDetailsDTO);
+
 
 
                         }

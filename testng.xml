@@ -14,10 +14,16 @@
            <class name="com.hk.orderPlacement.ExistingOnlineOrder"/>
        </classes>
    </test> -->
-    <test name="com.hk.orderPlacement">
+    <!--<test name="com.hk.orderPlacement">
         <packages>
             <package name="com.hk.orderPlacement"/>
             <package name="com.hk.orderCheckout"/>
+        </packages>
+    </test>-->
+    <test name = "ExistingOnline Multivariant Order">
+        <packages>
+            <package name = "com.hk.scaledupOrderPlacement"/>
+
         </packages>
     </test>
     <!--<test name="com.hk.orderPlacement.SignupCodOrder">

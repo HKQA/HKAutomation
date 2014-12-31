@@ -22,6 +22,8 @@
     <orderEntry type="library" name="libs" level="project" />
     <orderEntry type="library" name="mysql-connector-java-5.0.8-bin" level="project" />
     <orderEntry type="library" name="src" level="project" />
+    <orderEntry type="library" name="jai_core" level="project" />
+    <orderEntry type="library" name="monte-cc" level="project" />
   </component>
 </module>
 

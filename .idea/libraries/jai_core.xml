@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="jai_core">
+    <CLASSES>
+      <root url="jar://C:/selenium/Recording jars/MonteMediaCC/lib/jai_core.jar!/" />
+      <root url="jar://C:/selenium/Recording jars/MonteMediaCC/lib/jmf.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/src" />
+    </SOURCES>
+  </library>
+</component>

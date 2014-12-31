@@ -14,6 +14,8 @@ import com.hk.jdbc.OrderDetailsVerify;
 import com.hk.orderCheckout.variantCheckout;
 import com.hk.orderCheckoutDto.SoDetails;
 import com.hk.property.PropertyHelper;
+import com.hk.recorder.Browse;
+import com.hk.recorder.VideoRecorder;
 import com.hk.reportAndMailGenerator.SendMail;
 import com.hk.util.TestUtil;
 import org.apache.commons.io.FileUtils;
@@ -43,6 +45,8 @@ public class ExistingOnlineOrder extends SharedProperties {
     ITestResult result = Reporter.getCurrentTestResult();
     variantCheckout varCheckout = new variantCheckout();
     SoDetails soDetails = new SoDetails();
+    VideoRecorder recorder = new VideoRecorder();
+    Browse browse = new Browse();
 
 
 
@@ -90,6 +94,7 @@ public class ExistingOnlineOrder extends SharedProperties {
             FileUtils.copyFile(screenshot, new File(System.getProperty("user.dir") + PropertyHelper.readProperty("screenshotFolder") + "\\ExistingOnlineOrder.jpg"));
         }
 
+        recorder.stopRecording();
         driver.quit();
     }
 
@@ -120,6 +125,9 @@ public class ExistingOnlineOrder extends SharedProperties {
     @Parameters("specificVariantIndex")
     @Test(enabled = true)
     public void login(@Optional Long specificVariantIndex) throws InterruptedException, IOException, Exception {
+
+        recorder.startRecording();
+
         SharedProperties.openBrowser(baseUrl, browser);
         Thread.sleep(3000);
         TestDetailsDTO testDetailsDTO = null;
@@ -133,6 +141,7 @@ public class ExistingOnlineOrder extends SharedProperties {
         if (specificVariantIndex == null) {
             for (Long variantId : testDetailsDTO.getVariantIdList()) {
                 //SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + variantId);
+                //browse.doBrowsing();
                 SharedProperties.driver.navigate().to(TestUtil.getURL()+ PropertyHelper.readProperty("url") + TestUtil.getVariantId());
                 //SharedProperties.driver.navigate().to(TestUtil.getURL()+ PropertyHelper.readProperty("url") + variantId);
                 Thread.sleep(3000);
@@ -156,7 +165,7 @@ public class ExistingOnlineOrder extends SharedProperties {
 
             }
 
-        }       else {
+        }      else {
                 SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + testDetailsDTO.getVariantIdList().get(specificVariantIndex.intValue()));
                 WebElement buyNow = SharedProperties.driver.findElement(By.cssSelector("input[class='addToCart btn btn-blue btn2 mrgn-b-5 disp-inln']"));
                 buyNow.click();

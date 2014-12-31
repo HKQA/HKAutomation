@@ -95,7 +95,7 @@ public class variantCheckout    {
 
        // EOO.login(1L);
         //System.out.print("\n HK OrderID:- " + OrderDetailsUtil.GatewayOrderId());
-        System.out.println("HK orderID:- " + SoDetails.orderIdSoDetails);
+        System.out.println("HK orderID:- " + sodetails.orderIdSoDetails);
 
         Thread.sleep(10000);
 
@@ -118,6 +118,7 @@ public class variantCheckout    {
             System.out.println("Shipping Order Id:- " + shippingOrderId);
             Integer warehouseId = soDetailsDTO.getWarehouseId();
             System.out.print("\n Warehouse id:- " + warehouseId);
+
 
 
             if (warehouseId.equals(10)) {

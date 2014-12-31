@@ -362,6 +362,35 @@ public static Xls_Reader excel = new Xls_Reader(System.getProperty("user.dir")+ 
 
     }
 
+    public static String getBrandName()
+    {
+
+        String brandName = excel.getCellData("Browsing", 2, 2);
+
+        return brandName;
+
+    }
+
+    public static String getCategory()
+    {
+
+        String category = excel.getCellData("Browsing", 2, 3)  ;
+
+        return category;
+
+    }
+
+    public static String getQuantity()
+    {
+
+        String quantity = excel.getCellData("Browsing",2, 4 );
+
+        return quantity;
+
+    }
+
+
+
 
 
 }
