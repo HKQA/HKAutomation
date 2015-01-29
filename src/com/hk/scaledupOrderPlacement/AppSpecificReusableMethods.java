@@ -56,6 +56,15 @@ public class AppSpecificReusableMethods {
 
     }
 
+    public void doCODPayment() throws Exception {
+        SharedProperties.driver.findElement(By.xpath("//*[@class = 'last']")).click();
+        Thread.sleep(2000);
+        SharedProperties.driver.findElement(By.xpath("//*[@value = 'Place order']")).click();
+
+
+
+    }
+
 
 
     public int verifyLineItems()

@@ -1,0 +1,13 @@
+
+
+29/01/2015_12:21:41
+Order Id for Market Place Cancellation from catalog = ORDER ID: HKD-03346-1549778
+Order id = HKD-03346-1549778is successfully cancelled 
+
+29/01/2015_12:37:47
+Order Id for Web Cancellation = ORDER ID: HKD-59280-1549782
+Order id = HKD-59280-1549782 is successfully cancelled 
+
+29/01/2015_13:11:39
+Order Id for Web Cancellation = ORDER ID: HKD-12289-1549786
+Order id = HKD-12289-1549786 is successfully cancelled 

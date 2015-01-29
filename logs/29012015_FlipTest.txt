@@ -1,0 +1,36 @@
+
+
+29/01/2015_15:16:18
+Order id for FlipTest = HKD-67256-1549793
+Shipping order id for the corresponding gateway order id = 2713485-S64072
+Warehouse id before flipping is done = 10
+Barcode before flip = 11657089
+Barcode after flip = null
+
+
+
+29/01/2015_16:49:02
+Order id for FlipTest = HKD-84643-1549804
+Shipping order id for the corresponding gateway order id = 2713493-S16277
+Warehouse id before flipping is done = 10
+Barcode before flip = IVN-295432-361
+Barcode after flip = null
+
+
+
+29/01/2015_17:01:06
+Order id for FlipTest = HKD-74886-1549806
+Shipping order id for the corresponding gateway order id = 2713495-S64842
+Warehouse id before flipping is done = 10
+Barcode before flip = IVN-295432-361
+Barcode after flip = IVN-299749-242
+
+
+
+29/01/2015_17:17:00
+Order id for FlipTest = HKD-90627-1549808
+Shipping order id for the corresponding gateway order id = 2713497-S02203
+Warehouse id before flipping is done = 10
+Barcode before flip = IVN-295432-361
+Barcode after flip = IVN-299749-244
+

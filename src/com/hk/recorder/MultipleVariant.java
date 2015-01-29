@@ -23,7 +23,7 @@ public class MultipleVariant {
 
         for(Long variantId : testDetailsDTO.getVariantIdList())
         {
-            SharedProperties.driver.navigate().to("http://192.168.70.51:9090/sv/oh-yeah!-isolate/SP-29982?navKey=VRNT-"+ variantId);
+            SharedProperties.driver.navigate().to(TestUtil.getURL()+"/sv/oh-yeah!-isolate/SP-29982?navKey=VRNT-"+ variantId);
 
             Thread.sleep(5000);
 

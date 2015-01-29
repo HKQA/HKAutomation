@@ -143,9 +143,9 @@ public class variantCheckout    {
 
             }
 
-            System.out.println("Here flip code will go ");
+            //System.out.println("Here flip code will go ");
 
-            if(TestUtil.getExecuteFlip().equalsIgnoreCase("Y"))
+            /*if(TestUtil.getExecuteFlip().equalsIgnoreCase("Y"))
             {
                 String barcodeBeforeFlip = null;
                 String barcodeAfterFlip = null;
@@ -248,7 +248,7 @@ public class variantCheckout    {
 
 
 
-            }
+            }*/
 
 
             SharedProperties.clickWithCss(printprick.getPrintPrickLink(), SharedProperties.driver);

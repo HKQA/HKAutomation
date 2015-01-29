@@ -68,7 +68,7 @@ public class GuestCheckoutOnline extends SharedProperties {
     public void isSkip()
     {
 
-        if(!TestUtil.isExecutable("GuestCheckoutOnline"))
+        if(!(TestUtil.isExecutable("GuestCheckoutOnline") && TestUtil.isExecutable("OrderPlacement")))
         {
 
             System.out.println("GuestCheckoutOnline would be skipped");

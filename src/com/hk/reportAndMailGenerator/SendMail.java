@@ -58,6 +58,9 @@ public class SendMail {
 
 
             // Set To: header field of the header.
+            if(toaddress==null){
+                toaddress="vipul.j@healthkart.com";
+            }
             message.addRecipient(MimeMessage.RecipientType.TO,
                     new InternetAddress(toaddress));
 

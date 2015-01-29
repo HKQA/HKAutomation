@@ -19,7 +19,9 @@ import org.apache.poi.xssf.usermodel.*;
 
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 
 public class Xls_Reader {
@@ -465,6 +467,74 @@ public class Xls_Reader {
 		
 		
 	}
+
+    public List<String> getAllCellDataFromColumn(String sheetName, int colNumber)
+    {
+        List<String> list = new ArrayList<String>();
+        String cellText = null;
+        sheet = workbook.getSheet(sheetName);
+        int rowCount = sheet.getLastRowNum() + 1 ;
+
+        System.out.println("Rowcount in " + sheetName + "= " + rowCount );
+        for(int i = 1; i < rowCount; i++)
+        {
+            row = sheet.getRow(i);
+            if(row == null)
+            {
+
+                row = sheet.createRow(i);
+
+            }
+            cell = row.getCell(colNumber-1);
+
+            if(cell == null)
+            {
+
+                cell = row.createCell(colNumber);
+
+
+            }
+
+
+            //System.out.println(cell);
+            //System.out.println("Cell type = "+cell.getCellType());
+
+            if(cell.getCellType() == Cell.CELL_TYPE_BLANK)
+            {
+
+                //System.out.println("Cell you are accessing seems blank");
+                //list.add("")
+
+            }
+            if(cell.getCellType()== Cell.CELL_TYPE_STRING)
+            {
+                //System.out.println(cell.getStringCellValue());
+                cellText = cell.getStringCellValue();
+                list.add(cellText);
+
+
+
+
+            }
+
+
+            else if(cell.getCellType()==Cell.CELL_TYPE_NUMERIC)
+            {
+                //System.out.println(String.valueOf((long)cell.getNumericCellValue()));
+                cellText = String.valueOf((long)cell.getNumericCellValue());
+                list.add(cellText);
+
+            }
+
+
+
+
+
+        }
+
+        return list;
+
+    }
 	
 	
 	//String sheetName, String testCaseName,String keyword ,String URL,String message
@@ -502,16 +572,31 @@ public class Xls_Reader {
 	
 	// to run this on stand alone
 	public static void main(String arg[]) throws IOException{
+
+        List<String> barcodes = new ArrayList<String>();
 		
 		
 		Xls_Reader datatable = null;
 		
 
-			 datatable = new Xls_Reader("C:\\CM3.0\\app\\test\\Framework\\AutomationBvt\\src\\config\\xlfiles\\Controller.xlsx");
-				for(int col=0 ;col< datatable.getColumnCount("TC5"); col++){
-					System.out.println(datatable.getCellData("TC5", col, 1));
-				}
-	}
+	    datatable = new Xls_Reader("C:\\Workspace\\Automation_testing_v4_Vipul\\testData.xls");
+
+        datatable.isSheetExist("barcode");
+
+        barcodes = datatable.getAllCellDataFromColumn("barcode", 1);
+
+        for(String bc : barcodes)
+        {
+
+            System.out.println(bc);
+
+        }
+
+
+
+    }
+
+
 	
 	
 }

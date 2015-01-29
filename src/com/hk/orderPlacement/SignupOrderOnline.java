@@ -66,7 +66,7 @@ public class SignupOrderOnline extends SharedProperties {
     public void isSkip()
     {
 
-        if(!TestUtil.isExecutable("SignupOrderOnline"))
+        if(!(TestUtil.isExecutable("SignupOrderOnline") && TestUtil.isExecutable("OrderPlacement")))
         {
 
             System.out.println("SignupOrderOnline would be skipped");

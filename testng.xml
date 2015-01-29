@@ -22,9 +22,11 @@
     </test>-->
     <test name = "ExistingOnline Multivariant Order">
         <packages>
+            <package name = "com.hk.cancellation"/>
             <package name = "com.hk.scaledupOrderPlacement"/>
-
+            <package name = "com.hk.orderPlacement"/>
         </packages>
+
     </test>
     <!--<test name="com.hk.orderPlacement.SignupCodOrder">
         <classes>

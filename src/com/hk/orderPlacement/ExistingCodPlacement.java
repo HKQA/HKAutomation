@@ -67,7 +67,7 @@ public class ExistingCodPlacement extends SharedProperties {
     public void isSkip() throws InterruptedException
     {
 
-        if(!TestUtil.isExecutable("ExistingCodPlacement"))
+        if(!(TestUtil.isExecutable("ExistingCodPlacement") && TestUtil.isExecutable("OrderPlacement")))
         {
 
             System.out.println("ExistingCodPlacement would be skipped");

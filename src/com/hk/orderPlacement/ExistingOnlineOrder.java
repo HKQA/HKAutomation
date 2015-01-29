@@ -71,10 +71,10 @@ public class ExistingOnlineOrder extends SharedProperties {
 
 
     @BeforeMethod
-    public void isSkip()
+     public void isSkip()
     {
 
-        if(!TestUtil.isExecutable("ExistingOnlineOrder"))
+        if(!(TestUtil.isExecutable("ExistingOnlineOrder") && TestUtil.isExecutable("OrderPlacement")) )
         {
 
             System.out.println("ExistingOnlineOrder would be skipped");
