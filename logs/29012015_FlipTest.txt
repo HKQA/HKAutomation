@@ -34,3 +34,21 @@ Warehouse id before flipping is done = 10
 Barcode before flip = IVN-295432-361
 Barcode after flip = IVN-299749-244
 
+
+
+29/01/2015_18:05:15
+Order id for FlipTest = HKD-89187-1549811
+Shipping order id for the corresponding gateway order id = 2713500-S05839
+Warehouse id before flipping is done = 10
+Barcode before flip = IVN-295432-361
+Barcode after flip = IVN-299749-385
+
+
+
+29/01/2015_18:08:58
+Order id for FlipTest = HKD-60767-1549812
+Shipping order id for the corresponding gateway order id = 2713501-S86544
+Warehouse id before flipping is done = 10
+Barcode before flip = IVN-307322-1
+Barcode after flip = IVN-307322-1
+

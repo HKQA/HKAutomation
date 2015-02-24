@@ -1,0 +1,22 @@
+
+
+30/01/2015_18:36:10
+Order id = HKD-71272-1559638
+New Shipping order id = 2717717-S32527and warehouse id =10
+Old shipping order id = 2717716-S71675
+IVN-304365-1
+160
+
+30/01/2015_18:40:04
+Order id = HKD-12553-1559640
+New Shipping order id = 2717719-S13437and warehouse id =10
+Old shipping order id = 2717718-S86800
+IVN-304365-9
+160
+
+30/01/2015_19:45:17
+Order id = HKD-39858-1559655
+New Shipping order id = 2717730-S21694and warehouse id =10
+Old shipping order id = 2717729-S24540
+IVN-304365-18
+160

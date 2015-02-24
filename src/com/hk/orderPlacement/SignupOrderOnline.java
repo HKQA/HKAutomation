@@ -172,14 +172,16 @@ public class SignupOrderOnline extends SharedProperties {
         SharedProperties.sendKeys(addresspage.pincode(), TestUtil.getPincode("SignupOrderOnline"), SharedProperties.driver);
         Thread.sleep(2000);
         SharedProperties.Click(addresspage.delivertoaddress(), SharedProperties.driver);
+        Thread.sleep(2000);
+        SharedProperties.driver.findElement(By.xpath("//*[@tab = 'tab3']")).click();
         Thread.sleep(5000);
         SharedProperties.Click(paymentpage.paymentPageDummy(), SharedProperties.driver);
         Thread.sleep(3000);
-        new Select(SharedProperties.driver.findElement(By.xpath("html/body/div[1]/div[2]/div[1]/div[5]/div[2]/div/div[2]/form[1]/div[1]/div/div[5]/select"))).selectByVisibleText("Dummy");
+        new Select(SharedProperties.driver.findElement(By.xpath("//*[@id='tab3']/div/div[8]/select"))).selectByVisibleText("Dummy");
 
 
 
-        Assert.assertTrue(true, "SignupOrderOnline test case is passed");
+
 
 
         /*WebElement dummypayment = SharedProperties.driver.findElement(By.xpath("html/body/div[1]/div[2]/div[1]/div[5]/div[2]/div/div[2]/form[1]/div[1]/div/div[4]/input"));
@@ -200,7 +202,7 @@ public class SignupOrderOnline extends SharedProperties {
 
         SharedProperties.Click(paymentpage.proceedPayment(), SharedProperties.driver);
 
-        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[5]/div[1]/p[2]")).getText();
+        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div/div[1]/p[2]")).getText();
 
         System.out.println(orderId);
 

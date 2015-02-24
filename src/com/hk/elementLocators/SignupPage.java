@@ -9,11 +9,11 @@ package com.hk.elementLocators;
  */
 public class SignupPage {
     private String signupPage="/html/body/div[2]/div[2]/div[1]/div[4]/h2/span";
-    private String name="/html/body/div[2]/div[2]/div[1]/div[3]/form/input[3]";
-    private String emailid="/html/body/div[2]/div[2]/div[1]/div[3]/form/input[4]";
-    private String password="/html/body/div[2]/div[2]/div[1]/div[3]/form/input[5]";
-    private String confirmpassword="/html/body/div[2]/div[2]/div[1]/div[3]/form/input[6]";
-    private String createaccount="/html/body/div[2]/div[2]/div[1]/div[3]/form/input[7]";
+    private String name="//*[@id='signUpForm']/input[3]";
+    private String emailid="//*[@id='signUpForm']/input[4]";
+    private String password="//*[@id='signUpForm']/input[5]";
+    private String confirmpassword="//*[@id='signUpForm']/input[6]";
+    private String createaccount="//*[@value = 'Create Account']";
 
     public String signupPage() {
         return signupPage;

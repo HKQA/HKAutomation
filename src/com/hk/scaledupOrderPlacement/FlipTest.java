@@ -8,6 +8,7 @@ import com.hk.orderCheckoutDto.SoDetails;
 import com.hk.property.PropertyHelper;
 import com.hk.recorder.Browse;
 import com.hk.recorder.MultipleVariant;
+import com.hk.recorder.VideoRecorder;
 import com.hk.util.TestUtil;
 import com.hk.variants.GetVariants;
 import org.apache.commons.io.FileUtils;
@@ -48,7 +49,8 @@ public class FlipTest {
     SoDetails soDetails = new SoDetails();
     MultiVariantOrderCheckout orderCheckout = new MultiVariantOrderCheckout();
     DoFlip doFlip = new DoFlip();
-    ITestResult result = Reporter.getCurrentTestResult();
+    VideoRecorder recorder = new VideoRecorder();
+
 
 
 
@@ -76,7 +78,7 @@ public class FlipTest {
             FileUtils.copyFile(screenshot, new File(System.getProperty("user.dir") + PropertyHelper.readProperty("screenshotFolder") + "\\FlipTest.jpg"));
         }
 
-
+        recorder.stopRecording();
         SharedProperties.driver.quit();
     }
 
@@ -84,7 +86,7 @@ public class FlipTest {
     @Test(enabled = true)
     public void doFlipTest() throws Exception {
 
-
+        recorder.startRecording();
 
         if(TestUtil.excel.getCellData("Config", 1, 18 ).equalsIgnoreCase("Y"))
         {
@@ -99,8 +101,9 @@ public class FlipTest {
                 SharedProperties.Click(loginPage.getSignInCheckbox(), SharedProperties.driver);
                 reusableMethods.setUserCredentials();
                 reusableMethods.selectDeliveryAddress();
-                reusableMethods.doCODPayment();
+                //reusableMethods.doCODPayment();
                 //reusableMethods.doOnlinePayment();
+                reusableMethods.doDummyPayment();
                 int lineItemCount= reusableMethods.verifyLineItems();
                 System.out.println("Number of line items = " + lineItemCount);
                 String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div/div[1]/p[2]")).getText();
@@ -121,7 +124,7 @@ public class FlipTest {
 
             }
 
-              doFlip.fw.close();
+
         } else
         {
 
@@ -140,7 +143,8 @@ public class FlipTest {
                 SharedProperties.Click(loginPage.getSignInCheckbox(), SharedProperties.driver);
                 reusableMethods.setUserCredentials();
                 reusableMethods.selectDeliveryAddress();
-                reusableMethods.doOnlinePayment();
+                //reusableMethods.doCODPayment();
+                //reusableMethods.doOnlinePayment();
                 int lineItemCount= reusableMethods.verifyLineItems();
                 System.out.println("Number of line items = " + lineItemCount);
                 String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div/div[1]/p[2]")).getText();
@@ -148,10 +152,11 @@ public class FlipTest {
                 String finalOrderId = orderId.substring(10);
                 soDetails.orderIdSoDetails = finalOrderId;
 
-                doFlip.doFlip();
-                SharedProperties.driver.close();
 
-                SharedProperties.driver.close();
+                doFlip.doFlip();
+                //SharedProperties.driver.close();
+
+
 
 
 

@@ -19,9 +19,7 @@ public class TestRunMode {
 
     public static void main(String[] args)
     {
-       /* String orderid = "ORDER ID: HK51126-892278";
 
-        System.out.println(orderid.substring(10));*/
 
 
 

@@ -213,10 +213,12 @@ public class ExistingOnlineOrder extends SharedProperties {
 
         SharedProperties.Click(addresspage.addressPage(), SharedProperties.driver);
         Thread.sleep(5000);
+        SharedProperties.driver.findElement(By.xpath("//*[@tab = 'tab3']")).click();
+        Thread.sleep(2000);
         SharedProperties.Click(paymentpage.paymentPageDummy(), SharedProperties.driver);
         Thread.sleep(2000);
 
-        new Select(SharedProperties.driver.findElement(By.xpath("//*[@id='tab1']/div/div[5]/select"))).selectByVisibleText("Dummy");
+        new Select(SharedProperties.driver.findElement(By.xpath("//*[@id='tab3']/div/div[8]/select"))).selectByVisibleText("Dummy");
         Thread.sleep(2000);
         SharedProperties.Click(paymentpage.proceedToPayment(), SharedProperties.driver);
         Thread.sleep(5000);
@@ -234,7 +236,7 @@ public class ExistingOnlineOrder extends SharedProperties {
 
         soDetails.orderIdSoDetails = finalOrderId;
 
-        TestUtil.excel.setCellData("test_suite","OrderId_Generated",7, orderId );
+        TestUtil.excel.setCellData("test_suite","OrderId_Generated",6, orderId );
 
         String getText = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[7]")).getText();
 
@@ -267,7 +269,7 @@ public class ExistingOnlineOrder extends SharedProperties {
         if (OrderDetailsVerify.orderDetails() == true) {
             System.out.print("DB verification Successful");
             Thread.sleep(5000);
-            if(TestUtil.getExecuteVariantCheckoutRunMode(7).equalsIgnoreCase("Y"))
+            if(TestUtil.getExecuteVariantCheckoutRunMode(6).equalsIgnoreCase("Y"))
             {
             varCheckout.variantCheckout();
             }

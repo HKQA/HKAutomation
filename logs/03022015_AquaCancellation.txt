@@ -1,0 +1,16 @@
+
+
+03/02/2015_18:59:01
+Order id for Aqua cancellation = ORDER ID: HKD-72999-1572660
+Shipping Order id for the corresponding gateway order is = 2723975-S28547
+Cancellation done successfully
+
+03/02/2015_20:06:01
+Order id for Aqua cancellation = ORDER ID: HKD-34760-1572674
+Shipping Order id for the corresponding gateway order is = 2723996-S87258
+Cancellation done successfully
+
+03/02/2015_20:38:48
+Order id for Aqua cancellation = ORDER ID: HKD-97646-1572648
+Shipping Order id for the corresponding gateway order is = 2723961-S33630
+Cancellation done successfully

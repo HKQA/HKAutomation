@@ -5,6 +5,7 @@ package com.hk.commonProperties; /**
  * Time: 7:23 PM
  * To change this template use File | Settings | File Templates.
  */
+import com.hk.recorder.VideoRecorder;
 import com.hk.util.TestUtil;
 import org.apache.xmlbeans.impl.jam.visitor.TraversingJVisitor;
 import org.openqa.selenium.*;
@@ -31,11 +32,17 @@ import com.hk.property.PropertyHelper;
 
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 
 public class SharedProperties
 {
     public static WebDriver driver;
     public int delay = 5000 ;
+    VideoRecorder recorder = new VideoRecorder();
+
+
+
 
 
     public static void openBrowser(String AppURL, String BrowserName) {

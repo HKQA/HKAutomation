@@ -27,7 +27,7 @@ public class AppSpecificReusableMethods {
     {
         SharedProperties.sendKeys(loginpage.getEmailIdTextBox(), "vipul.j@healthkart.com", SharedProperties.driver);
 
-        SharedProperties.sendKeys(loginpage.getPasswordTextBox(), "Vipul.jain", SharedProperties.driver);
+        SharedProperties.sendKeys(loginpage.getPasswordTextBox(), "vipul", SharedProperties.driver);
 
         SharedProperties.Click(loginpage.getSignInBtn(), SharedProperties.driver);
 
@@ -52,6 +52,25 @@ public class AppSpecificReusableMethods {
         Thread.sleep(5000);
         SharedProperties.Click(paymentPage.proceedPayment(), SharedProperties.driver);
         Thread.sleep(3000);
+
+
+    }
+
+    public void doDummyPayment() throws InterruptedException {
+
+        SharedProperties.driver.findElement(By.xpath("//*[@tab = 'tab3']")).click();
+        Thread.sleep(2000);
+        SharedProperties.Click(paymentPage.paymentPageDummy(), SharedProperties.driver);
+        Thread.sleep(3000);
+        new Select(SharedProperties.driver.findElement(By.xpath("//*[@id=\"tab3\"]/div/div[8]/select"))).selectByVisibleText("Dummy");
+        Thread.sleep(2000);
+        SharedProperties.Click(paymentPage.proceedToPayment(), SharedProperties.driver);
+        Thread.sleep(5000);
+        SharedProperties.Click(paymentPage.paymentY(), SharedProperties.driver);
+        Thread.sleep(5000);
+        SharedProperties.Click(paymentPage.proceedPayment(), SharedProperties.driver);
+        Thread.sleep(3000);
+
 
 
     }

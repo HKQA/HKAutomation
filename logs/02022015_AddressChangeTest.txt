@@ -1,0 +1,8 @@
+
+
+02/02/2015_12:40:59
+Order id = HKD-94344-1559656
+New Shipping order id = 2717756-S60454and warehouse id =10
+Old shipping order id = 2717755-S77593
+IVN-304365-30
+160

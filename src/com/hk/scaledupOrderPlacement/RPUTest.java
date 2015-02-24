@@ -6,6 +6,7 @@ import com.hk.orderCheckoutDto.SoDetails;
 import com.hk.property.PropertyHelper;
 import com.hk.recorder.Browse;
 import com.hk.recorder.MultipleVariant;
+import com.hk.recorder.VideoRecorder;
 import com.hk.util.TestUtil;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
@@ -37,6 +38,7 @@ public class RPUTest {
     SoDetails soDetails = new SoDetails();
     DoRPU doRPU = new DoRPU();
     ITestResult result = Reporter.getCurrentTestResult();
+    VideoRecorder recorder = new VideoRecorder();
 
     @BeforeMethod
     public void isSkip()
@@ -59,22 +61,24 @@ public class RPUTest {
 
         if (result.getStatus() == ITestResult.FAILURE) {
             File screenshot = ((TakesScreenshot) SharedProperties.driver).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(screenshot, new File(System.getProperty("user.dir") + PropertyHelper.readProperty("screenshotFolder") + "\\ExistingOnlineOrder.jpg"));
+            FileUtils.copyFile(screenshot, new File(System.getProperty("user.dir") + PropertyHelper.readProperty("screenshotFolder") + "\\RPUTest.jpg"));
         }
 
-
+        recorder.stopRecording();
         SharedProperties.driver.quit();
     }
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void testRPU() throws Exception {
+        recorder.startRecording();
         SharedProperties.openBrowser(TestUtil.getURL(), TestUtil.getBrowser());
         multipleVariant.testMultipleVariant();
         browse.proceedToCheckoutMultiVariant();
         SharedProperties.Click(loginPage.getSignInCheckbox(), SharedProperties.driver);
         reusableMethods.setUserCredentials();
         reusableMethods.selectDeliveryAddress();
-        reusableMethods.doOnlinePayment();
+        //reusableMethods.doOnlinePayment();
+        reusableMethods.doCODPayment();
         int lineItemCount= reusableMethods.verifyLineItems();
         System.out.println("Number of line items = " + lineItemCount);
         String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div/div[1]/p[2]")).getText();
@@ -82,6 +86,9 @@ public class RPUTest {
         String finalOrderId = orderId.substring(10);
         soDetails.orderIdSoDetails = finalOrderId;
         DoRPU.gatewayOrderId = finalOrderId;
+
+        TestUtil.excel.setCellData("test_suite","OrderId_Generated",15, orderId );
+
         doRPU.doRPU();
 
 

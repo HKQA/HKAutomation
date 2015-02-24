@@ -32,22 +32,10 @@ public class DoFlip {
     AdminHome adminHome = new AdminHome();
     FileWriter fw = null;
 
-    public DoFlip()
-    {
 
-        try{
-        fw = new FileWriter("C:\\Workspace\\Automation_testing_v4_Vipul\\logs\\" + new SimpleDateFormat("ddMMyyyy").format(new Date())+"_FlipTest" + ".txt", true); ;
-        }
-        catch (Exception e)
-        {
-
-            e.printStackTrace();
-
-        }
-    }
     public void doFlip() throws Exception {
 
-
+        fw = new FileWriter("C:\\Workspace\\Automation_testing_v4_Vipul\\logs\\" + new SimpleDateFormat("ddMMyyyy").format(new Date())+"_FlipTest" + ".txt", true);
         fw.append("\n"+"\n"+new SimpleDateFormat("dd/MM/yyyy_HH:mm:ss").format(new Date()) );
         String shippingOrderId = null;
         String barcodeBeforeFlip = null;
@@ -57,12 +45,12 @@ public class DoFlip {
         String soBeforeFlip = null;
         String soAfterFlip = null;
         int warehouseId = 0;
-        SharedProperties.openBrowser(TestUtil.getAdminURL(), TestUtil.getBrowser());
+        //SharedProperties.openBrowser(TestUtil.getAdminURL(), TestUtil.getBrowser());
+        SharedProperties.driver.navigate().to(TestUtil.getAdminURL());
         Thread.sleep(3000);
         SharedProperties.sendKeys(loginPage.getUserName(), TestUtil.getAdmin_User(), SharedProperties.driver);
         SharedProperties.sendKeys(loginPage.getPassword(), TestUtil.getAdmin_Password(), SharedProperties.driver);
         SharedProperties.Click(loginPage.getLoginbtn(), SharedProperties.driver);
-
         for(SoDetailsDTO soDetailsDTO : soDetails.Sodetails())
         {
             shippingOrderId = soDetailsDTO.getSoGatewayOrderId();
@@ -196,7 +184,7 @@ public class DoFlip {
             }
 
             fw.append("\n"+"\n");
-            //fw.close();
+            fw.close();
         }
 
 

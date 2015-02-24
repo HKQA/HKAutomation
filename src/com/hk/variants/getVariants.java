@@ -112,7 +112,7 @@ public class GetVariants {
 
 
 
-
+       conn.close();
        return variantsList;
 
     }

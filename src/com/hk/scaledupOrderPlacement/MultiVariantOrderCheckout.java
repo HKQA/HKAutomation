@@ -57,7 +57,8 @@ public class MultiVariantOrderCheckout {
         } */
 
 
-        SharedProperties.openBrowser(TestUtil.getAdminURL(), TestUtil.getBrowser());
+        //SharedProperties.openBrowser(TestUtil.getAdminURL(), TestUtil.getBrowser());
+        SharedProperties.driver.navigate().to(TestUtil.getAdminURL());
         Thread.sleep(3000);
         SharedProperties.sendKeys(loginPage.getUserName(), TestUtil.getAdmin_User(), SharedProperties.driver);
         SharedProperties.sendKeys(loginPage.getPassword(), TestUtil.getAdmin_Password(), SharedProperties.driver);
@@ -121,16 +122,16 @@ public class MultiVariantOrderCheckout {
             System.out.println(storeCheckoutBarcodes.size());
 
             for(String barcode : storeCheckoutBarcodes)
-            {
-                System.out.println("Inside for loop for entering barcodes");
-                SharedProperties.driver.findElement(By.xpath("//*[@id = 'upc']")).sendKeys(barcode);
-                Thread.sleep(3000);
-                SharedProperties.driver.findElement(By.xpath("//*[@id=\"upc\"]")).sendKeys(Keys.ENTER);
-                //SharedProperties.driver.findElement(By.xpath("[@value = 'Back']")).click();
+        {
+            System.out.println("Inside for loop for entering barcodes");
+            SharedProperties.driver.findElement(By.xpath("//*[@id = 'upc']")).sendKeys(barcode);
+            Thread.sleep(3000);
+            SharedProperties.driver.findElement(By.xpath("//*[@id=\"upc\"]")).sendKeys(Keys.ENTER);
+            //SharedProperties.driver.findElement(By.xpath("[@value = 'Back']")).click();
 
 
 
-            }
+        }
 
             SharedProperties.driver.findElement(By.linkText("Store Manager")).click();
             SharedProperties.driver.navigate().to(TestUtil.getAdminURL()+ "/courier/CreateUpdateShipment.action");
@@ -316,6 +317,7 @@ public class MultiVariantOrderCheckout {
         Thread.sleep(3000);
         SharedProperties.Click(deliveryAwaitingQueue.getMarkOrdersAsDelivered(), SharedProperties.driver);
         System.out.print("\n ************* SO Delivered *************");
+        Thread.sleep(5000);
 
 
 

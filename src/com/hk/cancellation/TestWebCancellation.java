@@ -4,6 +4,7 @@ import com.hk.commonProperties.SharedProperties;
 import com.hk.elementLocators.LoginPage;
 import com.hk.property.PropertyHelper;
 import com.hk.recorder.Browse;
+import com.hk.recorder.VideoRecorder;
 import com.hk.scaledupOrderPlacement.AppSpecificReusableMethods;
 import com.hk.util.TestUtil;
 import org.apache.commons.io.FileUtils;
@@ -37,6 +38,7 @@ public class TestWebCancellation {
     LoginPage loginPage = new LoginPage();
     AppSpecificReusableMethods reusableMethods = new AppSpecificReusableMethods();
     FileWriter fw = null;
+    VideoRecorder recorder = new VideoRecorder();
 
 
     @BeforeMethod
@@ -64,11 +66,14 @@ public class TestWebCancellation {
         }
 
 
+        recorder.stopRecording();
         SharedProperties.driver.quit();
     }
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void testWebCancellation() throws Exception {
+
+        recorder.startRecording();
 
         System.out.println("Inside testWebCancellation method");
 

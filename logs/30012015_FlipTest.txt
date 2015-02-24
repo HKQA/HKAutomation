@@ -1,0 +1,9 @@
+
+
+30/01/2015_19:37:32
+Order id for FlipTest = HKD-70583-1559653
+Shipping order id for the corresponding gateway order id = 2717726-S24042
+Warehouse id before flipping is done = 10
+Barcode before flip = IVN-304365-12
+Barcode after flip = IVN-304365-12
+

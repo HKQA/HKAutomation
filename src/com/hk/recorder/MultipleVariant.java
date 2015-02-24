@@ -3,6 +3,7 @@ package com.hk.recorder;
 import com.hk.commonProperties.SharedProperties;
 import com.hk.excel.TestDetailsExcelService;
 import com.hk.excel.dto.TestDetailsDTO;
+import com.hk.scaledupOrderPlacement.TestMRPChange;
 import com.hk.util.TestUtil;
 import org.openqa.selenium.By;
 
@@ -14,6 +15,8 @@ import org.openqa.selenium.By;
  * To change this template use File | Settings | File Templates.
  */
 public class MultipleVariant {
+
+
 
     public void testMultipleVariant() throws Exception {
 
@@ -34,6 +37,13 @@ public class MultipleVariant {
 
             //SharedProperties.driver.findElement(By.xpath("//*[@id='variant-page']/div[2]/div[3]/div[1]/div/div[2]/div[2]/div/div[1]/input")).click();
             SharedProperties.driver.findElement(By.xpath("//*[@value = 'Buy Now']")).click();
+
+            if(TestUtil.excel.getCellData("test_suite", "RunMode", 18).equalsIgnoreCase("Y"))
+            {
+
+                TestMRPChange.variantId = String.valueOf(variantId);
+
+            }
         }
 
 

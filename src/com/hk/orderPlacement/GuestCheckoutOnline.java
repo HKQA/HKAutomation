@@ -173,10 +173,12 @@ public class GuestCheckoutOnline extends SharedProperties {
         Thread.sleep(2000);
         SharedProperties.Click(addresspage.delivertoaddress(), SharedProperties.driver);
         Thread.sleep(5000);
+        SharedProperties.driver.findElement(By.xpath("//*[@tab = 'tab3']")).click();
+        Thread.sleep(2000);
         SharedProperties.Click(paymentpage.paymentPageDummy(), SharedProperties.driver);
         Thread.sleep(2000);
 
-        new Select(SharedProperties.driver.findElement(By.xpath("html/body/div[1]/div[2]/div[1]/div[5]/div[2]/div/div[2]/form[1]/div[1]/div/div[5]/select"))).selectByVisibleText("Dummy");
+        new Select(SharedProperties.driver.findElement(By.xpath("//*[@id='tab3']/div/div[8]/select"))).selectByVisibleText("Dummy");
         Thread.sleep(2000);
         SharedProperties.Click(paymentpage.proceedToPayment(), SharedProperties.driver);
         Thread.sleep(2000);
@@ -186,7 +188,7 @@ public class GuestCheckoutOnline extends SharedProperties {
 
 
 
-        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[5]/div[1]/p[2]")).getText();
+        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div/div[1]/p[2]")).getText();
 
         System.out.println(orderId);
 
@@ -194,7 +196,7 @@ public class GuestCheckoutOnline extends SharedProperties {
 
         soDetails.orderIdSoDetails = finalOrderId;
 
-        TestUtil.excel.setCellData("test_suite","OrderId_Generated",5, orderId );
+        TestUtil.excel.setCellData("test_suite","OrderId_Generated",4, orderId );
 
         String getText = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]")).getText();
 

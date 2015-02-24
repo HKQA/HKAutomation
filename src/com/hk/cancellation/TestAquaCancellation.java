@@ -8,6 +8,7 @@ import com.hk.orderCheckoutDto.SoDetails;
 import com.hk.orderCheckoutDto.SoDetailsDTO;
 import com.hk.property.PropertyHelper;
 import com.hk.recorder.Browse;
+import com.hk.recorder.VideoRecorder;
 import com.hk.scaledupOrderPlacement.AppSpecificReusableMethods;
 import com.hk.util.TestUtil;
 import org.apache.commons.io.FileUtils;
@@ -41,6 +42,7 @@ public class TestAquaCancellation {
     LoginPageAdmin loginPageAdmin = new LoginPageAdmin();
     AdminHome adminHome = new AdminHome();
     FileWriter fw = null;
+    VideoRecorder recorder = new VideoRecorder();
 
 
     @BeforeMethod
@@ -67,12 +69,13 @@ public class TestAquaCancellation {
             FileUtils.copyFile(screenshot, new File(System.getProperty("user.dir") + PropertyHelper.readProperty("screenshotFolder") + "\\ExistingOnlineOrder.jpg"));
         }
 
-
+        recorder.stopRecording();
         SharedProperties.driver.quit();
     }
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void testAquaCancellation() throws Exception {
+        recorder.startRecording();
         String shippingOrderId = null;
         int warehouseId = 0;
         fw = new FileWriter("C:\\Workspace\\Automation_testing_v4_Vipul\\logs\\" + new SimpleDateFormat("ddMMyyyy").format(new Date())+"_AquaCancellation" + ".txt", true);
@@ -99,7 +102,8 @@ public class TestAquaCancellation {
         String finalOrderId = orderId.substring(10);
         soDetails.orderIdSoDetails = finalOrderId;
         Thread.sleep(2000);
-        SharedProperties.openBrowser(TestUtil.getAdminURL(), TestUtil.getBrowser());
+        //SharedProperties.openBrowser(TestUtil.getAdminURL(), TestUtil.getBrowser());
+        SharedProperties.driver.navigate().to(TestUtil.getAdminURL());
         Thread.sleep(3000);
         SharedProperties.sendKeys(loginPageAdmin.getUserName(), TestUtil.getAdmin_User(), SharedProperties.driver);
         SharedProperties.sendKeys(loginPageAdmin.getPassword(), TestUtil.getAdmin_Password(), SharedProperties.driver);

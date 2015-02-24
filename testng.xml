@@ -20,11 +20,14 @@
             <package name="com.hk.orderCheckout"/>
         </packages>
     </test>-->
-    <test name = "ExistingOnline Multivariant Order">
+    <test name = "HealthKart Automation Suite">
         <packages>
+            <package name = "com.hk.commonProperties"/>
             <package name = "com.hk.cancellation"/>
             <package name = "com.hk.scaledupOrderPlacement"/>
             <package name = "com.hk.orderPlacement"/>
+            <package name = "com.hk.poscheckout"/>
+            <package name = "com.hk.warehouseSpecific"/>
         </packages>
 
     </test>

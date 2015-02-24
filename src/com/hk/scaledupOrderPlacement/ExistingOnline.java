@@ -67,14 +67,14 @@ public class ExistingOnline {
             FileUtils.copyFile(screenshot, new File(System.getProperty("user.dir") + PropertyHelper.readProperty("screenshotFolder") + "\\ExistingOnlineOrder.jpg"));
         }
 
-        recorder.stopRecording();
+        //recorder.stopRecording();
         SharedProperties.driver.quit();
     }
 
     @Test(enabled = true)
     public void test() throws Exception {
 
-        recorder.startRecording();
+        //recorder.startRecording();
 
         SharedProperties.openBrowser(TestUtil.getURL(), TestUtil.getBrowser());
 
@@ -88,7 +88,11 @@ public class ExistingOnline {
 
         reusableMethods.selectDeliveryAddress();
 
-        reusableMethods.doOnlinePayment();
+        reusableMethods.doDummyPayment();
+
+        //reusableMethods.doOnlinePayment();
+
+        //reusableMethods.doCODPayment();
 
 
 
@@ -104,7 +108,7 @@ public class ExistingOnline {
 
         soDetails.orderIdSoDetails = finalOrderId;
 
-        TestUtil.excel.setCellData("test_suite","OrderId_Generated",10, orderId );
+        TestUtil.excel.setCellData("test_suite","OrderId_Generated",9, orderId );
 
         orderCheckout.variantCheckout();
 

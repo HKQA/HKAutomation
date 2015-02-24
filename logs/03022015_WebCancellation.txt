@@ -1,0 +1,13 @@
+
+
+03/02/2015_19:15:25
+Order Id for Web Cancellation = ORDER ID: HKD-92365-1572665
+Order id = HKD-92365-1572665 is successfully cancelled 
+
+03/02/2015_20:30:37
+Order Id for Web Cancellation = ORDER ID: HKD-18462-1572679
+Order id = HKD-18462-1572679 is successfully cancelled 
+
+03/02/2015_21:03:41
+Order Id for Web Cancellation = ORDER ID: HKD-73071-1572653
+Order id = HKD-73071-1572653 is successfully cancelled 

@@ -194,7 +194,7 @@ public class SignupCodOrder extends SharedProperties {
         Thread.sleep(5000);
         SharedProperties.Click(paymentpage.payOnDelivery(), SharedProperties.driver);
 
-        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[5]/div[1]/p[2]")).getText();
+        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div/div[1]/p[2]")).getText();
 
         System.out.println(orderId);
 
@@ -219,7 +219,7 @@ public class SignupCodOrder extends SharedProperties {
 
         }
 
-        String codStatus = SharedProperties.driver.findElement(By.xpath("html/body/div[1]/div[2]/div/div[5]/div[1]/p[1]/span[2]")).getText();
+        String codStatus = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div/div[1]/p[1]/span[2]")).getText();
 
 
 

@@ -102,8 +102,9 @@ public class variantCheckout    {
         for (SoDetailsDTO soDetailsDTO : sodetails.Sodetails()) {
             //SharedProperties.openBrowser(AdminBaseURL, browser);
             Thread.sleep(3000);
+              SharedProperties.driver.navigate().to(TestUtil.getAdminURL());
 
-            SharedProperties.openBrowser(TestUtil.getAdminURL(), TestUtil.getBrowser());
+            //SharedProperties.openBrowser(TestUtil.getAdminURL(), TestUtil.getBrowser());
             //SharedProperties.openBrowser("http://192.168.70.27:8080/admin", "chrome");
             Thread.sleep(3000);
             //SharedProperties.sendKeys(loginpage.getUserName(), "gagan.jain@healthkart.com", SharedProperties.driver);

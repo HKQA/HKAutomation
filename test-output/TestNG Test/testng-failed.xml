@@ -7,8 +7,20 @@
     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
     <listener class-name="com.hk.reportAndMailGenerator.ReportListener"/>
   </listeners>
-  <test name="ExistingOnline Multivariant Order(failed)">
+  <test name="HealthKart Automation Suite(failed)">
     <classes>
+      <class name="com.hk.scaledupOrderPlacement.RTOTest">
+        <methods>
+          <include name="isSkip"/>
+          <include name="RTOTest"/>
+        </methods>
+      </class> <!-- com.hk.scaledupOrderPlacement.RTOTest -->
+      <class name="com.hk.cancellation.TestAquaCancellation">
+        <methods>
+          <include name="isSkip"/>
+          <include name="testAquaCancellation"/>
+        </methods>
+      </class> <!-- com.hk.cancellation.TestAquaCancellation -->
       <class name="com.hk.orderPlacement.SignupOrderOnline">
         <methods>
           <include name="isSkip"/>
@@ -16,32 +28,18 @@
           <include name="config"/>
         </methods>
       </class> <!-- com.hk.orderPlacement.SignupOrderOnline -->
-      <class name="com.hk.scaledupOrderPlacement.ExistingOnline">
-        <methods>
-          <include name="isSkip"/>
-          <include name="test"/>
-        </methods>
-      </class> <!-- com.hk.scaledupOrderPlacement.ExistingOnline -->
       <class name="com.hk.scaledupOrderPlacement.FlipTest">
         <methods>
+          <include name="doFlipTest"/>
           <include name="isSkip"/>
-          <include name="doAfter"/>
         </methods>
       </class> <!-- com.hk.scaledupOrderPlacement.FlipTest -->
-      <class name="com.hk.orderPlacement.GuestCheckoutCod">
-        <methods>
-          <include name="config"/>
-          <include name="login"/>
-          <include name="isSkip"/>
-        </methods>
-      </class> <!-- com.hk.orderPlacement.GuestCheckoutCod -->
-      <class name="com.hk.orderPlacement.CouponOnlineOrder">
+      <class name="com.hk.scaledupOrderPlacement.RPUTest">
         <methods>
           <include name="isSkip"/>
-          <include name="Config"/>
-          <include name="login"/>
+          <include name="testRPU"/>
         </methods>
-      </class> <!-- com.hk.orderPlacement.CouponOnlineOrder -->
+      </class> <!-- com.hk.scaledupOrderPlacement.RPUTest -->
       <class name="com.hk.orderPlacement.ExistingOnlineOrder">
         <methods>
           <include name="isSkip"/>
@@ -49,6 +47,32 @@
           <include name="login"/>
         </methods>
       </class> <!-- com.hk.orderPlacement.ExistingOnlineOrder -->
+      <class name="com.hk.orderPlacement.CouponOnlineOrder">
+        <methods>
+          <include name="Config"/>
+          <include name="isSkip"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- com.hk.orderPlacement.CouponOnlineOrder -->
+      <class name="com.hk.scaledupOrderPlacement.SplitSOTest">
+        <methods>
+          <include name="isSkip"/>
+          <include name="doSplitSOTest"/>
+        </methods>
+      </class> <!-- com.hk.scaledupOrderPlacement.SplitSOTest -->
+      <class name="com.hk.orderPlacement.GuestCheckoutCod">
+        <methods>
+          <include name="config"/>
+          <include name="login"/>
+          <include name="isSkip"/>
+        </methods>
+      </class> <!-- com.hk.orderPlacement.GuestCheckoutCod -->
+      <class name="com.hk.cancellation.TestWebCancellation">
+        <methods>
+          <include name="testWebCancellation"/>
+          <include name="isSkip"/>
+        </methods>
+      </class> <!-- com.hk.cancellation.TestWebCancellation -->
       <class name="com.hk.orderPlacement.ExistingCodPlacement">
         <methods>
           <include name="isSkip"/>
@@ -56,6 +80,18 @@
           <include name="login"/>
         </methods>
       </class> <!-- com.hk.orderPlacement.ExistingCodPlacement -->
+      <class name="com.hk.scaledupOrderPlacement.AddressChangeTest">
+        <methods>
+          <include name="testAddressChange"/>
+          <include name="isSkip"/>
+        </methods>
+      </class> <!-- com.hk.scaledupOrderPlacement.AddressChangeTest -->
+      <class name="com.hk.scaledupOrderPlacement.ExistingOnline">
+        <methods>
+          <include name="isSkip"/>
+          <include name="test"/>
+        </methods>
+      </class> <!-- com.hk.scaledupOrderPlacement.ExistingOnline -->
       <class name="com.hk.orderPlacement.SignupCodOrder">
         <methods>
           <include name="isSkip"/>
@@ -63,6 +99,13 @@
           <include name="login"/>
         </methods>
       </class> <!-- com.hk.orderPlacement.SignupCodOrder -->
+      <class name="com.hk.warehouseSpecific.GGNRtoTest">
+        <methods>
+          <include name="doAfter"/>
+          <include name="isSkip"/>
+          <include name="testGGNRto"/>
+        </methods>
+      </class> <!-- com.hk.warehouseSpecific.GGNRtoTest -->
       <class name="com.hk.orderPlacement.GuestCheckoutOnline">
         <methods>
           <include name="Config"/>
@@ -70,6 +113,23 @@
           <include name="isSkip"/>
         </methods>
       </class> <!-- com.hk.orderPlacement.GuestCheckoutOnline -->
+      <class name="com.hk.warehouseSpecific.MUMRtoTest">
+        <methods>
+          <include name="testMUMRto"/>
+        </methods>
+      </class> <!-- com.hk.warehouseSpecific.MUMRtoTest -->
+      <class name="com.hk.poscheckout.POSCheckout">
+        <methods>
+          <include name="isSkip"/>
+          <include name="posCheckout"/>
+        </methods>
+      </class> <!-- com.hk.poscheckout.POSCheckout -->
+      <class name="com.hk.scaledupOrderPlacement.StoreCheckoutTest">
+        <methods>
+          <include name="testStoreCheckout"/>
+          <include name="isSkip"/>
+        </methods>
+      </class> <!-- com.hk.scaledupOrderPlacement.StoreCheckoutTest -->
     </classes>
-  </test> <!-- ExistingOnline Multivariant Order(failed) -->
+  </test> <!-- HealthKart Automation Suite(failed) -->
 </suite> <!-- Failed suite [TestNG Test] -->

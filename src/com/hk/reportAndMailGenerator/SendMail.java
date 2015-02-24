@@ -20,6 +20,7 @@ import java.util.Properties;
 
 public class SendMail {
 
+
     private static String toaddress = TestDetailsDTO.getLoginList();
     private static String fromaddress = "vipul.j@healthkart.com";
     private static String hostname = "smtp.gmail.com";
@@ -60,6 +61,7 @@ public class SendMail {
             // Set To: header field of the header.
             if(toaddress==null){
                 toaddress="vipul.j@healthkart.com";
+
             }
             message.addRecipient(MimeMessage.RecipientType.TO,
                     new InternetAddress(toaddress));

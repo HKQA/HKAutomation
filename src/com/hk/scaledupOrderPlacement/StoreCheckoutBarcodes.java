@@ -1,5 +1,7 @@
 package com.hk.scaledupOrderPlacement;
 
+import com.hk.util.TestUtil;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -28,7 +30,8 @@ public class StoreCheckoutBarcodes {
         //int warehouseId = 1003;
         int warehouseId = warehouse;
         Class.forName("com.mysql.jdbc.Driver");
-        Connection conn = DriverManager.getConnection("jdbc:mysql://192.168.70.27/hk_qa", "hkadmin", "admin2K11!");
+        //Connection conn = DriverManager.getConnection("jdbc:mysql://192.168.70.27/hk_qa", "hkadmin", "admin2K11!");
+        Connection conn = DriverManager.getConnection(TestUtil.getDBURL() + "hk_qa", TestUtil.getDBUser(), TestUtil.getDBPassword());
         PreparedStatement pstmt = conn.prepareStatement("SELECT si.barcode FROM `sku` s,`sku_group` sg, `sku_item` si WHERE s.`id`=sg.`sku_id` AND sg.`id`=si.`sku_group_id` AND\n" +
                 "s.`warehouse_id`= ? AND s.product_variant_id= ? AND si.`sku_item_status_id`=10 limit 1; ");
 

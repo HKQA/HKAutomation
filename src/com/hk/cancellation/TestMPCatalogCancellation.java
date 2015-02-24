@@ -5,6 +5,7 @@ import com.hk.commonProperties.SharedProperties;
 import com.hk.elementLocators.LoginPage;
 import com.hk.property.PropertyHelper;
 import com.hk.recorder.Browse;
+import com.hk.recorder.VideoRecorder;
 import com.hk.scaledupOrderPlacement.AppSpecificReusableMethods;
 import com.hk.util.TestUtil;
 import org.apache.commons.io.FileUtils;
@@ -37,6 +38,7 @@ public class TestMPCatalogCancellation {
     AppSpecificReusableMethods reusableMethods = new AppSpecificReusableMethods();
     CodConfirmation codconfirmation = new CodConfirmation();
     FileWriter fw = null;
+    VideoRecorder recorder = new VideoRecorder();
 
     @BeforeMethod
     public void isSkip()
@@ -72,12 +74,15 @@ public class TestMPCatalogCancellation {
 
         }
 
+        recorder.stopRecording();
         fw.close();
         SharedProperties.driver.quit();
     }
 
     @Test(enabled = false)
     public void testMPCatalogCancellation() throws Exception {
+
+        recorder.startRecording();
 
         System.out.println("Inside testMPCatalogCancellation method");
         fw = new FileWriter("C:\\Workspace\\Automation_testing_v4_Vipul\\logs\\" + new SimpleDateFormat("ddMMyyyy").format(new Date())+"_MPCatalogCancellation" + ".txt", true);
@@ -103,7 +108,8 @@ public class TestMPCatalogCancellation {
         fw.append("\n"+ "Order Id for Market Place Cancellation from catalog = " + orderId);
 
         String finalOrderId = orderId.substring(10);
-        SharedProperties.openBrowser(TestUtil.getCOD_Confirm_URL(), TestUtil.getBrowser());
+        //SharedProperties.openBrowser(TestUtil.getCOD_Confirm_URL(), TestUtil.getBrowser());
+        SharedProperties.driver.navigate().to(TestUtil.getCOD_Confirm_URL());
         SharedProperties.sendKeys(codconfirmation.getEmail(), TestUtil.getCOD_Confirm_User(), SharedProperties.driver);
         SharedProperties.sendKeys(codconfirmation.getPassword(), TestUtil.getCOD_Confirm_Password(), SharedProperties.driver);
         SharedProperties.Click(codconfirmation.getLogin(), SharedProperties.driver);
