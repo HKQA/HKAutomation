@@ -107,6 +107,7 @@ public class DwarkaStoreRPUCheckin {
         SharedProperties.driver.findElement(By.linkText("Edit")).click();
         SharedProperties.driver.findElement(By.xpath("//*[@id = 'pincode']")).clear();
         SharedProperties.driver.findElement(By.xpath("//*[@id = 'pincode']")).sendKeys(TestUtil.excel.getCellData("DWARKA_Store", "Test Scenario", 19));
+        Thread.sleep(3000);
         SharedProperties.driver.findElement(By.xpath("//*[@name = 'updateAddressForUser']")).click();
         reusableMethods.doCODPayment();
         String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div/div[1]/p[2]")).getText();
