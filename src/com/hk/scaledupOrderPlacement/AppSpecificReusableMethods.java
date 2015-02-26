@@ -27,7 +27,7 @@ public class AppSpecificReusableMethods {
     {
         SharedProperties.sendKeys(loginpage.getEmailIdTextBox(), "vipul.j@healthkart.com", SharedProperties.driver);
 
-        SharedProperties.sendKeys(loginpage.getPasswordTextBox(), "vipul", SharedProperties.driver);
+        SharedProperties.sendKeys(loginpage.getPasswordTextBox(), "Vipul.jain", SharedProperties.driver);
 
         SharedProperties.Click(loginpage.getSignInBtn(), SharedProperties.driver);
 
