@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c26b27e7-3829-4ab4-9fbd-06b12c07466d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/scaledupOrderPlacement/AppSpecificReusableMethods.java" afterPath="$PROJECT_DIR$/src/com/hk/scaledupOrderPlacement/AppSpecificReusableMethods.java" />
+      <change type="MOVED" beforePath="C:\Workspace\Automation_testing_v4_Vipul\test-output\junitreports\TEST-com.hk.orderPlacement.SignupCODorder.xml" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.orderPlacement.SignupCodOrder.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/DwarkaStoreAutoFlipping.java" afterPath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/DwarkaStoreAutoFlipping.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.orderPlacement.ExistingCodPlacement.xml" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.orderPlacement.ExistingCodPlacement.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/emailable-report.html" afterPath="$PROJECT_DIR$/test-output/emailable-report.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/index.html" afterPath="$PROJECT_DIR$/test-output/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/TestNG Test/methods-alphabetical.html" afterPath="$PROJECT_DIR$/test-output/old/TestNG Test/methods-alphabetical.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/TestNG Test/methods.html" afterPath="$PROJECT_DIR$/test-output/old/TestNG Test/methods.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/testng-results.xml" afterPath="$PROJECT_DIR$/test-output/testng-results.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Automation_testing_v4.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -143,9 +151,60 @@
     <file path="/HYDCFARtoTest.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424762998361" ignored="false" />
     <file path="/HYDCFARpuTest.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424345985237" ignored="false" />
     <file path="/PUNStoreAutoFlipping.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424781448645" ignored="false" />
-    <file path="/DwarkaStoreAutoFlipping.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424438679496" ignored="false" />
+    <file path="/DwarkaStoreAutoFlipping.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948527444" ignored="false" />
     <file path="/DwarkaStoreRTOCheckin.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424776342401" ignored="false" />
     <file path="/DwarkaStoreRPUCheckin.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424438800270" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/xml/com.hk.warehouseSpecific.DwarkaStoreAutoFlipping_results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357708" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/xml/com.hk.scaledupOrderPlacement.RPUTest_results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357708" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.warehouseSpecific.MUMSplitSOTest.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357708" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/xml/com.hk.scaledupOrderPlacement.RTOTest_results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357708" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/xml/com.hk.warehouseSpecific.MUMRtoTest_results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357708" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.warehouseSpecific.MUMRpuTest.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357708" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/xml/com.hk.warehouseSpecific.PUNStoreAutoFlipping_results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357708" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/xml/com.hk.orderPlacement.SignupOrderOnline_results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357708" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/xml/com.hk.orderPlacement.GuestCheckoutOnline_results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357709" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.warehouseSpecific.DwarkaStoreAutoFlipping.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357709" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/xml/com.hk.orderPlacement.GuestCheckoutCod_results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357709" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/xml/com.hk.scaledupOrderPlacement.SplitSOTest_results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357709" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.scaledupOrderPlacement.RTOTest.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357709" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/xml/com.hk.scaledupOrderPlacement.FlipTest_results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357709" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.warehouseSpecific.DwarkaStoreRPUCheckin.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357709" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/TestNG Test/testng-failed.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357709" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.warehouseSpecific.MUMRtoTest.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357709" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/xml/com.hk.warehouseSpecific.DwarkaStoreRPUCheckin_results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357709" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/testng-failed.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357709" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/xml/com.hk.poscheckout.POSCheckout_results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357709" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.orderPlacement.GuestCheckoutCod.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357709" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.cancellation.TestAquaCancellation.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357709" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.orderPlacement.GuestCheckoutOnline.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357709" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/xml/com.hk.scaledupOrderPlacement.StoreCheckoutTest_results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357709" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.orderPlacement.SignupOrderOnline.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357709" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.cancellation.TestWebCancellation.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357709" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.orderPlacement.ExistingOnlineOrder.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357709" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.warehouseSpecific.PUNStoreAutoFlipping.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357709" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/TestNG Test/HealthKart Automation Suite.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357709" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.scaledupOrderPlacement.SplitSOTest.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357709" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.warehouseSpecific.GGNRtoTest.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357709" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.scaledupOrderPlacement.RPUTest.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357709" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/xml/com.hk.cancellation.TestWebCancellation_results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357709" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/xml/com.hk.warehouseSpecific.MUMRpuTest_results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357709" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.poscheckout.POSCheckout.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357709" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/xml/com.hk.warehouseSpecific.MUMSplitSOTest_results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357709" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.scaledupOrderPlacement.AddressChangeTest.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357709" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/xml/com.hk.scaledupOrderPlacement.ExistingOnline_results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357709" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/xml/com.hk.orderPlacement.SignupCodOrder_results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357710" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/xml/com.hk.orderPlacement.ExistingOnlineOrder_results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357710" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/xml/com.hk.orderPlacement.CouponOnlineOrder_results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357710" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/xml/com.hk.orderPlacement.ExistingCodPlacement_results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357710" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.orderPlacement.CouponOnlineOrder.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357710" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/xml/com.hk.warehouseSpecific.GGNRtoTest_results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357710" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/xml/com.hk.scaledupOrderPlacement.AddressChangeTest_results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357710" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/xml/com.hk.cancellation.TestAquaCancellation_results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357710" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/xml/com.hk.warehouseSpecific.MUMFlipSOTest_results.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357710" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.warehouseSpecific.MUMFlipSOTest.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357710" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.scaledupOrderPlacement.ExistingOnline.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357710" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.scaledupOrderPlacement.StoreCheckoutTest.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357710" ignored="false" />
+    <file path="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.scaledupOrderPlacement.FlipTest.xml" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1424948357710" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -2360,7 +2419,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/hk/warehouseSpecific/DwarkaStoreAutoFlipping.java" line="108" class="com.hk.warehouseSpecific.DwarkaStoreAutoFlipping" package="com.hk.warehouseSpecific">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/hk/warehouseSpecific/DwarkaStoreAutoFlipping.java" line="109" class="com.hk.warehouseSpecific.DwarkaStoreAutoFlipping" package="com.hk.warehouseSpecific">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -2480,6 +2539,36 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/hk/warehouseSpecific/DwarkaStoreRPUCheckin.java" line="96" class="com.hk.warehouseSpecific.DwarkaStoreRPUCheckin" package="com.hk.warehouseSpecific">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/hk/warehouseSpecific/DwarkaStoreRTOCheckin.java" line="93" class="com.hk.warehouseSpecific.DwarkaStoreRTOCheckin" package="com.hk.warehouseSpecific">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
     </line_breakpoints>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
@@ -2516,7 +2605,7 @@
       <file leaf-file-name="DwarkaStoreAutoFlipping.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/hk/warehouseSpecific/DwarkaStoreAutoFlipping.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="33" selection-start="3853" selection-end="3853" vertical-scroll-proportion="0.86609685">
+            <state line="103" column="25" selection-start="4205" selection-end="4205" vertical-scroll-proportion="0.33333334">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3038#3046#0" expanded="true" />
@@ -2529,7 +2618,7 @@
       <file leaf-file-name="AppSpecificReusableMethods.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/scaledupOrderPlacement/AppSpecificReusableMethods.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="83" selection-start="958" selection-end="958" vertical-scroll-proportion="0.0">
+            <state line="25" column="16" selection-start="707" selection-end="707" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -2559,7 +2648,7 @@
       <file leaf-file-name="DwarkaStoreRPUCheckin.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/warehouseSpecific/DwarkaStoreRPUCheckin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="13" selection-start="1338" selection-end="1338" vertical-scroll-proportion="0.0">
+            <state line="96" column="0" selection-start="3315" selection-end="3315" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3206#3214#0" expanded="true" />
@@ -2572,7 +2661,7 @@
       <file leaf-file-name="DwarkaStoreRTOCheckin.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/warehouseSpecific/DwarkaStoreRTOCheckin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="233" column="106" selection-start="11774" selection-end="11774" vertical-scroll-proportion="0.0">
+            <state line="233" column="66" selection-start="11728" selection-end="11774" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3159#3167#0" expanded="true" />
@@ -2626,7 +2715,6 @@
         <option value="$PROJECT_DIR$/src/com/hk/warehouseSpecific/HYDCFARpuTest.java" />
         <option value="$PROJECT_DIR$/src/com/hk/scaledupOrderPlacement/DoRPU.java" />
         <option value="$PROJECT_DIR$/src/com/hk/warehouseSpecific/HYDCFACancellation.java" />
-        <option value="$PROJECT_DIR$/src/com/hk/warehouseSpecific/DwarkaStoreAutoFlipping.java" />
         <option value="$PROJECT_DIR$/src/com/hk/warehouseSpecific/DwarkaStoreRPUCheckin.java" />
         <option value="$PROJECT_DIR$/src/com/hk/warehouseSpecific/HYDCFARtoTest.java" />
         <option value="$PROJECT_DIR$/src/com/hk/warehouseSpecific/DwarkaStoreRTOCheckin.java" />
@@ -2638,6 +2726,7 @@
         <option value="$PROJECT_DIR$/src/com/hk/warehouseSpecific/MUMCancellation.java" />
         <option value="$PROJECT_DIR$/src/com/hk/variants/GetVariants.java" />
         <option value="$PROJECT_DIR$/src/com/hk/scaledupOrderPlacement/AppSpecificReusableMethods.java" />
+        <option value="$PROJECT_DIR$/src/com/hk/warehouseSpecific/DwarkaStoreAutoFlipping.java" />
       </list>
     </option>
   </component>
@@ -3026,33 +3115,7 @@
       <recent name="com.hk.orderPlacement" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DwarkaStoreRTOCheckin">
-    <configuration default="false" name="StoreCheckoutBarcodes" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.hk.scaledupOrderPlacement.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.hk.scaledupOrderPlacement.StoreCheckoutBarcodes" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Automation_testing_v4" />
-      <envs />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <ConfigurationWrapper RunnerId="Debug" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="TestNG.C:/Workspace/Automation_testing_v4_Vipul/testng.xml">
     <configuration default="false" name="HYDCFARtoTest" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -3164,6 +3227,40 @@
       <envs />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Debug" />
+      <method />
+    </configuration>
+    <configuration default="false" name="$PROJECT_DIR$/testng.xml" type="TestNG" factoryName="TestNG" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Automation_testing_v4" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="62215" />
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="true" />
       </RunnerSettings>
@@ -3319,19 +3416,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.StoreCheckoutBarcodes" />
-      <item index="1" class="java.lang.String" itemvalue="Application.HYDCFARtoTest" />
-      <item index="2" class="java.lang.String" itemvalue="Application.HYDCFACancellation" />
-      <item index="3" class="java.lang.String" itemvalue="TestNG.MUMRtoTest.testMUMRto" />
-      <item index="4" class="java.lang.String" itemvalue="Application.DwarkaStoreRTOCheckin" />
+      <item index="0" class="java.lang.String" itemvalue="Application.HYDCFARtoTest" />
+      <item index="1" class="java.lang.String" itemvalue="Application.HYDCFACancellation" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.MUMRtoTest.testMUMRto" />
+      <item index="3" class="java.lang.String" itemvalue="Application.DwarkaStoreRTOCheckin" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.C:/Workspace/Automation_testing_v4_Vipul/testng.xml" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.DwarkaStoreRTOCheckin" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.MUMRtoTest.testMUMRto" />
-        <item index="2" class="java.lang.String" itemvalue="Application.HYDCFACancellation" />
-        <item index="3" class="java.lang.String" itemvalue="Application.HYDCFARtoTest" />
-        <item index="4" class="java.lang.String" itemvalue="Application.StoreCheckoutBarcodes" />
+        <item index="0" class="java.lang.String" itemvalue="TestNG.C:/Workspace/Automation_testing_v4_Vipul/testng.xml" />
+        <item index="1" class="java.lang.String" itemvalue="Application.DwarkaStoreRTOCheckin" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.MUMRtoTest.testMUMRto" />
+        <item index="3" class="java.lang.String" itemvalue="Application.HYDCFACancellation" />
+        <item index="4" class="java.lang.String" itemvalue="Application.HYDCFARtoTest" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -3378,7 +3475,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -3400,7 +3497,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17424242" sideWeight="0.7025641" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17424242" sideWeight="0.7025641" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4051282" sideWeight="0.67045456" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.63247865" order="10" side_tool="true" content_ui="tabs" />
@@ -3544,17 +3641,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/warehouseSpecific/DwarkaStoreRTOCheckin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="233" column="106" selection-start="11774" selection-end="11774" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3159#3167#0" expanded="true" />
-            <element signature="e#3229#3237#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/warehouseSpecific/GGNCancellation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="13" selection-start="832" selection-end="832" vertical-scroll-proportion="0.0">
@@ -3606,16 +3692,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/scaledupOrderPlacement/AppSpecificReusableMethods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="83" selection-start="958" selection-end="958" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/warehouseSpecific/DwarkaStoreRPUCheckin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="13" selection-start="1338" selection-end="1338" vertical-scroll-proportion="0.0">
+        <state line="96" column="0" selection-start="3315" selection-end="3315" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3206#3214#0" expanded="true" />
@@ -3624,9 +3703,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/warehouseSpecific/DwarkaStoreRTOCheckin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="233" column="66" selection-start="11728" selection-end="11774" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3159#3167#0" expanded="true" />
+            <element signature="e#3229#3237#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/scaledupOrderPlacement/AppSpecificReusableMethods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="16" selection-start="707" selection-end="707" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/warehouseSpecific/DwarkaStoreAutoFlipping.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="33" selection-start="3853" selection-end="3853" vertical-scroll-proportion="0.86609685">
+        <state line="103" column="25" selection-start="4205" selection-end="4205" vertical-scroll-proportion="0.33333334">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3038#3046#0" expanded="true" />
