@@ -83,7 +83,7 @@ public class MUMRpuTest {
         reusableMethods.setUserCredentials();
         reusableMethods.selectDeliveryAddress();
         reusableMethods.doCODPayment();
-        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div/div[1]/p[2]")).getText();
+        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[7]/div/div[1]/p[2]")).getText();
         System.out.println(orderId);
         String finalOrderId = orderId.substring(10);
         soDetails.orderIdSoDetails = finalOrderId;

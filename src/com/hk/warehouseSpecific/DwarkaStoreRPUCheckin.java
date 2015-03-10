@@ -51,6 +51,8 @@ public class DwarkaStoreRPUCheckin {
     ShipmentAwaitingQueue shipmentAwaitingQueue = new ShipmentAwaitingQueue();
     DeliveryAwaitingQueue deliveryAwaitingQueue = new DeliveryAwaitingQueue();
     FetchBarcodeRTO fetchBarcodeRTO = new FetchBarcodeRTO();
+    FetchPinCodeAndVariantId fetchPinCodeAndVariantId = new FetchPinCodeAndVariantId();
+
 
 
     @AfterMethod
@@ -96,6 +98,8 @@ public class DwarkaStoreRPUCheckin {
 
         SharedProperties.openBrowser(TestUtil.getURL(), TestUtil.getBrowser());
         String variant = null;
+        fetchPinCodeAndVariantId.getPinCodeAndVariantId(1003);
+        Thread.sleep(3000);
         variant = TestUtil.excel.getCellData("DWARKA_Store", "Test Scenario", 16);
         SharedProperties.driver.navigate().to(TestUtil.getURL()+"/sv/oh-yeah!-isolate/SP-29982?navKey=VRNT-"+ variant);
         Thread.sleep(2000);
@@ -110,7 +114,7 @@ public class DwarkaStoreRPUCheckin {
         Thread.sleep(3000);
         SharedProperties.driver.findElement(By.xpath("//*[@name = 'updateAddressForUser']")).click();
         reusableMethods.doCODPayment();
-        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div/div[1]/p[2]")).getText();
+        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[7]/div/div[1]/p[2]")).getText();
         System.out.println(orderId);
         String finalOrderId = orderId.substring(10);
         soDetails.orderIdSoDetails = finalOrderId;

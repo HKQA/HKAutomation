@@ -72,6 +72,18 @@ public class DoRTO {
 
 
             }
+            if(warehouseId == 1006)
+            {
+                System.out.print("\n Selected MUM Aqua CFA");
+                WebElement WarehouseDropDownList = SharedProperties.driver.findElement(By.xpath("//*[@id=\"selectWHForm\"]/select"));
+                Select clickWarehouse = new Select(WarehouseDropDownList);
+                clickWarehouse.selectByVisibleText("MUM Aqua CFA");
+                SharedProperties.Click(adminHome.getSaveBtn(), SharedProperties.driver);
+                Thread.sleep(2000);
+
+
+
+            }
 
             if(warehouseId == 10)
             {
@@ -141,6 +153,17 @@ public class DoRTO {
                 WebElement WarehouseDropDownList = SharedProperties.driver.findElement(By.xpath("/*//*[@id=\"selectWHForm\"]/select"));
                 Select clickWarehouse = new Select(WarehouseDropDownList);
                 clickWarehouse.selectByVisibleText("Hyderabad Bright CFA");
+                SharedProperties.Click(adminHome.getSaveBtn(), SharedProperties.driver);
+                Thread.sleep(2000);
+
+            }
+            else if (ForeignWarehouseId.equals("MUM Bright CFA"))
+            {
+
+                System.out.print("\n MUM Bright CFA");
+                WebElement WarehouseDropDownList = SharedProperties.driver.findElement(By.xpath("/*//*[@id=\"selectWHForm\"]/select"));
+                Select clickWarehouse = new Select(WarehouseDropDownList);
+                clickWarehouse.selectByVisibleText("MUM Bright CFA");
                 SharedProperties.Click(adminHome.getSaveBtn(), SharedProperties.driver);
                 Thread.sleep(2000);
 

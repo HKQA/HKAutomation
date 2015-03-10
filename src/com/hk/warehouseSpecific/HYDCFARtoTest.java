@@ -9,6 +9,7 @@ import com.hk.scaledupOrderPlacement.AppSpecificReusableMethods;
 import com.hk.scaledupOrderPlacement.DoRTO;
 import com.hk.util.TestUtil;
 import org.openqa.selenium.By;
+import org.testng.annotations.Test;
 
 /**
  * Created with IntelliJ IDEA.
@@ -26,6 +27,8 @@ public class HYDCFARtoTest {
     SoDetails soDetails = new SoDetails();
     DoRTO doRTO = new DoRTO();
 
+
+    @Test(enabled = false)
     public void testHYDCFARto() throws Exception {
         SharedProperties.openBrowser(TestUtil.getURL(), TestUtil.getBrowser());
         String variant = null;
@@ -37,9 +40,14 @@ public class HYDCFARtoTest {
         browse.proceedToCheckoutMultiVariant();
         SharedProperties.Click(loginPage.getSignInCheckbox(), SharedProperties.driver);
         reusableMethods.setUserCredentials();
-        reusableMethods.selectDeliveryAddress();
+        //reusableMethods.selectDeliveryAddress();
+        SharedProperties.driver.findElement(By.linkText("Edit")).click();
+        SharedProperties.driver.findElement(By.xpath("//*[@id = 'pincode']")).clear();
+        SharedProperties.driver.findElement(By.xpath("//*[@id = 'pincode']")).sendKeys("500081");
+        Thread.sleep(3000);
+        SharedProperties.driver.findElement(By.xpath("//*[@name = 'updateAddressForUser']")).click();
         reusableMethods.doCODPayment();
-        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div/div[1]/p[2]")).getText();
+        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[7]/div/div[1]/p[2]")).getText();
         System.out.println(orderId);
         String finalOrderId = orderId.substring(10);
         soDetails.orderIdSoDetails = finalOrderId;

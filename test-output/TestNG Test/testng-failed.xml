@@ -9,69 +9,55 @@
   </listeners>
   <test name="HealthKart Automation Suite(failed)">
     <classes>
+      <class name="com.hk.warehouseSpecific.MUMCancellation">
+        <methods>
+          <include name="testMUMCancellation"/>
+          <include name="doAfter"/>
+          <include name="isSkip"/>
+        </methods>
+      </class> <!-- com.hk.warehouseSpecific.MUMCancellation -->
+      <class name="com.hk.warehouseSpecific.PUNStoreAutoFlipping">
+        <methods>
+          <include name="testPUNStoreAutoFlipping"/>
+          <include name="doAfter"/>
+          <include name="isSkip"/>
+        </methods>
+      </class> <!-- com.hk.warehouseSpecific.PUNStoreAutoFlipping -->
+      <class name="com.hk.scaledupOrderPlacement.ExistingOnline">
+        <methods>
+          <include name="isSkip"/>
+          <include name="test"/>
+          <include name="doAfter"/>
+        </methods>
+      </class> <!-- com.hk.scaledupOrderPlacement.ExistingOnline -->
+      <class name="com.hk.scaledupOrderPlacement.RTOTest">
+        <methods>
+          <include name="isSkip"/>
+          <include name="doAfter"/>
+          <include name="RTOTest"/>
+        </methods>
+      </class> <!-- com.hk.scaledupOrderPlacement.RTOTest -->
+      <class name="com.hk.poscheckout.POSCheckout">
+        <methods>
+          <include name="doAfter"/>
+          <include name="isSkip"/>
+          <include name="posCheckout"/>
+        </methods>
+      </class> <!-- com.hk.poscheckout.POSCheckout -->
       <class name="com.hk.warehouseSpecific.GGNRtoTest">
         <methods>
+          <include name="doAfter"/>
           <include name="isSkip"/>
           <include name="testGGNRto"/>
         </methods>
       </class> <!-- com.hk.warehouseSpecific.GGNRtoTest -->
-      <class name="com.hk.scaledupOrderPlacement.RTOTest">
-        <methods>
-          <include name="isSkip"/>
-          <include name="RTOTest"/>
-        </methods>
-      </class> <!-- com.hk.scaledupOrderPlacement.RTOTest -->
-      <class name="com.hk.warehouseSpecific.PUNStoreAutoFlipping">
-        <methods>
-          <include name="testPUNStoreAutoFlipping"/>
-          <include name="isSkip"/>
-        </methods>
-      </class> <!-- com.hk.warehouseSpecific.PUNStoreAutoFlipping -->
-      <class name="com.hk.warehouseSpecific.DwarkaStoreRPUCheckin">
-        <methods>
-          <include name="doAfter"/>
-          <include name="testDwarkaStoreRPUCheckin"/>
-          <include name="isSkip"/>
-        </methods>
-      </class> <!-- com.hk.warehouseSpecific.DwarkaStoreRPUCheckin -->
-      <class name="com.hk.cancellation.TestAquaCancellation">
-        <methods>
-          <include name="isSkip"/>
-          <include name="testAquaCancellation"/>
-        </methods>
-      </class> <!-- com.hk.cancellation.TestAquaCancellation -->
-      <class name="com.hk.warehouseSpecific.MUMRtoTest">
-        <methods>
-          <include name="testMUMRto"/>
-          <include name="isSkip"/>
-        </methods>
-      </class> <!-- com.hk.warehouseSpecific.MUMRtoTest -->
-      <class name="com.hk.orderPlacement.SignupOrderOnline">
-        <methods>
-          <include name="isSkip"/>
-          <include name="login"/>
-          <include name="config"/>
-        </methods>
-      </class> <!-- com.hk.orderPlacement.SignupOrderOnline -->
       <class name="com.hk.scaledupOrderPlacement.FlipTest">
         <methods>
           <include name="doFlipTest"/>
           <include name="isSkip"/>
+          <include name="doAfter"/>
         </methods>
       </class> <!-- com.hk.scaledupOrderPlacement.FlipTest -->
-      <class name="com.hk.scaledupOrderPlacement.RPUTest">
-        <methods>
-          <include name="isSkip"/>
-          <include name="testRPU"/>
-        </methods>
-      </class> <!-- com.hk.scaledupOrderPlacement.RPUTest -->
-      <class name="com.hk.orderPlacement.ExistingOnlineOrder">
-        <methods>
-          <include name="isSkip"/>
-          <include name="Config"/>
-          <include name="login"/>
-        </methods>
-      </class> <!-- com.hk.orderPlacement.ExistingOnlineOrder -->
       <class name="com.hk.orderPlacement.CouponOnlineOrder">
         <methods>
           <include name="Config"/>
@@ -79,94 +65,144 @@
           <include name="login"/>
         </methods>
       </class> <!-- com.hk.orderPlacement.CouponOnlineOrder -->
-      <class name="com.hk.scaledupOrderPlacement.SplitSOTest">
-        <methods>
-          <include name="isSkip"/>
-          <include name="doSplitSOTest"/>
-        </methods>
-      </class> <!-- com.hk.scaledupOrderPlacement.SplitSOTest -->
       <class name="com.hk.orderPlacement.GuestCheckoutCod">
         <methods>
+          <include name="doAfter"/>
           <include name="config"/>
-          <include name="login"/>
+          <include name="login" invocation-numbers="0"/>
           <include name="isSkip"/>
         </methods>
       </class> <!-- com.hk.orderPlacement.GuestCheckoutCod -->
-      <class name="com.hk.cancellation.TestWebCancellation">
+      <class name="com.hk.orderPlacement.ExistingOnlineOrder">
         <methods>
-          <include name="testWebCancellation"/>
-          <include name="isSkip"/>
-        </methods>
-      </class> <!-- com.hk.cancellation.TestWebCancellation -->
-      <class name="com.hk.warehouseSpecific.MUMSplitSOTest">
-        <methods>
-          <include name="testMUMSplitSO"/>
-          <include name="isSkip"/>
-        </methods>
-      </class> <!-- com.hk.warehouseSpecific.MUMSplitSOTest -->
-      <class name="com.hk.orderPlacement.ExistingCodPlacement">
-        <methods>
+          <include name="doAfter"/>
           <include name="isSkip"/>
           <include name="Config"/>
-          <include name="login"/>
+          <include name="login" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.hk.orderPlacement.ExistingCodPlacement -->
-      <class name="com.hk.scaledupOrderPlacement.AddressChangeTest">
-        <methods>
-          <include name="testAddressChange"/>
-          <include name="isSkip"/>
-        </methods>
-      </class> <!-- com.hk.scaledupOrderPlacement.AddressChangeTest -->
-      <class name="com.hk.scaledupOrderPlacement.ExistingOnline">
-        <methods>
-          <include name="isSkip"/>
-          <include name="test"/>
-        </methods>
-      </class> <!-- com.hk.scaledupOrderPlacement.ExistingOnline -->
-      <class name="com.hk.warehouseSpecific.MUMRpuTest">
-        <methods>
-          <include name="isSkip"/>
-          <include name="testMUMRpu"/>
-        </methods>
-      </class> <!-- com.hk.warehouseSpecific.MUMRpuTest -->
-      <class name="com.hk.warehouseSpecific.DwarkaStoreAutoFlipping">
-        <methods>
-          <include name="isSkip"/>
-          <include name="doAfter"/>
-        </methods>
-      </class> <!-- com.hk.warehouseSpecific.DwarkaStoreAutoFlipping -->
+      </class> <!-- com.hk.orderPlacement.ExistingOnlineOrder -->
       <class name="com.hk.orderPlacement.SignupCodOrder">
         <methods>
           <include name="isSkip"/>
+          <include name="doAfter"/>
           <include name="config"/>
-          <include name="login"/>
+          <include name="login" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.hk.orderPlacement.SignupCodOrder -->
+      <class name="com.hk.cancellation.TestWebCancellation">
+        <methods>
+          <include name="testWebCancellation"/>
+          <include name="doAfter"/>
+          <include name="isSkip"/>
+        </methods>
+      </class> <!-- com.hk.cancellation.TestWebCancellation -->
       <class name="com.hk.orderPlacement.GuestCheckoutOnline">
         <methods>
+          <include name="doAfter"/>
           <include name="Config"/>
-          <include name="login"/>
+          <include name="login" invocation-numbers="0"/>
           <include name="isSkip"/>
         </methods>
       </class> <!-- com.hk.orderPlacement.GuestCheckoutOnline -->
-      <class name="com.hk.poscheckout.POSCheckout">
+      <class name="com.hk.scaledupOrderPlacement.RPUTest">
         <methods>
+          <include name="doAfter"/>
           <include name="isSkip"/>
-          <include name="posCheckout"/>
+          <include name="testRPU"/>
         </methods>
-      </class> <!-- com.hk.poscheckout.POSCheckout -->
-      <class name="com.hk.warehouseSpecific.MUMFlipSOTest">
+      </class> <!-- com.hk.scaledupOrderPlacement.RPUTest -->
+      <class name="com.hk.cancellation.TestAquaCancellation">
         <methods>
+          <include name="doAfter"/>
           <include name="isSkip"/>
-          <include name="testMUMFlipSO"/>
+          <include name="testAquaCancellation"/>
         </methods>
-      </class> <!-- com.hk.warehouseSpecific.MUMFlipSOTest -->
+      </class> <!-- com.hk.cancellation.TestAquaCancellation -->
       <class name="com.hk.scaledupOrderPlacement.StoreCheckoutTest">
         <methods>
           <include name="testStoreCheckout"/>
           <include name="isSkip"/>
+          <include name="doAfter"/>
         </methods>
       </class> <!-- com.hk.scaledupOrderPlacement.StoreCheckoutTest -->
+      <class name="com.hk.orderPlacement.ExistingCodPlacement">
+        <methods>
+          <include name="doAfter"/>
+          <include name="isSkip"/>
+          <include name="Config"/>
+          <include name="login" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.hk.orderPlacement.ExistingCodPlacement -->
+      <class name="com.hk.warehouseSpecific.MUMRtoTest">
+        <methods>
+          <include name="testMUMRto"/>
+          <include name="doAfter"/>
+          <include name="isSkip"/>
+        </methods>
+      </class> <!-- com.hk.warehouseSpecific.MUMRtoTest -->
+      <class name="com.hk.warehouseSpecific.DwarkaStoreAutoFlipping">
+        <methods>
+          <include name="doAfter"/>
+          <include name="isSkip"/>
+          <include name="testDwarkaStoreAutoFlipping"/>
+        </methods>
+      </class> <!-- com.hk.warehouseSpecific.DwarkaStoreAutoFlipping -->
+      <class name="com.hk.warehouseSpecific.MUMSplitSOTest">
+        <methods>
+          <include name="testMUMSplitSO"/>
+          <include name="isSkip"/>
+          <include name="doAfter"/>
+        </methods>
+      </class> <!-- com.hk.warehouseSpecific.MUMSplitSOTest -->
+      <class name="com.hk.scaledupOrderPlacement.AddressChangeTest">
+        <methods>
+          <include name="testAddressChange"/>
+          <include name="doAfter"/>
+          <include name="isSkip"/>
+        </methods>
+      </class> <!-- com.hk.scaledupOrderPlacement.AddressChangeTest -->
+      <class name="com.hk.warehouseSpecific.HYDCFACancellation">
+        <methods>
+          <include name="isSkip"/>
+          <include name="testHYDCFACancellation"/>
+        </methods>
+      </class> <!-- com.hk.warehouseSpecific.HYDCFACancellation -->
+      <class name="com.hk.warehouseSpecific.MUMFlipSOTest">
+        <methods>
+          <include name="isSkip"/>
+          <include name="doAfter"/>
+          <include name="testMUMFlipSO"/>
+        </methods>
+      </class> <!-- com.hk.warehouseSpecific.MUMFlipSOTest -->
+      <class name="com.hk.scaledupOrderPlacement.SplitSOTest">
+        <methods>
+          <include name="isSkip"/>
+          <include name="doAfter"/>
+          <include name="doSplitSOTest"/>
+        </methods>
+      </class> <!-- com.hk.scaledupOrderPlacement.SplitSOTest -->
+      <class name="com.hk.warehouseSpecific.DwarkaStoreRPUCheckin">
+        <methods>
+          <include name="doAfter"/>
+          <include name="testDwarkaStoreRPUCheckin"/>
+          <include name="isSkip"/>
+        </methods>
+      </class> <!-- com.hk.warehouseSpecific.DwarkaStoreRPUCheckin -->
+      <class name="com.hk.orderPlacement.SignupOrderOnline">
+        <methods>
+          <include name="isSkip"/>
+          <include name="doAfter"/>
+          <include name="login" invocation-numbers="0"/>
+          <include name="config"/>
+        </methods>
+      </class> <!-- com.hk.orderPlacement.SignupOrderOnline -->
+      <class name="com.hk.warehouseSpecific.MUMRpuTest">
+        <methods>
+          <include name="isSkip"/>
+          <include name="doAfter"/>
+          <include name="testMUMRpu"/>
+        </methods>
+      </class> <!-- com.hk.warehouseSpecific.MUMRpuTest -->
     </classes>
   </test> <!-- HealthKart Automation Suite(failed) -->
 </suite> <!-- Failed suite [TestNG Test] -->

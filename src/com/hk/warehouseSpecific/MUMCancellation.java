@@ -17,6 +17,7 @@ import org.testng.ITestResult;
 import org.testng.SkipException;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 import java.io.File;
 import java.io.IOException;
@@ -67,6 +68,7 @@ public class MUMCancellation {
     }
 
 
+    @Test
     public void testMUMCancellation() throws Exception {
         String shippingOrderId = null;
         int warehouseId = 0;
@@ -83,7 +85,7 @@ public class MUMCancellation {
         reusableMethods.setUserCredentials();
         reusableMethods.selectDeliveryAddress();
         reusableMethods.doCODPayment();
-        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div/div[1]/p[2]")).getText();
+        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[7]/div/div[1]/p[2]")).getText();
         System.out.println(orderId);
         String finalOrderId = orderId.substring(10);
         soDetails.orderIdSoDetails = finalOrderId;

@@ -47,6 +47,7 @@ public class PUNStoreAutoFlipping {
     StoreCheckoutBarcodes storeBarcodes = new StoreCheckoutBarcodes();
     ShipmentAwaitingQueue shipmentAwaitingQueue = new ShipmentAwaitingQueue();
     DeliveryAwaitingQueue deliveryAwaitingQueue = new DeliveryAwaitingQueue();
+    FetchPinCodeAndVariantId fetchPinCodeAndVariantId = new FetchPinCodeAndVariantId();
 
 
     @BeforeMethod
@@ -91,6 +92,7 @@ public class PUNStoreAutoFlipping {
 
         SharedProperties.openBrowser(TestUtil.getURL(), TestUtil.getBrowser());
         String variant = null;
+        fetchPinCodeAndVariantId.getPinCodeAndVariantId(301);
         variant = TestUtil.excel.getCellData("PUN_Store", "Test Scenario", 8);
         SharedProperties.driver.navigate().to(TestUtil.getURL()+"/sv/oh-yeah!-isolate/SP-29982?navKey=VRNT-"+ variant);
         Thread.sleep(2000);
@@ -102,9 +104,9 @@ public class PUNStoreAutoFlipping {
         SharedProperties.driver.findElement(By.linkText("Edit")).click();
         SharedProperties.driver.findElement(By.xpath("//*[@id = 'pincode']")).clear();
         SharedProperties.driver.findElement(By.xpath("//*[@id = 'pincode']")).sendKeys(TestUtil.excel.getCellData("PUN_Store", "Test Scenario", 19));
-        SharedProperties.driver.findElement(By.xpath("//*[@name = updateAddressForUser]")).click();
+        SharedProperties.driver.findElement(By.xpath("//*[@name = 'updateAddressForUser']")).click();
         reusableMethods.doCODPayment();
-        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div/div[1]/p[2]")).getText();
+        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[7]/div/div[1]/p[2]")).getText();
         System.out.println(orderId);
         String finalOrderId = orderId.substring(10);
         soDetails.orderIdSoDetails = finalOrderId;
@@ -225,6 +227,14 @@ public class PUNStoreAutoFlipping {
 
 
 
+
+
+    }
+
+    public static void main(String[] args) throws Exception {
+        PUNStoreAutoFlipping test = new PUNStoreAutoFlipping();
+
+        test.testPUNStoreAutoFlipping();
 
 
     }

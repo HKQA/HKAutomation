@@ -8,34 +8,29 @@ import com.hk.commonProperties.SharedProperties;
 import com.hk.elementLocators.LoginPage;
 import com.hk.orderCheckoutDto.SoDetails;
 import com.hk.orderCheckoutDto.SoDetailsDTO;
-import com.hk.property.PropertyHelper;
 import com.hk.recorder.Browse;
 import com.hk.recorder.MultipleVariant;
 import com.hk.scaledupOrderPlacement.AppSpecificReusableMethods;
 import com.hk.scaledupOrderPlacement.StoreCheckoutBarcodes;
 import com.hk.util.TestUtil;
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.ITestResult;
 import org.testng.SkipException;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
  * User: vipul.jain1
- * Date: 2/20/15
- * Time: 1:37 PM
+ * Date: 3/10/15
+ * Time: 1:14 PM
  * To change this template use File | Settings | File Templates.
  */
-public class DwarkaStoreAutoFlipping {
+public class GalleriaStoreAutoFlipping {
 
     Browse browse = new Browse();
     MultipleVariant multipleVariant = new MultipleVariant();
@@ -49,39 +44,23 @@ public class DwarkaStoreAutoFlipping {
     DeliveryAwaitingQueue deliveryAwaitingQueue = new DeliveryAwaitingQueue();
     FetchPinCodeAndVariantId fetchPinCodeAndVariantId = new FetchPinCodeAndVariantId();
 
-    @AfterMethod
-    public void doAfter(ITestResult result) throws IOException {
-
-        System.out.println("Inside doAfter method having AfterMethod annotation");
-
-        if (result.getStatus() == ITestResult.FAILURE) {
-            File screenshot = ((TakesScreenshot) SharedProperties.driver).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(screenshot, new File(System.getProperty("user.dir") + PropertyHelper.readProperty("screenshotFolder") + "\\DwarkaAutoFlipping.jpg"));
-        }
-
-
-        SharedProperties.driver.quit();
-    }
-
 
     @BeforeMethod
     public void isSkip()
     {
 
-        if(!(TestUtil.isExecutable("DwarkaStoreTest") && TestUtil.excel.getCellData("DWARKA_Store", "RunMode", 6).equalsIgnoreCase("Y") ) )
+        if(!(TestUtil.isExecutable("GalleriaStoreTest") && TestUtil.excel.getCellData("Galleria_Store", "RunMode", 6).equalsIgnoreCase("Y") ) )
         {
 
-            System.out.println("DwarkaAutoFlipping test would be skipped");
-            throw new SkipException("Skipping the DwarkaAutoFlip test case as RunMode is No");
+            System.out.println("GalleriaAutoFlipping test would be skipped");
+            throw new SkipException("Skipping the GalleriaAutoFlip test case as RunMode is No");
 
         }
 
     }
 
 
-    @Test
-    public void testDwarkaStoreAutoFlipping() throws Exception {
-
+    public void testGalleriaStoreAutoFlipping() throws Exception {
         String shippingOrderId = null;
         int warehouseId = 0;
 
@@ -91,9 +70,9 @@ public class DwarkaStoreAutoFlipping {
 
         SharedProperties.openBrowser(TestUtil.getURL(), TestUtil.getBrowser());
         String variant = null;
-        fetchPinCodeAndVariantId.getPinCodeAndVariantId(1003);
+        fetchPinCodeAndVariantId.getPinCodeAndVariantId(1004);
         Thread.sleep(3000);
-        variant = TestUtil.excel.getCellData("DWARKA_Store", "Test Scenario", 8);
+        variant = TestUtil.excel.getCellData("Galleria_Store", "Test Scenario", 8);
         SharedProperties.driver.navigate().to(TestUtil.getURL()+"/sv/oh-yeah!-isolate/SP-29982?navKey=VRNT-"+ variant);
         Thread.sleep(2000);
         SharedProperties.driver.findElement(By.xpath("//*[@value = 'Buy Now']")).click();
@@ -103,7 +82,7 @@ public class DwarkaStoreAutoFlipping {
         reusableMethods.setUserCredentials();
         SharedProperties.driver.findElement(By.linkText("Edit")).click();
         SharedProperties.driver.findElement(By.xpath("//*[@id = 'pincode']")).clear();
-        SharedProperties.driver.findElement(By.xpath("//*[@id = 'pincode']")).sendKeys(TestUtil.excel.getCellData("DWARKA_Store", "Test Scenario", 19));
+        SharedProperties.driver.findElement(By.xpath("//*[@id = 'pincode']")).sendKeys(TestUtil.excel.getCellData("Galleria_Store", "Test Scenario", 19));
         Thread.sleep(3000);
         SharedProperties.driver.findElement(By.xpath("//*[@name = 'updateAddressForUser']")).click();
         reusableMethods.doCODPayment();
@@ -119,8 +98,6 @@ public class DwarkaStoreAutoFlipping {
         SharedProperties.Click(loginPageAdmin.getLoginbtn(), SharedProperties.driver);
         for(SoDetailsDTO soDetailsDTO : soDetails.Sodetails())
         {
-
-
             shippingOrderId = soDetailsDTO.getSoGatewayOrderId();
             warehouseId = soDetailsDTO.getWarehouseId();
 
@@ -130,13 +107,14 @@ public class DwarkaStoreAutoFlipping {
 
             SharedProperties.driver.findElement(By.linkText("Admin Home")).click();
             Thread.sleep(3000);
-            if(warehouseId == 1003)
+
+            if(warehouseId == 1004)
             {
 
-                System.out.println("Selected Dwarka Aqua Store");
+                System.out.println("Selected Galleria Aqua Store");
                 WebElement WarehouseDropDownList = SharedProperties.driver.findElement(By.xpath("//*[@id=\"selectWHForm\"]/select"));
                 Select clickWarehouse = new Select(WarehouseDropDownList);
-                clickWarehouse.selectByVisibleText("Dwarka Aqua Store");
+                clickWarehouse.selectByVisibleText("Galleria Aqua Store");
                 SharedProperties.Click(adminHome.getSaveBtn(), SharedProperties.driver);
                 Thread.sleep(2000);
                 SharedProperties.driver.findElement(By.linkText("Search SO")).click();
@@ -164,6 +142,7 @@ public class DwarkaStoreAutoFlipping {
 
                 }
 
+
                 SharedProperties.driver.findElement(By.linkText("Store Manager")).click();
                 String parentWindowId = SharedProperties.driver.getWindowHandle();
                 //SharedProperties.driver.findElement(By.linkText("Checkout Order")).click();
@@ -186,18 +165,6 @@ public class DwarkaStoreAutoFlipping {
 
                 }
 
-                /*SharedProperties.driver.findElement(By.linkText("Store Manager")).click();
-                SharedProperties.driver.navigate().to(TestUtil.getAdminURL()+ "/courier/CreateUpdateShipment.action");
-                Thread.sleep(2000);
-                SharedProperties.driver.findElement(By.xpath("//*[@id = 'gatewayOrderId']")).sendKeys(shippingOrderId);
-                SharedProperties.driver.findElement(By.xpath("//*[@value = 'Search']")).click();
-                new Select(SharedProperties.driver.findElement(By.xpath("//*[@id=\"boxSize\"]"))).selectByVisibleText("L");
-                new Select(SharedProperties.driver.findElement(By.xpath("//*[@id=\"packer\"]"))).selectByVisibleText("L");
-                new Select(SharedProperties.driver.findElement(By.xpath("//*[@id=\"picker\"]"))).selectByVisibleText("10");
-                Thread.sleep(2000);
-                SharedProperties.driver.findElement(By.xpath("//*[@id = 'validate']")).click();
-                Thread.sleep(2000);
-                System.out.print("\n ************* SO Packed *************"); */
                 SharedProperties.driver.findElement(By.linkText("Store Manager")).click();
                 SharedProperties.driver.navigate().to(TestUtil.getAdminURL()+ "/queue/ShipmentAwaitingQueue.action");
                 SharedProperties.sendKeys(shipmentAwaitingQueue.getGatewayId(), shippingOrderId, SharedProperties.driver);
@@ -218,23 +185,29 @@ public class DwarkaStoreAutoFlipping {
                 System.out.print("\n ************* SO Delivered *************");
 
 
+
+
+
             }
 
+
+
+
+
         }
+
 
 
     }
 
 
     public static void main(String[] args) throws Exception {
-       DwarkaStoreAutoFlipping test = new DwarkaStoreAutoFlipping();
 
-        test.testDwarkaStoreAutoFlipping();
+        GalleriaStoreAutoFlipping test = new GalleriaStoreAutoFlipping();
 
-
+        test.testGalleriaStoreAutoFlipping();
 
 
     }
-
 
 }

@@ -32,7 +32,7 @@ public class GetVariants {
 
 
 
-        PreparedStatement pstmt = conn.prepareStatement("select a.id ,  count(*) from\n" +
+        /*PreparedStatement pstmt = conn.prepareStatement("select a.id ,  count(*) from\n" +
                 "(select id,old_variant_id,(CASE WHEN sv.id IS NULL THEN 1 ELSE (CASE WHEN (sv.bool_bitset % 12673 = 0) THEN 1 ELSE 0 END) END )hidden_flg, \n" +
                 "(CASE WHEN sv.id IS NULL THEN 1 ELSE (CASE WHEN (sv.bool_bitset % 2800733 =0) THEN 1 ELSE 0 END) END) deleted_flg,\n" +
                 "(CASE WHEN sv.id IS NULL THEN 1 ELSE (CASE WHEN (sv.bool_bitset % 164749 =0) THEN 1 ELSE 0 END) END) discontinue_flg,\n" +
@@ -49,7 +49,20 @@ public class GetVariants {
                 "group by 1\n" +
                 "having count(*) > 1\n" +
                 "order by a.old_variant_id limit 1 \n " +
-                ";") ;
+                ";") ;   */
+
+        PreparedStatement pstmt = conn.prepareStatement("select sv.id from hk_cat.store_variant sv join hk_cat.product_variant pv on sv.product_variant_id = pv.id\n" +
+                "join hk_cat.variant_inventory vi on pv.wms_variant_id = vi.wms_variant_id\n" +
+                "join store_category sc on sv.store_category_id = sc.id\n" +
+                "join store_variant_vendor svv on svv.store_variant_id = sv.id\n" +
+                "where sv.out_of_stock = 0 and sv.offer_price > 200 and sc.store_id = 1\n" +
+                "and vi.inventory > 0 and vi.location_code in (10, 20)\n" +
+                "and svv.vendor_id = 1 and svv.active = 1 and sv.indexable = 1\n" +
+                "and (sv.bool_bitset % 7 <> 0)\n" +
+                "group by vi.wms_variant_id\n" +
+                "having count(vi.id) > 1 limit 1;") ;
+
+
         ResultSet rs = pstmt.executeQuery();
 
         while (rs.next())
@@ -65,7 +78,7 @@ public class GetVariants {
 
         TestUtil.excel.setCellData("Flip", "VariantId", 2, productId);
 
-        PreparedStatement pstmt1 = conn.prepareStatement("select a.id ,  count(*) from\n" +
+        /*PreparedStatement pstmt1 = conn.prepareStatement("select a.id ,  count(*) from\n" +
                 "(select id,old_variant_id,(CASE WHEN sv.id IS NULL THEN 1 ELSE (CASE WHEN (sv.bool_bitset % 12673 = 0) THEN 1 ELSE 0 END) END )hidden_flg, \n" +
                 "(CASE WHEN sv.id IS NULL THEN 1 ELSE (CASE WHEN (sv.bool_bitset % 2800733 =0) THEN 1 ELSE 0 END) END) deleted_flg,\n" +
                 "(CASE WHEN sv.id IS NULL THEN 1 ELSE (CASE WHEN (sv.bool_bitset % 164749 =0) THEN 1 ELSE 0 END) END) discontinue_flg,\n" +
@@ -82,7 +95,18 @@ public class GetVariants {
                 "group by 1\n" +
                 "having count(*) = 1\n" +
                 "order by a.old_variant_id limit 1 \n" +
-                ";");
+                ";");  */
+
+        PreparedStatement pstmt1 = conn.prepareStatement("select sv.id from hk_cat.store_variant sv join hk_cat.product_variant pv on sv.product_variant_id = pv.id\n" +
+                "join hk_cat.variant_inventory vi on pv.wms_variant_id = vi.wms_variant_id\n" +
+                "join store_category sc on sv.store_category_id = sc.id\n" +
+                "join store_variant_vendor svv on svv.store_variant_id = sv.id\n" +
+                "where sv.out_of_stock = 0 and sv.offer_price > 200 and sc.store_id = 1\n" +
+                "and vi.inventory > 0 and vi.location_code in (10,20)\n" +
+                "and svv.vendor_id = 1 and svv.active = 1 and sv.indexable = 1\n" +
+                "and (sv.bool_bitset % 7 <> 0)\n" +
+                "group by vi.wms_variant_id\n" +
+                "having count(vi.id) = 1 limit 1;");
 
         ResultSet rs1 = pstmt1.executeQuery();
 

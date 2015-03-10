@@ -1,39 +1,43 @@
 package com.hk.warehouseSpecific;
 
+import com.hk.aquaElementLocators.AdminHome;
+import com.hk.aquaElementLocators.LoginPageAdmin;
 import com.hk.commonProperties.SharedProperties;
 import com.hk.elementLocators.LoginPage;
 import com.hk.orderCheckoutDto.SoDetails;
+import com.hk.orderCheckoutDto.SoDetailsDTO;
 import com.hk.recorder.Browse;
-import com.hk.recorder.MultipleVariant;
 import com.hk.scaledupOrderPlacement.AppSpecificReusableMethods;
-import com.hk.scaledupOrderPlacement.DoRPU;
 import com.hk.util.TestUtil;
 import org.openqa.selenium.By;
-import org.testng.annotations.Test;
 
 /**
  * Created with IntelliJ IDEA.
  * User: vipul.jain1
- * Date: 2/19/15
- * Time: 5:08 PM
+ * Date: 3/4/15
+ * Time: 4:28 PM
  * To change this template use File | Settings | File Templates.
  */
-public class HYDCFARpuTest {
+public class BLRCFACancellation {
 
     Browse browse = new Browse();
-    MultipleVariant multipleVariant = new MultipleVariant();
-    LoginPage loginPage = new LoginPage();
     AppSpecificReusableMethods reusableMethods = new AppSpecificReusableMethods();
+    LoginPage loginPage = new LoginPage();
+
     SoDetails soDetails = new SoDetails();
-    DoRPU doRPU = new DoRPU();
+    LoginPageAdmin loginPageAdmin = new LoginPageAdmin();
+    AdminHome adminHome = new AdminHome();
 
 
-    @Test(enabled = false)
-    public void testHYDCFARpu() throws Exception {
+    public void testBLRCFACancellation() throws Exception {
+
+
+        String shippingOrderId = null;
+        int warehouseId = 0;
 
         SharedProperties.openBrowser(TestUtil.getURL(), TestUtil.getBrowser());
         String variant = null;
-        variant = TestUtil.excel.getCellData("HYD_CFA", "Test Scenario", 22);
+        variant = TestUtil.excel.getCellData("MUM_CFA", "Test Scenario", 4);
         SharedProperties.driver.navigate().to(TestUtil.getURL()+"/sv/oh-yeah!-isolate/SP-29982?navKey=VRNT-"+ variant);
         Thread.sleep(2000);
         SharedProperties.driver.findElement(By.xpath("//*[@value = 'Buy Now']")).click();
@@ -41,31 +45,34 @@ public class HYDCFARpuTest {
         browse.proceedToCheckoutMultiVariant();
         SharedProperties.Click(loginPage.getSignInCheckbox(), SharedProperties.driver);
         reusableMethods.setUserCredentials();
-        //reusableMethods.selectDeliveryAddress();
-        SharedProperties.driver.findElement(By.linkText("Edit")).click();
-        SharedProperties.driver.findElement(By.xpath("//*[@id = 'pincode']")).clear();
-        SharedProperties.driver.findElement(By.xpath("//*[@id = 'pincode']")).sendKeys("500081");
-        Thread.sleep(3000);
-        SharedProperties.driver.findElement(By.xpath("//*[@name = 'updateAddressForUser']")).click();
+        reusableMethods.selectDeliveryAddress();
         reusableMethods.doCODPayment();
         String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[7]/div/div[1]/p[2]")).getText();
         System.out.println(orderId);
-
         String finalOrderId = orderId.substring(10);
         soDetails.orderIdSoDetails = finalOrderId;
         Thread.sleep(2000);
-        DoRPU.gatewayOrderId = finalOrderId;
-        doRPU.doRPU();
+
+        SharedProperties.driver.navigate().to(TestUtil.getAdminURL());
+        Thread.sleep(3000);
+        SharedProperties.sendKeys(loginPageAdmin.getUserName(), TestUtil.getAdmin_User(), SharedProperties.driver);
+        SharedProperties.sendKeys(loginPageAdmin.getPassword(), TestUtil.getAdmin_Password(), SharedProperties.driver);
+        SharedProperties.Click(loginPageAdmin.getLoginbtn(), SharedProperties.driver);
+        for(SoDetailsDTO soDetailsDTO : soDetails.Sodetails())
+        {
+            shippingOrderId = soDetailsDTO.getSoGatewayOrderId();
+            warehouseId = soDetailsDTO.getWarehouseId();
+
+            System.out.println("Shipping Order Id = "+shippingOrderId);
+            System.out.println("Warehouse Id = " + warehouseId);
+
+            SharedProperties.driver.findElement(By.linkText("Admin Home")).click();
+            Thread.sleep(3000);
 
 
-    }
 
 
-    public static void main(String[] args) throws Exception {
-
-        HYDCFARpuTest test = new HYDCFARpuTest();
-
-        test.testHYDCFARpu();
+        }
 
 
     }
