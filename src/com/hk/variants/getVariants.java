@@ -25,6 +25,8 @@ public class GetVariants {
 
         String productId = null;
 
+        String abc;
+
         Class.forName("com.mysql.jdbc.Driver");
 
         //Connection conn = DriverManager.getConnection("jdbc:mysql://192.168.70.27/hk_cat", "hkadmin", "admin2K11!");

@@ -2,48 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c26b27e7-3829-4ab4-9fbd-06b12c07466d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/BLRCFACancellation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/BLRCFARpuTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/FetchPinCodeAndVariantId.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/GalleriaStoreAutoFlipping.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/MUMCFACancellation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/MUMCFARpuTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/MUMCFARtoTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/PUNStoreRPUCheckin.java" />
-      <change type="MOVED" beforePath="C:\Workspace\Automation_testing_v4_Vipul\src\com\hk\variants\getVariants.java" afterPath="$PROJECT_DIR$/src/com/hk/variants/GetVariants.java" />
-      <change type="MOVED" beforePath="C:\Workspace\Automation_testing_v4_Vipul\test-output\junitreports\TEST-com.hk.orderPlacement.SignupCODorder.xml" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.orderPlacement.SignupCodOrder.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testData.xls" afterPath="$PROJECT_DIR$/testData.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/scaledupOrderPlacement/DoRPU.java" afterPath="$PROJECT_DIR$/src/com/hk/scaledupOrderPlacement/DoRPU.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/scaledupOrderPlacement/DoRTO.java" afterPath="$PROJECT_DIR$/src/com/hk/scaledupOrderPlacement/DoRTO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/DwarkaStoreAutoFlipping.java" afterPath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/DwarkaStoreAutoFlipping.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/DwarkaStoreRPUCheckin.java" afterPath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/DwarkaStoreRPUCheckin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/DwarkaStoreRTOCheckin.java" afterPath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/DwarkaStoreRTOCheckin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/HYDCFACancellation.java" afterPath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/HYDCFACancellation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/HYDCFARpuTest.java" afterPath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/HYDCFARpuTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/HYDCFARtoTest.java" afterPath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/HYDCFARtoTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/MUMCancellation.java" afterPath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/MUMCancellation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/MUMFlipSOTest.java" afterPath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/MUMFlipSOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/MUMRpuTest.java" afterPath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/MUMRpuTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/MUMRtoTest.java" afterPath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/MUMRtoTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/MUMSplitSOTest.java" afterPath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/MUMSplitSOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/PUNStoreAutoFlipping.java" afterPath="$PROJECT_DIR$/src/com/hk/warehouseSpecific/PUNStoreAutoFlipping.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.orderPlacement.ExistingCodPlacement.xml" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-com.hk.orderPlacement.ExistingCodPlacement.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/cancellation/TestAquaCancellation.java" afterPath="$PROJECT_DIR$/src/com/hk/cancellation/TestAquaCancellation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/cancellation/TestMPCatalogCancellation.java" afterPath="$PROJECT_DIR$/src/com/hk/cancellation/TestMPCatalogCancellation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hk/cancellation/TestWebCancellation.java" afterPath="$PROJECT_DIR$/src/com/hk/cancellation/TestWebCancellation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/TestNG Test/classes.html" afterPath="$PROJECT_DIR$/test-output/old/TestNG Test/classes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/emailable-report.html" afterPath="$PROJECT_DIR$/test-output/emailable-report.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/index.html" afterPath="$PROJECT_DIR$/test-output/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/index.html" afterPath="$PROJECT_DIR$/test-output/old/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/TestNG Test/methods-alphabetical.html" afterPath="$PROJECT_DIR$/test-output/old/TestNG Test/methods-alphabetical.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/TestNG Test/methods-not-run.html" afterPath="$PROJECT_DIR$/test-output/old/TestNG Test/methods-not-run.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/TestNG Test/methods.html" afterPath="$PROJECT_DIR$/test-output/old/TestNG Test/methods.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/testng-failed.xml" afterPath="$PROJECT_DIR$/test-output/testng-failed.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/TestNG Test/testng-failed.xml" afterPath="$PROJECT_DIR$/test-output/TestNG Test/testng-failed.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/testng-results.xml" afterPath="$PROJECT_DIR$/test-output/testng-results.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/TestNG Test/testng.xml.html" afterPath="$PROJECT_DIR$/test-output/old/TestNG Test/testng.xml.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/TestNG Test/toc.html" afterPath="$PROJECT_DIR$/test-output/old/TestNG Test/toc.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Automation_testing_v4.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -140,7 +99,7 @@
     <file path="/POSCheckout.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1422972988110" ignored="false" />
     <file path="/BarcodeStatus.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1422875784191" ignored="false" />
     <file path="/getVariants.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1420610829216" ignored="false" />
-    <file path="/GetVariants.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1425882670244" ignored="false" />
+    <file path="/GetVariants.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1425987574192" ignored="false" />
     <file path="/FlipTest.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1423225950543" ignored="false" />
     <file path="/DoFlip.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1422813144496" ignored="false" />
     <file path="/SplitSOTest.java" changelist="c26b27e7-3829-4ab4-9fbd-06b12c07466d" time="1422877934383" ignored="false" />
@@ -1348,7 +1307,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/hk/variants/GetVariants.java" line="146" class="com.hk.variants.GetVariants" package="com.hk.variants">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/hk/variants/GetVariants.java" line="148" class="com.hk.variants.GetVariants" package="com.hk.variants">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -2709,25 +2668,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DwarkaStoreAutoFlipping.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/warehouseSpecific/DwarkaStoreAutoFlipping.java">
+      <file leaf-file-name="variantCheckout.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="107" column="103" selection-start="4053" selection-end="4488" vertical-scroll-proportion="0.0">
+            <state line="115" column="84" selection-start="4460" selection-end="4460" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3126#3134#0" expanded="true" />
-                <element signature="e#3196#3204#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HYDCFACancellation.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/warehouseSpecific/HYDCFACancellation.java">
+      <file leaf-file-name="GetVariants.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/hk/variants/GetVariants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="101" selection-start="3184" selection-end="3564" vertical-scroll-proportion="0.0">
+            <state line="27" column="79" selection-start="589" selection-end="589" vertical-scroll-proportion="0.72649574">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#523#531#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2744,10 +2702,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DoRPU.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DoRPU.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/scaledupOrderPlacement/DoRPU.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="135" column="80" selection-start="7141" selection-end="7141" vertical-scroll-proportion="0.33333334">
+            <state line="149" column="67" selection-start="8387" selection-end="8387" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1782#1790#0" expanded="true" />
@@ -2757,47 +2715,41 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="RPUTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hk/scaledupOrderPlacement/RPUTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="13" selection-start="941" selection-end="941" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MUMCFARpuTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hk/warehouseSpecific/MUMCFARpuTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="7" selection-start="1687" selection-end="1687" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Browse.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hk/recorder/Browse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="82" selection-start="879" selection-end="879" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="StoreCheckoutBarcodes.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hk/scaledupOrderPlacement/StoreCheckoutBarcodes.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="58" column="0" selection-start="1837" selection-end="1837" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StoreCheckoutTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/scaledupOrderPlacement/StoreCheckoutTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="244" column="89" selection-start="11140" selection-end="11140" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2750#2758#0" expanded="true" />
-                <element signature="e#2820#2828#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MultiVariantOrderCheckout.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/scaledupOrderPlacement/MultiVariantOrderCheckout.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="164" column="77" selection-start="7181" selection-end="8711" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1718#1726#0" expanded="true" />
-                <element signature="e#1788#1796#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HYDCFARtoTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hk/warehouseSpecific/HYDCFARtoTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="99" selection-start="1934" selection-end="1934" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -2844,7 +2796,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/hk/warehouseSpecific/MUMRpuTest.java" />
         <option value="$PROJECT_DIR$/src/com/hk/warehouseSpecific/MUMRtoTest.java" />
         <option value="$PROJECT_DIR$/src/com/hk/warehouseSpecific/MUMSplitSOTest.java" />
         <option value="$PROJECT_DIR$/src/com/hk/warehouseSpecific/BLRCFARpuTest.java" />
@@ -2860,6 +2811,7 @@
         <option value="$PROJECT_DIR$/src/com/hk/warehouseSpecific/HYDCFARtoTest.java" />
         <option value="$PROJECT_DIR$/src/com/hk/warehouseSpecific/HYDCFARpuTest.java" />
         <option value="$PROJECT_DIR$/src/com/hk/scaledupOrderPlacement/DoRPU.java" />
+        <option value="$PROJECT_DIR$/src/com/hk/variants/GetVariants.java" />
       </list>
     </option>
   </component>
@@ -3088,6 +3040,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="recorder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Automation_testing_v4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Automation_testing_v4_Vipul" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="poscheckout" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -3111,6 +3085,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="orderPlacement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Automation_testing_v4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Automation_testing_v4_Vipul" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="orderCheckout" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -3614,8 +3610,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.7025641" order="4" side_tool="false" content_ui="tabs" />
@@ -3637,7 +3633,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.175" sideWeight="0.7025641" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24015151" sideWeight="0.7025641" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4051282" sideWeight="0.67045456" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.63247865" order="10" side_tool="true" content_ui="tabs" />
@@ -3727,55 +3723,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/hk/warehouseSpecific/DwarkaStoreRPUCheckin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="265" column="66" selection-start="12133" selection-end="14245" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3295#3303#0" expanded="true" />
-            <element signature="e#3365#3373#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/warehouseSpecific/FetchPinCodeAndVariantId.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="0" selection-start="3853" selection-end="3853" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/warehouseSpecific/PUNStoreRPUCheckin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="228" column="17" selection-start="13084" selection-end="13084" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2117#2125#0" expanded="true" />
-            <element signature="e#2187#2195#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hk/warehouseSpecific/GalleriaStoreAutoFlipping.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="0" selection-start="3281" selection-end="3281" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2406#2414#0" expanded="true" />
-            <element signature="e#2476#2484#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/testng-6.8.5.jar!/org/testng/internal/Invoker.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="35" selection-start="5163" selection-end="5163" vertical-scroll-proportion="0.35889572">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/libs/testng-6.8.5.jar!/org/testng/internal/MethodInvocationHelper.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="38" selection-start="286" selection-end="286" vertical-scroll-proportion="-4.68">
@@ -3869,13 +3816,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/recorder/Browse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="82" selection-start="879" selection-end="879" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hk/scaledupOrderPlacement/DoRPU.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="80" selection-start="7141" selection-end="7141" vertical-scroll-proportion="0.33333334">
+        <state line="149" column="67" selection-start="8387" selection-end="8387" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1782#1790#0" expanded="true" />
             <element signature="e#1852#1860#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/scaledupOrderPlacement/RPUTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="13" selection-start="941" selection-end="941" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/warehouseSpecific/MUMCFARpuTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="7" selection-start="1687" selection-end="1687" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/orderCheckout/variantCheckout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="115" column="84" selection-start="4460" selection-end="4460" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hk/variants/GetVariants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="79" selection-start="589" selection-end="589" vertical-scroll-proportion="0.72649574">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#523#531#0" expanded="true" />
           </folding>
         </state>
       </provider>
