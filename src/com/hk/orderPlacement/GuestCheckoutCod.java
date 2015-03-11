@@ -12,6 +12,7 @@ import com.hk.orderCheckout.variantCheckout;
 import com.hk.orderCheckoutDto.SoDetails;
 import com.hk.property.PropertyHelper;
 import com.hk.reportAndMailGenerator.SendMail;
+import com.hk.scaledupOrderPlacement.AppSpecificReusableMethods;
 import com.hk.util.TestUtil;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -48,7 +49,7 @@ public class GuestCheckoutCod extends SharedProperties {
     CodConfirmNavigation codNavigation = new CodConfirmNavigation();
     variantCheckout varCheckout = new variantCheckout();
     SoDetails soDetails = new SoDetails();
-
+    AppSpecificReusableMethods reusableMethods = new AppSpecificReusableMethods();
     //@Parameters({"BaseURL", "Browser"})
     /*@BeforeClass
     public void g(String baseUrl, String browser) {
@@ -186,17 +187,18 @@ public class GuestCheckoutCod extends SharedProperties {
             SharedProperties.Click(paymentpage.getCod2ndDiv(), SharedProperties.driver);
         }*/
 
-        SharedProperties.driver.findElement(By.xpath("//*[@class='last']")).click();
+        //SharedProperties.driver.findElement(By.xpath("//*[@class='last']")).click();
 
         Thread.sleep(3000);
+        reusableMethods.doCODPayment();
 
-        SharedProperties.Click(paymentpage.payOnDelivery(), SharedProperties.driver);
-
-
-
+        //SharedProperties.Click(paymentpage.payOnDelivery(), SharedProperties.driver);
 
 
-        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[5]/div[1]/p[2]")).getText();
+
+
+
+        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[7]/div/div[1]/p[2]")).getText();
 
         System.out.println(orderId);
 
@@ -222,7 +224,7 @@ public class GuestCheckoutCod extends SharedProperties {
 
         }
 
-        String codStatus = SharedProperties.driver.findElement(By.xpath("html/body/div[1]/div[2]/div/div[5]/div[1]/p[1]/span[2]")).getText();
+        //String codStatus = SharedProperties.driver.findElement(By.xpath("html/body/div[1]/div[2]/div/div[5]/div[1]/p[1]/span[2]")).getText();
 
 
 
@@ -238,7 +240,7 @@ public class GuestCheckoutCod extends SharedProperties {
 
 
 
-        if (OrderDetailsVerify.orderDetails() == true) {
+        /*if (OrderDetailsVerify.orderDetails() == true) {
             System.out.print("DB verification Successful");
             Thread.sleep(5000);
 
@@ -265,13 +267,11 @@ public class GuestCheckoutCod extends SharedProperties {
             OrderDetailsUtil.flagNoLoyalty = false;
             //codNavigation.codConfirmNavigation(finalOrderId);
 
-        } else {
+        }*/
 
-            if(codStatus.equalsIgnoreCase("Authorization Pending"))
-            {
-            codNavigation.codConfirmNavigation(finalOrderId);
-            }
-            Thread.sleep(5000);
+
+
+
 
             if(TestUtil.getExecuteVariantCheckoutRunMode(6).equalsIgnoreCase("Y"))
             {
@@ -280,12 +280,12 @@ public class GuestCheckoutCod extends SharedProperties {
             Thread.sleep(5000);
             OrderDetailsUtil.flagLoyalty = false;
             OrderDetailsUtil.flagNoLoyalty = false;
-            System.out.print("DB verification Failed but OrderId is generated");
-            SendMail.sendmail("DB verification failed for GuestCheckout COD order");
-            result.setStatus(ITestResult.FAILURE);
+            //System.out.print("DB verification Failed but OrderId is generated");
+            //SendMail.sendmail("DB verification failed for GuestCheckout COD order");
+            //result.setStatus(ITestResult.FAILURE);
 
             Thread.sleep(5000);
-        }
+
 
 
 

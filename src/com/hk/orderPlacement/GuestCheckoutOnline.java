@@ -188,7 +188,7 @@ public class GuestCheckoutOnline extends SharedProperties {
 
 
 
-        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div/div[1]/p[2]")).getText();
+        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[7]/div/div[1]/p[2]")).getText();
 
         System.out.println(orderId);
 
@@ -221,7 +221,7 @@ public class GuestCheckoutOnline extends SharedProperties {
 
 
 
-        if (OrderDetailsVerify.orderDetails() == true) {
+        /*if (OrderDetailsVerify.orderDetails() == true) {
             System.out.print("DB verification Successful");
             Thread.sleep(5000);
             if(TestUtil.getExecuteVariantCheckoutRunMode(5).equalsIgnoreCase("Y"))
@@ -232,18 +232,19 @@ public class GuestCheckoutOnline extends SharedProperties {
             OrderDetailsUtil.flagLoyalty = false;
             OrderDetailsUtil.flagNoLoyalty = false;
 
-        } else {
+        } */
+
             Thread.sleep(3000);
             if(TestUtil.getExecuteVariantCheckoutRunMode(5).equalsIgnoreCase("Y"))
             {
             varCheckout.variantCheckout();
             }
-            OrderDetailsUtil.flagLoyalty = false;
-            OrderDetailsUtil.flagNoLoyalty = false;
-            SendMail.sendmail("DB Verification failed for Online Order");
+            //OrderDetailsUtil.flagLoyalty = false;
+            //OrderDetailsUtil.flagNoLoyalty = false;
+            //SendMail.sendmail("DB Verification failed for Online Order");
             result.setStatus(ITestResult.FAILURE);
             Thread.sleep(5000);
-        }
+
     }
 
 }

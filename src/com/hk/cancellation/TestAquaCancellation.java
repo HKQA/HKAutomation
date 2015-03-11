@@ -108,6 +108,7 @@ public class TestAquaCancellation {
         SharedProperties.sendKeys(loginPageAdmin.getUserName(), TestUtil.getAdmin_User(), SharedProperties.driver);
         SharedProperties.sendKeys(loginPageAdmin.getPassword(), TestUtil.getAdmin_Password(), SharedProperties.driver);
         SharedProperties.Click(loginPageAdmin.getLoginbtn(), SharedProperties.driver);
+        Thread.sleep(5000);
         for(SoDetailsDTO soDetailsDTO : soDetails.Sodetails())
         {
 

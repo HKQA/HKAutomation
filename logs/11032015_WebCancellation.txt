@@ -1,0 +1,5 @@
+
+
+11/03/2015_11:33:24
+Order Id for Web Cancellation = ORDER ID: HKD-15251-1683874
+Order id = HKD-15251-1683874 is successfully cancelled 
