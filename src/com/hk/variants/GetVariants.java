@@ -25,7 +25,7 @@ public class GetVariants {
 
         String productId = null;
 
-        String abc;
+
 
         Class.forName("com.mysql.jdbc.Driver");
 

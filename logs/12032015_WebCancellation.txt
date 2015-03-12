@@ -1,0 +1,5 @@
+
+
+12/03/2015_11:50:13
+Order Id for Web Cancellation = ORDER ID: HKD-25692-1701616
+Order id = HKD-25692-1701616 is successfully cancelled 

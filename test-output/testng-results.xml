@@ -1,28 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="22" failed="1" total="27" passed="4">
+<testng-results skipped="5" failed="11" total="27" passed="11">
   <reporter-output>
   </reporter-output>
-  <suite name="TestNG Test" duration-ms="887018" started-at="2015-03-11T11:04:22Z" finished-at="2015-03-11T11:19:09Z">
+  <suite name="TestNG Test" duration-ms="2060154" started-at="2015-03-12T06:11:32Z" finished-at="2015-03-12T06:45:52Z">
     <groups>
     </groups>
-    <test name="HealthKart Automation Suite" duration-ms="887018" started-at="2015-03-11T11:04:22Z" finished-at="2015-03-11T11:19:09Z">
-      <class name="com.hk.warehouseSpecific.DwarkaStoreAutoFlipping">
-        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.warehouseSpecific.DwarkaStoreAutoFlipping@149838d9]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
-          <exception class="org.testng.SkipException">
+    <test name="HealthKart Automation Suite" duration-ms="2060154" started-at="2015-03-12T06:11:32Z" finished-at="2015-03-12T06:45:52Z">
+      <class name="com.hk.warehouseSpecific.GGNRtoTest">
+        <test-method status="FAIL" signature="testGGNRto()[pri:0, instance:com.hk.warehouseSpecific.GGNRtoTest@4ced9a4d]" name="testGGNRto" duration-ms="27334" started-at="2015-03-12T11:59:53Z" finished-at="2015-03-12T12:00:21Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Skipping the DwarkaAutoFlip test case as RunMode is No]]>
+              <![CDATA[no such element
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 6.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.42.2', revision: '6a6995d', time: '2014-06-03 17:42:30'
+System info: host: 'Tech-VipulJain', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_45'
+Session ID: a9d0b23152c8543ca33e138217eee993
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\VIPUL~1.JAI\AppData\Local\Temp\scoped_dir44804_1992}, rotatable=false, locationContextEnabled=true, version=40.0.2214.115, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Skipping the DwarkaAutoFlip test case as RunMode is No
-	at com.hk.warehouseSpecific.DwarkaStoreAutoFlipping.isSkip(Unknown Source)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 6.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.42.2', revision: '6a6995d', time: '2014-06-03 17:42:30'
+System info: host: 'Tech-VipulJain', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_45'
+Session ID: a9d0b23152c8543ca33e138217eee993
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\VIPUL~1.JAI\AppData\Local\Temp\scoped_dir44804_1992}, rotatable=false, locationContextEnabled=true, version=40.0.2214.115, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at com.hk.warehouseSpecific.GGNRtoTest.testGGNRto(Unknown Source)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
@@ -42,36 +69,95 @@
 	at org.testng.TestNG.main(TestNG.java:1333)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGGNRto -->
+        <test-method status="PASS" signature="isSkip()[pri:0, instance:com.hk.warehouseSpecific.GGNRtoTest@4ced9a4d]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-12T11:59:53Z" finished-at="2015-03-12T11:59:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isSkip -->
-        <test-method status="SKIP" signature="testDwarkaStoreAutoFlipping()[pri:0, instance:com.hk.warehouseSpecific.DwarkaStoreAutoFlipping@149838d9]" name="testDwarkaStoreAutoFlipping" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
+        <test-method status="PASS" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.warehouseSpecific.GGNRtoTest@4ced9a4d]" name="doAfter" is-config="true" duration-ms="1851" started-at="2015-03-12T12:00:21Z" finished-at="2015-03-12T12:00:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testGGNRto status=FAILURE method=GGNRtoTest.testGGNRto()[pri:0, instance:com.hk.warehouseSpecific.GGNRtoTest@4ced9a4d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doAfter -->
+      </class> <!-- com.hk.warehouseSpecific.GGNRtoTest -->
+      <class name="com.hk.warehouseSpecific.DwarkaStoreAutoFlipping">
+        <test-method status="PASS" signature="isSkip()[pri:0, instance:com.hk.warehouseSpecific.DwarkaStoreAutoFlipping@32d5cb0]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-12T12:03:35Z" finished-at="2015-03-12T12:03:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isSkip -->
+        <test-method status="PASS" signature="testDwarkaStoreAutoFlipping()[pri:0, instance:com.hk.warehouseSpecific.DwarkaStoreAutoFlipping@32d5cb0]" name="testDwarkaStoreAutoFlipping" duration-ms="36104" started-at="2015-03-12T12:03:35Z" finished-at="2015-03-12T12:04:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDwarkaStoreAutoFlipping -->
-        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.warehouseSpecific.DwarkaStoreAutoFlipping@149838d9]" name="doAfter" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
+        <test-method status="PASS" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.warehouseSpecific.DwarkaStoreAutoFlipping@32d5cb0]" name="doAfter" is-config="true" duration-ms="1671" started-at="2015-03-12T12:04:12Z" finished-at="2015-03-12T12:04:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testDwarkaStoreAutoFlipping status=SUCCESS method=DwarkaStoreAutoFlipping.testDwarkaStoreAutoFlipping()[pri:0, instance:com.hk.warehouseSpecific.DwarkaStoreAutoFlipping@32d5cb0] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doAfter -->
       </class> <!-- com.hk.warehouseSpecific.DwarkaStoreAutoFlipping -->
       <class name="com.hk.scaledupOrderPlacement.RPUTest">
-        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.scaledupOrderPlacement.RPUTest@fae8152]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
-          <exception class="org.testng.SkipException">
+        <test-method status="PASS" signature="isSkip()[pri:0, instance:com.hk.scaledupOrderPlacement.RPUTest@44929d0b]" name="isSkip" is-config="true" duration-ms="1" started-at="2015-03-12T12:00:23Z" finished-at="2015-03-12T12:00:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isSkip -->
+        <test-method status="FAIL" signature="testRPU()[pri:0, instance:com.hk.scaledupOrderPlacement.RPUTest@44929d0b]" name="testRPU" duration-ms="49913" started-at="2015-03-12T12:00:23Z" finished-at="2015-03-12T12:01:13Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Skipping the RPUTest test case as RunMode is No]]>
+              <![CDATA[no such element
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 6.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.42.2', revision: '6a6995d', time: '2014-06-03 17:42:30'
+System info: host: 'Tech-VipulJain', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_45'
+Session ID: 7019b94074cbaa213473512691bbe697
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\VIPUL~1.JAI\AppData\Local\Temp\scoped_dir10464_18472}, rotatable=false, locationContextEnabled=true, version=40.0.2214.115, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Skipping the RPUTest test case as RunMode is No
-	at com.hk.scaledupOrderPlacement.RPUTest.isSkip(Unknown Source)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 6.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.42.2', revision: '6a6995d', time: '2014-06-03 17:42:30'
+System info: host: 'Tech-VipulJain', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_45'
+Session ID: 7019b94074cbaa213473512691bbe697
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\VIPUL~1.JAI\AppData\Local\Temp\scoped_dir10464_18472}, rotatable=false, locationContextEnabled=true, version=40.0.2214.115, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at com.hk.scaledupOrderPlacement.RPUTest.testRPU(Unknown Source)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
@@ -91,134 +177,90 @@
 	at org.testng.TestNG.main(TestNG.java:1333)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- isSkip -->
-        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.scaledupOrderPlacement.RPUTest@fae8152]" name="doAfter" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- doAfter -->
-        <test-method status="SKIP" signature="testRPU()[pri:0, instance:com.hk.scaledupOrderPlacement.RPUTest@fae8152]" name="testRPU" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRPU -->
-      </class> <!-- com.hk.scaledupOrderPlacement.RPUTest -->
-      <class name="com.hk.warehouseSpecific.GGNRtoTest">
-        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.warehouseSpecific.GGNRtoTest@47461829]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[Skipping the RPUTest test case as RunMode is No]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Skipping the RPUTest test case as RunMode is No
-	at com.hk.warehouseSpecific.GGNRtoTest.isSkip(Unknown Source)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.TestNG.privateMain(TestNG.java:1364)
-	at org.testng.TestNG.main(TestNG.java:1333)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- isSkip -->
-        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.warehouseSpecific.GGNRtoTest@47461829]" name="doAfter" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
+        <test-method status="PASS" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.scaledupOrderPlacement.RPUTest@44929d0b]" name="doAfter" is-config="true" duration-ms="2836" started-at="2015-03-12T12:01:13Z" finished-at="2015-03-12T12:01:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testRPU status=FAILURE method=RPUTest.testRPU()[pri:0, instance:com.hk.scaledupOrderPlacement.RPUTest@44929d0b] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doAfter -->
-        <test-method status="SKIP" signature="testGGNRto()[pri:0, instance:com.hk.warehouseSpecific.GGNRtoTest@47461829]" name="testGGNRto" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGGNRto -->
-      </class> <!-- com.hk.warehouseSpecific.GGNRtoTest -->
+      </class> <!-- com.hk.scaledupOrderPlacement.RPUTest -->
       <class name="com.hk.warehouseSpecific.DwarkaStoreRPUCheckin">
-        <test-method status="SKIP" signature="testDwarkaStoreRPUCheckin()[pri:0, instance:com.hk.warehouseSpecific.DwarkaStoreRPUCheckin@52574b52]" name="testDwarkaStoreRPUCheckin" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testDwarkaStoreRPUCheckin -->
-        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.warehouseSpecific.DwarkaStoreRPUCheckin@52574b52]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[Skipping the DwarkaRPUCheckin test case as RunMode is No]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Skipping the DwarkaRPUCheckin test case as RunMode is No
-	at com.hk.warehouseSpecific.DwarkaStoreRPUCheckin.isSkip(Unknown Source)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.TestNG.privateMain(TestNG.java:1364)
-	at org.testng.TestNG.main(TestNG.java:1333)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
+        <test-method status="PASS" signature="isSkip()[pri:0, instance:com.hk.warehouseSpecific.DwarkaStoreRPUCheckin@403f1e93]" name="isSkip" is-config="true" duration-ms="1" started-at="2015-03-12T12:04:13Z" finished-at="2015-03-12T12:04:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isSkip -->
-        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.warehouseSpecific.DwarkaStoreRPUCheckin@52574b52]" name="doAfter" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
+        <test-method status="PASS" signature="testDwarkaStoreRPUCheckin()[pri:0, instance:com.hk.warehouseSpecific.DwarkaStoreRPUCheckin@403f1e93]" name="testDwarkaStoreRPUCheckin" duration-ms="36830" started-at="2015-03-12T12:04:13Z" finished-at="2015-03-12T12:04:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDwarkaStoreRPUCheckin -->
+        <test-method status="PASS" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.warehouseSpecific.DwarkaStoreRPUCheckin@403f1e93]" name="doAfter" is-config="true" duration-ms="1653" started-at="2015-03-12T12:04:50Z" finished-at="2015-03-12T12:04:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testDwarkaStoreRPUCheckin status=SUCCESS method=DwarkaStoreRPUCheckin.testDwarkaStoreRPUCheckin()[pri:0, instance:com.hk.warehouseSpecific.DwarkaStoreRPUCheckin@403f1e93] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doAfter -->
       </class> <!-- com.hk.warehouseSpecific.DwarkaStoreRPUCheckin -->
       <class name="com.hk.warehouseSpecific.PUNStoreAutoFlipping">
-        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.warehouseSpecific.PUNStoreAutoFlipping@17202871]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
-          <exception class="org.testng.SkipException">
+        <test-method status="PASS" signature="isSkip()[pri:0, instance:com.hk.warehouseSpecific.PUNStoreAutoFlipping@fae8152]" name="isSkip" is-config="true" duration-ms="1" started-at="2015-03-12T12:15:33Z" finished-at="2015-03-12T12:15:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isSkip -->
+        <test-method status="FAIL" signature="testPUNStoreAutoFlipping()[pri:0, instance:com.hk.warehouseSpecific.PUNStoreAutoFlipping@fae8152]" name="testPUNStoreAutoFlipping" duration-ms="17064" started-at="2015-03-12T12:15:33Z" finished-at="2015-03-12T12:15:50Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Skipping the Punjabi Bagh Store Auto Flip test case as RunMode is No]]>
+              <![CDATA[no such element
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 6.02 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.42.2', revision: '6a6995d', time: '2014-06-03 17:42:30'
+System info: host: 'Tech-VipulJain', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_45'
+Session ID: 85dab77f59db041b68a44f8a0df12d1d
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\VIPUL~1.JAI\AppData\Local\Temp\scoped_dir47816_24176}, rotatable=false, locationContextEnabled=true, version=40.0.2214.115, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Skipping the Punjabi Bagh Store Auto Flip test case as RunMode is No
-	at com.hk.warehouseSpecific.PUNStoreAutoFlipping.isSkip(Unknown Source)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 6.02 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.42.2', revision: '6a6995d', time: '2014-06-03 17:42:30'
+System info: host: 'Tech-VipulJain', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_45'
+Session ID: 85dab77f59db041b68a44f8a0df12d1d
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\VIPUL~1.JAI\AppData\Local\Temp\scoped_dir47816_24176}, rotatable=false, locationContextEnabled=true, version=40.0.2214.115, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at sun.reflect.GeneratedConstructorAccessor86.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at com.hk.warehouseSpecific.PUNStoreAutoFlipping.testPUNStoreAutoFlipping(Unknown Source)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
@@ -238,21 +280,32 @@
 	at org.testng.TestNG.main(TestNG.java:1333)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- isSkip -->
-        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.warehouseSpecific.PUNStoreAutoFlipping@17202871]" name="doAfter" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- doAfter -->
-        <test-method status="SKIP" signature="testPUNStoreAutoFlipping()[pri:0, instance:com.hk.warehouseSpecific.PUNStoreAutoFlipping@17202871]" name="testPUNStoreAutoFlipping" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPUNStoreAutoFlipping -->
+        <test-method status="PASS" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.warehouseSpecific.PUNStoreAutoFlipping@fae8152]" name="doAfter" is-config="true" duration-ms="1933" started-at="2015-03-12T12:15:50Z" finished-at="2015-03-12T12:15:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testPUNStoreAutoFlipping status=FAILURE method=PUNStoreAutoFlipping.testPUNStoreAutoFlipping()[pri:0, instance:com.hk.warehouseSpecific.PUNStoreAutoFlipping@fae8152] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doAfter -->
       </class> <!-- com.hk.warehouseSpecific.PUNStoreAutoFlipping -->
       <class name="com.hk.orderPlacement.GuestCheckoutCod">
-        <test-method status="PASS" signature="login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.GuestCheckoutCod@545866ff]" name="login" duration-ms="67726" started-at="2015-03-11T16:42:49Z" finished-at="2015-03-11T16:43:56Z">
+        <test-method status="PASS" signature="config()[pri:0, instance:com.hk.orderPlacement.GuestCheckoutCod@6b1d5b59]" name="config" is-config="true" duration-ms="0" started-at="2015-03-12T11:51:00Z" finished-at="2015-03-12T11:51:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- config -->
+        <test-method status="PASS" signature="isSkip()[pri:0, instance:com.hk.orderPlacement.GuestCheckoutCod@6b1d5b59]" name="isSkip" is-config="true" duration-ms="1" started-at="2015-03-12T11:51:00Z" finished-at="2015-03-12T11:51:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isSkip -->
+        <test-method status="PASS" signature="login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.GuestCheckoutCod@6b1d5b59]" name="login" duration-ms="68214" started-at="2015-03-12T11:51:00Z" finished-at="2015-03-12T11:52:08Z">
           <params>
             <param index="0">
               <value is-null="true"/>
@@ -261,19 +314,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="config()[pri:0, instance:com.hk.orderPlacement.GuestCheckoutCod@545866ff]" name="config" is-config="true" duration-ms="0" started-at="2015-03-11T16:42:49Z" finished-at="2015-03-11T16:42:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- config -->
-        <test-method status="PASS" signature="isSkip()[pri:0, instance:com.hk.orderPlacement.GuestCheckoutCod@545866ff]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-11T16:42:49Z" finished-at="2015-03-11T16:42:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- isSkip -->
-        <test-method status="PASS" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.orderPlacement.GuestCheckoutCod@545866ff]" name="doAfter" is-config="true" duration-ms="1722" started-at="2015-03-11T16:43:56Z" finished-at="2015-03-11T16:43:58Z">
+        <test-method status="PASS" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.orderPlacement.GuestCheckoutCod@6b1d5b59]" name="doAfter" is-config="true" duration-ms="1681" started-at="2015-03-12T11:52:08Z" finished-at="2015-03-12T11:52:10Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=login status=SUCCESS method=GuestCheckoutCod.login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.GuestCheckoutCod@545866ff] output={null}]]]>
+                <![CDATA[[TestResult name=login status=SUCCESS method=GuestCheckoutCod.login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.GuestCheckoutCod@6b1d5b59] output={null}]]]>
               </value>
             </param>
           </params>
@@ -282,19 +327,19 @@
         </test-method> <!-- doAfter -->
       </class> <!-- com.hk.orderPlacement.GuestCheckoutCod -->
       <class name="com.hk.scaledupOrderPlacement.ExistingOnline">
-        <test-method status="PASS" signature="test()[pri:0, instance:com.hk.scaledupOrderPlacement.ExistingOnline@15bc391f]" name="test" duration-ms="63571" started-at="2015-03-11T16:48:03Z" finished-at="2015-03-11T16:49:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test -->
-        <test-method status="PASS" signature="isSkip()[pri:0, instance:com.hk.scaledupOrderPlacement.ExistingOnline@15bc391f]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-11T16:48:03Z" finished-at="2015-03-11T16:48:03Z">
+        <test-method status="PASS" signature="isSkip()[pri:0, instance:com.hk.scaledupOrderPlacement.ExistingOnline@61121eb9]" name="isSkip" is-config="true" duration-ms="1" started-at="2015-03-12T11:55:41Z" finished-at="2015-03-12T11:55:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isSkip -->
-        <test-method status="PASS" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.scaledupOrderPlacement.ExistingOnline@15bc391f]" name="doAfter" is-config="true" duration-ms="1723" started-at="2015-03-11T16:49:07Z" finished-at="2015-03-11T16:49:09Z">
+        <test-method status="PASS" signature="test()[pri:0, instance:com.hk.scaledupOrderPlacement.ExistingOnline@61121eb9]" name="test" duration-ms="186806" started-at="2015-03-12T11:55:41Z" finished-at="2015-03-12T11:58:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.scaledupOrderPlacement.ExistingOnline@61121eb9]" name="doAfter" is-config="true" duration-ms="1622" started-at="2015-03-12T11:58:48Z" finished-at="2015-03-12T11:58:50Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test status=SUCCESS method=ExistingOnline.test()[pri:0, instance:com.hk.scaledupOrderPlacement.ExistingOnline@15bc391f] output={null}]]]>
+                <![CDATA[[TestResult name=test status=SUCCESS method=ExistingOnline.test()[pri:0, instance:com.hk.scaledupOrderPlacement.ExistingOnline@61121eb9] output={null}]]]>
               </value>
             </param>
           </params>
@@ -303,26 +348,52 @@
         </test-method> <!-- doAfter -->
       </class> <!-- com.hk.scaledupOrderPlacement.ExistingOnline -->
       <class name="com.hk.scaledupOrderPlacement.RTOTest">
-        <test-method status="SKIP" signature="RTOTest()[pri:0, instance:com.hk.scaledupOrderPlacement.RTOTest@60b20be]" name="RTOTest" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
+        <test-method status="PASS" signature="isSkip()[pri:0, instance:com.hk.scaledupOrderPlacement.RTOTest@545866ff]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-12T12:09:51Z" finished-at="2015-03-12T12:09:51Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- RTOTest -->
-        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.scaledupOrderPlacement.RTOTest@60b20be]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
-          <exception class="org.testng.SkipException">
+        </test-method> <!-- isSkip -->
+        <test-method status="FAIL" signature="RTOTest()[pri:0, instance:com.hk.scaledupOrderPlacement.RTOTest@545866ff]" name="RTOTest" duration-ms="57295" started-at="2015-03-12T12:09:51Z" finished-at="2015-03-12T12:10:49Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Skipping the test case as RunMode is No]]>
+              <![CDATA[no such element
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 6.02 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.42.2', revision: '6a6995d', time: '2014-06-03 17:42:30'
+System info: host: 'Tech-VipulJain', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_45'
+Session ID: 3db0804ba6dc0d30de76576fec1cdf3d
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\VIPUL~1.JAI\AppData\Local\Temp\scoped_dir33548_22221}, rotatable=false, locationContextEnabled=true, version=40.0.2214.115, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Skipping the test case as RunMode is No
-	at com.hk.scaledupOrderPlacement.RTOTest.isSkip(Unknown Source)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 6.02 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.42.2', revision: '6a6995d', time: '2014-06-03 17:42:30'
+System info: host: 'Tech-VipulJain', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_45'
+Session ID: 3db0804ba6dc0d30de76576fec1cdf3d
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\VIPUL~1.JAI\AppData\Local\Temp\scoped_dir33548_22221}, rotatable=false, locationContextEnabled=true, version=40.0.2214.115, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at sun.reflect.GeneratedConstructorAccessor86.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at com.hk.scaledupOrderPlacement.RTOTest.RTOTest(Unknown Source)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
@@ -342,74 +413,49 @@
 	at org.testng.TestNG.main(TestNG.java:1333)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- isSkip -->
-        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.scaledupOrderPlacement.RTOTest@60b20be]" name="doAfter" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
+        </test-method> <!-- RTOTest -->
+        <test-method status="PASS" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.scaledupOrderPlacement.RTOTest@545866ff]" name="doAfter" is-config="true" duration-ms="2066" started-at="2015-03-12T12:10:49Z" finished-at="2015-03-12T12:10:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RTOTest status=FAILURE method=RTOTest.RTOTest()[pri:0, instance:com.hk.scaledupOrderPlacement.RTOTest@545866ff] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doAfter -->
       </class> <!-- com.hk.scaledupOrderPlacement.RTOTest -->
       <class name="com.hk.warehouseSpecific.MUMSplitSOTest">
-        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.warehouseSpecific.MUMSplitSOTest@511df625]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[Skipping the MUM Split SO test case as RunMode is No]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Skipping the MUM Split SO test case as RunMode is No
-	at com.hk.warehouseSpecific.MUMSplitSOTest.isSkip(Unknown Source)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.TestNG.privateMain(TestNG.java:1364)
-	at org.testng.TestNG.main(TestNG.java:1333)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- isSkip -->
-        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.warehouseSpecific.MUMSplitSOTest@511df625]" name="doAfter" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- doAfter -->
-        <test-method status="SKIP" signature="testMUMSplitSO()[pri:0, instance:com.hk.warehouseSpecific.MUMSplitSOTest@511df625]" name="testMUMSplitSO" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
+        <test-method status="PASS" signature="testMUMSplitSO()[pri:0, instance:com.hk.warehouseSpecific.MUMSplitSOTest@2d0f392]" name="testMUMSplitSO" duration-ms="113316" started-at="2015-03-12T12:13:38Z" finished-at="2015-03-12T12:15:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMUMSplitSO -->
-      </class> <!-- com.hk.warehouseSpecific.MUMSplitSOTest -->
-      <class name="com.hk.orderPlacement.ExistingCodPlacement">
-        <test-method status="PASS" signature="Config()[pri:0, instance:com.hk.orderPlacement.ExistingCodPlacement@2d0f392]" name="Config" is-config="true" duration-ms="16" started-at="2015-03-11T16:34:22Z" finished-at="2015-03-11T16:34:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Config -->
-        <test-method status="PASS" signature="isSkip()[pri:0, instance:com.hk.orderPlacement.ExistingCodPlacement@2d0f392]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-11T16:34:22Z" finished-at="2015-03-11T16:34:22Z">
+        <test-method status="PASS" signature="isSkip()[pri:0, instance:com.hk.warehouseSpecific.MUMSplitSOTest@2d0f392]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-12T12:13:38Z" finished-at="2015-03-12T12:13:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isSkip -->
-        <test-method status="PASS" signature="login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.ExistingCodPlacement@2d0f392]" name="login" duration-ms="261443" started-at="2015-03-11T16:34:22Z" finished-at="2015-03-11T16:38:44Z">
+        <test-method status="PASS" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.warehouseSpecific.MUMSplitSOTest@2d0f392]" name="doAfter" is-config="true" duration-ms="1680" started-at="2015-03-12T12:15:32Z" finished-at="2015-03-12T12:15:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testMUMSplitSO status=SUCCESS method=MUMSplitSOTest.testMUMSplitSO()[pri:0, instance:com.hk.warehouseSpecific.MUMSplitSOTest@2d0f392] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doAfter -->
+      </class> <!-- com.hk.warehouseSpecific.MUMSplitSOTest -->
+      <class name="com.hk.orderPlacement.ExistingCodPlacement">
+        <test-method status="PASS" signature="Config()[pri:0, instance:com.hk.orderPlacement.ExistingCodPlacement@15bc391f]" name="Config" is-config="true" duration-ms="0" started-at="2015-03-12T11:42:22Z" finished-at="2015-03-12T11:42:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Config -->
+        <test-method status="PASS" signature="login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.ExistingCodPlacement@15bc391f]" name="login" duration-ms="227680" started-at="2015-03-12T11:42:22Z" finished-at="2015-03-12T11:46:10Z">
           <params>
             <param index="0">
               <value is-null="true"/>
@@ -418,11 +464,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.orderPlacement.ExistingCodPlacement@2d0f392]" name="doAfter" is-config="true" duration-ms="1682" started-at="2015-03-11T16:38:44Z" finished-at="2015-03-11T16:38:46Z">
+        <test-method status="PASS" signature="isSkip()[pri:0, instance:com.hk.orderPlacement.ExistingCodPlacement@15bc391f]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-12T11:42:22Z" finished-at="2015-03-12T11:42:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isSkip -->
+        <test-method status="PASS" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.orderPlacement.ExistingCodPlacement@15bc391f]" name="doAfter" is-config="true" duration-ms="1614" started-at="2015-03-12T11:46:10Z" finished-at="2015-03-12T11:46:11Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=login status=SUCCESS method=ExistingCodPlacement.login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.ExistingCodPlacement@2d0f392] output={null}]]]>
+                <![CDATA[[TestResult name=login status=SUCCESS method=ExistingCodPlacement.login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.ExistingCodPlacement@15bc391f] output={null}]]]>
               </value>
             </param>
           </params>
@@ -431,30 +481,53 @@
         </test-method> <!-- doAfter -->
       </class> <!-- com.hk.orderPlacement.ExistingCodPlacement -->
       <class name="com.hk.warehouseSpecific.MUMFlipSOTest">
-        <test-method status="SKIP" signature="testMUMFlipSO()[pri:0, instance:com.hk.warehouseSpecific.MUMFlipSOTest@7798ce82]" name="testMUMFlipSO" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
+        <test-method status="PASS" signature="isSkip()[pri:0, instance:com.hk.warehouseSpecific.MUMFlipSOTest@41750ae1]" name="isSkip" is-config="true" duration-ms="1" started-at="2015-03-12T12:01:48Z" finished-at="2015-03-12T12:01:48Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMUMFlipSO -->
-        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.warehouseSpecific.MUMFlipSOTest@7798ce82]" name="doAfter" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- doAfter -->
-        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.warehouseSpecific.MUMFlipSOTest@7798ce82]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
-          <exception class="org.testng.SkipException">
+        </test-method> <!-- isSkip -->
+        <test-method status="FAIL" signature="testMUMFlipSO()[pri:0, instance:com.hk.warehouseSpecific.MUMFlipSOTest@41750ae1]" name="testMUMFlipSO" duration-ms="14655" started-at="2015-03-12T12:01:48Z" finished-at="2015-03-12T12:02:03Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Skipping the MUM Flip SO test case as RunMode is No]]>
+              <![CDATA[no such element
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 6.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.42.2', revision: '6a6995d', time: '2014-06-03 17:42:30'
+System info: host: 'Tech-VipulJain', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_45'
+Session ID: 67b0d587c36cb5b270a2ff19a261c56b
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\VIPUL~1.JAI\AppData\Local\Temp\scoped_dir47876_7603}, rotatable=false, locationContextEnabled=true, version=40.0.2214.115, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Skipping the MUM Flip SO test case as RunMode is No
-	at com.hk.warehouseSpecific.MUMFlipSOTest.isSkip(Unknown Source)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 6.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.42.2', revision: '6a6995d', time: '2014-06-03 17:42:30'
+System info: host: 'Tech-VipulJain', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_45'
+Session ID: 67b0d587c36cb5b270a2ff19a261c56b
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\VIPUL~1.JAI\AppData\Local\Temp\scoped_dir47876_7603}, rotatable=false, locationContextEnabled=true, version=40.0.2214.115, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at com.hk.warehouseSpecific.MUMFlipSOTest.testMUMFlipSO(Unknown Source)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
@@ -474,21 +547,32 @@
 	at org.testng.TestNG.main(TestNG.java:1333)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- isSkip -->
+        </test-method> <!-- testMUMFlipSO -->
+        <test-method status="PASS" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.warehouseSpecific.MUMFlipSOTest@41750ae1]" name="doAfter" is-config="true" duration-ms="2688" started-at="2015-03-12T12:02:03Z" finished-at="2015-03-12T12:02:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testMUMFlipSO status=FAILURE method=MUMFlipSOTest.testMUMFlipSO()[pri:0, instance:com.hk.warehouseSpecific.MUMFlipSOTest@41750ae1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doAfter -->
       </class> <!-- com.hk.warehouseSpecific.MUMFlipSOTest -->
       <class name="com.hk.orderPlacement.GuestCheckoutOnline">
-        <test-method status="PASS" signature="isSkip()[pri:0, instance:com.hk.orderPlacement.GuestCheckoutOnline@68829a91]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-11T16:43:58Z" finished-at="2015-03-11T16:43:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- isSkip -->
-        <test-method status="PASS" signature="Config()[pri:0, instance:com.hk.orderPlacement.GuestCheckoutOnline@68829a91]" name="Config" is-config="true" duration-ms="0" started-at="2015-03-11T16:43:58Z" finished-at="2015-03-11T16:43:58Z">
+        <test-method status="PASS" signature="Config()[pri:0, instance:com.hk.orderPlacement.GuestCheckoutOnline@9ac3689]" name="Config" is-config="true" duration-ms="1" started-at="2015-03-12T11:52:10Z" finished-at="2015-03-12T11:52:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Config -->
-        <test-method status="FAIL" signature="login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.GuestCheckoutOnline@68829a91]" name="login" duration-ms="243321" started-at="2015-03-11T16:43:58Z" finished-at="2015-03-11T16:48:01Z">
+        <test-method status="PASS" signature="isSkip()[pri:0, instance:com.hk.orderPlacement.GuestCheckoutOnline@9ac3689]" name="isSkip" is-config="true" duration-ms="2" started-at="2015-03-12T11:52:10Z" finished-at="2015-03-12T11:52:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isSkip -->
+        <test-method status="FAIL" signature="login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.GuestCheckoutOnline@9ac3689]" name="login" duration-ms="209660" started-at="2015-03-12T11:52:10Z" finished-at="2015-03-12T11:55:40Z">
           <params>
             <param index="0">
               <value is-null="true"/>
@@ -527,11 +611,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.orderPlacement.GuestCheckoutOnline@68829a91]" name="doAfter" is-config="true" duration-ms="1953" started-at="2015-03-11T16:48:01Z" finished-at="2015-03-11T16:48:03Z">
+        <test-method status="PASS" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.orderPlacement.GuestCheckoutOnline@9ac3689]" name="doAfter" is-config="true" duration-ms="1857" started-at="2015-03-12T11:55:40Z" finished-at="2015-03-12T11:55:41Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=login status=FAILURE method=GuestCheckoutOnline.login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.GuestCheckoutOnline@68829a91] output={null}]]]>
+                <![CDATA[[TestResult name=login status=FAILURE method=GuestCheckoutOnline.login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.GuestCheckoutOnline@9ac3689] output={null}]]]>
               </value>
             </param>
           </params>
@@ -540,64 +624,28 @@
         </test-method> <!-- doAfter -->
       </class> <!-- com.hk.orderPlacement.GuestCheckoutOnline -->
       <class name="com.hk.poscheckout.POSCheckout">
-        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.poscheckout.POSCheckout@44929d0b]" name="doAfter" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- doAfter -->
-        <test-method status="SKIP" signature="posCheckout()[pri:0, instance:com.hk.poscheckout.POSCheckout@44929d0b]" name="posCheckout" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- posCheckout -->
-        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.poscheckout.POSCheckout@44929d0b]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[Skipping the RPUTest test case as RunMode is No]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Skipping the RPUTest test case as RunMode is No
-	at com.hk.poscheckout.POSCheckout.isSkip(Unknown Source)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.TestNG.privateMain(TestNG.java:1364)
-	at org.testng.TestNG.main(TestNG.java:1333)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
+        <test-method status="PASS" signature="isSkip()[pri:0, instance:com.hk.poscheckout.POSCheckout@26434ff9]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-12T12:02:57Z" finished-at="2015-03-12T12:02:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isSkip -->
-      </class> <!-- com.hk.poscheckout.POSCheckout -->
-      <class name="com.hk.warehouseSpecific.HYDCFACancellation">
-        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.warehouseSpecific.HYDCFACancellation@403f1e93]" name="doAfter" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
+        <test-method status="PASS" signature="posCheckout()[pri:0, instance:com.hk.poscheckout.POSCheckout@26434ff9]" name="posCheckout" duration-ms="36608" started-at="2015-03-12T12:02:57Z" finished-at="2015-03-12T12:03:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- posCheckout -->
+        <test-method status="PASS" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.poscheckout.POSCheckout@26434ff9]" name="doAfter" is-config="true" duration-ms="2226" started-at="2015-03-12T12:03:33Z" finished-at="2015-03-12T12:03:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=posCheckout status=SUCCESS method=POSCheckout.posCheckout()[pri:0, instance:com.hk.poscheckout.POSCheckout@26434ff9] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doAfter -->
-        <test-method status="SKIP" signature="testHYDCFACancellation()[pri:0, instance:com.hk.warehouseSpecific.HYDCFACancellation@403f1e93]" name="testHYDCFACancellation" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testHYDCFACancellation -->
-        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.warehouseSpecific.HYDCFACancellation@403f1e93]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
+      </class> <!-- com.hk.poscheckout.POSCheckout -->
+      <class name="com.hk.warehouseSpecific.HYDCFACancellation">
+        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.warehouseSpecific.HYDCFACancellation@4de8b404]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-12T12:04:52Z" finished-at="2015-03-12T12:04:52Z">
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[Skipping the HYDCFA Cancellation test case as RunMode is No]]>
@@ -636,13 +684,25 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isSkip -->
+        <test-method status="SKIP" signature="testHYDCFACancellation()[pri:0, instance:com.hk.warehouseSpecific.HYDCFACancellation@4de8b404]" name="testHYDCFACancellation" duration-ms="0" started-at="2015-03-12T12:04:52Z" finished-at="2015-03-12T12:04:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHYDCFACancellation -->
+        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.warehouseSpecific.HYDCFACancellation@4de8b404]" name="doAfter" is-config="true" duration-ms="0" started-at="2015-03-12T12:04:52Z" finished-at="2015-03-12T12:04:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doAfter -->
       </class> <!-- com.hk.warehouseSpecific.HYDCFACancellation -->
       <class name="com.hk.orderPlacement.ExistingOnlineOrder">
-        <test-method status="PASS" signature="isSkip()[pri:0, instance:com.hk.orderPlacement.ExistingOnlineOrder@34ab2790]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-11T16:38:46Z" finished-at="2015-03-11T16:38:46Z">
+        <test-method status="PASS" signature="Config()[pri:0, instance:com.hk.orderPlacement.ExistingOnlineOrder@4b0f30f5]" name="Config" is-config="true" duration-ms="0" started-at="2015-03-12T11:46:11Z" finished-at="2015-03-12T11:46:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Config -->
+        <test-method status="PASS" signature="isSkip()[pri:0, instance:com.hk.orderPlacement.ExistingOnlineOrder@4b0f30f5]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-12T11:46:11Z" finished-at="2015-03-12T11:46:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isSkip -->
-        <test-method status="PASS" signature="login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.ExistingOnlineOrder@34ab2790]" name="login" duration-ms="241196" started-at="2015-03-11T16:38:46Z" finished-at="2015-03-11T16:42:47Z">
+        <test-method status="PASS" signature="login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.ExistingOnlineOrder@4b0f30f5]" name="login" duration-ms="239830" started-at="2015-03-12T11:46:11Z" finished-at="2015-03-12T11:50:11Z">
           <params>
             <param index="0">
               <value is-null="true"/>
@@ -651,15 +711,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="Config()[pri:0, instance:com.hk.orderPlacement.ExistingOnlineOrder@34ab2790]" name="Config" is-config="true" duration-ms="0" started-at="2015-03-11T16:38:46Z" finished-at="2015-03-11T16:38:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Config -->
-        <test-method status="PASS" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.orderPlacement.ExistingOnlineOrder@34ab2790]" name="doAfter" is-config="true" duration-ms="1870" started-at="2015-03-11T16:42:47Z" finished-at="2015-03-11T16:42:49Z">
+        <test-method status="PASS" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.orderPlacement.ExistingOnlineOrder@4b0f30f5]" name="doAfter" is-config="true" duration-ms="1811" started-at="2015-03-12T11:50:11Z" finished-at="2015-03-12T11:50:13Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=login status=SUCCESS method=ExistingOnlineOrder.login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.ExistingOnlineOrder@34ab2790] output={null}]]]>
+                <![CDATA[[TestResult name=login status=SUCCESS method=ExistingOnlineOrder.login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.ExistingOnlineOrder@4b0f30f5] output={null}]]]>
               </value>
             </param>
           </params>
@@ -668,109 +724,53 @@
         </test-method> <!-- doAfter -->
       </class> <!-- com.hk.orderPlacement.ExistingOnlineOrder -->
       <class name="com.hk.warehouseSpecific.MUMCancellation">
-        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.warehouseSpecific.MUMCancellation@4b0f30f5]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[Skipping the MUM cancellation test case as RunMode is No]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Skipping the MUM cancellation test case as RunMode is No
-	at com.hk.warehouseSpecific.MUMCancellation.isSkip(Unknown Source)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.TestNG.privateMain(TestNG.java:1364)
-	at org.testng.TestNG.main(TestNG.java:1333)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- isSkip -->
-        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.warehouseSpecific.MUMCancellation@4b0f30f5]" name="doAfter" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- doAfter -->
-        <test-method status="SKIP" signature="testMUMCancellation()[pri:0, instance:com.hk.warehouseSpecific.MUMCancellation@4b0f30f5]" name="testMUMCancellation" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
+        <test-method status="PASS" signature="testMUMCancellation()[pri:0, instance:com.hk.warehouseSpecific.MUMCancellation@6c9f3578]" name="testMUMCancellation" duration-ms="31415" started-at="2015-03-12T12:01:15Z" finished-at="2015-03-12T12:01:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMUMCancellation -->
-      </class> <!-- com.hk.warehouseSpecific.MUMCancellation -->
-      <class name="com.hk.cancellation.TestWebCancellation">
-        <test-method status="SKIP" signature="testWebCancellation()[pri:0, instance:com.hk.cancellation.TestWebCancellation@32d5cb0]" name="testWebCancellation" duration-ms="0" started-at="2015-03-11T16:42:49Z" finished-at="2015-03-11T16:42:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testWebCancellation -->
-        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.cancellation.TestWebCancellation@32d5cb0]" name="doAfter" is-config="true" duration-ms="0" started-at="2015-03-11T16:42:49Z" finished-at="2015-03-11T16:42:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- doAfter -->
-        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.cancellation.TestWebCancellation@32d5cb0]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-11T16:42:49Z" finished-at="2015-03-11T16:42:49Z">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[Skipping the test case as RunMode is No]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Skipping the test case as RunMode is No
-	at com.hk.cancellation.TestWebCancellation.isSkip(Unknown Source)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.TestNG.privateMain(TestNG.java:1364)
-	at org.testng.TestNG.main(TestNG.java:1333)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
+        <test-method status="PASS" signature="isSkip()[pri:0, instance:com.hk.warehouseSpecific.MUMCancellation@6c9f3578]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-12T12:01:15Z" finished-at="2015-03-12T12:01:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isSkip -->
+        <test-method status="PASS" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.warehouseSpecific.MUMCancellation@6c9f3578]" name="doAfter" is-config="true" duration-ms="1669" started-at="2015-03-12T12:01:47Z" finished-at="2015-03-12T12:01:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testMUMCancellation status=SUCCESS method=MUMCancellation.testMUMCancellation()[pri:0, instance:com.hk.warehouseSpecific.MUMCancellation@6c9f3578] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doAfter -->
+      </class> <!-- com.hk.warehouseSpecific.MUMCancellation -->
+      <class name="com.hk.cancellation.TestWebCancellation">
+        <test-method status="PASS" signature="isSkip()[pri:0, instance:com.hk.cancellation.TestWebCancellation@4adc504d]" name="isSkip" is-config="true" duration-ms="2" started-at="2015-03-12T11:50:13Z" finished-at="2015-03-12T11:50:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isSkip -->
+        <test-method status="PASS" signature="testWebCancellation()[pri:0, instance:com.hk.cancellation.TestWebCancellation@4adc504d]" name="testWebCancellation" duration-ms="45413" started-at="2015-03-12T11:50:13Z" finished-at="2015-03-12T11:50:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWebCancellation -->
+        <test-method status="PASS" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.cancellation.TestWebCancellation@4adc504d]" name="doAfter" is-config="true" duration-ms="1841" started-at="2015-03-12T11:50:58Z" finished-at="2015-03-12T11:51:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testWebCancellation status=SUCCESS method=TestWebCancellation.testWebCancellation()[pri:0, instance:com.hk.cancellation.TestWebCancellation@4adc504d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doAfter -->
       </class> <!-- com.hk.cancellation.TestWebCancellation -->
       <class name="com.hk.orderPlacement.SignupOrderOnline">
-        <test-method status="PASS" signature="config()[pri:0, instance:com.hk.orderPlacement.SignupOrderOnline@6c9f3578]" name="config" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
+        <test-method status="PASS" signature="config()[pri:0, instance:com.hk.orderPlacement.SignupOrderOnline@461c15a0]" name="config" is-config="true" duration-ms="1" started-at="2015-03-12T11:58:50Z" finished-at="2015-03-12T11:58:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- config -->
-        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.orderPlacement.SignupOrderOnline@6c9f3578]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
+        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.orderPlacement.SignupOrderOnline@461c15a0]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-12T11:58:50Z" finished-at="2015-03-12T11:58:50Z">
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[Skipping the SignUpOrderOnline test case as RunMode is No]]>
@@ -809,11 +809,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isSkip -->
-        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.orderPlacement.SignupOrderOnline@6c9f3578]" name="doAfter" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- doAfter -->
-        <test-method status="SKIP" signature="login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.SignupOrderOnline@6c9f3578]" name="login" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
+        <test-method status="SKIP" signature="login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.SignupOrderOnline@461c15a0]" name="login" duration-ms="0" started-at="2015-03-12T11:58:50Z" finished-at="2015-03-12T11:58:50Z">
           <params>
             <param index="0">
               <value is-null="true"/>
@@ -822,28 +818,59 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-      </class> <!-- com.hk.orderPlacement.SignupOrderOnline -->
-      <class name="com.hk.scaledupOrderPlacement.FlipTest">
-        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.scaledupOrderPlacement.FlipTest@6ff065d8]" name="doAfter" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
+        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.orderPlacement.SignupOrderOnline@461c15a0]" name="doAfter" is-config="true" duration-ms="0" started-at="2015-03-12T11:58:50Z" finished-at="2015-03-12T11:58:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doAfter -->
-        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.scaledupOrderPlacement.FlipTest@6ff065d8]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
-          <exception class="org.testng.SkipException">
+      </class> <!-- com.hk.orderPlacement.SignupOrderOnline -->
+      <class name="com.hk.scaledupOrderPlacement.FlipTest">
+        <test-method status="PASS" signature="isSkip()[pri:0, instance:com.hk.scaledupOrderPlacement.FlipTest@60b20be]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-12T11:58:50Z" finished-at="2015-03-12T11:58:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isSkip -->
+        <test-method status="FAIL" signature="doFlipTest()[pri:0, instance:com.hk.scaledupOrderPlacement.FlipTest@60b20be]" name="doFlipTest" duration-ms="61643" started-at="2015-03-12T11:58:50Z" finished-at="2015-03-12T11:59:52Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Skipping the test case as RunMode is No]]>
+              <![CDATA[no such element
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 6.02 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.42.2', revision: '6a6995d', time: '2014-06-03 17:42:30'
+System info: host: 'Tech-VipulJain', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_45'
+Session ID: 4fd90159a907c78cc604bd334f2fa385
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\VIPUL~1.JAI\AppData\Local\Temp\scoped_dir29380_30017}, rotatable=false, locationContextEnabled=true, version=40.0.2214.115, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Skipping the test case as RunMode is No
-	at com.hk.scaledupOrderPlacement.FlipTest.isSkip(Unknown Source)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 6.02 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.42.2', revision: '6a6995d', time: '2014-06-03 17:42:30'
+System info: host: 'Tech-VipulJain', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_45'
+Session ID: 4fd90159a907c78cc604bd334f2fa385
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\VIPUL~1.JAI\AppData\Local\Temp\scoped_dir29380_30017}, rotatable=false, locationContextEnabled=true, version=40.0.2214.115, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at com.hk.scaledupOrderPlacement.FlipTest.doFlipTest(Unknown Source)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
@@ -863,115 +890,49 @@
 	at org.testng.TestNG.main(TestNG.java:1333)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- isSkip -->
-        <test-method status="SKIP" signature="doFlipTest()[pri:0, instance:com.hk.scaledupOrderPlacement.FlipTest@6ff065d8]" name="doFlipTest" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doFlipTest -->
-      </class> <!-- com.hk.scaledupOrderPlacement.FlipTest -->
-      <class name="com.hk.cancellation.TestAquaCancellation">
-        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.cancellation.TestAquaCancellation@9306155]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-11T16:34:22Z" finished-at="2015-03-11T16:34:22Z">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[Skipping the test case as RunMode is No]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Skipping the test case as RunMode is No
-	at com.hk.cancellation.TestAquaCancellation.isSkip(Unknown Source)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.TestNG.privateMain(TestNG.java:1364)
-	at org.testng.TestNG.main(TestNG.java:1333)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- isSkip -->
-        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.cancellation.TestAquaCancellation@9306155]" name="doAfter" is-config="true" duration-ms="0" started-at="2015-03-11T16:34:22Z" finished-at="2015-03-11T16:34:22Z">
+        <test-method status="PASS" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.scaledupOrderPlacement.FlipTest@60b20be]" name="doAfter" is-config="true" duration-ms="1933" started-at="2015-03-12T11:59:52Z" finished-at="2015-03-12T11:59:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=doFlipTest status=FAILURE method=FlipTest.doFlipTest()[pri:0, instance:com.hk.scaledupOrderPlacement.FlipTest@60b20be] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doAfter -->
-        <test-method status="SKIP" signature="testAquaCancellation()[pri:0, instance:com.hk.cancellation.TestAquaCancellation@9306155]" name="testAquaCancellation" duration-ms="0" started-at="2015-03-11T16:34:22Z" finished-at="2015-03-11T16:34:22Z">
+      </class> <!-- com.hk.scaledupOrderPlacement.FlipTest -->
+      <class name="com.hk.cancellation.TestAquaCancellation">
+        <test-method status="PASS" signature="isSkip()[pri:0, instance:com.hk.cancellation.TestAquaCancellation@17202871]" name="isSkip" is-config="true" duration-ms="266" started-at="2015-03-12T11:41:32Z" finished-at="2015-03-12T11:41:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isSkip -->
+        <test-method status="PASS" signature="testAquaCancellation()[pri:0, instance:com.hk.cancellation.TestAquaCancellation@17202871]" name="testAquaCancellation" duration-ms="47335" started-at="2015-03-12T11:41:33Z" finished-at="2015-03-12T11:42:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAquaCancellation -->
-      </class> <!-- com.hk.cancellation.TestAquaCancellation -->
-      <class name="com.hk.scaledupOrderPlacement.StoreCheckoutTest">
-        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.scaledupOrderPlacement.StoreCheckoutTest@4adc504d]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[Skipping the StoreCheckoutTest test case as RunMode is No]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Skipping the StoreCheckoutTest test case as RunMode is No
-	at com.hk.scaledupOrderPlacement.StoreCheckoutTest.isSkip(Unknown Source)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.TestNG.privateMain(TestNG.java:1364)
-	at org.testng.TestNG.main(TestNG.java:1333)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- isSkip -->
-        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.scaledupOrderPlacement.StoreCheckoutTest@4adc504d]" name="doAfter" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
+        <test-method status="PASS" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.cancellation.TestAquaCancellation@17202871]" name="doAfter" is-config="true" duration-ms="1935" started-at="2015-03-12T11:42:20Z" finished-at="2015-03-12T11:42:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testAquaCancellation status=SUCCESS method=TestAquaCancellation.testAquaCancellation()[pri:0, instance:com.hk.cancellation.TestAquaCancellation@17202871] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doAfter -->
-        <test-method status="SKIP" signature="testStoreCheckout()[pri:0, instance:com.hk.scaledupOrderPlacement.StoreCheckoutTest@4adc504d]" name="testStoreCheckout" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
+      </class> <!-- com.hk.cancellation.TestAquaCancellation -->
+      <class name="com.hk.orderPlacement.SignupCodOrder">
+        <test-method status="PASS" signature="config()[pri:0, instance:com.hk.orderPlacement.SignupCodOrder@696add0e]" name="config" is-config="true" duration-ms="1" started-at="2015-03-12T12:04:52Z" finished-at="2015-03-12T12:04:52Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testStoreCheckout -->
-      </class> <!-- com.hk.scaledupOrderPlacement.StoreCheckoutTest -->
-      <class name="com.hk.orderPlacement.SignupCodOrder">
-        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.orderPlacement.SignupCodOrder@486f90fe]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
+        </test-method> <!-- config -->
+        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.orderPlacement.SignupCodOrder@696add0e]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-12T12:04:52Z" finished-at="2015-03-12T12:04:52Z">
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[Skipping the SignUpCodOrder test case as RunMode is No]]>
@@ -1010,7 +971,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isSkip -->
-        <test-method status="SKIP" signature="login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.SignupCodOrder@486f90fe]" name="login" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
+        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.orderPlacement.SignupCodOrder@696add0e]" name="doAfter" is-config="true" duration-ms="0" started-at="2015-03-12T12:04:52Z" finished-at="2015-03-12T12:04:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doAfter -->
+        <test-method status="SKIP" signature="login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.SignupCodOrder@696add0e]" name="login" duration-ms="0" started-at="2015-03-12T12:04:52Z" finished-at="2015-03-12T12:04:52Z">
           <params>
             <param index="0">
               <value is-null="true"/>
@@ -1019,32 +984,51 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="config()[pri:0, instance:com.hk.orderPlacement.SignupCodOrder@486f90fe]" name="config" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- config -->
-        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.orderPlacement.SignupCodOrder@486f90fe]" name="doAfter" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- doAfter -->
       </class> <!-- com.hk.orderPlacement.SignupCodOrder -->
-      <class name="com.hk.scaledupOrderPlacement.AddressChangeTest">
-        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.scaledupOrderPlacement.AddressChangeTest@77d21a9b]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
-          <exception class="org.testng.SkipException">
+      <class name="com.hk.scaledupOrderPlacement.StoreCheckoutTest">
+        <test-method status="FAIL" signature="testStoreCheckout()[pri:0, instance:com.hk.scaledupOrderPlacement.StoreCheckoutTest@9306155]" name="testStoreCheckout" duration-ms="14412" started-at="2015-03-12T12:04:52Z" finished-at="2015-03-12T12:05:06Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Skipping the test case as RunMode is No]]>
+              <![CDATA[no such element
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 6.02 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.42.2', revision: '6a6995d', time: '2014-06-03 17:42:30'
+System info: host: 'Tech-VipulJain', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_45'
+Session ID: 42b2c0fe787f9ce11ce986d42071fd1e
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\VIPUL~1.JAI\AppData\Local\Temp\scoped_dir42040_5552}, rotatable=false, locationContextEnabled=true, version=40.0.2214.115, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Skipping the test case as RunMode is No
-	at com.hk.scaledupOrderPlacement.AddressChangeTest.isSkip(Unknown Source)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 6.02 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.42.2', revision: '6a6995d', time: '2014-06-03 17:42:30'
+System info: host: 'Tech-VipulJain', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_45'
+Session ID: 42b2c0fe787f9ce11ce986d42071fd1e
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\VIPUL~1.JAI\AppData\Local\Temp\scoped_dir42040_5552}, rotatable=false, locationContextEnabled=true, version=40.0.2214.115, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at com.hk.scaledupOrderPlacement.StoreCheckoutTest.testStoreCheckout(Unknown Source)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
@@ -1064,29 +1048,115 @@
 	at org.testng.TestNG.main(TestNG.java:1333)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStoreCheckout -->
+        <test-method status="PASS" signature="isSkip()[pri:0, instance:com.hk.scaledupOrderPlacement.StoreCheckoutTest@9306155]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-12T12:04:52Z" finished-at="2015-03-12T12:04:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isSkip -->
-        <test-method status="SKIP" signature="testAddressChange()[pri:0, instance:com.hk.scaledupOrderPlacement.AddressChangeTest@77d21a9b]" name="testAddressChange" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
+        <test-method status="PASS" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.scaledupOrderPlacement.StoreCheckoutTest@9306155]" name="doAfter" is-config="true" duration-ms="2716" started-at="2015-03-12T12:05:06Z" finished-at="2015-03-12T12:05:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testStoreCheckout status=FAILURE method=StoreCheckoutTest.testStoreCheckout()[pri:0, instance:com.hk.scaledupOrderPlacement.StoreCheckoutTest@9306155] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doAfter -->
+      </class> <!-- com.hk.scaledupOrderPlacement.StoreCheckoutTest -->
+      <class name="com.hk.scaledupOrderPlacement.AddressChangeTest">
+        <test-method status="PASS" signature="isSkip()[pri:0, instance:com.hk.scaledupOrderPlacement.AddressChangeTest@6ff065d8]" name="isSkip" is-config="true" duration-ms="1" started-at="2015-03-12T12:02:06Z" finished-at="2015-03-12T12:02:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isSkip -->
+        <test-method status="FAIL" signature="testAddressChange()[pri:0, instance:com.hk.scaledupOrderPlacement.AddressChangeTest@6ff065d8]" name="testAddressChange" duration-ms="47884" started-at="2015-03-12T12:02:06Z" finished-at="2015-03-12T12:02:54Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 6.03 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.42.2', revision: '6a6995d', time: '2014-06-03 17:42:30'
+System info: host: 'Tech-VipulJain', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_45'
+Session ID: ab284706ed4f625e18b23ec1fbde07c5
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\VIPUL~1.JAI\AppData\Local\Temp\scoped_dir35980_5642}, rotatable=false, locationContextEnabled=true, version=40.0.2214.115, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 6.03 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.42.2', revision: '6a6995d', time: '2014-06-03 17:42:30'
+System info: host: 'Tech-VipulJain', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_45'
+Session ID: ab284706ed4f625e18b23ec1fbde07c5
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\VIPUL~1.JAI\AppData\Local\Temp\scoped_dir35980_5642}, rotatable=false, locationContextEnabled=true, version=40.0.2214.115, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at com.hk.scaledupOrderPlacement.AddressChangeTest.testAddressChange(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.TestNG.privateMain(TestNG.java:1364)
+	at org.testng.TestNG.main(TestNG.java:1333)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddressChange -->
-        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.scaledupOrderPlacement.AddressChangeTest@77d21a9b]" name="doAfter" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
+        <test-method status="PASS" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.scaledupOrderPlacement.AddressChangeTest@6ff065d8]" name="doAfter" is-config="true" duration-ms="2884" started-at="2015-03-12T12:02:54Z" finished-at="2015-03-12T12:02:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testAddressChange status=FAILURE method=AddressChangeTest.testAddressChange()[pri:0, instance:com.hk.scaledupOrderPlacement.AddressChangeTest@6ff065d8] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doAfter -->
       </class> <!-- com.hk.scaledupOrderPlacement.AddressChangeTest -->
       <class name="com.hk.scaledupOrderPlacement.SplitSOTest">
-        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.scaledupOrderPlacement.SplitSOTest@3a4f3587]" name="doAfter" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- doAfter -->
-        <test-method status="SKIP" signature="doSplitSOTest()[pri:0, instance:com.hk.scaledupOrderPlacement.SplitSOTest@3a4f3587]" name="doSplitSOTest" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
+        <test-method status="SKIP" signature="doSplitSOTest()[pri:0, instance:com.hk.scaledupOrderPlacement.SplitSOTest@47461829]" name="doSplitSOTest" duration-ms="0" started-at="2015-03-12T12:01:15Z" finished-at="2015-03-12T12:01:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doSplitSOTest -->
-        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.scaledupOrderPlacement.SplitSOTest@3a4f3587]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
+        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.scaledupOrderPlacement.SplitSOTest@47461829]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-12T12:01:15Z" finished-at="2015-03-12T12:01:15Z">
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[Skipping the ExistingOnlineOrder test case as RunMode is No]]>
@@ -1125,24 +1195,59 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isSkip -->
+        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.scaledupOrderPlacement.SplitSOTest@47461829]" name="doAfter" is-config="true" duration-ms="0" started-at="2015-03-12T12:01:15Z" finished-at="2015-03-12T12:01:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doAfter -->
       </class> <!-- com.hk.scaledupOrderPlacement.SplitSOTest -->
       <class name="com.hk.warehouseSpecific.MUMRtoTest">
-        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.warehouseSpecific.MUMRtoTest@5dcfdf55]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
-          <exception class="org.testng.SkipException">
+        <test-method status="PASS" signature="isSkip()[pri:0, instance:com.hk.warehouseSpecific.MUMRtoTest@68829a91]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-12T12:10:51Z" finished-at="2015-03-12T12:10:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isSkip -->
+        <test-method status="FAIL" signature="testMUMRto()[pri:0, instance:com.hk.warehouseSpecific.MUMRtoTest@68829a91]" name="testMUMRto" duration-ms="165748" started-at="2015-03-12T12:10:51Z" finished-at="2015-03-12T12:13:37Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Skipping the MUM Split SO test case as RunMode is No]]>
+              <![CDATA[no such element
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.00 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.42.2', revision: '6a6995d', time: '2014-06-03 17:42:30'
+System info: host: 'Tech-VipulJain', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_45'
+Session ID: 275c7718e7766cdfe682f8ca0b168840
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\VIPUL~1.JAI\AppData\Local\Temp\scoped_dir42900_20091}, rotatable=false, locationContextEnabled=true, version=40.0.2214.115, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Skipping the MUM Split SO test case as RunMode is No
-	at com.hk.warehouseSpecific.MUMRtoTest.isSkip(Unknown Source)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.00 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.42.2', revision: '6a6995d', time: '2014-06-03 17:42:30'
+System info: host: 'Tech-VipulJain', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_45'
+Session ID: 275c7718e7766cdfe682f8ca0b168840
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\VIPUL~1.JAI\AppData\Local\Temp\scoped_dir42900_20091}, rotatable=false, locationContextEnabled=true, version=40.0.2214.115, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at sun.reflect.GeneratedConstructorAccessor86.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at com.hk.scaledupOrderPlacement.DoRTO.doRTO(Unknown Source)
+	at com.hk.warehouseSpecific.MUMRtoTest.testMUMRto(Unknown Source)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
@@ -1162,44 +1267,47 @@
 	at org.testng.TestNG.main(TestNG.java:1333)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- isSkip -->
-        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.warehouseSpecific.MUMRtoTest@5dcfdf55]" name="doAfter" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- doAfter -->
-        <test-method status="SKIP" signature="testMUMRto()[pri:0, instance:com.hk.warehouseSpecific.MUMRtoTest@5dcfdf55]" name="testMUMRto" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMUMRto -->
-      </class> <!-- com.hk.warehouseSpecific.MUMRtoTest -->
-      <class name="com.hk.warehouseSpecific.MUMRpuTest">
-        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.warehouseSpecific.MUMRpuTest@461c15a0]" name="doAfter" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
+        <test-method status="PASS" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.warehouseSpecific.MUMRtoTest@68829a91]" name="doAfter" is-config="true" duration-ms="1852" started-at="2015-03-12T12:13:37Z" finished-at="2015-03-12T12:13:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testMUMRto status=FAILURE method=MUMRtoTest.testMUMRto()[pri:0, instance:com.hk.warehouseSpecific.MUMRtoTest@68829a91] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doAfter -->
-        <test-method status="SKIP" signature="testMUMRpu()[pri:0, instance:com.hk.warehouseSpecific.MUMRpuTest@461c15a0]" name="testMUMRpu" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
+      </class> <!-- com.hk.warehouseSpecific.MUMRtoTest -->
+      <class name="com.hk.warehouseSpecific.MUMRpuTest">
+        <test-method status="PASS" signature="isSkip()[pri:0, instance:com.hk.warehouseSpecific.MUMRpuTest@7aa34f04]" name="isSkip" is-config="true" duration-ms="1" started-at="2015-03-12T12:05:09Z" finished-at="2015-03-12T12:05:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMUMRpu -->
-        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.warehouseSpecific.MUMRpuTest@461c15a0]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
-          <exception class="org.testng.SkipException">
+        </test-method> <!-- isSkip -->
+        <test-method status="FAIL" signature="testMUMRpu()[pri:0, instance:com.hk.warehouseSpecific.MUMRpuTest@7aa34f04]" name="testMUMRpu" duration-ms="280641" started-at="2015-03-12T12:05:09Z" finished-at="2015-03-12T12:09:49Z">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Skipping the MUM Split SO test case as RunMode is No]]>
+              <![CDATA[expected [false] but found [true]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Skipping the MUM Split SO test case as RunMode is No
-	at com.hk.warehouseSpecific.MUMRpuTest.isSkip(Unknown Source)
+              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:286)
+	at org.testng.Assert.assertEquals(Assert.java:296)
+	at com.hk.scaledupOrderPlacement.DoRPU.doRPU(Unknown Source)
+	at com.hk.warehouseSpecific.MUMRpuTest.testMUMRpu(Unknown Source)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
@@ -1219,13 +1327,24 @@
 	at org.testng.TestNG.main(TestNG.java:1333)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- isSkip -->
+        </test-method> <!-- testMUMRpu -->
+        <test-method status="PASS" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.warehouseSpecific.MUMRpuTest@7aa34f04]" name="doAfter" is-config="true" duration-ms="2013" started-at="2015-03-12T12:09:49Z" finished-at="2015-03-12T12:09:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testMUMRpu status=FAILURE method=MUMRpuTest.testMUMRpu()[pri:0, instance:com.hk.warehouseSpecific.MUMRpuTest@7aa34f04] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doAfter -->
       </class> <!-- com.hk.warehouseSpecific.MUMRpuTest -->
       <class name="com.hk.orderPlacement.CouponOnlineOrder">
-        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.orderPlacement.CouponOnlineOrder@61121eb9]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
+        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.hk.orderPlacement.CouponOnlineOrder@77d21a9b]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-03-12T12:09:51Z" finished-at="2015-03-12T12:09:51Z">
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[Skipping the CouponOnlineOrder test case as RunMode is No]]>
@@ -1264,7 +1383,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isSkip -->
-        <test-method status="SKIP" signature="login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.CouponOnlineOrder@61121eb9]" name="login" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
+        <test-method status="PASS" signature="Config()[pri:0, instance:com.hk.orderPlacement.CouponOnlineOrder@77d21a9b]" name="Config" is-config="true" duration-ms="0" started-at="2015-03-12T12:09:51Z" finished-at="2015-03-12T12:09:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Config -->
+        <test-method status="SKIP" signature="login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.CouponOnlineOrder@77d21a9b]" name="login" duration-ms="0" started-at="2015-03-12T12:09:51Z" finished-at="2015-03-12T12:09:51Z">
           <params>
             <param index="0">
               <value is-null="true"/>
@@ -1273,14 +1396,10 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.orderPlacement.CouponOnlineOrder@61121eb9]" name="doAfter" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
+        <test-method status="SKIP" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.orderPlacement.CouponOnlineOrder@77d21a9b]" name="doAfter" is-config="true" duration-ms="0" started-at="2015-03-12T12:09:51Z" finished-at="2015-03-12T12:09:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doAfter -->
-        <test-method status="PASS" signature="Config()[pri:0, instance:com.hk.orderPlacement.CouponOnlineOrder@61121eb9]" name="Config" is-config="true" duration-ms="0" started-at="2015-03-11T16:49:09Z" finished-at="2015-03-11T16:49:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Config -->
       </class> <!-- com.hk.orderPlacement.CouponOnlineOrder -->
     </test> <!-- HealthKart Automation Suite -->
   </suite> <!-- TestNG Test -->
