@@ -16,9 +16,9 @@ public class PaymentPage {
     private String paymentY="//*[@id=\"gatewayForm\"]/p[1]/input[1]";
     //private String proceedPayment="html/body/div[1]/form/input[5]";
     private String proceedPayment="//*[@value = 'Proceed']";
-    private String cashOnDelivery= "//*[@id=\"nav\"]/li[5]";
-    private String cod1stDiv= "//*[@id=\"nav\"]/li[6]";
-    private String cod2ndDiv= "//*[@id=\"nav\"]/li[7]";
+    private String cashOnDelivery= "(//*[@id=\"nav\"]/li[contains(text(),'CASH ON DELIVERY')])";
+   // private String cod1stDiv= "//*[@id=\"nav\"]/li[6]";
+    //private String cod2ndDiv= "//*[@id=\"nav\"]/li[7]";
     private String payOnDelivery="//*[@value='Place order']";
 
 
@@ -50,9 +50,9 @@ public class PaymentPage {
         return payOnDelivery;
     }
 
-    public String getCod1stDiv() { return cod1stDiv;}
+   /* public String getCod1stDiv() { return cod1stDiv;}
 
     public String getCod2ndDiv() {
         return cod2ndDiv;
-    }
+    }*/
 }

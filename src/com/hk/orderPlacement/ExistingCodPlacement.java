@@ -57,26 +57,18 @@ public class ExistingCodPlacement extends SharedProperties {
     @BeforeClass
     public void Config()
     {
-
         this.baseUrl = TestUtil.getURL();
-
         this.browser = TestUtil.getBrowser();
     }
 
     @BeforeMethod
     public void isSkip() throws InterruptedException
     {
-
         if(!(TestUtil.isExecutable("ExistingCodPlacement") && TestUtil.isExecutable("OrderPlacement")))
         {
-
             System.out.println("ExistingCodPlacement would be skipped");
             throw new SkipException("Skipping the ExistingCodPlacement test case as RunMode is No");
-
         }
-
-
-
     }
 
     @AfterMethod
@@ -113,13 +105,8 @@ public class ExistingCodPlacement extends SharedProperties {
                 {
                     System.out.println("Add to cart button is present");
                     Thread.sleep(10000);
-
-
                     SharedProperties.driver.findElement(By.xpath("//*[@id='variant-page']/div/div/div[2]/div[2]/div[2]/a")).click();
-
                     Thread.sleep(3000);
-
-
                 }
                 else
                 {
@@ -146,11 +133,15 @@ public class ExistingCodPlacement extends SharedProperties {
         SharedProperties.Click(loginPage.getSignInCheckbox(), SharedProperties.driver);
         SharedProperties.Click(loginPage.getSignInBtn(), SharedProperties.driver);
         Thread.sleep(3000);
+
+        SharedProperties.clear(loginPage.getEmailIdTextBox(), SharedProperties.driver);
         SharedProperties.sendKeys(loginPage.getEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
-        SharedProperties.sendKeys(loginPage.getPasswordTextBox(), "lklsdk", SharedProperties.driver);
+        SharedProperties.clear(loginPage.getPasswordTextBox(), SharedProperties.driver);
+        SharedProperties.sendKeys(loginPage.getPasswordTextBox(), testDetailsDTO.getPasswordList(), SharedProperties.driver);
         SharedProperties.Click(loginPage.getSignInBtn(), SharedProperties.driver);
         Thread.sleep(5000);
-        if (SharedProperties.driver.findElements(By.xpath("//*[@id=\"signInForm\"]/input[3]")).size() > 0) {
+
+       /*if (SharedProperties.driver.findElements(By.xpath("//*[@id=\"signInForm\"]/input[3]")).size() > 0) {
             SharedProperties.clear(loginPage.getOldEmailIdTextBox(), SharedProperties.driver);
             SharedProperties.sendKeys(loginPage.getOldEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
             SharedProperties.sendKeys(loginPage.getPasswordTextBox(), testDetailsDTO.getPasswordList(), SharedProperties.driver);
@@ -165,13 +156,13 @@ public class ExistingCodPlacement extends SharedProperties {
             SharedProperties.Click(loginPage.getSignInBtn(), SharedProperties.driver);
             Thread.sleep(5000);
         }
-
+          */
         //Code to add more quantity
         //code to redeem reward points
         //code to add coupons
 
-        /*SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
-        Thread.sleep(5000);*/
+        SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
+        Thread.sleep(5000);
         SharedProperties.Click(addresspage.addressPage(), SharedProperties.driver);
         Thread.sleep(5000);
         /*if (SharedProperties.driver.findElement(By.xpath("/*//*[@id=\"nav\"]/li[5]")).getText() == "CASH ON DELIVERY")
@@ -186,48 +177,35 @@ public class ExistingCodPlacement extends SharedProperties {
             SharedProperties.Click(paymentpage.getCod2ndDiv(), SharedProperties.driver);
         }*/
 
-          SharedProperties.driver.findElement(By.xpath("//*[@class='last']")).click();
+        //  SharedProperties.driver.findElement(By.xpath("//ul[@id='nav']/li[6]")).click();
         //SharedProperties.Click(paymentpage.cashOnDelivery(), SharedProperties.driver);
+        SharedProperties.Click(paymentpage.cashOnDelivery(), SharedProperties.driver);
         Thread.sleep(5000);
         SharedProperties.Click(paymentpage.payOnDelivery(), SharedProperties.driver);
 
         Thread.sleep(5000);
 
 
-        String orderId =   SharedProperties.driver.findElement(By.xpath("html/body/div[1]/div[2]/div/div[6]/div/div[1]/p[2]")).getText();
-
+        String orderId =   SharedProperties.driver.findElement(By.xpath("//p[@class='order-id mrgn-b-5']")).getText();
         System.out.println(orderId);
 
         String finalOrderId = orderId.substring(10);
-
         soDetails.orderIdSoDetails = finalOrderId;
-
-        TestUtil.excel.setCellData("test_suite","OrderId_Generated",8, orderId );
-
+        //TestUtil.excel.setCellData("test_suite","OrderId_Generated",8, orderId );
         String getText = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[7]")).getText();
 
         if(SharedProperties.isElementPresent("/html/body/div[1]/div[2]/div/div[7]") && getText.contains("your"))
         {
             OrderDetailsUtil.flagLoyalty = true  ;
-
         }
         else
         {
-
             OrderDetailsUtil.flagNoLoyalty = true;
-
-
         }
-
         String codStatus = SharedProperties.driver.findElement(By.xpath("html/body/div[1]/div[2]/div/div[6]/div/div[1]/p[1]/span[2]")).getText();
-
-
-
+        System.out.println(codStatus);
         Thread.sleep(3000);
-
         //varCheckout.variantCheckout();
-
-
 
         if (OrderDetailsVerify.orderDetails() == true)
         {
@@ -236,24 +214,20 @@ public class ExistingCodPlacement extends SharedProperties {
             if(codStatus.equalsIgnoreCase("Authorization Pending"))
             {
                 codNavigation.codConfirmNavigation(finalOrderId);
-
             }
             Thread.sleep(5000);
             if(TestUtil.getExecuteVariantCheckoutRunMode(8).equalsIgnoreCase("Y"))
             {
-            varCheckout.variantCheckout();
+                varCheckout.variantCheckout();
             }
             Thread.sleep(3000);
 
             OrderDetailsUtil.flagLoyalty = false;
             OrderDetailsUtil.flagNoLoyalty = false;
-
-
         } else {
             if(codStatus.equalsIgnoreCase("Authorization Pending"))
             {
                 codNavigation.codConfirmNavigation(finalOrderId);
-
             }
             Thread.sleep(5000);
             if(TestUtil.getExecuteVariantCheckoutRunMode(8).equalsIgnoreCase("Y"))

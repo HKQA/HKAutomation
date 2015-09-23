@@ -22,15 +22,28 @@
     </test>-->
     <test name = "HealthKart Automation Suite">
         <packages>
-            <package name = "com.hk.commonProperties"/>
-            <package name = "com.hk.cancellation"/>
-            <package name = "com.hk.scaledupOrderPlacement"/>
-            <package name = "com.hk.orderPlacement"/>
-            <package name = "com.hk.poscheckout"/>
-            <package name = "com.hk.warehouseSpecific"/>
-        </packages>
+    <!-- <package name = "com.hk.commonProperties"/> -->
+    <!-- <package name = "com.hk.cancellation"/>  -->
+    <!-- <package name = "com.hk.scaledupOrderPlacement"/>      -->
+    <!-- <package name = "com.hk.orderPlacement"/> -->
+    <!-- <package name = "com.hk.poscheckout"/>  -->
+    <!-- <package name = "com.hk.warehouseSpecific"/>  -->
+ </packages>
 
-    </test>
+        <classes>
+            <class name="com.hk.orderPlacement.ExistingCodPlacement"/>
+        </classes>
+
+</test>
+
+<!--    <suite name="Parallel test Suite" >
+        <test name="Parallel test">
+            <classes>
+                <class name="com.hk.orderPlacement.ExistingCodPlacement" />
+            </classes>
+        </test>
+    </suite> -->
+
     <!--<test name="com.hk.orderPlacement.SignupCodOrder">
         <classes>
             <class name="com.hk.orderPlacement.SignupCodOrder"/>

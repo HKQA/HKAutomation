@@ -127,65 +127,42 @@ public class SharedProperties
         Thread.sleep(2000);
         robot.delay(delay) ;
 
-
         robot.keyPress(KeyEvent.VK_ESCAPE) ;
         robot.keyRelease(KeyEvent.VK_ESCAPE) ;
         Thread.sleep(3000);
-
 
         robot.delay(delay) ;
         Thread.sleep(3000);
         robot.keyPress(KeyEvent.VK_ESCAPE) ;
         robot.keyRelease(KeyEvent.VK_ESCAPE) ;
         robot.delay(delay) ;
-
-
-
 
     }
 
     public static boolean isElementPresent(String xpath)
     {
-
         try {
-
             driver.findElement(By.xpath(xpath));
             return true;
 
         } catch (Exception e) {
-
             return false;
-
         }
-
-
-
     }
-
 
     public static void mouseHoverAndClick(String mouseHoverElementXpath, String targetElementXpath, WebDriver driver)
     {
-
         Actions action = new Actions(driver);
-
         WebElement signupHover = driver.findElement(By.xpath(mouseHoverElementXpath));
-
-
-
         //action.moveToElement(signupHover).moveToElement(driver.findElement(By.xpath(targetElementXpath))).click().perform();
         action.moveToElement(signupHover).build().perform();
-
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
         WebElement signupClick = driver.findElement(By.xpath(targetElementXpath));
-
         action.moveToElement(signupClick).click().perform();
-
-
     }
 }
 

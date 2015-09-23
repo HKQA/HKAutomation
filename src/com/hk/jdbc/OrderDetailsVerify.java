@@ -27,14 +27,9 @@ public class OrderDetailsVerify {
 
         if (!orderDetailsDTO.getProductList().containsAll(OrderDetailsUtil.getItems_NoLoyalty()))
             {
-
             return false;
             }
         }
-
-
         return true;
-
-
     }
 }
