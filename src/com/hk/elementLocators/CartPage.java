@@ -20,6 +20,8 @@ public class CartPage {
     //private String signinLink="//*[@id=\"header\"]/div/div[2]/div[3]/div/div/a";
     private String signupHover = "//*[@id='header']/div/div[2]/div[3]/div/div/span[1]"  ;
     private String signinLink = "//*[@id='header']/div/div[2]/div[3]/div/ul/li[1]/span/a";
+    private String applyRewardPoint = "//div[@id='ptsUsed']/div[2]/span[2]";
+    private String removeRewardPoint = "//div[16]/div/span[3]";
 
     public String addToCartBtn() {
         return addToCartBtn;
@@ -66,4 +68,12 @@ public class CartPage {
 
     }
 
+    public String getApplyRewardPoint()
+    {
+        return applyRewardPoint;
+    }
+    public String getRemoveRewardPoint()
+    {
+        return removeRewardPoint;
+    }
 }
