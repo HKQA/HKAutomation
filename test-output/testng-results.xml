@@ -2,16 +2,20 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="TestNG Test" duration-ms="55582" started-at="2015-09-23T07:02:55Z" finished-at="2015-09-23T07:03:50Z">
+  <suite name="TestNG Test" duration-ms="56920" started-at="2015-10-14T10:20:44Z" finished-at="2015-10-14T10:21:41Z">
     <groups>
     </groups>
-    <test name="HealthKart Automation Suite" duration-ms="55582" started-at="2015-09-23T07:02:55Z" finished-at="2015-09-23T07:03:50Z">
-      <class name="com.hk.orderPlacement.ExistingCodPlacement">
-        <test-method status="PASS" signature="Config()[pri:0, instance:com.hk.orderPlacement.ExistingCodPlacement@62ee68d8]" name="Config" is-config="true" duration-ms="276" started-at="2015-09-23T12:32:55Z" finished-at="2015-09-23T12:32:55Z">
+    <test name="HealthKart Automation Suite" duration-ms="56920" started-at="2015-10-14T10:20:44Z" finished-at="2015-10-14T10:21:41Z">
+      <class name="com.hk.orderPlacement.ExistingOnlineOrder">
+        <test-method status="PASS" signature="Config()[pri:0, instance:com.hk.orderPlacement.ExistingOnlineOrder@62ee68d8]" name="Config" is-config="true" duration-ms="266" started-at="2015-10-14T15:50:44Z" finished-at="2015-10-14T15:50:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Config -->
-        <test-method status="FAIL" signature="login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.ExistingCodPlacement@62ee68d8]" name="login" duration-ms="53738" started-at="2015-09-23T12:32:55Z" finished-at="2015-09-23T12:33:49Z">
+        <test-method status="PASS" signature="isSkip()[pri:0, instance:com.hk.orderPlacement.ExistingOnlineOrder@62ee68d8]" name="isSkip" is-config="true" duration-ms="1" started-at="2015-10-14T15:50:44Z" finished-at="2015-10-14T15:50:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isSkip -->
+        <test-method status="FAIL" signature="login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.ExistingOnlineOrder@62ee68d8]" name="login" duration-ms="54906" started-at="2015-10-14T15:50:44Z" finished-at="2015-10-14T15:51:39Z">
           <params>
             <param index="0">
               <value is-null="true"/>
@@ -20,27 +24,27 @@
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element
-  (Session info: chrome=45.0.2454.93)
+  (Session info: chrome=45.0.2454.101)
   (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 10.01 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.42.2', revision: '6a6995d', time: '2014-06-03 17:42:30'
-System info: host: 'TECH-VIKASDHULL', ip: '192.168.90.142', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_51'
+System info: host: 'TECH-VIKASDHULL', ip: '192.168.90.228', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_51'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\VIKAS~1.DHU\AppData\Local\Temp\scoped_dir7384_17233}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=45.0.2454.93, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: b43ea5535cc88349e7f81d508a091c90]]>
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\VIKAS~1.DHU\AppData\Local\Temp\scoped_dir8456_30452}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=45.0.2454.101, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 1f7a2c722e7eae440e139bd8044fe59d]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=45.0.2454.93)
+  (Session info: chrome=45.0.2454.101)
   (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 10.01 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.42.2', revision: '6a6995d', time: '2014-06-03 17:42:30'
-System info: host: 'TECH-VIKASDHULL', ip: '192.168.90.142', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_51'
+System info: host: 'TECH-VIKASDHULL', ip: '192.168.90.228', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_51'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\VIKAS~1.DHU\AppData\Local\Temp\scoped_dir7384_17233}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=45.0.2454.93, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: b43ea5535cc88349e7f81d508a091c90
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\VIKAS~1.DHU\AppData\Local\Temp\scoped_dir8456_30452}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=45.0.2454.101, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 1f7a2c722e7eae440e139bd8044fe59d
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -53,7 +57,7 @@ Session ID: b43ea5535cc88349e7f81d508a091c90
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
 	at com.hk.commonProperties.SharedProperties.Click(Unknown Source)
-	at com.hk.orderPlacement.ExistingCodPlacement.login(Unknown Source)
+	at com.hk.orderPlacement.ExistingOnlineOrder.login(Unknown Source)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -83,22 +87,18 @@ Session ID: b43ea5535cc88349e7f81d508a091c90
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="isSkip()[pri:0, instance:com.hk.orderPlacement.ExistingCodPlacement@62ee68d8]" name="isSkip" is-config="true" duration-ms="0" started-at="2015-09-23T12:32:55Z" finished-at="2015-09-23T12:32:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- isSkip -->
-        <test-method status="PASS" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.orderPlacement.ExistingCodPlacement@62ee68d8]" name="doAfter" is-config="true" duration-ms="1554" started-at="2015-09-23T12:33:49Z" finished-at="2015-09-23T12:33:50Z">
+        <test-method status="PASS" signature="doAfter(org.testng.ITestResult)[pri:0, instance:com.hk.orderPlacement.ExistingOnlineOrder@62ee68d8]" name="doAfter" is-config="true" duration-ms="1732" started-at="2015-10-14T15:51:39Z" finished-at="2015-10-14T15:51:41Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=login status=FAILURE method=ExistingCodPlacement.login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.ExistingCodPlacement@62ee68d8] output={null}]]]>
+                <![CDATA[[TestResult name=login status=FAILURE method=ExistingOnlineOrder.login(java.lang.Long)[pri:0, instance:com.hk.orderPlacement.ExistingOnlineOrder@62ee68d8] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doAfter -->
-      </class> <!-- com.hk.orderPlacement.ExistingCodPlacement -->
+      </class> <!-- com.hk.orderPlacement.ExistingOnlineOrder -->
     </test> <!-- HealthKart Automation Suite -->
   </suite> <!-- TestNG Test -->
 </testng-results>

@@ -9,14 +9,14 @@
   </listeners>
   <test name="HealthKart Automation Suite(failed)">
     <classes>
-      <class name="com.hk.orderPlacement.ExistingCodPlacement">
+      <class name="com.hk.orderPlacement.ExistingOnlineOrder">
         <methods>
           <include name="login" invocation-numbers="0"/>
           <include name="doAfter"/>
-          <include name="Config"/>
           <include name="isSkip"/>
+          <include name="Config"/>
         </methods>
-      </class> <!-- com.hk.orderPlacement.ExistingCodPlacement -->
+      </class> <!-- com.hk.orderPlacement.ExistingOnlineOrder -->
     </classes>
   </test> <!-- HealthKart Automation Suite(failed) -->
 </suite> <!-- Failed suite [TestNG Test] -->

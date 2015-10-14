@@ -191,11 +191,14 @@ public class ExistingOnlineOrder extends SharedProperties {
         SharedProperties.Click(loginPage.getSignInCheckbox(), SharedProperties.driver);
         SharedProperties.Click(loginPage.getSignInBtn(), SharedProperties.driver);
         Thread.sleep(3000);
+
+        SharedProperties.clear(loginPage.getEmailIdTextBox(), SharedProperties.driver);
         SharedProperties.sendKeys(loginPage.getEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
-        SharedProperties.sendKeys(loginPage.getPasswordTextBox(), "lklsdk", SharedProperties.driver);
+        SharedProperties.clear(loginPage.getPasswordTextBox(), SharedProperties.driver);
+        SharedProperties.sendKeys(loginPage.getPasswordTextBox(), testDetailsDTO.getPasswordList(), SharedProperties.driver);
         SharedProperties.Click(loginPage.getSignInBtn(), SharedProperties.driver);
         Thread.sleep(5000);
-
+       /*
         if (SharedProperties.driver.findElements(By.xpath("//*[@id=\"signInForm\"]/input[3]")).size() > 0) {
             SharedProperties.clear(loginPage.getOldEmailIdTextBox(), SharedProperties.driver);
             SharedProperties.sendKeys(loginPage.getOldEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
@@ -208,12 +211,24 @@ public class ExistingOnlineOrder extends SharedProperties {
             SharedProperties.sendKeys(loginPage.getPasswordTextBox(), testDetailsDTO.getPasswordList(), SharedProperties.driver);
             SharedProperties.Click(loginPage.getSignInBtn(), SharedProperties.driver);
             Thread.sleep(5000);
+        } */
+
+    //  After login user will route to either cart page or address page depends on cart history.
+
+        if(SharedProperties.isElementPresent(cartpage.proceedToCheckout()) )
+        {   //cart page
+            System.out.println("proceed to checkout button is present");
+            Thread.sleep(10000);
+            SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
+            Thread.sleep(5000);
+        }
+        else
+        {   // address page
+            SharedProperties.Click(addresspage.addressPage(), SharedProperties.driver);
+            Thread.sleep(5000);
         }
 
-
-        SharedProperties.Click(addresspage.addressPage(), SharedProperties.driver);
-        Thread.sleep(5000);
-        SharedProperties.driver.findElement(By.xpath("//*[@tab = 'tab3']")).click();
+        SharedProperties.Click(paymentpage.netBanking(),SharedProperties.driver);
         Thread.sleep(2000);
         SharedProperties.Click(paymentpage.paymentPageDummy(), SharedProperties.driver);
         Thread.sleep(2000);
@@ -236,7 +251,7 @@ public class ExistingOnlineOrder extends SharedProperties {
 
         soDetails.orderIdSoDetails = finalOrderId;
 
-        TestUtil.excel.setCellData("test_suite","OrderId_Generated",6, orderId );
+     /*   TestUtil.excel.setCellData("test_suite","OrderId_Generated",6, orderId );
 
         String getText = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[7]")).getText();
 
@@ -293,7 +308,7 @@ public class ExistingOnlineOrder extends SharedProperties {
             SendMail.sendmail("DB Verification failed for Online Order");
             result.setStatus(ITestResult.FAILURE);
             Thread.sleep(5000);
-        }
+        }     */
     }
 
 }

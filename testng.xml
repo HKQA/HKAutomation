@@ -31,7 +31,7 @@
  </packages>
 
         <classes>
-            <class name="com.hk.orderPlacement.ExistingCodPlacement"/>
+            <class name="com.hk.orderPlacement.GuestCheckoutOnline"/>
         </classes>
 
 </test>

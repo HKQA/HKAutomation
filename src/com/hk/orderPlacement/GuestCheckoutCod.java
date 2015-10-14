@@ -186,26 +186,21 @@ public class GuestCheckoutCod extends SharedProperties {
             SharedProperties.Click(paymentpage.getCod2ndDiv(), SharedProperties.driver);
         }*/
 
-        SharedProperties.driver.findElement(By.xpath("//*[@class='last']")).click();
-
-        Thread.sleep(3000);
-
+        SharedProperties.Click(paymentpage.cashOnDelivery(), SharedProperties.driver);
+        Thread.sleep(5000);
         SharedProperties.Click(paymentpage.payOnDelivery(), SharedProperties.driver);
 
+        Thread.sleep(5000);
 
 
-
-
-        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[5]/div[1]/p[2]")).getText();
-
+        String orderId =   SharedProperties.driver.findElement(By.xpath("//p[@class='order-id mrgn-b-5']")).getText();
         System.out.println(orderId);
 
         String finalOrderId = orderId.substring(10);
-
         soDetails.orderIdSoDetails = finalOrderId;
 
 
-        TestUtil.excel.setCellData("test_suite", "OrderId_Generated", 6, orderId);
+       /* TestUtil.excel.setCellData("test_suite", "OrderId_Generated", 6, orderId);
 
         String getText = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]")).getText();
 
@@ -285,7 +280,7 @@ public class GuestCheckoutCod extends SharedProperties {
             result.setStatus(ITestResult.FAILURE);
 
             Thread.sleep(5000);
-        }
+        }   */
 
 
 

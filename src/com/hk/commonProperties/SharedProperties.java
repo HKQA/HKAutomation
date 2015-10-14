@@ -164,6 +164,12 @@ public class SharedProperties
         WebElement signupClick = driver.findElement(By.xpath(targetElementXpath));
         action.moveToElement(signupClick).click().perform();
     }
+
+    public static String getPageTitle(WebDriver driver){
+        String title;
+        title=driver.getTitle();
+        return title;
+    }
 }
 
 

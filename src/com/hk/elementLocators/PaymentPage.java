@@ -17,6 +17,7 @@ public class PaymentPage {
     //private String proceedPayment="html/body/div[1]/form/input[5]";
     private String proceedPayment="//*[@value = 'Proceed']";
     private String cashOnDelivery= "(//*[@id=\"nav\"]/li[contains(text(),'CASH ON DELIVERY')])";
+    private String netBanking = "(//*[@id=\"nav\"]/li[contains(text(),'INTERNET BANKING')])";
    // private String cod1stDiv= "//*[@id=\"nav\"]/li[6]";
     //private String cod2ndDiv= "//*[@id=\"nav\"]/li[7]";
     private String payOnDelivery="//*[@value='Place order']";
@@ -48,6 +49,10 @@ public class PaymentPage {
 
     public String payOnDelivery() {
         return payOnDelivery;
+    }
+
+    public String netBanking() {
+        return netBanking;
     }
 
    /* public String getCod1stDiv() { return cod1stDiv;}

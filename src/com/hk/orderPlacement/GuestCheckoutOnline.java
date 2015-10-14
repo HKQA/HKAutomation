@@ -156,36 +156,27 @@ public class GuestCheckoutOnline extends SharedProperties {
         SharedProperties.Click(loginPage.getGuestSigninBtn(), SharedProperties.driver);
         Thread.sleep(5000);
 
-        //Code to add more quantity
-        //code to redeem reward points
-        //code to add coupons
-
-        /*SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
-        Thread.sleep(5000);*/
-        //SharedProperties.sendKeys(addresspage.name(), "Test", SharedProperties.driver);
         SharedProperties.sendKeys(addresspage.name(), TestUtil.getAddressName("GuestCheckoutOnline"), SharedProperties.driver);
-        //SharedProperties.sendKeys(addresspage.mobile(), "9999999999", SharedProperties.driver);
         SharedProperties.sendKeys(addresspage.mobile(), TestUtil.getMobile_Number("GuestCheckoutOnline"), SharedProperties.driver);
-        //SharedProperties.sendKeys(addresspage.address(), "Test", SharedProperties.driver);
         SharedProperties.sendKeys(addresspage.address(), TestUtil.getAddress("GuestCheckoutOnline"), SharedProperties.driver);
-        //SharedProperties.sendKeys(addresspage.pincode(), "122001", SharedProperties.driver);
         SharedProperties.sendKeys(addresspage.pincode(), TestUtil.getPincode("GuestCheckoutCod"), SharedProperties.driver);
         Thread.sleep(2000);
         SharedProperties.Click(addresspage.delivertoaddress(), SharedProperties.driver);
         Thread.sleep(5000);
-        SharedProperties.driver.findElement(By.xpath("//*[@tab = 'tab3']")).click();
+
+        SharedProperties.Click(paymentpage.netBanking(),SharedProperties.driver);
         Thread.sleep(2000);
         SharedProperties.Click(paymentpage.paymentPageDummy(), SharedProperties.driver);
         Thread.sleep(2000);
-
         new Select(SharedProperties.driver.findElement(By.xpath("//*[@id='tab3']/div/div[8]/select"))).selectByVisibleText("Dummy");
         Thread.sleep(2000);
         SharedProperties.Click(paymentpage.proceedToPayment(), SharedProperties.driver);
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         SharedProperties.Click(paymentpage.paymentY(), SharedProperties.driver);
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         SharedProperties.Click(paymentpage.proceedPayment(), SharedProperties.driver);
 
+        Thread.sleep(5000);
 
 
         String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div/div[1]/p[2]")).getText();
@@ -196,7 +187,7 @@ public class GuestCheckoutOnline extends SharedProperties {
 
         soDetails.orderIdSoDetails = finalOrderId;
 
-        TestUtil.excel.setCellData("test_suite","OrderId_Generated",4, orderId );
+      /*  TestUtil.excel.setCellData("test_suite","OrderId_Generated",4, orderId );
 
         String getText = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]")).getText();
 
@@ -243,7 +234,7 @@ public class GuestCheckoutOnline extends SharedProperties {
             SendMail.sendmail("DB Verification failed for Online Order");
             result.setStatus(ITestResult.FAILURE);
             Thread.sleep(5000);
-        }
+        } */
     }
 
 }

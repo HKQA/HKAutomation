@@ -161,10 +161,18 @@ public class ExistingCodPlacement extends SharedProperties {
         //code to redeem reward points
         //code to add coupons
 
-        SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
-        Thread.sleep(5000);
-        SharedProperties.Click(addresspage.addressPage(), SharedProperties.driver);
-        Thread.sleep(5000);
+        if(SharedProperties.isElementPresent(cartpage.proceedToCheckout()) )
+        {   //cart page
+            System.out.println("proceed to checkout button is present");
+            Thread.sleep(10000);
+            SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
+            Thread.sleep(5000);
+        }
+        else
+        {   // address page
+            SharedProperties.Click(addresspage.addressPage(), SharedProperties.driver);
+            Thread.sleep(5000);
+        }
         /*if (SharedProperties.driver.findElement(By.xpath("/*//*[@id=\"nav\"]/li[5]")).getText() == "CASH ON DELIVERY")
         {
            SharedProperties.Click(paymentpage.cashOnDelivery(), SharedProperties.driver);
@@ -179,18 +187,16 @@ public class ExistingCodPlacement extends SharedProperties {
 
         //  SharedProperties.driver.findElement(By.xpath("//ul[@id='nav']/li[6]")).click();
         //SharedProperties.Click(paymentpage.cashOnDelivery(), SharedProperties.driver);
+
         SharedProperties.Click(paymentpage.cashOnDelivery(), SharedProperties.driver);
         Thread.sleep(5000);
         SharedProperties.Click(paymentpage.payOnDelivery(), SharedProperties.driver);
-
         Thread.sleep(5000);
-
-
         String orderId =   SharedProperties.driver.findElement(By.xpath("//p[@class='order-id mrgn-b-5']")).getText();
         System.out.println(orderId);
-
         String finalOrderId = orderId.substring(10);
         soDetails.orderIdSoDetails = finalOrderId;
+
         //TestUtil.excel.setCellData("test_suite","OrderId_Generated",8, orderId );
         String getText = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[7]")).getText();
 
