@@ -19,6 +19,7 @@ public class LoginPage {
     private String signInBtn = "//*[@id=\"loginForm\"]/input[5]";
     private String oldSignInBtn = "//*[@id=\"signInForm\"]/input[6]";
     private String signInCheckbox = "//*[@id=\"guestSignInForm\"]/label[2]/input";
+    private String loginUrl = "auth/Login.action";
 
 
     public String getEmailIdTextBox() {
@@ -51,5 +52,9 @@ public class LoginPage {
     public String getGuestSigninBtn() {
         return guestSigninBtn;
     }
+    public String getLoginUrl() {
+        return loginUrl;
+    }
+
 }
 

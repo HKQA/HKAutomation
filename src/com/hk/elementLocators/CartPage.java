@@ -21,7 +21,13 @@ public class CartPage {
     private String signupHover = "//*[@id='header']/div/div[2]/div[3]/div/div/span[1]"  ;
     private String signinLink = "//*[@id='header']/div/div[2]/div[3]/div/ul/li[1]/span/a";
     private String applyRewardPoint = "//div[@id='ptsUsed']/div[2]/span[2]";
-    private String removeRewardPoint = "//div[16]/div/span[3]";
+    private String removeRewardPoint = "/html/body/div[2]/div[2]/div/div[4]/div/div[4]/div/div[2]/div[3]/div[16]/div/span[3]";
+
+    public String getYouPay() {
+        return youPay;
+    }
+
+    private String youPay = "//div[2]/div/div[2]/span";
 
     public String addToCartBtn() {
         return addToCartBtn;

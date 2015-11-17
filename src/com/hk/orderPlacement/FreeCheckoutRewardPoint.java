@@ -16,7 +16,6 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.testng.ITestResult;
 import org.testng.Reporter;
@@ -129,7 +128,8 @@ public class FreeCheckoutRewardPoint extends SharedProperties  {
 
         recorder.startRecording();
 
-        SharedProperties.openBrowser(baseUrl, browser);
+        SharedProperties.openBrowser(baseUrl + loginPage.getLoginUrl(), browser);
+     //   SharedProperties.openBrowser("http://192.168.70.27:9090/auth/Login.action",browser);
         Thread.sleep(3000);
         TestDetailsDTO testDetailsDTO = null;
 
@@ -140,6 +140,12 @@ public class FreeCheckoutRewardPoint extends SharedProperties  {
         }
 
         if (specificVariantIndex == null) {
+            SharedProperties.clear(loginPage.getOldEmailIdTextBox(),driver);
+            SharedProperties.sendKeys(loginPage.getOldEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
+            SharedProperties.clear(loginPage.getPasswordTextBox(),driver);
+            SharedProperties.sendKeys(loginPage.getPasswordTextBox(), testDetailsDTO.getPasswordList(), SharedProperties.driver);
+            SharedProperties.Click(loginPage.getOldSignInBtn(), SharedProperties.driver);
+            Thread.sleep(5000);
             for (Long variantId : testDetailsDTO.getVariantIdList()) {
                 //SharedProperties.driver.navigate().to(PropertyHelper.readProperty("url") + variantId);
                 //browse.doBrowsing();
@@ -187,17 +193,17 @@ public class FreeCheckoutRewardPoint extends SharedProperties  {
         WebElement cartLink = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a[href*='Cart.action']")));
         cartLink.click();
         Thread.sleep(3000);
-        SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
-        Thread.sleep(3000);
-        SharedProperties.Click(loginPage.getSignInCheckbox(), SharedProperties.driver);
+        //      SharedProperties.Click(cartpage.proceedToCheckout(), SharedProperties.driver);
+        //      Thread.sleep(3000);
+        /*SharedProperties.Click(loginPage.getSignInCheckbox(), SharedProperties.driver);
         SharedProperties.Click(loginPage.getSignInBtn(), SharedProperties.driver);
         Thread.sleep(3000);
         SharedProperties.sendKeys(loginPage.getEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
-        SharedProperties.sendKeys(loginPage.getPasswordTextBox(), "lklsdk", SharedProperties.driver);
+        SharedProperties.sendKeys(loginPage.getPasswordTextBox(), testDetailsDTO.getPasswordList(), SharedProperties.driver);
         SharedProperties.Click(loginPage.getSignInBtn(), SharedProperties.driver);
         Thread.sleep(5000);
-
-        if (SharedProperties.driver.findElements(By.xpath("//*[@id=\"signInForm\"]/input[3]")).size() > 0) {
+*/
+ /*       if (SharedProperties.driver.findElements(By.xpath("/*//*[@id=\"signInForm\"]/input[3]")).size() > 0) {
             SharedProperties.clear(loginPage.getOldEmailIdTextBox(), SharedProperties.driver);
             SharedProperties.sendKeys(loginPage.getOldEmailIdTextBox(), testDetailsDTO.getLoginList(), SharedProperties.driver);
             SharedProperties.sendKeys(loginPage.getPasswordTextBox(), testDetailsDTO.getPasswordList(), SharedProperties.driver);
@@ -211,15 +217,54 @@ public class FreeCheckoutRewardPoint extends SharedProperties  {
             Thread.sleep(5000);
         }
 
+*/
+      //  boolean removeRewardPtPresent = SharedProperties.isElementPresent(cartpage.getRemoveRewardPoint());
+  //      String reward = SharedProperties.driver.findElement(By.xpath(cartpage.getRemoveRewardPoint())).getText();
+  //      System.out.println("rp locator value gettext is: " + reward);
+        boolean removeRewardPtPresent = SharedProperties.driver.findElement(By.xpath(cartpage.getRemoveRewardPoint())).getText().equalsIgnoreCase("remove");
+        int lengthRemoveRp = SharedProperties.driver.findElement(By.xpath(cartpage.getRemoveRewardPoint())).getText().length();
+    //    boolean applyRewardPointPresent = SharedProperties.driver.findElement(By.xpath(cartpage.getApplyRewardPoint())).getText().equalsIgnoreCase("redeem");
+        boolean applyRewardPointPresent = SharedProperties.isElementPresent(cartpage.getApplyRewardPoint());
+        if (!(removeRewardPtPresent || applyRewardPointPresent))
+    //    if(!applyRewardPointPresent)
+        {
+            System.out.println("User has zero reward points");
+            result.setStatus(ITestResult.FAILURE);
+        }
 
-        SharedProperties.Click(addresspage.addressPage(), SharedProperties.driver);
-        Thread.sleep(5000);
-        SharedProperties.driver.findElement(By.xpath("//*[@tab = 'tab3']")).click();
-        Thread.sleep(2000);
-        SharedProperties.Click(paymentpage.paymentPageDummy(), SharedProperties.driver);
-        Thread.sleep(2000);
 
-        new Select(SharedProperties.driver.findElement(By.xpath("//*[@id='tab3']/div/div[8]/select"))).selectByVisibleText("Dummy");
+        else
+        {
+            if(removeRewardPtPresent || lengthRemoveRp > 0)
+            {
+                System.out.println("Removing already applied reward points");
+                SharedProperties.Click(cartpage.getRemoveRewardPoint(),SharedProperties.driver);
+            }
+   //         String x = SharedProperties.driver.findElement(By.xpath(cartpage.getYouPay())).getText();
+            SharedProperties.Click(cartpage.getApplyRewardPoint(),SharedProperties.driver);
+  //          boolean v = SharedProperties.driver.findElement(By.xpath(cartpage.getYouPay())).getText().equals("0");
+            Thread.sleep(2000);
+            String a = SharedProperties.driver.findElement(By.xpath(cartpage.getYouPay())).getText();
+             Double b = Double.parseDouble(a);
+
+
+           if(!b.equals(0.0))
+            {
+                System.out.println("Total payable amount is not zero after applying reward points");
+                result.setStatus(ITestResult.FAILURE);
+
+            }
+            else
+            {
+                SharedProperties.Click(cartpage.proceedToCheckout(),SharedProperties.driver);
+                SharedProperties.Click(addresspage.addressPage(), SharedProperties.driver);
+                Thread.sleep(5000);
+//                SharedProperties.driver.findElement(By.xpath("//*[@tab = 'tab3']")).click();
+//                Thread.sleep(2000);
+                SharedProperties.Click(paymentpage.getConfirmFreeCheckoutButton(), SharedProperties.driver);
+                Thread.sleep(2000);
+
+ /*       new Select(SharedProperties.driver.findElement(By.xpath("/*//*[@id='tab3']/div/div[8]/select"))).selectByVisibleText("Dummy");
         Thread.sleep(2000);
         SharedProperties.Click(paymentpage.proceedToPayment(), SharedProperties.driver);
         Thread.sleep(5000);
@@ -227,73 +272,75 @@ public class FreeCheckoutRewardPoint extends SharedProperties  {
         Thread.sleep(5000);
         SharedProperties.Click(paymentpage.proceedPayment(), SharedProperties.driver);
 
-        Thread.sleep(5000);
+        Thread.sleep(5000);*/
 
-        String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div/div[1]/p[2]")).getText();
+                String orderId =   SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[6]/div/div[1]/p[2]")).getText();
 
-        System.out.println(orderId);
+                System.out.println(orderId);
 
-        String finalOrderId = orderId.substring(10);
+                String finalOrderId = orderId.substring(10);
 
-        soDetails.orderIdSoDetails = finalOrderId;
+                soDetails.orderIdSoDetails = finalOrderId;
 
-        TestUtil.excel.setCellData("test_suite","OrderId_Generated",6, orderId );
+                TestUtil.excel.setCellData("test_suite","OrderId_Generated",25, orderId );
 
-        String getText = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[7]")).getText();
+                String getText = SharedProperties.driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[7]")).getText();
 
-        if(SharedProperties.isElementPresent("/html/body/div[1]/div[2]/div/div[6]") && (getText.contains("your")))
-        {
-            OrderDetailsUtil.flagLoyalty = true  ;
+                if(SharedProperties.isElementPresent("/html/body/div[1]/div[2]/div/div[6]") && (getText.contains("your")))
+                {
+                    OrderDetailsUtil.flagLoyalty = true  ;
 
-        }
-        else
-        {
+                }
+                else
+                {
 
-            OrderDetailsUtil.flagNoLoyalty = true;
-
-
-        }
-
-        //OrderDetailsUtil.flag = true;
-
-        Thread.sleep(5000);
+                    OrderDetailsUtil.flagNoLoyalty = true;
 
 
+                }
 
+                //OrderDetailsUtil.flag = true;
 
-        //varCheckout.variantCheckout();
-
-        //Thread.sleep(10000);
+                Thread.sleep(5000);
 
 
 
-        if (OrderDetailsVerify.orderDetails() == true) {
-            System.out.print("DB verification Successful");
-            Thread.sleep(5000);
-            if(TestUtil.getExecuteVariantCheckoutRunMode(6).equalsIgnoreCase("Y"))
-            {
-                varCheckout.variantCheckout();
-            }
 
-            OrderDetailsUtil.flagLoyalty = false;
+                //varCheckout.variantCheckout();
 
-            OrderDetailsUtil.flagNoLoyalty = false;
+                //Thread.sleep(10000);
 
 
 
-            //OrderDetailsUtil.flag = false;
+                if (OrderDetailsVerify.orderDetails()) {
+                    System.out.print("DB verification Successful");
+                    //        Thread.sleep(5000);
+                    if(TestUtil.getExecuteVariantCheckoutRunMode(25).equalsIgnoreCase("Y"))
+                    {
+                        varCheckout.variantCheckout();
+                    }
+
+                    OrderDetailsUtil.flagLoyalty = false;
+
+                    OrderDetailsUtil.flagNoLoyalty = false;
 
 
-        } else {
-            Thread.sleep(5000);
+
+                    //OrderDetailsUtil.flag = false;
+
+
+                } else {
+/*            Thread.sleep(5000);
             if(TestUtil.getExecuteVariantCheckoutRunMode(7).equalsIgnoreCase("Y"))
             {
                 varCheckout.variantCheckout();
+            }*/
+                    System.out.println("DB verification failed but Order ID is generated. So please refer DB");
+                    SendMail.sendmail("DB Verification failed for Free checkout using reward points");
+                    result.setStatus(ITestResult.FAILURE);
+                    Thread.sleep(5000);
+                }
             }
-            System.out.println("DB verification failed but Order ID is generated. So please refer DB");
-            SendMail.sendmail("DB Verification failed for Online Order");
-            result.setStatus(ITestResult.FAILURE);
-            Thread.sleep(5000);
         }
     }
 

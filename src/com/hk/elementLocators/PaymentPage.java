@@ -20,7 +20,7 @@ public class PaymentPage {
    // private String cod1stDiv= "//*[@id=\"nav\"]/li[6]";
     //private String cod2ndDiv= "//*[@id=\"nav\"]/li[7]";
     private String payOnDelivery="//*[@value='Place order']";
-    private String confirmFreeCheckout = "Confirm Order";
+    private String confirmFreeCheckoutButton = "//a[contains(text(),'Confirm Order')]";
 
 
     public String paymentPageDummy() {
@@ -51,9 +51,9 @@ public class PaymentPage {
         return payOnDelivery;
     }
 
-    public String getConfirmFreeCheckout()
+    public String getConfirmFreeCheckoutButton()
     {
-        return confirmFreeCheckout;
+        return confirmFreeCheckoutButton;
     }
    /* public String getCod1stDiv() { return cod1stDiv;}
 
