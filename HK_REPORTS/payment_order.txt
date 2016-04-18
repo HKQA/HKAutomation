@@ -1,0 +1,14 @@
+2016-04-17
+/home/release/reports
+deleting previous reports
+Warning: Using a password on the command line interface can be insecure.
+Warning: Using a password on the command line interface can be insecure.
+Warning: Using a password on the command line interface can be insecure.
+Warning: Using a password on the command line interface can be insecure.
+Warning: Using a password on the command line interface can be insecure.
+Warning: Using a password on the command line interface can be insecure.
+Warning: Using a password on the command line interface can be insecure.
+Warning: Using a password on the command line interface can be insecure.
+Warning: Using a password on the command line interface can be insecure.
+Warning: Using a password on the command line interface can be insecure.
+Mailing the Reports to hulk@brightlifecare.com

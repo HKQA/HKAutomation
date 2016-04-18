@@ -1,0 +1,8 @@
+Hi,
+
+Please find the enclosed report for yesterday shipped orders:
+
+1. orders shipped two times on shipping_order_lifecycle -> Multiple_Ship_orders.xls
+
+Thanks and Regards,
+QA Reports.

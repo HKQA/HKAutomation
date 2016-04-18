@@ -1,0 +1,24 @@
+Hi,
+
+Please find the following reports enclosed with this mail:
+
+B2C :
+
+1.B2C BO SO bookd/checked-out quantity full report - B2C_BO_SO_QTY.xls 
+2.B2C BO SO booking quantity mismatch report - B2C_BO_SO_QTY_mismatch.xls 
+3.B2C BO SO checkout quantity mismatch report - B2C_BO_SO_ChkOut_QTY_mismatch.xls 
+
+B2B :
+
+1.B2C BO SO bookd/checked-out quantity full report - B2B_BO_SO_QTY.xls
+2.B2C BO SO booking quantity mismatch report - B2B_BO_SO_QTY_mismatch.xls
+3.B2C BO SO checkout quantity mismatch report - B2B_BO_SO_ChkOut_QTY_mismatch.xls
+
+B2B_CFA :
+
+1.B2C BO SO bookd/checked-out quantity full report - B2B_CFA_BO_SO_QTY.xls
+2.B2C BO SO booking quantity mismatch report - B2B_CFA_BO_SO_QTY_mismatch.xls
+3.B2C BO SO checkout quantity mismatch report - B2B_CFA_BO_SO_ChkOut_QTY_mismatch.xls
+
+Thanks and Regards,
+QA Reports.

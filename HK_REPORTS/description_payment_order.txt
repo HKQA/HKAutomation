@@ -1,0 +1,10 @@
+Please find the following reports:-
+
+1.Total order for different payment mode.
+2.Android order for different payment mode.
+3.IOS order for different payment mode.
+4.Desktop order for different payment mode.
+5.Mobile Web order for different payment mode.
+
+Regards,
+QA Team
